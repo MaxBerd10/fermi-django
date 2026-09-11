@@ -12,9 +12,20 @@ translation that's a stub compared to its uz original), not just markup
 noise. So:
 
   * Blocks are aligned uz-vs-ru and uz-vs-en separately, using
-    difflib.SequenceMatcher over each language's block-type sequence
-    (stdlib, no custom diff algorithm) -- this recovers correct pairing
-    across insertions/deletions/reorderings, not just a shared prefix.
+    difflib.SequenceMatcher (stdlib, no custom diff algorithm) over a
+    per-block "symbol" -- but that symbol is (block_type, length_bucket),
+    not block_type alone. A real bug found live (a news post where ru was
+    missing one paragraph uz had in the middle of an otherwise 1:1 run):
+    matching on type alone treats a long run of same-typed blocks
+    (paragraph, paragraph, paragraph, ...) as indistinguishable symbols, so
+    SequenceMatcher can't tell WHICH position is the true gap and picks an
+    arbitrary one -- silently shifting every block after it by one and
+    confidently pairing unrelated sentences across languages. That's worse
+    than a missed match (an honest fallback): it looks like a translation
+    but says something else. Bucketing each block's own text length (a
+    real bitext-alignment technique -- translations of the same sentence
+    are rarely wildly different lengths, even across scripts) gives same-
+    type blocks distinct-enough symbols that the true gap is identifiable.
   * uz is always the spine (old schema: content_uz is NOT NULL, content_ru
     /content_en are nullable and frequently much shorter -- uz is the
     closest thing this data has to a "canonical" version).
@@ -33,10 +44,26 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 
-from .html_extract import ExtractedStaff, ExtractionResult
+from .html_extract import ExtractedBlock, ExtractedStaff, ExtractionResult
 
 LANGS = ("uz", "ru", "en")
 OTHER_LANGS = ("ru", "en")
+
+_LENGTH_BUCKET_CHARS = 20  # coarse enough to tolerate normal cross-language length variance
+
+
+def _text_len(block: ExtractedBlock) -> int:
+    if block.block_type in ("heading", "paragraph"):
+        return len(block.payload.get("text", ""))
+    if block.block_type == "list":
+        return len(" ".join(block.payload.get("items", [])))
+    if block.block_type == "staff_card":
+        return len(block.payload.get("full_name", "")) + len(block.payload.get("title", "") or "")
+    return 0  # image/video/document/gallery/table -- no text to compare, type alone is enough
+
+
+def _block_symbol(block: ExtractedBlock) -> tuple:
+    return (block.block_type, _text_len(block) // _LENGTH_BUCKET_CHARS)
 
 
 @dataclass
@@ -63,10 +90,11 @@ class MergeResult:
     fallback_staff_count: int = 0
 
 
-def _align_indices(uz_types: list[str], other_types: list[str]) -> dict[int, int]:
+def _align_indices(uz_symbols: list[tuple], other_symbols: list[tuple]) -> dict[int, int]:
     """uz index -> other-language index, for positions inside a matching run
-    of equal block types. Positions outside any matching run are absent."""
-    matcher = SequenceMatcher(None, uz_types, other_types, autojunk=False)
+    of equal (type, length_bucket) symbols. Positions outside any matching
+    run are absent."""
+    matcher = SequenceMatcher(None, uz_symbols, other_symbols, autojunk=False)
     mapping: dict[int, int] = {}
     for uz_start, other_start, size in matcher.get_matching_blocks():
         for offset in range(size):
@@ -76,9 +104,9 @@ def _align_indices(uz_types: list[str], other_types: list[str]) -> dict[int, int
 
 def _merge_blocks(results: dict[str, ExtractionResult]) -> tuple[list[MergedBlock], int]:
     uz_blocks = results["uz"].blocks
-    uz_types = [b.block_type for b in uz_blocks]
+    uz_symbols = [_block_symbol(b) for b in uz_blocks]
     index_maps = {
-        lang: _align_indices(uz_types, [b.block_type for b in results[lang].blocks])
+        lang: _align_indices(uz_symbols, [_block_symbol(b) for b in results[lang].blocks])
         for lang in OTHER_LANGS
     }
 
