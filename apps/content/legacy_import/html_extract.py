@@ -113,7 +113,7 @@ def _walk_flat_items(soup: Tag):
                 seen_ids.add(id(child))
                 continue
             if child.name in ("ul", "ol"):
-                items = [_normalize(li.get_text(strip=True)) for li in child.find_all("li", recursive=False)]
+                items = [_normalize(li.get_text(" ")) for li in child.find_all("li", recursive=False)]
                 items = [i for i in items if i]
                 if items:
                     yield ("list", items)
@@ -160,7 +160,11 @@ def extract(html: str) -> ExtractionResult:
 
         # kind == "text"
         tag = value
-        text = _normalize(tag.get_text(strip=True))
+        # get_text(" ") rather than strip=True: adjacent inline elements
+        # with no whitespace between their tags in the source (common in
+        # this content) would otherwise glue their text together with no
+        # separator at all once stripped.
+        text = _normalize(tag.get_text(" "))
 
         if _is_bold_only(tag):
             lines = _heading_lines(tag)
@@ -176,7 +180,7 @@ def extract(html: str) -> ExtractionResult:
             )
             if len(lines) >= 2 and next_is_long_paragraph and _looks_like_person_name(lines[0]):
                 full_name, title = lines[0], " ".join(lines[1:])
-                bio = _normalize(items[i + 1][1].get_text(strip=True))
+                bio = _normalize(items[i + 1][1].get_text(" "))
                 result.staff.append(ExtractedStaff(full_name, title, bio, pending_image))
                 pending_image = None
                 i += 2

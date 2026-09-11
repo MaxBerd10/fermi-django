@@ -15,25 +15,16 @@ Usage:
 """
 from __future__ import annotations
 
-import base64
-import os
-import ssl
-import urllib.parse
-import urllib.request
-
-import certifi
-from django.core.files.base import ContentFile
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
 from apps.content.legacy_import.fetch import fetch_department, fetch_department_slugs
 from apps.content.legacy_import.html_extract import extract
+from apps.content.legacy_import.media import ImageDownloader
 from apps.content.legacy_import.merge import LANGS, MergeResult, merge_languages
 from apps.content.models import ContentBlock, Page
 from apps.departments.models import Department, StaffMember
-from apps.media_lib.models import Image
 
-_SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 _HEAD_KEYWORDS = ("kafedra mudiri", "kafedra mudirasi", "заведующ")
 
 
@@ -49,7 +40,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         dry_run = options["dry_run"]
         only_slug = options.get("slug")
-        self._image_cache: dict[str, Image | None] = {}
+        self._images = ImageDownloader(
+            on_error=lambda src, exc: self.stderr.write(self.style.WARNING(f"    could not load image {src[:80]}: {exc}"))
+        )
 
         slugs = [only_slug] if only_slug else fetch_department_slugs()
         self.stdout.write(f"{len(slugs)} department(s) to process.\n")
@@ -78,41 +71,6 @@ class Command(BaseCommand):
         verb = "Would import" if dry_run else "Imported"
         self.stdout.write(self.style.SUCCESS(f"\n{verb} {done} department(s)."))
 
-    # -- media -----------------------------------------------------------
-
-    def _get_or_download_image(self, src: str | None) -> Image | None:
-        if not src:
-            return None
-        if src in self._image_cache:
-            return self._image_cache[src]
-
-        image: Image | None
-        try:
-            if src.startswith("data:"):
-                # A handful of legacy images were pasted straight into the
-                # editor as inline base64 rather than uploaded -- decode
-                # instead of trying to fetch a "URL" that isn't one.
-                header, _, b64_body = src.partition(",")
-                content = base64.b64decode(b64_body)
-                ext = "png" if "png" in header else "jpg"
-                filename = f"inline.{ext}"
-            else:
-                url = src if src.startswith("http") else f"https://api.fermi.uz{src}"
-                req = urllib.request.Request(url, headers={"User-Agent": "fermi-django-migration/0.1"})
-                with urllib.request.urlopen(req, timeout=20, context=_SSL_CONTEXT) as resp:
-                    content = resp.read()
-                filename = urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(url).path)) or "image.jpg"
-            image = Image(alt_text="")
-            image.file.save(filename, ContentFile(content), save=False)
-            image.full_clean()
-            image.save()
-        except Exception as exc:  # noqa: BLE001 -- a broken/missing legacy image must not abort the import
-            self.stderr.write(self.style.WARNING(f"    could not load image {src[:80]}: {exc}"))
-            image = None
-
-        self._image_cache[src] = image
-        return image
-
     # -- import ------------------------------------------------------------
 
     def _import_one(self, dept, merged: MergeResult) -> None:
@@ -122,7 +80,7 @@ class Command(BaseCommand):
             existing.delete()
             Page.objects.filter(pk=page_id).delete()
 
-        logo = self._get_or_download_image(dept.logo_url)
+        logo = self._images.get_or_download(dept.logo_url)
         page = Page.objects.create(slug=dept.slug)
         department = Department.objects.create(
             slug=dept.slug,
@@ -140,7 +98,7 @@ class Command(BaseCommand):
             for lang in LANGS:
                 payload = dict(block.payload_by_lang[lang])
                 if block.block_type == "image":
-                    img = self._get_or_download_image(payload.pop("image_src", None))
+                    img = self._images.get_or_download(payload.pop("image_src", None))
                     if img is None:
                         skip_block = True
                         break
@@ -155,7 +113,7 @@ class Command(BaseCommand):
             order += 1
 
         for index, person in enumerate(merged.staff):
-            photo = self._get_or_download_image(person.photo_src)
+            photo = self._images.get_or_download(person.photo_src)
             is_head = any(
                 kw in (person.title_by_lang["uz"] + " " + person.bio_by_lang["uz"]).lower()
                 for kw in _HEAD_KEYWORDS
