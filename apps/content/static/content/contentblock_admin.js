@@ -36,6 +36,11 @@
       ru: { items: [{ image_id: null, alt: "" }] },
       en: { items: [{ image_id: null, alt: "" }] },
     },
+    table: {
+      uz: { headers: [""], rows: [[""]] },
+      ru: { headers: [""], rows: [[""]] },
+      en: { headers: [""], rows: [[""]] },
+    },
   };
 
   document.addEventListener("change", function (event) {

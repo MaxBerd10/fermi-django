@@ -122,6 +122,29 @@ def _validate_gallery(payload: dict, lang: str) -> None:
                 raise ValidationError(f"[{lang}] gallery item 'alt' is plain text only — remove any markup")
 
 
+def _validate_table(payload: dict, lang: str) -> None:
+    headers = payload.get("headers")
+    if not isinstance(headers, list) or not headers:
+        raise ValidationError(f"[{lang}] 'headers' must be a non-empty list")
+    for header in headers:
+        if not isinstance(header, str) or not header.strip():
+            raise ValidationError(f"[{lang}] every header must be a non-empty string")
+        if HTML_TAG_RE.search(header):
+            raise ValidationError(f"[{lang}] headers are plain text only — remove any markup")
+
+    rows = payload.get("rows")
+    if not isinstance(rows, list) or not rows:
+        raise ValidationError(f"[{lang}] 'rows' must be a non-empty list")
+    for row in rows:
+        if not isinstance(row, list) or len(row) != len(headers):
+            raise ValidationError(f"[{lang}] every row must have exactly {len(headers)} cells (one per header)")
+        for cell in row:
+            if not isinstance(cell, str):
+                raise ValidationError(f"[{lang}] every cell must be a string")
+            if HTML_TAG_RE.search(cell):
+                raise ValidationError(f"[{lang}] cells are plain text only — remove any markup")
+
+
 BLOCK_VALIDATORS = {
     "heading": _validate_heading,
     "paragraph": _validate_paragraph,
@@ -131,6 +154,7 @@ BLOCK_VALIDATORS = {
     "video": _validate_video,
     "document": _validate_document,
     "gallery": _validate_gallery,
+    "table": _validate_table,
 }
 
 

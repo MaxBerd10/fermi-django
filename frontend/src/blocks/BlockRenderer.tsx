@@ -86,6 +86,36 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
       );
     }
 
+    case "table": {
+      const { headers, rows } = block.data[lang];
+      return (
+        <div className="overflow-x-auto rounded-xl border border-primary-100">
+          <table className="w-full min-w-max border-collapse text-left text-sm">
+            <thead className="bg-primary-50/60">
+              <tr>
+                {headers.map((header, i) => (
+                  <th key={i} className="px-4 py-2 font-display font-bold text-primary-900">
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, i) => (
+                <tr key={i} className="border-t border-primary-100">
+                  {row.map((cell, j) => (
+                    <td key={j} className="px-4 py-2 text-foreground-700">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
     case "gallery": {
       const { items } = block.data[lang];
       const visible = items.filter((item) => item.image);

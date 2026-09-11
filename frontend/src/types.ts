@@ -56,6 +56,10 @@ export interface GalleryItem {
 export interface GalleryBlockData {
   items: GalleryItem[];
 }
+export interface TableBlockData {
+  headers: string[];
+  rows: string[][];
+}
 
 export type BlockType =
   | "heading"
@@ -65,7 +69,8 @@ export type BlockType =
   | "image"
   | "video"
   | "document"
-  | "gallery";
+  | "gallery"
+  | "table";
 
 interface BlockBase<T extends BlockType, D> {
   id: number;
@@ -82,7 +87,8 @@ export type ContentBlock =
   | BlockBase<"image", ImageBlockData>
   | BlockBase<"video", VideoBlockData>
   | BlockBase<"document", DocumentBlockData>
-  | BlockBase<"gallery", GalleryBlockData>;
+  | BlockBase<"gallery", GalleryBlockData>
+  | BlockBase<"table", TableBlockData>;
 
 export interface Page {
   id: number;

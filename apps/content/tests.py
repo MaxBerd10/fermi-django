@@ -167,6 +167,40 @@ def test_gallery_item_rejects_html_in_alt(page):
         block.full_clean()
 
 
+def valid_table_data():
+    payload = {"headers": ["Fan", "Soat"], "rows": [["Anatomiya", "36"], ["Fiziologiya", "24"]]}
+    return {"uz": payload, "ru": payload, "en": payload}
+
+
+def test_valid_table_block_passes_validation(page):
+    block = ContentBlock(page=page, order=1, block_type="table", data=valid_table_data())
+    block.full_clean()  # must not raise
+
+
+def test_table_block_requires_non_empty_headers(page):
+    data = valid_table_data()
+    data["en"]["headers"] = []
+    block = ContentBlock(page=page, order=1, block_type="table", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
+def test_table_row_must_match_header_count(page):
+    data = valid_table_data()
+    data["uz"]["rows"][0] = ["Anatomiya", "36", "Prof. X"]  # 3 cells, 2 headers
+    block = ContentBlock(page=page, order=1, block_type="table", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
+def test_table_rejects_html_in_a_cell(page):
+    data = valid_table_data()
+    data["uz"]["rows"][0][0] = '<div style="position: absolute; color: transparent;">S</div>'
+    block = ContentBlock(page=page, order=1, block_type="table", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
 # Regression tests: the exact two content-pollution patterns found on the old
 # Yii2 site today (ChatGPT web-UI markup, a PDF viewer's per-character text
 # layer) must never be savable here — see block_schemas.py's module docstring.
