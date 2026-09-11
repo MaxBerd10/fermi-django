@@ -22,6 +22,9 @@ class Department(models.Model):
 
     logo = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
     page = models.OneToOneField(Page, on_delete=models.PROTECT, related_name="department")
+    faculty = models.ForeignKey(
+        "faculties.Faculty", null=True, blank=True, on_delete=models.SET_NULL, related_name="departments"
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
