@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../i18n/LanguageContext";
 import type { MenuItem } from "../types";
 
 /**
  * Renders the real site nav tree from /api/v1/menu/ instead of hardcoded
  * links — proves the Menu app is actually useful, not just an API that
- * nothing consumes. Uses uz labels for now; a global language context (as
- * opposed to each page's own local `lang` state) is the next piece needed
- * to make the whole nav language-aware, not just individual pages.
+ * nothing consumes.
  */
 export function MenuNav() {
   const [items, setItems] = useState<MenuItem[]>([]);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     fetch("/api/v1/menu/")
@@ -28,11 +28,11 @@ export function MenuNav() {
               to={item.url}
               className="rounded-lg px-3 py-1.5 text-sm font-semibold text-foreground-700 hover:bg-primary-50 hover:text-primary-800"
             >
-              {item.label.uz}
+              {item.label[lang]}
             </Link>
           ) : (
             <span className="cursor-default rounded-lg px-3 py-1.5 text-sm font-semibold text-foreground-700 group-hover:bg-primary-50 group-hover:text-primary-800">
-              {item.label.uz}
+              {item.label[lang]}
             </span>
           )}
 
@@ -44,7 +44,7 @@ export function MenuNav() {
                   to={child.url || "#"}
                   className="block px-4 py-2 text-sm text-foreground-700 hover:bg-primary-50 hover:text-primary-800"
                 >
-                  {child.label.uz}
+                  {child.label[lang]}
                 </Link>
               ))}
             </div>

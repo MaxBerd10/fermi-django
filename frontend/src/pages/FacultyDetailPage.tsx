@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import type { FacultyDetail, Lang } from "../types";
+import type { FacultyDetail } from "../types";
 import { BlockRenderer } from "../blocks/BlockRenderer";
-
-const LANGS: { code: Lang; label: string }[] = [
-  { code: "uz", label: "O'zbekcha" },
-  { code: "ru", label: "Русский" },
-  { code: "en", label: "English" },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function FacultyDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const [faculty, setFaculty] = useState<FacultyDetail | null>(null);
-  const [lang, setLang] = useState<Lang>("uz");
+  const { lang } = useLanguage();
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,20 +25,6 @@ export function FacultyDetailPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-10">
-      <div className="mb-6 flex gap-2">
-        {LANGS.map((l) => (
-          <button
-            key={l.code}
-            onClick={() => setLang(l.code)}
-            className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors ${
-              lang === l.code ? "bg-primary-900 text-white" : "bg-primary-50 text-primary-700 hover:bg-primary-100"
-            }`}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
-
       <h1 className="mb-6 font-display text-2xl font-extrabold tracking-tight text-primary-900 text-balance">
         {faculty.name[lang]}
       </h1>

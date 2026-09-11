@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { FacultyListItem, Lang, Paginated } from "../types";
-
-const LANGS: { code: Lang; label: string }[] = [
-  { code: "uz", label: "O'zbekcha" },
-  { code: "ru", label: "Русский" },
-  { code: "en", label: "English" },
-];
+import type { FacultyListItem, Paginated } from "../types";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function FacultyListPage() {
   const [items, setItems] = useState<FacultyListItem[] | null>(null);
-  const [lang, setLang] = useState<Lang>("uz");
+  const { lang } = useLanguage();
 
   useEffect(() => {
     fetch("/api/v1/faculties/")
@@ -20,20 +15,6 @@ export function FacultyListPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-10">
-      <div className="mb-6 flex gap-2">
-        {LANGS.map((l) => (
-          <button
-            key={l.code}
-            onClick={() => setLang(l.code)}
-            className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors ${
-              lang === l.code ? "bg-primary-900 text-white" : "bg-primary-50 text-primary-700 hover:bg-primary-100"
-            }`}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
-
       <h1 className="mb-6 font-display text-2xl font-extrabold text-primary-900">
         {lang === "uz" ? "Fakultetlar" : lang === "ru" ? "Факультеты" : "Faculties"}
       </h1>

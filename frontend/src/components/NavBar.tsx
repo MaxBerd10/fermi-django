@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MenuNav } from "./MenuNav";
 
 export function NavBar() {
@@ -13,7 +14,8 @@ export function NavBar() {
         </Link>
         <MenuNav />
       </div>
-      <div className="flex items-center gap-3 text-sm">
+      <div className="flex items-center gap-4 text-sm">
+        <LanguageSwitcher />
         {loading ? null : user ? (
           <>
             <span className="text-foreground-600">Salom, {user.username}</span>

@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-import type { DepartmentDetail, Lang } from "./types";
+import type { DepartmentDetail } from "./types";
 import { BlockRenderer } from "./blocks/BlockRenderer";
 import { StaffGrid } from "./components/StaffGrid";
-
-const LANGS: { code: Lang; label: string }[] = [
-  { code: "uz", label: "O'zbekcha" },
-  { code: "ru", label: "Русский" },
-  { code: "en", label: "English" },
-];
+import { useLanguage } from "./i18n/LanguageContext";
 
 export function DepartmentPage({ slug }: { slug: string }) {
   const [dept, setDept] = useState<DepartmentDetail | null>(null);
-  const [lang, setLang] = useState<Lang>("uz");
+  const { lang } = useLanguage();
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -29,20 +24,6 @@ export function DepartmentPage({ slug }: { slug: string }) {
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-10">
-      <div className="mb-6 flex gap-2">
-        {LANGS.map((l) => (
-          <button
-            key={l.code}
-            onClick={() => setLang(l.code)}
-            className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors ${
-              lang === l.code ? "bg-primary-900 text-white" : "bg-primary-50 text-primary-700 hover:bg-primary-100"
-            }`}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
-
       <div className="page-card mb-8 flex items-center gap-4 p-5">
         {dept.logo && (
           <img
