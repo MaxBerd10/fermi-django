@@ -239,6 +239,30 @@ def extract(html: str) -> ExtractionResult:
                 pending_image = None
                 i += 2
                 continue
+            # A different real staff-bio shape found live: name and title
+            # in two SEPARATE bold blocks (not one block with a <br>) --
+            # name alone, then a title block (itself possibly 2 lines), then
+            # the bio paragraph. Without this, the name-only heading reads
+            # as a generic section heading and the title block's own first
+            # line (often itself several plain words, e.g. a department
+            # name) gets mistaken for the person's name instead.
+            if len(lines) == 1 and _looks_like_person_name(lines[0]):
+                has_title_then_bio = (
+                    i + 2 < len(items)
+                    and items[i + 1][0] == "text"
+                    and _is_bold_only(items[i + 1][1])
+                    and items[i + 2][0] == "text"
+                    and not _is_bold_only(items[i + 2][1])
+                    and len(items[i + 2][1].get_text(strip=True)) >= _BIO_MIN_CHARS
+                )
+                if has_title_then_bio:
+                    full_name = lines[0]
+                    title = " ".join(_heading_lines(items[i + 1][1]))
+                    bio = _normalize(items[i + 2][1].get_text(" "))
+                    result.staff.append(ExtractedStaff(full_name, title, bio, pending_image))
+                    pending_image = None
+                    i += 3
+                    continue
             # Not a staff bio -- a short fully-bold div/p is a real heading,
             # but a long one (e.g. the intro sentence, entirely bolded by the
             # original author) is a bold PARAGRAPH, not a heading. A real

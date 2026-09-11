@@ -58,6 +58,27 @@ def test_photo_name_title_bio_pattern_extracts_a_staff_member():
     assert staff.photo_src == "/uploads/x.png"
 
 
+def test_name_and_title_in_two_separate_bold_blocks_still_extracts_a_staff_member():
+    # Real bug found live: one department puts the name and title in TWO
+    # separate bold blocks (not one block with a <br> between them, the
+    # pattern the other check handles). Without this, the name-only
+    # heading reads as a generic section heading, and the title block's
+    # first line (itself plain, multi-word text, e.g. a job description)
+    # gets mistaken for the person's name instead.
+    html = (
+        '<img src="/uploads/x.png" />'
+        "<div><strong>Ism Familiya</strong></div>"
+        "<div><strong>Kafedra assistenti<br/>Mutaxassisligi — onkolog</strong></div>"
+        "<div>" + "Bu yerda uzun tarjimai hol matni keladi. " * 6 + "</div>"
+    )
+    result = extract(html)
+    assert len(result.staff) == 1
+    staff = result.staff[0]
+    assert staff.full_name == "Ism Familiya"
+    assert staff.title == "Kafedra assistenti Mutaxassisligi — onkolog"
+    assert staff.photo_src == "/uploads/x.png"
+
+
 def test_short_bold_line_that_is_not_a_real_name_stays_a_heading():
     # A single-word or comma-containing "name" candidate is almost
     # certainly not a person's name (see _looks_like_person_name) -- e.g. a
