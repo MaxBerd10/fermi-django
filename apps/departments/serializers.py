@@ -10,16 +10,23 @@ class StaffMemberSerializer(serializers.ModelSerializer):
     photo = ImageSerializer(read_only=True)
     title = serializers.SerializerMethodField()
     bio = serializers.SerializerMethodField()
+    reception_days = serializers.SerializerMethodField()
 
     class Meta:
         model = StaffMember
-        fields = ["id", "full_name", "title", "bio", "photo", "is_head", "order"]
+        fields = [
+            "id", "full_name", "title", "bio", "photo", "is_head", "order",
+            "phone", "email", "reception_days",
+        ]
 
     def get_title(self, obj):
         return {"uz": obj.title_uz, "ru": obj.title_ru, "en": obj.title_en}
 
     def get_bio(self, obj):
         return {"uz": obj.bio_uz, "ru": obj.bio_ru, "en": obj.bio_en}
+
+    def get_reception_days(self, obj):
+        return {"uz": obj.reception_days_uz, "ru": obj.reception_days_ru, "en": obj.reception_days_en}
 
 
 class DepartmentListSerializer(serializers.ModelSerializer):

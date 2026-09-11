@@ -1,6 +1,7 @@
 from django.db import models
 
 from apps.content.models import Page
+from apps.media_lib.models import Image
 
 
 class Faculty(models.Model):
@@ -8,6 +9,7 @@ class Faculty(models.Model):
     name_uz = models.CharField(max_length=255)
     name_ru = models.CharField(max_length=255)
     name_en = models.CharField(max_length=255)
+    logo = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
     page = models.OneToOneField(Page, on_delete=models.PROTECT, related_name="faculty")
     order = models.PositiveIntegerField(default=0)
 

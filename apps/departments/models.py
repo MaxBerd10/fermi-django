@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from apps.content.models import Page
@@ -40,9 +41,19 @@ class StaffMember(models.Model):
     why a stray <hr> or a misplaced paragraph could silently detach someone's
     name from their photo). full_name/title are language-invariant (a person's
     name doesn't translate); bio is the one field that does.
+
+    Belongs to exactly one of department or faculty — a kafedra's staff list
+    and a faculty's dekanat/leadership list are the same shape of data (photo,
+    name, title, bio, contact details), so one model covers both instead of
+    duplicating it.
     """
 
-    department = models.ForeignKey(Department, related_name="staff", on_delete=models.CASCADE)
+    department = models.ForeignKey(
+        Department, related_name="staff", on_delete=models.CASCADE, null=True, blank=True
+    )
+    faculty = models.ForeignKey(
+        "faculties.Faculty", related_name="leaders", on_delete=models.CASCADE, null=True, blank=True
+    )
     full_name = models.CharField(max_length=255)
     title_uz = models.CharField(max_length=255, blank=True)
     title_ru = models.CharField(max_length=255, blank=True)
@@ -50,12 +61,21 @@ class StaffMember(models.Model):
     bio_uz = models.TextField(blank=True)
     bio_ru = models.TextField(blank=True)
     bio_en = models.TextField(blank=True)
+    phone = models.CharField(max_length=50, blank=True)
+    email = models.CharField(max_length=255, blank=True)
+    reception_days_uz = models.CharField(max_length=255, blank=True)
+    reception_days_ru = models.CharField(max_length=255, blank=True)
+    reception_days_en = models.CharField(max_length=255, blank=True)
     photo = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
     is_head = models.BooleanField(default=False)
     order = models.PositiveIntegerField(default=0)
 
     class Meta:
         ordering = ["order", "id"]
+
+    def clean(self):
+        if bool(self.department_id) == bool(self.faculty_id):
+            raise ValidationError("A staff member must belong to exactly one of department or faculty.")
 
     def __str__(self) -> str:
         return self.full_name

@@ -20,6 +20,7 @@ class NeedsTranslationFilter(admin.SimpleListFilter):
 
 class StaffMemberInline(admin.TabularInline):
     model = StaffMember
+    fk_name = "department"
     extra = 0
 
 
@@ -32,8 +33,8 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 @admin.register(StaffMember)
 class StaffMemberAdmin(admin.ModelAdmin):
-    list_display = ("full_name", "department", "is_head", "order", "needs_translation")
-    list_filter = ("department", "is_head", NeedsTranslationFilter)
+    list_display = ("full_name", "department", "faculty", "is_head", "order", "needs_translation")
+    list_filter = ("department", "faculty", "is_head", NeedsTranslationFilter)
 
     @admin.display(description="Tarjima kerak", boolean=True)
     def needs_translation(self, obj):
