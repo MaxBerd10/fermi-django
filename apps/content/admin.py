@@ -45,6 +45,21 @@ def _recent_media_reference() -> str:
     return mark_safe("".join(sections)) if sections else "Hozircha yuklangan media yo'q."
 
 
+class NeedsTranslationFilter(admin.SimpleListFilter):
+    title = "tarjima holati"
+    parameter_name = "needs_translation"
+
+    def lookups(self, request, model_admin):
+        return (("yes", "Tarjima kerak"), ("no", "Tarjima to'liq / tekshirib bo'lmaydi"))
+
+    def queryset(self, request, queryset):
+        if self.value() not in ("yes", "no"):
+            return queryset
+        want = self.value() == "yes"
+        ids = [obj.id for obj in queryset if obj.needs_translation == want]
+        return queryset.filter(id__in=ids)
+
+
 class ContentBlockInline(admin.TabularInline):
     model = ContentBlock
     form = ContentBlockForm
@@ -53,7 +68,7 @@ class ContentBlockInline(admin.TabularInline):
 
 @admin.register(Page)
 class PageAdmin(admin.ModelAdmin):
-    list_display = ("slug", "updated_at")
+    list_display = ("slug", "updated_at", "blocks_needing_translation")
     readonly_fields = ("media_reference",)
     fields = ("slug", "media_reference")
     inlines = [ContentBlockInline]
@@ -62,15 +77,24 @@ class PageAdmin(admin.ModelAdmin):
     def media_reference(self, obj):
         return _recent_media_reference()
 
+    @admin.display(description="Tarjima kerak")
+    def blocks_needing_translation(self, obj):
+        count = sum(1 for b in obj.blocks.all() if b.needs_translation)
+        return count or "—"
+
 
 @admin.register(ContentBlock)
 class ContentBlockAdmin(admin.ModelAdmin):
     form = ContentBlockForm
-    list_display = ("page", "order", "block_type")
-    list_filter = ("block_type",)
+    list_display = ("page", "order", "block_type", "needs_translation")
+    list_filter = ("block_type", NeedsTranslationFilter)
     readonly_fields = ("media_reference",)
     fields = ("media_reference", "page", "order", "block_type", "data")
 
     @admin.display(description="Mavjud media (image/video/document bloklari uchun)")
     def media_reference(self, obj):
         return _recent_media_reference()
+
+    @admin.display(description="Tarjima kerak", boolean=True)
+    def needs_translation(self, obj):
+        return obj.needs_translation

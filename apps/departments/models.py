@@ -59,3 +59,13 @@ class StaffMember(models.Model):
 
     def __str__(self) -> str:
         return self.full_name
+
+    @property
+    def needs_translation(self) -> bool:
+        """See ContentBlock.needs_translation — same idea: a bio or title
+        that's byte-identical across two of the three languages is almost
+        certainly a fallback copy, not a genuine independent translation."""
+        return (
+            len({self.bio_uz, self.bio_ru, self.bio_en}) < 3
+            or len({self.title_uz, self.title_ru, self.title_en}) < 3
+        )

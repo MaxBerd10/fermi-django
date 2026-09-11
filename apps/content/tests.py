@@ -167,6 +167,33 @@ def test_gallery_item_rejects_html_in_alt(page):
         block.full_clean()
 
 
+# needs_translation: flags a block whose text is byte-identical across two
+# languages, since a genuine independent translation is never exactly equal
+# to another language's text -- see the legacy import's merge.py fallback.
+
+
+def test_heading_needs_translation_when_ru_and_en_repeat_the_uz_text(page):
+    data = valid_heading_data()
+    data["ru"]["text"] = data["en"]["text"] = data["uz"]["text"]
+    block = ContentBlock(page=page, order=1, block_type="heading", data=data)
+    assert block.needs_translation is True
+
+
+def test_heading_does_not_need_translation_when_every_language_differs(page):
+    block = ContentBlock(page=page, order=1, block_type="heading", data=valid_heading_data())
+    assert block.needs_translation is False
+
+
+def test_image_block_never_needs_translation_check(page):
+    data = {
+        "uz": {"image_id": 1, "alt": "sama"},
+        "ru": {"image_id": 1, "alt": "sama"},
+        "en": {"image_id": 1, "alt": "sama"},
+    }
+    block = ContentBlock(page=page, order=1, block_type="image", data=data)
+    assert block.needs_translation is False
+
+
 def valid_table_data():
     payload = {"headers": ["Fan", "Soat"], "rows": [["Anatomiya", "36"], ["Fiziologiya", "24"]]}
     return {"uz": payload, "ru": payload, "en": payload}
