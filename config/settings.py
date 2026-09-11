@@ -124,6 +124,14 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticatedOrReadOnly"],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
+    # Login/register brute-force protection lives here, in code, rather than in
+    # nginx — the exact gap the old site had until today, and the fix stays in
+    # sync with the code by construction instead of risking the same "nginx has
+    # its own stale copy" drift that silently blocked video playback today.
+    "DEFAULT_THROTTLE_RATES": {
+        "auth_login": "10/min",
+        "auth_register": "5/min",
+    },
 }
 
 SIMPLE_JWT = {
