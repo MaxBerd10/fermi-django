@@ -137,12 +137,18 @@ def _heading_lines(tag: Tag) -> list[str]:
 
 def _looks_like_person_name(text: str) -> bool:
     """Guards the staff-bio heuristic against false positives seen on real
-    data -- a stray single letter, a zero-width space, or a title fragment
+    data -- a stray single letter, a zero-width space, a title fragment
     like "Tibbiyot fanlari doktori, professor," that happened to land as
-    the first <br>-separated line of a bold block. A real name here is
-    always 2+ space-separated words with no digits or commas."""
+    the first <br>-separated line of a bold block, or (found live, after
+    adding the second staff-bio shape below) an ordinary bold SENTENCE like
+    "Kafedra ... markazi bazasida joylashgan." that happens to read as
+    multiple plain words with no digits or commas. A real name here is
+    always 2+ space-separated words, with no digits/commas, and never ends
+    in sentence-terminal punctuation the way a real sentence does."""
     words = text.split()
     if len(words) < 2 or "," in text or any(ch.isdigit() for ch in text):
+        return False
+    if text.rstrip().endswith((".", "!", "?", ":")):
         return False
     return all(any(ch.isalpha() for ch in word) for word in words)
 

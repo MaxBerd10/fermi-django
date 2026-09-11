@@ -58,6 +58,23 @@ def test_photo_name_title_bio_pattern_extracts_a_staff_member():
     assert staff.photo_src == "/uploads/x.png"
 
 
+def test_an_ordinary_bold_sentence_before_a_heading_is_not_mistaken_for_a_name():
+    # Real regression caused by adding the two-separate-blocks staff shape
+    # above: a plain bold SENTENCE ("Kafedra ... markazi bazasida
+    # joylashgan.") that happens to precede a heading and then a long
+    # paragraph was being read as [name, title, bio] -- multi-word, no
+    # digits/commas, so it passed _looks_like_person_name even though no
+    # real name ends in a period.
+    html = (
+        "<div><strong>Kafedra shahar markazida joylashgan binoda faoliyat yuritadi.</strong></div>"
+        "<div><strong>Kafedraning tarixi</strong></div>"
+        "<div>" + "Bu yerda kafedra tarixi haqida uzun matn keladi. " * 6 + "</div>"
+    )
+    result = extract(html)
+    assert len(result.staff) == 0
+    assert [b.block_type for b in result.blocks] == ["paragraph", "heading", "paragraph"]
+
+
 def test_name_and_title_in_two_separate_bold_blocks_still_extracts_a_staff_member():
     # Real bug found live: one department puts the name and title in TWO
     # separate bold blocks (not one block with a <br> between them, the
