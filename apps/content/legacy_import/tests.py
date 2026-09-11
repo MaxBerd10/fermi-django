@@ -70,3 +70,30 @@ def test_short_bold_line_that_is_not_a_real_name_stays_a_heading():
 def test_empty_html_produces_no_blocks():
     assert extract("").blocks == []
     assert extract("   ").blocks == []
+
+
+def test_pdf_text_layer_character_fragments_collapse_into_one_paragraph():
+    # Real bug found live: pasting text straight out of a PDF viewer into
+    # the old editor produces one <div style="position:absolute;
+    # color:transparent;..."> per CHARACTER -- the exact pollution pattern
+    # already fixed on the old site's own frontend (enhanceDepartmentHtml.ts
+    # -> collapsePdfTextLayerArtifacts). Without an equivalent fix here, a
+    # single pasted name turns into a dozen+ separate one-letter blocks.
+    fragment = (
+        '<div style="position: absolute; color: transparent; white-space: pre;">{}</div>'
+    )
+    html = "".join(fragment.format(ch) for ch in "SIDDIQOV")
+    result = extract(html)
+    assert len(result.blocks) == 1
+    assert result.blocks[0].block_type == "paragraph"
+    assert result.blocks[0].payload["text"] == "SIDDIQOV"
+
+
+def test_a_single_pdf_fragment_alone_is_left_as_is():
+    # Collapsing only makes sense for a RUN of 2+ fragments -- a single
+    # stray one shouldn't be treated specially (nothing to merge); it's
+    # still extracted normally as its own (tiny) paragraph.
+    html = '<div style="position: absolute; color: transparent;">Hi</div><p>Oddiy matn.</p>'
+    result = extract(html)
+    assert len(result.blocks) == 2
+    assert result.blocks[0].payload["text"] == "Hi"

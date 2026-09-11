@@ -18,11 +18,14 @@ point: see the management command's --dry-run flag.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 _BLOCK_TEXT_TAGS = ("div", "p", "li")
+_PDF_FRAGMENT_POSITION_RE = re.compile(r"position\s*:\s*absolute", re.I)
+_PDF_FRAGMENT_TRANSPARENT_RE = re.compile(r"color\s*:\s*transparent", re.I)
 _BIO_MIN_CHARS = 120  # below this, a paragraph after a name/title heading probably isn't a bio
 _HEADING_MAX_CHARS = 100  # a fully-bold div longer than this is a bold PARAGRAPH, not a heading
 
@@ -46,6 +49,56 @@ class ExtractionResult:
     blocks: list[ExtractedBlock] = field(default_factory=list)
     staff: list[ExtractedStaff] = field(default_factory=list)
     skipped: list[str] = field(default_factory=list)
+
+
+def _is_pdf_text_layer_fragment(tag: Tag) -> bool:
+    style = tag.get("style") or ""
+    return bool(_PDF_FRAGMENT_POSITION_RE.search(style) and _PDF_FRAGMENT_TRANSPARENT_RE.search(style))
+
+
+def _collapse_pdf_text_layer_artifacts(soup: Tag) -> None:
+    """Merges runs of 2+ PDF-text-layer character fragments (a <div
+    style="position:absolute; color:transparent; ...">X</div> per letter --
+    what pasting text straight out of a PDF viewer produces) into one real
+    <p> holding the concatenated text. Ports enhanceDepartmentHtml.ts's
+    collapsePdfTextLayerArtifacts, built earlier for the exact same
+    pollution found live on the old site's own frontend -- that fix only
+    covered the display layer there; this extraction pipeline needed its
+    own copy or every such fragment becomes its own one-letter block.
+    Mutates `soup` in place, before block extraction ever walks the tree.
+    """
+    containers = [soup, *soup.find_all(True)]
+    for container in containers:
+        if not isinstance(container, Tag) or container.decomposed:
+            continue
+        nodes = list(container.children)
+        i = 0
+        while i < len(nodes):
+            start = nodes[i]
+            if not (isinstance(start, Tag) and _is_pdf_text_layer_fragment(start)):
+                i += 1
+                continue
+            run = [start]
+            texts = [start.get_text()]
+            j = i + 1
+            while j < len(nodes):
+                nxt = nodes[j]
+                if isinstance(nxt, Tag) and _is_pdf_text_layer_fragment(nxt):
+                    run.append(nxt)
+                    texts.append(nxt.get_text())
+                    j += 1
+                elif isinstance(nxt, NavigableString) and not str(nxt).strip():
+                    run.append(nxt)
+                    j += 1
+                else:
+                    break
+            if len(texts) >= 2:
+                p = soup.new_tag("p")
+                p.string = "".join(texts)
+                run[0].insert_before(p)
+                for node in run:
+                    node.extract()
+            i = j
 
 
 def _is_leaf_text_container(tag: Tag) -> bool:
@@ -141,6 +194,7 @@ def extract(html: str) -> ExtractionResult:
     # isn't one (and would otherwise leak into every extracted text field).
     html = html.replace("&nbsp;", " ").replace("\xa0", " ")
     soup = BeautifulSoup(html, "lxml")
+    _collapse_pdf_text_layer_artifacts(soup)
     items = list(_walk_flat_items(soup))
 
     pending_image: str | None = None
