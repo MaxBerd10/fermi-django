@@ -81,7 +81,13 @@ class Command(BaseCommand):
             Page.objects.filter(pk=page_id).delete()
 
         logo = self._images.get_or_download(dept.logo_url)
-        page = Page.objects.create(slug=dept.slug)
+        # Page.slug is a separate, purely-internal join key -- never used
+        # for URLs (Department.slug is) -- so it's namespaced by content
+        # type + id rather than reusing the public slug, which a news post
+        # or faculty can otherwise collide with (found for real: a news
+        # post and a faculty share the exact slug
+        # "tibbiy-profilaktika-va-jamoat-salomatligi-fakulteti").
+        page = Page.objects.create(slug=f"department-{dept.id}")
         department = Department.objects.create(
             slug=dept.slug,
             name_uz=dept.title["uz"],

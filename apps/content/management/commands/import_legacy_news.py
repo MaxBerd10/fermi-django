@@ -125,7 +125,12 @@ class Command(BaseCommand):
 
         cover = self._images.get_or_download(post.cover_url)
         excerpt = self._excerpt(merged)
-        page = Page.objects.create(slug=post.slug)
+        # Page.slug is a separate, purely-internal join key -- never used
+        # for URLs (NewsPost.slug is) -- see import_legacy_departments.py
+        # for why it's namespaced by content type + id rather than reusing
+        # the public slug (a real collision: this exact post's slug is
+        # also a faculty's slug).
+        page = Page.objects.create(slug=f"news-{post.id}")
         NewsPost.objects.create(
             slug=post.slug,
             title_uz=post.title["uz"],

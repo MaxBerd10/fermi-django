@@ -106,7 +106,11 @@ class Command(BaseCommand):
             Page.objects.filter(pk=page_id).delete()
 
         logo = self._images.get_or_download(fac.logo_url)
-        page = Page.objects.create(slug=fac.slug)
+        # Page.slug is a separate, purely-internal join key -- never used
+        # for URLs (Faculty.slug is) -- see import_legacy_departments.py
+        # for why it's namespaced by content type + id rather than reusing
+        # the public slug.
+        page = Page.objects.create(slug=f"faculty-{fac.id}")
         faculty = Faculty.objects.create(
             slug=fac.slug,
             name_uz=fac.title["uz"],
