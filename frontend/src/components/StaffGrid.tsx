@@ -19,7 +19,7 @@ export function StaffGrid({ staff, lang }: { staff: StaffMember[]; lang: Lang })
             <div className="aspect-[3/4] bg-primary-50" />
           )}
           <div className="p-3">
-            <p className="font-display font-bold text-primary-900 leading-snug">{member.full_name}</p>
+            <p className="font-display font-bold text-primary-900 leading-snug">{member.full_name[lang]}</p>
             {member.title[lang] && (
               <p className="mt-0.5 text-sm text-foreground-600 leading-snug">{member.title[lang]}</p>
             )}

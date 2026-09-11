@@ -8,6 +8,7 @@ from .models import Department, StaffMember
 
 class StaffMemberSerializer(serializers.ModelSerializer):
     photo = ImageSerializer(read_only=True)
+    full_name = serializers.SerializerMethodField()
     title = serializers.SerializerMethodField()
     bio = serializers.SerializerMethodField()
     reception_days = serializers.SerializerMethodField()
@@ -18,6 +19,9 @@ class StaffMemberSerializer(serializers.ModelSerializer):
             "id", "full_name", "title", "bio", "photo", "is_head", "order",
             "phone", "email", "reception_days",
         ]
+
+    def get_full_name(self, obj):
+        return {"uz": obj.full_name_uz, "ru": obj.full_name_ru, "en": obj.full_name_en}
 
     def get_title(self, obj):
         return {"uz": obj.title_uz, "ru": obj.title_ru, "en": obj.title_en}

@@ -13,7 +13,9 @@ def department(db):
 def test_staff_needs_translation_when_bio_is_identical_across_languages(department):
     staff = StaffMember.objects.create(
         department=department,
-        full_name="Ism Familiya",
+        full_name_uz="Ism Familiya",
+        full_name_ru="Ism Familiya",  # fallback copy, not a real transliteration
+        full_name_en="Ism Familiya",
         title_uz="Dotsent",
         title_ru="Доцент",
         title_en="Associate Professor",
@@ -27,7 +29,9 @@ def test_staff_needs_translation_when_bio_is_identical_across_languages(departme
 def test_staff_does_not_need_translation_when_every_language_differs(department):
     staff = StaffMember.objects.create(
         department=department,
-        full_name="Ism Familiya",
+        full_name_uz="Ism Familiya",
+        full_name_ru="Имя Фамилия",
+        full_name_en="Name Surname",
         title_uz="Dotsent",
         title_ru="Доцент",
         title_en="Associate Professor",

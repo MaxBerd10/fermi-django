@@ -126,7 +126,9 @@ class Command(BaseCommand):
             )
             StaffMember.objects.create(
                 department=department,
-                full_name=person.full_name_by_lang["uz"],
+                full_name_uz=person.full_name_by_lang["uz"],
+                full_name_ru=person.full_name_by_lang["ru"],
+                full_name_en=person.full_name_by_lang["en"],
                 title_uz=person.title_by_lang["uz"],
                 title_ru=person.title_by_lang["ru"],
                 title_en=person.title_by_lang["en"],

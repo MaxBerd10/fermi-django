@@ -98,7 +98,7 @@ export interface Page {
 
 export interface StaffMember {
   id: number;
-  full_name: string;
+  full_name: Record<Lang, string>;
   title: Record<Lang, string>;
   bio: Record<Lang, string>;
   photo: LocalizedImage | null;

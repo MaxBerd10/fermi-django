@@ -146,7 +146,9 @@ class Command(BaseCommand):
             photo = self._images.get_or_download(uz.get("photo"))
             StaffMember.objects.create(
                 faculty=faculty,
-                full_name=(uz.get("name") or "").strip(),
+                full_name_uz=(row["uz"].get("name") or "").strip(),
+                full_name_ru=(row["ru"].get("name") or "").strip(),
+                full_name_en=(row["en"].get("name") or "").strip(),
                 title_uz=(row["uz"].get("position") or "").strip(),
                 title_ru=(row["ru"].get("position") or "").strip(),
                 title_en=(row["en"].get("position") or "").strip(),

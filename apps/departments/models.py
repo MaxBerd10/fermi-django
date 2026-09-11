@@ -39,8 +39,10 @@ class StaffMember(models.Model):
     A real, structured row per staff member — not scraped out of an <img> tag
     followed by a name in the next paragraph (the old site's approach, which is
     why a stray <hr> or a misplaced paragraph could silently detach someone's
-    name from their photo). full_name/title are language-invariant (a person's
-    name doesn't translate); bio is the one field that does.
+    name from their photo). full_name gets one column per language too, same
+    as title/bio: the old site's real content spells names in each language's
+    own script (e.g. "Siddiqov Obidjon" in uz, "Сиддиков Обиджон" in ru), not
+    just a transliteration-invariant string.
 
     Belongs to exactly one of department or faculty — a kafedra's staff list
     and a faculty's dekanat/leadership list are the same shape of data (photo,
@@ -54,7 +56,9 @@ class StaffMember(models.Model):
     faculty = models.ForeignKey(
         "faculties.Faculty", related_name="leaders", on_delete=models.CASCADE, null=True, blank=True
     )
-    full_name = models.CharField(max_length=255)
+    full_name_uz = models.CharField(max_length=255)
+    full_name_ru = models.CharField(max_length=255, blank=True)
+    full_name_en = models.CharField(max_length=255, blank=True)
     title_uz = models.CharField(max_length=255, blank=True)
     title_ru = models.CharField(max_length=255, blank=True)
     title_en = models.CharField(max_length=255, blank=True)
@@ -78,14 +82,16 @@ class StaffMember(models.Model):
             raise ValidationError("A staff member must belong to exactly one of department or faculty.")
 
     def __str__(self) -> str:
-        return self.full_name
+        return self.full_name_uz
 
     @property
     def needs_translation(self) -> bool:
-        """See ContentBlock.needs_translation — same idea: a bio or title
-        that's byte-identical across two of the three languages is almost
-        certainly a fallback copy, not a genuine independent translation."""
+        """See ContentBlock.needs_translation — same idea: a bio, title, or
+        name that's byte-identical across two of the three languages is
+        almost certainly a fallback copy, not a genuine independent
+        translation/transliteration."""
         return (
             len({self.bio_uz, self.bio_ru, self.bio_en}) < 3
             or len({self.title_uz, self.title_ru, self.title_en}) < 3
+            or len({self.full_name_uz, self.full_name_ru, self.full_name_en}) < 3
         )

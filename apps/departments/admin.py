@@ -33,7 +33,7 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 @admin.register(StaffMember)
 class StaffMemberAdmin(admin.ModelAdmin):
-    list_display = ("full_name", "department", "faculty", "is_head", "order", "needs_translation")
+    list_display = ("full_name_uz", "department", "faculty", "is_head", "order", "needs_translation")
     list_filter = ("department", "faculty", "is_head", NeedsTranslationFilter)
 
     @admin.display(description="Tarjima kerak", boolean=True)
