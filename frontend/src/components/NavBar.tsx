@@ -13,6 +13,9 @@ export function NavBar() {
         <Link to="/yangiliklar" className="text-sm font-semibold text-foreground-700 hover:text-primary-700">
           Yangiliklar
         </Link>
+        <Link to="/fakultetlar" className="text-sm font-semibold text-foreground-700 hover:text-primary-700">
+          Fakultetlar
+        </Link>
       </div>
       <div className="flex items-center gap-3 text-sm">
         {loading ? null : user ? (

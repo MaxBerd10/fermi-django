@@ -81,6 +81,24 @@ export interface NewsPostDetail extends NewsPostListItem {
   page: Page;
 }
 
+export interface FacultyListItem {
+  id: number;
+  slug: string;
+  name: Record<Lang, string>;
+  order: number;
+}
+
+export interface FacultyDepartmentRef {
+  id: number;
+  slug: string;
+  name_uz: string;
+}
+
+export interface FacultyDetail extends FacultyListItem {
+  page: Page;
+  departments: FacultyDepartmentRef[];
+}
+
 export interface Paginated<T> {
   count: number;
   next: string | null;
