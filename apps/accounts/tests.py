@@ -13,7 +13,7 @@ from rest_framework.test import APIClient
 
 User = get_user_model()
 
-VERIFY_LINK_RE = re.compile(r"/email-tasdiqlash/([^/]+)/([^\s/]+)")
+VERIFY_LINK_RE = re.compile(r"/(?:email-tasdiqlash|parolni-tiklash)/([^/]+)/([^\s/]+)")
 
 
 @pytest.fixture
@@ -112,3 +112,82 @@ def test_a_stale_or_forged_verification_token_is_rejected(client, registered_use
     assert res.status_code == 400
     registered_user.refresh_from_db()
     assert registered_user.is_active is False
+
+
+def _verify(client, registered_user):
+    uid, token = extract_verify_link()
+    client.post("/api/v1/auth/verify-email", {"uid": uid, "token": token}, format="json")
+    registered_user.refresh_from_db()
+
+
+def test_password_reset_request_never_reveals_whether_the_email_exists(client, db):
+    known = client.post(
+        "/api/v1/auth/password-reset-request", {"email": "nobody-here@example.com"}, format="json"
+    )
+    User.objects.create_user(username="dave", email="dave@example.com", password="StrongPass123!", is_active=True)
+    unknown = client.post(
+        "/api/v1/auth/password-reset-request", {"email": "dave@example.com"}, format="json"
+    )
+    assert known.status_code == unknown.status_code == 200
+    assert known.data == unknown.data == {"sent": True}
+
+
+def test_password_reset_confirm_changes_the_password_and_logs_in(client, registered_user):
+    _verify(client, registered_user)
+    mail.outbox.clear()
+
+    client.post("/api/v1/auth/password-reset-request", {"email": "alice@example.com"}, format="json")
+    uid, token = extract_verify_link()
+
+    res = client.post(
+        "/api/v1/auth/password-reset-confirm",
+        {"uid": uid, "token": token, "password": "BrandNewPass456!"},
+        format="json",
+    )
+    assert res.status_code == 200
+    assert "access" in res.data
+
+    old_login = client.post(
+        "/api/v1/auth/login", {"username": "alice", "password": "StrongPass123!"}, format="json"
+    )
+    assert old_login.status_code == 401
+
+    new_login = client.post(
+        "/api/v1/auth/login", {"username": "alice", "password": "BrandNewPass456!"}, format="json"
+    )
+    assert new_login.status_code == 200
+
+
+def test_password_reset_confirm_rejects_a_reused_token(client, registered_user):
+    _verify(client, registered_user)
+    mail.outbox.clear()
+
+    client.post("/api/v1/auth/password-reset-request", {"email": "alice@example.com"}, format="json")
+    uid, token = extract_verify_link()
+
+    first = client.post(
+        "/api/v1/auth/password-reset-confirm",
+        {"uid": uid, "token": token, "password": "BrandNewPass456!"},
+        format="json",
+    )
+    assert first.status_code == 200
+
+    second = client.post(
+        "/api/v1/auth/password-reset-confirm",
+        {"uid": uid, "token": token, "password": "AnotherPass789!"},
+        format="json",
+    )
+    assert second.status_code == 400
+
+
+def test_password_reset_confirm_enforces_password_validation(client, registered_user):
+    _verify(client, registered_user)
+    mail.outbox.clear()
+
+    client.post("/api/v1/auth/password-reset-request", {"email": "alice@example.com"}, format="json")
+    uid, token = extract_verify_link()
+
+    res = client.post(
+        "/api/v1/auth/password-reset-confirm", {"uid": uid, "token": token, "password": "1234"}, format="json"
+    )
+    assert res.status_code == 400

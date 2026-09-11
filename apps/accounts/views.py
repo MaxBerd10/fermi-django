@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.tokens import default_token_generator
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.core.mail import send_mail
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
@@ -19,6 +21,24 @@ User = get_user_model()
 def _issue_tokens(user) -> dict:
     refresh = RefreshToken.for_user(user)
     return {"access": str(refresh.access_token), "refresh": str(refresh)}
+
+
+def _decode_uid_token(uid: str, token: str):
+    """
+    Shared by email verification and password reset — both are "prove you
+    control this uid's inbox via a signed, time-limited token" flows using
+    Django's own token machinery, just pointed at different follow-up
+    actions. Returns the User on success, None on any failure (bad uid,
+    unknown user, expired/forged/already-used token).
+    """
+    try:
+        user_id = urlsafe_base64_decode(uid).decode()
+        user = User.objects.get(pk=user_id)
+    except (User.DoesNotExist, ValueError, TypeError, OverflowError):
+        return None
+    if not default_token_generator.check_token(user, token):
+        return None
+    return user
 
 
 class RegisterView(APIView):
@@ -58,19 +78,61 @@ class VerifyEmailView(APIView):
     throttle_scope = "auth_login"
 
     def post(self, request):
-        uid = request.data.get("uid")
-        token = request.data.get("token")
-        try:
-            user_id = urlsafe_base64_decode(uid).decode()
-            user = User.objects.get(pk=user_id)
-        except (User.DoesNotExist, ValueError, TypeError, OverflowError):
-            return Response({"detail": "Noto'g'ri havola."}, status=status.HTTP_400_BAD_REQUEST)
-
-        if not default_token_generator.check_token(user, token):
+        user = _decode_uid_token(request.data.get("uid"), request.data.get("token"))
+        if user is None:
             return Response({"detail": "Havola eskirgan yoki noto'g'ri."}, status=status.HTTP_400_BAD_REQUEST)
 
         user.is_active = True
         user.save(update_fields=["is_active"])
+        return Response(_issue_tokens(user))
+
+
+class PasswordResetRequestView(APIView):
+    """
+    Always returns the same generic response whether or not the email is
+    registered — confirming/denying an account's existence to an anonymous
+    caller is its own (minor but real) privacy leak, so this endpoint never
+    does, the same way the old site's equivalent form doesn't either.
+    """
+
+    permission_classes = [AllowAny]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "auth_register"
+
+    def post(self, request):
+        email = request.data.get("email", "")
+        user = User.objects.filter(email=email, is_active=True).first()
+        if user is not None:
+            uid = urlsafe_base64_encode(force_bytes(user.pk))
+            token = default_token_generator.make_token(user)
+            reset_link = f"{settings.FRONTEND_URL}/parolni-tiklash/{uid}/{token}"
+            send_mail(
+                subject="Parolni tiklash — FerMI",
+                message=f"Parolingizni tiklash uchun havolani bosing:\n\n{reset_link}",
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[user.email],
+            )
+        return Response({"sent": True})
+
+
+class PasswordResetConfirmView(APIView):
+    permission_classes = [AllowAny]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "auth_login"
+
+    def post(self, request):
+        user = _decode_uid_token(request.data.get("uid"), request.data.get("token"))
+        if user is None:
+            return Response({"detail": "Havola eskirgan yoki noto'g'ri."}, status=status.HTTP_400_BAD_REQUEST)
+
+        password = request.data.get("password", "")
+        try:
+            validate_password(password, user=user)
+        except DjangoValidationError as exc:
+            return Response({"detail": list(exc.messages)}, status=status.HTTP_400_BAD_REQUEST)
+
+        user.set_password(password)
+        user.save(update_fields=["password"])
         return Response(_issue_tokens(user))
 
 

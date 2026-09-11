@@ -54,6 +54,26 @@ export async function login(username: string, password: string) {
   return data;
 }
 
+export async function requestPasswordReset(email: string) {
+  const res = await fetch("/api/v1/auth/password-reset-request", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+  return parseJsonOrThrow(res);
+}
+
+export async function confirmPasswordReset(uid: string, token: string, password: string) {
+  const res = await fetch("/api/v1/auth/password-reset-confirm", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ uid, token, password }),
+  });
+  const data = await parseJsonOrThrow(res);
+  setTokens(data.access, data.refresh);
+  return data;
+}
+
 export async function logout() {
   const refresh = localStorage.getItem(REFRESH_KEY);
   const access = getAccessToken();

@@ -2,7 +2,14 @@ from django.urls import path
 from rest_framework.throttling import ScopedRateThrottle
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from .views import LogoutView, MeView, RegisterView, VerifyEmailView
+from .views import (
+    LogoutView,
+    MeView,
+    PasswordResetConfirmView,
+    PasswordResetRequestView,
+    RegisterView,
+    VerifyEmailView,
+)
 
 
 class ThrottledTokenObtainPairView(TokenObtainPairView):
@@ -13,6 +20,8 @@ class ThrottledTokenObtainPairView(TokenObtainPairView):
 urlpatterns = [
     path("auth/register", RegisterView.as_view()),
     path("auth/verify-email", VerifyEmailView.as_view()),
+    path("auth/password-reset-request", PasswordResetRequestView.as_view()),
+    path("auth/password-reset-confirm", PasswordResetConfirmView.as_view()),
     # TokenObtainPairView uses Django's own authenticate(), which already
     # refuses is_active=False users — an unverified account simply cannot
     # log in, no extra check needed here.
