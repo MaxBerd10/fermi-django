@@ -45,7 +45,11 @@ export function FacultyDetailPage() {
           </h2>
           <div className="space-y-2">
             {faculty.departments.map((dept) => (
-              <Link key={dept.id} to="/" className="page-card block p-4 font-semibold text-primary-900 hover:border-primary-200">
+              <Link
+                key={dept.id}
+                to={`/kafedralar/${dept.slug}`}
+                className="page-card block p-4 font-semibold text-primary-900 hover:border-primary-200"
+              >
                 {dept.name_uz}
               </Link>
             ))}

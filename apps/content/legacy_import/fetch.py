@@ -156,3 +156,13 @@ def fetch_news_post(slug: str) -> LegacyNewsPost:
     return LegacyNewsPost(
         id=post_id, slug=slug, title=title, content=content, cover_url=cover_url, published_at=published_at
     )
+
+
+def fetch_menu_tree(lang: str) -> list[dict]:
+    """The whole nav tree in one call (unlike departments/faculty/news,
+    which each need a request per item) -- items carry id/title/urlType/
+    urlValue/href/children. Confirmed the same ids and tree shape come back
+    for every language, so the three per-language trees can be walked in
+    lockstep by position rather than needing an id-based re-alignment."""
+    body = _get_json("/menu", lang)
+    return body["data"]

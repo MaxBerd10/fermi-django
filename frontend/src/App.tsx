@@ -3,6 +3,7 @@ import { AuthProvider } from "./auth/AuthContext";
 import { NavBar } from "./components/NavBar";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { DepartmentPage } from "./DepartmentPage";
+import { DepartmentDetailPage } from "./pages/DepartmentDetailPage";
 import { FacultyDetailPage } from "./pages/FacultyDetailPage";
 import { FacultyListPage } from "./pages/FacultyListPage";
 import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
@@ -21,6 +22,7 @@ export default function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<DepartmentPage slug="akusherlik-va-ginekologiya-kafedrasi" />} />
+            <Route path="/kafedralar/:slug" element={<DepartmentDetailPage />} />
             <Route path="/yangiliklar" element={<NewsListPage />} />
             <Route path="/yangiliklar/:slug" element={<NewsDetailPage />} />
             <Route path="/fakultetlar" element={<FacultyListPage />} />
