@@ -106,6 +106,22 @@ def _validate_document(payload: dict, lang: str) -> None:
             raise ValidationError(f"[{lang}] 'caption' is plain text only — remove any markup")
 
 
+def _validate_gallery(payload: dict, lang: str) -> None:
+    items = payload.get("items")
+    if not isinstance(items, list) or not items:
+        raise ValidationError(f"[{lang}] 'items' must be a non-empty list")
+    for item in items:
+        if not isinstance(item, dict):
+            raise ValidationError(f"[{lang}] every gallery item must be an object")
+        if not isinstance(item.get("image_id"), int):
+            raise ValidationError(f"[{lang}] every gallery item's 'image_id' must reference an uploaded Image")
+        if "alt" in item:
+            if not isinstance(item["alt"], str):
+                raise ValidationError(f"[{lang}] gallery item 'alt' must be a string")
+            if HTML_TAG_RE.search(item["alt"]):
+                raise ValidationError(f"[{lang}] gallery item 'alt' is plain text only — remove any markup")
+
+
 BLOCK_VALIDATORS = {
     "heading": _validate_heading,
     "paragraph": _validate_paragraph,
@@ -114,6 +130,7 @@ BLOCK_VALIDATORS = {
     "image": _validate_image,
     "video": _validate_video,
     "document": _validate_document,
+    "gallery": _validate_gallery,
 }
 
 

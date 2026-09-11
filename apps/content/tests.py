@@ -133,6 +133,40 @@ def test_document_block_rejects_html_in_caption(page):
         block.full_clean()
 
 
+def valid_gallery_data(image_ids=(1, 2)):
+    items = [{"image_id": i} for i in image_ids]
+    return {"uz": {"items": items}, "ru": {"items": items}, "en": {"items": items}}
+
+
+def test_valid_gallery_block_passes_validation(page):
+    block = ContentBlock(page=page, order=1, block_type="gallery", data=valid_gallery_data())
+    block.full_clean()  # must not raise
+
+
+def test_gallery_block_requires_non_empty_items(page):
+    data = valid_gallery_data()
+    data["en"]["items"] = []
+    block = ContentBlock(page=page, order=1, block_type="gallery", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
+def test_gallery_item_missing_image_id_is_rejected(page):
+    data = valid_gallery_data()
+    del data["uz"]["items"][0]["image_id"]
+    block = ContentBlock(page=page, order=1, block_type="gallery", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
+def test_gallery_item_rejects_html_in_alt(page):
+    data = valid_gallery_data()
+    data["uz"]["items"][0]["alt"] = '<div style="position: absolute; color: transparent;">S</div>'
+    block = ContentBlock(page=page, order=1, block_type="gallery", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
 # Regression tests: the exact two content-pollution patterns found on the old
 # Yii2 site today (ChatGPT web-UI markup, a PDF viewer's per-character text
 # layer) must never be savable here — see block_schemas.py's module docstring.

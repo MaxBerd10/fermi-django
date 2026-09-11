@@ -23,6 +23,17 @@ class ContentBlockSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         rep = super().to_representation(instance)
+        if instance.block_type == "gallery":
+            rep["data"] = {
+                lang: {
+                    "items": [
+                        {**item, "image": self._resolve(Image, ImageSerializer, item.get("image_id"))}
+                        for item in payload.get("items", [])
+                    ]
+                }
+                for lang, payload in instance.data.items()
+            }
+            return rep
         resolver = _MEDIA_REFERENCE_RESOLVERS.get(instance.block_type)
         if resolver:
             id_field, out_field, model, serializer_class = resolver

@@ -86,6 +86,26 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
       );
     }
 
+    case "gallery": {
+      const { items } = block.data[lang];
+      const visible = items.filter((item) => item.image);
+      if (visible.length === 0) return null;
+      return (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {visible.map((item, i) => (
+            <div key={item.image_id ?? i} className="aspect-square overflow-hidden rounded-lg">
+              <img
+                src={toAbsoluteUrl(item.image!.file)}
+                alt={item.alt ?? item.image!.alt_text}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      );
+    }
+
     case "document": {
       const { document, caption } = block.data[lang];
       if (!document) return null;

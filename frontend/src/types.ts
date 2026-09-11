@@ -48,8 +48,24 @@ export interface DocumentBlockData {
   caption?: string;
   document: LocalizedDocument | null;
 }
+export interface GalleryItem {
+  image_id: number;
+  alt?: string;
+  image: LocalizedImage | null;
+}
+export interface GalleryBlockData {
+  items: GalleryItem[];
+}
 
-export type BlockType = "heading" | "paragraph" | "list" | "staff_card" | "image" | "video" | "document";
+export type BlockType =
+  | "heading"
+  | "paragraph"
+  | "list"
+  | "staff_card"
+  | "image"
+  | "video"
+  | "document"
+  | "gallery";
 
 interface BlockBase<T extends BlockType, D> {
   id: number;
@@ -65,7 +81,8 @@ export type ContentBlock =
   | BlockBase<"staff_card", StaffCardData>
   | BlockBase<"image", ImageBlockData>
   | BlockBase<"video", VideoBlockData>
-  | BlockBase<"document", DocumentBlockData>;
+  | BlockBase<"document", DocumentBlockData>
+  | BlockBase<"gallery", GalleryBlockData>;
 
 export interface Page {
   id: number;

@@ -31,6 +31,11 @@
       ru: { document_id: null, caption: "" },
       en: { document_id: null, caption: "" },
     },
+    gallery: {
+      uz: { items: [{ image_id: null, alt: "" }] },
+      ru: { items: [{ image_id: null, alt: "" }] },
+      en: { items: [{ image_id: null, alt: "" }] },
+    },
   };
 
   document.addEventListener("change", function (event) {
