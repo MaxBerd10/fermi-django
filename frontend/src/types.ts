@@ -106,11 +106,14 @@ export interface StaffMember {
   order: number;
 }
 
-export interface DepartmentDetail {
+export interface DepartmentListItem {
   id: number;
   slug: string;
   name: Record<Lang, string>;
   logo: LocalizedImage | null;
+}
+
+export interface DepartmentDetail extends DepartmentListItem {
   page: Page;
   staff: StaffMember[];
 }
