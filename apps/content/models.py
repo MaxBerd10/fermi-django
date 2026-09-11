@@ -23,6 +23,7 @@ class ContentBlock(models.Model):
         LIST = "list", "List"
         STAFF_CARD = "staff_card", "Staff card"
         IMAGE = "image", "Image"
+        VIDEO = "video", "Video"
 
     page = models.ForeignKey(Page, related_name="blocks", on_delete=models.CASCADE)
     order = models.PositiveIntegerField()

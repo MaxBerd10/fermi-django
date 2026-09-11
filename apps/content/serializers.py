@@ -1,9 +1,18 @@
 from rest_framework import serializers
 
-from apps.media_lib.models import Image
-from apps.media_lib.serializers import ImageSerializer
+from apps.media_lib.models import Image, Video
+from apps.media_lib.serializers import ImageSerializer, VideoSerializer
 
 from .models import ContentBlock, Page
+
+# Blocks that reference a media_lib object by id (see block_schemas.py) get that
+# reference resolved to the real object here, so the frontend never has to make
+# a second round-trip just to get a file/dimensions/poster for something it
+# already has the id for.
+_MEDIA_REFERENCE_RESOLVERS = {
+    "image": ("image_id", "image", Image, ImageSerializer),
+    "video": ("video_id", "video", Video, VideoSerializer),
+}
 
 
 class ContentBlockSerializer(serializers.ModelSerializer):
@@ -13,23 +22,21 @@ class ContentBlockSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         rep = super().to_representation(instance)
-        # "image" blocks store only an image_id per language (see block_schemas.py) —
-        # resolve it to the real Image here so the frontend never has to make a
-        # second round-trip just to get width/height/file for something it already
-        # has the id for.
-        if instance.block_type == "image":
+        resolver = _MEDIA_REFERENCE_RESOLVERS.get(instance.block_type)
+        if resolver:
+            id_field, out_field, model, serializer_class = resolver
             rep["data"] = {
-                lang: {**payload, "image": self._resolve_image(payload.get("image_id"))}
+                lang: {**payload, out_field: self._resolve(model, serializer_class, payload.get(id_field))}
                 for lang, payload in instance.data.items()
             }
         return rep
 
     @staticmethod
-    def _resolve_image(image_id):
-        if image_id is None:
+    def _resolve(model, serializer_class, object_id):
+        if object_id is None:
             return None
-        image = Image.objects.filter(pk=image_id).first()
-        return ImageSerializer(image).data if image else None
+        obj = model.objects.filter(pk=object_id).first()
+        return serializer_class(obj).data if obj else None
 
 
 class PageSerializer(serializers.ModelSerializer):

@@ -9,7 +9,7 @@ import pytest
 from django.core.files.uploadedfile import SimpleUploadedFile
 from PIL import Image as PILImage
 
-from apps.media_lib.models import Image
+from apps.media_lib.models import Image, Video
 
 
 def make_uploaded_png(width: int, height: int, name: str = "test.png") -> SimpleUploadedFile:
@@ -27,3 +27,16 @@ def test_real_dimensions_are_computed_from_the_actual_image_not_trusted_input():
 
     assert image.width == 1600
     assert image.height == 900
+
+
+@pytest.mark.django_db
+def test_video_requires_a_poster_image():
+    # A poster is a required FK, not an optional field — this is what makes the
+    # old site's "black until you press play" bug structurally impossible here
+    # instead of papered over with a preload+seek workaround.
+    poster = Image.objects.create(file=make_uploaded_png(320, 180), alt_text="poster")
+    video_file = SimpleUploadedFile("clip.mp4", b"not-real-video-bytes", content_type="video/mp4")
+
+    video = Video.objects.create(file=video_file, poster=poster)
+
+    assert video.poster_id == poster.id

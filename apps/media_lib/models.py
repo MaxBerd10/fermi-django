@@ -18,3 +18,20 @@ class Image(models.Model):
 
     def __str__(self) -> str:
         return f"{self.file.name} ({self.width}x{self.height})"
+
+
+class Video(models.Model):
+    """
+    A single uploaded video with an explicit, editor-chosen poster frame —
+    the real fix for the old site's "video looks black until you press play"
+    bug. That bug was worked around there with a preload="metadata" + seek
+    hack because no real poster frame existed; here a poster is just a
+    required field, so the frontend never has to fake one.
+    """
+
+    file = models.FileField(upload_to="uploads/videos/%Y/%m/")
+    poster = models.ForeignKey(Image, on_delete=models.PROTECT, related_name="video_posters")
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.file.name

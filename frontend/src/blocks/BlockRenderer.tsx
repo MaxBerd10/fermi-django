@@ -1,6 +1,9 @@
 import type { ContentBlock, Lang } from "../types";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 
+const API_BASE = "http://127.0.0.1:8000";
+const toAbsoluteUrl = (path: string) => (path.startsWith("http") ? path : `${API_BASE}${path}`);
+
 /**
  * Each block renders itself from real, validated data for the current
  * language — no fixed heights, no text-align:justify (the source of uneven
@@ -56,6 +59,24 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
             maxWidthClass="max-w-lg"
             className="rounded-xl"
           />
+        </figure>
+      );
+    }
+
+    case "video": {
+      const { video, caption } = block.data[lang];
+      if (!video) return null;
+      return (
+        <figure className="mx-auto max-w-2xl">
+          <video
+            controls
+            preload="metadata"
+            poster={toAbsoluteUrl(video.poster.file)}
+            className="w-full rounded-xl"
+          >
+            <source src={toAbsoluteUrl(video.file)} />
+          </video>
+          {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
         </figure>
       );
     }
