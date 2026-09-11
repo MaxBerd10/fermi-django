@@ -5,24 +5,27 @@ export function NavBar() {
   const { user, loading, logout } = useAuth();
 
   return (
-    <nav className="flex items-center justify-between border-b border-slate-200 px-6 py-3">
-      <Link to="/" className="font-semibold text-slate-900">
-        FerMI
+    <nav className="flex items-center justify-between border-b border-primary-100 bg-white px-6 py-3">
+      <Link to="/" className="font-display text-lg font-extrabold tracking-tight text-primary-900">
+        Fer<span className="bg-gradient-to-b from-transparent from-75% to-secondary-400 to-75% text-primary-900">MI</span>
       </Link>
       <div className="flex items-center gap-3 text-sm">
         {loading ? null : user ? (
           <>
-            <span className="text-slate-600">Salom, {user.username}</span>
-            <button onClick={logout} className="rounded-lg bg-slate-100 px-3 py-1.5 font-medium text-slate-700 hover:bg-slate-200">
+            <span className="text-foreground-600">Salom, {user.username}</span>
+            <button
+              onClick={logout}
+              className="rounded-full bg-primary-50 px-4 py-2 font-semibold text-primary-800 hover:bg-primary-100"
+            >
               Chiqish
             </button>
           </>
         ) : (
           <>
-            <Link to="/kirish" className="rounded-lg px-3 py-1.5 font-medium text-slate-700 hover:bg-slate-100">
+            <Link to="/kirish" className="rounded-full px-4 py-2 font-semibold text-primary-700 hover:bg-primary-50">
               Kirish
             </Link>
-            <Link to="/royxatdan-otish" className="rounded-lg bg-slate-900 px-3 py-1.5 font-medium text-white">
+            <Link to="/royxatdan-otish" className="uni-btn">
               Ro'yxatdan o'tish
             </Link>
           </>

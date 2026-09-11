@@ -25,7 +25,7 @@ export function DepartmentPage({ slug }: { slug: string }) {
   }, [slug]);
 
   if (error) return <p className="p-8 text-red-600">Xatolik: {error}</p>;
-  if (!dept) return <p className="p-8 text-slate-500">Yuklanmoqda...</p>;
+  if (!dept) return <p className="p-8 text-foreground-500">Yuklanmoqda...</p>;
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-10">
@@ -34,8 +34,8 @@ export function DepartmentPage({ slug }: { slug: string }) {
           <button
             key={l.code}
             onClick={() => setLang(l.code)}
-            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-              lang === l.code ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+            className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors ${
+              lang === l.code ? "bg-primary-900 text-white" : "bg-primary-50 text-primary-700 hover:bg-primary-100"
             }`}
           >
             {l.label}
@@ -43,7 +43,7 @@ export function DepartmentPage({ slug }: { slug: string }) {
         ))}
       </div>
 
-      <div className="mb-8 flex items-center gap-4">
+      <div className="page-card mb-8 flex items-center gap-4 p-5">
         {dept.logo && (
           <img
             src={dept.logo.file.startsWith("http") ? dept.logo.file : `http://127.0.0.1:8000${dept.logo.file}`}
@@ -51,7 +51,9 @@ export function DepartmentPage({ slug }: { slug: string }) {
             className="h-16 w-16 object-contain"
           />
         )}
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 text-balance">{dept.name[lang]}</h1>
+        <h1 className="font-display text-2xl font-extrabold tracking-tight text-primary-900 text-balance">
+          {dept.name[lang]}
+        </h1>
       </div>
 
       <div className="space-y-5">
@@ -65,7 +67,7 @@ export function DepartmentPage({ slug }: { slug: string }) {
 
       {dept.staff.length > 0 && (
         <div className="mt-10">
-          <h2 className="mb-4 text-xl font-semibold text-slate-900">
+          <h2 className="mb-4 font-display text-xl font-bold text-primary-900">
             {lang === "uz" ? "Xodimlar" : lang === "ru" ? "Сотрудники" : "Staff"}
           </h2>
           <StaffGrid staff={dept.staff} lang={lang} />

@@ -13,23 +13,23 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
   switch (block.block_type) {
     case "heading":
       return (
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-900 text-balance">
+        <h2 className="font-display text-2xl font-bold tracking-tight text-primary-900 text-balance">
           {block.data[lang].text}
         </h2>
       );
 
     case "paragraph":
       return (
-        <p className="text-base leading-relaxed text-slate-700 text-left">
+        <p className="text-base leading-relaxed text-foreground-700 text-left">
           {block.data[lang].text}
         </p>
       );
 
     case "list":
       return (
-        <ol className="list-decimal space-y-2 pl-6 text-slate-700">
+        <ol className="list-decimal space-y-2 pl-6 text-foreground-700">
           {block.data[lang].items.map((item, i) => (
-            <li key={i} className="leading-relaxed">
+            <li key={i} className="leading-relaxed marker:font-semibold marker:text-primary-600">
               {item}
             </li>
           ))}
@@ -39,9 +39,9 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
     case "staff_card": {
       const { full_name, title } = block.data[lang];
       return (
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="font-semibold text-slate-900">{full_name}</p>
-          {title && <p className="text-sm text-slate-600">{title}</p>}
+        <div className="rounded-xl border border-primary-100 bg-primary-50/40 p-4">
+          <p className="font-display font-bold text-primary-900">{full_name}</p>
+          {title && <p className="text-sm text-foreground-600">{title}</p>}
         </div>
       );
     }
@@ -51,7 +51,11 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
       if (!image) return null;
       return (
         <figure className="mx-auto">
-          <ResponsiveImage image={{ ...image, alt_text: alt ?? image.alt_text }} maxWidthClass="max-w-lg" />
+          <ResponsiveImage
+            image={{ ...image, alt_text: alt ?? image.alt_text }}
+            maxWidthClass="max-w-lg"
+            className="rounded-xl"
+          />
         </figure>
       );
     }
