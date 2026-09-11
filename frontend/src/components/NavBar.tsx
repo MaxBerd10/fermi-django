@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
+import { MenuNav } from "./MenuNav";
 
 export function NavBar() {
   const { user, loading, logout } = useAuth();
@@ -10,12 +11,7 @@ export function NavBar() {
         <Link to="/" className="font-display text-lg font-extrabold tracking-tight text-primary-900">
           Fer<span className="bg-gradient-to-b from-transparent from-75% to-secondary-400 to-75% text-primary-900">MI</span>
         </Link>
-        <Link to="/yangiliklar" className="text-sm font-semibold text-foreground-700 hover:text-primary-700">
-          Yangiliklar
-        </Link>
-        <Link to="/fakultetlar" className="text-sm font-semibold text-foreground-700 hover:text-primary-700">
-          Fakultetlar
-        </Link>
+        <MenuNav />
       </div>
       <div className="flex items-center gap-3 text-sm">
         {loading ? null : user ? (

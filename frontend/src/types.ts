@@ -99,6 +99,14 @@ export interface FacultyDetail extends FacultyListItem {
   departments: FacultyDepartmentRef[];
 }
 
+export interface MenuItem {
+  id: number;
+  label: Record<Lang, string>;
+  url: string;
+  order: number;
+  children: MenuItem[];
+}
+
 export interface Paginated<T> {
   count: number;
   next: string | null;
