@@ -8,24 +8,45 @@ actual failure mode). Validation runs in ContentBlock.clean(), so a malformed
 block cannot be saved through the admin or the API — this is what "the mold
 doesn't break when content changes" means concretely: enforced at the model
 layer, not hoped for from a rich-text editor.
+
+Every text field here is *plain text by design* — blocks never need raw HTML,
+unlike the old site's CMS. That's what makes the HTML_TAG_RE check below able to
+reject ANY tag outright: it's not guessing which tags are "safe", it's enforcing
+that this content never needed tags in the first place. That one rule is what
+closes off, in one stroke, both real-world failure modes found on the old site
+today — pasting straight from ChatGPT's web UI (its own `<div class="...">`
+wrapper markup riding along) and pasting from a PDF viewer's text-selection
+layer (`<div style="position:absolute...">` per character) — neither can
+possibly pass a "no tags at all" check.
 """
+
+import re
 
 from django.core.exceptions import ValidationError
 
 SUPPORTED_LANGUAGES = ("uz", "ru", "en")
 
+HTML_TAG_RE = re.compile(r"<[a-zA-Z!/]")
 
-def _require_str(payload, field: str, lang: str):
-    if not isinstance(payload.get(field), str) or not payload[field].strip():
+
+def _require_plain_text(payload, field: str, lang: str):
+    value = payload.get(field)
+    if not isinstance(value, str) or not value.strip():
         raise ValidationError(f"[{lang}] '{field}' must be a non-empty string")
+    if HTML_TAG_RE.search(value):
+        raise ValidationError(
+            f"[{lang}] '{field}' looks like it contains HTML/markup — this field is "
+            "plain text only. If this was pasted from a website or PDF viewer, paste "
+            "as plain text instead (many editors support Cmd/Ctrl+Shift+V)."
+        )
 
 
 def _validate_heading(payload: dict, lang: str) -> None:
-    _require_str(payload, "text", lang)
+    _require_plain_text(payload, "text", lang)
 
 
 def _validate_paragraph(payload: dict, lang: str) -> None:
-    _require_str(payload, "text", lang)
+    _require_plain_text(payload, "text", lang)
 
 
 def _validate_list(payload: dict, lang: str) -> None:
@@ -35,12 +56,17 @@ def _validate_list(payload: dict, lang: str) -> None:
     for item in items:
         if not isinstance(item, str) or not item.strip():
             raise ValidationError(f"[{lang}] every list item must be a non-empty string")
+        if HTML_TAG_RE.search(item):
+            raise ValidationError(f"[{lang}] list items are plain text only — remove any markup")
 
 
 def _validate_staff_card(payload: dict, lang: str) -> None:
-    _require_str(payload, "full_name", lang)
-    if "title" in payload and not isinstance(payload["title"], str):
-        raise ValidationError(f"[{lang}] 'title' must be a string")
+    _require_plain_text(payload, "full_name", lang)
+    if "title" in payload:
+        if not isinstance(payload["title"], str):
+            raise ValidationError(f"[{lang}] 'title' must be a string")
+        if HTML_TAG_RE.search(payload["title"]):
+            raise ValidationError(f"[{lang}] 'title' is plain text only — remove any markup")
 
 
 def _validate_image(payload: dict, lang: str) -> None:
@@ -48,8 +74,11 @@ def _validate_image(payload: dict, lang: str) -> None:
     # still carries it so the block shape stays uniform — alt text is what varies.
     if not isinstance(payload.get("image_id"), int):
         raise ValidationError(f"[{lang}] 'image_id' must reference an uploaded Image")
-    if "alt" in payload and not isinstance(payload["alt"], str):
-        raise ValidationError(f"[{lang}] 'alt' must be a string")
+    if "alt" in payload:
+        if not isinstance(payload["alt"], str):
+            raise ValidationError(f"[{lang}] 'alt' must be a string")
+        if HTML_TAG_RE.search(payload["alt"]):
+            raise ValidationError(f"[{lang}] 'alt' is plain text only — remove any markup")
 
 
 BLOCK_VALIDATORS = {
