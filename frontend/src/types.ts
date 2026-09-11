@@ -24,6 +24,7 @@ export interface StaffCardData {
 export interface ImageBlockData {
   image_id: number;
   alt?: string;
+  image: LocalizedImage | null;
 }
 
 export type BlockType = "heading" | "paragraph" | "list" | "staff_card" | "image";

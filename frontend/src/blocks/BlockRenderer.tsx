@@ -1,4 +1,5 @@
 import type { ContentBlock, Lang } from "../types";
+import { ResponsiveImage } from "../components/ResponsiveImage";
 
 /**
  * Each block renders itself from real, validated data for the current
@@ -45,11 +46,15 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
       );
     }
 
-    case "image":
-      // Resolved separately by the page (needs the Image registry) — see
-      // DepartmentPage's imageMap. Kept as a documented block type for
-      // ad-hoc in-body images distinct from the formal staff/logo fields.
-      return null;
+    case "image": {
+      const { image, alt } = block.data[lang];
+      if (!image) return null;
+      return (
+        <figure className="mx-auto">
+          <ResponsiveImage image={{ ...image, alt_text: alt ?? image.alt_text }} maxWidthClass="max-w-lg" />
+        </figure>
+      );
+    }
 
     default:
       return null;
