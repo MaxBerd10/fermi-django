@@ -24,6 +24,7 @@ class ContentBlock(models.Model):
         STAFF_CARD = "staff_card", "Staff card"
         IMAGE = "image", "Image"
         VIDEO = "video", "Video"
+        DOCUMENT = "document", "Document"
 
     page = models.ForeignKey(Page, related_name="blocks", on_delete=models.CASCADE)
     order = models.PositiveIntegerField()

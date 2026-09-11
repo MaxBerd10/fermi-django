@@ -104,6 +104,35 @@ def test_video_block_rejects_html_in_caption(page):
         block.full_clean()
 
 
+def valid_document_data(document_id=1):
+    return {
+        "uz": {"document_id": document_id},
+        "ru": {"document_id": document_id},
+        "en": {"document_id": document_id},
+    }
+
+
+def test_valid_document_block_passes_validation(page):
+    block = ContentBlock(page=page, order=1, block_type="document", data=valid_document_data())
+    block.full_clean()  # must not raise
+
+
+def test_document_block_missing_document_id_is_rejected(page):
+    data = valid_document_data()
+    del data["en"]["document_id"]
+    block = ContentBlock(page=page, order=1, block_type="document", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
+def test_document_block_rejects_html_in_caption(page):
+    data = valid_document_data()
+    data["uz"]["caption"] = '<div style="position: absolute; color: transparent;">S</div>'
+    block = ContentBlock(page=page, order=1, block_type="document", data=data)
+    with pytest.raises(ValidationError):
+        block.full_clean()
+
+
 # Regression tests: the exact two content-pollution patterns found on the old
 # Yii2 site today (ChatGPT web-UI markup, a PDF viewer's per-character text
 # layer) must never be savable here — see block_schemas.py's module docstring.

@@ -1,3 +1,6 @@
+import os
+
+from django.core.validators import FileExtensionValidator
 from django.db import models
 
 
@@ -35,3 +38,34 @@ class Video(models.Model):
 
     def __str__(self) -> str:
         return self.file.name
+
+
+class Document(models.Model):
+    """
+    A downloadable file (PDF for now — the old site's only real document
+    type). Rendered as a plain download/view link, not an embedded iframe
+    viewer: the old site's iframe viewer was the subject of a recurring "PDF
+    takes too long to open" complaint that months of investigation never
+    pinned to an actual bug — a link sidesteps the whole failure class
+    instead of trying to reproduce a fragile embedded viewer here.
+    """
+
+    file = models.FileField(
+        upload_to="uploads/documents/%Y/%m/",
+        validators=[FileExtensionValidator(allowed_extensions=["pdf"])],
+    )
+    title = models.CharField(max_length=255, blank=True)
+    file_size = models.PositiveIntegerField(editable=False, default=0)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        if self.file:
+            self.file_size = self.file.size
+        super().save(*args, **kwargs)
+
+    @property
+    def filename(self) -> str:
+        return os.path.basename(self.file.name)
+
+    def __str__(self) -> str:
+        return self.title or self.filename

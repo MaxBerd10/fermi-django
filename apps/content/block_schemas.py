@@ -93,6 +93,19 @@ def _validate_video(payload: dict, lang: str) -> None:
             raise ValidationError(f"[{lang}] 'caption' is plain text only — remove any markup")
 
 
+def _validate_document(payload: dict, lang: str) -> None:
+    # document_id is language-independent in practice, but every language's
+    # payload still carries it so the block shape stays uniform — caption is
+    # what varies.
+    if not isinstance(payload.get("document_id"), int):
+        raise ValidationError(f"[{lang}] 'document_id' must reference an uploaded Document")
+    if "caption" in payload:
+        if not isinstance(payload["caption"], str):
+            raise ValidationError(f"[{lang}] 'caption' must be a string")
+        if HTML_TAG_RE.search(payload["caption"]):
+            raise ValidationError(f"[{lang}] 'caption' is plain text only — remove any markup")
+
+
 BLOCK_VALIDATORS = {
     "heading": _validate_heading,
     "paragraph": _validate_paragraph,
@@ -100,6 +113,7 @@ BLOCK_VALIDATORS = {
     "staff_card": _validate_staff_card,
     "image": _validate_image,
     "video": _validate_video,
+    "document": _validate_document,
 }
 
 

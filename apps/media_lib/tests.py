@@ -6,10 +6,11 @@ are read from the actual decoded image by Pillow, never trusted from user input.
 import io
 
 import pytest
+from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import SimpleUploadedFile
 from PIL import Image as PILImage
 
-from apps.media_lib.models import Image, Video
+from apps.media_lib.models import Document, Image, Video
 
 
 def make_uploaded_png(width: int, height: int, name: str = "test.png") -> SimpleUploadedFile:
@@ -40,3 +41,25 @@ def test_video_requires_a_poster_image():
     video = Video.objects.create(file=video_file, poster=poster)
 
     assert video.poster_id == poster.id
+
+
+@pytest.mark.django_db
+def test_document_file_size_is_computed_from_the_actual_upload():
+    upload = SimpleUploadedFile("order-42.pdf", b"%PDF-1.4 fake pdf bytes", content_type="application/pdf")
+
+    document = Document.objects.create(file=upload, title="Buyruq 42")
+    document.refresh_from_db()
+
+    assert document.file_size == len(b"%PDF-1.4 fake pdf bytes")
+    assert document.filename == "order-42.pdf"
+
+
+@pytest.mark.django_db
+def test_document_rejects_non_pdf_files():
+    # Only PDF is accepted for now — the old site's one real document type —
+    # rather than opening this up to arbitrary uploaded file types.
+    upload = SimpleUploadedFile("not-a-pdf.exe", b"MZ fake binary", content_type="application/octet-stream")
+
+    document = Document(file=upload, title="Suspicious file")
+    with pytest.raises(ValidationError):
+        document.full_clean()

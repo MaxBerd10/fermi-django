@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from apps.media_lib.models import Image, Video
-from apps.media_lib.serializers import ImageSerializer, VideoSerializer
+from apps.media_lib.models import Document, Image, Video
+from apps.media_lib.serializers import DocumentSerializer, ImageSerializer, VideoSerializer
 
 from .models import ContentBlock, Page
 
@@ -12,6 +12,7 @@ from .models import ContentBlock, Page
 _MEDIA_REFERENCE_RESOLVERS = {
     "image": ("image_id", "image", Image, ImageSerializer),
     "video": ("video_id", "video", Video, VideoSerializer),
+    "document": ("document_id", "document", Document, DocumentSerializer),
 }
 
 

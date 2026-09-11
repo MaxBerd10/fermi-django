@@ -4,6 +4,11 @@ import { ResponsiveImage } from "../components/ResponsiveImage";
 const API_BASE = "http://127.0.0.1:8000";
 const toAbsoluteUrl = (path: string) => (path.startsWith("http") ? path : `${API_BASE}${path}`);
 
+function formatFileSize(bytes: number): string {
+  if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
 /**
  * Each block renders itself from real, validated data for the current
  * language — no fixed heights, no text-align:justify (the source of uneven
@@ -76,6 +81,33 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
           >
             <source src={toAbsoluteUrl(video.file)} />
           </video>
+          {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
+        </figure>
+      );
+    }
+
+    case "document": {
+      const { document, caption } = block.data[lang];
+      if (!document) return null;
+      return (
+        <figure className="mx-auto max-w-lg">
+          <a
+            href={toAbsoluteUrl(document.file)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 rounded-xl border border-primary-100 bg-primary-50/40 p-4 transition hover:bg-primary-50"
+          >
+            <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0 text-primary-600" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+              <path d="M14 3v5h5" />
+            </svg>
+            <span className="min-w-0">
+              <span className="block truncate font-display font-bold text-primary-900">
+                {document.title || document.filename}
+              </span>
+              <span className="text-sm text-foreground-600">PDF · {formatFileSize(document.file_size)}</span>
+            </span>
+          </a>
           {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
         </figure>
       );

@@ -36,8 +36,20 @@ export interface VideoBlockData {
   caption?: string;
   video: LocalizedVideo | null;
 }
+export interface LocalizedDocument {
+  id: number;
+  file: string;
+  title: string;
+  filename: string;
+  file_size: number;
+}
+export interface DocumentBlockData {
+  document_id: number;
+  caption?: string;
+  document: LocalizedDocument | null;
+}
 
-export type BlockType = "heading" | "paragraph" | "list" | "staff_card" | "image" | "video";
+export type BlockType = "heading" | "paragraph" | "list" | "staff_card" | "image" | "video" | "document";
 
 interface BlockBase<T extends BlockType, D> {
   id: number;
@@ -52,7 +64,8 @@ export type ContentBlock =
   | BlockBase<"list", ListData>
   | BlockBase<"staff_card", StaffCardData>
   | BlockBase<"image", ImageBlockData>
-  | BlockBase<"video", VideoBlockData>;
+  | BlockBase<"video", VideoBlockData>
+  | BlockBase<"document", DocumentBlockData>;
 
 export interface Page {
   id: number;

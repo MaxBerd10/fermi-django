@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Image, Video
+from .models import Document, Image, Video
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -15,3 +15,11 @@ class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
         fields = ["id", "file", "poster"]
+
+
+class DocumentSerializer(serializers.ModelSerializer):
+    filename = serializers.ReadOnlyField()
+
+    class Meta:
+        model = Document
+        fields = ["id", "file", "title", "filename", "file_size"]
