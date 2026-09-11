@@ -6,9 +6,14 @@ export function NavBar() {
 
   return (
     <nav className="flex items-center justify-between border-b border-primary-100 bg-white px-6 py-3">
-      <Link to="/" className="font-display text-lg font-extrabold tracking-tight text-primary-900">
-        Fer<span className="bg-gradient-to-b from-transparent from-75% to-secondary-400 to-75% text-primary-900">MI</span>
-      </Link>
+      <div className="flex items-center gap-6">
+        <Link to="/" className="font-display text-lg font-extrabold tracking-tight text-primary-900">
+          Fer<span className="bg-gradient-to-b from-transparent from-75% to-secondary-400 to-75% text-primary-900">MI</span>
+        </Link>
+        <Link to="/yangiliklar" className="text-sm font-semibold text-foreground-700 hover:text-primary-700">
+          Yangiliklar
+        </Link>
+      </div>
       <div className="flex items-center gap-3 text-sm">
         {loading ? null : user ? (
           <>

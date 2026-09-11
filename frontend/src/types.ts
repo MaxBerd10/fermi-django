@@ -67,3 +67,23 @@ export interface DepartmentDetail {
   page: Page;
   staff: StaffMember[];
 }
+
+export interface NewsPostListItem {
+  id: number;
+  slug: string;
+  title: Record<Lang, string>;
+  excerpt: Record<Lang, string>;
+  cover: LocalizedImage | null;
+  published_at: string;
+}
+
+export interface NewsPostDetail extends NewsPostListItem {
+  page: Page;
+}
+
+export interface Paginated<T> {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: T[];
+}
