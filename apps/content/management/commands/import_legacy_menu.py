@@ -94,7 +94,10 @@ class Command(BaseCommand):
                     category_slugs=category_slugs,
                 )
 
-        self.stdout.write(self.style.SUCCESS(f"Imported {counts['total']} menu item(s)."))
+        actual = MenuItem.objects.count()
+        self.stdout.write(
+            self.style.SUCCESS(f"Imported {actual} menu item(s) ({counts['total'] - actual} pruned as dead+childless).")
+        )
 
     # -- reporting -------------------------------------------------------
 
@@ -168,15 +171,24 @@ class Command(BaseCommand):
         # routes carry -- see the module docstring for why (children become
         # each other's sidebar).
         section_menu_id = parent.id if parent is not None else None
+        url = self._resolve_url(
+            uz_node, section_menu_id if section_menu_id is not None else 0,
+            department_slugs, faculty_slugs, page_slugs, category_slugs,
+        )
+        # A node with no real destination is still worth keeping when it has
+        # real children (the same "non-clickable group header" shape as
+        # "Institut"/"Tuzilma" etc.) -- but with NEITHER a destination NOR
+        # children, it's pure dead weight (a handful of items are like this
+        # even on the old site itself, e.g. a menu entry for a page that 404s
+        # there too), so it's dropped rather than rendered as an inert link.
+        if url == "#" and not uz_node["children"]:
+            return
         item = MenuItem.objects.create(
             parent=parent,
             label_uz=uz_node["title"],
             label_ru=node_by_lang["ru"]["title"] or uz_node["title"],
             label_en=node_by_lang["en"]["title"] or uz_node["title"],
-            url=self._resolve_url(
-                uz_node, section_menu_id if section_menu_id is not None else 0,
-                department_slugs, faculty_slugs, page_slugs, category_slugs,
-            ),
+            url=url,
             order=order,
         )
         children = zip(uz_node["children"], node_by_lang["ru"]["children"], node_by_lang["en"]["children"])
