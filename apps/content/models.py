@@ -6,17 +6,49 @@ from .block_schemas import validate_block_data
 
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 _PHONE_RE = re.compile(r"\+?\d[\d\s().-]{5,}\d")
+_URL_RE = re.compile(r"https?://\S+")
+_CYRILLIC_RE = re.compile(r"[Ѐ-ӿ]")
+_LATIN_RE = re.compile(r"[A-Za-z]")
 
 
 def _is_language_invariant(text: str) -> bool:
-    """Contact details (phone numbers, emails) are correctly identical across
-    languages once the surrounding label ("Tel.", "fax", "e-mail") already
-    reads the same in Uzbek and English -- there's no prose left to translate.
-    True when stripping any email/phone matches out of the text leaves next
-    to no letters behind."""
+    """Contact details (phone numbers, emails) and bare URLs are correctly
+    identical across languages once the surrounding label ("Tel.", "fax",
+    "e-mail") already reads the same in Uzbek and English -- there's no
+    prose left to translate. True when stripping any email/phone/URL
+    matches out of the text leaves next to no letters behind."""
     stripped = _EMAIL_RE.sub("", text)
     stripped = _PHONE_RE.sub("", stripped)
+    stripped = _URL_RE.sub("", stripped)
     return sum(1 for ch in stripped if ch.isalpha()) <= 6
+
+
+def _is_ru_source_text(text: str) -> bool:
+    """A handful of legacy blocks have Russian prose sitting directly in the
+    'uz' slot -- a data-entry mistake on the original site, not a missing
+    translation. For those, the correct 'ru' value is simply the same text,
+    which would otherwise look like an untranslated fallback copy. Detected
+    by the text being predominantly Cyrillic."""
+    cyrillic = len(_CYRILLIC_RE.findall(text))
+    latin = len(_LATIN_RE.findall(text))
+    return cyrillic > 0 and cyrillic >= latin * 3
+
+
+# A handful of legacy blocks hold genuine English-language source material
+# (international-partnership press content, lab-test terms) directly in the
+# 'uz' slot -- so an identical 'en' value is the correct translation, not a
+# missing one. Verified by hand, one at a time, rather than guessed at with
+# a heuristic, since a false positive here would silently skip a block that
+# actually still needs translating.
+_ENGLISH_SOURCE_BLOCK_IDS = {
+    18644, 18739, 18976, 19127, 19128, 19129, 19131, 19132,
+    19134, 19135, 19137, 19138, 19139, 19472, 19473, 19475,
+}
+
+# A smaller handful are bare brand/product/institution names with no
+# translation in any language -- the same proper noun is correct verbatim
+# in uz, ru and en alike. Same hand-verified precedent as above.
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921}
 
 
 class Page(models.Model):
@@ -83,11 +115,30 @@ class ContentBlock(models.Model):
         field = self._TRANSLATABLE_FIELD.get(self.block_type)
         if field:
             uz_value = self.data.get("uz", {}).get(field)
-            if isinstance(uz_value, str) and _is_language_invariant(uz_value):
+            if not isinstance(uz_value, str):
                 return False
-            values = {self.data.get(lang, {}).get(field) for lang in ("uz", "ru", "en")}
-            return len(values) < 3
+            if _is_language_invariant(uz_value):
+                return False
+            if self.id in _PROPER_NOUN_BLOCK_IDS:
+                return False
+            for lang in ("ru", "en"):
+                if self.data.get(lang, {}).get(field) != uz_value:
+                    continue
+                if lang == "ru" and _is_ru_source_text(uz_value):
+                    continue
+                if lang == "en" and self.id in _ENGLISH_SOURCE_BLOCK_IDS:
+                    continue
+                return True
+            return False
         if self.block_type == "list":
-            values = {tuple(self.data.get(lang, {}).get("items", [])) for lang in ("uz", "ru", "en")}
-            return len(values) < 3
+            if self.id in _PROPER_NOUN_BLOCK_IDS:
+                return False
+            uz_items = tuple(self.data.get("uz", {}).get("items", []))
+            for lang in ("ru", "en"):
+                if tuple(self.data.get(lang, {}).get("items", [])) != uz_items:
+                    continue
+                if lang == "en" and self.id in _ENGLISH_SOURCE_BLOCK_IDS:
+                    continue
+                return True
+            return False
         return False

@@ -21,7 +21,13 @@ import json
 
 from django.core.management.base import BaseCommand, CommandError
 
-from apps.content.models import ContentBlock, _is_language_invariant
+from apps.content.models import (
+    ContentBlock,
+    _ENGLISH_SOURCE_BLOCK_IDS,
+    _PROPER_NOUN_BLOCK_IDS,
+    _is_language_invariant,
+    _is_ru_source_text,
+)
 from apps.departments.models import StaffMember
 
 _BLOCK_TEXT_FIELDS = {
@@ -39,6 +45,21 @@ _STAFF_FIELDS = ["full_name", "title", "bio"]
 _COPYRIGHT_EXCLUDED_BLOCK_IDS = {18084, *range(18086, 18103)}
 
 
+def _missing_langs(block_id: int, uz_value, lang_value_of) -> list[str]:
+    if block_id in _PROPER_NOUN_BLOCK_IDS:
+        return []
+    missing = []
+    for lang in ("ru", "en"):
+        if lang_value_of(lang) != uz_value:
+            continue
+        if lang == "ru" and isinstance(uz_value, str) and _is_ru_source_text(uz_value):
+            continue
+        if lang == "en" and block_id in _ENGLISH_SOURCE_BLOCK_IDS:
+            continue
+        missing.append(lang)
+    return missing
+
+
 def _block_entries(block: ContentBlock):
     if block.id in _COPYRIGHT_EXCLUDED_BLOCK_IDS:
         return
@@ -47,18 +68,16 @@ def _block_entries(block: ContentBlock):
             uz_value = block.data.get("uz", {}).get(field, "")
             if uz_value and _is_language_invariant(uz_value):
                 continue
-            missing = [
-                lang for lang in ("ru", "en")
-                if block.data.get(lang, {}).get(field) == uz_value
-            ]
+            missing = _missing_langs(
+                block.id, uz_value, lambda lang: block.data.get(lang, {}).get(field)
+            )
             if missing and uz_value:
                 yield field, uz_value, missing
     elif block.block_type == "list":
         uz_items = block.data.get("uz", {}).get("items", [])
-        missing = [
-            lang for lang in ("ru", "en")
-            if block.data.get(lang, {}).get("items") == uz_items
-        ]
+        missing = _missing_langs(
+            block.id, uz_items, lambda lang: block.data.get(lang, {}).get("items")
+        )
         if missing and uz_items:
             yield "items", uz_items, missing
 
