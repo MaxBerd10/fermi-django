@@ -1,6 +1,22 @@
+import re
+
 from django.db import models
 
 from .block_schemas import validate_block_data
+
+_EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+_PHONE_RE = re.compile(r"\+?\d[\d\s().-]{5,}\d")
+
+
+def _is_language_invariant(text: str) -> bool:
+    """Contact details (phone numbers, emails) are correctly identical across
+    languages once the surrounding label ("Tel.", "fax", "e-mail") already
+    reads the same in Uzbek and English -- there's no prose left to translate.
+    True when stripping any email/phone matches out of the text leaves next
+    to no letters behind."""
+    stripped = _EMAIL_RE.sub("", text)
+    stripped = _PHONE_RE.sub("", stripped)
+    return sum(1 for ch in stripped if ch.isalpha()) <= 6
 
 
 class Page(models.Model):
@@ -66,6 +82,9 @@ class ContentBlock(models.Model):
         field to compare."""
         field = self._TRANSLATABLE_FIELD.get(self.block_type)
         if field:
+            uz_value = self.data.get("uz", {}).get(field)
+            if isinstance(uz_value, str) and _is_language_invariant(uz_value):
+                return False
             values = {self.data.get(lang, {}).get(field) for lang in ("uz", "ru", "en")}
             return len(values) < 3
         if self.block_type == "list":

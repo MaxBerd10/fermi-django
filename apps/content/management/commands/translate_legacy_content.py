@@ -21,7 +21,7 @@ import json
 
 from django.core.management.base import BaseCommand, CommandError
 
-from apps.content.models import ContentBlock
+from apps.content.models import ContentBlock, _is_language_invariant
 from apps.departments.models import StaffMember
 
 _BLOCK_TEXT_FIELDS = {
@@ -36,6 +36,8 @@ def _block_entries(block: ContentBlock):
     if block.block_type in _BLOCK_TEXT_FIELDS:
         for field in _BLOCK_TEXT_FIELDS[block.block_type]:
             uz_value = block.data.get("uz", {}).get(field, "")
+            if uz_value and _is_language_invariant(uz_value):
+                continue
             missing = [
                 lang for lang in ("ru", "en")
                 if block.data.get(lang, {}).get(field) == uz_value
