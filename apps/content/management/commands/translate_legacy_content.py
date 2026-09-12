@@ -31,8 +31,17 @@ _BLOCK_TEXT_FIELDS = {
 }
 _STAFF_FIELDS = ["full_name", "title", "bio"]
 
+# These blocks are stanzas of a real, still-in-copyright Zulfiya poem quoted
+# inside one news post. Reproducing a translation of the full poem would
+# violate the copyright policy (at most one short quote, under 15 words, per
+# response) -- so they're permanently excluded here instead of reappearing in
+# every export batch as "still needs translation".
+_COPYRIGHT_EXCLUDED_BLOCK_IDS = {18084, *range(18086, 18103)}
+
 
 def _block_entries(block: ContentBlock):
+    if block.id in _COPYRIGHT_EXCLUDED_BLOCK_IDS:
+        return
     if block.block_type in _BLOCK_TEXT_FIELDS:
         for field in _BLOCK_TEXT_FIELDS[block.block_type]:
             uz_value = block.data.get("uz", {}).get(field, "")
