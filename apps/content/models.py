@@ -7,19 +7,22 @@ from .block_schemas import validate_block_data
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 _PHONE_RE = re.compile(r"\+?\d[\d\s().-]{5,}\d")
 _URL_RE = re.compile(r"https?://\S+|www\.\S+")
+_HANDLE_RE = re.compile(r"@[A-Za-z0-9_]+")
 _CYRILLIC_RE = re.compile(r"[Ѐ-ӿ]")
 _LATIN_RE = re.compile(r"[A-Za-z]")
 
 
 def _is_language_invariant(text: str) -> bool:
-    """Contact details (phone numbers, emails) and bare URLs are correctly
-    identical across languages once the surrounding label ("Tel.", "fax",
-    "e-mail") already reads the same in Uzbek and English -- there's no
-    prose left to translate. True when stripping any email/phone/URL
-    matches out of the text leaves next to no letters behind."""
+    """Contact details (phone numbers, emails), bare URLs and @handles
+    (Telegram/Instagram, etc.) are correctly identical across languages once
+    the surrounding label ("Tel.", "fax", "e-mail") already reads the same in
+    Uzbek and English -- there's no prose left to translate. True when
+    stripping any email/phone/URL/handle matches out of the text leaves next
+    to no letters behind."""
     stripped = _EMAIL_RE.sub("", text)
     stripped = _PHONE_RE.sub("", stripped)
     stripped = _URL_RE.sub("", stripped)
+    stripped = _HANDLE_RE.sub("", stripped)
     return sum(1 for ch in stripped if ch.isalpha()) <= 6
 
 
@@ -49,7 +52,7 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
 # in a byline, or a malformed URL (a stray space breaks the URL-invariance
 # regex) with no translation in any language -- the same text is correct
 # verbatim in uz, ru and en alike. Same hand-verified precedent as above.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213}
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711}
 
 
 class Page(models.Model):
