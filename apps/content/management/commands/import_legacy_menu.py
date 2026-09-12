@@ -38,10 +38,11 @@ from apps.faculties.models import Faculty
 from apps.menu.models import MenuItem
 
 # c-action is the old site's shorthand for a fixed feature page rather than
-# CMS content -- only two values ever appear in the tree.
+# CMS content.
 _C_ACTION_ROUTES = {
     "site/gallery": "/galereya",
     "site/video": "/video",
+    "site/virtual-reception": "/virtual-qabulxona",
 }
 
 
