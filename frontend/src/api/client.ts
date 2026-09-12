@@ -197,9 +197,18 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
   const resultPromise = doRequest();
   if (dedupeKey) {
     inFlightGets.set(dedupeKey, resultPromise);
-    resultPromise.finally(() => {
-      if (inFlightGets.get(dedupeKey) === resultPromise) inFlightGets.delete(dedupeKey);
-    });
+    // `.finally()` returns its OWN derived promise, which nothing here awaits
+    // or attaches a `.catch()` to — when `resultPromise` rejects (any failed
+    // GET, e.g. a 404), that derived promise becomes a second, completely
+    // unhandled rejection, regardless of whether the real caller (below)
+    // properly catches `resultPromise` itself. The `.catch(() => {})` only
+    // silences that internal bookkeeping chain; the actual `resultPromise`
+    // returned to callers is untouched and still rejects normally for them.
+    resultPromise
+      .finally(() => {
+        if (inFlightGets.get(dedupeKey) === resultPromise) inFlightGets.delete(dedupeKey);
+      })
+      .catch(() => {});
   }
   return resultPromise;
 }

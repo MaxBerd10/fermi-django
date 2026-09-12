@@ -123,5 +123,18 @@ export default defineConfig(({ mode }) => {
       },
     },
   },
+  // `vite preview` (serving the real production `out/` bundle locally, e.g.
+  // for a Lighthouse run against real minified/cached assets rather than
+  // dev-mode's misleadingly low scores) doesn't reuse `server.proxy` above —
+  // Vite keeps the two separate on purpose. Mirrored here so `npm run
+  // preview` also has a working backend instead of every API call 404ing.
+  preview: {
+    proxy: {
+      "/api/v1": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
+    },
+  },
   };
 });

@@ -115,20 +115,20 @@ export default function ContactMap() {
             <form id="fjsti-contact" onSubmit={onSubmit}>
               <div className="grid sm:grid-cols-2 gap-2.5">
                 <div>
-                  <label className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.name")}</label>
-                  <input name="name" required type="text" placeholder={t("contact.namePlaceholder")} className={inputClass} />
+                  <label htmlFor="fjsti-contact-name" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.name")}</label>
+                  <input id="fjsti-contact-name" name="name" required type="text" placeholder={t("contact.namePlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.emailLabel")}</label>
-                  <input name="email" required type="email" placeholder={t("contact.emailPlaceholder")} className={inputClass} />
+                  <label htmlFor="fjsti-contact-email" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.emailLabel")}</label>
+                  <input id="fjsti-contact-email" name="email" required type="email" placeholder={t("contact.emailPlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.phoneLabel")}</label>
-                  <input name="phone" required type="tel" placeholder={t("contact.phonePlaceholder")} className={inputClass} />
+                  <label htmlFor="fjsti-contact-phone" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.phoneLabel")}</label>
+                  <input id="fjsti-contact-phone" name="phone" required type="tel" placeholder={t("contact.phonePlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.subject")}</label>
-                  <select name="topic" required className={inputClass}>
+                  <label htmlFor="fjsti-contact-topic" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.subject")}</label>
+                  <select id="fjsti-contact-topic" name="topic" required className={inputClass}>
                     <option value="Qabul haqida">{t("contact.topicAdmission")}</option>
                     <option value="Oʻquv jarayoni">{t("contact.topicStudy")}</option>
                     <option value="Ilmiy faoliyat">{t("contact.topicScience")}</option>
@@ -138,8 +138,9 @@ export default function ContactMap() {
                 </div>
               </div>
               <div className="mt-2.5">
-                <label className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.messageLabel")}</label>
+                <label htmlFor="fjsti-contact-message" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.messageLabel")}</label>
                 <textarea
+                  id="fjsti-contact-message"
                   name="message"
                   required
                   maxLength={500}

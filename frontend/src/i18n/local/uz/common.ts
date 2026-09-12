@@ -1521,6 +1521,7 @@ export default {
   "nav.workingHours": "Du–Sha, 09:00–17:00",
   "nav.virtualReception": "Virtual qabulxona",
   "nav.search": "Qidiruv",
+  "nav.language": "Til",
   "nav.searchPlaceholder": "Sayt boʻyicha qidirish: qabul, kafedra, hujjat...",
   "nav.menuSearchPlaceholder": "Sahifa nomi boʻyicha qidirish...",
   "nav.searchSubmit": "Qidirish",

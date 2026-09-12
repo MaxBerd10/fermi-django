@@ -1521,6 +1521,7 @@ export default {
   "nav.workingHours": "Mon–Sat, 09:00–17:00",
   "nav.virtualReception": "Virtual reception",
   "nav.search": "Search",
+  "nav.language": "Language",
   "nav.searchPlaceholder": "Search the site: admissions, department, document...",
   "nav.menuSearchPlaceholder": "Search by page name...",
   "nav.searchSubmit": "Search",

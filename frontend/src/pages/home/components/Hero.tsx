@@ -372,7 +372,15 @@ export default function Hero() {
                   aria-live="polite"
                   role={radarExpanded ? undefined : "button"}
                   tabIndex={radarExpanded ? undefined : 0}
-                  aria-label={radarExpanded ? undefined : `${t(current.wordKey)} ${resolveValue(current.value)}${current.suffix}`}
+                  // Includes every line actually visible inside this element
+                  // (word, value, label, hint) — an aria-label that only
+                  // summarized part of the visible text was flagged by
+                  // Lighthouse's label-content-name-mismatch audit.
+                  aria-label={
+                    radarExpanded
+                      ? undefined
+                      : `${t(current.wordKey)} ${resolveValue(current.value)}${current.suffix} — ${t(current.labelKey)}. ${t(current.hintKey)}`
+                  }
                   onMouseEnter={() => {
                     if (!radarExpanded) openRadar();
                   }}

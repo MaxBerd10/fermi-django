@@ -365,7 +365,7 @@ export default function Navbar() {
                   type="button"
                   onClick={() => setShowLangMenu(!showLangMenu)}
                   className={`${iconBtn(solid)} !w-auto !px-2.5 gap-1 uppercase text-xs font-semibold`}
-                  aria-label="Language"
+                  aria-label={`${t("nav.language")}: ${lang.toUpperCase()}`}
                 >
                   {lang}
                   <i className="ri-arrow-down-s-line text-[10px] opacity-60" />

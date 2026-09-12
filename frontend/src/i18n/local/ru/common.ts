@@ -1521,6 +1521,7 @@ export default {
   "nav.workingHours": "Пн–Сб, 09:00–17:00",
   "nav.virtualReception": "Виртуальная приёмная",
   "nav.search": "Поиск",
+  "nav.language": "Язык",
   "nav.searchPlaceholder": "Поиск по сайту: приём, кафедра, документ...",
   "nav.menuSearchPlaceholder": "Поиск по названию страницы...",
   "nav.searchSubmit": "Искать",

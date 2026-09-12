@@ -118,7 +118,11 @@ export default function Leadership() {
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-primary-950/85 via-transparent to-transparent lg:hidden" />
               <div className="absolute bottom-3 left-3 right-3 lg:hidden">
-                <p className="font-heading text-white font-semibold text-lg leading-tight">{rector.name}</p>
+                {/* A real <h3>, not <p> — the desktop layout's h3 (below) is
+                    hidden at this width, and without one here the heading
+                    order jumps straight from the section's h2 to the
+                    prorector cards' h4, skipping a level. */}
+                <h3 className="font-heading text-white font-semibold text-lg leading-tight">{rector.name}</h3>
                 <p className="text-[#ffd600] text-xs mt-0.5">{rector.position || t("leadership.rectorLabel")}</p>
               </div>
             </div>
