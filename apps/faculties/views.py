@@ -5,7 +5,9 @@ from .serializers import FacultyDetailSerializer, FacultyListSerializer
 
 
 class FacultyViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Faculty.objects.select_related("page").prefetch_related("page__blocks", "departments")
+    queryset = Faculty.objects.select_related("page").prefetch_related(
+        "page__blocks", "departments", "leaders"
+    )
     lookup_field = "slug"
 
     def get_serializer_class(self):

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { FacultyDetail } from "../types";
 import { BlockRenderer } from "../blocks/BlockRenderer";
+import { StaffGrid } from "../components/StaffGrid";
 import { useLanguage } from "../i18n/LanguageContext";
 
 export function FacultyDetailPage() {
@@ -54,6 +55,15 @@ export function FacultyDetailPage() {
               </Link>
             ))}
           </div>
+        </div>
+      )}
+
+      {faculty.leaders.length > 0 && (
+        <div className="mt-10">
+          <h2 className="mb-4 font-display text-xl font-bold text-primary-900">
+            {lang === "uz" ? "Rahbariyat" : lang === "ru" ? "Руководство" : "Leadership"}
+          </h2>
+          <StaffGrid staff={faculty.leaders} lang={lang} />
         </div>
       )}
     </div>

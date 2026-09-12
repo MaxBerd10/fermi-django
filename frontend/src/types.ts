@@ -147,6 +147,7 @@ export interface FacultyDepartmentRef {
 export interface FacultyDetail extends FacultyListItem {
   page: Page;
   departments: FacultyDepartmentRef[];
+  leaders: StaffMember[];
 }
 
 export interface MenuItem {
