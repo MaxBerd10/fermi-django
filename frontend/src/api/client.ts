@@ -94,12 +94,12 @@ function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
   return value as T;
 }
 
-// Several homepage sections (Hero, Stats, ContactMap, NewsAnnouncements, Faculties,
-// FacultiesNews, About...) each call getHomeData()/getSettings() independently on
-// mount via useApi — with no shared cache, that's 6-7 identical GET requests fired
-// at the same instant, all competing for the same slow backend connection. This
-// collapses concurrent identical GETs into one shared in-flight request (mirrors
-// the same fix already applied server-side for iMentor in production-server.mjs).
+// Several homepage sections (Hero, Faculties, FacultiesNews, ContactMap...) each
+// call getSettings()/listFaculty()/listDepartments() independently on mount —
+// with no shared cache, that's several identical GET requests fired at the same
+// instant, all competing for the same slow backend connection. This collapses
+// concurrent identical GETs into one shared in-flight request (mirrors the same
+// fix already applied server-side for iMentor in production-server.mjs).
 // Deliberately no TTL/staleness cache beyond that — once a request settles, the
 // next call always fetches fresh.
 const inFlightGets = new Map<string, Promise<unknown>>();

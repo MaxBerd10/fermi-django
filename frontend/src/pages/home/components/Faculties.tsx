@@ -1,7 +1,8 @@
 ﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getHomeData } from "@/api/home";
+import { listFaculty } from "@/api/faculty";
+import { listDepartments } from "@/api/departments";
 import type { FacultyListItem } from "@/types/content";
 import { Reveal } from "@/components/Animation";
 
@@ -12,11 +13,13 @@ export default function Faculties() {
   const [firstDepartmentSlug, setFirstDepartmentSlug] = useState<string | null>(null);
 
   useEffect(() => {
-    getHomeData().then((d) => {
-      setFaculties(d.faculties);
-      setDepartmentCount(d.departments.length);
-      setFirstDepartmentSlug(d.departments[0]?.slug ?? null);
-    });
+    listFaculty().then(setFaculties).catch(() => {});
+    listDepartments()
+      .then((departments) => {
+        setDepartmentCount(departments.length);
+        setFirstDepartmentSlug(departments[0]?.slug ?? null);
+      })
+      .catch(() => {});
   }, []);
 
   if (faculties.length === 0) return null;

@@ -1,11 +1,9 @@
 ﻿import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getHomeData } from "@/api/home";
 import { getSettings } from "@/api/settings";
-import type { Counter } from "@/types/content";
+import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
-import { stripHtml } from "@/lib/html";
 import { CountUp, useInViewOnce, usePrefersReducedMotion } from "@/components/Animation";
 
 const FALLBACK_TITLE = "Fargʻona jamoat salomatligi tibbiyot instituti";
@@ -113,11 +111,6 @@ export default function Hero() {
   const stageRef = useRef<HTMLDivElement>(null);
   const [institute, setInstitute] = useState(FALLBACK_TITLE);
   const [ready, setReady] = useState(false);
-  const [counter, setCounter] = useState<Counter | null>(null);
-  const [description, setDescription] = useState("");
-  const [href, setHref] = useState("/institut");
-  const [videoUrl, setVideoUrl] = useState<string | null>(null);
-  const [videoOpen, setVideoOpen] = useState(false);
   const [activeNode, setActiveNode] = useState<RadarId | null>("students");
   const [burstKey, setBurstKey] = useState(0);
   /** Once true — stays open until page refresh */
@@ -126,33 +119,14 @@ export default function Hero() {
   const radarArmed = useRef(false);
 
   useEffect(() => {
-    getHomeData()
-      .then((d) => {
-        setCounter(d.counter);
-        const withUrl = d.videos?.find((v) => v.url);
-        if (withUrl?.url) setVideoUrl(withUrl.url);
-        const textSlide = d.corusel?.[0];
-        if (textSlide) {
-          const raw = stripHtml(textSlide.content || "").trim();
-          if (raw.length > 40) {
-            setDescription(raw.length > 420 ? `${raw.slice(0, 420).trim()}…` : raw);
-          }
-          if (textSlide.href) setHref(textSlide.href);
-        }
-        setReady(true);
-      })
-      .catch(() => setReady(true));
+    // No real hero carousel/video data source (see instituteStats.ts) — just
+    // flip the ready flag so the entrance animation still plays on mount.
+    setReady(true);
 
     getSettings().then((s) => {
       if (s.logo?.title) setInstitute(s.logo.title);
     });
   }, []);
-
-  useEffect(() => {
-    if (!description) {
-      setDescription(t("hero.fallbackDescription"));
-    }
-  }, [description, t]);
 
   useEffect(() => {
     // Ignore accidental hover when the core mounts under the cursor
@@ -194,8 +168,7 @@ export default function Hero() {
     window.setTimeout(() => setRadarSettled(true), 2300);
   }
 
-  const isExternal = href.startsWith("http");
-  const students = Number(counter?.students) || 6238;
+  const students = INSTITUTE_COUNTER.students;
 
   const resolveValue = (v: number | "counter") => (v === "counter" ? students : v);
 
@@ -237,25 +210,13 @@ export default function Hero() {
                 {t("hero.headlineAfter")}
               </h1>
 
-              {/* Fixed height + line-clamp regardless of which text is showing: the
-                  fallback (shown on first paint) and the real description (arrives
-                  later from getHomeData(), often a very different length) used to
-                  change this paragraph's height when one replaced the other — and
-                  since this row uses items-center, that height change visibly moved
-                  the whole hero-radar widget next to it. This was the single largest
-                  layout-shift source Lighthouse found (~0.237 of a 0.238 CLS total). */}
               <p className="mt-4 text-sm md:text-[0.98rem] text-[#333333] leading-relaxed max-w-xl line-clamp-3 min-h-[68px] md:min-h-[77px]">
-                {description || t("hero.fallbackDescription")}
+                {t("hero.fallbackDescription")}
               </p>
               <p className="sr-only">{institute}</p>
 
               <div className="mt-6 flex flex-wrap items-center gap-2.5">
-                <a
-                  href={href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  className="hero-v2__btn-primary"
-                >
+                <a href="/institut" className="hero-v2__btn-primary">
                   {t("footer.institutHaqida")}
                   <i className="ri-arrow-right-line" />
                 </a>
@@ -263,15 +224,6 @@ export default function Hero() {
                   {t("hero.band.cta")}
                   <i className="ri-arrow-right-line" />
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => videoUrl && setVideoOpen(true)}
-                  disabled={!videoUrl}
-                  className="hero-v2__btn-text disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  <i className="ri-play-circle-line text-lg" />
-                  {t("about.watchVideo")}
-                </button>
                 <button
                   type="button"
                   disabled
@@ -624,34 +576,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
-      {videoOpen && videoUrl && (
-        <div
-          className="fixed inset-0 z-[100] bg-[#0a1158]/90 flex items-center justify-center p-4"
-          onClick={() => setVideoOpen(false)}
-        >
-          <div
-            className="bg-[#0a1158] overflow-hidden max-w-4xl w-full aspect-video relative border border-white/15 rounded-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={() => setVideoOpen(false)}
-              className="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-white/10 text-white cursor-pointer"
-              aria-label="Close"
-            >
-              <i className="ri-close-line text-2xl" />
-            </button>
-            <iframe
-              className="w-full h-full"
-              src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1`}
-              title={t("about.videoTitle")}
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

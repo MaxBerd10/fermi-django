@@ -1,8 +1,6 @@
-﻿import { useEffect, useState } from "react";
+﻿import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { getHomeData } from "@/api/home";
-import type { Counter } from "@/types/content";
+import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import { CountUp, Reveal, useInViewOnce } from "@/components/Animation";
 
 const ICONS = ["ri-user-star-fill", "ri-group-fill", "ri-graduation-cap-fill", "ri-book-open-fill"] as const;
@@ -10,20 +8,16 @@ const ICONS = ["ri-user-star-fill", "ri-group-fill", "ri-graduation-cap-fill", "
 export default function Stats() {
   const { t } = useTranslation();
   const { ref, active } = useInViewOnce<HTMLElement>(0.2);
-  const [counter, setCounter] = useState<Counter | null>(null);
-
-  useEffect(() => {
-    getHomeData().then((d) => setCounter(d.counter));
-  }, []);
-
-  if (!counter) return null;
+  const counter = INSTITUTE_COUNTER;
 
   const stats = [
     { value: counter.professor_teachers, label: t("stats.professorTeachers"), desc: t("stats.professorTeachersDesc"), icon: ICONS[0] },
     { value: counter.students, label: t("stats.students"), desc: t("stats.studentsDesc"), icon: ICONS[1] },
     { value: counter.graduaters, label: t("stats.graduates"), desc: t("stats.graduatesDesc"), icon: ICONS[2] },
     { value: counter.book_fund, label: t("stats.bookFund"), desc: t("stats.bookFundDesc"), icon: ICONS[3] },
-  ];
+    // No real Django model for graduate/book-fund counts yet (see instituteStats.ts) —
+    // skip a card entirely rather than show a dishonest "0+".
+  ].filter((s) => s.value > 0);
 
   return (
     <section ref={ref} className="relative section-pad bg-white border-y border-primary-100/80">

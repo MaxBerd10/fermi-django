@@ -1,7 +1,6 @@
 ﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getHomeData } from "@/api/home";
 import { listNews } from "@/api/news";
 import { listTelegramNews } from "@/api/telegram";
 import type { NewsArticle } from "@/types/content";
@@ -39,14 +38,9 @@ export default function NewsAnnouncements() {
     };
 
     const telegramPromise = listTelegramNews().catch(() => [] as NewsArticle[]);
-    const cmsPromise = Promise.all([
-      getHomeData()
-        .then((d) => d.news ?? [])
-        .catch(() => [] as NewsArticle[]),
-      listNews(1)
-        .then((r) => r.data ?? [])
-        .catch(() => [] as NewsArticle[]),
-    ]).then(([homeNews, allNews]) => dedupeById([...homeNews, ...allNews]));
+    const cmsPromise = listNews(1)
+      .then((r) => dedupeById(r.data ?? []))
+      .catch(() => [] as NewsArticle[]);
 
     const loadTelegram = () =>
       listTelegramNews()
