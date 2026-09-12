@@ -63,7 +63,7 @@ def _is_ru_source_text(text: str) -> bool:
 _ENGLISH_SOURCE_BLOCK_IDS = {
     18644, 18739, 18976, 19127, 19128, 19129, 19131, 19132,
     19134, 19135, 19137, 19138, 19139, 19472, 19473, 19475,
-    25294, 25550,
+    25294, 25550, 25901, 26143, 26163, 26363, 26471,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
