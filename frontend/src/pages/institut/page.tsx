@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
 import type { Page } from "@/types/content";
-import RichContent from "@/components/shared/RichContent";
+import { BlockRenderer } from "@/blocks/BlockRenderer";
 import { Reveal } from "@/components/Animation";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -157,14 +157,23 @@ export default function InstitutPage() {
           </Reveal>
         </section>
 
-        {missionPage && (
+        {missionPage && missionPage.blocks.length > 0 && (
           <Reveal as="section" className="page-card p-4 md:p-5 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-1 h-full bg-primary-500 rounded-l-2xl" />
             <div className="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3">
               <i className="ri-flag-line text-xl" />
             </div>
-            <h3 className="font-heading text-lg font-semibold text-foreground-900 mb-2">{missionPage.title}</h3>
-            <RichContent html={missionPage.content} />
+            <h3 className="font-heading text-lg font-semibold text-foreground-900 mb-2">
+              {t("institut.missionHeading")}
+            </h3>
+            <div className="cms-article cms-article--rich space-y-4">
+              {missionPage.blocks
+                .slice()
+                .sort((a, b) => a.order - b.order)
+                .map((block) => (
+                  <BlockRenderer key={block.id} block={block} />
+                ))}
+            </div>
           </Reveal>
         )}
 

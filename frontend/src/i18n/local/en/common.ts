@@ -1276,6 +1276,7 @@ export default {
   "qabul.dateLabel": "Date",
   "qabul.subjectLabel": "Subject of the inquiry",
   "institut.badgeHistory": "History and mission",
+  "institut.missionHeading": "Mission and future vision",
   "institut.heroDescription": "Fergana Medical Institute of Public Health — a modern higher-education medical institution meeting international standards",
   "institut.admission2026": "Admissions 2026",
   "institut.contactUs": "Contact us",

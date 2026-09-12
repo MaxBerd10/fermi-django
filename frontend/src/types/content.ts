@@ -139,12 +139,8 @@ export interface HomeData {
 
 export interface Page {
   id: number;
-  title: string;
-  content: string;
   slug: string;
-  file: string | null;
-  menu: MenuBranch | null;
-  leaders: Leader[];
+  blocks: ContentBlock[];
 }
 
 export interface DocumentItem {

@@ -1276,6 +1276,7 @@ export default {
   "qabul.dateLabel": "Sana",
   "qabul.subjectLabel": "Murojaat mavzusi",
   "institut.badgeHistory": "Tarix va maqsad",
+  "institut.missionHeading": "Missiya va kelajak tasavvuri",
   "institut.heroDescription": "Fargʻona jamoat salomatligi tibbiyot instituti — zamonaviy, xalqaro standartlarga javob beruvchi tibbiyot oliy oʻquv yurti",
   "institut.admission2026": "Qabul-2026",
   "institut.contactUs": "Bogʻlanish",

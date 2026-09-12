@@ -1276,6 +1276,7 @@ export default {
   "qabul.dateLabel": "Дата",
   "qabul.subjectLabel": "Тема обращения",
   "institut.badgeHistory": "История и миссия",
+  "institut.missionHeading": "Миссия и видение будущего",
   "institut.heroDescription": "Ферганский медицинский институт общественного здоровья — современное высшее медицинское учебное заведение, отвечающее международным стандартам",
   "institut.admission2026": "Приём-2026",
   "institut.contactUs": "Связаться",
