@@ -6,7 +6,7 @@ from .block_schemas import validate_block_data
 
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 _PHONE_RE = re.compile(r"\+?\d[\d\s().-]{5,}\d")
-_URL_RE = re.compile(r"https?://\S+")
+_URL_RE = re.compile(r"https?://\S+|www\.\S+")
 _CYRILLIC_RE = re.compile(r"[Ѐ-ӿ]")
 _LATIN_RE = re.compile(r"[A-Za-z]")
 
@@ -45,10 +45,11 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     19134, 19135, 19137, 19138, 19139, 19472, 19473, 19475,
 }
 
-# A smaller handful are bare brand/product/institution names with no
-# translation in any language -- the same proper noun is correct verbatim
-# in uz, ru and en alike. Same hand-verified precedent as above.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921}
+# A smaller handful are bare brand/product/institution names, or a proper
+# name in a byline, with no translation in any language -- the same text is
+# correct verbatim in uz, ru and en alike. Same hand-verified precedent as
+# above.
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836}
 
 
 class Page(models.Model):
