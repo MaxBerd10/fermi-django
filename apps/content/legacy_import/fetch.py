@@ -137,10 +137,13 @@ class LegacyNewsPost:
     content: dict
     cover_url: str | None
     published_at: str | None
+    # {"uz": {...}, "ru": {...}, "en": {...}}, each {"id","title","slug"} --
+    # id/slug are language-invariant, only "title" actually varies.
+    category_by_lang: dict[str, dict]
 
 
 def fetch_news_post(slug: str) -> LegacyNewsPost:
-    title, content = {}, {}
+    title, content, category_by_lang = {}, {}, {}
     post_id = None
     cover_url = None
     published_at = None
@@ -152,9 +155,11 @@ def fetch_news_post(slug: str) -> LegacyNewsPost:
         content[lang] = data.get("content") or ""
         cover_url = cover_url or data.get("img")
         published_at = published_at or data.get("date") or data.get("published_at")
+        category_by_lang[lang] = data.get("category") or {}
         time.sleep(0.1)
     return LegacyNewsPost(
-        id=post_id, slug=slug, title=title, content=content, cover_url=cover_url, published_at=published_at
+        id=post_id, slug=slug, title=title, content=content, cover_url=cover_url, published_at=published_at,
+        category_by_lang=category_by_lang,
     )
 
 

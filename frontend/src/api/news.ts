@@ -18,12 +18,18 @@ interface DjangoImage {
   height: number | null;
   alt_text: string;
 }
+interface DjangoNewsCategory {
+  id: number;
+  slug: string;
+  name: string;
+}
 interface DjangoNewsListItem {
   id: number;
   slug: string;
   title: string;
   excerpt: string;
   cover: DjangoImage | null;
+  category: DjangoNewsCategory | null;
   published_at: string;
 }
 interface DjangoNewsDetail extends DjangoNewsListItem {
@@ -39,7 +45,9 @@ function mapListItem(post: DjangoNewsListItem): NewsArticle {
     slug: post.slug,
     date: post.published_at,
     seen: 0, // Django doesn't track view counts today.
-    category: null, // Django's news app has no category concept yet — see getNewsCategory below.
+    category: post.category
+      ? { id: post.category.id, title: post.category.name, slug: post.category.slug }
+      : null,
   };
 }
 
@@ -56,14 +64,17 @@ export async function listNews(page = 1, _menuId?: number) {
   return { ...res, data: enrichNewsArticles(res.data.map(mapListItem)) };
 }
 
-// Django's news app has no category model yet (the old CMS's news/category/:slug
-// concept doesn't exist here) — this degrades to "all news, unfiltered" rather
-// than erroring, so the category-list page still shows something real instead
-// of a dead end. Revisit once/if a real category model gets added.
 export async function getNewsCategory(slug: string, page = 1, _menuId?: number) {
   const apiSlug = normalizeNewsCategorySlug(slug);
-  const res = await apiClient.get<DjangoNewsListItem[]>("news", { page });
-  const category: NewsCategoryRef = { id: 0, title: apiSlug, slug: apiSlug };
+  const res = await apiClient.get<DjangoNewsListItem[]>("news", { page, category: apiSlug });
+  const firstWithCategory = res.data.find((post) => post.category);
+  const category: NewsCategoryRef = firstWithCategory?.category
+    ? {
+        id: firstWithCategory.category.id,
+        title: firstWithCategory.category.name,
+        slug: firstWithCategory.category.slug,
+      }
+    : { id: 0, title: apiSlug, slug: apiSlug };
   return {
     ...res,
     data: {
