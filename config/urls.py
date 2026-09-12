@@ -11,6 +11,7 @@ urlpatterns = [
     path("api/v1/", include("apps.news.urls")),
     path("api/v1/", include("apps.faculties.urls")),
     path("api/v1/", include("apps.menu.urls")),
+    path("api/v1/", include("apps.media_lib.urls")),
 ]
 
 if settings.DEBUG:

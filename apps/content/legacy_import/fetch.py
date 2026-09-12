@@ -175,6 +175,34 @@ def fetch_institute_leaders(category_slug: str) -> LegacyLeadersCategory:
     return LegacyLeadersCategory(category_slug=category_slug, leaders_by_lang=leaders_by_lang)
 
 
+@dataclass
+class LegacyGalleryPhoto:
+    id: int
+    img: str
+
+
+def fetch_gallery_page(page: int) -> dict:
+    """One page of the gallery list -- returns the raw {"data": [...], "meta": {...}} body.
+    Every entry's title is empty in every language on the live site (confirmed
+    against the real API), so unlike departments/faculties/news this never
+    needs a per-language fetch."""
+    return _get_json(f"/gallery?page={page}", "uz")
+
+
+def fetch_all_gallery_photos() -> list[LegacyGalleryPhoto]:
+    photos: list[LegacyGalleryPhoto] = []
+    page = 1
+    while True:
+        body = fetch_gallery_page(page)
+        rows = body["data"]
+        if not rows:
+            break
+        photos.extend(LegacyGalleryPhoto(id=row["id"], img=row["img"]) for row in rows if row.get("img"))
+        page += 1
+        time.sleep(0.1)
+    return photos
+
+
 def fetch_menu_tree(lang: str) -> list[dict]:
     """The whole nav tree in one call (unlike departments/faculty/news,
     which each need a request per item) -- items carry id/title/urlType/

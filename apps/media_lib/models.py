@@ -69,3 +69,28 @@ class Document(models.Model):
 
     def __str__(self) -> str:
         return self.title or self.filename
+
+
+class GalleryPhoto(models.Model):
+    """
+    A single photo in the public photo gallery — the old site's gallery is a
+    flat, uncaptioned stream of campus/event photos (confirmed against its
+    live API: every one of 218 existing entries has an empty title), not
+    albums, so this deliberately doesn't group photos into anything.
+    Captions are still per-language here (blank until/unless someone adds
+    one) rather than a single shared field, for the same reason every other
+    piece of real content in this project is: a caption written for one
+    language is not automatically correct copied into another.
+    """
+
+    image = models.ForeignKey(Image, on_delete=models.CASCADE, related_name="+")
+    caption_uz = models.CharField(max_length=255, blank=True)
+    caption_ru = models.CharField(max_length=255, blank=True)
+    caption_en = models.CharField(max_length=255, blank=True)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["-order", "-id"]
+
+    def __str__(self) -> str:
+        return self.caption_uz or f"Gallery photo #{self.pk}"
