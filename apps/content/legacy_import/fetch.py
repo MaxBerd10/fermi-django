@@ -158,6 +158,23 @@ def fetch_news_post(slug: str) -> LegacyNewsPost:
     )
 
 
+@dataclass
+class LegacyLeadersCategory:
+    category_slug: str
+    # Each leader carries a stable numeric id from the old site, same as
+    # faculty leaders — see fetch_faculty().
+    leaders_by_lang: dict[str, list[dict]]
+
+
+def fetch_institute_leaders(category_slug: str) -> LegacyLeadersCategory:
+    leaders_by_lang = {}
+    for lang in LANGS:
+        body = _get_json(f"/leaders/{category_slug}", lang)
+        leaders_by_lang[lang] = body["data"].get("leaders") or []
+        time.sleep(0.1)  # be polite to the production API
+    return LegacyLeadersCategory(category_slug=category_slug, leaders_by_lang=leaders_by_lang)
+
+
 def fetch_menu_tree(lang: str) -> list[dict]:
     """The whole nav tree in one call (unlike departments/faculty/news,
     which each need a request per item) -- items carry id/title/urlType/

@@ -162,7 +162,8 @@ export interface DocumentDetail {
 }
 
 export interface LeadersResponse {
-  category: { id: number; title: string };
+  /** Django's institute_role slug ("rektor"/"prorektor"), not a numeric id. */
+  category: { id: string; title: string };
   menu: MenuBranch | null;
   leaders: Leader[];
 }

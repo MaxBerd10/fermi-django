@@ -44,11 +44,19 @@ class StaffMember(models.Model):
     own script (e.g. "Siddiqov Obidjon" in uz, "Сиддиков Обиджон" in ru), not
     just a transliteration-invariant string.
 
-    Belongs to exactly one of department or faculty — a kafedra's staff list
-    and a faculty's dekanat/leadership list are the same shape of data (photo,
-    name, title, bio, contact details), so one model covers both instead of
-    duplicating it.
+    Belongs to exactly one of department, faculty, or institute_role — a
+    kafedra's staff list, a faculty's dekanat/leadership list, and the
+    institute's own rector/prorektorlar are all the same shape of data
+    (photo, name, title, bio, contact details), so one model covers all
+    three instead of duplicating it.
     """
+
+    INSTITUTE_ROLE_RECTOR = "rektor"
+    INSTITUTE_ROLE_VICE_RECTOR = "prorektor"
+    INSTITUTE_ROLE_CHOICES = [
+        (INSTITUTE_ROLE_RECTOR, "Rektor"),
+        (INSTITUTE_ROLE_VICE_RECTOR, "Prorektor"),
+    ]
 
     department = models.ForeignKey(
         Department, related_name="staff", on_delete=models.CASCADE, null=True, blank=True
@@ -56,6 +64,9 @@ class StaffMember(models.Model):
     faculty = models.ForeignKey(
         "faculties.Faculty", related_name="leaders", on_delete=models.CASCADE, null=True, blank=True
     )
+    # Set instead of department/faculty for institute-wide leadership (rector,
+    # prorektorlar) — people who don't belong to any one kafedra or faculty.
+    institute_role = models.CharField(max_length=20, choices=INSTITUTE_ROLE_CHOICES, blank=True)
     full_name_uz = models.CharField(max_length=255)
     full_name_ru = models.CharField(max_length=255, blank=True)
     full_name_en = models.CharField(max_length=255, blank=True)
@@ -86,8 +97,11 @@ class StaffMember(models.Model):
         ordering = ["order", "id"]
 
     def clean(self):
-        if bool(self.department_id) == bool(self.faculty_id):
-            raise ValidationError("A staff member must belong to exactly one of department or faculty.")
+        slots = [bool(self.department_id), bool(self.faculty_id), bool(self.institute_role)]
+        if sum(slots) != 1:
+            raise ValidationError(
+                "A staff member must belong to exactly one of department, faculty, or institute_role."
+            )
 
     def __str__(self) -> str:
         return self.full_name_uz
