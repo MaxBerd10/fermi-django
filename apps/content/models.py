@@ -45,11 +45,11 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     19134, 19135, 19137, 19138, 19139, 19472, 19473, 19475,
 }
 
-# A smaller handful are bare brand/product/institution names, or a proper
-# name in a byline, with no translation in any language -- the same text is
-# correct verbatim in uz, ru and en alike. Same hand-verified precedent as
-# above.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836}
+# A smaller handful are bare brand/product/institution names, a proper name
+# in a byline, or a malformed URL (a stray space breaks the URL-invariance
+# regex) with no translation in any language -- the same text is correct
+# verbatim in uz, ru and en alike. Same hand-verified precedent as above.
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784}
 
 
 class Page(models.Model):
