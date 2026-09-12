@@ -9,6 +9,9 @@ class FacultyViewSet(viewsets.ReadOnlyModelViewSet):
         "page__blocks", "departments", "leaders"
     )
     lookup_field = "slug"
+    # A handful of faculties total, ever — a fixed list the frontend renders
+    # as one grid, not paged. Paginating would silently truncate at PAGE_SIZE.
+    pagination_class = None
 
     def get_serializer_class(self):
         if self.action == "list":

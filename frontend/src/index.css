@@ -1,88 +1,206 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Ported from the real fermi.uz site's design tokens (src/index.css there) —
-   navy + gold from the FJSTI logo, Manrope for headings, Source Sans 3 for
-   body text. Only the tokens and a few reusable utility classes are ported
-   here, not the full ~4500-line stylesheet (hero animations etc.) — this
-   prototype only needs to prove the content-block rendering looks right in
-   the real brand, not rebuild the homepage.
+:root {
+  /* FJSTI logo palette — faqat ko'k / sariq + qora / oq */
+  --brand-navy: #0a1158;
+  --brand-yellow: #ffd600;
+  --brand-black: #0a0a0a;
+  --brand-white: #ffffff;
 
-   NOTE on the eventual integration path: once this prototype has served its
-   purpose, these tokens don't get "kept" here — the actual site's frontend
-   (fjstiWeb-main) stays the permanent codebase, and the BlockRenderer/types
-   patterns proven here get ported into it. */
+  /* Primary = logo navy */
+  --primary-50: 0.97 0.015 270;
+  --primary-100: 0.93 0.03 270;
+  --primary-200: 0.82 0.05 270;
+  --primary-300: 0.62 0.08 270;
+  --primary-400: 0.42 0.1 270;
+  --primary-500: 0.28 0.1 270;
+  --primary-600: 0.24 0.1 270;
+  --primary-700: 0.2 0.09 270;
+  --primary-800: 0.17 0.08 270;
+  --primary-900: 0.14 0.07 270;
+  --primary-950: 0.12 0.06 270;
 
-@theme {
-  --color-primary-50: oklch(0.97 0.015 270);
-  --color-primary-100: oklch(0.93 0.03 270);
-  --color-primary-200: oklch(0.82 0.05 270);
-  --color-primary-300: oklch(0.62 0.08 270);
-  --color-primary-400: oklch(0.42 0.1 270);
-  --color-primary-500: oklch(0.28 0.1 270);
-  --color-primary-600: oklch(0.24 0.1 270);
-  --color-primary-700: oklch(0.2 0.09 270);
-  --color-primary-800: oklch(0.17 0.08 270);
-  --color-primary-900: oklch(0.14 0.07 270);
-  --color-primary-950: oklch(0.12 0.06 270);
+  /* Secondary = logo yellow */
+  --secondary-50: 0.99 0.03 100;
+  --secondary-100: 0.97 0.06 100;
+  --secondary-200: 0.94 0.12 100;
+  --secondary-300: 0.92 0.15 100;
+  --secondary-400: 0.9 0.17 100;
+  --secondary-500: 0.88 0.18 100;
+  --secondary-600: 0.78 0.16 100;
+  --secondary-700: 0.62 0.13 100;
+  --secondary-800: 0.45 0.09 100;
+  --secondary-900: 0.32 0.06 100;
+  --secondary-950: 0.22 0.04 100;
 
-  --color-secondary-50: oklch(0.99 0.03 100);
-  --color-secondary-100: oklch(0.97 0.06 100);
-  --color-secondary-200: oklch(0.94 0.12 100);
-  --color-secondary-300: oklch(0.92 0.15 100);
-  --color-secondary-400: oklch(0.9 0.17 100);
-  --color-secondary-500: oklch(0.88 0.18 100);
-  --color-secondary-600: oklch(0.78 0.16 100);
-  --color-secondary-700: oklch(0.62 0.13 100);
+  --accent-50: 0.97 0.015 270;
+  --accent-100: 0.93 0.03 270;
+  --accent-200: 0.82 0.05 270;
+  --accent-300: 0.62 0.08 270;
+  --accent-400: 0.42 0.1 270;
+  --accent-500: 0.28 0.1 270;
+  --accent-600: 0.24 0.1 270;
+  --accent-700: 0.2 0.09 270;
+  --accent-800: 0.17 0.08 270;
+  --accent-900: 0.14 0.07 270;
+  --accent-950: 0.12 0.06 270;
 
-  --color-foreground-500: oklch(0.4 0 0);
-  --color-foreground-600: oklch(0.3 0 0);
-  --color-foreground-700: oklch(0.2 0 0);
-  --color-foreground-900: oklch(0.08 0 0);
-  --color-foreground-950: oklch(0.05 0 0);
+  /* Oq fon */
+  --background-50: 1 0 0;
+  --background-100: 0.985 0.002 270;
+  --background-200: 0.95 0.008 270;
+  --background-300: 0.9 0.012 270;
+  --background-400: 0.8 0.015 270;
+  --background-500: 0.65 0.015 270;
+  --background-600: 0.5 0.02 270;
+  --background-700: 0.35 0.03 270;
+  --background-800: 0.22 0.04 270;
+  --background-900: 0.15 0.05 270;
+  --background-950: 0.12 0.06 270;
 
+  /* Qora matn */
+  --foreground-50: 0.98 0 0;
+  --foreground-100: 0.94 0 0;
+  --foreground-200: 0.86 0 0;
+  --foreground-300: 0.7 0 0;
+  --foreground-400: 0.52 0 0;
+  --foreground-500: 0.4 0 0;
+  --foreground-600: 0.3 0 0;
+  --foreground-700: 0.2 0 0;
+  --foreground-800: 0.12 0 0;
+  --foreground-900: 0.08 0 0;
+  --foreground-950: 0.05 0 0;
+
+  /* Modern sans — Manrope (sarlavha) + Source Sans 3 (matn) */
   --font-display: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-label: "Manrope", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-anchor: none;
+  background: #f7f8fc;
 }
 
 body {
-  background: #f7f8fc;
   font-family: var(--font-body);
-  color: oklch(var(--color-foreground-900, 0.08 0 0));
+  color: oklch(var(--foreground-800));
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.65;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, .font-display {
-  font-family: var(--font-display);
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+    line-height: 1.7;
+  }
 }
 
-.page-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(10, 17, 88, 0.09);
-  border-radius: 1rem;
-  box-shadow: 0 6px 20px rgba(10, 17, 88, 0.045);
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
-.uni-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  height: 2.75rem;
-  padding: 0 1.25rem;
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
+#root {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
   font-weight: 600;
-  border-radius: 999px;
-  background: #0a1158;
-  color: #fff;
-  transition: transform 0.2s, background 0.2s;
+  color: inherit;
+  line-height: 1.15;
 }
 
-.uni-btn:hover {
-  background: #131d6e;
-  transform: translateY(-1px);
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4,
+.prose-light h1,
+.prose-light h2,
+.prose-light h3,
+.prose-light h4 {
+  color: inherit;
 }
 
-.uni-btn:disabled {
-  opacity: 0.6;
-  transform: none;
+.scrollbar-thin {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  display: none;
+}
+
+.hp-field-x9 {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(var(--background-100));
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--primary-300));
+  border-radius: 4px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.9s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) both;
 }

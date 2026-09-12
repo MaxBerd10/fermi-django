@@ -24,8 +24,11 @@ def faculty(db):
 
 
 def test_faculty_list_returns_localized_name(client, faculty):
+    # Faculties are an unpaginated list (see FacultyViewSet.pagination_class)
+    # — there are only ever a handful, and the frontend renders them as one
+    # grid, not a feed a visitor pages through.
     res = client.get("/api/v1/faculties/")
-    assert res.data["results"][0]["name"]["en"] == "Faculty of General Medicine"
+    assert res.data[0]["name"]["en"] == "Faculty of General Medicine"
 
 
 def test_faculty_detail_lists_its_departments(client, faculty):
@@ -39,3 +42,4 @@ def test_faculty_detail_lists_its_departments(client, faculty):
     assert res.status_code == 200
     assert len(res.data["departments"]) == 1
     assert res.data["departments"][0]["slug"] == "test-dept"
+    assert res.data["departments"][0]["name"]["en"] == "Test"

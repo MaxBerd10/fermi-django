@@ -43,12 +43,19 @@ class ContentBlockSerializer(serializers.ModelSerializer):
             }
         return rep
 
-    @staticmethod
-    def _resolve(model, serializer_class, object_id):
+    def _resolve(self, model, serializer_class, object_id):
         if object_id is None:
             return None
         obj = model.objects.filter(pk=object_id).first()
-        return serializer_class(obj).data if obj else None
+        if not obj:
+            return None
+        # Without passing `context` through, FileField has no `request` to build
+        # an absolute URL from and silently falls back to a bare "/media/..."
+        # path — every other media reference in the API (logo/cover/photo, all
+        # declared as a serializer field DRF wires context into automatically)
+        # is absolute, so a relative one here reads as a broken image/video/link
+        # to any client that isn't already on the same origin as the API.
+        return serializer_class(obj, context=self.context).data
 
 
 class PageSerializer(serializers.ModelSerializer):

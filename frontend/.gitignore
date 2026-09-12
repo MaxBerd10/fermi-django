@@ -1,2 +1,23 @@
-node_modules/
-dist/
+node_modules
+dist
+out
+*.local
+.DS_Store
+*.log
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+.tmp
+
+# Local overrides only — base .env / .env.production are committed for deploy
+.env.local
+.env.*.local
+
+# Runtime data (site-stats.json etc.) — generated per-environment, not source
+/data/
+
+# Generated reports/decks left in the repo root by other work — not project source
+/FerMI_raqamli_yangilanish_hisoboti_TZ.docx
+/FerMI_veb_platforma_hisoboti.pptx
+/FerMI_veb_platforma_hisoboti.pptx.inspect.ndjson
+/FerMI_veb_platforma_hisoboti/

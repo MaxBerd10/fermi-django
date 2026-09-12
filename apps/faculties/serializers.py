@@ -28,4 +28,11 @@ class FacultyDetailSerializer(FacultyListSerializer):
         fields = FacultyListSerializer.Meta.fields + ["page", "departments", "leaders"]
 
     def get_departments(self, obj):
-        return [{"id": d.id, "slug": d.slug, "name_uz": d.name_uz} for d in obj.departments.all()]
+        return [
+            {
+                "id": d.id,
+                "slug": d.slug,
+                "name": {"uz": d.name_uz, "ru": d.name_ru, "en": d.name_en},
+            }
+            for d in obj.departments.all()
+        ]

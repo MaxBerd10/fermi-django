@@ -11,12 +11,13 @@ class StaffMemberSerializer(serializers.ModelSerializer):
     full_name = serializers.SerializerMethodField()
     title = serializers.SerializerMethodField()
     bio = serializers.SerializerMethodField()
+    activity = serializers.SerializerMethodField()
     reception_days = serializers.SerializerMethodField()
 
     class Meta:
         model = StaffMember
         fields = [
-            "id", "full_name", "title", "bio", "photo", "is_head", "order",
+            "id", "full_name", "title", "bio", "activity", "photo", "is_head", "order",
             "phone", "email", "reception_days",
         ]
 
@@ -28,6 +29,9 @@ class StaffMemberSerializer(serializers.ModelSerializer):
 
     def get_bio(self, obj):
         return {"uz": obj.bio_uz, "ru": obj.bio_ru, "en": obj.bio_en}
+
+    def get_activity(self, obj):
+        return {"uz": obj.activity_uz, "ru": obj.activity_ru, "en": obj.activity_en}
 
     def get_reception_days(self, obj):
         return {"uz": obj.reception_days_uz, "ru": obj.reception_days_ru, "en": obj.reception_days_en}

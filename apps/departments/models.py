@@ -65,6 +65,14 @@ class StaffMember(models.Model):
     bio_uz = models.TextField(blank=True)
     bio_ru = models.TextField(blank=True)
     bio_en = models.TextField(blank=True)
+    # A short "what they do" line, distinct from the fuller bio above — e.g. a
+    # rector/dean card shows both a one-line role summary and a longer
+    # biography. Left blank (not fed through needs_translation below) until
+    # this is actually backfilled with real content; an empty line just
+    # doesn't render, it isn't a broken/missing translation.
+    activity_uz = models.TextField(blank=True)
+    activity_ru = models.TextField(blank=True)
+    activity_en = models.TextField(blank=True)
     phone = models.CharField(max_length=50, blank=True)
     email = models.CharField(max_length=255, blank=True)
     reception_days_uz = models.CharField(max_length=255, blank=True)

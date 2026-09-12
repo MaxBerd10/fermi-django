@@ -1,8 +1,14 @@
-import type { ContentBlock, Lang } from "../types";
-import { ResponsiveImage } from "../components/ResponsiveImage";
+import type { ContentBlock } from "@/types/blocks";
+import { optimizedImageUrl } from "@/lib/imageProxy";
 
-const API_BASE = "http://127.0.0.1:8000";
-const toAbsoluteUrl = (path: string) => (path.startsWith("http") ? path : `${API_BASE}${path}`);
+// Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
+// unlike the old CMS's occasional bare "/uploads/..." path — this is just a defensive
+// fallback for a value that somehow isn't absolute yet, not the normal case.
+function toAbsoluteUrl(path: string): string {
+  if (!path || path.startsWith("http")) return path;
+  const apiOrigin = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/api\/v1\/?$/, "") || "";
+  return apiOrigin ? `${apiOrigin}${path}` : path;
+}
 
 function formatFileSize(bytes: number): string {
   if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
@@ -10,42 +16,44 @@ function formatFileSize(bytes: number): string {
 }
 
 /**
- * Each block renders itself from real, validated data for the current
- * language — no fixed heights, no text-align:justify (the source of uneven
- * word-gaps), no truncation. A block simply grows or shrinks with whatever
- * that language's text needs, so switching uz -> ru -> en never breaks the
- * layout around it, and a malformed block can't reach this component at all
- * (the backend rejects it before it's ever saved).
+ * Renders one CMS content block (apps.content.ContentBlock) — ported from the
+ * Django-content prototype's BlockRenderer, restyled with fjstiWeb-main's own
+ * Tailwind tokens (same primary/secondary/foreground names, so the port is
+ * near 1:1) instead of inventing a new stylesheet. `block.data` is already
+ * resolved to the active language by the API client (see resolveLocale in
+ * api/client.ts), so unlike the prototype this takes no `lang` prop.
+ *
+ * heading/paragraph/list/table render bare semantic tags with no class of
+ * their own — the caller wraps a page's block list in the site's existing
+ * `.cms-article`/`.prose-content` container (src/styles/cms-content.css), so
+ * they get the same typography the old CKEditor-HTML content already had.
+ * Only the block types with no equivalent in that freeform-HTML world
+ * (staff_card/image/video/gallery/document) get their own Tailwind classes.
+ *
+ * A block simply grows or shrinks with whatever its content needs — no fixed
+ * heights, no forced truncation — so switching uz/ru/en never breaks the
+ * surrounding layout, and a malformed block can't reach this component at all
+ * (the backend rejects invalid block data before it's ever saved).
  */
-export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang }) {
+export function BlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.block_type) {
     case "heading":
-      return (
-        <h2 className="font-display text-2xl font-bold tracking-tight text-primary-900 text-balance">
-          {block.data[lang].text}
-        </h2>
-      );
+      return <h2>{block.data.text}</h2>;
 
     case "paragraph":
-      return (
-        <p className="text-base leading-relaxed text-foreground-700 text-left">
-          {block.data[lang].text}
-        </p>
-      );
+      return <p>{block.data.text}</p>;
 
     case "list":
       return (
-        <ol className="list-decimal space-y-2 pl-6 text-foreground-700">
-          {block.data[lang].items.map((item, i) => (
-            <li key={i} className="leading-relaxed marker:font-semibold marker:text-primary-600">
-              {item}
-            </li>
+        <ol>
+          {block.data.items.map((item, i) => (
+            <li key={i}>{item}</li>
           ))}
         </ol>
       );
 
     case "staff_card": {
-      const { full_name, title } = block.data[lang];
+      const { full_name, title } = block.data;
       return (
         <div className="rounded-xl border border-primary-100 bg-primary-50/40 p-4">
           <p className="font-display font-bold text-primary-900">{full_name}</p>
@@ -55,30 +63,28 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
     }
 
     case "image": {
-      const { image, alt } = block.data[lang];
+      const { image, alt } = block.data;
       if (!image) return null;
       return (
-        <figure className="mx-auto">
-          <ResponsiveImage
-            image={{ ...image, alt_text: alt ?? image.alt_text }}
-            maxWidthClass="max-w-lg"
-            className="rounded-xl"
+        <figure className="mx-auto max-w-lg">
+          <img
+            src={optimizedImageUrl(image.file, 900) || image.file}
+            alt={alt ?? image.alt_text}
+            loading="lazy"
+            width={image.width ?? undefined}
+            height={image.height ?? undefined}
+            className="w-full rounded-xl"
           />
         </figure>
       );
     }
 
     case "video": {
-      const { video, caption } = block.data[lang];
+      const { video, caption } = block.data;
       if (!video) return null;
       return (
         <figure className="mx-auto max-w-2xl">
-          <video
-            controls
-            preload="metadata"
-            poster={toAbsoluteUrl(video.poster.file)}
-            className="w-full rounded-xl"
-          >
+          <video controls preload="metadata" poster={toAbsoluteUrl(video.poster.file)} className="w-full rounded-xl">
             <source src={toAbsoluteUrl(video.file)} />
           </video>
           {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
@@ -87,26 +93,22 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
     }
 
     case "table": {
-      const { headers, rows } = block.data[lang];
+      const { headers, rows } = block.data;
       return (
-        <div className="overflow-x-auto rounded-xl border border-primary-100">
-          <table className="w-full min-w-max border-collapse text-left text-sm">
-            <thead className="bg-primary-50/60">
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
               <tr>
                 {headers.map((header, i) => (
-                  <th key={i} className="px-4 py-2 font-display font-bold text-primary-900">
-                    {header}
-                  </th>
+                  <th key={i}>{header}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
-                <tr key={i} className="border-t border-primary-100">
+                <tr key={i}>
                   {row.map((cell, j) => (
-                    <td key={j} className="px-4 py-2 text-foreground-700">
-                      {cell}
-                    </td>
+                    <td key={j}>{cell}</td>
                   ))}
                 </tr>
               ))}
@@ -117,7 +119,7 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
     }
 
     case "gallery": {
-      const { items } = block.data[lang];
+      const { items } = block.data;
       const visible = items.filter((item) => item.image);
       if (visible.length === 0) return null;
       return (
@@ -125,10 +127,10 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
           {visible.map((item, i) => (
             <div key={item.image_id ?? i} className="aspect-square overflow-hidden rounded-lg">
               <img
-                src={toAbsoluteUrl(item.image!.file)}
+                src={optimizedImageUrl(item.image!.file, 480) || item.image!.file}
                 alt={item.alt ?? item.image!.alt_text}
-                className="h-full w-full object-cover"
                 loading="lazy"
+                className="h-full w-full object-cover"
               />
             </div>
           ))}
@@ -137,7 +139,7 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
     }
 
     case "document": {
-      const { document, caption } = block.data[lang];
+      const { document, caption } = block.data;
       if (!document) return null;
       return (
         <figure className="mx-auto max-w-lg">
@@ -147,10 +149,7 @@ export function BlockRenderer({ block, lang }: { block: ContentBlock; lang: Lang
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl border border-primary-100 bg-primary-50/40 p-4 transition hover:bg-primary-50"
           >
-            <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0 text-primary-600" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-              <path d="M14 3v5h5" />
-            </svg>
+            <i className="ri-file-pdf-2-line text-2xl text-primary-600" aria-hidden="true" />
             <span className="min-w-0">
               <span className="block truncate font-display font-bold text-primary-900">
                 {document.title || document.filename}

@@ -1,104 +1,55 @@
-const ACCESS_KEY = "fermi_access";
-const REFRESH_KEY = "fermi_refresh";
+import { apiClient, setTokens, clearTokens } from "./client";
+import type { AuthUser } from "../types/content";
+import type { LoginInput, RegisterInput } from "../types/forms";
 
-export function getAccessToken() {
-  return localStorage.getItem(ACCESS_KEY);
+interface AuthResult {
+  accessToken: string;
+  refreshToken: string;
+  user: AuthUser;
 }
 
-function setTokens(access: string, refresh: string) {
-  localStorage.setItem(ACCESS_KEY, access);
-  localStorage.setItem(REFRESH_KEY, refresh);
+// Registration no longer signs the account straight in — the backend creates
+// it inactive and emails a verification link (closing an open self-registration
+// hole where anyone could mint an unlimited number of working accounts with no
+// email ownership check at all). The account only starts working, and tokens
+// are only issued, once verifyEmail() below succeeds.
+export async function register(input: RegisterInput) {
+  await apiClient.post<{ verificationRequired: true }>("auth/register", input);
 }
 
-function clearTokens() {
-  localStorage.removeItem(ACCESS_KEY);
-  localStorage.removeItem(REFRESH_KEY);
+export async function login(input: LoginInput) {
+  const { data } = await apiClient.post<AuthResult>("auth/login", input);
+  setTokens(data.accessToken, data.refreshToken);
+  return data.user;
 }
 
-async function parseJsonOrThrow(res: Response) {
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    throw new Error(data.detail || `Request failed (${res.status})`);
+export async function logout() {
+  try {
+    await apiClient.post("auth/logout", undefined, true);
+  } finally {
+    clearTokens();
   }
-  return data;
 }
 
-export async function register(username: string, email: string, password: string) {
-  const res = await fetch("/api/v1/auth/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, email, password }),
-  });
-  return parseJsonOrThrow(res);
-}
-
-export async function verifyEmail(uid: string, token: string) {
-  const res = await fetch("/api/v1/auth/verify-email", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ uid, token }),
-  });
-  const data = await parseJsonOrThrow(res);
-  setTokens(data.access, data.refresh);
-  return data;
-}
-
-export async function login(username: string, password: string) {
-  const res = await fetch("/api/v1/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  const data = await parseJsonOrThrow(res);
-  setTokens(data.access, data.refresh);
+export async function me() {
+  const { data } = await apiClient.get<AuthUser>("auth/me", undefined, true);
   return data;
 }
 
 export async function requestPasswordReset(email: string) {
-  const res = await fetch("/api/v1/auth/password-reset-request", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email }),
-  });
-  return parseJsonOrThrow(res);
+  await apiClient.post("auth/password-reset-request", { email });
 }
 
-export async function confirmPasswordReset(uid: string, token: string, password: string) {
-  const res = await fetch("/api/v1/auth/password-reset-confirm", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ uid, token, password }),
-  });
-  const data = await parseJsonOrThrow(res);
-  setTokens(data.access, data.refresh);
-  return data;
+export async function resetPassword(token: string, password: string) {
+  await apiClient.post("auth/password-reset", { token, password });
 }
 
-export async function logout() {
-  const refresh = localStorage.getItem(REFRESH_KEY);
-  const access = getAccessToken();
-  clearTokens();
-  if (!refresh || !access) return;
-  await fetch("/api/v1/auth/logout", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${access}` },
-    body: JSON.stringify({ refresh }),
-  }).catch(() => {});
+export async function verifyEmail(token: string) {
+  const { data } = await apiClient.post<AuthResult>("auth/verify-email", { token });
+  setTokens(data.accessToken, data.refreshToken);
+  return data.user;
 }
 
-export interface CurrentUser {
-  id: number;
-  username: string;
-  email: string;
-}
-
-export async function me(): Promise<CurrentUser | null> {
-  const access = getAccessToken();
-  if (!access) return null;
-  const res = await fetch("/api/v1/auth/me", { headers: { Authorization: `Bearer ${access}` } });
-  if (!res.ok) {
-    clearTokens();
-    return null;
-  }
-  return res.json();
+export async function resendVerification(email: string) {
+  await apiClient.post("auth/resend-verification", { email });
 }

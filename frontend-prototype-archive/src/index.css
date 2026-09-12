@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Ported from the real fermi.uz site's design tokens (src/index.css there) —
+   navy + gold from the FJSTI logo, Manrope for headings, Source Sans 3 for
+   body text. Only the tokens and a few reusable utility classes are ported
+   here, not the full ~4500-line stylesheet (hero animations etc.) — this
+   prototype only needs to prove the content-block rendering looks right in
+   the real brand, not rebuild the homepage.
+
+   NOTE on the eventual integration path: once this prototype has served its
+   purpose, these tokens don't get "kept" here — the actual site's frontend
+   (fjstiWeb-main) stays the permanent codebase, and the BlockRenderer/types
+   patterns proven here get ported into it. */
+
+@theme {
+  --color-primary-50: oklch(0.97 0.015 270);
+  --color-primary-100: oklch(0.93 0.03 270);
+  --color-primary-200: oklch(0.82 0.05 270);
+  --color-primary-300: oklch(0.62 0.08 270);
+  --color-primary-400: oklch(0.42 0.1 270);
+  --color-primary-500: oklch(0.28 0.1 270);
+  --color-primary-600: oklch(0.24 0.1 270);
+  --color-primary-700: oklch(0.2 0.09 270);
+  --color-primary-800: oklch(0.17 0.08 270);
+  --color-primary-900: oklch(0.14 0.07 270);
+  --color-primary-950: oklch(0.12 0.06 270);
+
+  --color-secondary-50: oklch(0.99 0.03 100);
+  --color-secondary-100: oklch(0.97 0.06 100);
+  --color-secondary-200: oklch(0.94 0.12 100);
+  --color-secondary-300: oklch(0.92 0.15 100);
+  --color-secondary-400: oklch(0.9 0.17 100);
+  --color-secondary-500: oklch(0.88 0.18 100);
+  --color-secondary-600: oklch(0.78 0.16 100);
+  --color-secondary-700: oklch(0.62 0.13 100);
+
+  --color-foreground-500: oklch(0.4 0 0);
+  --color-foreground-600: oklch(0.3 0 0);
+  --color-foreground-700: oklch(0.2 0 0);
+  --color-foreground-900: oklch(0.08 0 0);
+  --color-foreground-950: oklch(0.05 0 0);
+
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+}
+
+body {
+  background: #f7f8fc;
+  font-family: var(--font-body);
+  color: oklch(var(--color-foreground-900, 0.08 0 0));
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(10, 17, 88, 0.09);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(10, 17, 88, 0.045);
+}
+
+.uni-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  padding: 0 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #0a1158;
+  color: #fff;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.uni-btn:hover {
+  background: #131d6e;
+  transform: translateY(-1px);
+}
+
+.uni-btn:disabled {
+  opacity: 0.6;
+  transform: none;
+}

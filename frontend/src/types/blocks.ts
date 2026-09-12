@@ -1,0 +1,103 @@
+// The structured content-block shape Django's CMS (apps.content) actually
+// returns for department/faculty/news `page.blocks`, once the API client has
+// already resolved each block's {uz,ru,en} `data` down to the active
+// language (see resolveLocale in ../api/client.ts) — so `data` here is just
+// the one payload shape for that block_type, not a three-language record.
+
+export interface LocalizedImage {
+  id: number;
+  file: string;
+  width: number | null;
+  height: number | null;
+  alt_text: string;
+}
+
+export interface LocalizedVideo {
+  id: number;
+  file: string;
+  poster: LocalizedImage;
+}
+
+export interface LocalizedDocument {
+  id: number;
+  file: string;
+  title: string;
+  filename: string;
+  file_size: number;
+}
+
+export interface HeadingBlockData {
+  text: string;
+}
+export interface ParagraphBlockData {
+  text: string;
+}
+export interface ListBlockData {
+  items: string[];
+}
+export interface StaffCardBlockData {
+  full_name: string;
+  title?: string;
+}
+export interface ImageBlockData {
+  image_id: number;
+  alt?: string;
+  image: LocalizedImage | null;
+}
+export interface VideoBlockData {
+  video_id: number;
+  caption?: string;
+  video: LocalizedVideo | null;
+}
+export interface DocumentBlockData {
+  document_id: number;
+  caption?: string;
+  document: LocalizedDocument | null;
+}
+export interface GalleryItem {
+  image_id: number;
+  alt?: string;
+  image: LocalizedImage | null;
+}
+export interface GalleryBlockData {
+  items: GalleryItem[];
+}
+export interface TableBlockData {
+  headers: string[];
+  rows: string[][];
+}
+
+export type BlockType =
+  | "heading"
+  | "paragraph"
+  | "list"
+  | "staff_card"
+  | "image"
+  | "video"
+  | "document"
+  | "gallery"
+  | "table";
+
+interface ContentBlockBase<T extends BlockType, D> {
+  id: number;
+  order: number;
+  block_type: T;
+  data: D;
+}
+
+export type ContentBlock =
+  | ContentBlockBase<"heading", HeadingBlockData>
+  | ContentBlockBase<"paragraph", ParagraphBlockData>
+  | ContentBlockBase<"list", ListBlockData>
+  | ContentBlockBase<"staff_card", StaffCardBlockData>
+  | ContentBlockBase<"image", ImageBlockData>
+  | ContentBlockBase<"video", VideoBlockData>
+  | ContentBlockBase<"document", DocumentBlockData>
+  | ContentBlockBase<"gallery", GalleryBlockData>
+  | ContentBlockBase<"table", TableBlockData>;
+
+export interface ContentPage {
+  id: number;
+  slug: string;
+  blocks: ContentBlock[];
+}
