@@ -15,7 +15,7 @@ import urllib.request
 import certifi
 from django.core.files.base import ContentFile
 
-from apps.media_lib.models import Image
+from apps.media_lib.models import Document, Image
 
 _SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
@@ -62,3 +62,44 @@ class ImageDownloader:
 
         self._cache[src] = image
         return image
+
+
+class DocumentDownloader:
+    """Same idea as ImageDownloader, for the PDFs referenced by a page's
+    `file` field (bylaws, council/journal archives, ...) -- downloads once,
+    caches by src, and a broken/missing legacy PDF is skipped rather than
+    aborting the whole import."""
+
+    def __init__(self, on_error=None):
+        self._cache: dict[str, Document | None] = {}
+        self._on_error = on_error or (lambda src, exc: None)
+
+    def get_or_download(self, src: str | None) -> Document | None:
+        if not src:
+            return None
+        if src in self._cache:
+            return self._cache[src]
+
+        document: Document | None
+        try:
+            url = src if src.startswith("http") else f"https://api.fermi.uz{src}"
+            req = urllib.request.Request(url, headers={"User-Agent": "fermi-django-migration/0.1"})
+            with urllib.request.urlopen(req, timeout=20, context=_SSL_CONTEXT) as resp:
+                content = resp.read()
+            filename = urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(url).path)) or "document.pdf"
+            if not filename.lower().endswith(".pdf"):
+                # Document only accepts .pdf (FileExtensionValidator) -- the
+                # rare non-PDF "file" on the old site (a stray .docx/.jpg
+                # link) has nowhere to go here, so it's skipped rather than
+                # crashing the whole page import.
+                raise ValueError(f"not a PDF: {filename}")
+            document = Document(title="")
+            document.file.save(filename, ContentFile(content), save=False)
+            document.full_clean()
+            document.save()
+        except Exception as exc:  # noqa: BLE001 -- a broken/missing legacy document must not abort the import
+            self._on_error(src, exc)
+            document = None
+
+        self._cache[src] = document
+        return document

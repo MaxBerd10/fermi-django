@@ -2,14 +2,20 @@
 Imports the site navigation tree from the old site's live public API into
 MenuItem.
 
-The old menu mixes destinations the new site doesn't serve yet (standalone
-CMS pages -- 70% of the tree by item count, a separate "leadership
-directory" feature, raw Yii2 controller routes) with ones it does
-(departments, faculties, the homepage). Every item's label and tree
-position (parent/order) is migrated regardless, since the navigation's
-structure and wording carry real information on their own -- only `url` is
-left as a non-clickable "#" for a destination this site can't yet serve,
-rather than either dropping the item or pointing it at a broken link.
+Every item's label and tree position (parent/order) is migrated regardless
+of whether this site can serve its destination yet -- the navigation's
+structure and wording carry real information on their own. `url` points at
+a real route when one exists for that item's urlType (departments/faculty/
+leader/page/gallery/video), and falls back to a non-clickable "#" only for
+the handful of destinations genuinely not built yet (documents, search,
+schedule, sitemap, news categories -- see each app's own TODO).
+
+The route's :menuId param is the item's own parent id -- on the frontend,
+resolveMenuSection(menu, menuId, slug) looks that id up and lists ITS
+children as the sidebar, so this makes "my siblings under the same parent"
+the sidebar for every page, not just the ~50 specifically hand-configured
+sections in lib/menuSection.ts (those still get a nicer theme/intro; every
+other page still gets a correct, generic sidebar instead of none).
 
 Not idempotent per-item like the other importers (a nav tree has no
 natural per-node identity worth preserving across runs) -- it just
@@ -26,9 +32,17 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 
 from apps.content.legacy_import.fetch import LANGS, fetch_menu_tree
+from apps.content.models import Page
 from apps.departments.models import Department
 from apps.faculties.models import Faculty
 from apps.menu.models import MenuItem
+
+# c-action is the old site's shorthand for a fixed feature page rather than
+# CMS content -- only two values ever appear in the tree.
+_C_ACTION_ROUTES = {
+    "site/gallery": "/galereya",
+    "site/video": "/video",
+}
 
 
 class Command(BaseCommand):
@@ -45,9 +59,10 @@ class Command(BaseCommand):
         trees = {lang: fetch_menu_tree(lang) for lang in LANGS}
         department_slugs = set(Department.objects.values_list("slug", flat=True))
         faculty_slugs = set(Faculty.objects.values_list("slug", flat=True))
+        page_slugs = set(Page.objects.values_list("slug", flat=True))
 
         counts = {"total": 0, "resolved": 0}
-        self._report(trees["uz"], counts)
+        self._report(trees["uz"], counts, department_slugs, faculty_slugs, page_slugs)
         self.stdout.write(
             f"{counts['total']} menu item(s), {counts['resolved']} with a real destination "
             f"({counts['total'] - counts['resolved']} land on a page this site doesn't serve yet).\n"
@@ -60,38 +75,62 @@ class Command(BaseCommand):
         with transaction.atomic():
             MenuItem.objects.all().delete()
             for index, node_by_lang in enumerate(zip(trees["uz"], trees["ru"], trees["en"])):
-                self._create_node(dict(zip(LANGS, node_by_lang)), parent=None, order=index,
-                                   department_slugs=department_slugs, faculty_slugs=faculty_slugs)
+                self._create_node(
+                    dict(zip(LANGS, node_by_lang)), parent=None, order=index,
+                    department_slugs=department_slugs, faculty_slugs=faculty_slugs, page_slugs=page_slugs,
+                )
 
         self.stdout.write(self.style.SUCCESS(f"Imported {counts['total']} menu item(s)."))
 
     # -- reporting -------------------------------------------------------
 
-    def _report(self, uz_nodes: list[dict], counts: dict) -> None:
+    def _report(self, uz_nodes, counts, department_slugs, faculty_slugs, page_slugs) -> None:
         for node in uz_nodes:
             counts["total"] += 1
-            if node["urlType"] in ("main",) or self._resolvable(node):
+            if self._resolvable(node, department_slugs, faculty_slugs, page_slugs):
                 counts["resolved"] += 1
-            self._report(node["children"], counts)
+            self._report(node["children"], counts, department_slugs, faculty_slugs, page_slugs)
 
     @staticmethod
-    def _resolvable(node: dict) -> bool:
-        return node["urlType"] in ("departments", "faculty")
+    def _resolvable(node, department_slugs, faculty_slugs, page_slugs) -> bool:
+        url_type, value = node["urlType"], node["urlValue"]
+        if url_type == "main":
+            return True
+        if url_type == "departments":
+            return value in department_slugs
+        if url_type == "faculty":
+            return value in faculty_slugs
+        if url_type == "page":
+            return value in page_slugs
+        if url_type == "leader":
+            return bool(value)
+        if url_type == "c-action":
+            return value in _C_ACTION_ROUTES
+        return False
 
     # -- url resolution ----------------------------------------------------
 
     @staticmethod
-    def _resolve_url(node: dict, department_slugs: set[str], faculty_slugs: set[str]) -> str:
+    def _resolve_url(node: dict, section_menu_id: int, department_slugs: set[str], faculty_slugs: set[str],
+                      page_slugs: set[str]) -> str:
         url_type = node["urlType"]
         value = node["urlValue"]
         if url_type == "main":
             return "/"
         if url_type == "departments" and value in department_slugs:
-            return f"/kafedralar/{value}"
+            return f"/departments/{section_menu_id}/{value}"
         if url_type == "faculty" and value in faculty_slugs:
-            return f"/fakultetlar/{value}"
-        # page / leader / c-action / category / other / "" -- no matching
-        # route on this site yet.
+            return f"/faculty/{section_menu_id}/{value}"
+        if url_type == "leader" and value:
+            return f"/leader/{section_menu_id}/{value}"
+        if url_type == "page" and value in page_slugs:
+            return f"/blog/{section_menu_id}/{value}"
+        if url_type == "c-action" and value in _C_ACTION_ROUTES:
+            return _C_ACTION_ROUTES[value]
+        # documents / category / other / "" -- no matching route (documents:
+        # no list endpoint yet; category: news has no per-category model;
+        # other/"": the old site's own dead-end dropdown headers) -- see
+        # each app's own TODOs rather than guessing at a destination here.
         return "#"
 
     # -- import ------------------------------------------------------------
@@ -103,19 +142,28 @@ class Command(BaseCommand):
         order: int,
         department_slugs: set[str],
         faculty_slugs: set[str],
+        page_slugs: set[str],
     ) -> None:
         uz_node = node_by_lang["uz"]
+        # A node's own id doubles as the :menuId every one of ITS children's
+        # routes carry -- see the module docstring for why (children become
+        # each other's sidebar).
+        section_menu_id = parent.id if parent is not None else None
         item = MenuItem.objects.create(
             parent=parent,
             label_uz=uz_node["title"],
             label_ru=node_by_lang["ru"]["title"] or uz_node["title"],
             label_en=node_by_lang["en"]["title"] or uz_node["title"],
-            url=self._resolve_url(uz_node, department_slugs, faculty_slugs),
+            url=(
+                self._resolve_url(uz_node, section_menu_id, department_slugs, faculty_slugs, page_slugs)
+                if section_menu_id is not None
+                else self._resolve_url(uz_node, 0, department_slugs, faculty_slugs, page_slugs)
+            ),
             order=order,
         )
         children = zip(uz_node["children"], node_by_lang["ru"]["children"], node_by_lang["en"]["children"])
         for index, child_by_lang in enumerate(children):
             self._create_node(
                 dict(zip(LANGS, child_by_lang)), parent=item, order=index,
-                department_slugs=department_slugs, faculty_slugs=faculty_slugs,
+                department_slugs=department_slugs, faculty_slugs=faculty_slugs, page_slugs=page_slugs,
             )

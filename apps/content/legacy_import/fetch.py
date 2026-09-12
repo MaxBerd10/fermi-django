@@ -203,6 +203,65 @@ def fetch_all_gallery_photos() -> list[LegacyGalleryPhoto]:
     return photos
 
 
+@dataclass
+class LegacyPage:
+    id: int
+    slug: str
+    title: dict  # {"uz": ..., "ru": ..., "en": ...}
+    content: dict  # {"uz": <html>, "ru": <html>, "en": <html>}
+    file_url: str | None  # almost always a PDF; same URL in every language
+
+
+def fetch_page_slugs() -> list[str]:
+    """Every distinct `urlType: "page"` slug in the old site's own nav tree
+    (uz only -- urlValue/slug is the same across languages, only the menu
+    label text differs) -- these are static/informational pages (bylaws,
+    council & journal archives, admission info, building descriptions...)
+    with no dedicated list endpoint of their own, unlike departments/
+    faculties/news."""
+    tree = fetch_menu_tree("uz")
+    slugs: list[str] = []
+
+    def walk(items: list[dict]) -> None:
+        for item in items:
+            if item.get("urlType") == "page" and item.get("urlValue"):
+                slugs.append(item["urlValue"])
+            if item.get("children"):
+                walk(item["children"])
+
+    walk(tree)
+    # A handful of menu entries repeat the same page slug in more than one
+    # branch (e.g. linked from both a section's own list and a "featured"
+    # spot) -- dedupe while keeping first-seen order.
+    seen: set[str] = set()
+    unique_slugs = []
+    for slug in slugs:
+        if slug not in seen:
+            seen.add(slug)
+            unique_slugs.append(slug)
+    return unique_slugs
+
+
+def fetch_page(slug: str) -> LegacyPage:
+    title, content = {}, {}
+    page_id = None
+    file_url = None
+    for lang in LANGS:
+        body = _get_json(f"/pages/{slug}", lang)
+        data = body["data"]
+        page_id = data["id"]
+        title[lang] = data.get("title") or ""
+        content[lang] = data.get("content") or ""
+        file_url = file_url or data.get("file")
+        time.sleep(0.1)  # be polite to the production API
+    return LegacyPage(id=page_id, slug=slug, title=title, content=content, file_url=file_url)
+
+
+def fetch_all_pages() -> list[LegacyPage]:
+    slugs = fetch_page_slugs()
+    return [fetch_page(slug) for slug in slugs]
+
+
 def fetch_menu_tree(lang: str) -> list[dict]:
     """The whole nav tree in one call (unlike departments/faculty/news,
     which each need a request per item) -- items carry id/title/urlType/
