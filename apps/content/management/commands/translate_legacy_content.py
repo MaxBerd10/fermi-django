@@ -26,6 +26,7 @@ from apps.content.models import (
     _ENGLISH_SOURCE_BLOCK_IDS,
     _PROPER_NOUN_BLOCK_IDS,
     _is_language_invariant,
+    _is_personal_name,
     _is_ru_source_text,
 )
 from apps.departments.models import StaffMember
@@ -54,7 +55,10 @@ def _missing_langs(block_id: int, uz_value, lang_value_of) -> list[str]:
             continue
         if lang == "ru" and isinstance(uz_value, str) and _is_ru_source_text(uz_value):
             continue
-        if lang == "en" and block_id in _ENGLISH_SOURCE_BLOCK_IDS:
+        if lang == "en" and (
+            block_id in _ENGLISH_SOURCE_BLOCK_IDS
+            or (isinstance(uz_value, str) and _is_personal_name(uz_value))
+        ):
             continue
         missing.append(lang)
     return missing

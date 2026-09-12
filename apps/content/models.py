@@ -26,6 +26,23 @@ def _is_language_invariant(text: str) -> bool:
     return sum(1 for ch in stripped if ch.isalpha()) <= 6
 
 
+_NAME_RE = re.compile(
+    r"^[A-Z][A-Za-z.ʻ‘’'`-]*(?:\s+[A-Z][A-Za-z.ʻ‘’'`-]*){1,4}"
+    r"(?:\s+(?:[Qq]izi|[Oo][ʻ‘’'`][Gg][ʻ‘’'`][Ll]i))?$"
+)
+
+
+def _is_personal_name(text: str) -> bool:
+    """A person's full name (staff bylines: "Xamdamova Shaxnoza
+    Yusupalievna", "Sh. Mirziyoyev", "Abdurahimova Manzura Shokirjon qizi")
+    is written in Latin script in both uz and en -- there's nothing to
+    translate, so an identical 'en' value is correct, not a missing
+    translation. Detected as 2-5 capitalized words, optionally followed by
+    the lowercase Uzbek patronymic suffix "qizi"/"o'g'li", with no
+    sentence-ending punctuation."""
+    return bool(_NAME_RE.match(text.strip()))
+
+
 def _is_ru_source_text(text: str) -> bool:
     """A handful of legacy blocks have Russian prose sitting directly in the
     'uz' slot -- a data-entry mistake on the original site, not a missing
@@ -52,7 +69,7 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
 # in a byline, or a malformed URL (a stray space breaks the URL-invariance
 # regex) with no translation in any language -- the same text is correct
 # verbatim in uz, ru and en alike. Same hand-verified precedent as above.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711}
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853}
 
 
 class Page(models.Model):
@@ -130,7 +147,9 @@ class ContentBlock(models.Model):
                     continue
                 if lang == "ru" and _is_ru_source_text(uz_value):
                     continue
-                if lang == "en" and self.id in _ENGLISH_SOURCE_BLOCK_IDS:
+                if lang == "en" and (
+                    self.id in _ENGLISH_SOURCE_BLOCK_IDS or _is_personal_name(uz_value)
+                ):
                     continue
                 return True
             return False
