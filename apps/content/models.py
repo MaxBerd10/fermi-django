@@ -64,13 +64,50 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     18644, 18739, 18976, 19127, 19128, 19129, 19131, 19132,
     19134, 19135, 19137, 19138, 19139, 19472, 19473, 19475,
     25294, 25550, 25901, 26143, 26163, 26363, 26471,
+    # USMLE-style clinical topic checklists (kidney/genetics/heme/cell-bio/
+    # micro/biochem/musculoskeletal study outlines) authored directly in
+    # English -- there is no separate English "translation" to write.
+    29533, 29535, 29537, 29539, 29541, 29543, 29546,
+    # USMLE program description (Wikipedia-sourced) and the Thumbay Fergana
+    # College of Medical Sciences / Gulf Medical University partnership copy
+    # -- both authored directly in English for this English-language
+    # partnership announcement.
+    27068, 27069, 27071, 27072, 27073, 27074,
+    27125, 27126, 27127, 27129, 27130, 27132, 27133, 27134, 27135,
+    27136, 27137, 27138, 27139,
+    # Journal article/dissertation titles submitted to this institute in
+    # English by their (non-Uzbek) authors -- the title itself is the
+    # English source; only a Russian rendering is a real translation.
+    27226, 27227, 27230, 27241, 27242, 27245, 27253, 27262,
+    27286, 27287, 27291, 27309, 27310, 27313, 27317, 27321, 27323,
+    27324, 27329, 27331, 27334, 27336, 27337, 27338, 27340, 27346,
+    27349, 27352, 27366, 27367, 27378, 27382, 27394, 27396, 27399,
+    27401, 27404, 27405, 27406,
+    # Fergana Medical Institute of Public Health "Green University"
+    # sustainability-policy page (mission/vision statements, UN SDG policy
+    # titles) and the India representative-office address block, both
+    # authored directly in English for this English-language section.
+    28318, 28319, 28320, 28321, 28327, 28328, 28329, 28331,
+    28333, 28334, 28336, 28338, 28339, 28340, 28341, 28342,
+    28343, 28344, 28345, 28346, 28347, 28348, 28349, 28350,
+    28351, 28352, 28353, 28354,
+    # A second, near-duplicate "Green University" sustainability-report page
+    # (report title plus the same policy statements) on a different Page.
+    29611, 29613, 29614, 29615, 29616, 29617, 29618, 29619,
+    29620, 29621, 29622, 29623, 29624, 29625, 29626, 29627,
+    29628, 29629,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
 # in a byline, or a malformed URL (a stray space breaks the URL-invariance
 # regex) with no translation in any language -- the same text is correct
 # verbatim in uz, ru and en alike. Same hand-verified precedent as above.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853}
+# 27299 is a different edge case sharing this bucket: real Russian-language
+# prose sitting in the 'uz' slot (already correctly handled for 'en'), but
+# _is_ru_source_text's Cyrillic-ratio heuristic misses it because the
+# embedded Latin scientific name "Helicobacter pylori" pulls the Latin
+# character count too high -- hand-verified as needing no further work.
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853, 27299}
 
 
 class Page(models.Model):
