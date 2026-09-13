@@ -42,17 +42,19 @@ class Video(models.Model):
 
 class Document(models.Model):
     """
-    A downloadable file (PDF for now — the old site's only real document
-    type). Rendered as a plain download/view link, not an embedded iframe
-    viewer: the old site's iframe viewer was the subject of a recurring "PDF
-    takes too long to open" complaint that months of investigation never
-    pinned to an actual bug — a link sidesteps the whole failure class
-    instead of trying to reproduce a fragile embedded viewer here.
+    A downloadable file. Rendered as a plain download/view link, not an
+    embedded iframe viewer: the old site's iframe viewer was the subject of
+    a recurring "PDF takes too long to open" complaint that months of
+    investigation never pinned to an actual bug — a link sidesteps the
+    whole failure class instead of trying to reproduce a fragile embedded
+    viewer here. PDF is the common case (bylaws, council/journal archives);
+    xlsx is also real — every one of the old site's class-schedule files
+    (see ScheduleFile) is an .xlsx, never a PDF.
     """
 
     file = models.FileField(
         upload_to="uploads/documents/%Y/%m/",
-        validators=[FileExtensionValidator(allowed_extensions=["pdf"])],
+        validators=[FileExtensionValidator(allowed_extensions=["pdf", "xlsx"])],
     )
     title = models.CharField(max_length=255, blank=True)
     file_size = models.PositiveIntegerField(editable=False, default=0)
