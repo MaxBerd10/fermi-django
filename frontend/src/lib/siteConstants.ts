@@ -30,10 +30,16 @@ export function normalizeMenuHref(href: string): string {
     .replace(/yol-xaritasi-2025/gi, "institut-yol-xaritasi-2026");
 }
 
-/** URL slug → API slug (CMS hali yangilanmagan boʻlsa) */
+/** URL slug → API slug (CMS hali yangilanmagan boʻlsa) — normalizeMenuHref
+ * yuqorida qaysi "-2025" nomlarni "-2026"ga aylantirsa, shularning barchasi
+ * uchun teskari moslashtirish shu yerda ham bo'lishi kerak: aks holda
+ * ko'rsatilgan havola bosilganda backend'da hali mavjud bo'lmagan "-2026"
+ * slug so'raladi va 404 chiqadi (CMS'da hozircha faqat "-2025" sahifalari bor). */
 export function normalizePageSlug(slug: string): string {
   if (!slug) return slug;
   return slug
+    .replace(/vakant-lavozimlar-2026/gi, "vakant-lavozimlar-2025")
+    .replace(/vakansiyalar-2026/gi, "vakansiyalar-2025")
     .replace(/institut-yol-xaritasi-2026/gi, "institut-yol-xaritasi-2025")
     .replace(/yo-l-xaritasi-2026/gi, "institut-yol-xaritasi-2025")
     .replace(/yol-xaritasi-2026/gi, "institut-yol-xaritasi-2025");

@@ -13,6 +13,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
 import { resolveMenuSection } from "@/lib/menuSection";
+import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
 // The page's own title isn't part of the Page/ContentBlock API (see
 // apps/content/serializers.py::PageSerializer) — every one of these ~235
@@ -22,10 +23,13 @@ import { resolveMenuSection } from "@/lib/menuSection";
 // `urlValue` — api/menu.ts always leaves urlValue blank (see its own
 // comment: Navbar never branched on it, so it was never worth deriving)
 // and only `href` (Django's `url` field, already a full "/blog/:menuId/:slug"
-// path) actually carries the real slug.
+// path) actually carries the real slug. normalizeMenuHref() first, same as
+// every other renderer of this href (Navbar.tsx, menuSection.ts, ...) — the
+// raw href off the menu tree can still say a stale year (e.g. "...-2025")
+// that this function's own "-2026" URL slug won't literally match otherwise.
 function findTitleBySlug(nodes: MenuNode[], slug: string): string | null {
   for (const node of nodes) {
-    if (node.href?.endsWith(`/${slug}`)) return node.title.trim();
+    if (normalizeMenuHref(node.href)?.endsWith(`/${slug}`)) return node.title.trim();
     const found = findTitleBySlug(node.children ?? [], slug);
     if (found) return found;
   }
@@ -52,15 +56,18 @@ export default function BlogPage() {
     () => resolveMenuSection(menuTree, resolvedMenuId, slug),
     [menuTree, resolvedMenuId, slug],
   );
-  const title =
-    (slug && findTitleBySlug(menuTree, slug)) || menuSection?.title || t("footer.institutHaqida");
+  const rawTitle = (slug && findTitleBySlug(menuTree, slug)) || menuSection?.title;
+  // Same year-rename Navbar.tsx already applies to this exact label when rendering
+  // the nav link itself — without it, a page reached via a "-2026" URL would show
+  // its own stale "-2025" title even though the link the visitor clicked said 2026.
+  const title = (rawTitle && normalizeYearLabels(rawTitle)) || t("footer.institutHaqida");
 
   useEffect(() => {
     if (!slug) return;
     let cancelled = false;
     setLoading(true);
     setError(null);
-    getPage(slug, resolvedMenuId)
+    getPage(normalizePageSlug(slug), resolvedMenuId)
       .then((data) => {
         if (!cancelled) setPage(data);
       })
