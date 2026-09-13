@@ -9,8 +9,8 @@ export async function imentorGet<T>(path: string, params?: Record<string, string
     // No iMentor API key configured for this deployment — fail immediately
     // rather than fetching a proxy route that isn't wired up. The pages that
     // call this (/test, /keyslar) already render their existing error state
-    // gracefully; there's no nav link to them (see Navbar.tsx), so this only
-    // matters for a visitor landing on the URL directly.
+    // gracefully, and Navbar.tsx only links to them once this same flag is on,
+    // so this only matters for a visitor landing on the URL directly.
     throw new Error("iMentor is not available in this deployment");
   }
   const url = new URL(BASE_URL.replace(/\/$/, "") + "/" + path.replace(/^\//, ""), window.location.origin);
