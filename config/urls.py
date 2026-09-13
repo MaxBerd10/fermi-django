@@ -12,6 +12,9 @@ urlpatterns = [
     path("api/v1/", include("apps.faculties.urls")),
     path("api/v1/", include("apps.menu.urls")),
     path("api/v1/", include("apps.media_lib.urls")),
+    path("api/v1/", include("apps.documents.urls")),
+    path("api/v1/", include("apps.schedule.urls")),
+    path("api/v1/", include("apps.search.urls")),
 ]
 
 if settings.DEBUG:

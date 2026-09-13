@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "apps.faculties",
     "apps.menu",
     "apps.media_lib",
+    "apps.documents",
+    "apps.schedule",
 ]
 
 MIDDLEWARE = [
