@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getDepartment, listDepartments } from "@/api/departments";
-import { getLeaders } from "@/api/leaders";
 import type { DepartmentDetail, Leader } from "@/types/content";
 import { ApiError } from "@/types/api";
 import { Reveal } from "@/components/Animation";
@@ -13,12 +12,7 @@ import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { stripHtml } from "@/lib/html";
 import { normalizeYearLabels } from "@/lib/siteConstants";
-import {
-  DEPARTMENT_LEADERS_MENU_ID,
-  DEPARTMENT_LEADERS_SLUG,
-  DEPARTMENT_MENU_ID,
-  matchDepartmentLeader,
-} from "@/lib/departmentSection";
+import { DEPARTMENT_MENU_ID } from "@/lib/departmentSection";
 
 export default function DepartmentPage() {
   const { t } = useTranslation();
@@ -43,29 +37,18 @@ export default function DepartmentPage() {
     setIsFallback(false);
 
     async function load() {
-      const [leadersResult, listResult] = await Promise.allSettled([
-        getLeaders(DEPARTMENT_LEADERS_SLUG, DEPARTMENT_LEADERS_MENU_ID),
-        listDepartments(),
-      ]);
-
-      const leaders =
-        leadersResult.status === "fulfilled" ? leadersResult.value.leaders : [];
-      const list = listResult.status === "fulfilled" ? listResult.value : [];
-      const matchedHead = matchDepartmentLeader(slug!, leaders);
-
-      if (cancelled) return;
-      setHead(matchedHead);
+      const listResult = await listDepartments();
 
       try {
         const detail = await getDepartment(slug!, resolvedMenuId);
         if (cancelled) return;
         setDept(detail);
-        if (!matchedHead && detail.leaders?.[0]) {
+        if (detail.leaders?.[0]) {
           setHead(detail.leaders[0]);
         }
         return;
       } catch (e) {
-        const meta = list.find((item) => item.slug === slug);
+        const meta = listResult.find((item) => item.slug === slug);
         if (!meta) {
           if (!cancelled) {
             setError(e instanceof ApiError ? e.message : t("common.genericError"));
@@ -83,7 +66,7 @@ export default function DepartmentPage() {
           content: "",
           blocks: [],
           menu: null,
-          leaders: matchedHead ? [matchedHead] : [],
+          leaders: [],
         });
         setIsFallback(true);
       } finally {

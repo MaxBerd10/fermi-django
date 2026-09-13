@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "fermi-django",
-      "runtimeExecutable": ".venv/bin/python",
-      "runtimeArgs": ["manage.py", "runserver", "8000"],
-      "port": 8000
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", ".venv/bin/python manage.py runserver 0.0.0.0:${PORT:-8000}"],
+      "port": 8000,
+      "autoPort": true
     },
     {
       "name": "fermi-django-frontend",
