@@ -37,9 +37,9 @@ export default function FacultyHero({
         {config.stats.length > 0 && (
           <ul className="faculty-hero__stats">
             {config.stats.map((stat) => (
-              <li key={stat.labelKey + stat.value} className="faculty-hero__stat">
+              <li key={stat.labelKey + (stat.value ?? stat.valueKey)} className="faculty-hero__stat">
                 <i className={stat.icon} aria-hidden />
-                <span className="faculty-hero__stat-value">{stat.value}</span>
+                <span className="faculty-hero__stat-value">{stat.valueKey ? t(stat.valueKey) : stat.value}</span>
                 <span className="faculty-hero__stat-label">{t(stat.labelKey)}</span>
               </li>
             ))}

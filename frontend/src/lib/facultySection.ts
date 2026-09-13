@@ -2,7 +2,12 @@ export type FacultyTheme = "clinical" | "preventive" | "international" | "pediat
 
 export interface FacultyStat {
   icon: string;
-  value: string;
+  /** A raw display value (a number, a count) that's the same in every language. */
+  value?: string;
+  /** For a stat whose value is itself a word (a degree level, a focus area),
+   * not a number -- translated the same way as labelKey, instead of showing
+   * the same Uzbek word regardless of the selected language. */
+  valueKey?: string;
   labelKey: string;
 }
 
@@ -23,7 +28,7 @@ export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
     stats: [
       { icon: "ri-graduation-cap-line", value: "1 324", labelKey: "faculty.stats.students" },
       { icon: "ri-stethoscope-line", value: "1", labelKey: "faculty.stats.directions" },
-      { icon: "ri-book-open-line", value: "Bakalavriat", labelKey: "faculty.stats.level" },
+      { icon: "ri-book-open-line", valueKey: "faculty.stats.value.bakalavriat", labelKey: "faculty.stats.level" },
     ],
   },
   "tibbiy-profilaktika-va-jamoat-salomatligi-fakulteti": {
@@ -33,7 +38,7 @@ export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
     stats: [
       { icon: "ri-graduation-cap-line", value: "707", labelKey: "faculty.stats.students" },
       { icon: "ri-route-line", value: "5", labelKey: "faculty.stats.directions" },
-      { icon: "ri-heart-pulse-line", value: "JS", labelKey: "faculty.stats.focus" },
+      { icon: "ri-heart-pulse-line", valueKey: "faculty.stats.value.js", labelKey: "faculty.stats.focus" },
     ],
   },
   "xalqaro-fakultet": {
@@ -43,7 +48,7 @@ export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
     stats: [
       { icon: "ri-graduation-cap-line", value: "1 504", labelKey: "faculty.stats.students" },
       { icon: "ri-global-line", value: "2", labelKey: "faculty.stats.languages" },
-      { icon: "ri-earth-line", value: "Xalqaro", labelKey: "faculty.stats.focus" },
+      { icon: "ri-earth-line", valueKey: "faculty.stats.value.xalqaro", labelKey: "faculty.stats.focus" },
     ],
   },
   "pediatriya-fakulteti": {
@@ -53,7 +58,7 @@ export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
     stats: [
       { icon: "ri-graduation-cap-line", value: "693", labelKey: "faculty.stats.students" },
       { icon: "ri-route-line", value: "3", labelKey: "faculty.stats.directions" },
-      { icon: "ri-emotion-happy-line", value: "Pediatriya", labelKey: "faculty.stats.focus" },
+      { icon: "ri-emotion-happy-line", valueKey: "faculty.stats.value.pediatriya", labelKey: "faculty.stats.focus" },
     ],
   },
 };
