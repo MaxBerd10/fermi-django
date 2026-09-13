@@ -110,6 +110,14 @@ export default defineConfig(({ mode }) => {
         target: "http://127.0.0.1:8000",
         changeOrigin: true,
       },
+      // Crawlers hit this at the site root (see public/robots.txt); Django
+      // only serves it under "/api/v1/" — mirrors production-server.mjs's
+      // own path remap for the same reason.
+      "/sitemap.xml": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+        rewrite: () => "/api/v1/sitemap.xml",
+      },
       // iMentor doesn't send CORS headers, so direct browser calls are blocked — the dev
       // server does the actual fetch here instead, which sidesteps CORS entirely (only
       // works for local dev/preview; the production static build needs iMentor to
@@ -133,6 +141,11 @@ export default defineConfig(({ mode }) => {
       "/api/v1": {
         target: "http://127.0.0.1:8000",
         changeOrigin: true,
+      },
+      "/sitemap.xml": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+        rewrite: () => "/api/v1/sitemap.xml",
       },
     },
   },

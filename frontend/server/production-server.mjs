@@ -240,9 +240,10 @@ function safeUpstreamHeaders(headers) {
   return result;
 }
 
-async function streamProxy(request, response, baseUrl) {
+async function streamProxy(request, response, baseUrl, targetPath) {
   const requestUrl = new URL(request.url || "/", "http://localhost");
-  const target = new URL(`${requestUrl.pathname}${requestUrl.search}`, baseUrl);
+  const path = targetPath ?? requestUrl.pathname;
+  const target = new URL(`${path}${requestUrl.search}`, baseUrl);
   const hasBody = !["GET", "HEAD"].includes(request.method || "GET");
   const upstream = await fetch(target, {
     method: request.method,
@@ -395,6 +396,14 @@ const server = createServer(async (request, response) => {
       if (!allowPdfCheckRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
       const handled = await handlePdfCheckRequest(request, response);
       if (handled) return;
+    }
+    if (pathname === "/sitemap.xml") {
+      // Search-engine crawlers hit this at the site root (see public/robots.txt's
+      // own "Sitemap: https://.../sitemap.xml" line) -- Django only serves it
+      // under "/api/v1/", so remap the path rather than adding a bare
+      // top-level Django route just for this one file.
+      if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      return await streamProxy(request, response, fermiApiBaseUrl, "/api/v1/sitemap.xml");
     }
     if (pathname.startsWith("/api/v1/")) {
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
