@@ -5,12 +5,6 @@ const API_ORIGIN = (
   "https://api.fermi.uz"
 ).replace(/\/$/, "");
 
-const NEWS_FALLBACK_IMAGES = [
-  "/images/news-fallback-1.png",
-  "/images/news-fallback-2.png",
-  "/images/news-fallback-3.png",
-] as const;
-
 const DOCUMENT_PLACEHOLDER_IMAGE = "/images/logo.png?v=2";
 
 /** CMS menyu slug → API dagi haqiqiy kategoriya slug */
@@ -30,8 +24,11 @@ export function resolveNewsImageUrl(src: string): string {
   // static asset — same file the navbar/footer already use. Leave it relative so
   // it resolves against fermi.uz itself, not the API's separate domain, whether
   // this function sees it directly or via a second getNewsArticleImage() pass
-  // over an already-enriched article (enrichNewsArticle prefills img).
-  if (src.trim() === DOCUMENT_PLACEHOLDER_IMAGE) return DOCUMENT_PLACEHOLDER_IMAGE;
+  // over an already-enriched article (enrichNewsArticle prefills img with this
+  // exact path when a post has no cover — NewsCard's own useMemo then re-runs
+  // getNewsArticleImage on that already-filled article, landing right back here).
+  const trimmed = src.trim();
+  if (trimmed === DOCUMENT_PLACEHOLDER_IMAGE) return trimmed;
   // Cached high-res Telegram media (server/telegram-media-cache.mjs) is served by this
   // frontend's own Node process, not the API/CMS server — leave it relative to fermi.uz
   // itself instead of prefixing API_ORIGIN below (which would point at api.fermi.uz,
@@ -85,14 +82,17 @@ export function getNewsArticleImage(
   const fromContent = extractFirstImageFromHtml(article.content);
   if (fromContent) return fromContent;
 
-  // Telegram posts with no real photo at all — document-only, or plain text — have
-  // no image of their own. A random decorative stock photo (the generic per-index
-  // rotation below) reads as arbitrary/wrong for auto-imported content with no
-  // editorial control over it. Prefer the institute logo instead; CMS-authored
-  // articles (a real editor picked the category/content) keep the rotation.
-  if (article.hasDocument || article.category?.slug === "telegram") return DOCUMENT_PLACEHOLDER_IMAGE;
-
-  return NEWS_FALLBACK_IMAGES[fallbackIndex % NEWS_FALLBACK_IMAGES.length];
+  // Telegram posts with no real photo at all (document-only, or plain text), and
+  // any other cover-less CMS post, fall back to the institute logo. This used to
+  // be a per-index rotation through three "news-fallback-N.png" files instead --
+  // but those were never actually added under public/images/ (referenced by this
+  // exact filename since the fjstiWeb-main import, and no commit ever added them).
+  // Every cover-less post silently rendered a blank tile: the <img> "loaded" a 200
+  // (Vite's dev server SPA-falls-back to index.html for any unknown static path)
+  // that obviously isn't image data, so naturalWidth stayed 0 forever. The logo
+  // actually exists and renders something, instead of three assets that don't.
+  void fallbackIndex;
+  return DOCUMENT_PLACEHOLDER_IMAGE;
 }
 
 export function enrichNewsArticle(article: NewsArticle, index = 0): NewsArticle {
