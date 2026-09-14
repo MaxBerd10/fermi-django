@@ -4,7 +4,13 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    # Not "admin/" -- the deployed frontend's own SPA also claims that path
+    # (a leftover, unwired React admin panel from fjstiWeb-main, see its
+    # src/admin/*) and nginx routes everything to the frontend by default,
+    # so "admin/" would never actually reach Django in production. A
+    # distinct prefix lets production-server.mjs proxy it through instead
+    # of silently shadowing the real admin.
+    path("django-admin/", admin.site.urls),
     path("api/v1/", include("apps.departments.urls")),
     path("api/v1/", include("apps.content.urls")),
     path("api/v1/", include("apps.accounts.urls")),

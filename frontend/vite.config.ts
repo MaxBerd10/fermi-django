@@ -118,6 +118,17 @@ export default defineConfig(({ mode }) => {
         changeOrigin: true,
         rewrite: () => "/api/v1/sitemap.xml",
       },
+      // Django's real admin (see config/urls.py) and the static assets its
+      // pages need (whitenoise-served) — mirrors production-server.mjs's
+      // own passthrough for the same paths.
+      "/django-admin": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
+      "/static": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
       // iMentor doesn't send CORS headers, so direct browser calls are blocked — the dev
       // server does the actual fetch here instead, which sidesteps CORS entirely (only
       // works for local dev/preview; the production static build needs iMentor to
@@ -146,6 +157,14 @@ export default defineConfig(({ mode }) => {
         target: "http://127.0.0.1:8000",
         changeOrigin: true,
         rewrite: () => "/api/v1/sitemap.xml",
+      },
+      "/django-admin": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
+      "/static": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
       },
     },
   },

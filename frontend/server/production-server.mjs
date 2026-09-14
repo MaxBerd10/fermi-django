@@ -409,6 +409,15 @@ const server = createServer(async (request, response) => {
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
       return await streamProxy(request, response, fermiApiBaseUrl);
     }
+    if (pathname.startsWith("/django-admin/") || pathname.startsWith("/static/")) {
+      // Django's real admin (see config/urls.py's own comment on why it's
+      // not mounted at "/admin/") and the static assets its pages need
+      // (admin CSS/JS, served by whitenoise -- see STORAGES in settings.py)
+      // -- without this, nginx's catch-all route would hand both straight
+      // to this SPA server and neither would ever reach Django.
+      if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      return await streamProxy(request, response, fermiApiBaseUrl);
+    }
     return await serveStatic(request, response);
   } catch (error) {
     console.error("Request failed", error);
