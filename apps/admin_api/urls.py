@@ -2,6 +2,7 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter
 
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
+from .forms_views import AdminAcceptanceViewSet, AdminContactViewSet, AdminVirtualSubmissionViewSet
 from .leaders_views import AdminLeaderCategoryViewSet, AdminLeaderViewSet
 from .media_content_views import (
     AdminConnectLeaderViewSet,
@@ -42,6 +43,9 @@ router.register("admin/logo", AdminLogoViewSet, basename="admin-logo")
 router.register("admin/counter", AdminCounterViewSet, basename="admin-counter")
 router.register("admin/networks", AdminNetworkViewSet, basename="admin-networks")
 router.register("admin/useful-sites", AdminUsefulSiteViewSet, basename="admin-useful-sites")
+router.register("admin/contacts", AdminContactViewSet, basename="admin-contacts")
+router.register("admin/acceptances", AdminAcceptanceViewSet, basename="admin-acceptances")
+router.register("admin/virtual-submissions", AdminVirtualSubmissionViewSet, basename="admin-virtual-submissions")
 
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),
