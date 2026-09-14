@@ -13,7 +13,10 @@ import { getNewsArticleImage } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 
 function newsHref(article: NewsArticle) {
-  return `/detail/${article.slug}?menuId=71`;
+  // No explicit menuId -- DetailPage already falls back to
+  // NEWS_DEFAULT_MENU_ID, our own DB's real id (the old "71" here was a
+  // stale Yii2 id matching nothing in ours).
+  return `/detail/${article.slug}`;
 }
 
 function dedupeById(items: NewsArticle[]) {

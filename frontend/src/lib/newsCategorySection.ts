@@ -1,4 +1,7 @@
-export const XORIJIY_NEWS_MENU_ID = 6;
+// Our own Django DB's id for the "Xorijiy-talabalar" top-level menu section
+// -- not the old Yii2 site's id (6). See lib/menuSection.ts's
+// NAV_ROOT_THEMES comment.
+export const XORIJIY_NEWS_MENU_ID = 2157;
 
 
 

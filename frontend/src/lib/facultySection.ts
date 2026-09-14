@@ -18,7 +18,9 @@ export interface FacultyPageConfig {
   stats: FacultyStat[];
 }
 
-export const FACULTY_MENU_ID = 37;
+// Our own Django DB's id for the "Fakultetlar" menu container -- not the
+// old Yii2 site's id (37). See lib/menuSection.ts's NAV_ROOT_THEMES comment.
+export const FACULTY_MENU_ID = 1909;
 
 export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
   "davolash-ishi": {

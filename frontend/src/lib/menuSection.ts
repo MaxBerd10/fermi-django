@@ -1,20 +1,38 @@
 import type { MenuNode } from "@/types/menu";
 import { normalizeMenuHref } from "@/lib/siteConstants";
 
-/** Top-level navbar roots shown in main navigation */
+/** Top-level navbar roots shown in main navigation.
+ *
+ * Keyed by MenuItem.id -- these are OUR Django DB's own auto-increment ids
+ * (the 9 top-level nodes, in menu order), not the old Yii2 site's ids. They
+ * don't survive import, so a table built against the old site's numbers
+ * (71/17/28/...) silently matches nothing here: every generic /blog/ page's
+ * breadcrumb and theme would quietly fall back to "default" no matter which
+ * section it's actually under. See findRootTheme(), which is what makes
+ * this table apply even to a deeply-nested page that isn't listed in
+ * MENU_SECTION_THEMES below. */
 export const NAV_ROOT_THEMES: Record<number, { theme: string; breadcrumbKey: string }> = {
-  71: { theme: "institut", breadcrumbKey: "nav.section.institut" },
-  17: { theme: "tuzilma", breadcrumbKey: "nav.section.tuzilma" },
-  28: { theme: "faoliyat", breadcrumbKey: "nav.section.faoliyat" },
-  47: { theme: "abiturient", breadcrumbKey: "nav.section.abiturient" },
-  30: { theme: "talabalar", breadcrumbKey: "nav.section.talabalar" },
-  6: { theme: "xorijiy", breadcrumbKey: "nav.section.xorijiy" },
-  113: { theme: "interaktiv", breadcrumbKey: "nav.section.interaktiv" },
-  362: { theme: "kongress", breadcrumbKey: "nav.section.kongress" },
-  442: { theme: "green", breadcrumbKey: "nav.section.green" },
+  1826: { theme: "institut", breadcrumbKey: "nav.section.institut" },
+  1904: { theme: "tuzilma", breadcrumbKey: "nav.section.tuzilma" },
+  1992: { theme: "faoliyat", breadcrumbKey: "nav.section.faoliyat" },
+  2047: { theme: "abiturient", breadcrumbKey: "nav.section.abiturient" },
+  2124: { theme: "talabalar", breadcrumbKey: "nav.section.talabalar" },
+  2157: { theme: "xorijiy", breadcrumbKey: "nav.section.xorijiy" },
+  2163: { theme: "interaktiv", breadcrumbKey: "nav.section.interaktiv" },
+  2170: { theme: "kongress", breadcrumbKey: "nav.section.kongress" },
+  2172: { theme: "green", breadcrumbKey: "nav.section.green" },
 };
 
-/** Sub-sections with dedicated sidebar (under Tuzilma etc.) */
+/** Sub-sections with dedicated sidebar (under Tuzilma etc.).
+ *
+ * Same stale-id caveat as NAV_ROOT_THEMES above -- every key below except
+ * 2172 (added when fixing the Yashil Universitet page) is still an old
+ * Yii2 id with no match in our DB, so a page under one of these
+ * unmigrated sub-sections still gets the generic "nav.section.default"
+ * breadcrumb text (its sidebar and theme color are already correct via
+ * collectLinks()/findRootTheme(), independent of this table). Re-deriving
+ * the rest is a bigger, separate pass -- each entry needs its real DB id
+ * looked up individually, not a one-off during a single bug's fix. */
 export const MENU_SECTION_THEMES: Record<number, { theme: string; breadcrumbKey: string; introKey?: string }> = {
   33: { theme: "institut", breadcrumbKey: "nav.section.institutAbout", introKey: "section.intro.institutAbout" },
   35: { theme: "rahbariyat", breadcrumbKey: "leader.breadcrumb" },
@@ -54,9 +72,9 @@ export const MENU_SECTION_THEMES: Record<number, { theme: string; breadcrumbKey:
   581: { theme: "faoliyat", breadcrumbKey: "nav.section.loyihalar", introKey: "section.intro.loyihalar" },
   591: { theme: "faoliyat", breadcrumbKey: "nav.section.doktoranturaFaoliyat", introKey: "section.intro.doktoranturaFaoliyat" },
   495: { theme: "abiturient", breadcrumbKey: "nav.section.texnikumBitiruv", introKey: "section.intro.texnikumBitiruv" },
-  362: { theme: "kongress", breadcrumbKey: "nav.section.kongress", introKey: "section.intro.kongress" },
-  442: { theme: "green", breadcrumbKey: "nav.section.green", introKey: "section.intro.green" },
-  6: { theme: "xorijiy", breadcrumbKey: "nav.section.xorijiy", introKey: "section.intro.xorijiy" },
+  2170: { theme: "kongress", breadcrumbKey: "nav.section.kongress", introKey: "section.intro.kongress" },
+  2172: { theme: "green", breadcrumbKey: "nav.section.green", introKey: "section.intro.green" },
+  2157: { theme: "xorijiy", breadcrumbKey: "nav.section.xorijiy", introKey: "section.intro.xorijiy" },
 };
 
 export interface MenuSectionLink {
@@ -117,15 +135,11 @@ function resolveNodeHref(node: MenuNode, sectionMenuId: number): string | null {
   return normalizeMenuHref(`/blog/${sectionMenuId}/${node.urlValue}`);
 }
 
-function isNavigable(node: MenuNode, sectionMenuId: number): boolean {
-  return Boolean(resolveNodeHref(node, sectionMenuId) && node.urlType);
-}
-
 function collectLinks(nodes: MenuNode[], sectionMenuId: number, depth = 0, maxDepth = 3): MenuSectionLink[] {
   const out: MenuSectionLink[] = [];
   for (const n of nodes) {
     const href = resolveNodeHref(n, sectionMenuId);
-    if (href && n.urlType) {
+    if (href) {
       out.push({
         id: n.id,
         title: n.title.trim(),
@@ -173,7 +187,7 @@ export function resolveMenuSection(
 
   if (links.length === 0 && (sectionNode.children?.length ?? 0) === 0) {
     const selfHref = resolveNodeHref(sectionNode, menuId);
-    if (selfHref && sectionNode.urlType) {
+    if (selfHref) {
       links = [{ id: sectionNode.id, title: sectionNode.title.trim(), href: selfHref, depth: 0 }];
     }
   }

@@ -133,7 +133,7 @@ export default function SearchPage() {
                       {results.posts.map((p, i) => (
                         <Reveal key={p.id} delay={i * 50}>
                           <Link
-                            to={`/detail/${p.slug}?menuId=71`}
+                            to={`/detail/${p.slug}`}
                             className="group block p-3.5 page-card hover:border-primary-300 hover:shadow-md transition-all duration-300"
                           >
                             <h3 className="font-heading font-semibold text-foreground-900 group-hover:text-primary-600 transition-colors">

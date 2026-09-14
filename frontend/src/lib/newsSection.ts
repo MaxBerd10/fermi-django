@@ -1,8 +1,11 @@
 import type { MenuNode } from "@/types/menu";
 import { normalizeMenuHref } from "@/lib/siteConstants";
 
-export const NEWS_SECTION_MENU_ID = 72;
-export const NEWS_DEFAULT_MENU_ID = 72;
+// Our own Django DB's id for the "Institut yangiliklari" menu container --
+// not the old Yii2 site's id (72). See lib/menuSection.ts's NAV_ROOT_THEMES
+// comment.
+export const NEWS_SECTION_MENU_ID = 1844;
+export const NEWS_DEFAULT_MENU_ID = 1844;
 
 export function normalizeNewsHref(href: string): string {
   return normalizeMenuHref(href);
@@ -10,7 +13,7 @@ export function normalizeNewsHref(href: string): string {
 
 export function isValidNewsNavHref(href: string): boolean {
   if (!href || href === "#") return false;
-  if (href === "/blog/72/" || href.endsWith("/blog/72")) return false;
+  if (href === `/blog/${NEWS_SECTION_MENU_ID}/` || href.endsWith(`/blog/${NEWS_SECTION_MENU_ID}`)) return false;
   return true;
 }
 
