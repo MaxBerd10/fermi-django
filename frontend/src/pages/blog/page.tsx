@@ -72,7 +72,7 @@ export default function BlogPage() {
         if (!cancelled) setPage(data);
       })
       .catch((e) => {
-        if (!cancelled) setError(e instanceof ApiError ? e.message : t("common.genericError"));
+        if (!cancelled) setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError"));
       })
       .finally(() => {
         if (!cancelled) setLoading(false);

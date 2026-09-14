@@ -51,7 +51,7 @@ export default function DepartmentPage() {
         const meta = listResult.find((item) => item.slug === slug);
         if (!meta) {
           if (!cancelled) {
-            setError(e instanceof ApiError ? e.message : t("common.genericError"));
+            setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError"));
           }
           return;
         }

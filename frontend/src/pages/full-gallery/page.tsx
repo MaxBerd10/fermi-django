@@ -25,7 +25,7 @@ export default function FullGalleryPage() {
     setError(null);
     getFullGallery(Number(id))
       .then(setImg)
-      .catch((e) => setError(e instanceof ApiError ? e.message : t("common.genericError")))
+      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError")))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);

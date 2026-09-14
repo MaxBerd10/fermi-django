@@ -46,7 +46,7 @@ export default function DetailPage() {
             .catch(() => {});
         }
       })
-      .catch((e) => setError(e instanceof ApiError ? e.message : t("detail.loadError")))
+      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("detail.loadError")))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, menuId, i18n.language]);

@@ -5,6 +5,7 @@ import { getLeaders } from "@/api/leaders";
 import type { Leader } from "@/types/content";
 import { Reveal } from "@/components/Animation";
 import { optimizedImageUrl } from "@/lib/imageProxy";
+import { LEADER_SECTION_MENU_ID } from "@/lib/leaderSection";
 
 interface LeadershipCard extends Leader {
   href: string;
@@ -21,14 +22,14 @@ export default function Leadership() {
   const [team, setTeam] = useState<LeadershipCard[]>([]);
 
   useEffect(() => {
-    Promise.all([getLeaders("rektor", 35), getLeaders("prorektorlar", 35)])
+    Promise.all([getLeaders("rektor"), getLeaders("prorektorlar")])
       .then(([rectorRes, prorectorRes]) => {
         const r = rectorRes.leaders[0];
         const pros = prorectorRes.leaders
           .filter((l) => l.name !== "VAKANT" && !isExcludedProrector(l))
           .slice(0, 4);
-        setRector(r ? { ...r, href: "/leader/35/rektor" } : null);
-        setTeam(pros.map((p) => ({ ...p, href: "/leader/35/prorektorlar" })));
+        setRector(r ? { ...r, href: `/leader/${LEADER_SECTION_MENU_ID}/rektor` } : null);
+        setTeam(pros.map((p) => ({ ...p, href: `/leader/${LEADER_SECTION_MENU_ID}/prorektorlar` })));
       })
       .catch(() => {
         setRector(null);

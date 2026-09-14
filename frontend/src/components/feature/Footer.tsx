@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
+import { LEADER_SECTION_MENU_ID } from "@/lib/leaderSection";
 import { useApi } from "../../hooks/useApi";
 import { getSettings } from "../../api/settings";
 import BrandMark from "../shared/BrandMark";
@@ -35,7 +36,7 @@ const FOOTER_SERVICES = [
 
 const INSTITUT_LINKS = [
   { key: "footer.institutHaqida", to: "/institut" },
-  { key: "footer.rahbariyat", to: "/leader/35/rektor" },
+  { key: "footer.rahbariyat", to: `/leader/${LEADER_SECTION_MENU_ID}/rektor` },
   { key: "footer.tuzilma", to: "/institut" },
   { key: "news.title", to: "/yangiliklar" },
 ] as const;

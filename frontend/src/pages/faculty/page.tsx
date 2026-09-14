@@ -26,7 +26,7 @@ export default function FacultyPage() {
     setError(null);
     getFaculty(slug, menuId ? Number(menuId) : undefined)
       .then(setFaculty)
-      .catch((e) => setError(e instanceof ApiError ? e.message : t("common.genericError")))
+      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError")))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, menuId]);
