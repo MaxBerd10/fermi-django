@@ -2,6 +2,15 @@
 import DOMPurify from "dompurify";
 import { enhanceCmsHtml } from "@/lib/enhanceCmsHtml";
 import { optimizedImageUrl } from "@/lib/imageProxy";
+// Moved here from main.tsx (see that file's remaining imports) -- these style
+// enhanceCmsHtml's output, which only this component ever calls, so loading
+// them eagerly on every route (including ones that never render CMS HTML,
+// like the homepage) was pure render-blocking dead weight there.
+import "@/styles/cms-content.css";
+import "@/styles/buildings-content.css";
+import "@/styles/conference-content.css";
+import "@/styles/newspaper-content.css";
+import "@/styles/regulatory-content.css";
 
 // This renders CKEditor output from CMS admins, but ALSO `article.content` for
 // Telegram-scraped posts (see DetailPage) — HTML pulled from a public channel's

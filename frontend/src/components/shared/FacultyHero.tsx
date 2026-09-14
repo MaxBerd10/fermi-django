@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import "@/styles/faculty-content.css";
 import type { FacultyPageConfig } from "@/lib/facultySection";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 

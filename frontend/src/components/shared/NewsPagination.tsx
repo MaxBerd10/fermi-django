@@ -1,4 +1,6 @@
 import { useSearchParams } from "react-router-dom";
+// Moved here from main.tsx -- see NewsCard.tsx's copy of this comment.
+import "@/styles/news-content.css";
 
 /** Full run of page numbers when it fits, otherwise 1 … [current ± sibling] … last. */
 function getPageWindow(current: number, total: number, siblingCount = 1): (number | "…")[] {

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "@/styles/leader-content.css";
 import { useTranslation } from "react-i18next";
 import type { Leader } from "@/types/content";
 import { normalizeCmsOrthography } from "@/lib/normalizeCmsText";

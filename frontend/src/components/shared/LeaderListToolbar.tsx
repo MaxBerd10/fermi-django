@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import "@/styles/leader-content.css";
 
 export default function LeaderListToolbar({
   query,

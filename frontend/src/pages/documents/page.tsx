@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "@/styles/menu-section-content.css";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getDocuments } from "@/api/documents";

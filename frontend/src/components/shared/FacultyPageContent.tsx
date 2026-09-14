@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "@/styles/faculty-content.css";
 import { useTranslation } from "react-i18next";
 import type { FacultyDetail } from "@/types/content";
 import FacultyHero from "@/components/shared/FacultyHero";

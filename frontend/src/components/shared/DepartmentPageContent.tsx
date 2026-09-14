@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "@/styles/department-content.css";
 import { useTranslation } from "react-i18next";
 import type { DepartmentDetail, Leader } from "@/types/content";
 import DepartmentHero from "@/components/shared/DepartmentHero";

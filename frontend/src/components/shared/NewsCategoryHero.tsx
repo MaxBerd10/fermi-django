@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { NewsCategoryHeroConfig } from "@/lib/newsCategorySection";
+// Moved here from main.tsx -- see NewsCard.tsx's copy of this comment.
+import "@/styles/news-content.css";
 
 export default function NewsCategoryHero({
   title,

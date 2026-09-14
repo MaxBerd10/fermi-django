@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import "@/styles/leader-content.css";
 import { enhanceLeaderHtml } from "@/lib/enhanceLeaderHtml";
 import RichContent from "@/components/shared/RichContent";
 

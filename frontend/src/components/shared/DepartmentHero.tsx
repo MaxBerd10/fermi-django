@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import "@/styles/department-content.css";
 import type { DepartmentTheme } from "@/lib/departmentSection";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 

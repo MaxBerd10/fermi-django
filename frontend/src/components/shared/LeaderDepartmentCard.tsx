@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import "@/styles/leader-content.css";
+import "@/styles/department-content.css";
 import type { Leader } from "@/types/content";
 import LeaderRichContent from "@/components/shared/LeaderRichContent";
 import { optimizedImageUrl } from "@/lib/imageProxy";

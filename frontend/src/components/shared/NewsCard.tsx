@@ -4,6 +4,10 @@ import type { NewsArticle } from "@/types/content";
 import { stripHtml } from "@/lib/html";
 import { formatShortDate } from "@/lib/date";
 import { buildNewsDetailHref, newsCategoryTagStyle, NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
+// Moved here from main.tsx -- not needed on routes that never render a news
+// card (e.g. the homepage, which has its own inline markup, not this
+// component). See RichContent.tsx's copy of this comment for the pattern.
+import "@/styles/news-content.css";
 import { getNewsArticleImage } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { useMemo, useState, useEffect } from "react";
