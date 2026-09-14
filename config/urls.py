@@ -1,7 +1,7 @@
 from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from django.views.static import serve
 
 urlpatterns = [
     # Not "admin/" -- the deployed frontend's own SPA also claims that path
@@ -26,7 +26,12 @@ urlpatterns = [
     path("api/v1/", include("apps.admin_api.urls")),
     path("api/v1/", include("apps.site_settings.urls")),
     path("api/v1/", include("apps.forms.urls")),
+    # Not DEBUG-gated (Django's static() helper is a no-op when DEBUG=False,
+    # which is exactly what silently 404'd every uploaded image/document/video
+    # in production -- see this session's readiness audit). This is a same-box
+    # deploy with production-server.mjs proxying "/media/*" straight through to
+    # here (see its own streamProxy calls), with no separate nginx-level static
+    # file serving in front of it. Fine at this site's traffic scale; move to
+    # nginx `alias` or S3/CDN if that ever becomes a bottleneck.
+    path("media/<path:path>", serve, {"document_root": settings.MEDIA_ROOT}),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

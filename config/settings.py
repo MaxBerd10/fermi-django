@@ -20,6 +20,24 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = env_bool("DEBUG", False)
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get("ALLOWED_HOSTS", "").split(",") if h.strip()]
 
+# The real request chain is browser -> nginx (TLS) -> Node (production-server.mjs,
+# plain HTTP) -> Django, so Django itself never sees a direct HTTPS connection.
+# Without this, request.is_secure()/build_absolute_uri() would think every
+# request is plain HTTP even in production, and SECURE_SSL_REDIRECT below would
+# redirect-loop. nginx sets X-Forwarded-Proto, and the Node proxy forwards it
+# through unchanged (see streamProxy's safeUpstreamHeaders).
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    # Conservative starting value -- raise once HTTPS is confirmed working in
+    # production for a while. Do not add SECURE_HSTS_PRELOAD without reading what
+    # that commitment means (it's very hard to undo once submitted).
+    SECURE_HSTS_SECONDS = 3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -160,11 +178,27 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [o.strip() for o in os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",") if o.strip()]
 
-# Dev-only: prints emails to the console instead of sending them. Swapping to
-# real SMTP later is a settings change, not a code change — but unlike the old
-# site, this is a deliberate, visible choice, not a silently-abandoned one.
-MAILERS = {
-    "default": {"BACKEND": "django.core.mail.backends.console.EmailBackend"},
-}
-DEFAULT_FROM_EMAIL = "no-reply@fermi.uz"
+# Django 6.1's native multi-mailer config (django.core.mail.mailers) --
+# EMAIL_BACKEND/EMAIL_HOST/etc. are the deprecated single-mailer settings this
+# replaces (RemovedInDjango70Warning). Defaults to printing to the console
+# (safe for local dev, no SMTP server needed); set EMAIL_HOST in the
+# environment to switch the default mailer to real SMTP.
+if os.environ.get("EMAIL_HOST"):
+    MAILERS = {
+        "default": {
+            "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
+            "OPTIONS": {
+                "host": os.environ["EMAIL_HOST"],
+                "port": int(os.environ.get("EMAIL_PORT", "587")),
+                "username": os.environ.get("EMAIL_HOST_USER", ""),
+                "password": os.environ.get("EMAIL_HOST_PASSWORD", ""),
+                "use_tls": env_bool("EMAIL_USE_TLS", True),
+            },
+        },
+    }
+else:
+    MAILERS = {
+        "default": {"BACKEND": "django.core.mail.backends.console.EmailBackend"},
+    }
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "no-reply@fermi.uz")
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")

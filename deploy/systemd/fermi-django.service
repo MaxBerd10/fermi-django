@@ -1,0 +1,24 @@
+[Unit]
+Description=FerMI Django backend (gunicorn)
+After=network.target postgresql.service redis.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/fermi-django
+EnvironmentFile=/etc/fermi-django.env
+ExecStart=/var/www/fermi-django/.venv/bin/gunicorn config.wsgi:application \
+    --bind 127.0.0.1:8000 \
+    --workers 3 \
+    --access-logfile - \
+    --error-logfile -
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/var/www/fermi-django/media
+
+[Install]
+WantedBy=multi-user.target

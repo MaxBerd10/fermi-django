@@ -245,9 +245,16 @@ async function streamProxy(request, response, baseUrl, targetPath) {
   const path = targetPath ?? requestUrl.pathname;
   const target = new URL(`${path}${requestUrl.search}`, baseUrl);
   const hasBody = !["GET", "HEAD"].includes(request.method || "GET");
+  const headers = safeUpstreamHeaders(request.headers);
+  // safeUpstreamHeaders strips Host so `fetch` doesn't send a conflicting one --
+  // but Django's request.build_absolute_uri() (every image/document/video URL
+  // it returns) reads the Host it receives, so without this it would build
+  // every media URL against this internal fermiApiBaseUrl address (e.g.
+  // 127.0.0.1:8000) instead of the public domain the browser can reach.
+  if (request.headers.host) headers.host = request.headers.host;
   const upstream = await fetch(target, {
     method: request.method,
-    headers: safeUpstreamHeaders(request.headers),
+    headers,
     body: hasBody ? Readable.toWeb(request) : undefined,
     duplex: hasBody ? "half" : undefined,
   });
@@ -409,12 +416,14 @@ const server = createServer(async (request, response) => {
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
       return await streamProxy(request, response, fermiApiBaseUrl);
     }
-    if (pathname.startsWith("/django-admin/") || pathname.startsWith("/static/")) {
+    if (pathname.startsWith("/django-admin/") || pathname.startsWith("/static/") || pathname.startsWith("/media/")) {
       // Django's real admin (see config/urls.py's own comment on why it's
-      // not mounted at "/admin/") and the static assets its pages need
-      // (admin CSS/JS, served by whitenoise -- see STORAGES in settings.py)
-      // -- without this, nginx's catch-all route would hand both straight
-      // to this SPA server and neither would ever reach Django.
+      // not mounted at "/admin/"), the static assets its pages need (admin
+      // CSS/JS, served by whitenoise -- see STORAGES in settings.py), and
+      // uploaded media (images/documents/video, served by Django itself --
+      // see config/urls.py's own comment on why that isn't DEBUG-gated) --
+      // without this, nginx's catch-all route would hand all three straight
+      // to this SPA server and none of them would ever reach Django.
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
       return await streamProxy(request, response, fermiApiBaseUrl);
     }
