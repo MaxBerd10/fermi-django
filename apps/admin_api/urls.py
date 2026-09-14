@@ -10,6 +10,7 @@ from .media_content_views import (
 )
 from .media_views import MediaListView, MediaUploadView
 from .news_views import AdminPostcategoryViewSet, AdminPostViewSet
+from .pages_views import AdminPageViewSet
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
 
 router = DefaultRouter()
@@ -22,6 +23,7 @@ router.register("admin/videos", AdminVideoClipViewSet, basename="admin-videos")
 router.register("admin/courses", AdminCourseViewSet, basename="admin-courses")
 router.register("admin/schedules", AdminScheduleFileViewSet, basename="admin-schedules")
 router.register("admin/connect-leaders", AdminConnectLeaderViewSet, basename="admin-connect-leaders")
+router.register("admin/pages", AdminPageViewSet, basename="admin-pages")
 
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),

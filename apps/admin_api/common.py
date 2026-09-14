@@ -52,6 +52,21 @@ def resolve_or_create_document(path: str | None) -> Document | None:
     return document
 
 
+class OwnedPageCleanupMixin:
+    """For a ViewSet whose model owns a Page via OneToOneField(on_delete=
+    PROTECT) (Faculty/Department/NewsPost -- see their own models.py):
+    deleting the parent through this API must also delete its Page, or
+    PROTECT leaves it behind forever with nothing pointing at it -- a
+    permanent leak that (worse) starts showing up in the standalone
+    "Sahifalar" list (AdminPageViewSet's queryset can't tell an orphan
+    like that from a real standalone page)."""
+
+    def perform_destroy(self, instance):
+        page = instance.page
+        instance.delete()
+        page.delete()
+
+
 class PageContentSerializerMixin:
     """For any admin resource whose "lang-html" body field (see
     entityConfigs.ts) is really `obj.page.blocks` under the hood (Faculty,

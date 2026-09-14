@@ -18,7 +18,7 @@ from apps.content.admin_content import blocks_to_html, write_blocks_from_html
 from apps.content.models import Page
 from apps.news.models import NewsCategory, NewsPost
 
-from .common import AdminPagination, IsAdminStaff, resolve_or_create_image
+from .common import AdminPagination, IsAdminStaff, OwnedPageCleanupMixin, resolve_or_create_image
 
 
 class AdminPostcategorySerializer(serializers.ModelSerializer):
@@ -159,7 +159,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminPostViewSet(viewsets.ModelViewSet):
+class AdminPostViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
     queryset = NewsPost.objects.select_related("cover", "page").order_by("-published_at")
     serializer_class = AdminPostSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

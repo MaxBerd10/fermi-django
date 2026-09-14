@@ -116,6 +116,16 @@ class Page(models.Model):
     ForeignKey/OneToOne at one of these instead of storing raw HTML itself."""
 
     slug = models.SlugField(max_length=255, unique=True)
+    # Blank for every legacy-imported page (department/faculty/the 235
+    # static pages) -- those get their displayed title from the linking
+    # MenuItem's own label instead (see frontend's BlogPage ->
+    # findTitleBySlug), which is real data for them and has no reason to
+    # be duplicated here. Only meaningful for a page the admin panel
+    # creates on its own (see admin_api/pages_views.py), which has no
+    # MenuItem to borrow a title from.
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

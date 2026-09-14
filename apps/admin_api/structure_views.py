@@ -10,7 +10,13 @@ from apps.content.models import Page
 from apps.departments.models import Department
 from apps.faculties.models import Faculty
 
-from .common import AdminPagination, IsAdminStaff, PageContentSerializerMixin, resolve_or_create_image
+from .common import (
+    AdminPagination,
+    IsAdminStaff,
+    OwnedPageCleanupMixin,
+    PageContentSerializerMixin,
+    resolve_or_create_image,
+)
 
 
 class AdminFacultySerializer(PageContentSerializerMixin, serializers.ModelSerializer):
@@ -57,7 +63,7 @@ class AdminFacultySerializer(PageContentSerializerMixin, serializers.ModelSerial
         return instance
 
 
-class AdminFacultyViewSet(viewsets.ModelViewSet):
+class AdminFacultyViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
     queryset = Faculty.objects.select_related("logo", "page").order_by("order", "id")
     serializer_class = AdminFacultySerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -108,7 +114,7 @@ class AdminDepartmentSerializer(PageContentSerializerMixin, serializers.ModelSer
         return instance
 
 
-class AdminDepartmentViewSet(viewsets.ModelViewSet):
+class AdminDepartmentViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
     queryset = Department.objects.select_related("logo", "page").order_by("name_uz")
     serializer_class = AdminDepartmentSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
