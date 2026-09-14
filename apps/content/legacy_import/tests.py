@@ -61,6 +61,27 @@ def test_several_bare_images_in_a_row_all_survive():
     assert len(result.staff) == 0
 
 
+def test_real_heading_tags_and_blockquotes_are_recognized():
+    # Real bug found wiring the admin panel's rich text editor (which
+    # produces real <h2>/<h3> tags on its own "Heading" button, unlike the
+    # old site's scraped content -- see this module's own docstring): a
+    # bare <h2> wasn't a <div>/<p>/<li>, so _is_leaf_text_container never
+    # matched it, walk() recursed into it looking for further block tags,
+    # found only a NavigableString (not a Tag), and silently dropped the
+    # text entirely -- the heading just vanished from the extracted page.
+    html = (
+        "<h2>Bo'lim sarlavhasi</h2>"
+        "<p>Oddiy paragraf.</p>"
+        "<blockquote>Iqtibos matni.</blockquote>"
+    )
+    result = extract(html)
+    assert [(b.block_type, b.payload) for b in result.blocks] == [
+        ("heading", {"text": "Bo'lim sarlavhasi"}),
+        ("paragraph", {"text": "Oddiy paragraf."}),
+        ("paragraph", {"text": "Iqtibos matni."}),
+    ]
+
+
 def test_photo_name_title_bio_pattern_extracts_a_staff_member():
     html = (
         '<img src="/uploads/x.png" />'

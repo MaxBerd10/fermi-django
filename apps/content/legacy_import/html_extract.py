@@ -153,10 +153,13 @@ def _looks_like_person_name(text: str) -> bool:
     return all(any(ch.isalpha() for ch in word) for word in words)
 
 
+_HEADING_TAGS = ("h1", "h2", "h3", "h4", "h5", "h6")
+
+
 def _walk_flat_items(soup: Tag):
-    """Yields ('image', src) and ('list', [items]) and ('text', tag) in
-    document order, skipping inside anything already yielded so nested
-    wrapper divs don't produce duplicate items."""
+    """Yields ('image', src), ('list', [items]), ('heading_tag', text) and
+    ('text', tag) in document order, skipping inside anything already
+    yielded so nested wrapper divs don't produce duplicate items."""
     seen_ids = set()
 
     def walk(node):
@@ -176,6 +179,27 @@ def _walk_flat_items(soup: Tag):
                 items = [i for i in items if i]
                 if items:
                     yield ("list", items)
+                for descendant in child.find_all(True):
+                    seen_ids.add(id(descendant))
+                seen_ids.add(id(child))
+                continue
+            if child.name in _HEADING_TAGS:
+                # A real semantic heading -- only ever produced by the admin
+                # panel's own rich text editor (h2/h3 on its toolbar); the
+                # old site's scraped content has none of these at all (see
+                # this module's own docstring), so this path never fires on
+                # legacy content and can't regress it.
+                text = _normalize(child.get_text(" "))
+                if text:
+                    yield ("heading_tag", text)
+                for descendant in child.find_all(True):
+                    seen_ids.add(id(descendant))
+                seen_ids.add(id(child))
+                continue
+            if child.name == "blockquote":
+                text = _normalize(child.get_text(" "))
+                if text:
+                    yield ("text_raw", text)
                 for descendant in child.find_all(True):
                     seen_ids.add(id(descendant))
                 seen_ids.add(id(child))
@@ -224,6 +248,26 @@ def extract(html: str) -> ExtractionResult:
 
         if kind == "list":
             result.blocks.append(ExtractedBlock("list", {"items": value}))
+            i += 1
+            continue
+
+        if kind == "heading_tag":
+            # A real <h1>-<h6>, always a genuine section heading -- never a
+            # staff bio's name line (that shape only ever comes from the
+            # bold-paragraph heuristic below, for legacy content), so any
+            # pending_image is a standalone picture, not this heading's photo.
+            if pending_image:
+                result.blocks.append(ExtractedBlock("image", {"image_src": pending_image}))
+                pending_image = None
+            result.blocks.append(ExtractedBlock("heading", {"text": value}))
+            i += 1
+            continue
+
+        if kind == "text_raw":
+            if pending_image:
+                result.blocks.append(ExtractedBlock("image", {"image_src": pending_image}))
+                pending_image = None
+            result.blocks.append(ExtractedBlock("paragraph", {"text": value}))
             i += 1
             continue
 
