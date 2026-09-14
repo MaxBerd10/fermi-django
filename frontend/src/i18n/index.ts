@@ -34,6 +34,11 @@ loadMessages(initialLang)
       lng: initialLang,
       fallbackLng: 'uz',
       debug: false,
+      // i18next prints an unconditional console.info() promoting its own
+      // Locize product on every init, regardless of `debug` -- unrelated to
+      // this project, and Lighthouse's Best Practices "errors logged to
+      // console" audit flags it on every single page load in production.
+      showSupportNotice: false,
       resources: {
         [initialLang]: { translation },
       },
