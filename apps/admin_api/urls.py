@@ -1,6 +1,7 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
+from .banner_views import AdminBannerViewSet
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
 from .forms_views import AdminAcceptanceViewSet, AdminContactViewSet, AdminVirtualSubmissionViewSet
 from .leaders_views import AdminLeaderCategoryViewSet, AdminLeaderViewSet
@@ -12,6 +13,7 @@ from .media_content_views import (
     AdminVideoClipViewSet,
 )
 from .media_views import MediaListView, MediaUploadView
+from .menu_views import AdminMenuMoveView, AdminMenuNodeDetailView, AdminMenuTreeView
 from .news_views import AdminPostcategoryViewSet, AdminPostViewSet
 from .pages_views import AdminPageViewSet
 from .settings_views import (
@@ -22,6 +24,7 @@ from .settings_views import (
     AdminUsefulSiteViewSet,
 )
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
+from .users_views import AdminUserViewSet
 
 router = DefaultRouter()
 router.register("admin/news", AdminPostViewSet, basename="admin-news")
@@ -46,8 +49,13 @@ router.register("admin/useful-sites", AdminUsefulSiteViewSet, basename="admin-us
 router.register("admin/contacts", AdminContactViewSet, basename="admin-contacts")
 router.register("admin/acceptances", AdminAcceptanceViewSet, basename="admin-acceptances")
 router.register("admin/virtual-submissions", AdminVirtualSubmissionViewSet, basename="admin-virtual-submissions")
+router.register("admin/corusel", AdminBannerViewSet, basename="admin-corusel")
+router.register("admin/users", AdminUserViewSet, basename="admin-users")
 
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),
     path("admin/media/upload", MediaUploadView.as_view()),
+    path("admin/menu-tree", AdminMenuTreeView.as_view()),
+    path("admin/menu-tree/<int:pk>", AdminMenuNodeDetailView.as_view()),
+    path("admin/menu-tree/<int:pk>/move", AdminMenuMoveView.as_view()),
 ]

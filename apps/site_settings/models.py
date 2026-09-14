@@ -82,3 +82,27 @@ class UsefulSite(models.Model):
 
     def __str__(self) -> str:
         return self.title_uz
+
+
+class HomeBanner(models.Model):
+    """Admin's "Bosh sahifa banneri" (corusel) resource. No page component
+    currently reads these back (Hero.tsx has no real carousel data source
+    -- see its own comment) so this has no public consumer yet, same as
+    UsefulSite did before ContactMap started using it; kept as a plain
+    list model rather than skipped since it's cheap and self-contained."""
+
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    image = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    content_uz = models.TextField(blank=True)
+    content_ru = models.TextField(blank=True)
+    content_en = models.TextField(blank=True)
+    status = models.PositiveSmallIntegerField(default=1)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["order", "id"]
+
+    def __str__(self) -> str:
+        return self.title_uz or f"Banner #{self.pk}"
