@@ -28,6 +28,17 @@ ALLOWED_HOSTS = [h.strip() for h in os.environ.get("ALLOWED_HOSTS", "").split(",
 # through unchanged (see streamProxy's safeUpstreamHeaders).
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+# Same reasoning, for the hostname: Django is never directly internet-facing
+# (only reachable from the Node proxy on the same box), so trusting
+# X-Forwarded-Host here is safe -- it's set by our own proxy from nginx's
+# already-validated Host, not by an untrusted client. Without this,
+# build_absolute_uri() would use this process's own bind address
+# (127.0.0.1:8000) for every image/document/video URL instead of the real
+# public domain (confirmed: fetch() silently drops a manually-set Host
+# header, so X-Forwarded-Host is the only header that actually carries this
+# through -- see production-server.mjs's streamProxy).
+USE_X_FORWARDED_HOST = True
+
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True

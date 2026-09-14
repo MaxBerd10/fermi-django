@@ -246,12 +246,15 @@ async function streamProxy(request, response, baseUrl, targetPath) {
   const target = new URL(`${path}${requestUrl.search}`, baseUrl);
   const hasBody = !["GET", "HEAD"].includes(request.method || "GET");
   const headers = safeUpstreamHeaders(request.headers);
-  // safeUpstreamHeaders strips Host so `fetch` doesn't send a conflicting one --
-  // but Django's request.build_absolute_uri() (every image/document/video URL
-  // it returns) reads the Host it receives, so without this it would build
-  // every media URL against this internal fermiApiBaseUrl address (e.g.
-  // 127.0.0.1:8000) instead of the public domain the browser can reach.
-  if (request.headers.host) headers.host = request.headers.host;
+  // Host can't just be re-added here -- undici/fetch treats it as a forbidden
+  // header and silently drops it (verified: setting headers.host has no
+  // effect, Django still sees this process's own bind address). Forwarding it
+  // as X-Forwarded-Host instead works because Django's USE_X_FORWARDED_HOST
+  // (see settings.py) is built to read exactly that header. Without this,
+  // build_absolute_uri() (every image/document/video URL Django returns)
+  // would build every media URL against this internal fermiApiBaseUrl address
+  // instead of the public domain the browser can actually reach.
+  if (request.headers.host) headers["x-forwarded-host"] = request.headers.host;
   const upstream = await fetch(target, {
     method: request.method,
     headers,
