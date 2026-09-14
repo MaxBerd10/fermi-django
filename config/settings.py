@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "apps.documents",
     "apps.schedule",
     "apps.geo",
+    "apps.video",
 ]
 
 MIDDLEWARE = [

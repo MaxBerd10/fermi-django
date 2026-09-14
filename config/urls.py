@@ -22,6 +22,7 @@ urlpatterns = [
     path("api/v1/", include("apps.schedule.urls")),
     path("api/v1/", include("apps.search.urls")),
     path("api/v1/", include("apps.geo.urls")),
+    path("api/v1/", include("apps.video.urls")),
 ]
 
 if settings.DEBUG:
