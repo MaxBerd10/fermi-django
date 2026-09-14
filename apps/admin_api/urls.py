@@ -1,6 +1,8 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
+from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
+from .leaders_views import AdminLeaderCategoryViewSet, AdminLeaderViewSet
 from .media_content_views import (
     AdminConnectLeaderViewSet,
     AdminCourseViewSet,
@@ -8,10 +10,16 @@ from .media_content_views import (
     AdminScheduleFileViewSet,
     AdminVideoClipViewSet,
 )
-from .leaders_views import AdminLeaderCategoryViewSet, AdminLeaderViewSet
 from .media_views import MediaListView, MediaUploadView
 from .news_views import AdminPostcategoryViewSet, AdminPostViewSet
 from .pages_views import AdminPageViewSet
+from .settings_views import (
+    AdminCounterViewSet,
+    AdminLogoViewSet,
+    AdminNetworkViewSet,
+    AdminSettingViewSet,
+    AdminUsefulSiteViewSet,
+)
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
 
 router = DefaultRouter()
@@ -27,6 +35,13 @@ router.register("admin/connect-leaders", AdminConnectLeaderViewSet, basename="ad
 router.register("admin/pages", AdminPageViewSet, basename="admin-pages")
 router.register("admin/leaders", AdminLeaderViewSet, basename="admin-leaders")
 router.register("admin/leadercategories", AdminLeaderCategoryViewSet, basename="admin-leadercategories")
+router.register("admin/documents", AdminDocumentViewSet, basename="admin-documents")
+router.register("admin/documents-items", AdminDocumentItemViewSet, basename="admin-documents-items")
+router.register("admin/setting", AdminSettingViewSet, basename="admin-setting")
+router.register("admin/logo", AdminLogoViewSet, basename="admin-logo")
+router.register("admin/counter", AdminCounterViewSet, basename="admin-counter")
+router.register("admin/networks", AdminNetworkViewSet, basename="admin-networks")
+router.register("admin/useful-sites", AdminUsefulSiteViewSet, basename="admin-useful-sites")
 
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),

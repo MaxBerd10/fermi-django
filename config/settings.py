@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "apps.geo",
     "apps.video",
     "apps.admin_api",
+    "apps.site_settings",
 ]
 
 MIDDLEWARE = [

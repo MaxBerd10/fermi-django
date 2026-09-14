@@ -24,6 +24,7 @@ urlpatterns = [
     path("api/v1/", include("apps.geo.urls")),
     path("api/v1/", include("apps.video.urls")),
     path("api/v1/", include("apps.admin_api.urls")),
+    path("api/v1/", include("apps.site_settings.urls")),
 ]
 
 if settings.DEBUG:

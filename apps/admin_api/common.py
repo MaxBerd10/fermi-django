@@ -52,6 +52,22 @@ def resolve_or_create_document(path: str | None) -> Document | None:
     return document
 
 
+class SingletonAdminViewSet:
+    """For a one-row config resource (setting/logo/counter -- see
+    SingletonFormPage.tsx, which always lists then updates id=1, never
+    creates/deletes). `model` must be a models.Model with a get_solo()
+    classmethod (see site_settings/models.py::_SingletonModel) that
+    get-or-creates that one row -- called here so the very first GET
+    (before anyone has ever saved anything) still finds a real row to
+    return instead of an empty list the frontend can't PUT to."""
+
+    model = None
+
+    def get_queryset(self):
+        self.model.get_solo()
+        return self.model.objects.all()
+
+
 class OwnedPageCleanupMixin:
     """For a ViewSet whose model owns a Page via OneToOneField(on_delete=
     PROTECT) (Faculty/Department/NewsPost -- see their own models.py):
