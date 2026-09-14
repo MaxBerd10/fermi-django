@@ -5,7 +5,8 @@ view here has to satisfy (list/get/create/update/delete against
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import BasePermission
 
-from apps.media_lib.models import Image
+from apps.content.admin_content import blocks_to_html, write_blocks_from_html
+from apps.media_lib.models import Document, Image
 
 
 class AdminPagination(PageNumberPagination):
@@ -35,3 +36,42 @@ def resolve_or_create_image(path: str | None) -> Image | None:
     image = Image(file=path, alt_text="")
     image.save()
     return image
+
+
+def resolve_or_create_document(path: str | None) -> Document | None:
+    """Same idea as resolve_or_create_image, for a "media" field bound to
+    a Document FK (e.g. ScheduleFile.document)."""
+    if not path:
+        return None
+    path = path.lstrip("/")
+    existing = Document.objects.filter(file=path).first()
+    if existing:
+        return existing
+    document = Document(file=path, title="")
+    document.save()
+    return document
+
+
+class PageContentSerializerMixin:
+    """For any admin resource whose "lang-html" body field (see
+    entityConfigs.ts) is really `obj.page.blocks` under the hood (Faculty,
+    Department, ...): declare content_uz/content_ru/content_en as
+    SerializerMethodField() in the subclass and it'll resolve through
+    these two shared methods instead of repeating them per resource."""
+
+    def get_content_uz(self, obj):
+        return blocks_to_html(obj.page, "uz", request=self.context.get("request"))
+
+    def get_content_ru(self, obj):
+        return blocks_to_html(obj.page, "ru", request=self.context.get("request"))
+
+    def get_content_en(self, obj):
+        return blocks_to_html(obj.page, "en", request=self.context.get("request"))
+
+    def save_page_content(self, page):
+        request = self.context["request"]
+        write_blocks_from_html(page, {
+            "uz": request.data.get("content_uz") or "",
+            "ru": request.data.get("content_ru") or "",
+            "en": request.data.get("content_en") or "",
+        })
