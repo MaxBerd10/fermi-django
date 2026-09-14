@@ -42,6 +42,25 @@ def test_bold_full_sentence_is_a_paragraph_not_a_heading():
     assert result.blocks[0].block_type == "paragraph"
 
 
+def test_several_bare_images_in_a_row_all_survive():
+    # Real bug found migrating building-description pages (e.g. "Rektorat"):
+    # several <img> tags in a row with nothing else between them (a photo
+    # gallery, not staff photos) used to leave only the LAST image, because
+    # each new image silently overwrote pending_image before the loop ever
+    # got a chance to flush the previous one.
+    html = (
+        '<p><img src="/uploads/2.jpg" /><img src="/uploads/3.jpg" /></p>'
+        '<p><img src="/uploads/4.jpg" /></p>'
+        '<p><img src="/uploads/6.jpg" /></p>'
+    )
+    result = extract(html)
+    image_blocks = [b for b in result.blocks if b.block_type == "image"]
+    assert [b.payload["image_src"] for b in image_blocks] == [
+        "/uploads/2.jpg", "/uploads/3.jpg", "/uploads/4.jpg", "/uploads/6.jpg",
+    ]
+    assert len(result.staff) == 0
+
+
 def test_photo_name_title_bio_pattern_extracts_a_staff_member():
     html = (
         '<img src="/uploads/x.png" />'

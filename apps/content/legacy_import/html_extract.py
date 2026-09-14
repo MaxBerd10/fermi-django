@@ -209,6 +209,15 @@ def extract(html: str) -> ExtractionResult:
         kind, value = items[i]
 
         if kind == "image":
+            # A second image arriving with nothing (no staff bio) between it
+            # and the first means the first was never anyone's photo -- a
+            # standalone picture (or one of several, e.g. a building's
+            # inline photo gallery: several bare <img> tags in a row with no
+            # other content). Flush it as its own block now, rather than
+            # silently overwriting it below and losing every image but the
+            # last one in the run.
+            if pending_image:
+                result.blocks.append(ExtractedBlock("image", {"image_src": pending_image}))
             pending_image = value
             i += 1
             continue
