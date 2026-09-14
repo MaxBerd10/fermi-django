@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.contrib.auth import get_user_model
+from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.tokens import default_token_generator
 from django.core.exceptions import ValidationError as DjangoValidationError
@@ -11,6 +11,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.throttling import ScopedRateThrottle
 from rest_framework.views import APIView
+from rest_framework_simplejwt.serializers import TokenRefreshSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import RegisterSerializer
@@ -18,9 +19,25 @@ from .serializers import RegisterSerializer
 User = get_user_model()
 
 
+def _serialize_user(user) -> dict:
+    return {
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
+        # The frontend's admin guard (AdminAuthContext) only ever checks
+        # role === "admin" -- is_staff is Django's own "can reach an admin
+        # surface" flag, so it's the natural source rather than a new field.
+        "role": "admin" if user.is_staff else "user",
+    }
+
+
 def _issue_tokens(user) -> dict:
     refresh = RefreshToken.for_user(user)
-    return {"access": str(refresh.access_token), "refresh": str(refresh)}
+    return {
+        "accessToken": str(refresh.access_token),
+        "refreshToken": str(refresh),
+        "user": _serialize_user(user),
+    }
 
 
 def _decode_uid_token(uid: str, token: str):
@@ -139,16 +156,52 @@ class PasswordResetConfirmView(APIView):
 class LogoutView(APIView):
     def post(self, request):
         try:
-            RefreshToken(request.data["refresh"]).blacklist()
+            RefreshToken(request.data["refreshToken"]).blacklist()
         except Exception:
             pass
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class LoginView(APIView):
+    """POST /api/v1/auth/login -- replaces SimpleJWT's stock
+    TokenObtainPairView so the response actually matches what the frontend
+    expects (see api/auth.ts::login / AuthResult): accessToken/refreshToken/
+    user, not SimpleJWT's bare access/refresh with no user payload at all."""
+
+    permission_classes = [AllowAny]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "auth_login"
+
+    def post(self, request):
+        username = request.data.get("username", "")
+        password = request.data.get("password", "")
+        user = authenticate(request, username=username, password=password)
+        if user is None:
+            return Response({"detail": "Login yoki parol noto'g'ri."}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response(_issue_tokens(user))
+
+
+class RefreshView(APIView):
+    """POST /api/v1/auth/refresh -- same reasoning as LoginView: wraps
+    SimpleJWT's own TokenRefreshSerializer (which already handles rotation
+    + blacklisting per SIMPLE_JWT's settings) so the response is
+    {accessToken, refreshToken}, not SimpleJWT's own {access} / {access,
+    refresh}."""
+
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = TokenRefreshSerializer(data={"refresh": request.data.get("refreshToken")})
+        try:
+            serializer.is_valid(raise_exception=True)
+        except Exception:
+            return Response({"detail": "Refresh token yaroqsiz."}, status=status.HTTP_401_UNAUTHORIZED)
+        data = serializer.validated_data
+        return Response({"accessToken": str(data["access"]), "refreshToken": str(data["refresh"])})
 
 
 class MeView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        return Response(
-            {"id": request.user.id, "username": request.user.username, "email": request.user.email}
-        )
+        return Response(_serialize_user(request.user))
