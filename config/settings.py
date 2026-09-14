@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "apps.schedule",
     "apps.geo",
     "apps.video",
+    "apps.admin_api",
 ]
 
 MIDDLEWARE = [
