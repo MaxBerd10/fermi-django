@@ -36,13 +36,10 @@ export function isHomeSafeImage(src: string, title = ""): boolean {
 /** Lightweight fallbacks only (< ~700KB). */
 export const CAMPUS_PHOTOS = [
   { id: -101, img: "/images/institut-about.jpg" },
-  { id: -102, img: "https://api.fermi.uz/uploads/img/fotogallery/2026/PYU.jpg" },
-  { id: -103, img: "https://api.fermi.uz/uploads/img/fotogallery/2026/uz%20iftixorlari.jpg" },
-  { id: -104, img: "https://api.fermi.uz/uploads/img/fotogallery/2026/Glaukoma%20haftaligi.jpg" },
-  {
-    id: -105,
-    img: "https://api.fermi.uz/uploads/img/fotogallery/2026/Rektor%20va%20talabalar%20uchrashuvi.jpg",
-  },
+  { id: -102, img: "/images/campus-1.jpg" },
+  { id: -103, img: "/images/campus-2.jpg" },
+  { id: -104, img: "/images/campus-3.jpg" },
+  { id: -105, img: "/images/campus-4.jpg" },
 ] as const;
 
 /** Sharp hero back-banner only (not used for cards/aside). */
