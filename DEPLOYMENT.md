@@ -69,6 +69,33 @@ running and pointed at this one (`FERMI_API_BASE_URL=http://127.0.0.1:8000`,
 already the default in `frontend/deploy/fjsti-web.env.example`) before nginx
 is put in front of either.
 
+## Database backups
+
+`deploy/backup-db.sh` runs `pg_dump` (custom format) into `/var/backups/fermi-django`
+and prunes anything older than 14 days. It's driven by a systemd timer, not
+cron, so it shares logging (`journalctl`) with the rest of the stack.
+
+```bash
+sudo mkdir -p /var/backups/fermi-django
+sudo chown www-data:www-data /var/backups/fermi-django
+
+sudo cp deploy/systemd/fermi-django-backup.service /etc/systemd/system/
+sudo cp deploy/systemd/fermi-django-backup.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now fermi-django-backup.timer
+
+# Test it immediately rather than waiting for 03:15:
+sudo systemctl start fermi-django-backup.service
+sudo journalctl -u fermi-django-backup.service -n 20 --no-pager
+ls -la /var/backups/fermi-django
+```
+
+`RETENTION_DAYS` and `BACKUP_DIR` are overridable by adding them to
+`/etc/fermi-django.env` (picked up automatically since the service's
+`EnvironmentFile=` already points there). This backs up the database only —
+it does not cover `MEDIA_ROOT` (uploaded documents/images); if those matter
+as much as the DB, add them to your own off-box sync/rsync job separately.
+
 ## Updating after a Git push
 
 ```bash
@@ -99,10 +126,9 @@ requests, curl doesn't by default.
 
 ## What's deliberately NOT here yet
 
-- **Database backups.** Nothing in this repo backs up Postgres — set up
-  `pg_dump` on a cron/timer, or your hosting provider's managed backup, before
-  this holds real user submissions (`apps.forms`) that can't be re-imported
-  from the old site.
+- **Media backups.** See the note at the end of the "Database backups"
+  section above — `deploy/backup-db.sh` only covers Postgres, not uploaded
+  files in `MEDIA_ROOT`.
 - **Error monitoring / structured logging.** Errors currently only go to
   `journalctl` via gunicorn's `--error-logfile -`. Fine to start; add Sentry
   or similar once this is handling real traffic.

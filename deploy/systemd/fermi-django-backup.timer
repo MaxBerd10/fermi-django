@@ -1,0 +1,12 @@
+[Unit]
+Description=Run FerMI Postgres backup daily
+
+[Timer]
+# 03:15 server-local time -- low-traffic hour, offset from :00 so it doesn't
+# pile up with other systems' midnight cron jobs.
+OnCalendar=*-*-* 03:15:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
