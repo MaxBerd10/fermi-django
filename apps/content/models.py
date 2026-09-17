@@ -110,6 +110,12 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     # the title itself is the English source; only a Russian rendering is a
     # real translation.
     30014, 30015, 30018, 30029, 30030,
+    # A further batch of journal/dissertation article titles authored in
+    # English, same reasoning as the 27226-27406 range above -- discovered
+    # in the 30033-30152 import block.
+    30033, 30041, 30050, 30074, 30075, 30079, 30097, 30098, 30101,
+    30105, 30109, 30111, 30112, 30117, 30119, 30124, 30125, 30126,
+    30128, 30134, 30137,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
@@ -121,7 +127,9 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
 # _is_ru_source_text's Cyrillic-ratio heuristic misses it because the
 # embedded Latin scientific name "Helicobacter pylori" pulls the Latin
 # character count too high -- hand-verified as needing no further work.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853, 27299}
+# 30087 is the same Helicobacter-pylori edge case, in a different article
+# title.
+_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853, 27299, 30087}
 
 
 class Page(models.Model):
