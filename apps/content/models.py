@@ -100,6 +100,16 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     # Wikipedia USMLE article -- same situation as the 27068-27139 USMLE
     # block above, just a different Page/import batch.
     29854, 29855, 29856, 29857, 29858, 29859, 29860,
+    # Thumbay Group / Gulf Medical University partnership announcement --
+    # authored directly in English for this English-language partnership
+    # page, same reasoning as the 27068-27139 USMLE/Thumbay block above.
+    29913, 29914, 29915, 29917, 29918, 29920, 29921,
+    29923, 29924, 29925, 29926, 29927,
+    # Journal/dissertation article titles submitted in English by their
+    # (non-Uzbek) authors, same reasoning as the 27226-27406 range above --
+    # the title itself is the English source; only a Russian rendering is a
+    # real translation.
+    30014, 30015, 30018, 30029, 30030,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
