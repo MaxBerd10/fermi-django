@@ -86,19 +86,19 @@ def plain_client(plain_user):
 # against two representative endpoints (a plain list and a singleton)
 # rather than duplicated 11 times over.
 
-@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories/", "/api/v1/admin/setting/"])
+@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories", "/api/v1/admin/setting"])
 def test_admin_endpoint_rejects_anonymous(client, url, db):
     res = client.get(url)
     assert res.status_code == 401
 
 
-@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories/", "/api/v1/admin/setting/"])
+@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories", "/api/v1/admin/setting"])
 def test_admin_endpoint_rejects_non_staff(plain_client, url, db):
     res = plain_client.get(url)
     assert res.status_code == 403
 
 
-@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories/", "/api/v1/admin/setting/"])
+@pytest.mark.parametrize("url", ["/api/v1/admin/result-categories", "/api/v1/admin/setting"])
 def test_admin_endpoint_allows_staff(admin_client, url, db):
     res = admin_client.get(url)
     assert res.status_code == 200
@@ -107,7 +107,7 @@ def test_admin_endpoint_allows_staff(admin_client, url, db):
 # --- admin/result-categories, admin/result-files ---------------------------
 
 def test_result_category_create_falls_back_uz_to_blank_ru_en(admin_client, db):
-    res = admin_client.post("/api/v1/admin/result-categories/", {"title_uz": "Davolash ishi"}, format="json")
+    res = admin_client.post("/api/v1/admin/result-categories", {"title_uz": "Davolash ishi"}, format="json")
     assert res.status_code == 201
     assert res.data["title_uz"] == "Davolash ishi"
     assert res.data["title_ru"] == "Davolash ishi"
@@ -116,7 +116,7 @@ def test_result_category_create_falls_back_uz_to_blank_ru_en(admin_client, db):
 
 def test_result_category_create_keeps_explicit_ru_en(admin_client, db):
     res = admin_client.post(
-        "/api/v1/admin/result-categories/",
+        "/api/v1/admin/result-categories",
         {"title_uz": "Davolash ishi", "title_ru": "Лечебное дело", "title_en": "General Medicine"},
         format="json",
     )
@@ -127,7 +127,7 @@ def test_result_category_create_keeps_explicit_ru_en(admin_client, db):
 
 def test_result_category_update_reapplies_fallback_when_ru_en_cleared(admin_client, db):
     category = ResultCategory.objects.create(title_uz="Farmatsiya", title_ru="Фармация", title_en="Pharmacy")
-    res = admin_client.patch(f"/api/v1/admin/result-categories/{category.id}/", {"title_uz": "Farmatsiya 2"}, format="json")
+    res = admin_client.patch(f"/api/v1/admin/result-categories/{category.id}", {"title_uz": "Farmatsiya 2"}, format="json")
     assert res.status_code == 200
     assert res.data["title_ru"] == "Farmatsiya 2"
     assert res.data["title_en"] == "Farmatsiya 2"
@@ -140,7 +140,7 @@ def test_result_category_delete_cascades_to_its_files(admin_client, db):
     file_ = ResultFile.objects.create(
         category=category, document=document, title_uz="1-guruh", title_ru="1-я группа", title_en="Group 1",
     )
-    res = admin_client.delete(f"/api/v1/admin/result-categories/{category.id}/")
+    res = admin_client.delete(f"/api/v1/admin/result-categories/{category.id}")
     assert res.status_code == 204
     assert not ResultFile.objects.filter(id=file_.id).exists()
 
@@ -149,7 +149,7 @@ def test_result_file_create_resolves_document_from_bare_path_and_falls_back_titl
     category = ResultCategory.objects.create(title_uz="Stomatologiya", title_ru="Стоматология", title_en="Dentistry")
     path = _write_media_file("uploads/documents/2024/06/n1.pdf")
     res = admin_client.post(
-        "/api/v1/admin/result-files/",
+        "/api/v1/admin/result-files",
         {"title_uz": "Natija 1", "category_id": category.id, "file": path},
         format="json",
     )
@@ -165,7 +165,7 @@ def test_result_file_create_reuses_existing_document_for_same_path(admin_client,
     path = _write_media_file("uploads/documents/2024/06/shared.pdf")
     existing = Document.objects.create(file=path, title="Shared")
     admin_client.post(
-        "/api/v1/admin/result-files/",
+        "/api/v1/admin/result-files",
         {"title_uz": "A", "category_id": category.id, "file": path},
         format="json",
     )
@@ -178,7 +178,7 @@ def test_result_file_update_without_category_id_keeps_existing_category(admin_cl
     upload = SimpleUploadedFile("keep.pdf", b"%PDF-1.4 fake pdf bytes", content_type="application/pdf")
     document = Document.objects.create(file=upload, title="Keep")
     file_ = ResultFile.objects.create(category=category, document=document, title_uz="X", title_ru="X", title_en="X")
-    res = admin_client.patch(f"/api/v1/admin/result-files/{file_.id}/", {"title_uz": "Y"}, format="json")
+    res = admin_client.patch(f"/api/v1/admin/result-files/{file_.id}", {"title_uz": "Y"}, format="json")
     assert res.status_code == 200
     file_.refresh_from_db()
     assert file_.category_id == category.id
@@ -188,7 +188,7 @@ def test_result_file_update_without_category_id_keeps_existing_category(admin_cl
 
 def test_results_page_get_auto_creates_singleton_row(admin_client, db):
     assert not ResultsPage.objects.exists()
-    res = admin_client.get("/api/v1/admin/results-page/")
+    res = admin_client.get("/api/v1/admin/results-page")
     assert res.status_code == 200
     assert res.data["results"][0]["id"] == 1
 
@@ -196,7 +196,7 @@ def test_results_page_get_auto_creates_singleton_row(admin_client, db):
 def test_results_page_update_falls_back_blank_ru_en_to_uz(admin_client, db):
     ResultsPage.get_solo()
     res = admin_client.patch(
-        "/api/v1/admin/results-page/1/",
+        "/api/v1/admin/results-page/1",
         {"heading_uz": "Natijalar", "intro_uz": "Kirish matni", "announcement_uz": "E'lon matni"},
         format="json",
     )
@@ -210,7 +210,7 @@ def test_results_page_update_falls_back_blank_ru_en_to_uz(admin_client, db):
 def test_results_page_update_keeps_explicit_ru_en(admin_client, db):
     ResultsPage.get_solo()
     res = admin_client.patch(
-        "/api/v1/admin/results-page/1/",
+        "/api/v1/admin/results-page/1",
         {"heading_uz": "Natijalar", "heading_ru": "Результаты", "heading_en": "Results"},
         format="json",
     )
@@ -223,7 +223,7 @@ def test_results_page_update_keeps_explicit_ru_en(admin_client, db):
 
 def test_contact_list_reports_unread_status(admin_client, db):
     ContactSubmission.objects.create(name="Ali", subject="Savol", phone="+998900000000", email="a@example.com", message="Salom")
-    res = admin_client.get("/api/v1/admin/contacts/")
+    res = admin_client.get("/api/v1/admin/contacts")
     assert res.status_code == 200
     assert res.data["results"][0]["status"] == 1  # unread
 
@@ -233,7 +233,7 @@ def test_contact_update_marks_it_read_as_a_side_effect(admin_client, db):
         name="Ali", subject="Savol", phone="+998900000000", email="a@example.com", message="Salom",
     )
     assert submission.is_read is False
-    res = admin_client.patch(f"/api/v1/admin/contacts/{submission.id}/", {"subject": "Savol (ko'rildi)"}, format="json")
+    res = admin_client.patch(f"/api/v1/admin/contacts/{submission.id}", {"subject": "Savol (ko'rildi)"}, format="json")
     assert res.status_code == 200
     submission.refresh_from_db()
     assert submission.is_read is True
@@ -244,7 +244,7 @@ def test_contact_update_marks_it_read_as_a_side_effect(admin_client, db):
 
 def test_acceptance_create_maps_quater_id_to_quarter_id_field(admin_client, db):
     res = admin_client.post(
-        "/api/v1/admin/acceptances/",
+        "/api/v1/admin/acceptances",
         {"fish": "Aliyev Vali", "phone": "+998900000000", "email": "v@example.com", "quater_id": 7},
         format="json",
     )
@@ -257,7 +257,7 @@ def test_acceptance_create_maps_quater_id_to_quarter_id_field(admin_client, db):
 
 def test_virtual_submission_create_accepts_faculty_id(admin_client, faculty):
     res = admin_client.post(
-        "/api/v1/admin/virtual-submissions/",
+        "/api/v1/admin/virtual-submissions",
         {"fish": "Aliyeva Nilufar", "phone": "+998900000000", "email": "n@example.com", "text": "Savol", "faculty_id": faculty.id},
         format="json",
     )
@@ -268,7 +268,7 @@ def test_virtual_submission_create_accepts_faculty_id(admin_client, faculty):
 
 def test_virtual_submission_create_rejects_a_nonexistent_faculty_id(admin_client, db):
     res = admin_client.post(
-        "/api/v1/admin/virtual-submissions/",
+        "/api/v1/admin/virtual-submissions",
         {"fish": "Aliyeva Nilufar", "phone": "+998900000000", "email": "n@example.com", "text": "Savol", "faculty_id": 999999},
         format="json",
     )
@@ -281,12 +281,12 @@ def test_virtual_submission_file_field_is_read_only(admin_client, db):
     submission = VirtualSubmission.objects.create(
         fish="Karimov Sardor", phone="+998900000000", email="s@example.com", text="Savol", file=document,
     )
-    res = admin_client.get(f"/api/v1/admin/virtual-submissions/{submission.id}/")
+    res = admin_client.get(f"/api/v1/admin/virtual-submissions/{submission.id}")
     assert res.data["file"].endswith(document.file.name)
     # Attempting to change it via the admin API is silently ignored -- "file"
     # has no write path in this serializer at all (see AdminVirtualSubmissionSerializer).
     other_path = _write_media_file("uploads/documents/2024/06/other.pdf")
-    admin_client.patch(f"/api/v1/admin/virtual-submissions/{submission.id}/", {"file": other_path}, format="json")
+    admin_client.patch(f"/api/v1/admin/virtual-submissions/{submission.id}", {"file": other_path}, format="json")
     submission.refresh_from_db()
     assert submission.file_id == document.id
 
@@ -296,7 +296,7 @@ def test_virtual_submission_file_field_is_read_only(admin_client, db):
 def test_setting_update_does_not_fall_back_blank_address_ru_en(admin_client, db):
     SiteSetting.get_solo()
     res = admin_client.patch(
-        "/api/v1/admin/setting/1/",
+        "/api/v1/admin/setting/1",
         {"phone": "+998732430000", "email": "info@fjsti.uz", "address_uz": "Farg'ona sh."},
         format="json",
     )
@@ -310,7 +310,7 @@ def test_setting_update_does_not_fall_back_blank_address_ru_en(admin_client, db)
 
 def test_logo_update_sets_fields_independently_without_fallback(admin_client, db):
     SiteLogo.get_solo()
-    res = admin_client.patch("/api/v1/admin/logo/1/", {"title_uz": "FJSTI"}, format="json")
+    res = admin_client.patch("/api/v1/admin/logo/1", {"title_uz": "FJSTI"}, format="json")
     assert res.status_code == 200
     assert res.data["title_uz"] == "FJSTI"
     assert res.data["title_ru"] == ""
@@ -320,7 +320,7 @@ def test_logo_update_sets_fields_independently_without_fallback(admin_client, db
 def test_logo_update_resolves_image_from_bare_path(admin_client, db):
     SiteLogo.get_solo()
     path = _write_media_file("uploads/2024/06/logo.png", content=_PNG_1PX)
-    res = admin_client.patch("/api/v1/admin/logo/1/", {"img": path}, format="json")
+    res = admin_client.patch("/api/v1/admin/logo/1", {"img": path}, format="json")
     assert res.status_code == 200
     assert res.data["img"].endswith(f"/{path}")
     assert Image.objects.filter(file=path).exists()
@@ -331,7 +331,7 @@ def test_logo_update_resolves_image_from_bare_path(admin_client, db):
 def test_counter_update_persists_numeric_fields(admin_client, db):
     SiteCounter.get_solo()
     res = admin_client.patch(
-        "/api/v1/admin/counter/1/",
+        "/api/v1/admin/counter/1",
         {"professor_teachers": 120, "students": 3500, "graduaters": 900, "book_fund": 45000},
         format="json",
     )
@@ -343,7 +343,7 @@ def test_counter_update_persists_numeric_fields(admin_client, db):
 
 def test_network_create_maps_titlte_to_title_field(admin_client, db):
     res = admin_client.post(
-        "/api/v1/admin/networks/",
+        "/api/v1/admin/networks",
         {"titlte": "Telegram", "icon": "ri-telegram-line", "url": "https://t.me/fjsti"},
         format="json",
     )
@@ -356,7 +356,7 @@ def test_network_create_maps_titlte_to_title_field(admin_client, db):
 
 def test_useful_site_create_falls_back_uz_to_blank_ru_en(admin_client, db):
     res = admin_client.post(
-        "/api/v1/admin/useful-sites/", {"title_uz": "Vazirlik", "url": "https://gov.uz"}, format="json",
+        "/api/v1/admin/useful-sites", {"title_uz": "Vazirlik", "url": "https://gov.uz"}, format="json",
     )
     assert res.status_code == 201
     assert res.data["title_ru"] == "Vazirlik"

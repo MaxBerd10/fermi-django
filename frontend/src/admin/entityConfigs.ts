@@ -270,7 +270,7 @@ export const virtualConfig: EntityConfig = {
   fields: [
     { kind: "text", key: "fish", label: "F.I.SH", required: true },
     { kind: "async-select", key: "faculty_id", label: "Fakultet", required: true, optionsResource: "faculty", optionsLabelKey: "title_uz" },
-    { kind: "geo-selects", label: "Viloyat / tuman", regionKey: "province", districtKey: "fog", required: true },
+    { kind: "geo-selects", label: "Viloyat / tuman", regionKey: "region_id", districtKey: "district_id", required: true },
     { kind: "text", key: "address", label: "Manzil", required: true },
     { kind: "text", key: "phone", label: "Telefon", required: true },
     { kind: "text", key: "email", label: "Email", required: true },

@@ -31,7 +31,16 @@ from .settings_views import (
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
 from .users_views import AdminUserViewSet
 
-router = DefaultRouter()
+# trailing_slash=False -- the frontend's generic adminResource client
+# (frontend/src/api/admin.ts, carried over unmodified from the old Yii2
+# backend's URL convention, same as apps.forms/apps.accounts/apps.site_settings
+# elsewhere in this project) calls every admin/<resource> URL without a
+# trailing slash. GETs silently survived DRF's default trailing-slash
+# redirect (fetch follows it), but POST/PUT/DELETE can't be redirected with
+# their body intact -- Django raises instead, so every admin create/update/
+# delete was actually failing with a 500 until this matched the rest of the
+# project's no-trailing-slash convention.
+router = DefaultRouter(trailing_slash=False)
 router.register("admin/news", AdminPostViewSet, basename="admin-news")
 router.register("admin/postcategories", AdminPostcategoryViewSet, basename="admin-postcategories")
 router.register("admin/faculty", AdminFacultyViewSet, basename="admin-faculty")
