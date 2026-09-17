@@ -128,6 +128,11 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     31151, 31152, 31153, 31154, 31160, 31161, 31164, 31166, 31167,
     31169, 31171, 31172, 31173, 31174, 31175, 31176, 31177, 31178,
     31179, 31180, 31181, 31182, 31183, 31184, 31185, 31186, 31187,
+    # USMLE-style topic checklists (renal, genetics, cell biology,
+    # infectious disease/microbiology, biochemistry, musculoskeletal)
+    # authored directly in English, same reasoning as the 29533-29546
+    # range above -- discovered in the 32393-32407 import block.
+    32394, 32396, 32400, 32402, 32404, 32407,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
