@@ -1,22 +1,32 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getAbout } from "@/api/pages";
-import type { About } from "@/types/content";
+import { getPage } from "@/api/pages";
+import type { Page } from "@/types/content";
 import { ApiError } from "@/types/api";
+import { BlockRenderer } from "@/blocks/BlockRenderer";
 import PageHeader from "@/components/shared/PageHeader";
-import RichContent from "@/components/shared/RichContent";
 import { Reveal } from "@/components/Animation";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
-import { optimizedImageUrl } from "@/lib/imageProxy";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { stripHtml } from "@/lib/html";
 import { normalizeYearLabels } from "@/lib/siteConstants";
+
+// Page has no title field of its own (see PageSerializer -- just
+// {id, slug, blocks}), and this route carries no menuId to resolve a
+// breadcrumb label from the menu tree the way /blog/:menuId/:slug does.
+// Humanizing the slug is the only title source available here.
+function titleFromSlug(slug: string): string {
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 export default function AboutPage() {
   const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
-  const [about, setAbout] = useState<About | null>(null);
+  const [page, setPage] = useState<Page | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,37 +34,33 @@ export default function AboutPage() {
     if (!slug) return;
     setLoading(true);
     setError(null);
-    getAbout(slug)
-      .then(setAbout)
+    getPage(slug)
+      .then(setPage)
       .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError")))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
-  usePageMeta(about?.title, about ? stripHtml(about.content).slice(0, 160) : null);
+  const displayTitle = normalizeYearLabels(slug ? titleFromSlug(slug) : "");
+
+  usePageMeta(displayTitle);
 
   if (loading) return <LoadingState />;
-  if (error || !about) return <ErrorState message={error ?? undefined} />;
-
-  const displayTitle = normalizeYearLabels(about.title);
+  if (error || !page) return <ErrorState message={error ?? undefined} />;
 
   return (
     <div className="text-foreground-950">
       <PageHeader title={displayTitle} breadcrumb={t("footer.institutHaqida")} />
       <section className="section-pad bg-transparent">
         <div className="section-container max-w-4xl">
-          {about.img && (
-            <Reveal>
-              <img
-                src={optimizedImageUrl(about.img, 900)}
-                alt={displayTitle}
-                className="w-full h-56 md:h-72 object-cover object-center rounded-2xl mb-6 border border-slate-200 shadow-lg"
-              />
-            </Reveal>
-          )}
-          <Reveal delay={about.img ? 80 : 0}>
-            <article className="page-card p-5 md:p-7 lg:p-8 cms-article">
-              <RichContent html={about.content} className="cms-article" />
+          <Reveal>
+            <article className="page-card p-5 md:p-7 lg:p-8 cms-article space-y-4">
+              {page.blocks
+                .slice()
+                .sort((a, b) => a.order - b.order)
+                .map((block) => (
+                  <BlockRenderer key={block.id} block={block} />
+                ))}
             </article>
           </Reveal>
         </div>

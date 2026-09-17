@@ -35,7 +35,7 @@ export const quickServices = [
   { id: "doctorium", icon: "ri-stethoscope-line", title: "Doctorium", desc: "Shifokorlar platformasi", href: "https://doctorium.com/", color: "secondary" },
   { id: "qabul", icon: "ri-user-add-line", title: "Onlayn qabul", desc: "Ariza topshirish", href: "https://my.uzedu.uz", color: "accent" },
   { id: "call", icon: "ri-phone-line", title: "Call markaz", desc: "+998 95 062-23-45", href: "tel:+998950622345", color: "primary" },
-  { id: "anti-corr", icon: "ri-shield-check-line", title: "Korrupsiyaga qarshi", desc: "Komplayens-nazorat", href: "/korrupsiya", color: "secondary" },
+  { id: "anti-corr", icon: "ri-shield-check-line", title: "Korrupsiyaga qarshi", desc: "Komplayens-nazorat", href: "/about/korrupsiyaga-qarshi-kurashish-davlat-dasturlari", color: "secondary" },
 ];
 
 export const stats = [
@@ -211,7 +211,7 @@ export const partners = [
   { name: "Vazirlik (OTMFI)", icon: "ri-graduation-cap-line", href: "https://gov.uz/en/edu" },
   { name: "SSV", icon: "ri-heart-pulse-line", href: "https://ssv.uz/uz" },
   { name: "Study in Uzbekistan", icon: "ri-global-line", href: "https://studyin-uzbekistan.uz/universities/80" },
-  { name: "Korrupsiyaga qarshi", icon: "ri-shield-check-line", href: "https://fjsti.uz/blog/515/korrupsiyaga-qarshi-kurashish-davlat-dasturlari" },
+  { name: "Korrupsiyaga qarshi", icon: "ri-shield-check-line", href: "/about/korrupsiyaga-qarshi-kurashish-davlat-dasturlari" },
   { name: "HEMIS", icon: "ri-database-2-line", href: "https://hemis.fjsti.uz" },
 ];
 
@@ -251,7 +251,7 @@ export const navItems = [
       { label: "Xalqaro faoliyat", href: "/faoliyat/xalqaro" },
       { label: "Moliyaviy faoliyat", href: "/faoliyat/moliyaviy" },
       { label: "Madaniy-maʻrifiy faʻoliyat", href: "/faoliyat/madaniy" },
-      { label: "Korrupsiyaga qarshi kurashish", href: "/korrupsiya" },
+      { label: "Korrupsiyaga qarshi kurashish", href: "/about/korrupsiyaga-qarshi-kurashish-davlat-dasturlari" },
       { label: "Loyihalar", href: "/faoliyat/loyihalar" },
       { label: "Doktorantura", href: "/faoliyat/doktorantura" },
     ],
@@ -290,7 +290,7 @@ export const navItems = [
       { label: "Scopus", href: "https://www.scopus.com" },
       { label: "Doctorium", href: "https://doctorium.com" },
       { label: "Karyera markazi", href: "/karyera" },
-      { label: "Korrupsiyaga qarshi kurash", href: "/korrupsiya" },
+      { label: "Korrupsiyaga qarshi kurash", href: "/about/korrupsiyaga-qarshi-kurashish-davlat-dasturlari" },
     ],
   },
   {
