@@ -93,6 +93,13 @@ class AdminResultFileViewSet(viewsets.ModelViewSet):
 
 
 class AdminResultsPageSerializer(serializers.ModelSerializer):
+    heading_ru = serializers.CharField(required=False, allow_blank=True)
+    heading_en = serializers.CharField(required=False, allow_blank=True)
+    intro_ru = serializers.CharField(required=False, allow_blank=True)
+    intro_en = serializers.CharField(required=False, allow_blank=True)
+    announcement_ru = serializers.CharField(required=False, allow_blank=True)
+    announcement_en = serializers.CharField(required=False, allow_blank=True)
+
     class Meta:
         model = ResultsPage
         fields = [
@@ -101,6 +108,19 @@ class AdminResultsPageSerializer(serializers.ModelSerializer):
             "intro_uz", "intro_ru", "intro_en",
             "announcement_uz", "announcement_ru", "announcement_en",
         ]
+
+    def update(self, instance, validated_data):
+        # A blank ru/en falls back to the uz text rather than rendering empty
+        # for RU/EN visitors -- same convention as every other admin
+        # resource's _save() (see e.g. AdminBannerSerializer), which this
+        # singleton serializer skipped by just being a plain ModelSerializer.
+        for base in ("heading", "intro", "announcement"):
+            uz_val = validated_data.get(f"{base}_uz", getattr(instance, f"{base}_uz"))
+            for lang in ("ru", "en"):
+                key = f"{base}_{lang}"
+                if not validated_data.get(key):
+                    validated_data[key] = uz_val
+        return super().update(instance, validated_data)
 
 
 class AdminResultsPageViewSet(SingletonAdminViewSet, viewsets.ModelViewSet):
