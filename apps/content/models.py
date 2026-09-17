@@ -96,6 +96,10 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     29611, 29613, 29614, 29615, 29616, 29617, 29618, 29619,
     29620, 29621, 29622, 29623, 29624, 29625, 29626, 29627,
     29628, 29629,
+    # A separate USMLE-info page (slug "usmle-dasturi") quoting the
+    # Wikipedia USMLE article -- same situation as the 27068-27139 USMLE
+    # block above, just a different Page/import batch.
+    29854, 29855, 29856, 29857, 29858, 29859, 29860,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
