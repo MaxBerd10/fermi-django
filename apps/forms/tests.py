@@ -141,17 +141,18 @@ def test_virtual_reception_links_a_real_faculty(client, faculty):
     assert submission.faculty_id == faculty.id
 
 
-# NOTE: a nonexistent facultyId is NOT covered by a test here. Tried it --
-# VirtualSubmissionSerializer.facultyId is a plain IntegerField (not a
-# PrimaryKeyRelatedField), so DRF never checks the id actually exists before
-# save() attempts the INSERT. In this pytest-django test transaction the
-# resulting IntegrityError only surfaces at teardown (Postgres defers FK
-# constraint checks), so a request-cycle assertion can't observe it here --
-# but ATOMIC_REQUESTS is unset in config/settings.py, so in real production
-# (autocommit per request) this same bad input would raise an *unhandled*
-# IntegrityError -> 500 for a public, unauthenticated visitor, instead of a
-# clean 400. Flagged for a fix (e.g. PrimaryKeyRelatedField); not fixed here
-# since this pass is test-coverage only.
+def test_virtual_reception_rejects_a_nonexistent_faculty_id(client, db):
+    # facultyId is a PrimaryKeyRelatedField (not a plain IntegerField, unlike
+    # category/region/district ids elsewhere in apps.forms) precisely so a
+    # bad id fails validation here with a clean 400, instead of reaching
+    # save() and raising an unhandled IntegrityError against the real
+    # ForeignKey (which would surface as an unhandled 500 in production).
+    res = client.post(
+        "/api/v1/forms/virtual-reception",
+        {"fish": "Yusupov Bekzod", "phone": "+998900000002", "email": "b@example.com", "text": "Savol.", "facultyId": 999999},
+    )
+    assert res.status_code == 400
+    assert not VirtualSubmission.objects.exists()
 
 
 # --- Rate limiting: shared "public_form" throttle scope ---------------------

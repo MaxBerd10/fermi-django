@@ -266,6 +266,15 @@ def test_virtual_submission_create_accepts_faculty_id(admin_client, faculty):
     assert res.data["file"] is None
 
 
+def test_virtual_submission_create_rejects_a_nonexistent_faculty_id(admin_client, db):
+    res = admin_client.post(
+        "/api/v1/admin/virtual-submissions/",
+        {"fish": "Aliyeva Nilufar", "phone": "+998900000000", "email": "n@example.com", "text": "Savol", "faculty_id": 999999},
+        format="json",
+    )
+    assert res.status_code == 400
+
+
 def test_virtual_submission_file_field_is_read_only(admin_client, db):
     upload = SimpleUploadedFile("v.pdf", b"%PDF-1.4 fake pdf bytes", content_type="application/pdf")
     document = Document.objects.create(file=upload, title="V")

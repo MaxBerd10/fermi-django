@@ -5,6 +5,7 @@ this same pipeline, previously entirely missing)."""
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
 
+from apps.faculties.models import Faculty
 from apps.forms.models import AcceptanceSubmission, ContactSubmission, VirtualSubmission
 
 from .common import AdminPagination, IsAdminStaff
@@ -52,7 +53,12 @@ class AdminAcceptanceViewSet(viewsets.ModelViewSet):
 
 
 class AdminVirtualSubmissionSerializer(serializers.ModelSerializer):
-    faculty_id = serializers.IntegerField(required=False, allow_null=True)
+    # PrimaryKeyRelatedField, not IntegerField -- faculty is a real
+    # ForeignKey, so a bad id must fail validation with a clean 400 rather
+    # than reach save() and raise an unhandled IntegrityError.
+    faculty_id = serializers.PrimaryKeyRelatedField(
+        source="faculty", queryset=Faculty.objects.all(), required=False, allow_null=True
+    )
     file = serializers.SerializerMethodField()
 
     class Meta:
