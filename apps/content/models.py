@@ -133,6 +133,13 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     # authored directly in English, same reasoning as the 29533-29546
     # range above -- discovered in the 32393-32407 import block.
     32394, 32396, 32400, 32402, 32404, 32407,
+    # A fourth "Green University" sustainability-policy page (report
+    # title, mission/vision statements, UN SDG policy titles), same
+    # reasoning as the 28318-28354, 29611-29629 and 31151-31187 ranges
+    # above -- authored directly in English for this English-language
+    # section.
+    32499, 32501, 32502, 32503, 32504, 32505, 32506, 32507, 32508,
+    32509, 32510, 32511, 32512, 32513, 32514, 32515, 32516, 32517,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
