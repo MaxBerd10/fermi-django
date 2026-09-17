@@ -116,6 +116,10 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
     30033, 30041, 30050, 30074, 30075, 30079, 30097, 30098, 30101,
     30105, 30109, 30111, 30112, 30117, 30119, 30124, 30125, 30126,
     30128, 30134, 30137,
+    # Another batch of journal/dissertation article titles authored in
+    # English, discovered in the 30153-30339 import block.
+    30154, 30155, 30166, 30170, 30182, 30187, 30189, 30192,
+    30193, 30194,
 }
 
 # A smaller handful are bare brand/product/institution names, a proper name
