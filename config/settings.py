@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     "apps.admin_api",
     "apps.site_settings",
     "apps.forms",
+    "apps.admission_results",
 ]
 
 MIDDLEWARE = [

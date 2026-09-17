@@ -48,6 +48,14 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     ],
   },
   {
+    label: "Qabul natijalari",
+    items: [
+      { to: "/admin/result-categories", label: "Yo'nalishlar", icon: "ri-list-check-2" },
+      { to: "/admin/result-files", label: "Natija fayllari", icon: "ri-file-pdf-2-line" },
+      { to: "/admin/results-page", label: "Sahifa matni", icon: "ri-article-line" },
+    ],
+  },
+  {
     label: "Murojaatlar",
     items: [
       { to: "/admin/contacts", label: "Aloqa formasi", icon: "ri-mail-line" },

@@ -10,6 +10,7 @@ const Home = lazy(() => import("../pages/home/page"));
 const Yangiliklar = lazy(() => import("../pages/yangiliklar/page"));
 const Aloqa = lazy(() => import("../pages/aloqa/page"));
 const Qabul = lazy(() => import("../pages/qabul/page"));
+const AdmissionResults = lazy(() => import("../pages/qabul-natijalari/page"));
 const Institut = lazy(() => import("../pages/institut/page"));
 const VirtualQabulxona = lazy(() => import("../pages/virtual-qabulxona/page"));
 const BlogPage = lazy(() => import("../pages/blog/page"));
@@ -65,6 +66,7 @@ const routes: RouteObject[] = [
       { path: "/aloqa", element: <Aloqa /> },
       { path: "/aloqa/:sub", element: <Aloqa /> },
       { path: "/qabul", element: <Qabul /> },
+      { path: "/qabul-natijalari", element: <AdmissionResults /> },
       { path: "/qabul/:type", element: <Qabul /> },
       { path: "/institut", element: <Institut /> },
       { path: "/institut/:sub", element: <Institut /> },

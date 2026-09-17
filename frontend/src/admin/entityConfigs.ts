@@ -136,6 +136,30 @@ export const scheduleConfig: EntityConfig = {
   ],
 };
 
+export const resultCategoryConfig: EntityConfig = {
+  resource: "result-categories",
+  title: "Qabul natijalari — yo'nalishlar",
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
+    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
+  ],
+};
+
+export const resultFileConfig: EntityConfig = {
+  resource: "result-files",
+  title: "Qabul natijalari — fayllar",
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
+    { kind: "async-select", key: "category_id", label: "Yo'nalish", required: true, optionsResource: "result-categories", optionsLabelKey: "title_uz" },
+    { kind: "media", key: "file", label: "Fayl (PDF)", required: true },
+    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
+  ],
+};
+
 export const coruselConfig: EntityConfig = {
   resource: "corusel",
   title: "Bosh sahifa banneri",
@@ -322,6 +346,18 @@ export const logoConfig: EntityConfig = {
   ],
 };
 
+export const resultsPageConfig: EntityConfig = {
+  resource: "results-page",
+  title: "Qabul natijalari — sahifa matni",
+  listColumns: [],
+  deleteConfirmField: "id",
+  fields: [
+    { kind: "lang-text", base: "heading", label: "Sarlavha" },
+    { kind: "lang-text", base: "intro", label: "Qisqa tavsif" },
+    { kind: "lang-textarea", base: "announcement", label: "E'lon matni" },
+  ],
+};
+
 export const ALL_ENTITY_CONFIGS = [
   facultyConfig,
   departmentsConfig,
@@ -333,6 +369,8 @@ export const ALL_ENTITY_CONFIGS = [
   videoConfig,
   courseConfig,
   scheduleConfig,
+  resultCategoryConfig,
+  resultFileConfig,
   coruselConfig,
   networkConfig,
   usefulSitesConfig,
@@ -344,4 +382,4 @@ export const ALL_ENTITY_CONFIGS = [
   translationConfig,
 ];
 
-export const SINGLETON_CONFIGS = [counterConfig, settingConfig, logoConfig];
+export const SINGLETON_CONFIGS = [counterConfig, settingConfig, logoConfig, resultsPageConfig];

@@ -1,5 +1,6 @@
 export type FieldSpec =
   | { kind: "lang-text"; base: string; label: string; requiredUz?: boolean }
+  | { kind: "lang-textarea"; base: string; label: string; requiredUz?: boolean }
   | { kind: "lang-html"; base: string; label: string }
   | { kind: "text"; key: string; label: string; required?: boolean }
   | { kind: "textarea"; key: string; label: string; required?: boolean }

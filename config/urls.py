@@ -35,6 +35,7 @@ urlpatterns = [
     path("api/v1/", include("apps.admin_api.urls")),
     path("api/v1/", include("apps.site_settings.urls")),
     path("api/v1/", include("apps.forms.urls")),
+    path("api/v1/", include("apps.admission_results.urls")),
     # Not DEBUG-gated (Django's static() helper is a no-op when DEBUG=False,
     # which is exactly what silently 404'd every uploaded image/document/video
     # in production -- see this session's readiness audit). This is a same-box

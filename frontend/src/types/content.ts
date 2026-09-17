@@ -176,6 +176,24 @@ export interface CourseSchedule {
   schedules: Schedule[];
 }
 
+export interface ResultFile {
+  id: number;
+  title: string;
+  file: string;
+}
+
+export interface ResultCategory {
+  id: number;
+  title: string;
+  files: ResultFile[];
+}
+
+export interface ResultsPageInfo {
+  heading: string;
+  intro: string;
+  announcement: string;
+}
+
 export interface SearchResults {
   posts: NewsArticle[];
   pages: { title: string; slug: string }[];

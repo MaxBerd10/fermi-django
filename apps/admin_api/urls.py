@@ -1,6 +1,11 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
+from .admission_results_views import (
+    AdminResultCategoryViewSet,
+    AdminResultFileViewSet,
+    AdminResultsPageViewSet,
+)
 from .banner_views import AdminBannerViewSet
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
 from .forms_views import AdminAcceptanceViewSet, AdminContactViewSet, AdminVirtualSubmissionViewSet
@@ -51,6 +56,9 @@ router.register("admin/acceptances", AdminAcceptanceViewSet, basename="admin-acc
 router.register("admin/virtual-submissions", AdminVirtualSubmissionViewSet, basename="admin-virtual-submissions")
 router.register("admin/corusel", AdminBannerViewSet, basename="admin-corusel")
 router.register("admin/users", AdminUserViewSet, basename="admin-users")
+router.register("admin/result-categories", AdminResultCategoryViewSet, basename="admin-result-categories")
+router.register("admin/result-files", AdminResultFileViewSet, basename="admin-result-files")
+router.register("admin/results-page", AdminResultsPageViewSet, basename="admin-results-page")
 
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),

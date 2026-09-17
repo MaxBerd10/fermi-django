@@ -45,6 +45,27 @@ export default function GenericField({ field, values, onChange }: Props) {
     );
   }
 
+  if (field.kind === "lang-textarea") {
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {(["uz", "ru", "en"] as const).map((lang) => (
+          <div key={lang}>
+            <label className="block text-xs font-semibold text-foreground-500 uppercase mb-1">
+              {field.label} ({lang}) {lang === "uz" && field.requiredUz && "*"}
+            </label>
+            <textarea
+              value={(values[`${field.base}_${lang}`] as string) ?? ""}
+              onChange={(e) => onChange(`${field.base}_${lang}`, e.target.value)}
+              required={lang === "uz" && field.requiredUz}
+              rows={4}
+              className="w-full px-4 py-3 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   if (field.kind === "lang-html") {
     return (
       <div className="space-y-4">
