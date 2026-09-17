@@ -153,7 +153,19 @@ _ENGLISH_SOURCE_BLOCK_IDS = {
 # character count too high -- hand-verified as needing no further work.
 # 30087 is the same Helicobacter-pylori edge case, in a different article
 # title.
-_PROPER_NOUN_BLOCK_IDS = {18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853, 27299, 30087}
+# 32631-32643 and 32645-32648 are the verse lines of the O'zbekiston
+# Respublikasining Davlat madhiyasi (national anthem, "institut-tuzilmasi"
+# ancestor page slugs ozbekiston-respublikasining-davlat-madhiyasi) -- a
+# national anthem's actual lyrics are official, fixed text, not prose to be
+# translated per-language; official multi-language sites present the same
+# verse verbatim regardless of UI language. Only the surrounding descriptive
+# text (title, legal history, composer/author credit, "Naqarot:"/"Chorus:")
+# was actually translated.
+_PROPER_NOUN_BLOCK_IDS = {
+    18891, 19107, 19921, 20836, 20784, 21213, 21711, 21853, 27299, 30087,
+    32631, 32632, 32633, 32634, 32636, 32637, 32638, 32639,
+    32640, 32641, 32642, 32643, 32645, 32646, 32647, 32648,
+}
 
 
 class Page(models.Model):
