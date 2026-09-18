@@ -255,11 +255,24 @@ async function streamProxy(request, response, baseUrl, targetPath) {
   // would build every media URL against this internal fermiApiBaseUrl address
   // instead of the public domain the browser can actually reach.
   if (request.headers.host) headers["x-forwarded-host"] = request.headers.host;
+  // Streaming the body straight through (Readable.toWeb(request)) drops Content-Length
+  // (stripped in safeUpstreamHeaders) and makes fetch send it chunked -- gunicorn's sync
+  // worker doesn't reassemble a chunked *request* body, so Django silently saw an empty
+  // body for every POST/PUT/PATCH through this proxy (e.g. login: authenticate("", "")
+  // -> always "Login yoki parol noto'g'ri", regardless of the real credentials -- found
+  // while debugging exactly that with the user). Buffering the body and handing fetch a
+  // Buffer instead lets it set a real Content-Length and send a normal, non-chunked
+  // request instead.
+  let body;
+  if (hasBody) {
+    const chunks = [];
+    for await (const chunk of request) chunks.push(chunk);
+    body = Buffer.concat(chunks);
+  }
   const upstream = await fetch(target, {
     method: request.method,
     headers,
-    body: hasBody ? Readable.toWeb(request) : undefined,
-    duplex: hasBody ? "half" : undefined,
+    body,
   });
 
   response.statusCode = upstream.status;
