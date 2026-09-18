@@ -24,10 +24,11 @@ class DepartmentViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 # Maps the old site's leader-category URL slugs to our institute_role values —
-# only the two categories that have a real institute-wide (not
-# department/faculty-scoped) data source; "kafedra-mudirlari" from the old
-# site is just every department's is_head staff, already served via
-# /departments, so it isn't duplicated here.
+# the two categories that have a real institute-wide (not
+# department/faculty-scoped) data source. "kafedra-mudirlari" is handled
+# separately below (its data source is every department's is_head staff,
+# not an institute_role), but the frontend's leader/page.tsx has full,
+# linked-from-the-menu support for it, so it still needs a real endpoint.
 _INSTITUTE_LEADER_CATEGORIES = {
     "rektor": (StaffMember.INSTITUTE_ROLE_RECTOR, "Rektor"),
     "prorektorlar": (StaffMember.INSTITUTE_ROLE_VICE_RECTOR, "Prorektorlar"),
@@ -37,21 +38,26 @@ _INSTITUTE_LEADER_CATEGORIES = {
 class InstituteLeadersView(APIView):
     """
     GET /api/v1/leaders/<category_slug>/ — institute-wide leadership
-    (rector, prorektorlar), matching the old site's leaders/<slug> shape
+    (rector, prorektorlar, or every department head under
+    "kafedra-mudirlari"), matching the old site's leaders/<slug> shape
     closely enough that the frontend only needs its own adapter (see
     frontend/src/api/leaders.ts), not a schema change here.
     """
 
     def get(self, request, category_slug):
-        role = _INSTITUTE_LEADER_CATEGORIES.get(category_slug)
-        if role is None:
-            raise NotFound(f"Unknown leader category: {category_slug}")
-        institute_role, title = role
+        if category_slug == "kafedra-mudirlari":
+            category_id, title = category_slug, "Kafedra mudirlari"
+            leaders = StaffMember.objects.filter(is_head=True, department__isnull=False).select_related("photo")
+        else:
+            role = _INSTITUTE_LEADER_CATEGORIES.get(category_slug)
+            if role is None:
+                raise NotFound(f"Unknown leader category: {category_slug}")
+            category_id, title = role
+            leaders = StaffMember.objects.filter(institute_role=category_id).select_related("photo")
 
-        leaders = StaffMember.objects.filter(institute_role=institute_role).select_related("photo")
         return Response(
             {
-                "category": {"id": institute_role, "title": title},
+                "category": {"id": category_id, "title": title},
                 "menu": None,
                 "leaders": StaffMemberSerializer(leaders, many=True, context={"request": request}).data,
             }

@@ -1,7 +1,13 @@
 import pytest
+from rest_framework.test import APIClient
 
 from apps.content.models import Page
 from apps.departments.models import Department, StaffMember
+
+
+@pytest.fixture
+def client():
+    return APIClient()
 
 
 @pytest.fixture
@@ -40,3 +46,22 @@ def test_staff_does_not_need_translation_when_every_language_differs(department)
         bio_en="en text",
     )
     assert staff.needs_translation is False
+
+
+def test_kafedra_mudirlari_endpoint_returns_every_department_head(client, department):
+    StaffMember.objects.create(
+        department=department, full_name_uz="Head Person", title_uz="Kafedra mudiri", is_head=True,
+    )
+    StaffMember.objects.create(
+        department=department, full_name_uz="Regular Staff", title_uz="Assistent", is_head=False,
+    )
+
+    res = client.get("/api/v1/leaders/kafedra-mudirlari/")
+    assert res.status_code == 200
+    names = [leader["full_name"]["uz"] for leader in res.data["leaders"]]
+    assert names == ["Head Person"]
+
+
+def test_leaders_endpoint_404s_for_unknown_category(client, db):
+    res = client.get("/api/v1/leaders/not-a-real-category/")
+    assert res.status_code == 404
