@@ -28,10 +28,13 @@ export default function About() {
   const image = blocks.find((b) => b.block_type === "image");
   const headings = blocks.filter((b) => b.block_type === "heading");
   const heading = headings[2] ?? headings[0];
-  const intro = blocks.find((b) => b.block_type === "paragraph");
 
   const title = heading?.data.text ?? "";
-  const introText = intro?.data.text ?? "";
+  const introText = blocks
+    .filter((b) => b.block_type === "heading" || b.block_type === "paragraph")
+    .map((b) => b.data.text)
+    .filter(Boolean)
+    .join(" ");
   const imageFile = image?.data.image?.file;
 
   return (
@@ -45,11 +48,18 @@ export default function About() {
             </h2>
           )}
           {introText && (
-            <p className="mt-3 text-sm md:text-[0.9375rem] text-foreground-600 leading-relaxed line-clamp-6">
+            <p className="mt-3 text-sm md:text-[0.9375rem] text-foreground-600 leading-relaxed line-clamp-[12]">
               {introText}
             </p>
           )}
           <p className="mt-3 text-sm text-foreground-700 leading-relaxed">{t("about.missionNote")}</p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-foreground-700">
+            <span>{t("about.badgeAccreditation")}</span>
+            <span className="h-3.5 w-px bg-[#e5e5e5]" aria-hidden="true" />
+            <span>{t("about.badgeProfessors")}</span>
+            <span className="h-3.5 w-px bg-[#e5e5e5]" aria-hidden="true" />
+            <span>{t("about.badgeInternational")}</span>
+          </div>
           <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to={`/about/${SLUG}`} className="uni-btn cursor-pointer">
               {t("about.readMore")}
