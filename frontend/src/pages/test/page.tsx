@@ -178,33 +178,35 @@ export default function TestPage() {
   const score = quizQuestions.reduce((sum, q, i) => sum + (answers[i] === q.correctOptionIndex ? 1 : 0), 0);
   const scorePercent = quizQuestions.length > 0 ? Math.round((score / quizQuestions.length) * 100) : 0;
 
+  const banner = (
+    <div className="bg-primary-950 text-white p-4 md:p-5 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-4 w-full">
+      <div className="relative z-10 min-w-0">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-2.5">
+          <i className="ri-hexagon-line" />
+          {t("test.bannerEyebrow")}
+        </span>
+        <h2 className="font-heading text-lg md:text-xl font-bold text-white leading-snug">{t("test.bannerTitle")}</h2>
+        <p className="mt-1 text-xs md:text-sm text-white/70">{t("test.pickSubjectHint")}</p>
+      </div>
+      {subjects && subjects.length > 0 && (
+        <div className="relative z-10 flex items-center gap-2.5 flex-shrink-0">
+          <span className="w-10 h-10 shrink-0 rounded-xl bg-secondary-400 text-primary-950 flex items-center justify-center">
+            <i className="ri-file-list-3-line text-lg" />
+          </span>
+          <div>
+            <p className="font-heading text-lg font-bold text-white leading-none">{subjects.length}</p>
+            <p className="text-xs text-white/60 mt-0.5">{t("test.bannerSubjectsLabel")}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <div className="text-foreground-950">
-      <PageHeader title={t("nav.test")} compact />
+      <PageHeader title={t("nav.test")} compact aside={banner} />
 
-      <div className="section-container pb-5 md:pb-6">
-        <div className="-mt-2 mb-5 bg-primary-950 text-white p-5 md:p-6 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-5">
-          <div className="relative z-10 min-w-0">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-3">
-              <i className="ri-hexagon-line" />
-              {t("test.bannerEyebrow")}
-            </span>
-            <h2 className="font-heading text-xl md:text-2xl font-bold text-white leading-snug">{t("test.bannerTitle")}</h2>
-            <p className="mt-1.5 text-sm text-white/70">{t("test.pickSubjectHint")}</p>
-          </div>
-          {subjects && subjects.length > 0 && (
-            <div className="relative z-10 flex items-center gap-3 flex-shrink-0">
-              <span className="w-11 h-11 shrink-0 rounded-xl bg-secondary-400 text-primary-950 flex items-center justify-center">
-                <i className="ri-file-list-3-line text-xl" />
-              </span>
-              <div>
-                <p className="font-heading text-xl font-bold text-white leading-none">{subjects.length}</p>
-                <p className="text-xs text-white/60 mt-0.5">{t("test.bannerSubjectsLabel")}</p>
-              </div>
-            </div>
-          )}
-        </div>
-
+      <div className="section-container section-pad">
         <div className="page-card p-5 md:p-6 overflow-hidden">
           {stage === "picking" && (
             <>
