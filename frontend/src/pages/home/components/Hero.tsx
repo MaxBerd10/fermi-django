@@ -228,6 +228,16 @@ export default function Hero() {
                   type="button"
                   disabled
                   title={t("hero.virtualTourSoon")}
+                  aria-label={`${t("about.watchVideo")} — ${t("hero.virtualTourSoon")}`}
+                  className="hero-v2__btn-text disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  <i className="ri-play-circle-line text-lg" aria-hidden />
+                  {t("about.watchVideo")}
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  title={t("hero.virtualTourSoon")}
                   aria-label={`${t("hero.virtualTour")} — ${t("hero.virtualTourSoon")}`}
                   className="hero-v2__btn-text disabled:opacity-40 disabled:cursor-not-allowed"
                 >
