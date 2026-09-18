@@ -37,7 +37,7 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
           <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
         </p>
 
-        <div className="flex flex-wrap items-center justify-between gap-5">
+        <div className="flex flex-wrap items-center gap-5">
           <div className="min-w-0">
             <h1 className="font-heading text-[clamp(1.45rem,3vw,2.15rem)] font-extrabold text-[#0a0a0a] leading-[1.15] tracking-tight max-w-4xl">
               {title}
