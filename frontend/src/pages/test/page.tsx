@@ -35,6 +35,13 @@ export default function TestPage() {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [pdfError, setPdfError] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+
+  const filteredSubjects = subjects?.filter((s) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return true;
+    return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
+  });
 
   useEffect(() => {
     let cancelled = false;
@@ -194,8 +201,24 @@ export default function TestPage() {
               {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("test.noContent")}</p>}
 
               {subjects && subjects.length > 0 && (
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {subjects.map((s, i) => (
+                <>
+                  <div className="relative mb-4">
+                    <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
+                    <input
+                      type="search"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      placeholder={t("test.searchPlaceholder")}
+                      className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
+                    />
+                  </div>
+
+                  {filteredSubjects && filteredSubjects.length === 0 && (
+                    <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
+                  )}
+
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {filteredSubjects?.map((s, i) => (
                     <button
                       key={s.subject_code}
                       type="button"
@@ -220,7 +243,8 @@ export default function TestPage() {
                       </div>
                     </button>
                   ))}
-                </div>
+                  </div>
+                </>
               )}
             </>
           )}
