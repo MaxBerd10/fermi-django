@@ -50,7 +50,7 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
             )}
           </div>
 
-          {aside && <div className="flex-1 min-w-[280px] max-w-xl">{aside}</div>}
+          {aside && <div className="flex-1 min-w-[280px]">{aside}</div>}
         </div>
 
         <div className="page-header__rule mt-6" aria-hidden />
