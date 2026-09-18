@@ -1751,6 +1751,7 @@ export default {
   "ai.quick2": "Fakultetlar",
   "ai.quick3": "HEMIS",
   "ai.quick4": "Manzil va telefon",
+  "ai.contactAnswer": "📍 Manzil: {{address}}\n📞 Telefon: {{phone}}\n✉️ Email: {{email}}",
   "ai.ask": "Soʻrash",
   "ai.pathfinderTitle": "AI shaxsiy tavsiya",
   "ai.pathfinderSub": "Qiziqishingizni yozing — PathFinder + AI mos yoʻnalish va keyingi qadamlarni beradi.",

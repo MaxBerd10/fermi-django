@@ -4,10 +4,28 @@ import { useTranslation } from "react-i18next";
 import { aiChat, type AiSource } from "@/api/ai";
 import { goAiHref, renderAiText } from "@/components/ai/renderAiText";
 import { FEATURES } from "@/lib/featureFlags";
+import { getSettings } from "@/api/settings";
 
 type Msg = { role: "user" | "assistant"; content: string; sources?: AiSource[] };
 
 const QUICK = ["ai.quick1", "ai.quick2", "ai.quick3", "ai.quick4"] as const;
+
+// Address/phone/contact questions are the single most common thing asked here (see
+// ai.quick4) and the answer never needs an LLM -- it's the same handful of facts
+// Footer.tsx already shows, sourced from the real (admin-editable) settings API. Answer
+// these directly, with no dependency on FEATURES.ai/an OpenAI key, so this keeps working
+// even while the AI backend itself is unconfigured.
+const CONTACT_KEYWORDS = [
+  "manzil", "joylash", "qayerda", "qayerd", "telefon", "raqam", "bog'lan", "boglan",
+  "aloqa", "pochta", "email", "e-mail",
+  "адрес", "где наход", "телефон", "номер", "связ", "контакт", "почта",
+  "address", "located", "location", "phone", "number", "contact", "reach you", "e-mail",
+];
+
+function isContactQuery(q: string): boolean {
+  const lower = q.toLowerCase();
+  return CONTACT_KEYWORDS.some((k) => lower.includes(k));
+}
 
 export default function AiChatWidget() {
   const { t, i18n } = useTranslation();
@@ -19,7 +37,18 @@ export default function AiChatWidget() {
   const [messages, setMessages] = useState<Msg[]>([
     { role: "assistant", content: t("ai.welcome") },
   ]);
+  const [contact, setContact] = useState<{ address: string; phone: string; email: string } | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    getSettings().then((s) => {
+      setContact({
+        address: s.setting?.address?.trim() || "Farg'ona sh., Yangi Turon, 2-a uy",
+        phone: s.setting?.phone?.trim() || "+998 95 062-23-45, +998 95 063-23-45",
+        email: s.setting?.email?.trim() || "info@fjsti.uz, fmioz@mail.ru",
+      });
+    });
+  }, []);
 
   useEffect(() => {
     if (open) bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -42,6 +71,13 @@ export default function AiChatWidget() {
     const next: Msg[] = [...messages, { role: "user", content: q }];
     setMessages(next);
     setInput("");
+
+    if (contact && isContactQuery(q)) {
+      const reply = t("ai.contactAnswer", contact);
+      setMessages((m) => [...m, { role: "assistant", content: reply }]);
+      return;
+    }
+
     if (!FEATURES.ai) {
       setError(t("ai.error"));
       return;

@@ -1751,6 +1751,7 @@ export default {
   "ai.quick2": "Faculties",
   "ai.quick3": "HEMIS",
   "ai.quick4": "Address & phone",
+  "ai.contactAnswer": "📍 Address: {{address}}\n📞 Phone: {{phone}}\n✉️ Email: {{email}}",
   "ai.ask": "Ask",
   "ai.pathfinderTitle": "AI personal recommendation",
   "ai.pathfinderSub": "Describe your interest — PathFinder + AI suggests a track and next steps.",
