@@ -69,6 +69,35 @@ running and pointed at this one (`FERMI_API_BASE_URL=http://127.0.0.1:8000`,
 already the default in `frontend/deploy/fjsti-web.env.example`) before nginx
 is put in front of either.
 
+## Seeding production with the real content
+
+Months of real, fully-translated content (every department, faculty, staff
+bio, news post, and ~790 static CMS pages) live only in the local dev
+Postgres database — none of it is in git, since it's data, not code. A
+fresh production database starts empty; it needs this content restored
+into it once before the site is actually usable.
+
+1. Get a dump of the dev database (already sitting in this repo's working
+   directory as `fermi-database-backup.dump` if you're reading this right
+   after a Claude session made one, or take a fresh one yourself):
+   ```bash
+   pg_dump -h <dev-db-host> -p <dev-db-port> -U fermi -d fermi -F c -f fermi-database-backup.dump
+   ```
+2. On the server, **before** running `manage.py migrate` for the first
+   time (see "First deployment" above), restore this dump into the
+   freshly-created empty production database:
+   ```bash
+   pg_restore --no-owner -h 127.0.0.1 -U <prod DB_USER> -d <prod DB_NAME> fermi-database-backup.dump
+   ```
+   The dump already contains a fully-migrated schema plus all the real
+   content — this replaces the need to run `migrate` against an empty
+   database. Run `manage.py migrate` once afterward anyway, to apply
+   anything added since the dump was taken.
+3. The dump also carries the local-dev admin account
+   (`admin`/`fermi-admin-2026`) — don't leave that live in production.
+   Either `manage.py changepassword admin` to a real password, or delete
+   it and create a proper one with `createsuperuser` (see above) instead.
+
 ## Database backups
 
 `deploy/backup-db.sh` runs `pg_dump` (custom format) into `/var/backups/fermi-django`
