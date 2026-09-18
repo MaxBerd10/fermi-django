@@ -371,7 +371,7 @@ export default function Navbar() {
                   <i className="ri-arrow-down-s-line text-[10px] opacity-60" />
                 </button>
                 {showLangMenu && (
-                  <div className="absolute right-0 top-full mt-1.5 z-20 min-w-[148px] frosted-glass py-1.5 shadow-xl overflow-hidden">
+                  <div className="absolute right-0 top-full mt-1.5 z-20 min-w-[148px] nav-dropdown-panel py-1.5 shadow-xl overflow-hidden">
                     {(["uz", "ru", "en"] as const).map((l) => (
                       <button
                         key={l}
