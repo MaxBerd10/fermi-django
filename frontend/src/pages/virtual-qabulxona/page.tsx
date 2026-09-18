@@ -193,7 +193,6 @@ export default function VirtualQabulxonaPage() {
                     className="w-full px-4 py-3 page-input text-sm focus:outline-none focus:border-primary-500 resize-y"
                     placeholder={t("vq.messagePlaceholder")}
                   />
-                  {FEATURES.ai && (
                   <AiPanel title={t("ai.receptionTitle")} subtitle={t("ai.receptionSub")} className="mt-3">
                     <div className="flex flex-wrap gap-2">
                       <button
@@ -202,8 +201,12 @@ export default function VirtualQabulxonaPage() {
                         onClick={async () => {
                           const text = textRef.current?.value || "";
                           if (!text.trim()) return;
-                          setAiLoading(true);
                           setAiError("");
+                          if (!FEATURES.ai) {
+                            setAiError(t("ai.error"));
+                            return;
+                          }
+                          setAiLoading(true);
                           try {
                             const res = await aiReception(text, i18n.language);
                             setAiHelp(res);
@@ -247,7 +250,6 @@ export default function VirtualQabulxonaPage() {
                       </div>
                     )}
                   </AiPanel>
-                  )}
                 </div>
 
                 <div>

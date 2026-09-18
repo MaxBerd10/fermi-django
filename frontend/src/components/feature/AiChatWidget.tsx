@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { aiChat, type AiSource } from "@/api/ai";
 import { goAiHref, renderAiText } from "@/components/ai/renderAiText";
+import { FEATURES } from "@/lib/featureFlags";
 
 type Msg = { role: "user" | "assistant"; content: string; sources?: AiSource[] };
 
@@ -41,6 +42,10 @@ export default function AiChatWidget() {
     const next: Msg[] = [...messages, { role: "user", content: q }];
     setMessages(next);
     setInput("");
+    if (!FEATURES.ai) {
+      setError(t("ai.error"));
+      return;
+    }
     setLoading(true);
     try {
       const res = await aiChat(

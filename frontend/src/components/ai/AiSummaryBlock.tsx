@@ -20,8 +20,13 @@ export default function AiSummaryBlock({
   const [error, setError] = useState("");
 
   async function run() {
-    setLoading(true);
     setError("");
+    if (!FEATURES.ai) {
+      setError(t("ai.error"));
+      setOpen(true);
+      return;
+    }
+    setLoading(true);
     try {
       const res = await aiSummarize(title, content, i18n.language);
       setSummary(res.summary);
@@ -32,8 +37,6 @@ export default function AiSummaryBlock({
       setLoading(false);
     }
   }
-
-  if (!FEATURES.ai) return null;
 
   return (
     <div className={className}>

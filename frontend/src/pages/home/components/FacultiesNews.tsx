@@ -178,7 +178,6 @@ export default function FacultiesNews() {
               </Link>
             </div>
 
-            {FEATURES.ai && (
             <AiPanel
               className="mt-auto"
               title={t("ai.facultyTitle")}
@@ -195,8 +194,12 @@ export default function FacultiesNews() {
                 type="button"
                 disabled={advisorLoading || !advisorQ.trim()}
                 onClick={async () => {
-                  setAdvisorLoading(true);
                   setAdvisorError("");
+                  if (!FEATURES.ai) {
+                    setAdvisorError(t("ai.error"));
+                    return;
+                  }
+                  setAdvisorLoading(true);
                   try {
                     setAdvisor(await aiFaculty(advisorQ, i18n.language));
                   } catch (e) {
@@ -235,7 +238,6 @@ export default function FacultiesNews() {
                 </div>
               )}
             </AiPanel>
-            )}
           </Reveal>
 
           {/* Right: compact 2×3 cards */}

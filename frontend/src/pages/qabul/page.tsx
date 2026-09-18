@@ -130,7 +130,6 @@ export default function QabulPage() {
       </div>
 
       <main className="section-container section-pad space-y-8 md:space-y-10">
-        {FEATURES.ai && (
         <Reveal>
           <AiPanel title={t("ai.qabulTitle")} subtitle={t("ai.qabulSub")}>
             <div className="flex flex-col sm:flex-row gap-2">
@@ -144,8 +143,12 @@ export default function QabulPage() {
                 type="button"
                 disabled={aiLoading || !aiQ.trim()}
                 onClick={async () => {
-                  setAiLoading(true);
                   setAiError("");
+                  if (!FEATURES.ai) {
+                    setAiError(t("ai.error"));
+                    return;
+                  }
+                  setAiLoading(true);
                   try {
                     const res = await aiQabul(aiQ, i18n.language);
                     setAiReply(res.reply);
@@ -188,7 +191,6 @@ export default function QabulPage() {
             )}
           </AiPanel>
         </Reveal>
-        )}
 
         <Reveal as="section">
           <div className="text-center mb-5 md:mb-6">

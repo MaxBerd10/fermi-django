@@ -68,8 +68,12 @@ export default function PathFinder() {
 
   async function runAiAdvice() {
     if (!freeText.trim() && !interest) return;
-    setAiLoading(true);
     setAiError("");
+    if (!FEATURES.ai) {
+      setAiError(t("ai.error"));
+      return;
+    }
+    setAiLoading(true);
     try {
       const res = await aiPathfinder({
         freeText,
@@ -121,7 +125,6 @@ export default function PathFinder() {
           </div>
         </Reveal>
 
-        {FEATURES.ai && (
         <Reveal delay={60}>
           <AiPanel title={t("ai.pathfinderTitle")} subtitle={t("ai.pathfinderSub")} className="mb-5">
             <div className="flex flex-col sm:flex-row gap-2">
@@ -143,7 +146,6 @@ export default function PathFinder() {
             {aiError && <p className="mt-2 text-xs text-red-600">{aiError}</p>}
           </AiPanel>
         </Reveal>
-        )}
 
         <Reveal delay={80}>
           <div className="rounded-2xl bg-white/95 border border-[#e5e5e5]/80 shadow-sm overflow-hidden">
