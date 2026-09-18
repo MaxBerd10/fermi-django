@@ -74,7 +74,7 @@ export default function KeyslarPage() {
       <PageHeader title={t("nav.keyslar")} compact />
 
       <div className="section-container section-pad">
-        <div className="page-card p-5 md:p-6 max-w-5xl mx-auto">
+        <div className="page-card p-5 md:p-6">
           {stage === "picking" && (
             <>
               <h2 className="font-heading text-lg font-bold text-foreground-900 mb-1">{t("keyslar.pickSubject")}</h2>
@@ -93,7 +93,7 @@ export default function KeyslarPage() {
 
               {subjects && subjects.length > 0 && (
                 <>
-                  <div className="relative mb-4">
+                  <div className="relative mb-4 max-w-md">
                     <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
                     <input
                       type="search"
@@ -108,7 +108,7 @@ export default function KeyslarPage() {
                     <p className="text-sm text-foreground-500">{t("keyslar.noSearchResults")}</p>
                   )}
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {filteredSubjects?.map((s, i) => (
                     <button
                       key={s.subject_code}
