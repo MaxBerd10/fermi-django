@@ -183,7 +183,7 @@ export default function TestPage() {
       <PageHeader title={t("nav.test")} compact />
 
       <div className="section-container section-pad">
-        <div className="page-card p-5 md:p-6 max-w-3xl mx-auto overflow-hidden">
+        <div className="page-card p-5 md:p-6 max-w-5xl mx-auto overflow-hidden">
           {stage === "picking" && (
             <>
               <h2 className="font-heading text-lg font-bold text-foreground-900 mb-1">{t("test.pickSubject")}</h2>
@@ -217,7 +217,7 @@ export default function TestPage() {
                     <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
                   )}
 
-                  <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {filteredSubjects?.map((s, i) => (
                     <button
                       key={s.subject_code}
@@ -257,7 +257,7 @@ export default function TestPage() {
           )}
 
           {stage === "study" && subject && (
-            <div>
+            <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-between mb-1">
                 <div>
                   <div className="font-heading font-bold text-foreground-900">{subject.subject_name}</div>
@@ -342,7 +342,7 @@ export default function TestPage() {
               const content = pickLang(q, lang);
               const isAnswered = selected !== null;
               return (
-                <div>
+                <div className="max-w-3xl mx-auto">
                   <div className="h-1.5 w-full rounded-full bg-[#eee] overflow-hidden mb-4">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-700 transition-all duration-300"
