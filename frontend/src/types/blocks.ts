@@ -36,6 +36,12 @@ export interface HeadingBlockData {
 }
 export interface ParagraphBlockData {
   text: string;
+  /** Old-CMS "kafedra"/faculty content authored its pseudo-headings as a bold
+   * paragraph (<p><strong>) rather than a real <h2..6> — the legacy import's
+   * bold-text heuristic over-promoted these to heading blocks. `bold: true`
+   * marks a block recovered back to its true paragraph role, rendered as
+   * bold inline text at body size/weight, not as a section heading. */
+  bold?: boolean;
 }
 export interface ListBlockData {
   items: string[];

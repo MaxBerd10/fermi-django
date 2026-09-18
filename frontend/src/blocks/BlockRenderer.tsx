@@ -41,7 +41,13 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
       return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2>{block.data.text}</h2>;
 
     case "paragraph":
-      return <p>{block.data.text}</p>;
+      return block.data.bold ? (
+        <p>
+          <strong>{block.data.text}</strong>
+        </p>
+      ) : (
+        <p>{block.data.text}</p>
+      );
 
     case "list":
       return (
