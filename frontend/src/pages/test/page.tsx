@@ -182,8 +182,8 @@ export default function TestPage() {
     <div className="text-foreground-950">
       <PageHeader title={t("nav.test")} compact />
 
-      <div className="section-container section-pad">
-        <div className="mb-5 bg-primary-950 text-white p-5 md:p-6 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-5">
+      <div className="section-container pb-5 md:pb-6">
+        <div className="-mt-2 mb-5 bg-primary-950 text-white p-5 md:p-6 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-5">
           <div className="relative z-10 min-w-0">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-3">
               <i className="ri-hexagon-line" />
