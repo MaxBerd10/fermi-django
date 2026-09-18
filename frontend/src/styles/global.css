@@ -283,6 +283,18 @@ button.page-card:hover {
   box-sizing: border-box;
 }
 
+/* The desktop nav row packs the most items of any section-container user, so it gets
+   its own (narrower) side padding here rather than sharing --section-px with the rest
+   of the page -- freeing up room for the priority-nav items before they overflow into
+   "Yana". */
+@media (min-width: 1024px) {
+  .nav-glass .section-container,
+  .nav-glass-clear .section-container {
+    padding-left: 0.875rem;
+    padding-right: 1.25rem;
+  }
+}
+
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
