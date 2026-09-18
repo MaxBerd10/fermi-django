@@ -89,7 +89,14 @@ def _block_entries(block: ContentBlock):
 def _staff_entries(staff: StaffMember):
     for field in _STAFF_FIELDS:
         uz_value = getattr(staff, f"{field}_uz")
-        missing = [lang for lang in ("ru", "en") if getattr(staff, f"{field}_{lang}") == uz_value]
+        # A language counts as missing if it's a fallback copy of uz (never
+        # translated) OR blank while uz is populated (never even attempted) —
+        # both mean the ru/en reader sees no real content for this field.
+        missing = [
+            lang
+            for lang in ("ru", "en")
+            if getattr(staff, f"{field}_{lang}") in (uz_value, "")
+        ]
         if missing and uz_value:
             yield field, uz_value, missing
 

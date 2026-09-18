@@ -125,7 +125,7 @@ export default {
   "department.fallbackNote": "Страница кафедры временно обновляется по техническим причинам. Ниже представлена информация о заведующем кафедрой.",
   "documents.fallbackTitle": "Документы",
   "documents.empty": "В этом разделе пока нет документов.",
-  "admissionResults.fallbackTitle": "Результаты приёма",
+  "admissionResults.fallbackTitle": "Результаты тестирования",
   "admissionResults.empty": "Результаты пока не опубликованы.",
   "admissionResults.backToAdmission": "Вернуться на страницу приёма",
   "admissionResults.fileCount": "{{count}} официальных PDF-документов",

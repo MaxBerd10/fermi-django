@@ -125,7 +125,7 @@ export default {
   "department.fallbackNote": "This department page is temporarily being updated for technical reasons. Information about the head of department is shown below.",
   "documents.fallbackTitle": "Documents",
   "documents.empty": "There are no documents in this section yet.",
-  "admissionResults.fallbackTitle": "Admission results",
+  "admissionResults.fallbackTitle": "Test results",
   "admissionResults.empty": "Results have not been published yet.",
   "admissionResults.backToAdmission": "Back to the admission page",
   "admissionResults.fileCount": "{{count}} official PDF documents",

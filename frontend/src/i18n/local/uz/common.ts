@@ -125,7 +125,7 @@ export default {
   "department.fallbackNote": "Kafedra sahifasi vaqtincha texnik sabablarga koʻra yangilanmoqda. Quyida kafedra mudiri haqidagi maʻlumotlar koʻrsatilgan.",
   "documents.fallbackTitle": "Hujjatlar",
   "documents.empty": "Bu boʻlimda hozircha hujjatlar yoʻq.",
-  "admissionResults.fallbackTitle": "Qabul natijalari",
+  "admissionResults.fallbackTitle": "Test natijalari",
   "admissionResults.empty": "Hozircha natijalar eʻlon qilinmagan.",
   "admissionResults.backToAdmission": "Qabul sahifasiga qaytish",
   "admissionResults.fileCount": "{{count}} ta rasmiy PDF hujjat",
