@@ -183,12 +183,31 @@ export default function TestPage() {
       <PageHeader title={t("nav.test")} compact />
 
       <div className="section-container section-pad">
+        <div className="mb-5 bg-primary-950 text-white p-5 md:p-6 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-5">
+          <div className="relative z-10 min-w-0">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-3">
+              <i className="ri-hexagon-line" />
+              {t("test.bannerEyebrow")}
+            </span>
+            <h2 className="font-heading text-xl md:text-2xl font-bold text-white leading-snug">{t("test.bannerTitle")}</h2>
+            <p className="mt-1.5 text-sm text-white/70">{t("test.pickSubjectHint")}</p>
+          </div>
+          {subjects && subjects.length > 0 && (
+            <div className="relative z-10 flex items-center gap-3 flex-shrink-0">
+              <span className="w-11 h-11 shrink-0 rounded-xl bg-secondary-400 text-primary-950 flex items-center justify-center">
+                <i className="ri-file-list-3-line text-xl" />
+              </span>
+              <div>
+                <p className="font-heading text-xl font-bold text-white leading-none">{subjects.length}</p>
+                <p className="text-xs text-white/60 mt-0.5">{t("test.bannerSubjectsLabel")}</p>
+              </div>
+            </div>
+          )}
+        </div>
+
         <div className="page-card p-5 md:p-6 overflow-hidden">
           {stage === "picking" && (
             <>
-              <h2 className="font-heading text-lg font-bold text-foreground-900 mb-1">{t("test.pickSubject")}</h2>
-              <p className="text-sm text-foreground-500 mb-5">{t("test.pickSubjectHint")}</p>
-
               {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
               {subjects === null && !error && (
