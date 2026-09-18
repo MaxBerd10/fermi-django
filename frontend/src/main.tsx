@@ -3,6 +3,10 @@ import './i18n'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import './styles/global.css'
+// Navbar's dropdown/flyout panels use .nav-dropdown-panel (defined here) sitewide, so
+// this needs to load globally rather than only on the CMS-content pages that otherwise
+// pull it in via RichContent.tsx.
+import './styles/cms-content.css'
 import App from './App.tsx'
 import ErrorBoundary from './components/shared/ErrorBoundary.tsx'
 
