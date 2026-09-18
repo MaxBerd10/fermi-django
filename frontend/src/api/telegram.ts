@@ -22,10 +22,10 @@ async function readEnvelope<T>(response: Response): Promise<T> {
 }
 
 export async function listTelegramNews(): Promise<NewsArticle[]> {
-  // No Telegram bot session configured for this deployment — every call site
-  // already treats "no telegram items" as the normal case (that's what
-  // happens today whenever the real feed is slow/down), so this needs no
-  // page-level changes, just returning the same empty-success shape.
+  // Every call site already treats "no telegram items" as the normal case
+  // (that's what happens whenever the real feed is slow/down), so flipping
+  // FEATURES.telegram off needs no page-level changes — just returning the
+  // same empty-success shape.
   if (!FEATURES.telegram) return [];
   const lang = activeLang();
   const controller = new AbortController();
