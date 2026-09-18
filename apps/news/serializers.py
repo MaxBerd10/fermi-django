@@ -25,7 +25,7 @@ class NewsPostListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewsPost
-        fields = ["id", "slug", "title", "excerpt", "cover", "category", "published_at"]
+        fields = ["id", "slug", "title", "excerpt", "cover", "category", "published_at", "view_count"]
 
     def get_title(self, obj):
         return {"uz": obj.title_uz, "ru": obj.title_ru, "en": obj.title_en}

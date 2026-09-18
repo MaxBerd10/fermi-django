@@ -31,6 +31,7 @@ interface DjangoNewsListItem {
   cover: DjangoImage | null;
   category: DjangoNewsCategory | null;
   published_at: string;
+  view_count: number;
 }
 interface DjangoNewsDetail extends DjangoNewsListItem {
   page: { id: number; slug: string; blocks: ContentBlock[] };
@@ -44,7 +45,7 @@ function mapListItem(post: DjangoNewsListItem): NewsArticle {
     img: post.cover?.file ?? "",
     slug: post.slug,
     date: post.published_at,
-    seen: 0, // Django doesn't track view counts today.
+    seen: post.view_count,
     category: post.category
       ? { id: post.category.id, title: post.category.name, slug: post.category.slug }
       : null,

@@ -59,3 +59,16 @@ def test_news_list_orders_newest_first(client, db):
     res = client.get("/api/v1/news/")
     slugs = [item["slug"] for item in res.data["results"]]
     assert slugs == ["new-post", "old-post"]
+
+
+def test_news_detail_increments_view_count(client, news_post):
+    assert news_post.view_count == 0
+
+    res = client.get(f"/api/v1/news/{news_post.slug}/")
+    assert res.data["view_count"] == 1
+
+    res = client.get(f"/api/v1/news/{news_post.slug}/")
+    assert res.data["view_count"] == 2
+
+    news_post.refresh_from_db()
+    assert news_post.view_count == 2

@@ -35,6 +35,7 @@ class NewsPost(models.Model):
 
     published_at = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
+    view_count = models.PositiveIntegerField(default=0)
 
     class Meta:
         ordering = ["-published_at"]
