@@ -93,6 +93,7 @@ export interface Leader {
   id: number;
   name: string;
   position: string;
+  isHead: boolean;
   /** Short "what they do" line — apps.departments.StaffMember.activity_*, blank until backfilled. */
   activity: string;
   /** The full bio — apps.departments.StaffMember.bio_*. */

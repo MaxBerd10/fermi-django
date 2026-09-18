@@ -43,8 +43,9 @@ export default function DepartmentPage() {
         const detail = await getDepartment(slug!, resolvedMenuId);
         if (cancelled) return;
         setDept(detail);
-        if (detail.leaders?.[0]) {
-          setHead(detail.leaders[0]);
+        const headLeader = detail.leaders?.find((l) => l.isHead) ?? detail.leaders?.[0];
+        if (headLeader) {
+          setHead(headLeader);
         }
         return;
       } catch (e) {

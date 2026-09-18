@@ -41,6 +41,7 @@ function mapStaffToLeader(staff: DjangoStaffMember): Leader {
     id: staff.id,
     name: staff.full_name,
     position: staff.title,
+    isHead: staff.is_head,
     activity: staff.activity,
     biography: staff.bio,
     receptionDays: staff.reception_days,
