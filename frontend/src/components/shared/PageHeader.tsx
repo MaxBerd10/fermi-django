@@ -21,7 +21,11 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
       <div className="page-header__glow" aria-hidden />
       <div className="page-header__grid" aria-hidden />
 
-      <div className={`section-container relative z-10 ${compact ? "pt-4 pb-4 sm:pt-5 sm:pb-4 md:pt-6 md:pb-5" : "pt-4 pb-6 sm:pt-5 sm:pb-6 md:pt-6 md:pb-8"}`}>
+      <div
+        className={`section-container relative z-10 ${
+          aside ? "pt-4 pb-1 sm:pt-4 sm:pb-1 md:pt-5 md:pb-1" : compact ? "pt-4 pb-4 sm:pt-5 sm:pb-4 md:pt-6 md:pb-5" : "pt-4 pb-6 sm:pt-5 sm:pb-6 md:pt-6 md:pb-8"
+        }`}
+      >
         <nav
           className="inline-flex flex-wrap items-center gap-2 text-[10px] font-semibold tracking-wide uppercase mb-2.5 px-2.5 py-1 rounded-full bg-white/95 border border-[#e5e5e5]/80 text-[#555555] shadow-sm max-w-full"
           aria-label="Breadcrumb"
@@ -33,13 +37,17 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
           <span className="text-[#0a1158]">{breadcrumb || title}</span>
         </nav>
 
-        <p className="mb-1.5">
-          <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
-        </p>
+        <div className={aside ? "grid gap-4 lg:grid-cols-[max-content_minmax(0,1fr)] lg:items-start lg:gap-3" : undefined}>
+          <div>
+            <p className="mb-1.5">
+              <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
+            </p>
 
-        <div className="flex flex-wrap items-center gap-5">
-          <div className="min-w-0">
-            <h1 className="font-heading text-[clamp(1.45rem,3vw,2.15rem)] font-extrabold text-[#0a0a0a] leading-[1.15] tracking-tight max-w-4xl">
+            <h1
+              className={`font-heading font-extrabold text-[#0a0a0a] leading-[1.05] tracking-tight max-w-4xl ${
+                aside ? "text-[clamp(2.35rem,4.2vw,4rem)]" : "text-[clamp(1.45rem,3vw,2.15rem)]"
+              }`}
+            >
               {title}
             </h1>
 
@@ -50,7 +58,7 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
             )}
           </div>
 
-          {aside && <div className="flex-1 min-w-[280px]">{aside}</div>}
+          {aside && <div className="md:min-w-0">{aside}</div>}
         </div>
 
         <div className="page-header__rule mt-6" aria-hidden />

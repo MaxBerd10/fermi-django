@@ -184,29 +184,35 @@ export default function TestPage() {
   const scorePercent = quizQuestions.length > 0 ? Math.round((score / quizQuestions.length) * 100) : 0;
 
   const banner = (
-    <div className="bg-primary-950 text-white p-4 md:p-5 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-4 w-full">
-      <div className="relative z-10 min-w-0">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-2.5">
-          <i className="ri-hexagon-line" />
-          {t("test.bannerEyebrow")}
-        </span>
-        <h2 className="font-heading text-lg md:text-xl font-bold text-white leading-snug">{t("test.bannerTitle")}</h2>
-        <p className="mt-1 text-xs md:text-sm text-white/70">{t("test.pickSubjectHint")}</p>
-      </div>
-      <div className="relative z-10 flex items-center gap-2 flex-shrink-0 flex-wrap">
-        {subjects && subjects.length > 0 && (
-          <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
-            <p className="font-heading text-lg font-bold text-white leading-none">{subjects.length}</p>
-            <p className="text-[11px] text-white/60 mt-1">{t("test.bannerSubjectsLabel")}</p>
-          </div>
-        )}
-        <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
-          <p className="font-heading text-lg font-bold text-white leading-none">{QUIZ_QUESTION_COUNT}</p>
-          <p className="text-[11px] text-white/60 mt-1">{t("test.bannerQuestionsLabel")}</p>
+    <div className="relative flex min-h-36 items-center overflow-hidden rounded-[1.35rem] bg-primary-950 px-6 py-5 text-white shadow-[0_14px_30px_rgba(10,17,88,0.18)] sm:px-7 sm:py-6 lg:px-10 xl:px-12">
+      <div className="absolute -right-8 -top-12 h-32 w-32 rounded-full border border-white/10" aria-hidden />
+      <div className="relative grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-5">
+        <div className="max-w-3xl">
+          <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-secondary-300">
+            <i className="ri-brain-line text-sm" />
+            {t("test.bannerEyebrow")}
+          </span>
+          <p className="mt-1.5 font-heading text-[clamp(1.55rem,2.15vw,2.25rem)] font-bold leading-tight">{t("test.bannerTitle")}</p>
+          <p className="mt-2 text-sm leading-relaxed text-white/75">{t("test.pickSubjectHint")}</p>
         </div>
-        <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
-          <p className="font-heading text-lg font-bold text-white leading-none">PDF</p>
-          <p className="text-[11px] text-white/60 mt-1">{t("test.bannerPdfLabel")}</p>
+        <div className="hidden shrink-0 grid-cols-3 gap-2 lg:grid">
+          {subjects && subjects.length > 0 && (
+            <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
+              <i className="ri-file-list-3-line text-lg text-secondary-300" />
+              <strong className="mt-1 block text-xl leading-none">{subjects.length}</strong>
+              <span className="mt-1 block text-[10px] text-white/70">{t("test.bannerSubjectsLabel")}</span>
+            </div>
+          )}
+          <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
+            <i className="ri-shuffle-line text-lg text-secondary-300" />
+            <strong className="mt-1 block text-xl leading-none">{QUIZ_QUESTION_COUNT}</strong>
+            <span className="mt-1 block text-[10px] text-white/70">{t("test.bannerQuestionsLabel")}</span>
+          </div>
+          <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
+            <i className="ri-file-pdf-2-line text-lg text-secondary-300" />
+            <strong className="mt-1 block text-xl leading-none">PDF</strong>
+            <span className="mt-1 block text-[10px] text-white/70">{t("test.bannerPdfLabel")}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -216,100 +222,106 @@ export default function TestPage() {
     <div className="text-foreground-950">
       <PageHeader title={t("nav.test")} compact aside={banner} />
 
-      <div className="section-container section-pad">
-        <div className="page-card p-5 md:p-6 overflow-hidden">
-          {stage === "picking" && (
-            <>
-              {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
+      <div className="section-container section-pad !pt-2 md:!pt-3">
+        {stage === "picking" && (
+          <div className="max-w-none mx-auto overflow-hidden">
+            {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
-              {subjects === null && !error && (
-                <div className="flex items-center gap-2 text-foreground-500 text-sm">
-                  <i className="ri-loader-4-line animate-spin" />
-                  {t("test.loading")}
-                </div>
-              )}
+            {subjects === null && !error && (
+              <div className="flex items-center gap-2 text-foreground-500 text-sm">
+                <i className="ri-loader-4-line animate-spin" />
+                {t("test.loading")}
+              </div>
+            )}
 
-              {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("test.noContent")}</p>}
+            {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("test.noContent")}</p>}
 
-              {subjects && subjects.length > 0 && (
-                <>
-                  <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                    <div className="relative flex-1 min-w-[220px]">
-                      <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
+            {subjects && subjects.length > 0 && (
+              <>
+                <section className="rounded-[1.35rem] border border-[#e5e8f1] bg-white p-3 shadow-[0_8px_28px_rgba(20,32,86,0.05)] sm:p-4">
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <label className="relative block flex-1">
+                      <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-lg text-[#64709c]" aria-hidden />
                       <input
                         type="search"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder={t("test.searchPlaceholder")}
-                        className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
+                        className="h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-primary-950 focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]"
                       />
+                    </label>
+                    <div className="flex rounded-xl border border-[#e4e7f0] bg-[#fafbfe] p-1 sm:w-auto">
+                      <button
+                        type="button"
+                        onClick={() => setSortBy("questions")}
+                        className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
+                          sortBy === "questions" ? "bg-primary-950 text-white shadow-sm" : "text-foreground-500 hover:text-primary-950"
+                        }`}
+                      >
+                        <i className="ri-bar-chart-grouped-line mr-1.5" />
+                        {t("test.sortByQuestions")}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setSortBy("alpha")}
+                        className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
+                          sortBy === "alpha" ? "bg-primary-950 text-white shadow-sm" : "text-foreground-500 hover:text-primary-950"
+                        }`}
+                      >
+                        <i className="ri-sort-alphabet-asc mr-1.5" />
+                        {t("test.sortByAlpha")}
+                      </button>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => setSortBy("questions")}
-                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
-                        sortBy === "questions"
-                          ? "bg-primary-950 border-primary-950 text-white"
-                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
-                      }`}
-                    >
-                      <i className="ri-bar-chart-2-line mr-1" />
-                      {t("test.sortByQuestions")}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSortBy("alpha")}
-                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
-                        sortBy === "alpha"
-                          ? "bg-primary-950 border-primary-950 text-white"
-                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
-                      }`}
-                    >
-                      <i className="ri-sort-asc mr-1" />
-                      {t("test.sortByAlpha")}
-                    </button>
                   </div>
+                </section>
 
-                  <p className="text-xs text-foreground-500 mb-3">
+                <div className="mt-6 mb-3 flex items-center justify-between gap-3">
+                  <p className="text-sm font-medium text-foreground-500">
                     {t("test.resultsCount", { count: filteredSubjects?.length ?? 0, total: subjects.length })}
                   </p>
+                </div>
 
-                  {filteredSubjects && filteredSubjects.length === 0 && (
-                    <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
-                  )}
+                {filteredSubjects && filteredSubjects.length === 0 && (
+                  <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
+                )}
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-                    {filteredSubjects?.map((s, i) => (
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {filteredSubjects?.map((s, i) => (
                     <button
                       key={s.subject_code}
                       type="button"
                       onClick={() => openSubject(s)}
-                      className="group text-left page-card p-4 hover:-translate-y-0.5 hover:shadow-md hover:border-primary-200 transition-all cursor-pointer"
+                      className="group relative flex min-h-48 flex-col overflow-hidden rounded-2xl border border-[#e4e7f0] bg-white p-4 text-left shadow-[0_6px_18px_rgba(20,32,86,0.04)] transition-all hover:-translate-y-0.5 hover:border-[#b8c5f4] hover:shadow-[0_14px_28px_rgba(20,32,86,0.10)] focus:outline-none focus:ring-2 focus:ring-secondary-400 focus:ring-offset-2 cursor-pointer"
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="w-11 h-11 shrink-0 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                      <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-[4rem] bg-[#f6f8ff] transition-colors group-hover:bg-[#edf1ff]" aria-hidden />
+                      <div className="relative flex items-start gap-3">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8edff] text-primary-950 transition-colors group-hover:bg-primary-950 group-hover:text-white">
                           <i className={`${SUBJECT_ICONS[i % SUBJECT_ICONS.length]} text-lg`} />
                         </div>
                         <div className="min-w-0">
-                          <div className="font-heading font-semibold text-foreground-900 mb-0.5 leading-snug">{s.subject_name}</div>
-                          {s.department_name && <div className="text-xs text-foreground-500 line-clamp-1">{s.department_name}</div>}
+                          <div className="font-heading text-[15px] font-bold leading-snug text-foreground-900 line-clamp-3">{s.subject_name}</div>
+                          {s.department_name && <div className="mt-1 text-xs text-foreground-500 line-clamp-1">{s.department_name}</div>}
                         </div>
                       </div>
-                      <div className="flex items-center justify-between mt-3">
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-50 text-primary-700 text-[11px] font-bold">
+                      <div className="relative mt-auto flex items-end justify-between gap-3 pt-4">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold text-primary-950">
                           <i className="ri-question-line" />
                           {t("test.questionsCount", { count: s.questions_total })}
                         </span>
-                        <i className="ri-arrow-right-line text-foreground-300 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e1e5ef] text-foreground-400 transition-all group-hover:border-primary-950 group-hover:bg-primary-950 group-hover:text-white group-hover:translate-x-0.5">
+                          <i className="ri-arrow-right-line" />
+                        </span>
                       </div>
                     </button>
                   ))}
-                  </div>
-                </>
-              )}
-            </>
-          )}
+                </div>
+              </>
+            )}
+          </div>
+        )}
 
+        {stage !== "picking" && (
+        <div className="page-card p-5 md:p-6 overflow-hidden">
           {stage === "loading" && (
             <div className="flex items-center justify-center gap-2 text-foreground-500 text-sm py-16">
               <i className="ri-loader-4-line animate-spin" />
@@ -514,6 +526,7 @@ export default function TestPage() {
             </div>
           )}
         </div>
+        )}
       </div>
     </div>
   );
