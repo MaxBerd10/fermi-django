@@ -21,6 +21,12 @@ const ALLOWED_ORIGINS = [
   "https://api.fermi.uz",
   "https://fjsti.uz",
   "https://www.fjsti.uz",
+  // fermi.uz itself (same-origin /media/ now that Django is behind it) and
+  // beta.fermi.uz, the pre-cutover test subdomain — keep in sync with
+  // src/lib/imageProxy.ts's mirrored list.
+  "https://fermi.uz",
+  "https://www.fermi.uz",
+  "https://beta.fermi.uz",
   // Django media host — keep in sync with src/lib/imageProxy.ts's mirrored list.
   "http://127.0.0.1:8000",
   "http://localhost:8000",

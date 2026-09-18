@@ -10,6 +10,12 @@ const ALLOWED_ORIGINS = [
   "https://api.fermi.uz",
   "https://fjsti.uz",
   "https://www.fjsti.uz",
+  // fermi.uz itself: Django now serves /media/ same-origin (no separate
+  // api.fermi.uz split) -- beta.fermi.uz is the pre-cutover test subdomain,
+  // kept alongside the real domain rather than swapped in for it.
+  "https://fermi.uz",
+  "https://www.fermi.uz",
+  "https://beta.fermi.uz",
   // Django media host (dev + same-box prod default) — keep in sync with the
   // mirrored allowlist in server/image-proxy.mjs, or "next-gen image format"
   // Lighthouse wins silently regress (this just passes the raw URL through).
