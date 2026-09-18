@@ -168,9 +168,18 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
       body = JSON.stringify(options.body);
     }
 
-    const token = getAccessToken();
-    if (token) {
-      headers["Authorization"] = `Bearer ${token}`;
+    // Only requests that explicitly opt in (admin.ts, auth/me, auth/logout, ...) send
+    // the stored token -- attaching it unconditionally to every request, including
+    // public ones nothing here needs auth for, meant a stale/expired admin-session
+    // token in localStorage broke every public page for that browser: Django's JWT
+    // authentication rejects a bad token with 401 before permission_classes (even
+    // AllowAny) ever runs, so "Given token not valid for any token type" started
+    // showing up site-wide instead of just failing the one admin call that needed it.
+    if (options.auth) {
+      const token = getAccessToken();
+      if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+      }
     }
 
     const response = await fetch(url, { method, headers, body });
