@@ -1,5 +1,4 @@
-﻿import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import BrandMark from "./BrandMark";
 
@@ -8,12 +7,9 @@ interface PageHeaderProps {
   breadcrumb?: string;
   description?: string;
   compact?: boolean;
-  /** Optional content rendered beside the title (e.g. a stat/CTA banner) -- sits to
-   * its right on wide screens and wraps below it on narrow ones. */
-  aside?: ReactNode;
 }
 
-export default function PageHeader({ title, breadcrumb, description, compact, aside }: PageHeaderProps) {
+export default function PageHeader({ title, breadcrumb, description, compact }: PageHeaderProps) {
   const { t } = useTranslation();
 
   return (
@@ -37,21 +33,15 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
           <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
         </p>
 
-        <div className="flex flex-wrap items-center justify-between gap-5">
-          <div className="min-w-0">
-            <h1 className="font-heading text-[clamp(1.45rem,3vw,2.15rem)] font-extrabold text-[#0a0a0a] leading-[1.15] tracking-tight max-w-4xl">
-              {title}
-            </h1>
+        <h1 className="font-heading text-[clamp(1.45rem,3vw,2.15rem)] font-extrabold text-[#0a0a0a] leading-[1.15] tracking-tight max-w-4xl">
+          {title}
+        </h1>
 
-            {description && (
-              <p className="mt-3 text-base text-[#444444] max-w-2xl leading-relaxed">
-                {description}
-              </p>
-            )}
-          </div>
-
-          {aside && <div className="flex-shrink-0">{aside}</div>}
-        </div>
+        {description && (
+          <p className="mt-3 text-base text-[#444444] max-w-2xl leading-relaxed">
+            {description}
+          </p>
+        )}
 
         <div className="page-header__rule mt-6" aria-hidden />
       </div>
