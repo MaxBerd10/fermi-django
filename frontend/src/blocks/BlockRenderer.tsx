@@ -63,8 +63,41 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     }
 
     case "image": {
-      const { image, alt } = block.data;
+      const { image, alt, style } = block.data;
       if (!image) return null;
+
+      if (style === "diagram") {
+        return (
+          <div className="cms-diagram-page">
+            <div className="cms-diagram-frame">
+              <a
+                href={optimizedImageUrl(image.file, 2400) || image.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cms-diagram-frame__btn"
+                aria-label={`${alt ?? image.alt_text} — Kattalashtirish`}
+              >
+                <img
+                  src={optimizedImageUrl(image.file, 1600) || image.file}
+                  alt={alt ?? image.alt_text}
+                  loading="eager"
+                  decoding="async"
+                  className="cms-diagram-frame__img"
+                />
+                <span className="cms-diagram-frame__overlay">
+                  <i className="ri-zoom-in-line text-3xl" aria-hidden="true" />
+                  <span>Kattalashtirish</span>
+                </span>
+              </a>
+            </div>
+            <p className="cms-diagram-hint">
+              <i className="ri-information-line" aria-hidden="true" />
+              Sxemani kattaroq ko'rish uchun rasm ustiga bosing yoki gorizontal scroll qiling.
+            </p>
+          </div>
+        );
+      }
+
       return (
         <figure className="mx-auto max-w-lg">
           <img
@@ -180,8 +213,23 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     }
 
     case "document": {
-      const { document, caption } = block.data;
+      const { document, caption, style } = block.data;
       if (!document) return null;
+
+      if (style === "button") {
+        return (
+          <a
+            href={toAbsoluteUrl(document.file)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cms-download-btn mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-[#0a1158] hover:bg-[#060a3d] text-white text-sm font-semibold transition-colors shadow-md"
+          >
+            <i className="ri-file-download-line" aria-hidden="true" />
+            Hujjatni yuklab olish
+          </a>
+        );
+      }
+
       return (
         <figure className="mx-auto max-w-lg">
           <a

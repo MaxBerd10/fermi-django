@@ -121,8 +121,8 @@
   margin: 0;
 }
 
-.prose-content a,
-.cms-article a {
+.prose-content a:not(.cms-download-btn),
+.cms-article a:not(.cms-download-btn) {
   color: #0a1158;
   text-decoration: underline;
   text-underline-offset: 3px;

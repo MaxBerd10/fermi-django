@@ -48,6 +48,10 @@ export interface ImageBlockData {
   image_id: number;
   alt?: string;
   image: LocalizedImage | null;
+  /** "diagram" renders the old site's large zoomable-frame + scroll-hint template
+   * (see .cms-diagram-* in cms-content.css) for big org-chart/scheme images instead
+   * of the default max-w-lg figure. */
+  style?: "diagram";
 }
 export interface VideoBlockData {
   video_id: number;
@@ -58,6 +62,9 @@ export interface DocumentBlockData {
   document_id: number;
   caption?: string;
   document: LocalizedDocument | null;
+  /** "button" renders a plain navy pill link ("Hujjatni yuklab olish" on the old
+   * site) instead of the default bordered document card. */
+  style?: "button";
 }
 export interface GalleryItem {
   image_id: number;
