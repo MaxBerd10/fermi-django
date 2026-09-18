@@ -9,7 +9,6 @@ import { getSettings } from "../../api/settings";
 import type { MenuNode } from "../../types/menu";
 import BrandMark from "../shared/BrandMark";
 import { normalizeYearLabels, normalizeMenuHref } from "@/lib/siteConstants";
-import { FEATURES } from "@/lib/featureFlags";
 
 const LOGO_IMG = "/images/logo.png?v=2";
 const MORE_ID = -1;
@@ -54,17 +53,12 @@ export default function Navbar() {
   const menu: MenuNode[] = useMemo(
     () => [
       ...apiMenu,
-      // /test and /keyslar (iMentor-backed) only appear once a real iMentor API
-      // key is configured (VITE_FEATURE_IMENTOR=true — see lib/featureFlags.ts).
-      // Without it, the routes still exist (router/config.tsx) but stay
-      // unreachable without a direct URL, rendering their existing "not
+      // /test and /keyslar match the real site's nav even though their iMentor
+      // backend isn't wired up yet (no API key configured -- see
+      // lib/featureFlags.ts) -- the pages render their existing "not
       // available" error state rather than a broken nav link.
-      ...(FEATURES.imentor
-        ? ([
-            { id: -101, title: t("nav.test"), urlType: "", urlValue: "", href: "/test", children: [] },
-            { id: -102, title: t("nav.keyslar"), urlType: "", urlValue: "", href: "/keyslar", children: [] },
-          ] as MenuNode[])
-        : []),
+      { id: -101, title: t("nav.test"), urlType: "", urlValue: "", href: "/test", children: [] },
+      { id: -102, title: t("nav.keyslar"), urlType: "", urlValue: "", href: "/keyslar", children: [] },
       // Ishga kiruvchilar uchun bilim baholash testi — alohida (test.fermi.uz) tizimda
       // joylashgan, shuning uchun tashqi havola sifatida (yangi tabda ochiladi).
       { id: -103, title: t("nav.vakansiyaTest"), urlType: "", urlValue: "", href: "https://test.fermi.uz/vakansiya", children: [] },
