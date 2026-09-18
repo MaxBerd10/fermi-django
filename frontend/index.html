@@ -31,6 +31,12 @@
          'self' with no 'unsafe-inline', which blocks an inline onload="..." attribute here
          entirely — it has to run from the bundled script instead). The <noscript> fallback
          covers clients with JS disabled. -->
+    <!-- `preload` bumps these to a high-priority fetch that starts immediately, alongside
+         the "print" trick above that keeps them non-render-blocking -- narrows the gap
+         between first paint and icons/fonts actually being ready, without reintroducing a
+         render-blocking stylesheet. -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" media="print" data-defer-stylesheet>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" media="print" data-defer-stylesheet>
     <noscript>
