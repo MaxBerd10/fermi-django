@@ -45,7 +45,15 @@ export default function AdminLoginPage() {
         <form onSubmit={onSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-foreground-700 mb-1.5">Login</label>
-            <input name="username" required autoFocus className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500" />
+            <input
+              name="username"
+              required
+              autoFocus
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
+            />
           </div>
           <div>
             <label className="block text-sm font-medium text-foreground-700 mb-1.5">Parol</label>
