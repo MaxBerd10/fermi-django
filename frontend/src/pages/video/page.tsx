@@ -10,16 +10,47 @@ import NewsPagination from "@/components/shared/NewsPagination";
 import { LoadingState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
+// The uploaded clips are served without HTTP range support, so even
+// preload="metadata" pulls the entire file rather than just its header --
+// with up to 9 cards per page all doing this at once on mount, the page felt
+// like it was loading every video's full weight before anything was
+// interactive. Only start loading a card once it's actually about to be
+// visible (a lazily-created IntersectionObserver, one per grid), so a visit
+// only ever pays for the clips it scrolls to.
+function useLazyVisible<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || visible) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return { ref, visible };
+}
+
 // preload="metadata" alone isn't enough in every browser to paint a first-frame
 // thumbnail — some just show a blank/black box until playback starts. Seeking a
 // hair into the clip once metadata is ready forces the browser to decode and
 // paint that frame, which is what actually produces a visible thumbnail.
 function VideoCard({ src }: { src: string }) {
-  const ref = useRef<HTMLVideoElement>(null);
+  const { ref: wrapRef, visible } = useLazyVisible<HTMLDivElement>();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
+    const video = videoRef.current;
+    if (!video || !visible) return;
     const onLoadedMetadata = () => {
       try {
         video.currentTime = 0.1;
@@ -29,9 +60,24 @@ function VideoCard({ src }: { src: string }) {
     };
     video.addEventListener("loadedmetadata", onLoadedMetadata);
     return () => video.removeEventListener("loadedmetadata", onLoadedMetadata);
-  }, []);
+  }, [visible]);
 
-  return <video ref={ref} src={src} controls preload="metadata" className="w-full h-full object-cover" />;
+  return (
+    <div ref={wrapRef} className="w-full h-full">
+      {visible && <video ref={videoRef} src={src} controls preload="metadata" className="w-full h-full object-cover" />}
+    </div>
+  );
+}
+
+function YoutubeCard({ videoId }: { videoId: string }) {
+  const { ref, visible } = useLazyVisible<HTMLDivElement>();
+  return (
+    <div ref={ref} className="w-full h-full">
+      {visible && (
+        <iframe src={`https://www.youtube.com/embed/${videoId}`} title={`Video ${videoId}`} allowFullScreen />
+      )}
+    </div>
+  );
 }
 
 export default function VideoPage() {
@@ -70,11 +116,7 @@ export default function VideoPage() {
                 {items.map((v) => (
                   <div key={v.id} className="news-video-card">
                     {v.url ? (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${v.url}`}
-                        title={`Video ${v.id}`}
-                        allowFullScreen
-                      />
+                      <YoutubeCard videoId={v.url} />
                     ) : v.video ? (
                       <VideoCard src={v.video} />
                     ) : null}

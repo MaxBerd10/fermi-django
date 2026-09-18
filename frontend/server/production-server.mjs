@@ -263,10 +263,18 @@ async function streamProxy(request, response, baseUrl, targetPath) {
   });
 
   response.statusCode = upstream.status;
-  const contentType = upstream.headers.get("content-type");
-  const cacheControl = upstream.headers.get("cache-control");
-  if (contentType) response.setHeader("Content-Type", contentType);
-  if (cacheControl) response.setHeader("Cache-Control", cacheControl);
+  // Copy every upstream header through (skipping hop-by-hop ones Node manages itself)
+  // rather than hand-picking a couple -- previously only Content-Type/Cache-Control made
+  // it across, silently dropping Accept-Ranges/Content-Range/Content-Length. Django's own
+  // Range-request handling for /media/* (video seeking, "preload=metadata" only fetching
+  // a clip's header) was never actually reaching the browser because of that: every
+  // request for a video came back as a full 200 instead of the 206 partial response
+  // Django sent, since a 206 with no Content-Range header isn't valid and browsers can't
+  // use it.
+  for (const [key, value] of upstream.headers) {
+    if (["connection", "transfer-encoding", "content-encoding", "keep-alive"].includes(key.toLowerCase())) continue;
+    response.setHeader(key, value);
+  }
   if (!upstream.body) return response.end();
   Readable.fromWeb(upstream.body).pipe(response);
 }
