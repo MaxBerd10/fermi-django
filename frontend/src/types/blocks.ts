@@ -66,6 +66,10 @@ export interface GalleryItem {
 }
 export interface GalleryBlockData {
   items: GalleryItem[];
+  /** "certificate" renders the numbered/award-badge/captioned card grid the old
+   * site's bespoke certificate-page template used (see .cms-cert-* in
+   * cms-content.css); absent/anything else keeps the plain square-thumbnail grid. */
+  style?: "certificate";
 }
 export interface TableBlockData {
   headers: string[];

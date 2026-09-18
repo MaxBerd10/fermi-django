@@ -26,10 +26,11 @@ class ContentBlockSerializer(serializers.ModelSerializer):
         if instance.block_type == "gallery":
             rep["data"] = {
                 lang: {
+                    **payload,
                     "items": [
                         {**item, "image": self._resolve(Image, ImageSerializer, item.get("image_id"))}
                         for item in payload.get("items", [])
-                    ]
+                    ],
                 }
                 for lang, payload in instance.data.items()
             }

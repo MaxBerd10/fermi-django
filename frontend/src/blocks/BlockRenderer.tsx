@@ -119,9 +119,50 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     }
 
     case "gallery": {
-      const { items } = block.data;
+      const { items, style } = block.data;
       const visible = items.filter((item) => item.image);
       if (visible.length === 0) return null;
+
+      if (style === "certificate") {
+        return (
+          <div className="cms-cert-page">
+            <ul className="cms-cert-gallery" role="list">
+              {visible.map((item, i) => (
+                <li key={item.image_id ?? i}>
+                  <figure className="cms-cert-card">
+                    <a
+                      href={optimizedImageUrl(item.image!.file, 1600) || item.image!.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cms-cert-card__preview"
+                      aria-label={`${item.alt ?? item.image!.alt_text} — Kattalashtirish`}
+                    >
+                      <img
+                        src={optimizedImageUrl(item.image!.file, 480) || item.image!.file}
+                        alt={item.alt ?? item.image!.alt_text}
+                        loading="lazy"
+                        className="cms-cert-card__img"
+                      />
+                      <span className="cms-cert-card__overlay" aria-hidden="true">
+                        <i className="ri-zoom-in-line text-2xl" />
+                        <span className="text-xs font-semibold mt-1">Kattalashtirish</span>
+                      </span>
+                    </a>
+                    <figcaption className="cms-cert-card__caption">
+                      <span className="cms-cert-card__index">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="cms-cert-card__title">{item.alt ?? item.image!.alt_text}</span>
+                    </figcaption>
+                    <span className="cms-cert-card__badge" aria-hidden="true">
+                      <i className="ri-award-line" />
+                    </span>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
       return (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {visible.map((item, i) => (
