@@ -36,12 +36,17 @@ export default function TestPage() {
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [pdfError, setPdfError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [sortBy, setSortBy] = useState<"questions" | "alpha">("questions");
 
-  const filteredSubjects = subjects?.filter((s) => {
-    const q = query.trim().toLowerCase();
-    if (!q) return true;
-    return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
-  });
+  const filteredSubjects = subjects
+    ?.filter((s) => {
+      const q = query.trim().toLowerCase();
+      if (!q) return true;
+      return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
+    })
+    .sort((a, b) =>
+      sortBy === "alpha" ? a.subject_name.localeCompare(b.subject_name) : b.questions_total - a.questions_total,
+    );
 
   useEffect(() => {
     let cancelled = false;
@@ -188,17 +193,22 @@ export default function TestPage() {
         <h2 className="font-heading text-lg md:text-xl font-bold text-white leading-snug">{t("test.bannerTitle")}</h2>
         <p className="mt-1 text-xs md:text-sm text-white/70">{t("test.pickSubjectHint")}</p>
       </div>
-      {subjects && subjects.length > 0 && (
-        <div className="relative z-10 flex items-center gap-2.5 flex-shrink-0">
-          <span className="w-10 h-10 shrink-0 rounded-xl bg-secondary-400 text-primary-950 flex items-center justify-center">
-            <i className="ri-file-list-3-line text-lg" />
-          </span>
-          <div>
+      <div className="relative z-10 flex items-center gap-2 flex-shrink-0 flex-wrap">
+        {subjects && subjects.length > 0 && (
+          <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
             <p className="font-heading text-lg font-bold text-white leading-none">{subjects.length}</p>
-            <p className="text-xs text-white/60 mt-0.5">{t("test.bannerSubjectsLabel")}</p>
+            <p className="text-[11px] text-white/60 mt-1">{t("test.bannerSubjectsLabel")}</p>
           </div>
+        )}
+        <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
+          <p className="font-heading text-lg font-bold text-white leading-none">{QUIZ_QUESTION_COUNT}</p>
+          <p className="text-[11px] text-white/60 mt-1">{t("test.bannerQuestionsLabel")}</p>
         </div>
-      )}
+        <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
+          <p className="font-heading text-lg font-bold text-white leading-none">PDF</p>
+          <p className="text-[11px] text-white/60 mt-1">{t("test.bannerPdfLabel")}</p>
+        </div>
+      </div>
     </div>
   );
 
@@ -223,16 +233,46 @@ export default function TestPage() {
 
               {subjects && subjects.length > 0 && (
                 <>
-                  <div className="relative mb-4 max-w-md">
-                    <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
-                    <input
-                      type="search"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                      placeholder={t("test.searchPlaceholder")}
-                      className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
-                    />
+                  <div className="flex flex-wrap items-center gap-2.5 mb-3">
+                    <div className="relative flex-1 min-w-[220px]">
+                      <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
+                      <input
+                        type="search"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder={t("test.searchPlaceholder")}
+                        className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSortBy("questions")}
+                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
+                        sortBy === "questions"
+                          ? "bg-primary-950 border-primary-950 text-white"
+                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
+                      }`}
+                    >
+                      <i className="ri-bar-chart-2-line mr-1" />
+                      {t("test.sortByQuestions")}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSortBy("alpha")}
+                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
+                        sortBy === "alpha"
+                          ? "bg-primary-950 border-primary-950 text-white"
+                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
+                      }`}
+                    >
+                      <i className="ri-sort-asc mr-1" />
+                      {t("test.sortByAlpha")}
+                    </button>
                   </div>
+
+                  <p className="text-xs text-foreground-500 mb-3">
+                    {t("test.resultsCount", { count: filteredSubjects?.length ?? 0, total: subjects.length })}
+                  </p>
 
                   {filteredSubjects && filteredSubjects.length === 0 && (
                     <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>

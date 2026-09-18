@@ -20,12 +20,19 @@ export default function KeyslarPage() {
   const [cases, setCases] = useState<ImentorCaseScenario[]>([]);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [query, setQuery] = useState("");
+  const [sortBy, setSortBy] = useState<"cases" | "alpha">("cases");
 
-  const filteredSubjects = subjects?.filter((s) => {
-    const q = query.trim().toLowerCase();
-    if (!q) return true;
-    return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
-  });
+  const filteredSubjects = subjects
+    ?.filter((s) => {
+      const q = query.trim().toLowerCase();
+      if (!q) return true;
+      return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
+    })
+    .sort((a, b) =>
+      sortBy === "alpha" ? a.subject_name.localeCompare(b.subject_name) : (b.case_count || 0) - (a.case_count || 0),
+    );
+
+  const totalCases = subjects?.reduce((sum, s) => sum + (s.case_count || 0), 0) ?? 0;
 
   useEffect(() => {
     let cancelled = false;
@@ -69,17 +76,47 @@ export default function KeyslarPage() {
     setError(null);
   }
 
+  const banner = (
+    <div className="bg-primary-950 text-white p-4 md:p-5 rounded-2xl relative overflow-hidden flex flex-wrap items-center justify-between gap-4 w-full">
+      <div className="relative z-10 min-w-0">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-secondary-300 text-[11px] font-bold uppercase tracking-[0.1em] mb-2.5">
+          <i className="ri-hexagon-line" />
+          {t("keyslar.bannerEyebrow")}
+        </span>
+        <h2 className="font-heading text-lg md:text-xl font-bold text-white leading-snug">{t("keyslar.bannerTitle")}</h2>
+        <p className="mt-1 text-xs md:text-sm text-white/70">{t("keyslar.pickSubjectHint")}</p>
+      </div>
+      <div className="relative z-10 flex items-center gap-2 flex-shrink-0 flex-wrap">
+        {subjects && subjects.length > 0 && (
+          <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
+            <p className="font-heading text-lg font-bold text-white leading-none">{subjects.length}</p>
+            <p className="text-[11px] text-white/60 mt-1">{t("keyslar.bannerSubjectsLabel")}</p>
+          </div>
+        )}
+        {totalCases > 0 && (
+          <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
+            <p className="font-heading text-lg font-bold text-white leading-none">{totalCases}</p>
+            <p className="text-[11px] text-white/60 mt-1">{t("keyslar.bannerCasesLabel")}</p>
+          </div>
+        )}
+        <div className="bg-white/10 rounded-xl px-3 py-2 min-w-[84px]">
+          <p className="font-heading text-lg font-bold text-white leading-none">
+            <i className="ri-check-line" />
+          </p>
+          <p className="text-[11px] text-white/60 mt-1">{t("keyslar.bannerAnswerLabel")}</p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="text-foreground-950">
-      <PageHeader title={t("nav.keyslar")} compact />
+      <PageHeader title={t("nav.keyslar")} compact aside={banner} />
 
       <div className="section-container section-pad">
         <div className="page-card p-5 md:p-6">
           {stage === "picking" && (
             <>
-              <h2 className="font-heading text-lg font-bold text-foreground-900 mb-1">{t("keyslar.pickSubject")}</h2>
-              <p className="text-sm text-foreground-500 mb-5">{t("keyslar.pickSubjectHint")}</p>
-
               {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
               {subjects === null && !error && (
@@ -93,16 +130,46 @@ export default function KeyslarPage() {
 
               {subjects && subjects.length > 0 && (
                 <>
-                  <div className="relative mb-4 max-w-md">
-                    <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
-                    <input
-                      type="search"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                      placeholder={t("keyslar.searchPlaceholder")}
-                      className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
-                    />
+                  <div className="flex flex-wrap items-center gap-2.5 mb-3">
+                    <div className="relative flex-1 min-w-[220px]">
+                      <i className="ri-search-line absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground-400" />
+                      <input
+                        type="search"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder={t("keyslar.searchPlaceholder")}
+                        className="w-full h-10 pl-9 pr-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-primary-500"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSortBy("cases")}
+                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
+                        sortBy === "cases"
+                          ? "bg-primary-950 border-primary-950 text-white"
+                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
+                      }`}
+                    >
+                      <i className="ri-bar-chart-2-line mr-1" />
+                      {t("keyslar.sortByCases")}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSortBy("alpha")}
+                      className={`h-10 px-3.5 rounded-xl border text-sm font-medium cursor-pointer transition-colors whitespace-nowrap ${
+                        sortBy === "alpha"
+                          ? "bg-primary-950 border-primary-950 text-white"
+                          : "border-[#e5e5e5] text-foreground-600 hover:border-primary-300"
+                      }`}
+                    >
+                      <i className="ri-sort-asc mr-1" />
+                      {t("keyslar.sortByAlpha")}
+                    </button>
                   </div>
+
+                  <p className="text-xs text-foreground-500 mb-3">
+                    {t("keyslar.resultsCount", { count: filteredSubjects?.length ?? 0, total: subjects.length })}
+                  </p>
 
                   {filteredSubjects && filteredSubjects.length === 0 && (
                     <p className="text-sm text-foreground-500">{t("keyslar.noSearchResults")}</p>
