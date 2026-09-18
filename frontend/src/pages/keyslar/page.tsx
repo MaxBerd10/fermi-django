@@ -77,7 +77,7 @@ export default function KeyslarPage() {
   }
 
   const banner = (
-    <div className="relative flex min-h-36 items-center overflow-hidden rounded-[1.35rem] bg-primary-950 px-6 py-5 text-white shadow-[0_14px_30px_rgba(10,17,88,0.18)] sm:px-7 sm:py-6 lg:px-10 xl:px-12">
+    <div className="relative flex min-h-36 items-center overflow-hidden rounded-[1.35rem] bg-[#0a1158] px-6 py-5 text-white shadow-[0_14px_30px_rgba(10,17,88,0.18)] sm:px-7 sm:py-6 lg:px-10 xl:px-12">
       <div className="absolute -right-8 -top-12 h-32 w-32 rounded-full border border-white/10" aria-hidden />
       <div className="relative grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-5">
         <div className="max-w-3xl">
@@ -142,7 +142,7 @@ export default function KeyslarPage() {
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder={t("keyslar.searchPlaceholder")}
-                        className="h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-primary-950 focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]"
+                        className="h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-[#0a1158] focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]"
                       />
                     </label>
                     <div className="flex rounded-xl border border-[#e4e7f0] bg-[#fafbfe] p-1 sm:w-auto">
@@ -150,7 +150,7 @@ export default function KeyslarPage() {
                         type="button"
                         onClick={() => setSortBy("cases")}
                         className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
-                          sortBy === "cases" ? "bg-primary-950 text-white shadow-sm" : "text-foreground-500 hover:text-primary-950"
+                          sortBy === "cases" ? "bg-[#0a1158] text-white shadow-sm" : "text-foreground-500 hover:text-[#0a1158]"
                         }`}
                       >
                         <i className="ri-file-list-3-line mr-1.5" />
@@ -160,7 +160,7 @@ export default function KeyslarPage() {
                         type="button"
                         onClick={() => setSortBy("alpha")}
                         className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
-                          sortBy === "alpha" ? "bg-primary-950 text-white shadow-sm" : "text-foreground-500 hover:text-primary-950"
+                          sortBy === "alpha" ? "bg-[#0a1158] text-white shadow-sm" : "text-foreground-500 hover:text-[#0a1158]"
                         }`}
                       >
                         <i className="ri-sort-alphabet-asc mr-1.5" />
@@ -190,7 +190,7 @@ export default function KeyslarPage() {
                     >
                       <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-[4rem] bg-[#f6f8ff] transition-colors group-hover:bg-[#edf1ff]" aria-hidden />
                       <div className="relative flex items-start gap-3">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8edff] text-primary-950 transition-colors group-hover:bg-primary-950 group-hover:text-white">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8edff] text-[#0a1158] transition-colors group-hover:bg-[#0a1158] group-hover:text-white">
                           <i className={`${SUBJECT_ICONS[i % SUBJECT_ICONS.length]} text-lg`} />
                         </div>
                         <div className="min-w-0">
@@ -199,11 +199,11 @@ export default function KeyslarPage() {
                         </div>
                       </div>
                       <div className="relative mt-auto flex items-end justify-between gap-3 pt-4">
-                        <span className="inline-flex items-center gap-1 rounded-full bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold text-primary-950">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold text-[#0a1158]">
                           <i className="ri-file-text-line" />
                           {t("keyslar.casesCount", { count: s.case_count || 0 })}
                         </span>
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e1e5ef] text-foreground-400 transition-all group-hover:border-primary-950 group-hover:bg-primary-950 group-hover:text-white group-hover:translate-x-0.5">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e1e5ef] text-foreground-400 transition-all group-hover:border-[#0a1158] group-hover:bg-[#0a1158] group-hover:text-white group-hover:translate-x-0.5">
                           <i className="ri-arrow-right-line" />
                         </span>
                       </div>
