@@ -45,7 +45,7 @@ export default function AboutPage() {
 
   usePageMeta(displayTitle);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
   return (

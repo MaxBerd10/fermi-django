@@ -53,7 +53,7 @@ export default function DetailPage() {
 
   usePageMeta(article?.title, article ? stripHtml(article.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !article) return <ErrorState message={error ?? undefined} />;
 
   const categorySlug = article.category?.slug;

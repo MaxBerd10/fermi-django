@@ -83,7 +83,7 @@ export default function DepartmentPage() {
 
   usePageMeta(dept?.title, dept ? stripHtml(dept.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !dept) return <ErrorState message={error ?? undefined} />;
 
   const isHistory = slug === "institut-tarixi";

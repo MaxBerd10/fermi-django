@@ -85,7 +85,7 @@ export default function BlogPage() {
 
   usePageMeta(title);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
   const hasSidebar = Boolean(menuSection);

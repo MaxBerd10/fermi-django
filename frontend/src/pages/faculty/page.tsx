@@ -33,7 +33,7 @@ export default function FacultyPage() {
 
   usePageMeta(faculty?.title, faculty ? stripHtml(faculty.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !faculty) return <ErrorState message={error ?? undefined} />;
 
   return (
