@@ -61,6 +61,15 @@
   border-bottom: 2px solid #ffd600;
 }
 
+/* Sub-section heading (HeadingBlockData.level === 3) -- no underline, smaller than
+   h2, for migrated content whose original HTML had real h2/h3 hierarchy. */
+.prose-content h3,
+.cms-article h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.5rem;
+  color: #0a1158;
+}
+
 .prose-content ul,
 .prose-content ol,
 .cms-article ul,

@@ -38,7 +38,7 @@ function formatFileSize(bytes: number): string {
 export function BlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.block_type) {
     case "heading":
-      return <h2>{block.data.text}</h2>;
+      return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2>{block.data.text}</h2>;
 
     case "paragraph":
       return <p>{block.data.text}</p>;

@@ -28,6 +28,11 @@ export interface LocalizedDocument {
 
 export interface HeadingBlockData {
   text: string;
+  /** Optional sub-heading level for migrated content whose original HTML had real
+   * hierarchy (e.g. an h3 sub-section under an h2 section) that the generic
+   * bold-text extraction heuristic otherwise flattens to one level. Renders as h2
+   * (the existing default) when absent. */
+  level?: 2 | 3;
 }
 export interface ParagraphBlockData {
   text: string;
