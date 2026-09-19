@@ -566,7 +566,7 @@
   background: #f1f5f9;
   cursor: zoom-in;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 219 / 159;
 }
 
 .cms-cert-card__img {
@@ -604,6 +604,8 @@
   padding: 0.75rem 1rem;
   margin: 0;
   flex: 1;
+  min-height: 3.125rem;
+  box-sizing: border-box;
   border-top: 1px solid #f1f5f9;
 }
 
@@ -757,7 +759,7 @@
 @media (min-width: 768px) {
   .cms-cert-gallery {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.15rem;
+    gap: 1.75rem;
   }
 }
 

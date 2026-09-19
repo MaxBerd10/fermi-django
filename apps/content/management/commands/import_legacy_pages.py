@@ -24,6 +24,8 @@ Usage:
 """
 from __future__ import annotations
 
+from urllib.parse import unquote
+
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
@@ -32,6 +34,22 @@ from apps.content.legacy_import.html_extract import extract
 from apps.content.legacy_import.media import DocumentDownloader, ImageDownloader
 from apps.content.legacy_import.merge import LANGS, merge_languages
 from apps.content.models import ContentBlock, Page
+
+
+def _certificate_label(source: str | None) -> str:
+    """The old certificate page displayed these five legacy image labels."""
+    filename = unquote(source or "").casefold()
+    if "ui" in filename:
+        return "UI — 2025"
+    if "dentistry" in filename:
+        return "Stomatologiya"
+    if "pediatrics" in filename:
+        return "Pediatriya"
+    if "pharmacy" in filename:
+        return "Farmatsiya"
+    if "akreditatsiya" in filename:
+        return "Fargʻona jamoat salomatligi tibbiyot institutining davlat akkreditatsiyadan oʻtganligi toʻgʻrisida rasmiy hujjat sertifikati"
+    return "Sertifikat"
 
 
 class Command(BaseCommand):
@@ -139,9 +157,10 @@ class Command(BaseCommand):
                 for block in merged.blocks:
                     if block.block_type == "image":
                         for lang in LANGS:
-                            image = images.get_or_download(block.payload_by_lang[lang].get("image_src"))
+                            source = block.payload_by_lang[lang].get("image_src")
+                            image = images.get_or_download(source)
                             if image is not None:
-                                gallery_items[lang].append({"image_id": image.id, "alt": ""})
+                                gallery_items[lang].append({"image_id": image.id, "alt": _certificate_label(source)})
                         continue
 
                     save_gallery()
