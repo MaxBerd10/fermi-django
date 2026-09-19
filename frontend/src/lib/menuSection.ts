@@ -166,27 +166,45 @@ function findSectionContainingSlug(nodes: MenuNode[], slug: string, menuId: numb
   return null;
 }
 
+/**
+ * Imported menu rows receive new Django primary keys, while search engines and
+ * old bookmarks still carry their Yii menu id in `/blog/:menuId/:slug`.
+ * Resolve the closest parent that owns the slug so those legacy URLs retain
+ * their real sidebar instead of silently rendering as an unsectioned page.
+ */
+function findSectionForSlug(nodes: MenuNode[], slug: string): MenuNode | null {
+  for (const node of nodes) {
+    for (const child of node.children ?? []) {
+      const href = normalizeMenuHref(child.href);
+      if (href?.endsWith(`/${slug}`) || child.urlValue === slug) return node;
+    }
+    const nested = findSectionForSlug(node.children ?? [], slug);
+    if (nested) return nested;
+  }
+  return null;
+}
+
 export function resolveMenuSection(
   menu: MenuNode[],
   menuId?: number,
   slug?: string,
 ): MenuSectionContext | null {
-  if (!menuId) return null;
-
-  const configured = MENU_SECTION_THEMES[menuId];
-  const sectionNode = findNodeById(menu, menuId);
+  const sectionNode = (menuId ? findNodeById(menu, menuId) : null) ?? (slug ? findSectionForSlug(menu, slug) : null);
   if (!sectionNode) return null;
 
-  let links = collectLinks(sectionNode.children ?? [], menuId);
+  const sectionId = sectionNode.id;
+  const configured = MENU_SECTION_THEMES[sectionId];
+
+  let links = collectLinks(sectionNode.children ?? [], sectionId);
   if (links.length === 0 && slug) {
-    const parent = findSectionContainingSlug(menu, slug, menuId);
+    const parent = findSectionContainingSlug(menu, slug, sectionId);
     if (parent?.children?.length) {
-      links = collectLinks(parent.children, menuId);
+      links = collectLinks(parent.children, sectionId);
     }
   }
 
   if (links.length === 0 && (sectionNode.children?.length ?? 0) === 0) {
-    const selfHref = resolveNodeHref(sectionNode, menuId);
+    const selfHref = resolveNodeHref(sectionNode, sectionId);
     if (selfHref) {
       links = [{ id: sectionNode.id, title: sectionNode.title.trim(), href: selfHref, depth: 0 }];
     }
@@ -194,13 +212,13 @@ export function resolveMenuSection(
 
   if (links.length === 0) return null;
 
-  const theme = configured?.theme ?? findRootTheme(menu, menuId);
+  const theme = configured?.theme ?? findRootTheme(menu, sectionId);
 
   return {
-    sectionId: menuId,
+    sectionId,
     title: sectionNode.title.trim(),
     theme,
-    breadcrumbKey: configured?.breadcrumbKey ?? NAV_ROOT_THEMES[menuId]?.breadcrumbKey ?? "nav.section.default",
+    breadcrumbKey: configured?.breadcrumbKey ?? NAV_ROOT_THEMES[sectionId]?.breadcrumbKey ?? "nav.section.default",
     introKey: configured?.introKey,
     links,
   };
