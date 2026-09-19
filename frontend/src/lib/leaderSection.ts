@@ -4,6 +4,9 @@ import { normalizeMenuHref } from "@/lib/siteConstants";
 // Our own Django DB's id for the "Rahbariyat" menu container -- not the old
 // Yii2 site's id (35). See lib/menuSection.ts's NAV_ROOT_THEMES comment.
 export const LEADER_SECTION_MENU_ID = 1905;
+// Public URLs from the Yii site still use this parent id. The imported Django
+// menu starts at a different id, but both address the same leadership section.
+export const LEGACY_LEADER_SECTION_MENU_ID = 35;
 
 export const LEADER_FEATURED_SLUGS = new Set(["rektor"]);
 
