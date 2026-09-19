@@ -110,15 +110,22 @@ class Command(BaseCommand):
         content_page = Page.objects.create(slug=slug)
 
         if preserve_layout:
-            content_block = ContentBlock(
-                page=content_page,
-                order=1,
-                block_type=ContentBlock.BlockType.RAW_HTML,
-                data={lang: {"html": page.content[lang]} for lang in LANGS},
-            )
-            content_block.full_clean()
-            content_block.save()
-            return
+            # A few old pages are attachment-only or have an empty translation
+            # slot.  Keep the visual source from the first non-empty language
+            # instead of aborting the full import halfway through; for pages
+            # with no body at all, continue below so their document block can
+            # still be imported.
+            fallback_html = next((page.content[lang] for lang in LANGS if page.content[lang].strip()), None)
+            if fallback_html:
+                content_block = ContentBlock(
+                    page=content_page,
+                    order=1,
+                    block_type=ContentBlock.BlockType.RAW_HTML,
+                    data={lang: {"html": page.content[lang] or fallback_html} for lang in LANGS},
+                )
+                content_block.full_clean()
+                content_block.save()
+                return
 
         order = 1
         for block in merged.blocks:
