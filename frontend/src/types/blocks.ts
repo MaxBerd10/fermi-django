@@ -88,6 +88,9 @@ export interface TableBlockData {
   headers: string[];
   rows: string[][];
 }
+export interface RawHtmlBlockData {
+  html: string;
+}
 
 export type BlockType =
   | "heading"
@@ -98,7 +101,8 @@ export type BlockType =
   | "video"
   | "document"
   | "gallery"
-  | "table";
+  | "table"
+  | "raw_html";
 
 interface ContentBlockBase<T extends BlockType, D> {
   id: number;
@@ -116,7 +120,8 @@ export type ContentBlock =
   | ContentBlockBase<"video", VideoBlockData>
   | ContentBlockBase<"document", DocumentBlockData>
   | ContentBlockBase<"gallery", GalleryBlockData>
-  | ContentBlockBase<"table", TableBlockData>;
+  | ContentBlockBase<"table", TableBlockData>
+  | ContentBlockBase<"raw_html", RawHtmlBlockData>;
 
 export interface ContentPage {
   id: number;

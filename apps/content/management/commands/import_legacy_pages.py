@@ -43,11 +43,17 @@ class Command(BaseCommand):
         )
         parser.add_argument("--slug", help="Import only this one page slug (for testing).")
         parser.add_argument("--limit", type=int, help="Import only the first N pages (for testing).")
+        parser.add_argument(
+            "--preserve-layout",
+            action="store_true",
+            help="Keep legacy HTML as one sanitized block so its media layout remains unchanged.",
+        )
 
     def handle(self, *args, **options):
         dry_run = options["dry_run"]
         only_slug = options.get("slug")
         limit = options.get("limit")
+        preserve_layout = options["preserve_layout"]
         images = ImageDownloader(
             on_error=lambda src, exc: self.stderr.write(self.style.WARNING(f"    could not load image {src[:80]}: {exc}"))
         )
@@ -77,6 +83,7 @@ class Command(BaseCommand):
                 f"[{page.id}] {slug}: {len(merged.blocks)} blocks "
                 f"({merged.fallback_block_count} needing translation review)"
                 f"{' + PDF' if page.file_url else ''}"
+                f"{' [preserve layout]' if preserve_layout else ''}"
             )
 
             if dry_run:
@@ -84,15 +91,34 @@ class Command(BaseCommand):
                 continue
 
             with transaction.atomic():
-                self._import_one(slug, page, merged, images, documents)
+                self._import_one(slug, page, merged, images, documents, preserve_layout)
             done += 1
 
         verb = "Would import" if dry_run else "Imported"
         self.stdout.write(self.style.SUCCESS(f"\n{verb} {done} page(s) ({skipped} skipped)."))
 
-    def _import_one(self, slug, page, merged, images: ImageDownloader, documents: DocumentDownloader) -> None:
+    def _import_one(
+        self,
+        slug,
+        page,
+        merged,
+        images: ImageDownloader,
+        documents: DocumentDownloader,
+        preserve_layout: bool,
+    ) -> None:
         Page.objects.filter(slug=slug).delete()
         content_page = Page.objects.create(slug=slug)
+
+        if preserve_layout:
+            content_block = ContentBlock(
+                page=content_page,
+                order=1,
+                block_type=ContentBlock.BlockType.RAW_HTML,
+                data={lang: {"html": page.content[lang]} for lang in LANGS},
+            )
+            content_block.full_clean()
+            content_block.save()
+            return
 
         order = 1
         for block in merged.blocks:

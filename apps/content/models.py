@@ -202,6 +202,7 @@ class ContentBlock(models.Model):
         DOCUMENT = "document", "Document"
         GALLERY = "gallery", "Gallery"
         TABLE = "table", "Table"
+        RAW_HTML = "raw_html", "Legacy HTML"
 
     page = models.ForeignKey(Page, related_name="blocks", on_delete=models.CASCADE)
     order = models.PositiveIntegerField()

@@ -145,6 +145,13 @@ def _validate_table(payload: dict, lang: str) -> None:
                 raise ValidationError(f"[{lang}] cells are plain text only — remove any markup")
 
 
+def _validate_raw_html(payload: dict, lang: str) -> None:
+    """Legacy HTML is only rendered through the client's sanitizer."""
+    value = payload.get("html")
+    if not isinstance(value, str) or not value.strip():
+        raise ValidationError(f"[{lang}] 'html' must be a non-empty string")
+
+
 BLOCK_VALIDATORS = {
     "heading": _validate_heading,
     "paragraph": _validate_paragraph,
@@ -155,6 +162,7 @@ BLOCK_VALIDATORS = {
     "document": _validate_document,
     "gallery": _validate_gallery,
     "table": _validate_table,
+    "raw_html": _validate_raw_html,
 }
 
 

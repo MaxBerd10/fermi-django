@@ -1,5 +1,6 @@
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
+import RichContent from "@/components/shared/RichContent";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
 // unlike the old CMS's occasional bare "/uploads/..." path — this is just a defensive
@@ -156,6 +157,9 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
         </div>
       );
     }
+
+    case "raw_html":
+      return <RichContent html={block.data.html} className="cms-article--rich" />;
 
     case "gallery": {
       const { items, style } = block.data;
