@@ -105,3 +105,35 @@ class DocumentDownloader:
 
         self._cache[src] = document
         return document
+
+    def get_or_copy(self, path: str | None) -> Document | None:
+        """Copy a recovered legacy file into Django storage.
+
+        Some old API URLs have been deleted while the original Yii upload is
+        still present on the same server.  This keeps recovery explicit: the
+        caller supplies the exact file path rather than the importer scanning
+        arbitrary server directories.
+        """
+        if not path:
+            return None
+        cache_key = f"file://{path}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        document: Document | None
+        try:
+            filename = os.path.basename(path)
+            if not filename.lower().endswith(tuple(f".{ext}" for ext in self._allowed_extensions)):
+                raise ValueError(f"unsupported file type: {filename}")
+            with open(path, "rb") as source:
+                content = source.read()
+            document = Document(title="")
+            document.file.save(filename, ContentFile(content), save=False)
+            document.full_clean()
+            document.save()
+        except Exception as exc:  # noqa: BLE001 -- an invalid backup must not abort the import
+            self._on_error(path, exc)
+            document = None
+
+        self._cache[cache_key] = document
+        return document

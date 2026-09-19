@@ -66,12 +66,19 @@ class Command(BaseCommand):
             action="store_true",
             help="Keep legacy HTML as one sanitized block so its media layout remains unchanged.",
         )
+        parser.add_argument(
+            "--document-source",
+            help="Exact path to a recovered local PDF to attach instead of the old API file URL.",
+        )
 
     def handle(self, *args, **options):
         dry_run = options["dry_run"]
         only_slug = options.get("slug")
         limit = options.get("limit")
         preserve_layout = options["preserve_layout"]
+        document_source = options.get("document_source")
+        if document_source and not only_slug:
+            raise ValueError("--document-source requires --slug so it cannot be attached to multiple pages")
         images = ImageDownloader(
             on_error=lambda src, exc: self.stderr.write(self.style.WARNING(f"    could not load image {src[:80]}: {exc}"))
         )
@@ -109,7 +116,7 @@ class Command(BaseCommand):
                 continue
 
             with transaction.atomic():
-                self._import_one(slug, page, merged, images, documents, preserve_layout)
+                self._import_one(slug, page, merged, images, documents, preserve_layout, document_source)
             done += 1
 
         verb = "Would import" if dry_run else "Imported"
@@ -123,6 +130,7 @@ class Command(BaseCommand):
         images: ImageDownloader,
         documents: DocumentDownloader,
         preserve_layout: bool,
+        document_source: str | None,
     ) -> None:
         Page.objects.filter(slug=slug).delete()
         content_page = Page.objects.create(slug=slug)
@@ -177,7 +185,7 @@ class Command(BaseCommand):
 
                 save_gallery()
                 if page.file_url:
-                    document = documents.get_or_download(page.file_url)
+                    document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
                     if document is not None:
                         content_block = ContentBlock(
                             page=content_page,
@@ -209,7 +217,7 @@ class Command(BaseCommand):
                 order = 1
 
             if page.file_url:
-                document = documents.get_or_download(page.file_url)
+                document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
                 if document is not None:
                     content_block = ContentBlock(
                         page=content_page,
@@ -243,7 +251,7 @@ class Command(BaseCommand):
             order += 1
 
         if page.file_url:
-            document = documents.get_or_download(page.file_url)
+            document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
             if document is not None:
                 data = {lang: {"document_id": document.id} for lang in LANGS}
                 content_block = ContentBlock(page=content_page, order=order, block_type="document", data=data)
