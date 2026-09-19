@@ -70,7 +70,9 @@ export interface DocumentBlockData {
   document: LocalizedDocument | null;
   /** "button" renders a plain navy pill link ("Hujjatni yuklab olish" on the old
    * site) instead of the default bordered document card. */
-  style?: "button";
+  /** `roadmap` uses the legacy in-page PDF viewer used by the institute's
+   * annual road map, while `button` keeps the old plain download pill. */
+  style?: "button" | "roadmap";
 }
 export interface GalleryItem {
   image_id: number;

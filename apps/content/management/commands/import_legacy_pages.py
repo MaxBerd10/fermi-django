@@ -197,6 +197,31 @@ class Command(BaseCommand):
                         content_block.save()
                 return
 
+            if slug == "institut-yol-xaritasi-2025" and document_source:
+                # The legacy API URL for this attachment is gone, but the
+                # recovered original file can be attached explicitly.  The
+                # old page was an embedded PDF viewer rather than the editor
+                # image currently returned by the API, so prefer that source
+                # when it is available.
+                document = documents.get_or_copy(document_source)
+                if document is not None:
+                    content_block = ContentBlock(
+                        page=content_page,
+                        order=1,
+                        block_type=ContentBlock.BlockType.DOCUMENT,
+                        data={
+                            lang: {
+                                "document_id": document.id,
+                                "caption": "Institut yo‘l xaritasi – 2026",
+                                "style": "roadmap",
+                            }
+                            for lang in LANGS
+                        },
+                    )
+                    content_block.full_clean()
+                    content_block.save()
+                    return
+
             # A few old pages are attachment-only or have an empty translation
             # slot.  Keep the visual source from the first non-empty language
             # instead of aborting the full import halfway through; for pages

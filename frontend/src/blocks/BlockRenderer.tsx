@@ -232,11 +232,36 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     case "document": {
       const { document, caption, style } = block.data;
       if (!document) return null;
+      const documentUrl = toAbsoluteUrl(document.file);
+
+      if (style === "roadmap") {
+        return (
+          <section className="cms-roadmap-pdf" aria-label={caption || document.title || "Yo‘l xaritasi PDF hujjati"}>
+            <div className="cms-roadmap-pdf__toolbar">
+              <span className="cms-roadmap-pdf__label">
+                <i className="ri-file-pdf-2-line" aria-hidden="true" />
+                {caption || document.title || "Yo‘l xaritasi"}
+              </span>
+              <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download">
+                <i className="ri-download-2-line" aria-hidden="true" />
+                Yuklab olish
+              </a>
+            </div>
+            <div className="cms-roadmap-pdf__frame">
+              <iframe
+                src={documentUrl}
+                title={caption || document.title || document.filename}
+                className="cms-roadmap-pdf__iframe"
+              />
+            </div>
+          </section>
+        );
+      }
 
       if (style === "button") {
         return (
           <a
-            href={toAbsoluteUrl(document.file)}
+            href={documentUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="cms-download-btn mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-[#0a1158] hover:bg-[#060a3d] text-white text-sm font-semibold transition-colors shadow-md"
@@ -250,7 +275,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
       return (
         <figure className="mx-auto max-w-lg">
           <a
-            href={toAbsoluteUrl(document.file)}
+            href={documentUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl border border-primary-100 bg-primary-50/40 p-4 transition hover:bg-primary-50"
