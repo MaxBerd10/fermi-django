@@ -238,7 +238,7 @@ class Command(BaseCommand):
                             page=content_page,
                             order=order,
                             block_type=ContentBlock.BlockType.DOCUMENT,
-                            data={lang: {"document_id": document.id} for lang in LANGS},
+                            data={lang: {"document_id": document.id, "style": "button"} for lang in LANGS},
                         )
                         content_block.full_clean()
                         content_block.save()
@@ -295,7 +295,7 @@ class Command(BaseCommand):
                         page=content_page,
                         order=order,
                         block_type=ContentBlock.BlockType.DOCUMENT,
-                        data={lang: {"document_id": document.id} for lang in LANGS},
+                        data={lang: {"document_id": document.id, "style": "button"} for lang in LANGS},
                     )
                     content_block.full_clean()
                     content_block.save()
@@ -325,7 +325,7 @@ class Command(BaseCommand):
         if page.file_url:
             document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
             if document is not None:
-                data = {lang: {"document_id": document.id} for lang in LANGS}
+                data = {lang: {"document_id": document.id, "style": "button"} for lang in LANGS}
                 content_block = ContentBlock(page=content_page, order=order, block_type="document", data=data)
                 content_block.full_clean()
                 content_block.save()
