@@ -110,6 +110,66 @@ class Command(BaseCommand):
         content_page = Page.objects.create(slug=slug)
 
         if preserve_layout:
+            if slug == "institut-sertifikatlari":
+                # This legacy page keeps its certificate images outside the
+                # article HTML.  A raw HTML block would therefore preserve
+                # only the short description and discard the actual gallery.
+                # Keep the non-image blocks in source order and collect the
+                # images into the card gallery used by the old page.
+                order = 1
+                gallery_items = {lang: [] for lang in LANGS}
+
+                def save_gallery():
+                    nonlocal order
+                    if not all(gallery_items[lang] for lang in LANGS):
+                        return
+                    content_block = ContentBlock(
+                        page=content_page,
+                        order=order,
+                        block_type=ContentBlock.BlockType.GALLERY,
+                        data={
+                            lang: {"items": gallery_items[lang], "style": "certificate"}
+                            for lang in LANGS
+                        },
+                    )
+                    content_block.full_clean()
+                    content_block.save()
+                    order += 1
+
+                for block in merged.blocks:
+                    if block.block_type == "image":
+                        for lang in LANGS:
+                            image = images.get_or_download(block.payload_by_lang[lang].get("image_src"))
+                            if image is not None:
+                                gallery_items[lang].append({"image_id": image.id, "alt": ""})
+                        continue
+
+                    save_gallery()
+                    gallery_items = {lang: [] for lang in LANGS}
+                    content_block = ContentBlock(
+                        page=content_page,
+                        order=order,
+                        block_type=block.block_type,
+                        data={lang: dict(block.payload_by_lang[lang]) for lang in LANGS},
+                    )
+                    content_block.full_clean()
+                    content_block.save()
+                    order += 1
+
+                save_gallery()
+                if page.file_url:
+                    document = documents.get_or_download(page.file_url)
+                    if document is not None:
+                        content_block = ContentBlock(
+                            page=content_page,
+                            order=order,
+                            block_type=ContentBlock.BlockType.DOCUMENT,
+                            data={lang: {"document_id": document.id} for lang in LANGS},
+                        )
+                        content_block.full_clean()
+                        content_block.save()
+                return
+
             # A few old pages are attachment-only or have an empty translation
             # slot.  Keep the visual source from the first non-empty language
             # instead of aborting the full import halfway through; for pages
