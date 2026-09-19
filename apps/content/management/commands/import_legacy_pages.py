@@ -24,9 +24,12 @@ Usage:
 """
 from __future__ import annotations
 
+import os
+import unicodedata
+from collections import defaultdict
 from urllib.parse import unquote
 
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from apps.content.legacy_import.fetch import fetch_page, fetch_page_slugs
@@ -52,6 +55,32 @@ def _certificate_label(source: str | None) -> str:
     return "Sertifikat"
 
 
+def _document_key(value: str) -> str:
+    """Make legacy URL/file names comparable across URL and Unicode variants."""
+    decoded = unquote(os.path.basename(value))
+    normalized = unicodedata.normalize("NFKD", decoded).casefold()
+    return "".join(char for char in normalized if char.isalnum())
+
+
+class LegacyDocumentFinder:
+    """Find one unambiguous PDF in a supplied, retained legacy uploads tree."""
+
+    def __init__(self, root: str):
+        if not os.path.isdir(root):
+            raise CommandError(f"--legacy-media-root is not a readable directory: {root}")
+        self._by_name: dict[str, list[str]] = defaultdict(list)
+        for directory, _, filenames in os.walk(root):
+            for filename in filenames:
+                if filename.casefold().endswith(".pdf"):
+                    self._by_name[_document_key(filename)].append(os.path.join(directory, filename))
+
+    def find(self, source: str | None) -> str | None:
+        if not source:
+            return None
+        matches = self._by_name.get(_document_key(source), [])
+        return matches[0] if len(matches) == 1 else None
+
+
 class Command(BaseCommand):
     help = "Import the old site's static pages into standalone Page/ContentBlock rows."
 
@@ -70,6 +99,10 @@ class Command(BaseCommand):
             "--document-source",
             help="Exact path to a recovered local PDF to attach instead of the old API file URL.",
         )
+        parser.add_argument(
+            "--legacy-media-root",
+            help="Retained legacy uploads directory used only to recover uniquely named PDF attachments.",
+        )
 
     def handle(self, *args, **options):
         dry_run = options["dry_run"]
@@ -77,6 +110,7 @@ class Command(BaseCommand):
         limit = options.get("limit")
         preserve_layout = options["preserve_layout"]
         document_source = options.get("document_source")
+        legacy_media_root = options.get("legacy_media_root")
         if document_source and not only_slug:
             raise ValueError("--document-source requires --slug so it cannot be attached to multiple pages")
         images = ImageDownloader(
@@ -85,6 +119,10 @@ class Command(BaseCommand):
         documents = DocumentDownloader(
             on_error=lambda src, exc: self.stderr.write(self.style.WARNING(f"    could not load document {src[:80]}: {exc}"))
         )
+        recovered_documents = LegacyDocumentFinder(legacy_media_root) if legacy_media_root else None
+        if recovered_documents:
+            recovered_count = sum(len(paths) for paths in recovered_documents._by_name.values())
+            self.stdout.write(f"Indexed {recovered_count} legacy PDF file(s) for recovery.\n")
 
         slugs = [only_slug] if only_slug else fetch_page_slugs()
         if limit:
@@ -116,7 +154,9 @@ class Command(BaseCommand):
                 continue
 
             with transaction.atomic():
-                self._import_one(slug, page, merged, images, documents, preserve_layout, document_source)
+                self._import_one(
+                    slug, page, merged, images, documents, preserve_layout, document_source, recovered_documents
+                )
             done += 1
 
         verb = "Would import" if dry_run else "Imported"
@@ -131,6 +171,7 @@ class Command(BaseCommand):
         documents: DocumentDownloader,
         preserve_layout: bool,
         document_source: str | None,
+        recovered_documents: LegacyDocumentFinder | None,
     ) -> None:
         Page.objects.filter(slug=slug).delete()
         content_page = Page.objects.create(slug=slug)
@@ -171,7 +212,7 @@ class Command(BaseCommand):
                     order += 1
 
                 if page.file_url:
-                    document = documents.get_or_download(page.file_url)
+                    document = self._load_document(documents, page.file_url, recovered_documents)
                     if document is not None:
                         content_block = ContentBlock(
                             page=content_page,
@@ -232,7 +273,7 @@ class Command(BaseCommand):
 
                 save_gallery()
                 if page.file_url:
-                    document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
+                    document = self._load_document(documents, page.file_url, recovered_documents, document_source)
                     if document is not None:
                         content_block = ContentBlock(
                             page=content_page,
@@ -289,7 +330,7 @@ class Command(BaseCommand):
                 order = 1
 
             if page.file_url:
-                document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
+                document = self._load_document(documents, page.file_url, recovered_documents, document_source)
                 if document is not None:
                     content_block = ContentBlock(
                         page=content_page,
@@ -323,9 +364,21 @@ class Command(BaseCommand):
             order += 1
 
         if page.file_url:
-            document = documents.get_or_copy(document_source) if document_source else documents.get_or_download(page.file_url)
+            document = self._load_document(documents, page.file_url, recovered_documents, document_source)
             if document is not None:
                 data = {lang: {"document_id": document.id, "style": "button"} for lang in LANGS}
                 content_block = ContentBlock(page=content_page, order=order, block_type="document", data=data)
                 content_block.full_clean()
                 content_block.save()
+
+    @staticmethod
+    def _load_document(
+        documents: DocumentDownloader,
+        source: str | None,
+        recovered_documents: LegacyDocumentFinder | None,
+        explicit_source: str | None = None,
+    ):
+        if explicit_source:
+            return documents.get_or_copy(explicit_source)
+        recovered_path = recovered_documents.find(source) if recovered_documents else None
+        return documents.get_or_copy(recovered_path) if recovered_path else documents.get_or_download(source)
