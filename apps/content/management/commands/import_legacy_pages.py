@@ -125,7 +125,22 @@ class Command(BaseCommand):
                 )
                 content_block.full_clean()
                 content_block.save()
-                return
+                order = 2
+            else:
+                order = 1
+
+            if page.file_url:
+                document = documents.get_or_download(page.file_url)
+                if document is not None:
+                    content_block = ContentBlock(
+                        page=content_page,
+                        order=order,
+                        block_type=ContentBlock.BlockType.DOCUMENT,
+                        data={lang: {"document_id": document.id} for lang in LANGS},
+                    )
+                    content_block.full_clean()
+                    content_block.save()
+            return
 
         order = 1
         for block in merged.blocks:
