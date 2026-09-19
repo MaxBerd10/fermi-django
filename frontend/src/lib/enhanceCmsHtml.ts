@@ -5,6 +5,7 @@
 export type CmsEnhanceOptions = { slug?: string };
 
 export function getCmsArticleModifier(slug?: string): string {
+  if (slug === "institut-xaqida") return "cms-article--about";
   if (slug === "institut-tarixi") return "cms-article--history";
   if (slug === "usmle-dasturi") return "cms-article--usmle";
   if (slug === "ichki-tartib-qoidalar") return "cms-article--regulations";
@@ -78,6 +79,11 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   if (slug === "institut-tarixi") {
     buildHistoryLayout(body);
+    return body.innerHTML;
+  }
+
+  if (slug === "institut-xaqida") {
+    buildAboutHeroLayout(body);
     return body.innerHTML;
   }
 
@@ -176,6 +182,25 @@ function normalizeHeroImage(root: ParentNode) {
 
   figure.appendChild(img);
   container.replaceWith(figure);
+}
+
+function buildAboutHeroLayout(root: HTMLElement) {
+  const image = root.querySelector("img");
+  if (!image) return;
+
+  image.removeAttribute("style");
+  image.removeAttribute("height");
+  image.removeAttribute("width");
+  image.className = "cms-about-hero__image";
+
+  const figure = root.ownerDocument.createElement("figure");
+  figure.className = "cms-about-hero";
+  figure.appendChild(image);
+
+  // The old public page is a compact visual landing page: its long editor
+  // body was never displayed there.  Its PDF remains a separate document
+  // block and is rendered after this hero by BlockRenderer.
+  root.replaceChildren(figure);
 }
 
 function normalizeStudentTestCover(root: ParentNode) {

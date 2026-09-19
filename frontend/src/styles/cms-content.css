@@ -308,6 +308,22 @@
 }
 
 /* Institut xaqida */
+.cms-article--about .cms-about-hero {
+  width: 100%;
+  aspect-ratio: 1122 / 490;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.cms-article--about .cms-about-hero__image {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
 .cms-article--about .cms-hero-figure {
   margin: -0.25rem -0.5rem 1.25rem;
   border-radius: 1rem;

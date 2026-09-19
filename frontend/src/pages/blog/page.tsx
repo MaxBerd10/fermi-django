@@ -88,7 +88,9 @@ export default function BlogPage() {
   if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
-  const hasSidebar = Boolean(menuSection);
+  // The legacy public "Institut haqida" page was intentionally a full-width
+  // banner plus document, not a long navigation article.
+  const hasSidebar = Boolean(menuSection) && slug !== "institut-xaqida";
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
 
   return (
