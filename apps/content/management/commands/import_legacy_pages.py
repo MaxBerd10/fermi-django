@@ -136,6 +136,53 @@ class Command(BaseCommand):
         content_page = Page.objects.create(slug=slug)
 
         if preserve_layout:
+            if slug == "institut-tuzilmasi":
+                # This is not an ordinary article on the legacy site: it is a
+                # horizontally scrollable/zoomable organisation chart followed
+                # by a simple download action.  Preserve those two components
+                # as structured blocks so the new page uses the same template
+                # rather than treating the chart as a narrow article image.
+                order = 1
+                for block in merged.blocks:
+                    if block.block_type != "image":
+                        continue
+                    data = {}
+                    for lang in LANGS:
+                        source = block.payload_by_lang[lang].get("image_src")
+                        image = images.get_or_download(source)
+                        if image is None:
+                            data = {}
+                            break
+                        data[lang] = {
+                            "image_id": image.id,
+                            "alt": "Institut tuzilmasi sxemasi",
+                            "style": "diagram",
+                        }
+                    if not data:
+                        continue
+                    content_block = ContentBlock(
+                        page=content_page,
+                        order=order,
+                        block_type=ContentBlock.BlockType.IMAGE,
+                        data=data,
+                    )
+                    content_block.full_clean()
+                    content_block.save()
+                    order += 1
+
+                if page.file_url:
+                    document = documents.get_or_download(page.file_url)
+                    if document is not None:
+                        content_block = ContentBlock(
+                            page=content_page,
+                            order=order,
+                            block_type=ContentBlock.BlockType.DOCUMENT,
+                            data={lang: {"document_id": document.id, "style": "button"} for lang in LANGS},
+                        )
+                        content_block.full_clean()
+                        content_block.save()
+                return
+
             if slug == "institut-sertifikatlari":
                 # This legacy page keeps its certificate images outside the
                 # article HTML.  A raw HTML block would therefore preserve
