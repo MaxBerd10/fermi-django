@@ -90,6 +90,7 @@ export interface TableBlockData {
 }
 export interface RawHtmlBlockData {
   html: string;
+  slug?: string;
 }
 
 export type BlockType =

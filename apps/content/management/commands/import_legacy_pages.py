@@ -121,7 +121,7 @@ class Command(BaseCommand):
                     page=content_page,
                     order=1,
                     block_type=ContentBlock.BlockType.RAW_HTML,
-                    data={lang: {"html": page.content[lang] or fallback_html} for lang in LANGS},
+                    data={lang: {"html": page.content[lang] or fallback_html, "slug": slug} for lang in LANGS},
                 )
                 content_block.full_clean()
                 content_block.save()

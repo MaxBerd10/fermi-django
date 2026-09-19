@@ -116,7 +116,8 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
     return body.innerHTML;
   }
 
-  normalizeHeroImage(body);
+  if (slug === "mutaxassisliklar-boyicha-testlar-toplami") normalizeStudentTestCover(body);
+  else normalizeHeroImage(body);
   fixHorizontalRulesInLists(body);
   promoteCenteredHeadings(body);
   promoteDivHeadings(body);
@@ -173,6 +174,21 @@ function normalizeHeroImage(root: ParentNode) {
   img.removeAttribute("height");
   img.removeAttribute("width");
 
+  figure.appendChild(img);
+  container.replaceWith(figure);
+}
+
+function normalizeStudentTestCover(root: ParentNode) {
+  const img = root.querySelector("img");
+  if (!img) return;
+  const container = img.closest("p, div");
+  if (!container) return;
+
+  const figure = img.ownerDocument.createElement("figure");
+  figure.className = "cms-student__cover";
+  img.removeAttribute("style");
+  img.removeAttribute("height");
+  img.removeAttribute("width");
   figure.appendChild(img);
   container.replaceWith(figure);
 }
