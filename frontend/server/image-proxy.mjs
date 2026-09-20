@@ -64,14 +64,24 @@ function cacheKeyFor(src, width) {
   return createHash("sha1").update(`${src}|w${width}`).digest("hex");
 }
 
-function resolveFetchUrl(src, fermiApiBaseUrl) {
+// Rewriting the URL alone isn't enough: Django's USE_X_FORWARDED_HOST +
+// SECURE_PROXY_SSL_HEADER (see config/settings.py) mean a fetch straight to
+// the internal gunicorn port with a bare Host header gets rejected as
+// DisallowedHost (or SSL-redirected) exactly like any other direct hit on
+// that port would. production-server.mjs's own streamProxy already forwards
+// these two headers for the same reason -- see its comment on X-Forwarded-Host.
+function resolveFetchTarget(src, fermiApiBaseUrl) {
   const parsed = new URL(src);
-  if (!SELF_ORIGINS.includes(parsed.origin)) return src;
-  return new URL(`${parsed.pathname}${parsed.search}`, fermiApiBaseUrl).toString();
+  if (!SELF_ORIGINS.includes(parsed.origin)) return { url: src, headers: {} };
+  return {
+    url: new URL(`${parsed.pathname}${parsed.search}`, fermiApiBaseUrl).toString(),
+    headers: { "x-forwarded-host": parsed.host, "x-forwarded-proto": "https" },
+  };
 }
 
 async function resizeAndCache(src, width, fermiApiBaseUrl) {
-  const upstream = await fetch(resolveFetchUrl(src, fermiApiBaseUrl), { signal: AbortSignal.timeout(20_000) });
+  const { url: fetchUrl, headers } = resolveFetchTarget(src, fermiApiBaseUrl);
+  const upstream = await fetch(fetchUrl, { headers, signal: AbortSignal.timeout(20_000) });
   if (!upstream.ok) return null;
   const contentType = upstream.headers.get("content-type") || "";
   const buffer = Buffer.from(await upstream.arrayBuffer());
