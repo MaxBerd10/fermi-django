@@ -64,7 +64,9 @@ function isAllowedSource(rawUrl) {
 }
 
 function cacheKeyFor(src, width, format) {
-  return createHash("sha1").update(`${src}|w${width}|${format}`).digest("hex");
+  // Bump the transform version when encoder settings change so an older,
+  // larger cached WebP is never returned after a quality improvement.
+  return createHash("sha1").update(`${src}|w${width}|${format}|q76`).digest("hex");
 }
 
 // Rewriting the URL alone isn't enough: Django's USE_X_FORWARDED_HOST +
@@ -113,14 +115,14 @@ async function resizeAndCache(src, width, format, fermiApiBaseUrl) {
     // the CMS posters used on the homepage. Keep PNG as a fallback for older
     // clients that do not advertise WebP support.
     if (format === "webp") {
-      pipeline = resized.webp({ quality: 82, effort: 4 });
+      pipeline = resized.webp({ quality: 76, effort: 4 });
       outContentType = "image/webp";
     } else {
       pipeline = resized.png({ compressionLevel: 9 });
       outContentType = "image/png";
     }
   } else if (format === "webp") {
-    pipeline = resized.webp({ quality: 82, effort: 4 });
+    pipeline = resized.webp({ quality: 76, effort: 4 });
     outContentType = "image/webp";
   } else {
     // Default to JPEG output — covers jpeg sources (the vast majority here), opaque

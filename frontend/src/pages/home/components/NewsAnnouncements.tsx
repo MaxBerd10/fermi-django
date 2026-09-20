@@ -171,9 +171,15 @@ export default function NewsAnnouncements() {
               <div className="aspect-[16/9] overflow-hidden bg-[#e5e5e5] shrink-0">
                 {(() => {
                   const featuredImg = getNewsArticleImage(featured);
-                  return featuredImg ? (
+                  // Document-only posts deliberately use the institute mark as their
+                  // cover. Serve its WebP copy here; navigation keeps the original PNG
+                  // where its transparency is needed.
+                  const featuredDisplayImg = featuredImg?.startsWith("/images/logo.png")
+                    ? "/images/logo.webp"
+                    : featuredImg;
+                  return featuredDisplayImg ? (
                     <img
-                      src={optimizedImageUrl(featuredImg, featured.hasDocument || featured.isVideo ? 320 : 900)}
+                      src={optimizedImageUrl(featuredDisplayImg, featured.hasDocument || featured.isVideo ? 320 : 900)}
                       alt={featured.title}
                       className={`w-full h-full group-hover:scale-[1.03] transition-transform duration-500 ${
                         featured.hasDocument || featured.isVideo ? "object-contain p-8 bg-white" : "object-cover object-top"
