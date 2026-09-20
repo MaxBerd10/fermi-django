@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MedicalAtmosphere from "./MedicalAtmosphere";
 import { MenuProvider } from "../../context/MenuContext";
+import { FEATURES } from "@/lib/featureFlags";
 
 // The chat widget pulls in the AI client and the ~5 KB knowledge base, none of
 // which the first paint needs — most visits never open it. Load it after the
@@ -23,9 +24,11 @@ export default function Layout() {
           </main>
           <Footer />
         </div>
-        <Suspense fallback={null}>
-          <AiChatWidget />
-        </Suspense>
+        {FEATURES.ai && (
+          <Suspense fallback={null}>
+            <AiChatWidget />
+          </Suspense>
+        )}
       </div>
     </MenuProvider>
   );
