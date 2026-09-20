@@ -189,6 +189,8 @@ class RefreshView(APIView):
     refresh}."""
 
     permission_classes = [AllowAny]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "auth_refresh"
 
     def post(self, request):
         serializer = TokenRefreshSerializer(data={"refresh": request.data.get("refreshToken")})

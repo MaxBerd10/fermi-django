@@ -85,6 +85,10 @@ export function configureTelegramFeed({ apiKey, model } = {}) {
 }
 
 function ensureOpenAiKey() {
+  // Telegram remains fully functional without AI: Uzbek posts are displayed
+  // directly and the free translation fallbacks are attempted first.  Keep
+  // paid translation explicitly opt-in, just like the public AI endpoint.
+  if (String(process.env.OPENAI_ENABLED || "").toLowerCase() !== "true") return "";
   if (openAiApiKey) return openAiApiKey;
   openAiApiKey = decodeSecret(
     process.env.OPENAI_API_KEY || process.env.VITE_OPENAI_API_KEY,

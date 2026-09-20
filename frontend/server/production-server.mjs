@@ -68,7 +68,11 @@ const openAiApiKey = decodeSecret(
   process.env.OPENAI_API_KEY_B64 || process.env.VITE_OPENAI_API_KEY_B64,
 );
 const openAiModel = String(process.env.OPENAI_MODEL || "gpt-4o-mini").trim();
-configureTelegramFeed({ apiKey: openAiApiKey, model: openAiModel });
+// AI is opt-in.  A public site must never spend from an API key merely because
+// one happened to be left in the environment.  This also keeps Telegram's
+// optional translation fallback from consuming the same budget.
+const OPENAI_ENABLED = String(process.env.OPENAI_ENABLED || "").toLowerCase() === "true";
+configureTelegramFeed({ apiKey: OPENAI_ENABLED ? openAiApiKey : "", model: openAiModel });
 startTelegramMediaCache();
 
 const mimeTypes = {
@@ -103,7 +107,9 @@ const siteStatsRateLimits = new Map();
 // cap total spend if many different IPs (or a leaked key used directly) hit the API.
 // Once this is hit, requests are refused with zero OpenAI cost until the window
 // rolls over. Set OPENAI_DAILY_LIMIT in the environment to raise/lower it.
-const OPENAI_DAILY_LIMIT = Number(process.env.OPENAI_DAILY_LIMIT) || 300;
+const OPENAI_DAILY_LIMIT = Number(process.env.OPENAI_DAILY_LIMIT) || 40;
+const OPENAI_RATE_LIMIT = Math.max(1, Math.min(Number(process.env.OPENAI_RATE_LIMIT) || 5, 60));
+const OPENAI_MAX_TOKENS = Math.max(64, Math.min(Number(process.env.OPENAI_MAX_TOKENS) || 450, 900));
 let aiBudget = { count: 0, resetAt: 0 };
 
 function allowAiBudget() {
@@ -178,7 +184,7 @@ function allowRateLimit(store, request, windowMs, maximum) {
 }
 
 function allowAiRequest(request) {
-  return allowRateLimit(aiRateLimits, request, 60_000, 20);
+  return allowRateLimit(aiRateLimits, request, 60_000, OPENAI_RATE_LIMIT);
 }
 
 // iMentor's own server has already shown it can't take much traffic (see the
@@ -346,6 +352,7 @@ async function handleImentor(request, response) {
 
 async function handleOpenAi(request, response) {
   if (request.method !== "POST") return sendJson(response, 405, { error: "Method not allowed" });
+  if (!OPENAI_ENABLED) return sendJson(response, 503, { error: "OpenAI is temporarily disabled" });
   if (!openAiApiKey) return sendJson(response, 503, { error: "OpenAI is not configured" });
   if (!allowAiRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
   if (!allowAiBudget()) return sendJson(response, 429, { error: "Daily AI budget reached. Please try again tomorrow." });
@@ -359,7 +366,7 @@ async function handleOpenAi(request, response) {
 
   // Respect a smaller client-requested cap (each AI feature asks for only as much as
   // it needs) but never trust the client for more than this ceiling.
-  const maxTokens = Math.min(Number(incoming.max_tokens) || 900, 900);
+  const maxTokens = Math.min(Number(incoming.max_tokens) || OPENAI_MAX_TOKENS, OPENAI_MAX_TOKENS);
 
   const upstream = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",

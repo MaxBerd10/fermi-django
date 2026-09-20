@@ -177,6 +177,7 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_RATES": {
         "auth_login": "10/min",
         "auth_register": "5/min",
+        "auth_refresh": "20/min",
         "public_form": "10/min",
     },
 }

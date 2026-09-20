@@ -18,6 +18,23 @@ only hold non-secret config.
 Both files already exist in this repo with the right variable names — they're just
 empty/placeholder for `OPENAI_API_KEY_B64`. Fill in the real key:
 
+## OpenAI xarajat limiti
+
+OpenAI xavfsizlik sababli standart holatda **o‘chiq**. Kalit qo‘shilgach ham
+faqat kerak bo‘lganda quyidagilarni `.env.production.local` ga kiriting:
+
+```
+OPENAI_ENABLED=true
+OPENAI_DAILY_LIMIT=40
+OPENAI_RATE_LIMIT=5
+OPENAI_MAX_TOKENS=450
+```
+
+Bu limitlar barcha foydalanuvchilar uchun umumiy kunlik limit, bir IP uchun
+daqiqalik limit va bir javobning maksimal token miqdorini belgilaydi. Kalit
+yo‘q yoki xarajatni to‘xtatish kerak bo‘lsa `OPENAI_ENABLED=false` qiling va
+frontend xizmatini qayta ishga tushiring.
+
 ## TELEGRAM_BOT_TOKEN (high-res Telegram images — server/telegram-media-cache.mjs)
 
 Same rule as above: only in `.env.production.local` on the server, never committed.
