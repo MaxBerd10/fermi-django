@@ -7,7 +7,7 @@ import { getSettings } from "../../api/settings";
 import BrandMark from "../shared/BrandMark";
 import WwwUzCounter from "../shared/WwwUzCounter";
 
-const LOGO_IMG = "/images/logo.png?v=2";
+const LOGO_IMG = "/images/logo-96.webp";
 
 const NAVY = "#0a1158";
 const NAVY_DEEP = "#060a3d";

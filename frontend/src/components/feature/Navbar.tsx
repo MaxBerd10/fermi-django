@@ -11,7 +11,9 @@ import BrandMark from "../shared/BrandMark";
 import { normalizeYearLabels, normalizeMenuHref } from "@/lib/siteConstants";
 import "@/styles/nav-dropdown.css";
 
-const LOGO_IMG = "/images/logo.png?v=2";
+// The navbar never renders the source artwork at 256px.  Keeping a small
+// WebP avoids making the logo the largest image request on the home page.
+const LOGO_IMG = "/images/logo-96.webp";
 const MORE_ID = -1;
 const NAV_GAP = 4;
 
