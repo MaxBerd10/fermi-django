@@ -420,7 +420,7 @@ const server = createServer(async (request, response) => {
     }
     if (pathname.startsWith("/img-cache")) {
       if (!allowImageProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
-      const handled = await handleImageProxyRequest(request, response);
+      const handled = await handleImageProxyRequest(request, response, fermiApiBaseUrl);
       if (handled) return;
     }
     if (pathname.startsWith("/pdf-check")) {

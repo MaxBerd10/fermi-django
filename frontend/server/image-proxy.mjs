@@ -31,6 +31,15 @@ const ALLOWED_ORIGINS = [
   "http://127.0.0.1:8000",
   "http://localhost:8000",
 ];
+// Django's build_absolute_uri() (see production-server.mjs's streamProxy,
+// which forwards X-Forwarded-Host precisely so this happens) always returns
+// media URLs on the public domain, since that's what the browser needs — but
+// this proxy runs on the same box as Django and fetching that same public
+// URL back out is a same-server "hairpin" request, which many hosts' network
+// setups refuse even though the public domain works fine for everyone else.
+// Rewriting these specific origins to the internal Django origin before
+// fetching sidesteps that entirely instead of depending on it happening to work.
+const SELF_ORIGINS = ["https://fermi.uz", "https://www.fermi.uz", "https://beta.fermi.uz"];
 // A small fixed set rather than arbitrary integers — keeps the cache bounded and closes
 // off "request 10,000 different widths" as a cheap way to fill the disk.
 const ALLOWED_WIDTHS = [200, 320, 480, 640, 900, 1200, 1600];
@@ -55,8 +64,14 @@ function cacheKeyFor(src, width) {
   return createHash("sha1").update(`${src}|w${width}`).digest("hex");
 }
 
-async function resizeAndCache(src, width) {
-  const upstream = await fetch(src, { signal: AbortSignal.timeout(20_000) });
+function resolveFetchUrl(src, fermiApiBaseUrl) {
+  const parsed = new URL(src);
+  if (!SELF_ORIGINS.includes(parsed.origin)) return src;
+  return new URL(`${parsed.pathname}${parsed.search}`, fermiApiBaseUrl).toString();
+}
+
+async function resizeAndCache(src, width, fermiApiBaseUrl) {
+  const upstream = await fetch(resolveFetchUrl(src, fermiApiBaseUrl), { signal: AbortSignal.timeout(20_000) });
   if (!upstream.ok) return null;
   const contentType = upstream.headers.get("content-type") || "";
   const buffer = Buffer.from(await upstream.arrayBuffer());
@@ -122,7 +137,7 @@ function ensurePurgeScheduled() {
 
 const ROUTE_PREFIX = "/img-cache";
 
-export async function handleImageProxyRequest(request, response) {
+export async function handleImageProxyRequest(request, response, fermiApiBaseUrl) {
   const requestUrl = new URL(request.url || "/", "http://localhost");
   if (!requestUrl.pathname.startsWith(ROUTE_PREFIX)) return false;
   ensurePurgeScheduled();
@@ -155,7 +170,7 @@ export async function handleImageProxyRequest(request, response) {
   }
 
   try {
-    const result = await resizeAndCache(src, width);
+    const result = await resizeAndCache(src, width, fermiApiBaseUrl);
     if (!result) {
       response.statusCode = 502;
       response.end();
