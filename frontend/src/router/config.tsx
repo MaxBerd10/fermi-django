@@ -1,9 +1,6 @@
 import { lazy } from "react";
 import type { RouteObject } from "react-router-dom";
 import Layout from "../components/feature/Layout";
-import { AdminAuthProvider } from "../admin/AdminAuthContext";
-import AdminGuard from "../admin/AdminGuard";
-import { ALL_ENTITY_CONFIGS, SINGLETON_CONFIGS } from "../admin/entityConfigs";
 
 const NotFound = lazy(() => import("../pages/NotFound"));
 const Home = lazy(() => import("../pages/home/page"));
@@ -37,20 +34,8 @@ const VerifyEmailPage = lazy(() => import("../pages/auth/verify-email/page"));
 
 // The whole admin panel (including the TipTap rich text editor) is a large chunk
 // that regular site visitors never touch — keep it fully lazy.
-const AdminLayout = lazy(() => import("../admin/AdminLayout"));
-const AdminLoginPage = lazy(() => import("../admin/pages/AdminLoginPage"));
-const AdminDashboard = lazy(() => import("../admin/pages/AdminDashboard"));
-const AdminStatistics = lazy(() => import("../admin/pages/AdminStatistics"));
-const NewsListPage = lazy(() => import("../admin/pages/news/NewsListPage"));
-const NewsFormPage = lazy(() => import("../admin/pages/news/NewsFormPage"));
-const PagesListPage = lazy(() => import("../admin/pages/pages/PagesListPage"));
-const PagesFormPage = lazy(() => import("../admin/pages/pages/PagesFormPage"));
-const GenericListPage = lazy(() => import("../admin/components/GenericListPage"));
-const GenericFormPage = lazy(() => import("../admin/components/GenericFormPage"));
-const SingletonFormPage = lazy(() => import("../admin/components/SingletonFormPage"));
-const MenuTreePage = lazy(() => import("../admin/pages/menu/MenuTreePage"));
-const UserListPage = lazy(() => import("../admin/pages/users/UserListPage"));
-const UserFormPage = lazy(() => import("../admin/pages/users/UserFormPage"));
+// Keep admin auth, form metadata and editor code out of every public visit.
+const AdminRoutes = lazy(() => import("../admin/AdminRoutes"));
 
 const routes: RouteObject[] = [
   // Standalone design-concept preview — deliberately outside <Layout/> so
@@ -101,46 +86,7 @@ const routes: RouteObject[] = [
       { path: "*", element: <NotFound /> },
     ],
   },
-  {
-    path: "/admin/login",
-    element: <AdminAuthProvider><AdminLoginPage /></AdminAuthProvider>,
-  },
-  {
-    path: "/admin",
-    element: <AdminAuthProvider><AdminGuard /></AdminAuthProvider>,
-    children: [
-      {
-        element: <AdminLayout />,
-        children: [
-          { index: true, element: <AdminDashboard /> },
-          { path: "statistics", element: <AdminStatistics /> },
-          { path: "news", element: <NewsListPage /> },
-          { path: "news/new", element: <NewsFormPage /> },
-          { path: "news/:id", element: <NewsFormPage /> },
-          { path: "pages", element: <PagesListPage /> },
-          { path: "pages/new", element: <PagesFormPage /> },
-          { path: "pages/:id", element: <PagesFormPage /> },
-
-          ...ALL_ENTITY_CONFIGS.flatMap((config) => [
-            { path: config.resource, element: <GenericListPage config={config} /> },
-            { path: `${config.resource}/new`, element: <GenericFormPage config={config} /> },
-            { path: `${config.resource}/:id`, element: <GenericFormPage config={config} /> },
-          ]),
-
-          ...SINGLETON_CONFIGS.map((config) => ({
-            path: config.resource,
-            element: <SingletonFormPage config={config} />,
-          })),
-
-          { path: "menu-tree", element: <MenuTreePage /> },
-
-          { path: "users", element: <UserListPage /> },
-          { path: "users/new", element: <UserFormPage /> },
-          { path: "users/:id", element: <UserFormPage /> },
-        ],
-      },
-    ],
-  },
+  { path: "/admin/*", element: <AdminRoutes /> },
 ];
 
 export default routes;
