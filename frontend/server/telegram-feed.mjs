@@ -43,7 +43,9 @@ let openAiApiKey = "";
 let openAiModel = "gpt-4o-mini";
 let openAiDisabled = false;
 const translationCache = new Map();
-const translationCacheFile = resolve(rootDir, ".tmp/telegram-translations-v3.json");
+// New cache version deliberately refreshes translations made before the
+// sentence-aware, Google-first free translation path.
+const translationCacheFile = resolve(rootDir, ".tmp/telegram-translations-v4.json");
 
 function loadTranslationCache() {
   try {
@@ -386,20 +388,47 @@ async function translateWithGoogle(text, lang) {
   }
 }
 
+// Keep a paragraph's sentences intact. Splitting precisely at character 420 used
+// to cut words and sentences in half, which made free translations look abrupt
+// even when the translator itself returned a good result.
+function splitTranslationChunks(text, maxLength = 440) {
+  let remaining = String(text || "").trim();
+  const chunks = [];
+  while (remaining.length > maxLength) {
+    const sample = remaining.slice(0, maxLength);
+    const candidates = [
+      sample.lastIndexOf("\n"),
+      sample.lastIndexOf(". "),
+      sample.lastIndexOf("! "),
+      sample.lastIndexOf("? "),
+      sample.lastIndexOf("; "),
+      sample.lastIndexOf(": "),
+      sample.lastIndexOf(" "),
+    ];
+    const boundary = Math.max(...candidates);
+    // A boundary very close to the start creates tiny, unnatural fragments.
+    const end = boundary >= Math.floor(maxLength * 0.55) ? boundary + 1 : maxLength;
+    chunks.push(remaining.slice(0, end).trim());
+    remaining = remaining.slice(end).trimStart();
+  }
+  if (remaining) chunks.push(remaining);
+  return chunks;
+}
+
 async function translateText(text, lang) {
   const source = String(text || "").trim();
   if (!source || shouldSkipTranslation(source)) return source;
   if (source.length > 450) {
-    const parts = [];
-    for (let index = 0; index < source.length; index += 420) {
-      parts.push(await translateText(source.slice(index, index + 420), lang));
-    }
-    return parts.join("") || source;
+    const parts = await mapPool(splitTranslationChunks(source), 2, (chunk) => translateText(chunk, lang));
+    return parts.join(" ") || source;
   }
-  const memory = await translateWithMyMemory(source, lang);
-  if (memory && memory !== source) return memory;
+  // Google gives noticeably more natural Uzbek → Russian/English prose for
+  // institute announcements. MyMemory remains a free fallback if it is slow
+  // or rate-limited. Neither path uses the OpenAI key or creates AI charges.
   const google = await translateWithGoogle(source, lang);
   if (google && google !== source) return google;
+  const memory = await translateWithMyMemory(source, lang);
+  if (memory && memory !== source) return memory;
   return source;
 }
 
