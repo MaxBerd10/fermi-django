@@ -131,7 +131,7 @@ export default function QabulPage() {
 
       <main className="section-container section-pad space-y-8 md:space-y-10">
         <Reveal>
-          <AiPanel title={t("ai.qabulTitle")} subtitle={t("ai.qabulSub")}>
+          <AiPanel title={t("ai.qabulTitle")} subtitle={t("ai.qabulSub")} headingLevel="h2">
             <div className="flex flex-col sm:flex-row gap-2">
               <input
                 value={aiQ}
@@ -229,7 +229,7 @@ export default function QabulPage() {
                     <i className={`${s.icon} text-lg`} />
                   </div>
                   <span className="inline-block px-2 py-0.5 rounded-full bg-primary-50 text-primary-700 text-[10px] font-bold mb-1.5">{s.step}</span>
-                  <h4 className="font-heading text-sm font-semibold text-foreground-900">{s.title}</h4>
+                  <h3 className="font-heading text-sm font-semibold text-foreground-900">{s.title}</h3>
                   <p className="text-xs text-foreground-600 mt-1 leading-relaxed">{s.desc}</p>
                 </div>
               </Reveal>
@@ -255,12 +255,12 @@ export default function QabulPage() {
           <form onSubmit={onSubmit} className="max-w-3xl mx-auto space-y-3">
             <div className="grid sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.fullName")} <span className="text-red-500">*</span></label>
-                <input name="fish" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
+                <label htmlFor="qabul-fish" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.fullName")} <span className="text-red-500">*</span></label>
+                <input id="qabul-fish" name="fish" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.recipientLabel")} <span className="text-red-500">*</span></label>
-                <select name="categoryId" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500">
+                <label htmlFor="qabul-categoryId" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.recipientLabel")} <span className="text-red-500">*</span></label>
+                <select id="qabul-categoryId" name="categoryId" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500">
                   <option value="">{t("qabul.selectPlaceholder")}</option>
                   {leaders.map((l) => <option key={l.id} value={l.id}>{l.name}</option>)}
                 </select>
@@ -268,44 +268,44 @@ export default function QabulPage() {
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("contact.phone")} <span className="text-red-500">*</span></label>
-                <input name="phone" required placeholder="+998 90 123 45 67" className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
+                <label htmlFor="qabul-phone" className="block text-sm font-medium text-foreground-700 mb-1">{t("contact.phone")} <span className="text-red-500">*</span></label>
+                <input id="qabul-phone" name="phone" required placeholder="+998 90 123 45 67" className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("contact.email")} <span className="text-red-500">*</span></label>
-                <input name="email" type="email" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
+                <label htmlFor="qabul-email" className="block text-sm font-medium text-foreground-700 mb-1">{t("contact.email")} <span className="text-red-500">*</span></label>
+                <input id="qabul-email" name="email" type="email" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
               </div>
             </div>
             <div className="grid sm:grid-cols-3 gap-3">
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
-                <select required value={regionId} onChange={(e) => setRegionId(e.target.value)} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500">
+                <label htmlFor="qabul-region" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
+                <select id="qabul-region" required value={regionId} onChange={(e) => setRegionId(e.target.value)} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500">
                   <option value="">{t("qabul.selectPlaceholder")}</option>
                   {regions.map((r) => <option key={r.id} value={r.id}>{translateRegionName(r, t)}</option>)}
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
-                <select required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 disabled:opacity-50">
+                <label htmlFor="qabul-district" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
+                <select id="qabul-district" required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 disabled:opacity-50">
                   <option value="">{t("qabul.selectPlaceholder")}</option>
                   {districts.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.quarterLabel")} <span className="text-red-500">*</span></label>
-                <select name="quarterId" required disabled={!districtId} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 disabled:opacity-50">
+                <label htmlFor="qabul-quarter" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.quarterLabel")} <span className="text-red-500">*</span></label>
+                <select id="qabul-quarter" name="quarterId" required disabled={!districtId} className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 disabled:opacity-50">
                   <option value="">{t("qabul.selectPlaceholder")}</option>
                   {quarters.map((q) => <option key={q.id} value={q.id}>{q.name}</option>)}
                 </select>
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.dateLabel")} <span className="text-red-500">*</span></label>
-              <input name="date" type="date" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
+              <label htmlFor="qabul-date" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.dateLabel")} <span className="text-red-500">*</span></label>
+              <input id="qabul-date" name="date" type="date" required className="w-full h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.subjectLabel")} <span className="text-red-500">*</span></label>
-              <textarea name="subject" required rows={3} className="w-full px-3 py-2.5 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 resize-y" />
+              <label htmlFor="qabul-subject" className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.subjectLabel")} <span className="text-red-500">*</span></label>
+              <textarea id="qabul-subject" name="subject" required rows={3} className="w-full px-3 py-2.5 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 resize-y" />
             </div>
             <button type="submit" disabled={status === "loading"} className="inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60 transition-colors">
               {status === "loading" ? t("contact.sending") : t("admission.applyNow")}

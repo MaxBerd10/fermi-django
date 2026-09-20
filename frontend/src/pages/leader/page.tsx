@@ -13,10 +13,12 @@ import LeaderDepartmentCard from "@/components/shared/LeaderDepartmentCard";
 import LeaderListToolbar from "@/components/shared/LeaderListToolbar";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import {
   getLeaderPageIntroKey,
   isLeaderFeaturedPage,
   isVacantLeader,
+  LEGACY_LEADER_SECTION_MENU_ID,
   LEADER_SECTION_MENU_ID,
 } from "@/lib/leaderSection";
 
@@ -30,9 +32,16 @@ export default function LeaderPage() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
-  const isLeaderSection = resolvedMenuId === LEADER_SECTION_MENU_ID;
+  const isLeaderSection =
+    resolvedMenuId === LEADER_SECTION_MENU_ID || resolvedMenuId === LEGACY_LEADER_SECTION_MENU_ID;
   const isProrectorPage = slug === "prorektorlar";
   const isDepartmentPage = slug === "kafedra-mudirlari";
+  const { contentRef, remembered } = useRememberedContentHeight(`leader:${slug}`, loading);
+  // Cold-start default varies wildly by route: "kafedra-mudirlari" lists
+  // every department head (~30 photo cards, several thousand px tall),
+  // "prorektorlar" lists 5, a single rektor/prorektor bio is much shorter --
+  // see departments/page.tsx's identical comment for why this matters.
+  const coldStartMinHeight = isDepartmentPage ? 3200 : isProrectorPage ? 1800 : 900;
 
   useEffect(() => {
     if (!slug) return;
@@ -65,7 +74,7 @@ export default function LeaderPage() {
 
   usePageMeta(data?.category.title);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeightPx={remembered ?? coldStartMinHeight} />;
   if (error || !data) return <ErrorState message={error ?? undefined} />;
 
   const introKey = getLeaderPageIntroKey(slug);
@@ -77,7 +86,7 @@ export default function LeaderPage() {
   };
 
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader
         title={data.category.title}
         breadcrumb={isLeaderSection ? t("leader.breadcrumb") : data.category.title}

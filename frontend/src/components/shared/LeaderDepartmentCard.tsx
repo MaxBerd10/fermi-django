@@ -47,7 +47,7 @@ export default function LeaderDepartmentCard({
 
         <div className="leader-dept__info">
           <span className="leader-dept__badge">{department}</span>
-          <h3 className="leader-dept__name">{displayLeaderText(leader.name)}</h3>
+          <h2 className="leader-dept__name">{displayLeaderText(leader.name)}</h2>
           <p className="leader-dept__position">{displayLeaderText(leader.position)}</p>
 
           <div className="leader-dept__meta">

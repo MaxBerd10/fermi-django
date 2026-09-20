@@ -10,6 +10,7 @@ import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import FacultyPageContent from "@/components/shared/FacultyPageContent";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
 import { FACULTY_MENU_ID } from "@/lib/facultySection";
 
@@ -19,6 +20,7 @@ export default function FacultyPage() {
   const [faculty, setFaculty] = useState<FacultyDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { contentRef, remembered } = useRememberedContentHeight(`faculty:${slug}`, loading);
 
   useEffect(() => {
     if (!slug) return;
@@ -33,11 +35,13 @@ export default function FacultyPage() {
 
   usePageMeta(faculty?.title, faculty ? stripHtml(faculty.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
+  // See departments/page.tsx's identical comment -- cold-start default
+  // picked from real measured faculty pages, not the old too-short 80vh.
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 4200} />;
   if (error || !faculty) return <ErrorState message={error ?? undefined} />;
 
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader title={faculty.title} breadcrumb={t("nav.section.fakultetlar")} compact />
 
       <section className="section-container section-pad pb-16 md:pb-20">

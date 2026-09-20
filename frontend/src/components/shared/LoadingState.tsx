@@ -7,11 +7,12 @@ import { useTranslation } from "react-i18next";
 // metric penalizes hardest (a large, already-painted element moving a large distance).
 // `minHeight` lets a specific page opt into a closer approximation of its own real
 // content height; pages that don't pass it keep the original compact spinner.
-export function LoadingState({ minHeight }: { minHeight?: string } = {}) {
+export function LoadingState({ minHeight, minHeightPx }: { minHeight?: string; minHeightPx?: number } = {}) {
   const { t } = useTranslation();
   return (
     <div
-      className={`py-28 flex flex-col items-center justify-center gap-4 ${minHeight ?? ""}`}
+      className={`py-28 flex flex-col items-center justify-center gap-4 ${minHeightPx ? "" : minHeight ?? ""}`}
+      style={minHeightPx ? { minHeight: `${minHeightPx}px` } : undefined}
       role="status"
       aria-live="polite"
     >

@@ -10,6 +10,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
 import { resolveMenuSection } from "@/lib/menuSection";
@@ -49,6 +50,7 @@ export default function BlogPage() {
   const [page, setPage] = useState<Page | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { contentRef, remembered } = useRememberedContentHeight(`blog:${slug}`, loading);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
   const { menu: menuTree } = useMenu();
@@ -85,16 +87,25 @@ export default function BlogPage() {
 
   usePageMeta(title);
 
-  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
+  // See departments/page.tsx's identical comment -- this generic CMS-page
+  // template covers ~235 pages of widely varying length; the cold-start
+  // default is a conservative median from real measured pages, not 80vh.
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 2600} />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
   // The legacy public "Institut haqida" page was intentionally a full-width
   // banner plus document, not a long navigation article.
   const hasSidebar = Boolean(menuSection) && slug !== "institut-xaqida";
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
+  // Plenty of these ~235 pages have no heading block anywhere in their body
+  // (the real site's own content for them is just plain/bold paragraphs) --
+  // without a real h2, PageHeader's h1 is followed straight by the footer's
+  // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
+  // outline valid without changing anything a sighted visitor sees.
+  const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
 
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader
         title={title}
         breadcrumb={menuSection ? t(menuSection.breadcrumbKey) : t("footer.institutHaqida")}
@@ -106,6 +117,7 @@ export default function BlogPage() {
           className={`section-container grid gap-5 lg:gap-6 items-start ${hasSidebar ? "lg:grid-cols-12" : ""}`}
         >
           <div className={hasSidebar ? "lg:col-span-8 min-w-0" : "min-w-0"}>
+            {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
             <Reveal>
               {sortedBlocks.length > 0 ? (
                 <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4">
@@ -122,10 +134,10 @@ export default function BlogPage() {
             </Reveal>
           </div>
 
-          {hasSidebar && resolvedMenuId && (
+          {hasSidebar && (
             <aside className="lg:col-span-4 min-w-0">
               <Reveal delay={100}>
-                <MenuSectionNav menuId={resolvedMenuId} currentSlug={slug} />
+                <MenuSectionNav menuId={menuSection.sectionId} currentSlug={slug} />
               </Reveal>
             </aside>
           )}

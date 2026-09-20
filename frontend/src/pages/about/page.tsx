@@ -9,6 +9,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import { Reveal } from "@/components/Animation";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { normalizeYearLabels } from "@/lib/siteConstants";
 
 // Page has no title field of its own (see PageSerializer -- just
@@ -29,6 +30,7 @@ export default function AboutPage() {
   const [page, setPage] = useState<Page | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { contentRef, remembered } = useRememberedContentHeight(`about:${slug}`, loading);
 
   useEffect(() => {
     if (!slug) return;
@@ -45,14 +47,19 @@ export default function AboutPage() {
 
   usePageMeta(displayTitle);
 
-  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 1800} />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
+  // See blog/page.tsx's identical comment: without a real h2 in the body,
+  // PageHeader's h1 is followed straight by the footer's h3.
+  const hasBodyHeading = page.blocks.some((b) => b.block_type === "heading");
+
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader title={displayTitle} breadcrumb={t("footer.institutHaqida")} />
       <section className="section-pad bg-transparent">
         <div className="section-container max-w-4xl">
+          {!hasBodyHeading && <h2 className="sr-only">{displayTitle}</h2>}
           <Reveal>
             <article className="page-card p-5 md:p-7 lg:p-8 cms-article space-y-4">
               {page.blocks

@@ -9,6 +9,7 @@ import RichContent from "@/components/shared/RichContent";
 import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
 import { getNewsArticleImage } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
@@ -28,6 +29,7 @@ export default function DetailPage() {
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { contentRef, remembered } = useRememberedContentHeight(`detail:${slug}`, loading);
 
   useEffect(() => {
     if (!slug) return;
@@ -53,14 +55,14 @@ export default function DetailPage() {
 
   usePageMeta(article?.title, article ? stripHtml(article.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 2200} />;
   if (error || !article) return <ErrorState message={error ?? undefined} />;
 
   const categorySlug = article.category?.slug;
   const heroImage = getNewsArticleImage(article);
 
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader title={article.title} breadcrumb={t("detail.breadcrumb")} compact />
 
       <NewsSectionLayout currentSlug={categorySlug}>
@@ -112,6 +114,12 @@ export default function DetailPage() {
               )}
 
               <AiSummaryBlock title={article.title} content={article.content} className="mb-5" />
+
+              {/* See blog/page.tsx's identical comment: without a real h2 in
+                  the body, PageHeader's h1 is followed straight by the
+                  footer's h3. News content is raw HTML, not ContentBlocks,
+                  so this checks for a real heading tag the same way. */}
+              {!/<h[1-6][ >]/i.test(article.content) && <h2 className="sr-only">{article.title}</h2>}
 
               <RichContent
                 html={article.content}

@@ -10,6 +10,7 @@ import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import DepartmentPageContent from "@/components/shared/DepartmentPageContent";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
 import { normalizeYearLabels } from "@/lib/siteConstants";
 import { DEPARTMENT_MENU_ID } from "@/lib/departmentSection";
@@ -22,6 +23,7 @@ export default function DepartmentPage() {
   const [isFallback, setIsFallback] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { contentRef, remembered } = useRememberedContentHeight(`department:${slug}`, loading);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
 
@@ -84,14 +86,19 @@ export default function DepartmentPage() {
 
   usePageMeta(dept?.title, dept ? stripHtml(dept.content).slice(0, 160) : null);
 
-  if (loading) return <LoadingState minHeight="min-h-[80vh]" />;
+  // Department "about" articles routinely run several thousand pixels tall
+  // (staff card + full CMS body) -- a first-ever cold load has no remembered
+  // height yet, so this cold-start default is picked from real measured
+  // department pages (~1,000-11,000px) rather than the old 80vh, which was
+  // an order of magnitude short and shoved the footer down by that whole gap.
+  if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 3600} />;
   if (error || !dept) return <ErrorState message={error ?? undefined} />;
 
   const isHistory = slug === "institut-tarixi";
   const displayTitle = normalizeYearLabels(dept.title.trim());
 
   return (
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
       <PageHeader
         title={displayTitle}
         breadcrumb={isHistory ? t("footer.institutHaqida") : t("nav.section.kafedralar")}

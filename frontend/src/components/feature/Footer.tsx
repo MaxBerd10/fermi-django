@@ -183,9 +183,9 @@ export default function Footer() {
           {/* Link columns */}
           <div className="lg:col-span-5 grid grid-cols-3 gap-3 sm:gap-4">
             <div>
-              <h4 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.institut")}
-              </h4>
+              </h3>
               <ul className="space-y-0.5">
                 {INSTITUT_LINKS.map(({ key, to }) => (
                   <li key={key}>
@@ -198,9 +198,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.qabul")}
-              </h4>
+              </h3>
               <ul className="space-y-0.5">
                 {TALIM_LINKS.map(({ key, to }) => (
                   <li key={key}>
@@ -213,9 +213,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.xizmatlar")}
-              </h4>
+              </h3>
               <ul className="space-y-0.5">
                 {XIZMAT_LINKS.map((item) => {
                   const label = t(item.labelKey);
@@ -248,9 +248,9 @@ export default function Footer() {
           {/* Contact — compact panel */}
           <div className="lg:col-span-4">
             <div className="rounded-xl border border-white/15 bg-white/[0.06] p-3.5 md:p-4">
-              <h4 className="font-heading text-xs font-bold tracking-wide mb-2.5 text-[#ffd600]">
+              <h3 className="font-heading text-xs font-bold tracking-wide mb-2.5 text-[#ffd600]">
                 {t("footer.contactUs")}
-              </h4>
+              </h3>
 
               <ul className="space-y-2 text-xs text-white/80">
                 <li className="flex gap-2 items-start">

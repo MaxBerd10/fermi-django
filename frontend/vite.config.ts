@@ -16,6 +16,11 @@ const isPreview = process.env.IS_PREVIEW ? true : false;
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  // During a local visual QA pass the Django instance may live on a remote
+  // staging host rather than on this machine. Keeping this opt-in lets Vite
+  // proxy the same-origin `/api/v1` calls there without changing the browser
+  // bundle or the production deployment configuration.
+  const devApiTarget = String(process.env.FERMI_DEV_API_TARGET || "http://127.0.0.1:8000").replace(/\/$/, "");
   const encodedOpenAiKey = String(env.OPENAI_API_KEY_B64 || env.VITE_OPENAI_API_KEY_B64 || "").trim();
   const openAiKey = String(env.OPENAI_API_KEY || env.VITE_OPENAI_API_KEY || "").trim() || (encodedOpenAiKey ? Buffer.from(encodedOpenAiKey, "base64").toString("utf8").trim() : "");
   const encodedImentorKey = String(env.IMENTOR_API_KEY_B64 || env.VITE_IMENTOR_API_KEY_B64 || "").trim();
@@ -107,8 +112,11 @@ export default defineConfig(({ mode }) => {
       // + build_absolute_uri), so unlike the old Yii2 backend there's no
       // separate same-origin "/uploads" path that needs its own proxy entry.
       "/api/v1": {
-        target: "http://127.0.0.1:8000",
+        target: devApiTarget,
         changeOrigin: true,
+        // Staging may temporarily use a self-signed certificate. This is
+        // confined to Vite's local development proxy and never reaches users.
+        secure: !devApiTarget.startsWith("https://beta.fermi.uz"),
       },
       // Crawlers hit this at the site root (see public/robots.txt); Django
       // only serves it under "/api/v1/" — mirrors production-server.mjs's
