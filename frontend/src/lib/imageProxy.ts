@@ -16,6 +16,10 @@ const ALLOWED_ORIGINS = [
   "https://fermi.uz",
   "https://www.fermi.uz",
   "https://beta.fermi.uz",
+  // Telegram's public CDN is the source for imported Telegram-channel photos.
+  // Keep this exact host allowlisted (rather than accepting arbitrary remote URLs)
+  // so 800px feed photos shown as small cards still go through our resize cache.
+  "https://cdn4.telesco.pe",
   // Django media host (dev + same-box prod default) — keep in sync with the
   // mirrored allowlist in server/image-proxy.mjs, or "next-gen image format"
   // Lighthouse wins silently regress (this just passes the raw URL through).

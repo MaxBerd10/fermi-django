@@ -27,6 +27,9 @@ const ALLOWED_ORIGINS = [
   "https://fermi.uz",
   "https://www.fermi.uz",
   "https://beta.fermi.uz",
+  // Imported Telegram-channel media is hosted here. This remains a single,
+  // explicit CDN origin rather than opening the proxy to arbitrary URLs.
+  "https://cdn4.telesco.pe",
   // Django media host — keep in sync with src/lib/imageProxy.ts's mirrored list.
   "http://127.0.0.1:8000",
   "http://localhost:8000",
