@@ -173,7 +173,7 @@ export default function NewsAnnouncements() {
                   const featuredImg = getNewsArticleImage(featured);
                   return featuredImg ? (
                     <img
-                      src={optimizedImageUrl(featuredImg, 900)}
+                      src={optimizedImageUrl(featuredImg, featured.hasDocument || featured.isVideo ? 320 : 900)}
                       alt={featured.title}
                       className={`w-full h-full group-hover:scale-[1.03] transition-transform duration-500 ${
                         featured.hasDocument || featured.isVideo ? "object-contain p-8 bg-white" : "object-cover object-top"

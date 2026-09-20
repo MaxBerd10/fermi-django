@@ -73,7 +73,12 @@ export default function About() {
               <img
                 alt={title}
                 className="absolute inset-0 w-full h-full object-cover object-center"
-                src={optimizedImageUrl(imageFile, 900)}
+                src={optimizedImageUrl(imageFile, 640)}
+                srcSet={[320, 480, 640, 900].map((width) => `${optimizedImageUrl(imageFile, width)} ${width}w`).join(", ")}
+                sizes="(min-width: 1024px) 640px, (min-width: 640px) 50vw, 100vw"
+                width={900}
+                height={563}
+                decoding="async"
               />
             )}
             <div className="absolute left-0 bottom-0 bg-primary-950 px-4 py-2.5 flex items-baseline gap-2">
