@@ -60,8 +60,8 @@ function isAllowedSource(rawUrl) {
   }
 }
 
-function cacheKeyFor(src, width) {
-  return createHash("sha1").update(`${src}|w${width}`).digest("hex");
+function cacheKeyFor(src, width, format) {
+  return createHash("sha1").update(`${src}|w${width}|${format}`).digest("hex");
 }
 
 // Rewriting the URL alone isn't enough: Django's USE_X_FORWARDED_HOST +
@@ -79,7 +79,7 @@ function resolveFetchTarget(src, fermiApiBaseUrl) {
   };
 }
 
-async function resizeAndCache(src, width, fermiApiBaseUrl) {
+async function resizeAndCache(src, width, format, fermiApiBaseUrl) {
   const { url: fetchUrl, headers } = resolveFetchTarget(src, fermiApiBaseUrl);
   const upstream = await fetch(fetchUrl, { headers, signal: AbortSignal.timeout(20_000) });
   if (!upstream.ok) return null;
@@ -106,8 +106,19 @@ async function resizeAndCache(src, width, fermiApiBaseUrl) {
   let pipeline;
   let outContentType;
   if (needsAlpha) {
-    pipeline = resized.png({ compressionLevel: 9 });
-    outContentType = "image/png";
+    // WebP preserves transparency and is substantially smaller than PNG for
+    // the CMS posters used on the homepage. Keep PNG as a fallback for older
+    // clients that do not advertise WebP support.
+    if (format === "webp") {
+      pipeline = resized.webp({ quality: 82, effort: 4 });
+      outContentType = "image/webp";
+    } else {
+      pipeline = resized.png({ compressionLevel: 9 });
+      outContentType = "image/png";
+    }
+  } else if (format === "webp") {
+    pipeline = resized.webp({ quality: 82, effort: 4 });
+    outContentType = "image/webp";
   } else {
     // Default to JPEG output — covers jpeg sources (the vast majority here), opaque
     // PNGs (see above), and any ambiguous/missing content-type. mozjpeg at quality 85
@@ -154,6 +165,7 @@ export async function handleImageProxyRequest(request, response, fermiApiBaseUrl
 
   const src = requestUrl.searchParams.get("src") || "";
   const width = Number(requestUrl.searchParams.get("w"));
+  const format = String(request.headers.accept || "").includes("image/webp") ? "webp" : "legacy";
 
   if (!isAllowedSource(src) || !ALLOWED_WIDTHS.includes(width)) {
     response.statusCode = 400;
@@ -162,7 +174,7 @@ export async function handleImageProxyRequest(request, response, fermiApiBaseUrl
   }
 
   ensureCacheDir();
-  const key = cacheKeyFor(src, width);
+  const key = cacheKeyFor(src, width, format);
   const metaPath = resolve(cacheDir, `${key}.json`);
   const dataPath = resolve(cacheDir, `${key}.bin`);
 
@@ -172,6 +184,7 @@ export async function handleImageProxyRequest(request, response, fermiApiBaseUrl
       response.statusCode = 200;
       response.setHeader("Content-Type", meta.contentType);
       response.setHeader("Cache-Control", CACHE_CONTROL);
+      response.setHeader("Vary", "Accept");
       response.end(readFileSync(dataPath));
       return true;
     } catch {
@@ -180,7 +193,7 @@ export async function handleImageProxyRequest(request, response, fermiApiBaseUrl
   }
 
   try {
-    const result = await resizeAndCache(src, width, fermiApiBaseUrl);
+    const result = await resizeAndCache(src, width, format, fermiApiBaseUrl);
     if (!result) {
       response.statusCode = 502;
       response.end();
@@ -191,6 +204,7 @@ export async function handleImageProxyRequest(request, response, fermiApiBaseUrl
     response.statusCode = 200;
     response.setHeader("Content-Type", result.contentType);
     response.setHeader("Cache-Control", CACHE_CONTROL);
+    response.setHeader("Vary", "Accept");
     response.end(result.buffer);
   } catch (error) {
     console.error(`image-proxy: failed to process ${src} @ w${width}`, error);

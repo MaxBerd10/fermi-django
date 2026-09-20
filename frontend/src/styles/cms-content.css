@@ -1,30 +1,3 @@
-/* Navbar dropdown — to'liq oq */
-.nav-dropdown-panel {
-  background: #ffffff !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(10, 17, 88, 0.12) !important;
-  border-radius: 12px;
-  box-shadow:
-    0 8px 16px rgba(10, 17, 88, 0.06),
-    0 24px 48px rgba(10, 17, 88, 0.12) !important;
-  color: #0f172a;
-  isolation: isolate;
-}
-
-.nav-dropdown-panel a,
-.nav-dropdown-panel button {
-  color: #1e293b !important;
-  font-size: 0.875rem;
-  line-height: 1.35;
-}
-
-.nav-dropdown-panel a:hover,
-.nav-dropdown-panel button:hover {
-  background: #f0f4ff !important;
-  color: #0a1158 !important;
-}
-
 /* CMS typography */
 .prose-content,
 .cms-article {

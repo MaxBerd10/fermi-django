@@ -9,6 +9,7 @@ import { getSettings } from "../../api/settings";
 import type { MenuNode } from "../../types/menu";
 import BrandMark from "../shared/BrandMark";
 import { normalizeYearLabels, normalizeMenuHref } from "@/lib/siteConstants";
+import "@/styles/nav-dropdown.css";
 
 const LOGO_IMG = "/images/logo.png?v=2";
 const MORE_ID = -1;
