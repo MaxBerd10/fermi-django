@@ -232,9 +232,12 @@ export default function NewsAnnouncements() {
                   <div className="w-20 h-full min-h-[4.25rem] max-h-24 rounded-xl overflow-hidden bg-[#e5e5e5] shrink-0 self-stretch">
                     {(() => {
                       const thumbImg = getNewsArticleImage(n);
-                      return thumbImg ? (
+                      const thumbDisplayImg = thumbImg?.startsWith("/images/logo.png")
+                        ? "/images/logo.webp"
+                        : thumbImg;
+                      return thumbDisplayImg ? (
                         <img
-                          src={optimizedImageUrl(thumbImg, 200)}
+                          src={optimizedImageUrl(thumbDisplayImg, 200)}
                           alt=""
                           className={`w-full h-full ${n.hasDocument || n.isVideo ? "object-contain p-2 bg-white" : "object-cover object-top"}`}
                           loading="lazy"
