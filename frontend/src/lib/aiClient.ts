@@ -154,6 +154,12 @@ function tryFastPath(query: string, lang: string): { reply: string; sources: AiS
   return { reply: intent.reply[l], sources: docs.map((d) => ({ title: d.title, href: d.href })) };
 }
 
+// Public on purpose: the floating FerMI Ai can answer these factual questions
+// while paid AI is disabled, without even making a request to the proxy.
+export function staticAiReply(query: string, lang: string) {
+  return tryFastPath(query, lang);
+}
+
 async function openaiChat(
   messages: { role: string; content: string }[],
   opts?: { temperature?: number; json?: boolean; maxTokens?: number }

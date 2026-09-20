@@ -1747,6 +1747,7 @@ export default {
   "ai.placeholder": "Type your question...",
   "ai.thinking": "Thinking...",
   "ai.error": "AI is temporarily unavailable. Please try again later.",
+  "ai.staticOnly": "I can currently provide ready information about the address, phone, admissions, faculties, and HEMIS. I will answer other questions once the AI service is enabled.",
   "ai.quick1": "Admission documents",
   "ai.quick2": "Faculties",
   "ai.quick3": "HEMIS",

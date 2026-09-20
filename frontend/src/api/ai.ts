@@ -1,6 +1,7 @@
 /** Browser-facing AI client — sends requests to the server-side proxy. */
 export {
   aiChat,
+  staticAiReply,
   aiPathfinder,
   aiSearch,
   aiQabul,

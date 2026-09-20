@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { aiChat, type AiSource } from "@/api/ai";
+import { aiChat, staticAiReply, type AiSource } from "@/api/ai";
 import { goAiHref, renderAiText } from "@/components/ai/renderAiText";
 import { FEATURES } from "@/lib/featureFlags";
 import { getSettings } from "@/api/settings";
@@ -78,8 +78,17 @@ export default function AiChatWidget() {
       return;
     }
 
+    // Common institute facts are free, local answers. Do this before checking
+    // the paid model flag, so HEMIS/admissions/faculties remain useful whenever
+    // OpenAI is deliberately disabled.
+    const staticReply = staticAiReply(q, i18n.language);
+    if (staticReply) {
+      setMessages((m) => [...m, { role: "assistant", content: staticReply.reply, sources: staticReply.sources }]);
+      return;
+    }
+
     if (!FEATURES.ai) {
-      setError(t("ai.error"));
+      setMessages((m) => [...m, { role: "assistant", content: t("ai.staticOnly") }]);
       return;
     }
     setLoading(true);

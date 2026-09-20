@@ -1747,6 +1747,7 @@ export default {
   "ai.placeholder": "Savolingizni yozing...",
   "ai.thinking": "Javob tayyorlanmoqda...",
   "ai.error": "AI xizmati vaqtincha ishlamayapti. Keyinroq urinib koʻring.",
+  "ai.staticOnly": "Hozir men manzil, telefon, qabul, fakultetlar va HEMIS bo‘yicha tayyor ma’lumot bera olaman. Boshqa savollarga AI xizmati yoqilganda javob beraman.",
   "ai.quick1": "Qabul hujjatlari",
   "ai.quick2": "Fakultetlar",
   "ai.quick3": "HEMIS",
