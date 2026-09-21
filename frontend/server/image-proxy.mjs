@@ -49,6 +49,9 @@ const ALLOWED_WIDTHS = [200, 320, 480, 640, 900, 1200, 1600];
 const MAX_SOURCE_BYTES = 30 * 1024 * 1024; // guards memory use against an unexpectedly huge upload
 const MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000; // stale cache entries are pruned after ~3 months
 const CACHE_CONTROL = "public, max-age=2592000, immutable";
+// 70 is visually clean for news and CMS photos at their displayed sizes, while
+// avoiding the ~30–40 KB per-image excess Lighthouse identified at quality 76.
+const WEBP_QUALITY = 70;
 
 function ensureCacheDir() {
   if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
@@ -66,7 +69,7 @@ function isAllowedSource(rawUrl) {
 function cacheKeyFor(src, width, format) {
   // Bump the transform version when encoder settings change so an older,
   // larger cached WebP is never returned after a quality improvement.
-  return createHash("sha1").update(`${src}|w${width}|${format}|q76`).digest("hex");
+  return createHash("sha1").update(`${src}|w${width}|${format}|q${WEBP_QUALITY}`).digest("hex");
 }
 
 // Rewriting the URL alone isn't enough: Django's USE_X_FORWARDED_HOST +
@@ -115,14 +118,14 @@ async function resizeAndCache(src, width, format, fermiApiBaseUrl) {
     // the CMS posters used on the homepage. Keep PNG as a fallback for older
     // clients that do not advertise WebP support.
     if (format === "webp") {
-      pipeline = resized.webp({ quality: 76, effort: 4 });
+      pipeline = resized.webp({ quality: WEBP_QUALITY, effort: 4 });
       outContentType = "image/webp";
     } else {
       pipeline = resized.png({ compressionLevel: 9 });
       outContentType = "image/png";
     }
   } else if (format === "webp") {
-    pipeline = resized.webp({ quality: 76, effort: 4 });
+    pipeline = resized.webp({ quality: WEBP_QUALITY, effort: 4 });
     outContentType = "image/webp";
   } else {
     // Default to JPEG output — covers jpeg sources (the vast majority here), opaque
