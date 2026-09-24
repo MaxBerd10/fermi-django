@@ -2,7 +2,7 @@ import os
 import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, "/Users/maxberd/Desktop/fermi-django")
+sys.path.insert(0, REPO_ROOT)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 import django
 
