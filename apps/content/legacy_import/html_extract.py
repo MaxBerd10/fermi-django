@@ -264,11 +264,49 @@ def _build_table_grid(table: Tag) -> tuple[list[str], list[list[str]]] | None:
     if not all(bold[header_idx]) or header_idx >= len(grid) - 1:
         return None  # no real bold header row, or it's the table's only row
 
-    headers = grid[header_idx]
+    headers = _combine_header_levels(grid[: header_idx + 1], width)
     data_rows = [row for row in grid[header_idx + 1 :] if any(cell.strip() for cell in row)]
     if not headers or not data_rows or any(not h.strip() for h in headers):
         return None
     return headers, data_rows
+
+
+def _combine_header_levels(header_rows: list[list[str]], width: int) -> list[str]:
+    """Combines a 1+-row leading header block into one flat header per
+    column. A real multi-level header (a grantlar-taqsimoti-shaped table:
+    a year group, split into grant-type groups, split into Jami/oʻzbek/rus
+    sub-columns -- 3 real levels, not just 2) needs every level's own text,
+    not only the bottom row's -- dropping the group levels would make two
+    columns from DIFFERENT year groups both read as just "Jami", losing
+    exactly which year/grant-type each one is. But a column that's the
+    SAME text at every level (e.g. "№", "Ta'lim yo'nalishi nomi" -- a
+    single cell spanning all header rows via rowspan, not a real grouped
+    column) must stay as that one word, not become "№ — № — №".
+
+    Each row's blanks (colspan continuation cells, marked "" by the
+    colspan-handling above) are forward-filled with the nearest real value
+    to their left before combining, so a whole colspan group's real label
+    reaches every column it covers.
+    """
+    propagated_rows = []
+    for row in header_rows:
+        propagated = []
+        current = ""
+        for cell in row:
+            if cell.strip():
+                current = cell
+            propagated.append(current)
+        propagated_rows.append(propagated)
+
+    headers = []
+    for col in range(width):
+        parts = []
+        for row in propagated_rows:
+            value = row[col]
+            if value and (not parts or parts[-1] != value):
+                parts.append(value)
+        headers.append(" — ".join(parts))
+    return headers
 
 
 def _walk_flat_items(soup: Tag):

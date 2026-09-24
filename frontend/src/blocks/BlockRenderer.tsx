@@ -136,7 +136,13 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     case "table": {
       const { headers, rows } = block.data;
       return (
-        <div className="overflow-x-auto">
+        // max-w-full is load-bearing, not decorative: without an explicit
+        // width ceiling, this wrapper's own box grows to fit a wide table
+        // (e.g. grantlar-taqsimoti's 11-column combined header) instead of
+        // scrolling it -- the overflow leaked out to the whole page
+        // (confirmed: document.body.scrollWidth exceeded the viewport)
+        // rather than staying contained in this div's own scrollbar.
+        <div className="overflow-x-auto max-w-full">
           <table>
             <thead>
               <tr>
