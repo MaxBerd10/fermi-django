@@ -236,11 +236,11 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
 
       if (style === "roadmap") {
         return (
-          <section className="cms-roadmap-pdf" aria-label={caption || document.title || "Yo‘l xaritasi PDF hujjati"}>
+          <section className="cms-roadmap-pdf" aria-label={caption || document.title || document.filename}>
             <div className="cms-roadmap-pdf__toolbar">
               <span className="cms-roadmap-pdf__label">
                 <i className="ri-file-pdf-2-line" aria-hidden="true" />
-                {caption || document.title || "Yo‘l xaritasi"}
+                {caption || document.title || document.filename}
               </span>
               <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download">
                 <i className="ri-download-2-line" aria-hidden="true" />
