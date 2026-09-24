@@ -102,15 +102,48 @@
   font-weight: 500;
 }
 
+/* BlockRenderer already wraps a table block in its own overflow-x-auto div
+   -- display:block here (on the <table> itself, not a wrapper) broke the
+   browser's native table column-sizing algorithm, so a long cell's content
+   just pushed the whole table past the article's width instead of wrapping
+   within its column. table-layout:fixed below is what actually makes
+   columns share the available width and wrap long text, matching every
+   other .cms-article block's already-designed look -- th/td had no styling
+   at all before this (no padding, no borders between cells, no row
+   distinction), which is what made these tables look plain/unstyled next to
+   the rest of the article. */
 .prose-content table,
 .cms-article table {
-  display: block;
   width: 100%;
-  overflow-x: auto;
+  table-layout: fixed;
   border-collapse: collapse;
   border: 1px solid #e2e8f0;
   border-radius: 0.75rem;
   margin: 1.25rem 0;
+  overflow: hidden;
+}
+
+.prose-content th,
+.prose-content td,
+.cms-article th,
+.cms-article td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+.prose-content thead th,
+.cms-article thead th {
+  background: #f8fafc;
+  color: #0a1158;
+  font-weight: 600;
+}
+
+.prose-content tbody tr:nth-child(even),
+.cms-article tbody tr:nth-child(even) {
+  background: #f8fafc;
 }
 
 .prose-content font,
