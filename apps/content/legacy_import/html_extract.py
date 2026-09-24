@@ -156,6 +156,121 @@ def _looks_like_person_name(text: str) -> bool:
 _HEADING_TAGS = ("h1", "h2", "h3", "h4", "h5", "h6")
 
 
+def _build_table_grid(table: Tag) -> tuple[list[str], list[list[str]]] | None:
+    """Reconstructs a <table>'s flat grid (expanding rowspan/colspan into
+    repeated cell values -- the "table" ContentBlock schema has no concept
+    of a spanning cell) and splits it into (headers, data rows).
+
+    The old site's tables have no <thead>/<th> at all -- every row, header
+    or data, is a plain <tr><td> (confirmed against real content), so the
+    header row(s) aren't distinguished by tag, only by being fully bold
+    (the same "cell holds nothing but a <strong>/<b>" signal _is_bold_only
+    already uses for headings). A table can have more than one such leading
+    bold row -- a merged multi-level header, e.g. one grouping row via
+    colspan ("TOʻLOV KONTRAKTI MIQDORLARI" spanning 2 columns) followed by
+    a row of the actual sub-labels ("MDH davlatlar uchun" / "Xorijiy
+    davlatlar uchun") for those same 2 columns. Taking the LAST such row's
+    value per column is exactly right here: a rowspan cell's value already
+    reappears in that later row via the carry mechanism below (so a column
+    the grouping row solely owns still comes through correctly), while a
+    colspan grouping label that a later row overrides with real per-column
+    labels is correctly dropped in favor of the more specific ones.
+
+    Returns None (caller falls back to the pre-existing paragraph-flattening
+    behavior) when there's no usable header row -- this only auto-converts
+    the pattern that's actually been verified against real content, rather
+    than guessing on one this hasn't been checked against.
+    """
+    trs = table.find_all("tr")
+    if not trs:
+        return None
+
+    grid: list[list[str]] = []
+    bold: list[list[bool]] = []
+    carry: dict[int, tuple[int, str, bool]] = {}  # col -> (rows remaining, text, is_bold)
+
+    for tr in trs:
+        cells = tr.find_all(["td", "th"], recursive=False)
+        row_text: list[str] = []
+        row_bold: list[bool] = []
+        col = 0
+        cell_idx = 0
+        while cell_idx < len(cells) or col in carry:
+            if col in carry:
+                remaining, text, is_bold = carry[col]
+                row_text.append(text)
+                row_bold.append(is_bold)
+                carry[col] = (remaining - 1, text, is_bold) if remaining > 1 else None
+                if carry[col] is None:
+                    del carry[col]
+                col += 1
+                continue
+            cell = cells[cell_idx]
+            text = _normalize(cell.get_text(" "))
+            is_bold = bool(text) and _is_bold_only(cell)
+            try:
+                colspan = max(1, int(cell.get("colspan", 1)))
+            except (TypeError, ValueError):
+                colspan = 1
+            try:
+                rowspan = max(1, int(cell.get("rowspan", 1)))
+            except (TypeError, ValueError):
+                rowspan = 1
+            # A colspan cell's real text goes in only the first column it
+            # spans, blank in the rest -- the "table" ContentBlock schema
+            # (and BlockRenderer's plain <td> per cell, with no colSpan
+            # attribute) has no concept of a merged cell, so repeating the
+            # text into every spanned column would render as that same text
+            # sitting in 2+ adjacent cells, looking like a duplication bug
+            # (found live: a "Jami:" totals cell with colspan="2" became
+            # two side-by-side "Jami:" cells). Rowspan still repeats a
+            # cell's value down every row it spans (that's a real per-row
+            # value, e.g. a multi-row header's shared "№" column), just
+            # blank-after-first now applies per column there too.
+            for span_i in range(colspan):
+                # Only the TEXT is blanked past the first spanned column --
+                # is_bold stays the same for all of them, since a blanked
+                # column is still logically part of the same (possibly
+                # bold) cell, just not repeating its text. Forcing it False
+                # here previously broke the header-row detection below: the
+                # leading "is this whole row bold" chain would break on the
+                # blanked cell in a colspan'd header row before ever
+                # reaching a real header row underneath it.
+                col_text = text if span_i == 0 else ""
+                row_text.append(col_text)
+                row_bold.append(is_bold)
+                if rowspan > 1:
+                    carry[col] = (rowspan - 1, col_text, is_bold)
+                col += 1
+            cell_idx += 1
+        if any(cell.strip() for cell in row_text):
+            grid.append(row_text)
+            bold.append(row_bold)
+
+    if len(grid) < 2:
+        return None  # a header with no data rows isn't a usable table
+
+    width = max(len(r) for r in grid)
+    grid = [r + [""] * (width - len(r)) for r in grid]
+    bold = [b + [False] * (width - len(b)) for b in bold]
+
+    header_idx = 0
+    for idx, row_bold in enumerate(bold):
+        if all(row_bold):
+            header_idx = idx
+        else:
+            break
+
+    if not all(bold[header_idx]) or header_idx >= len(grid) - 1:
+        return None  # no real bold header row, or it's the table's only row
+
+    headers = grid[header_idx]
+    data_rows = [row for row in grid[header_idx + 1 :] if any(cell.strip() for cell in row)]
+    if not headers or not data_rows or any(not h.strip() for h in headers):
+        return None
+    return headers, data_rows
+
+
 def _walk_flat_items(soup: Tag):
     """Yields ('image', src), ('list', [items]), ('heading_tag', text) and
     ('text', tag) in document order, skipping inside anything already
@@ -174,6 +289,19 @@ def _walk_flat_items(soup: Tag):
                     yield ("image", src)
                 seen_ids.add(id(child))
                 continue
+            if child.name == "table":
+                extracted = _build_table_grid(child)
+                if extracted is not None:
+                    yield ("table", extracted)
+                    for descendant in child.find_all(True):
+                        seen_ids.add(id(descendant))
+                    seen_ids.add(id(child))
+                    continue
+                # Couldn't confidently extract this one (see
+                # _build_table_grid's own docstring for why) -- fall through
+                # to the existing recursion below, same as before this table
+                # branch existed at all: each cell's own div/p still becomes
+                # its own paragraph/heading block, exactly like today.
             if child.name in ("ul", "ol"):
                 items = [_normalize(li.get_text(" ")) for li in child.find_all("li", recursive=False)]
                 items = [i for i in items if i]
@@ -248,6 +376,15 @@ def extract(html: str) -> ExtractionResult:
 
         if kind == "list":
             result.blocks.append(ExtractedBlock("list", {"items": value}))
+            i += 1
+            continue
+
+        if kind == "table":
+            if pending_image:
+                result.blocks.append(ExtractedBlock("image", {"image_src": pending_image}))
+                pending_image = None
+            headers, rows = value
+            result.blocks.append(ExtractedBlock("table", {"headers": headers, "rows": rows}))
             i += 1
             continue
 
