@@ -12,7 +12,7 @@ const FALLBACK_SETTINGS: SiteSettings = {
     phone: "+998 95 062-23-45, +998 95 063-23-45",
     email: "info@fjsti.uz, fmioz@mail.ru",
     faks: null,
-    address: "Farg'ona sh., Yangi Turon, 2-a uy",
+    address: "Fargʻona sh., Yangi Turon, 2-a uy",
   },
   logo: null,
   networks: [],

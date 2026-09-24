@@ -13,7 +13,7 @@ const NAVY = "#0a1158";
 const NAVY_DEEP = "#060a3d";
 const YELLOW = "#ffd600";
 
-const FALLBACK_ADDRESS = "Farg'ona sh., Yangi Turon, 2-a uy";
+const FALLBACK_ADDRESS = "Fargʻona sh., Yangi Turon, 2-a uy";
 const FALLBACK_PHONE = "+998 95 062-23-45, +998 95 063-23-45";
 const FALLBACK_EMAIL = "info@fjsti.uz, fmioz@mail.ru";
 

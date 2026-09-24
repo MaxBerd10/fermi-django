@@ -1544,7 +1544,7 @@ export default {
   "nav.test": "Test",
   "nav.keyslar": "Keyslar",
   "nav.vakansiyaTest": "Vakansiya testi",
-  "nav.onlineTalim": "Onlayn ta'lim",
+  "nav.onlineTalim": "Onlayn taʻlim",
   "test.bannerEyebrow": "Onlayn test banki",
   "test.bannerTitle": "O'zingizni sinab ko'ring",
   "test.bannerSubjectsLabel": "mavjud fan",

@@ -1,17 +1,23 @@
-/** CMS va menyu matnlaridagi imlo va belgilarni to'g'rilash */
+/** CMS va menyu matnlaridagi imlo va belgilarni toʻgʻrilash.
+ * Kanonik belgi — ʻ (U+02BB, modifier letter turned comma), butun sayt
+ * shu bilan yoziladi (masalan lib/siteConstants.ts, api/client.ts's
+ * resolveLocale). Ilgari bu yerda toʻgʻridan-toʻgʻri qarama-qarshi
+ * konventsiya bilan ' (oddiy apostrof) ga qaytarilardi — resolveLocale
+ * toʻgʻrilagan matnni xuddi shu "Oʻzbekiston" kabi soʻzlarda qayta
+ * buzardi (LeaderFeaturedProfile/leaderDisplay orqali chaqirilganda). */
 export function normalizeCmsOrthography(text: string): string {
   if (!text) return text;
 
   return (
     text
-      .replace(/[`‘’]/g, "'")
-      .replace(/O['ʻʼ´`]zbekiston/gi, "O'zbekiston")
-      .replace(/O['ʻʼ´`]RQ/gi, "O'RQ")
-      .replace(/O['ʻʼ´`]z/g, "O'z")
-      .replace(/\btogrisia\b/gi, "to'g'risida")
-      .replace(/\btalim togri/gi, "ta'lim to'g'ri")
-      .replace(/\bOzbeksiton\b/gi, "O'zbekiston")
-      .replace(/\bozbeksiton\b/gi, "O'zbekiston")
+      .replace(/[`‘’ʼ´]/g, "ʻ")
+      .replace(/O['ʻʼ´`]zbekiston/gi, "Oʻzbekiston")
+      .replace(/O['ʻʼ´`]RQ/gi, "OʻRQ")
+      .replace(/O['ʻʼ´`]z/g, "Oʻz")
+      .replace(/\btogrisia\b/gi, "toʻgʻrisida")
+      .replace(/\btalim togri/gi, "taʻlim toʻgʻri")
+      .replace(/\bOzbeksiton\b/gi, "Oʻzbekiston")
+      .replace(/\bozbeksiton\b/gi, "Oʻzbekiston")
       .replace(/\s+/g, " ")
       .trim()
   );
