@@ -1,6 +1,7 @@
 import i18n from "../i18n";
 import type { ApiMeta } from "../types/api";
 import { ApiError } from "../types/api";
+import { normalizeUzbekApostrophes } from "../lib/normalizeCmsText";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
 
@@ -95,11 +96,11 @@ const LOCALE_KEYS = ["uz", "ru", "en"] as const;
 // quote character) -- only the unambiguous "smart quote" variants are
 // included, which a real attribute/URL/slug would never contain and only
 // ever reach here via some editor's autocorrect mangling an intended ʻ.
-const APOSTROPHE_VARIANTS_RE = /[‘’ʼ`´]/g;
-
-function normalizeUzbekApostrophes(text: string): string {
-  return text.replace(APOSTROPHE_VARIANTS_RE, "ʻ");
-}
+// normalizeUzbekApostrophes itself lives in lib/normalizeCmsText.ts, shared
+// with enrichNewsArticle (newsImages.ts) -- Telegram-sourced news content
+// bypasses this resolveLocale chokepoint entirely (it's fetched straight
+// from the Node feed, never through Django's API), so it needs this same
+// fix applied at that separate, later chokepoint instead.
 
 function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
   if (Array.isArray(value)) {

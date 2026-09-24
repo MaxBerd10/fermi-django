@@ -1,3 +1,16 @@
+// Uzbek Latin's oʻ/gʻ digraph needs exactly one apostrophe-shaped character
+// (U+02BB, modifier letter turned comma) -- see api/client.ts's resolveLocale
+// for the full rationale (shared here since Telegram-sourced news content
+// bypasses resolveLocale entirely -- see lib/newsImages.ts's enrichNewsArticle).
+// Deliberately minimal (no tag-stripping, no whitespace collapsing) so it's
+// safe to run over real HTML, unlike normalizeCmsOrthography below.
+const APOSTROPHE_VARIANTS_RE = /[‘’ʼ`´]/g;
+
+export function normalizeUzbekApostrophes(text: string): string {
+  if (!text) return text;
+  return text.replace(APOSTROPHE_VARIANTS_RE, "ʻ");
+}
+
 /** CMS va menyu matnlaridagi imlo va belgilarni toʻgʻrilash.
  * Kanonik belgi — ʻ (U+02BB, modifier letter turned comma), butun sayt
  * shu bilan yoziladi (masalan lib/siteConstants.ts, api/client.ts's
@@ -9,8 +22,7 @@ export function normalizeCmsOrthography(text: string): string {
   if (!text) return text;
 
   return (
-    text
-      .replace(/[`‘’ʼ´]/g, "ʻ")
+    normalizeUzbekApostrophes(text)
       .replace(/O['ʻʼ´`]zbekiston/gi, "Oʻzbekiston")
       .replace(/O['ʻʼ´`]RQ/gi, "OʻRQ")
       .replace(/O['ʻʼ´`]z/g, "Oʻz")

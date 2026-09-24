@@ -1,4 +1,5 @@
 import type { NewsArticle } from "@/types/content";
+import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
 
 const API_ORIGIN = (
   (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/v1\/?$/, "") ||
@@ -109,6 +110,16 @@ export function getNewsArticleImage(
 export function enrichNewsArticle(article: NewsArticle, index = 0): NewsArticle {
   return {
     ...article,
+    // Django-sourced title/content already passed through api/client.ts's
+    // resolveLocale (a no-op re-running it here), but Telegram-sourced
+    // articles are fetched straight from the Node feed and never touch that
+    // chokepoint at all -- this is the one function both sources share, so
+    // it's the right place to catch the same wrong-apostrophe-character
+    // class of bug for Telegram content too. Safe to run over content's real
+    // HTML tags (<b>, <br/>, ...): only replaces apostrophe-shaped
+    // characters, never touches tag syntax or attribute quoting.
+    title: normalizeUzbekApostrophes(article.title),
+    content: normalizeUzbekApostrophes(article.content),
     img: getNewsArticleImage(article, index),
   };
 }
