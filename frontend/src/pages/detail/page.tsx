@@ -6,6 +6,7 @@ import type { NewsArticle } from "@/types/content";
 import { ApiError } from "@/types/api";
 import PageHeader from "@/components/shared/PageHeader";
 import RichContent from "@/components/shared/RichContent";
+import { BlockRenderer } from "@/blocks/BlockRenderer";
 import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -60,6 +61,9 @@ export default function DetailPage() {
 
   const categorySlug = article.category?.slug;
   const heroImage = getNewsArticleImage(article);
+  const hasBodyHeading = article.blocks
+    ? article.blocks.some((b) => b.block_type === "heading")
+    : /<h[1-6][ >]/i.test(article.content);
 
   return (
     <div className="text-foreground-950" ref={contentRef}>
@@ -117,14 +121,33 @@ export default function DetailPage() {
 
               {/* See blog/page.tsx's identical comment: without a real h2 in
                   the body, PageHeader's h1 is followed straight by the
-                  footer's h3. News content is raw HTML, not ContentBlocks,
-                  so this checks for a real heading tag the same way. */}
-              {!/<h[1-6][ >]/i.test(article.content) && <h2 className="sr-only">{article.title}</h2>}
+                  footer's h3. A Django-backed article has real ContentBlocks
+                  (checked directly below); a Telegram-sourced one only has
+                  raw HTML, checked the same way blog/page.tsx does for its
+                  own raw-HTML pages. */}
+              {!hasBodyHeading && <h2 className="sr-only">{article.title}</h2>}
 
-              <RichContent
-                html={article.content}
-                className="cms-article cms-article--rich cms-article--news"
-              />
+              {/* Django-backed articles carry real ContentBlocks (see
+                  NewsArticle.blocks's own doc comment) -- rendering those
+                  through blocksToPlainText+RichContent instead, as this used
+                  to, silently dropped every non-text block (images, in
+                  particular) from the page, since that helper only ever
+                  joins heading/paragraph/list text. A Telegram-sourced
+                  article has no `blocks` at all (that feed is real HTML with
+                  no Page/ContentBlock backing), so it keeps using
+                  RichContent on article.content exactly as before. */}
+              {article.blocks && article.blocks.length > 0 ? (
+                <div className="cms-article cms-article--rich cms-article--news space-y-4">
+                  {article.blocks.map((block) => (
+                    <BlockRenderer key={block.id} block={block} />
+                  ))}
+                </div>
+              ) : (
+                <RichContent
+                  html={article.content}
+                  className="cms-article cms-article--rich cms-article--news"
+                />
+              )}
 
               {article.file && (
                 <a
