@@ -264,7 +264,16 @@ def _build_table_grid(table: Tag) -> tuple[list[str], list[list[str]]] | None:
     if not all(bold[header_idx]) or header_idx >= len(grid) - 1:
         return None  # no real bold header row, or it's the table's only row
 
-    headers = _combine_header_levels(grid[: header_idx + 1], width)
+    # Only run the multi-level combiner when there's actually more than one
+    # header row to combine -- for a single header row, a colspan'd cell's
+    # blank continuation column should just stay blank (and fail the
+    # validation below, safely declining this table) rather than being
+    # forward-filled: with nothing to combine it WITH, that would produce
+    # a duplicate header (e.g. "F.I.SH" appearing twice, once genuinely
+    # labeling its column and once as a forward-filled copy over a column
+    # that's actually always empty underneath) instead of the one merged
+    # cell the source HTML really has.
+    headers = _combine_header_levels(grid[: header_idx + 1], width) if header_idx > 0 else grid[header_idx]
     data_rows = [row for row in grid[header_idx + 1 :] if any(cell.strip() for cell in row)]
     if not headers or not data_rows or any(not h.strip() for h in headers):
         return None
@@ -287,8 +296,26 @@ def _combine_header_levels(header_rows: list[list[str]], width: int) -> list[str
     colspan-handling above) are forward-filled with the nearest real value
     to their left before combining, so a whole colspan group's real label
     reaches every column it covers.
+
+    A row whose forward-filled value is the SAME across every column it's
+    actually grouping (excluding "solo" columns like "№" that every header
+    row already agrees on -- see below) carries no distinguishing
+    information between those columns, and is almost always the page's own
+    already-visible section heading directly above this table (found live:
+    xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori's "TOʻLOV KONTRAKTI
+    MIQDORLARI" row, repeated verbatim as a heading block right before the
+    table -- it colspans the whole row, so a naive "count unique values in
+    the row" check saw it alongside "№"/"Ta'lim yo'nalishi nomi" and wrongly
+    called that 3 unique values, not the 1 it actually is once those two
+    solo columns -- present, identically, in every row -- are excluded).
+    Combining a non-distinguishing row in just prepends that same redundant
+    phrase to every header instead of adding anything a reader doesn't
+    already have -- skipped entirely, same as if that row didn't exist. The
+    bottom-most row (the real, final per-column labels) is always kept
+    regardless, since it's what `header_idx` was chosen for in the first
+    place.
     """
-    propagated_rows = []
+    all_propagated = []
     for row in header_rows:
         propagated = []
         current = ""
@@ -296,7 +323,20 @@ def _combine_header_levels(header_rows: list[list[str]], width: int) -> list[str
             if cell.strip():
                 current = cell
             propagated.append(current)
-        propagated_rows.append(propagated)
+        all_propagated.append(propagated)
+
+    solo_cols = {
+        col
+        for col in range(width)
+        if len({row[col] for row in all_propagated}) <= 1
+    }
+
+    propagated_rows = []
+    for i, propagated in enumerate(all_propagated):
+        is_last = i == len(all_propagated) - 1
+        grouped_values = {v for c, v in enumerate(propagated) if v and c not in solo_cols}
+        if is_last or len(grouped_values) > 1:
+            propagated_rows.append(propagated)
 
     headers = []
     for col in range(width):
