@@ -40,7 +40,18 @@ export function resolveNewsImageUrl(src: string): string {
   if (url.startsWith("/")) url = `${API_ORIGIN}${url}`;
 
   url = url.replace(/^https?:\/\/(?:www\.)?fjsti\.uz/i, API_ORIGIN);
-  url = url.replace(/^https?:\/\/(?:www\.)?fermi\.uz/i, API_ORIGIN);
+  // NOT a fermi.uz rewrite too: Django now serves /media/ same-origin under
+  // fermi.uz itself (see imageProxy.ts's own ALLOWED_ORIGINS comment) -- a
+  // real cover/content image URL already looks like
+  // "https://fermi.uz/media/uploads/..." and is already correct as-is.
+  // Rewriting it to API_ORIGIN ("/api") produced "/api/media/..." (wrong --
+  // nothing is actually served there, a real 404) and, worse, wasn't
+  // idempotent: enrichNewsArticle can run this function a second time over
+  // an already-resolved article (see this function's own comment above on
+  // NewsCard's useMemo re-running getNewsArticleImage), and re-applying the
+  // "starts with /" branch above to that already-rewritten "/api/media/..."
+  // value prepended API_ORIGIN again into "/api/api/media/..." -- the
+  // doubled prefix actually observed breaking real news-card thumbnails.
 
   return url;
 }
