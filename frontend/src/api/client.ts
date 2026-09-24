@@ -77,6 +77,30 @@ function buildUrl(path: string, params?: RequestOptions["params"]) {
  */
 const LOCALE_KEYS = ["uz", "ru", "en"] as const;
 
+// Uzbek Latin's oʻ/gʻ digraphs need exactly one apostrophe-shaped character
+// (U+02BB, the modifier letter turned comma) -- but content arrives typed by
+// many different hands and tools (legacy import, admin panel, one-off
+// scripts) each reaching for whatever their keyboard/editor auto-corrected a
+// straight `'` into instead: a curly opening quote (looks visibly
+// "backwards"), a curly closing quote, a stray backtick, .... Fixing each
+// occurrence as it's found is exactly the whack-a-mole this was -- the only
+// fix that actually closes it off is normalizing every uz string through this
+// one chokepoint every piece of text on the site already passes through, so
+// it can't matter which character any future source happens to type. Scoped
+// to lang === "uz" only: unlike Uzbek, English/Russian genuinely use '/’ for
+// real apostrophes and contractions ("institute's"), which this must not touch.
+// Deliberately excludes the plain straight apostrophe (U+0027): this walks
+// every string in a uz-resolved response, including non-prose ones (a
+// raw_html block's own markup can legitimately use it as an HTML attribute
+// quote character) -- only the unambiguous "smart quote" variants are
+// included, which a real attribute/URL/slug would never contain and only
+// ever reach here via some editor's autocorrect mangling an intended ʻ.
+const APOSTROPHE_VARIANTS_RE = /[‘’ʼ`´]/g;
+
+function normalizeUzbekApostrophes(text: string): string {
+  return text.replace(APOSTROPHE_VARIANTS_RE, "ʻ");
+}
+
 function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
   if (Array.isArray(value)) {
     return value.map((item) => resolveLocale(item, lang)) as T;
@@ -90,6 +114,9 @@ function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
     const out: Record<string, unknown> = {};
     for (const key of keys) out[key] = resolveLocale(obj[key], lang);
     return out as T;
+  }
+  if (typeof value === "string" && lang === "uz") {
+    return normalizeUzbekApostrophes(value) as T;
   }
   return value as T;
 }
