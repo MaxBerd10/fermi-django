@@ -57,7 +57,15 @@ const CATEGORY_CONFIG: Record<string, NewsCategoryHeroConfig> = {
 
     accent: "news-cat-contest",
 
-    icon: "ri-trophy-line",
+    // NOT ri-trophy-line: the site ships a subsetted Remix Icon font
+    // (public/vendor/remixicon/remixicon-used.{css,ttf}, trimmed to only
+    // the glyphs actually referenced in the codebase at some past build --
+    // there's no build step regenerating it) -- trophy was never used
+    // elsewhere, so its glyph doesn't exist in that subset and rendered as
+    // a blank box. award-line already is (BlockRenderer's cert-gallery
+    // badge), confirmed present in remixicon-used.css.
+
+    icon: "ri-award-line",
 
     theme: "contest",
 
