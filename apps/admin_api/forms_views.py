@@ -6,7 +6,8 @@ from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from apps.faculties.models import Faculty
-from apps.forms.models import AcceptanceSubmission, ContactSubmission, VirtualSubmission
+from apps.forms.models import AcceptanceSubmission, ContactSubmission, ContestSubmission, VirtualSubmission
+from apps.news.models import NewsPost
 
 from .common import AdminPagination, IsAdminStaff
 
@@ -80,3 +81,39 @@ class AdminVirtualSubmissionViewSet(viewsets.ModelViewSet):
     serializer_class = AdminVirtualSubmissionSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
     pagination_class = AdminPagination
+
+
+class AdminContestSubmissionSerializer(serializers.ModelSerializer):
+    contest_id = serializers.PrimaryKeyRelatedField(
+        source="contest", queryset=NewsPost.objects.all(), required=False, allow_null=True
+    )
+    contest_title = serializers.SerializerMethodField()
+    file = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ContestSubmission
+        fields = [
+            "id", "contest_id", "contest_title", "full_name", "phone", "email",
+            "message", "is_read", "created_at", "file",
+        ]
+
+    def get_contest_title(self, obj):
+        return obj.contest.title_uz if obj.contest else None
+
+    def get_file(self, obj):
+        if not obj.file:
+            return None
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.file.file.url) if request else obj.file.file.url
+
+
+class AdminContestSubmissionViewSet(viewsets.ModelViewSet):
+    queryset = ContestSubmission.objects.select_related("contest", "file").all()
+    serializer_class = AdminContestSubmissionSerializer
+    permission_classes = [IsAuthenticated, IsAdminStaff]
+    pagination_class = AdminPagination
+
+    def perform_update(self, serializer):
+        serializer.save()
+        serializer.instance.is_read = True
+        serializer.instance.save(update_fields=["is_read"])

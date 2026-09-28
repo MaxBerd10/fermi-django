@@ -7,6 +7,7 @@ import { ApiError } from "@/types/api";
 import PageHeader from "@/components/shared/PageHeader";
 import RichContent from "@/components/shared/RichContent";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
+import ContestApplicationForm from "@/components/shared/ContestApplicationForm";
 import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -172,6 +173,13 @@ export default function DetailPage() {
                   {t("news.openInTelegram")}
                 </a>
               )}
+
+              {/* "Tanlovlar" (contests/announcements) is the one category
+                  whose announcements also accept document submissions --
+                  see apps.forms.models.ContestSubmission. Every other
+                  category is read-only, so this is gated on the slug
+                  rather than shown for every article. */}
+              {categorySlug === "tanlovlar" && <ContestApplicationForm contestId={article.id} />}
             </div>
           </article>
         </Reveal>

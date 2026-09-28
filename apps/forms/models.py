@@ -2,6 +2,7 @@ from django.db import models
 
 from apps.faculties.models import Faculty
 from apps.media_lib.models import Document
+from apps.news.models import NewsPost
 
 
 class ContactSubmission(models.Model):
@@ -51,6 +52,32 @@ class AcceptanceSubmission(models.Model):
 
     def __str__(self) -> str:
         return self.fish
+
+
+class ContestSubmission(models.Model):
+    """A /tanlovlar (contests/announcements) document-submission form --
+    a visitor applying to a posted contest attaches their file here,
+    optionally tagged with which NewsPost (announcement) they're applying
+    to (`contest`, nullable since a submission still makes sense if the
+    announcement is later removed). No login/account system, same
+    anonymous-submission shape as VirtualSubmission above -- reviewed by
+    staff in the admin panel, not tracked by the applicant themselves."""
+
+    contest = models.ForeignKey(NewsPost, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    full_name = models.CharField(max_length=255, verbose_name="F.I.Sh.")
+    phone = models.CharField(max_length=50)
+    email = models.CharField(max_length=255)
+    message = models.TextField(blank=True)
+    file = models.ForeignKey(Document, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name = "Tanlov arizasi"
+
+    def __str__(self) -> str:
+        return self.full_name
 
 
 class VirtualSubmission(models.Model):

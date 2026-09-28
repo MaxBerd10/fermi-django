@@ -8,7 +8,12 @@ from rest_framework.views import APIView
 
 from apps.media_lib.models import Document
 
-from .serializers import AcceptanceSubmissionSerializer, ContactSubmissionSerializer, VirtualSubmissionSerializer
+from .serializers import (
+    AcceptanceSubmissionSerializer,
+    ContactSubmissionSerializer,
+    ContestSubmissionSerializer,
+    VirtualSubmissionSerializer,
+)
 
 
 # Visitor attachments are stored under the same public /media/ origin as site
@@ -49,6 +54,29 @@ class QabulFormView(APIView):
         serializer = AcceptanceSubmissionSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         instance = serializer.save()
+        return Response({"submitted": True, "id": instance.id})
+
+
+class ContestFormView(APIView):
+    permission_classes = [AllowAny]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "public_form"
+    parser_classes = [MultiPartParser, FormParser]
+
+    def post(self, request):
+        serializer = ContestSubmissionSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        instance = serializer.save()
+
+        upload = request.FILES.get("file")
+        if upload:
+            validate_visitor_upload(upload)
+            document = Document(title=upload.name)
+            document.file.save(upload.name, upload, save=False)
+            document.save()
+            instance.file = document
+            instance.save(update_fields=["file"])
+
         return Response({"submitted": True, "id": instance.id})
 
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import AcceptanceSubmission, ContactSubmission, VirtualSubmission
+from .models import AcceptanceSubmission, ContactSubmission, ContestSubmission, VirtualSubmission
 
 
 @admin.register(ContactSubmission)
@@ -13,6 +13,12 @@ class ContactSubmissionAdmin(admin.ModelAdmin):
 class AcceptanceSubmissionAdmin(admin.ModelAdmin):
     list_display = ("fish", "subject", "phone", "email", "is_read", "created_at")
     list_filter = ("is_read",)
+
+
+@admin.register(ContestSubmission)
+class ContestSubmissionAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "contest", "phone", "email", "is_read", "created_at")
+    list_filter = ("is_read", "contest")
 
 
 @admin.register(VirtualSubmission)

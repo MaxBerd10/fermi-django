@@ -1,5 +1,5 @@
 import { apiClient } from "./client";
-import type { ContactFormInput, QabulFormInput, VirtualReceptionFormInput } from "../types/forms";
+import type { ContactFormInput, ContestApplicationInput, QabulFormInput, VirtualReceptionFormInput } from "../types/forms";
 
 export async function submitContact(input: ContactFormInput) {
   await apiClient.post("forms/contact", input);
@@ -25,5 +25,19 @@ export async function submitVirtualReception(input: VirtualReceptionFormInput) {
     formData.append("file", input.file);
   }
   const { data } = await apiClient.postForm<{ submitted: boolean; id: number }>("forms/virtual-reception", formData);
+  return data;
+}
+
+export async function submitContestApplication(input: ContestApplicationInput) {
+  const formData = new FormData();
+  if (input.contestId) formData.append("contestId", String(input.contestId));
+  formData.append("fullName", input.fullName);
+  formData.append("phone", input.phone);
+  formData.append("email", input.email);
+  formData.append("message", input.message);
+  if (input.file) {
+    formData.append("file", input.file);
+  }
+  const { data } = await apiClient.postForm<{ submitted: boolean; id: number }>("forms/contest", formData);
   return data;
 }

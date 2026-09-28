@@ -8,7 +8,12 @@ from .admission_results_views import (
 )
 from .banner_views import AdminBannerViewSet
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
-from .forms_views import AdminAcceptanceViewSet, AdminContactViewSet, AdminVirtualSubmissionViewSet
+from .forms_views import (
+    AdminAcceptanceViewSet,
+    AdminContactViewSet,
+    AdminContestSubmissionViewSet,
+    AdminVirtualSubmissionViewSet,
+)
 from .leaders_views import AdminLeaderCategoryViewSet, AdminLeaderViewSet
 from .media_content_views import (
     AdminConnectLeaderViewSet,
@@ -63,6 +68,7 @@ router.register("admin/useful-sites", AdminUsefulSiteViewSet, basename="admin-us
 router.register("admin/contacts", AdminContactViewSet, basename="admin-contacts")
 router.register("admin/acceptances", AdminAcceptanceViewSet, basename="admin-acceptances")
 router.register("admin/virtual-submissions", AdminVirtualSubmissionViewSet, basename="admin-virtual-submissions")
+router.register("admin/contest-submissions", AdminContestSubmissionViewSet, basename="admin-contest-submissions")
 router.register("admin/corusel", AdminBannerViewSet, basename="admin-corusel")
 router.register("admin/users", AdminUserViewSet, basename="admin-users")
 router.register("admin/result-categories", AdminResultCategoryViewSet, basename="admin-result-categories")

@@ -31,6 +31,15 @@ export interface VirtualReceptionFormInput {
   file?: File | null;
 }
 
+export interface ContestApplicationInput {
+  contestId?: number;
+  fullName: string;
+  phone: string;
+  email: string;
+  message: string;
+  file?: File | null;
+}
+
 export interface RegisterInput {
   username: string;
   email: string;
