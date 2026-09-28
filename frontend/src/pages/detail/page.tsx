@@ -62,6 +62,12 @@ export default function DetailPage() {
 
   const categorySlug = article.category?.slug;
   const heroImage = getNewsArticleImage(article);
+  // Same reasoning as the "telegram" case below the image itself already
+  // documents: a "tanlovlar" cover is typically one whole poster/infographic
+  // (every line of it is content, e.g. the iShifo contest call's evaluation
+  // chart) rather than a photo that crops fine -- object-fit:cover's default
+  // 28rem-tall crop was cutting real content off the bottom of a wide one.
+  const useContainHero = categorySlug === "telegram" || categorySlug === "tanlovlar";
   const hasBodyHeading = article.blocks
     ? article.blocks.some((b) => b.block_type === "heading")
     : /<h[1-6][ >]/i.test(article.content);
@@ -93,7 +99,7 @@ export default function DetailPage() {
               </div>
 
               {heroImage && (
-                <div className={`news-article__hero${categorySlug === "telegram" ? " news-article__hero--contain" : ""}`}>
+                <div className={`news-article__hero${useContainHero ? " news-article__hero--contain" : ""}`}>
                   <img src={optimizedImageUrl(heroImage, 1200)} alt={article.title} />
                   {article.isVideo && (
                     <span className="news-article__video-badge" aria-hidden>
