@@ -60,6 +60,17 @@ function mapDetail(post: DjangoNewsDetail): NewsArticle {
   };
 }
 
+// Only reached when a category has zero posts yet -- the real NewsCategory
+// name (which IS properly cased, e.g. "Tanlovlar") lives on each post's
+// `category` field, so there's nothing to read it from until the first post
+// exists. A raw slug like "tanlovlar" or "qabul-komissiyasi" would otherwise
+// show verbatim (lowercase, hyphens) as the page's own title in the meantime.
+function humanizeSlug(slug: string): string {
+  const words = slug.split("-").filter(Boolean);
+  if (words.length === 0) return slug;
+  return words.map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
 export async function listNews(page = 1, _menuId?: number) {
   const res = await apiClient.get<DjangoNewsListItem[]>("news", { page });
   return { ...res, data: enrichNewsArticles(res.data.map(mapListItem)) };
@@ -75,7 +86,7 @@ export async function getNewsCategory(slug: string, page = 1, _menuId?: number) 
         title: firstWithCategory.category.name,
         slug: firstWithCategory.category.slug,
       }
-    : { id: 0, title: apiSlug, slug: apiSlug };
+    : { id: 0, title: humanizeSlug(apiSlug), slug: apiSlug };
   return {
     ...res,
     data: {

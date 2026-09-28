@@ -1534,6 +1534,8 @@ export default {
   "news.intro": "Stay informed about the latest institute events, announcements and important updates. Official news, admissions notices and events are published here and refreshed regularly.",
   "news.category.tadbirlar.eyebrow": "Institute events",
   "news.category.tadbirlar.intro": "Conferences, cultural meetings, environmental initiatives and student life events.",
+  "news.category.tanlovlar.eyebrow": "Contests",
+  "news.category.tanlovlar.intro": "Announcements about contests, grants and startup programs for students and graduates — terms, deadlines and how to apply.",
   "news.category.xorijiy.eyebrow": "International students",
   "news.category.xorijiy.intro": "Admissions notices, news and events for international applicants and students.",
   "news.category.articleCount": "{{count}} articles",

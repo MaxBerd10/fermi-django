@@ -1534,6 +1534,8 @@ export default {
   "news.intro": "Institutdagi soʻnggi voqealar, eʻlonlar va muhim oʻzgarishlar haqida xabardor boʻling. Rasmiy yangiliklar, qabul eʻlonlari va tadbirlar shu yerda eʻlon qilinadi — har kuni yangilanadi.",
   "news.category.tadbirlar.eyebrow": "Institut tadbirlari",
   "news.category.tadbirlar.intro": "Konferensiyalar, madaniy-maʻrifiy uchrashuvlar, ekologik tashabbuslar va talabalar hayotidagi tadbirlar.",
+  "news.category.tanlovlar.eyebrow": "Tanlovlar",
+  "news.category.tanlovlar.intro": "Talabalar va bitiruvchilar uchun tanlovlar, grantlar va startap dasturlari haqida eʻlonlar — shartlari, muddatlari va ariza topshirish shu yerda.",
   "news.category.xorijiy.eyebrow": "Xorijiy talabalar",
   "news.category.xorijiy.intro": "Qabul eʻlonlari, xorijiy abituriyentlar va talabalar hayotidagi yangiliklar hamda tadbirlar.",
   "news.category.articleCount": "{{count}} ta material",

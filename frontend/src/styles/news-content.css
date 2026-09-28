@@ -782,6 +782,23 @@
   background: linear-gradient(135deg, #2563eb 0%, #0a1158 50%, #93c5fd 100%);
 }
 
+/* Gold, not the events/xorijiy blue-green pair -- matches the site's own
+   navy+gold identity (see Navbar/logo), and reads as "award/contest"
+   rather than "meeting". */
+.news-category-hero--news-cat-contest .news-category-hero__inner {
+  background: linear-gradient(135deg, #b45309 0%, #0a1158 55%, #fcd34d 100%);
+}
+
+.news-section--contest .news-tag--event {
+  background: rgba(180, 83, 9, 0.12);
+  color: #b45309;
+  border-color: rgba(180, 83, 9, 0.2);
+}
+
+.news-section--contest .news-sidebar .cms-sidebar__link--active {
+  border-left-color: #b45309;
+}
+
 .news-section--events .news-tag--event {
   background: rgba(5, 150, 105, 0.12);
   color: #047857;

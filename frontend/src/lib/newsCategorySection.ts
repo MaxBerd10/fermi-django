@@ -49,6 +49,20 @@ const CATEGORY_CONFIG: Record<string, NewsCategoryHeroConfig> = {
 
   },
 
+  tanlovlar: {
+
+    eyebrowKey: "news.category.tanlovlar.eyebrow",
+
+    introKey: "news.category.tanlovlar.intro",
+
+    accent: "news-cat-contest",
+
+    icon: "ri-trophy-line",
+
+    theme: "contest",
+
+  },
+
   "kimlarga-piyoz-yeyish-mumkin-emas": {
 
     eyebrowKey: "news.category.xorijiy.eyebrow",
