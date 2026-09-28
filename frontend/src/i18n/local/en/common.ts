@@ -1362,7 +1362,7 @@ export default {
   "contest.emailLabel": "Email",
   "contest.messageLabel": "Additional note (optional)",
   "contest.messagePlaceholder": "Briefly describe your project or application...",
-  "contest.fileLabel": "Document (PDF, image, or Office file)",
+  "contest.fileLabel": "Document (PDF, image, Word, or Excel)",
   "contest.submit": "Submit application",
   "yangiliklar.heading": "News and announcements",
   "yangiliklar.description": "The latest news and announcements from Fergana Medical Institute of Public Health",

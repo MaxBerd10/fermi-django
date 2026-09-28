@@ -1362,7 +1362,7 @@ export default {
   "contest.emailLabel": "Электронная почта",
   "contest.messageLabel": "Дополнительный комментарий (необязательно)",
   "contest.messagePlaceholder": "Кратко опишите свой проект или заявку...",
-  "contest.fileLabel": "Документ (PDF, изображение или файл Office)",
+  "contest.fileLabel": "Документ (PDF, изображение, Word или Excel)",
   "contest.submit": "Отправить заявку",
   "yangiliklar.heading": "Новости и объявления",
   "yangiliklar.description": "Последние новости и объявления Ферганского медицинского института общественного здоровья",

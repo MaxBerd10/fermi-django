@@ -1362,7 +1362,7 @@ export default {
   "contest.emailLabel": "Elektron pochta",
   "contest.messageLabel": "Qoʻshimcha izoh (ixtiyoriy)",
   "contest.messagePlaceholder": "Loyihangiz yoki arizangiz haqida qisqacha yozing...",
-  "contest.fileLabel": "Hujjat (PDF, rasm yoki Office fayl)",
+  "contest.fileLabel": "Hujjat (PDF, rasm, Word yoki Excel)",
   "contest.submit": "Arizani yuborish",
   "yangiliklar.heading": "Yangiliklar va eʻlonlar",
   "yangiliklar.description": "Fargʻona jamoat salomatligi tibbiyot institutining soʻnggi yangiliklari va eʻlonlari",
