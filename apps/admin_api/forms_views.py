@@ -89,16 +89,25 @@ class AdminContestSubmissionSerializer(serializers.ModelSerializer):
     )
     contest_title = serializers.SerializerMethodField()
     file = serializers.SerializerMethodField()
+    # Same "status" 1/0 = unread/read convention as AdminContactSerializer,
+    # not a plain is_read boolean -- so this resource's list/edit UI (driven
+    # generically off entityConfigs.ts's shared STATUS_OPTIONS) reads and
+    # writes the same "Faol/Nofaol" control every other Murojaatlar
+    # resource in the admin panel already uses.
+    status = serializers.SerializerMethodField()
 
     class Meta:
         model = ContestSubmission
         fields = [
             "id", "contest_id", "contest_title", "full_name", "phone", "email",
-            "message", "is_read", "created_at", "file",
+            "message", "status", "created_at", "file",
         ]
 
     def get_contest_title(self, obj):
         return obj.contest.title_uz if obj.contest else None
+
+    def get_status(self, obj):
+        return 1 if not obj.is_read else 0
 
     def get_file(self, obj):
         if not obj.file:

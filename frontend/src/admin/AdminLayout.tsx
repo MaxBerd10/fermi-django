@@ -61,6 +61,7 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
       { to: "/admin/contacts", label: "Aloqa formasi", icon: "ri-mail-line" },
       { to: "/admin/acceptances", label: "Qabul arizalari", icon: "ri-file-edit-line" },
       { to: "/admin/virtual-submissions", label: "Virtual qabulxona", icon: "ri-user-voice-line" },
+      { to: "/admin/contest-submissions", label: "Tanlov arizalari", icon: "ri-award-line" },
       { to: "/admin/connect-leaders", label: "Aloqa mas'ullari", icon: "ri-contacts-line" },
     ],
   },

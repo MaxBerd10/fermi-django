@@ -280,6 +280,33 @@ export const virtualConfig: EntityConfig = {
   ],
 };
 
+export const contestConfig: EntityConfig = {
+  resource: "contest-submissions",
+  title: "Tanlov arizalari",
+  addLabel: "Qo'shish",
+  listColumns: [
+    { key: "id", label: "ID" },
+    { key: "full_name", label: "F.I.SH" },
+    { key: "contest_title", label: "Tanlov" },
+    { key: "phone", label: "Telefon" },
+    { key: "status", label: "Holat" },
+  ],
+  deleteConfirmField: "full_name",
+  fields: [
+    { kind: "text", key: "full_name", label: "F.I.SH", required: true },
+    // NewsPost, filtered by nothing here -- every post shows up, not just
+    // "tanlovlar"-category ones, same tradeoff virtualConfig's faculty_id
+    // async-select makes (the options endpoint has no category filter of
+    // its own to reuse).
+    { kind: "async-select", key: "contest_id", label: "Tanlov (yangilik)", optionsResource: "news", optionsLabelKey: "title_uz" },
+    { kind: "text", key: "phone", label: "Telefon", required: true },
+    { kind: "text", key: "email", label: "Email", required: true },
+    { kind: "select", key: "status", label: "Holat", options: STATUS_OPTIONS },
+    { kind: "media", key: "file", label: "Biriktirilgan hujjat" },
+    { kind: "textarea", key: "message", label: "Izoh" },
+  ],
+};
+
 export const translationConfig: EntityConfig = {
   resource: "translations",
   title: "Tarjimalar (UI matnlari)",
@@ -378,6 +405,7 @@ export const ALL_ENTITY_CONFIGS = [
   contactConfig,
   acceptanceConfig,
   virtualConfig,
+  contestConfig,
   connectLeaderConfig,
   translationConfig,
 ];
