@@ -2,10 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import { useLeaderSectionNav } from "@/hooks/useLeaderSectionNav";
 import { isLeaderNavItemActive } from "@/lib/leaderSection";
 import { normalizeMenuHref, normalizeYearLabels } from "@/lib/siteConstants";
-// .cms-sidebar__link--active (this component's active-link style) lives in
-// these files alongside RichContent's own CMS-article styling -- imported
-// here too since this nav can render on a page without RichContent also
-// mounting. See RichContent.tsx's own copy of this comment.
+// See NewsSectionNav.tsx's identical copy of this comment -- cms-content.css
+// is the file that actually defines .cms-sidebar/__head/__link(--active),
+// not just supplementary styling. leader/page.tsx never mounts RichContent
+// alongside this nav, so without this explicit import the sidebar currently
+// only renders styled by accident, whenever some other co-loaded chunk
+// happens to pull cms-content.css in first.
+import "@/styles/cms-content.css";
 import "@/styles/buildings-content.css";
 import "@/styles/conference-content.css";
 import "@/styles/newspaper-content.css";
