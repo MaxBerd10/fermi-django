@@ -8,10 +8,12 @@ import {
   type MenuSectionLink,
 } from "@/lib/menuSection";
 import { normalizeYearLabels } from "@/lib/siteConstants";
-// .cms-sidebar__link--active (this component's active-link style) lives in
-// these files alongside RichContent's own CMS-article styling -- imported
-// here too since this nav can render on a page without RichContent also
-// mounting. See RichContent.tsx's own copy of this comment.
+// See NewsSectionNav.tsx's identical copy of this comment -- cms-content.css
+// is the file that actually defines .cms-sidebar/__head/__link(--active),
+// not just supplementary styling, and this nav also renders on pages
+// without RichContent mounted alongside it (e.g. the Xorijiy-talabalar news
+// fallback).
+import "@/styles/cms-content.css";
 import "@/styles/buildings-content.css";
 import "@/styles/conference-content.css";
 import "@/styles/newspaper-content.css";

@@ -3,10 +3,16 @@ import { useTranslation } from "react-i18next";
 import { useNewsSectionNav } from "@/hooks/useNewsSectionNav";
 import { isNewsNavItemActive, normalizeNewsHref } from "@/lib/newsSection";
 import { normalizeYearLabels } from "@/lib/siteConstants";
-// .cms-sidebar__link--active (this component's active-link style) lives in
-// these files alongside RichContent's own CMS-article styling -- imported
-// here too since this nav can render on a page without RichContent also
-// mounting. See RichContent.tsx's own copy of this comment.
+// cms-content.css defines the actual .cms-sidebar/__head/__link(--active)
+// rules this component renders with (navy header, gold active border,
+// hover state) -- it isn't optional styling, it's the whole visual design,
+// and this nav can render on a page (any /news/:menuId/:slug category) where
+// RichContent isn't also mounted to pull it in as a side effect. Without
+// this import the sidebar rendered as bare unstyled text/links, which is
+// exactly what shipped here before this fix. The *-content.css files below
+// are additional per-page-type styling some of these same shared classes
+// also get overridden by elsewhere -- kept for that, not for this bug.
+import "@/styles/cms-content.css";
 import "@/styles/buildings-content.css";
 import "@/styles/conference-content.css";
 import "@/styles/newspaper-content.css";
