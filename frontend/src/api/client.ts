@@ -37,6 +37,8 @@ interface RequestOptions {
   body?: unknown;
   formData?: FormData;
   auth?: boolean;
+  /** Skip resolveLocale. Defaults to true for every admin/* endpoint (see request()). */
+  raw?: boolean;
   /** internal: prevents infinite refresh-retry loops */
   _isRetry?: boolean;
 }
@@ -140,7 +142,7 @@ const inFlightGets = new Map<string, Promise<unknown>>();
  * envelope. Errors come back as DRF's defaults too: {"detail": "..."} for
  * 401/403/404, or a {field: ["msg", ...]} dict for 400 validation errors.
  */
-async function readDrfResponse<T>(response: Response, path: string): Promise<ApiResult<T>> {
+async function readDrfResponse<T>(response: Response, path: string, raw = false): Promise<ApiResult<T>> {
   let body: unknown = null;
   try {
     body = await response.json();
@@ -160,7 +162,7 @@ async function readDrfResponse<T>(response: Response, path: string): Promise<Api
     throw new ApiError(message, String(response.status), response.status, fields);
   }
 
-  const resolved = resolveLocale<unknown>(body, activeLang());
+  const resolved = raw ? body : resolveLocale<unknown>(body, activeLang());
 
   if (
     resolved &&
@@ -213,7 +215,12 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
     const response = await fetch(url, { method, headers, body });
 
     try {
-      return await readDrfResponse<T>(response, path);
+      // Admin endpoints return raw per-language columns (title_uz/title_ru/
+      // title_en, ...) that an edit form writes straight back. resolveLocale's
+      // Uzbek apostrophe normalization would otherwise rewrite the Russian and
+      // English text too ("Let's" -> "Letʻs") and save that on the next submit.
+      const raw = options.raw ?? path.startsWith("admin/");
+      return await readDrfResponse<T>(response, path, raw);
     } catch (err) {
       if (
         err instanceof ApiError &&
