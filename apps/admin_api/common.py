@@ -2,6 +2,9 @@
 frontend/src/api/admin.ts::adminResource() for the exact contract every
 view here has to satisfy (list/get/create/update/delete against
 /api/v1/admin/<resource>, all requiring a signed-in staff user)."""
+from urllib.parse import unquote, urlparse
+
+from django.conf import settings
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import BasePermission
 
@@ -20,6 +23,23 @@ class IsAdminStaff(BasePermission):
         return bool(request.user and request.user.is_authenticated and request.user.is_staff)
 
 
+def media_relative_path(value: str) -> str:
+    """Normalizes whatever an admin form sends back for a media field to a
+    MEDIA_ROOT-relative storage path. MediaPicker/uploads hand over a bare
+    path ("uploads/admin/a.jpg"), but a record opened for editing echoes
+    back the absolute URL its serializer produced
+    ("http://host/media/uploads/admin/a.jpg") -- without this, re-saving an
+    untouched form stored that URL as a new, broken Image row."""
+    value = (value or "").strip()
+    if value.startswith(("http://", "https://")):
+        value = urlparse(value).path
+    value = unquote(value)
+    media_prefix = "/" + settings.MEDIA_URL.strip("/") + "/"
+    if value.startswith(media_prefix):
+        value = value[len(media_prefix):]
+    return value.lstrip("/")
+
+
 def resolve_or_create_image(path: str | None) -> Image | None:
     """MediaPicker (see its own docstring) hands back a bare storage path,
     not an Image id -- a field bound to it (e.g. NewsPost.cover) needs a
@@ -29,7 +49,7 @@ def resolve_or_create_image(path: str | None) -> Image | None:
     already) in a new Image row rather than re-uploading it."""
     if not path:
         return None
-    path = path.lstrip("/")
+    path = media_relative_path(path)
     existing = Image.objects.filter(file=path).first()
     if existing:
         return existing
@@ -43,7 +63,7 @@ def resolve_or_create_document(path: str | None) -> Document | None:
     a Document FK (e.g. ScheduleFile.document)."""
     if not path:
         return None
-    path = path.lstrip("/")
+    path = media_relative_path(path)
     existing = Document.objects.filter(file=path).first()
     if existing:
         return existing

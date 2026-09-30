@@ -137,6 +137,13 @@ export default defineConfig(({ mode }) => {
         target: "http://127.0.0.1:8000",
         changeOrigin: true,
       },
+      // Uploaded files — the admin's MediaPicker previews a fresh upload by its
+      // bare storage path (see mediaUrl() in src/api/admin.ts).
+      "/media": {
+        target: devApiTarget,
+        changeOrigin: true,
+        secure: !devApiTarget.startsWith("https://beta.fermi.uz"),
+      },
       // iMentor doesn't send CORS headers, so direct browser calls are blocked — the dev
       // server does the actual fetch here instead, which sidesteps CORS entirely (only
       // works for local dev/preview; the production static build needs iMentor to

@@ -362,3 +362,79 @@ def test_useful_site_create_falls_back_uz_to_blank_ru_en(admin_client, db):
     assert res.data["title_ru"] == "Vazirlik"
     assert res.data["title_en"] == "Vazirlik"
     assert UsefulSite.objects.get(id=res.data["id"]).url == "https://gov.uz"
+
+
+# --- admin/news: cover URL round-trip, gallery, translate -----------------
+
+def _news_payload(**overrides):
+    return {"title_uz": "Eko klub", "content_uz": "<p>Ko'chatlar ekildi.</p>", **overrides}
+
+
+def test_news_resave_keeps_cover_given_back_as_absolute_url(admin_client, db):
+    """An edit form echoes back the absolute URL get_img produced -- that
+    must resolve to the same Image, not a new row whose `file` is a URL."""
+    path = _write_media_file("uploads/admin/cover.png", _PNG_1PX)
+    created = admin_client.post("/api/v1/admin/news", _news_payload(img=path), format="json").data
+    assert created["img"].endswith("/media/uploads/admin/cover.png")
+
+    res = admin_client.put(f"/api/v1/admin/news/{created['id']}", _news_payload(img=created["img"]), format="json")
+    assert res.status_code == 200
+    assert res.data["img"] == created["img"]
+    assert Image.objects.count() == 1
+
+
+def test_news_gallery_saves_in_order_and_survives_saves_without_the_field(admin_client, db):
+    paths = [_write_media_file(f"uploads/admin/g{i}.png", _PNG_1PX) for i in range(3)]
+    created = admin_client.post(
+        "/api/v1/admin/news", _news_payload(gallery=[paths[2], paths[0], paths[1]]), format="json"
+    ).data
+    assert [url.rsplit("/", 1)[1] for url in created["gallery"]] == ["g2.png", "g0.png", "g1.png"]
+
+    # A save that doesn't mention gallery keeps it; one that sends [] clears it.
+    kept = admin_client.put(f"/api/v1/admin/news/{created['id']}", _news_payload(), format="json").data
+    assert kept["gallery"] == created["gallery"]
+    assert "Ko'chatlar ekildi." in kept["content_uz"]
+    cleared = admin_client.put(f"/api/v1/admin/news/{created['id']}", _news_payload(gallery=[]), format="json").data
+    assert cleared["gallery"] == []
+
+
+def test_news_gallery_is_a_public_gallery_block(admin_client, client, db):
+    path = _write_media_file("uploads/admin/g.png", _PNG_1PX)
+    created = admin_client.post("/api/v1/admin/news", _news_payload(gallery=[path]), format="json").data
+    from apps.news.models import NewsPost
+
+    blocks = NewsPost.objects.get(pk=created["id"]).page.blocks.all()
+    assert [b.block_type for b in blocks] == ["paragraph", "gallery"]
+
+
+def test_translate_endpoint(admin_client, monkeypatch, db):
+    from apps.admin_api import translate_views
+
+    calls = []
+
+    def fake_translate(texts, source, target):
+        calls.append((source, target))
+        return [f"[{target}] {t}" if t else t for t in texts]
+
+    monkeypatch.setattr(translate_views, "translate_texts", fake_translate)
+    body = {"source": "uz", "targets": ["ru", "en"], "texts": {"title": "Salom", "content": "<p>Dunyo</p>"}}
+
+    res = admin_client.post("/api/v1/admin/translate", body, format="json")
+    assert res.status_code == 200
+    assert res.data == {"translations": [
+        {"lang": "ru", "texts": {"title": "[ru] Salom", "content": "[ru] <p>Dunyo</p>"}},
+        {"lang": "en", "texts": {"title": "[en] Salom", "content": "[en] <p>Dunyo</p>"}},
+    ]}
+    assert calls == [("uz", "ru"), ("uz", "en")]
+    assert admin_client.post("/api/v1/admin/translate", {**body, "targets": ["de"]}, format="json").status_code == 400
+
+
+def test_translate_endpoint_reports_upstream_failure(admin_client, monkeypatch, db):
+    from apps.admin_api import translate_views
+
+    def failing(texts, source, target):
+        raise translate_views.TranslationError("down")
+
+    monkeypatch.setattr(translate_views, "translate_texts", failing)
+    res = admin_client.post("/api/v1/admin/translate", {"texts": {"title": "Salom"}}, format="json")
+    assert res.status_code == 502

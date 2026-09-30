@@ -1,16 +1,15 @@
 import { useRef, useState } from "react";
-import { uploadMedia } from "@/api/admin";
+import { mediaUrl, uploadMedia } from "@/api/admin";
 import MediaLibraryModal from "./MediaLibraryModal";
 
 interface MediaPickerProps {
   label: string;
   value: string | null | undefined;
   onChange: (path: string) => void;
-  previewBaseUrl?: string;
 }
 
 /** Upload button + "choose from library" + thumbnail preview, writing the root-relative path (e.g. "/uploads/img/admin/...") into the bound field — matches every legacy img/file column's stored format. */
-export default function MediaPicker({ label, value, onChange, previewBaseUrl = "http://frontend.fjsti.local" }: MediaPickerProps) {
+export default function MediaPicker({ label, value, onChange }: MediaPickerProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -32,7 +31,7 @@ export default function MediaPicker({ label, value, onChange, previewBaseUrl = "
     }
   }
 
-  const previewUrl = value ? (value.startsWith("http") ? value : previewBaseUrl + value) : null;
+  const previewUrl = mediaUrl(value);
 
   return (
     <div>

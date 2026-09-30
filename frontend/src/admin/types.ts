@@ -12,6 +12,8 @@ export interface AdminPost {
   slug: string | null;
   status: number;
   img: string | null;
+  /** Extra photos shown as a gallery under the post body — media paths or absolute URLs. */
+  gallery: string[];
   file: string | null;
   file_en: string | null;
   file_ru: string | null;

@@ -34,6 +34,7 @@ from .settings_views import (
     AdminUsefulSiteViewSet,
 )
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
+from .translate_views import TranslateView
 from .users_views import AdminUserViewSet
 
 # trailing_slash=False -- the frontend's generic adminResource client
@@ -78,6 +79,7 @@ router.register("admin/results-page", AdminResultsPageViewSet, basename="admin-r
 urlpatterns = router.urls + [
     path("admin/media/list", MediaListView.as_view()),
     path("admin/media/upload", MediaUploadView.as_view()),
+    path("admin/translate", TranslateView.as_view()),
     path("admin/menu-tree", AdminMenuTreeView.as_view()),
     path("admin/menu-tree/<int:pk>", AdminMenuNodeDetailView.as_view()),
     path("admin/menu-tree/<int:pk>/move", AdminMenuMoveView.as_view()),

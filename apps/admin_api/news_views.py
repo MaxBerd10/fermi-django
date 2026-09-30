@@ -15,7 +15,8 @@ from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from apps.content.admin_content import blocks_to_html, write_blocks_from_html
-from apps.content.models import Page
+from apps.content.models import ContentBlock, Page
+from apps.media_lib.models import Image
 from apps.news.models import NewsCategory, NewsPost
 
 from .common import AdminPagination, IsAdminStaff, OwnedPageCleanupMixin, resolve_or_create_image
@@ -55,6 +56,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
     seen = serializers.SerializerMethodField()
     status = serializers.SerializerMethodField()
     img = serializers.SerializerMethodField()
+    gallery = serializers.SerializerMethodField()
     file = serializers.SerializerMethodField()
     file_en = serializers.SerializerMethodField()
     file_ru = serializers.SerializerMethodField()
@@ -66,7 +68,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
             "id", "title_uz", "title_ru", "title_en",
             "content_uz", "content_ru", "content_en",
             "category_id", "date", "seen", "slug", "status",
-            "img", "file", "file_en", "file_ru", "meta_key",
+            "img", "gallery", "file", "file_en", "file_ru", "meta_key",
         ]
 
     def _content(self, obj, lang):
@@ -96,6 +98,21 @@ class AdminPostSerializer(serializers.ModelSerializer):
             return None
         request = self.context.get("request")
         return request.build_absolute_uri(obj.cover.file.url) if request else obj.cover.file.url
+
+    def get_gallery(self, obj):
+        """The post's extra photos, as absolute URLs in display order --
+        stored as one trailing `gallery` ContentBlock on its page (the
+        public BlockRenderer already renders that block type), so no
+        model change was needed to support more than the single cover."""
+        request = self.context.get("request")
+        image_ids = _gallery_image_ids(obj.page) if obj.page_id else []
+        images = Image.objects.in_bulk(image_ids)
+        urls = []
+        for image_id in image_ids:
+            image = images.get(image_id)
+            if image:
+                urls.append(request.build_absolute_uri(image.file.url) if request else image.file.url)
+        return urls
 
     def get_file(self, obj):
         return None
@@ -151,12 +168,48 @@ class AdminPostSerializer(serializers.ModelSerializer):
             instance.page = Page.objects.create(slug=f"news-{slug}")
         instance.save()
 
+        # write_blocks_from_html replaces every block on the page, gallery
+        # included -- keep the existing photos when a client didn't send the
+        # field at all, rather than silently dropping them.
+        if "gallery" in data:
+            gallery_ids = [
+                image.id
+                for image in (resolve_or_create_image(path) for path in (data.get("gallery") or []) if path)
+                if image
+            ]
+        else:
+            gallery_ids = _gallery_image_ids(instance.page)
+
         write_blocks_from_html(instance.page, {
             "uz": data.get("content_uz") or "",
             "ru": data.get("content_ru") or "",
             "en": data.get("content_en") or "",
         })
+        _append_gallery_block(instance.page, gallery_ids)
         return instance
+
+
+def _gallery_image_ids(page: Page) -> list[int]:
+    block = page.blocks.filter(block_type=ContentBlock.BlockType.GALLERY).first()
+    if not block:
+        return []
+    items = (block.data.get("uz") or {}).get("items", [])
+    return [item["image_id"] for item in items if isinstance(item.get("image_id"), int)]
+
+
+def _append_gallery_block(page: Page, image_ids: list[int]) -> None:
+    if not image_ids:
+        return
+    last = page.blocks.order_by("-order").first()
+    payload = {"items": [{"image_id": image_id, "alt": ""} for image_id in image_ids]}
+    block = ContentBlock(
+        page=page,
+        order=(last.order + 1) if last else 1,
+        block_type=ContentBlock.BlockType.GALLERY,
+        data={"uz": payload, "ru": payload, "en": payload},
+    )
+    block.full_clean()
+    block.save()
 
 
 class AdminPostViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):

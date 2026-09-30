@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { adminResource } from "@/api/admin";
+import { adminResource, translateTexts, type TranslationLang } from "@/api/admin";
 import type { AdminPost, AdminPostcategory } from "@/admin/types";
+import GalleryPicker from "@/admin/components/GalleryPicker";
 import MediaPicker from "@/admin/components/MediaPicker";
 import RichTextEditor from "@/admin/components/RichTextEditor";
 import { ApiError } from "@/types/api";
@@ -18,7 +19,15 @@ const EMPTY: Partial<AdminPost> = {
   content_en: "",
   status: 1,
   img: "",
+  gallery: [],
 };
+
+const TARGET_LANGS = ["ru", "en"] as const;
+
+/** RichTextEditor's "empty" is still markup ("<p></p>"), so compare on visible text. */
+function isBlank(html: string | null | undefined) {
+  return !(html ?? "").replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+}
 
 export default function NewsFormPage() {
   const { id } = useParams();
@@ -30,6 +39,8 @@ export default function NewsFormPage() {
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [translating, setTranslating] = useState(false);
+  const [notice, setNotice] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
@@ -47,17 +58,65 @@ export default function NewsFormPage() {
     setForm((f) => ({ ...f, [key]: value }));
   }
 
+  /** Fills ru/en title+content from the uz ones. `onlyEmpty` leaves anything the editor already wrote untouched. */
+  async function translateFromUz(source: Partial<AdminPost>, onlyEmpty: boolean): Promise<Partial<AdminPost>> {
+    const targets = TARGET_LANGS.filter(
+      (lang) => !onlyEmpty || !source[`title_${lang}`]?.trim() || isBlank(source[`content_${lang}`]),
+    );
+    if (targets.length === 0 || (!source.title_uz?.trim() && isBlank(source.content_uz))) return source;
+
+    const result = await translateTexts(
+      { title: source.title_uz ?? "", content: isBlank(source.content_uz) ? "" : source.content_uz ?? "" },
+      targets as TranslationLang[],
+    );
+    const next = { ...source };
+    for (const lang of targets) {
+      const t = result[lang];
+      if (!t) continue;
+      if (!onlyEmpty || !next[`title_${lang}`]?.trim()) next[`title_${lang}`] = t.title;
+      if (!onlyEmpty || isBlank(next[`content_${lang}`])) next[`content_${lang}`] = t.content;
+    }
+    return next;
+  }
+
+  async function onTranslateClick() {
+    const hasExisting = TARGET_LANGS.some((lang) => form[`title_${lang}`]?.trim() || !isBlank(form[`content_${lang}`]));
+    if (hasExisting && !window.confirm("RU va EN maydonlaridagi mavjud matn UZ tarjimasi bilan almashtiriladi. Davom etasizmi?")) return;
+    setTranslating(true);
+    setError("");
+    setNotice("");
+    try {
+      setForm(await translateFromUz(form, false));
+      setNotice("RU va EN tarjimalari to'ldirildi — saqlashdan oldin tekshirib chiqing.");
+    } catch {
+      setError("Tarjima qilib bo'lmadi. Internet aloqasini tekshirib, qayta urinib ko'ring.");
+    } finally {
+      setTranslating(false);
+    }
+  }
+
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSaving(true);
     setError("");
+    setNotice("");
     setFieldErrors({});
     try {
+      // Anything left empty in RU/EN gets a machine translation of UZ instead
+      // of silently falling back to the Uzbek text on the public site.
+      let payload = form;
+      try {
+        payload = await translateFromUz(form, true);
+        if (payload !== form) setForm(payload);
+      } catch {
+        setNotice("Avtomatik tarjima ishlamadi — bo'sh RU/EN maydonlari o'rniga UZ matni ko'rsatiladi.");
+      }
       if (isNew) {
-        const created = await postsApi.create(form);
+        const created = await postsApi.create(payload);
         navigate(`/admin/news/${created.id}`, { replace: true });
       } else {
-        await postsApi.update(Number(id), form);
+        setForm(await postsApi.update(Number(id), payload));
+        setNotice((n) => n || "Saqlandi.");
       }
     } catch (err) {
       if (err instanceof ApiError) {
@@ -86,6 +145,7 @@ export default function NewsFormPage() {
       </h1>
 
       {error && <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {notice && <div className="mb-4 p-3 rounded-md bg-primary-50 border border-primary-200 text-sm text-primary-800">{notice}</div>}
 
       <form onSubmit={onSubmit} className="space-y-6">
         <div className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
@@ -116,12 +176,28 @@ export default function NewsFormPage() {
               </select>
             </div>
           </div>
-          <MediaPicker label="Rasm" value={form.img} onChange={(path) => set("img", path)} />
+          <MediaPicker label="Asosiy rasm (muqova)" value={form.img} onChange={(path) => set("img", path)} />
+          <GalleryPicker label="Qo'shimcha rasmlar (galereya)" value={form.gallery} onChange={(paths) => set("gallery", paths)} />
         </div>
 
         {(["uz", "ru", "en"] as const).map((lang) => (
           <div key={lang} className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
-            <h2 className="font-semibold text-foreground-800 uppercase text-xs tracking-wide">{lang}</h2>
+            <div className="flex items-center justify-between gap-3">
+              <h2 className="font-semibold text-foreground-800 uppercase text-xs tracking-wide">{lang}</h2>
+              {lang === "uz" ? (
+                <button
+                  type="button"
+                  onClick={onTranslateClick}
+                  disabled={translating || (!form.title_uz?.trim() && isBlank(form.content_uz))}
+                  className="h-9 px-3 rounded-md border border-primary-300 text-primary-700 text-sm font-medium hover:bg-primary-50 cursor-pointer disabled:opacity-50 flex items-center gap-2"
+                >
+                  <i className={`w-4 h-4 flex items-center justify-center ${translating ? "ri-loader-4-line animate-spin" : "ri-translate-2"}`} />
+                  {translating ? "Tarjima qilinmoqda..." : "RU va EN ga tarjima qilish"}
+                </button>
+              ) : (
+                <span className="text-xs text-foreground-500">Bo'sh qolsa, saqlashda UZ dan avtomatik tarjima qilinadi</span>
+              )}
+            </div>
             <div>
               <label className="block text-sm font-medium text-foreground-700 mb-1.5">
                 Sarlavha {lang === "uz" && "*"}
