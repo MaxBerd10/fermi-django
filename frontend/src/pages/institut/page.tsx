@@ -92,7 +92,7 @@ export default function InstitutPage() {
       {/* Floating stats strip */}
       <div className="relative -mt-8 z-20 section-container">
         <Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 page-card overflow-hidden shadow-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 page-card !bg-white overflow-hidden shadow-sm">
             {stats.map((s, i) => (
               <div
                 key={s.label}
