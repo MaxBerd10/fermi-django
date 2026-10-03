@@ -1353,6 +1353,8 @@ export default {
   "vq.urgentNote": "В экстренных случаях звоните напрямую:",
 
   "contest.formTitle": "Подать заявку",
+  "document.open": "Открыть в браузере",
+  "document.download": "Скачать",
   "contest.formSubtitle": "Отправьте свои данные и документ — мы свяжемся с вами в ближайшее время.",
   "contest.successTitle": "Ваша заявка принята!",
   "contest.ticketNote": "Номер вашей заявки: #{{id}}. О результатах сообщим на вашу электронную почту.",

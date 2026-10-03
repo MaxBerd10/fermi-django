@@ -1353,6 +1353,8 @@ export default {
   "vq.urgentNote": "Shoshilinch holatlarda bevosita qoʻngʻiroq qiling:",
 
   "contest.formTitle": "Ariza topshirish",
+  "document.open": "Brauzerda ochish",
+  "document.download": "Yuklab olish",
   "contest.formSubtitle": "Ma'lumotlaringizni va hujjatingizni yuboring, biz siz bilan tez orada bogʻlanamiz.",
   "contest.successTitle": "Arizangiz qabul qilindi!",
   "contest.ticketNote": "Ariza raqamingiz: #{{id}}. Natija haqida elektron pochtangizga xabar beriladi.",

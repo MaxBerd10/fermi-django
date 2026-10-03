@@ -72,7 +72,7 @@ export interface DocumentBlockData {
    * site) instead of the default bordered document card. */
   /** `roadmap` uses the legacy in-page PDF viewer used by the institute's
    * annual road map, while `button` keeps the old plain download pill. */
-  style?: "button" | "roadmap";
+  style?: "button" | "roadmap" | "card";
 }
 export interface GalleryItem {
   image_id: number;

@@ -1,6 +1,7 @@
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import RichContent from "@/components/shared/RichContent";
+import DocumentCard from "./DocumentCard";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
@@ -261,6 +262,17 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
               />
             </div>
           </section>
+        );
+      }
+
+      if (style === "card") {
+        return (
+          <DocumentCard
+            url={documentUrl}
+            title={caption || document.title || document.filename}
+            filename={document.filename}
+            fileSize={document.file_size}
+          />
         );
       }
 

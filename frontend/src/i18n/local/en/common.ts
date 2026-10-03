@@ -1353,6 +1353,8 @@ export default {
   "vq.urgentNote": "For urgent matters, call directly:",
 
   "contest.formTitle": "Submit an application",
+  "document.open": "Open in browser",
+  "document.download": "Download",
   "contest.formSubtitle": "Send your details and document — we'll get in touch with you soon.",
   "contest.successTitle": "Your application has been received!",
   "contest.ticketNote": "Your application number: #{{id}}. The result will be sent to your email.",
