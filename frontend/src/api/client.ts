@@ -8,22 +8,45 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
 const ACCESS_TOKEN_KEY = "fjsti_access_token";
 const REFRESH_TOKEN_KEY = "fjsti_refresh_token";
 
+// Tokens live in localStorage so a session survives a reload, but some browsers (iPhone Safari in
+// Private mode, "block all cookies/site data") throw or silently drop writes. A copy kept in memory
+// means sign-in still works for the open tab instead of the panel bouncing back to the login page.
+const memoryTokens: Record<string, string | null> = {};
+
+function readToken(key: string): string | null {
+  try {
+    return localStorage.getItem(key) ?? memoryTokens[key] ?? null;
+  } catch {
+    return memoryTokens[key] ?? null;
+  }
+}
+
+function writeToken(key: string, value: string | null) {
+  memoryTokens[key] = value;
+  try {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
+  } catch {
+    /* storage unavailable -- the in-memory copy above is what keeps the session alive */
+  }
+}
+
 export function getAccessToken() {
-  return localStorage.getItem(ACCESS_TOKEN_KEY);
+  return readToken(ACCESS_TOKEN_KEY);
 }
 
 export function getRefreshToken() {
-  return localStorage.getItem(REFRESH_TOKEN_KEY);
+  return readToken(REFRESH_TOKEN_KEY);
 }
 
 export function setTokens(accessToken: string, refreshToken: string) {
-  localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
-  localStorage.setItem(REFRESH_TOKEN_KEY, refreshToken);
+  writeToken(ACCESS_TOKEN_KEY, accessToken);
+  writeToken(REFRESH_TOKEN_KEY, refreshToken);
 }
 
 export function clearTokens() {
-  localStorage.removeItem(ACCESS_TOKEN_KEY);
-  localStorage.removeItem(REFRESH_TOKEN_KEY);
+  writeToken(ACCESS_TOKEN_KEY, null);
+  writeToken(REFRESH_TOKEN_KEY, null);
 }
 
 export interface ApiResult<T> {
