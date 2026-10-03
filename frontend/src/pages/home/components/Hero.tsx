@@ -110,6 +110,9 @@ export default function Hero() {
   const { ref, active } = useInViewOnce<HTMLDivElement>(0.1);
   const stageRef = useRef<HTMLDivElement>(null);
   const [institute, setInstitute] = useState(FALLBACK_TITLE);
+  // Starts at the built-in figure so first paint never waits on the network; replaced by the
+  // number an admin keeps under "Statistika" once settings arrive (0 = "not filled in yet").
+  const [students, setStudents] = useState(INSTITUTE_COUNTER.students);
   const [ready, setReady] = useState(false);
   const [activeNode, setActiveNode] = useState<RadarId | null>("students");
   const [burstKey, setBurstKey] = useState(0);
@@ -125,6 +128,7 @@ export default function Hero() {
 
     getSettings().then((s) => {
       if (s.logo?.title) setInstitute(s.logo.title);
+      if (s.counter?.students > 0) setStudents(s.counter.students);
     });
   }, []);
 
@@ -167,8 +171,6 @@ export default function Hero() {
     setRadarExpanded(true);
     window.setTimeout(() => setRadarSettled(true), 2300);
   }
-
-  const students = INSTITUTE_COUNTER.students;
 
   const resolveValue = (v: number | "counter") => (v === "counter" ? students : v);
 

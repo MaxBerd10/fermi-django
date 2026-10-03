@@ -156,8 +156,13 @@ async function readDrfResponse<T>(response: Response, path: string, raw = false)
     const firstFieldMessage = Object.values(errorBody)
       .flat()
       .find((v): v is string => typeof v === "string");
+    // The reverse proxy answers 413 with an HTML page, never JSON, so there is no message to show.
     const message =
-      typeof detail === "string" ? detail : firstFieldMessage ?? `Request to ${path} failed (${response.status})`;
+      response.status === 413
+        ? i18n.t("common.requestTooLarge")
+        : typeof detail === "string"
+          ? detail
+          : firstFieldMessage ?? `Request to ${path} failed (${response.status})`;
     const fields = typeof detail === "string" ? undefined : (errorBody as Record<string, string[]>);
     throw new ApiError(message, String(response.status), response.status, fields);
   }
@@ -233,6 +238,9 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
           return request<T>(path, { ...options, _isRetry: true });
         }
         clearTokens();
+        // The session is really gone: tell the admin shell so it can send the editor to the
+        // login page instead of leaving them on a form whose every save now fails.
+        window.dispatchEvent(new Event(AUTH_EXPIRED_EVENT));
       }
       throw err;
     }
@@ -257,19 +265,38 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
   return resultPromise;
 }
 
-async function tryRefresh(): Promise<boolean> {
-  const refreshToken = getRefreshToken();
-  if (!refreshToken) return false;
-  try {
-    const res = await request<{ accessToken: string; refreshToken: string }>("auth/refresh", {
-      method: "POST",
-      body: { refreshToken },
+// One refresh at a time. The admin pages fire several authenticated requests at once
+// (list + categories + media ...), so when the 15-minute access token lapses they all
+// get a 401 together and each used to start its own refresh with the same refresh
+// token. The server rotates and blacklists a refresh token the moment it is used, so
+// the losers of that race were rejected and then ran clearTokens() -- wiping the fresh
+// tokens the winner had just stored and logging the editor out mid-form.
+let refreshInFlight: Promise<boolean> | null = null;
+
+export const AUTH_EXPIRED_EVENT = "auth:expired";
+
+function tryRefresh(): Promise<boolean> {
+  if (!refreshInFlight) {
+    const refreshToken = getRefreshToken();
+    refreshInFlight = (async () => {
+      if (!refreshToken) return false;
+      try {
+        const res = await request<{ accessToken: string; refreshToken: string }>("auth/refresh", {
+          method: "POST",
+          body: { refreshToken },
+        });
+        setTokens(res.data.accessToken, res.data.refreshToken);
+        return true;
+      } catch {
+        // Another tab (or an earlier call) may already have rotated the token: if the stored
+        // refresh token changed while this attempt was in flight, the session is still good.
+        return getRefreshToken() !== refreshToken && Boolean(getRefreshToken());
+      }
+    })().finally(() => {
+      refreshInFlight = null;
     });
-    setTokens(res.data.accessToken, res.data.refreshToken);
-    return true;
-  } catch {
-    return false;
   }
+  return refreshInFlight;
 }
 
 export const apiClient = {

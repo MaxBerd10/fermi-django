@@ -1,47 +1,11 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { adminResource } from "@/api/admin";
 import type { AdminPage } from "@/admin/types";
 import DataTable from "@/admin/components/DataTable";
 import Pagination from "@/admin/components/Pagination";
-
-const pagesApi = adminResource<AdminPage>("pages");
+import { useAdminList } from "@/admin/hooks/useAdminList";
 
 export default function PagesListPage() {
-  const [items, setItems] = useState<AdminPage[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
-  const pageSize = 20;
-
-  async function load() {
-    setLoading(true);
-    try {
-      const { items, meta } = await pagesApi.list({ page, pageSize, search: search || undefined });
-      setItems(items);
-      setTotal(meta?.total ?? 0);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
-
-  function onSearchSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setPage(1);
-    load();
-  }
-
-  async function onDelete(item: AdminPage) {
-    if (!window.confirm(`"${item.title_uz}" sahifasini o'chirishni tasdiqlaysizmi?`)) return;
-    await pagesApi.remove(item.id);
-    load();
-  }
+  const list = useAdminList<AdminPage>("pages");
 
   return (
     <div>
@@ -52,11 +16,11 @@ export default function PagesListPage() {
         </Link>
       </div>
 
-      <form onSubmit={onSearchSubmit} className="mb-4 flex gap-2">
+      <form onSubmit={list.submitSearch} className="mb-4 flex gap-2">
         <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Sarlavha bo'yicha qidirish..."
+          value={list.searchInput}
+          onChange={(e) => list.setSearchInput(e.target.value)}
+          placeholder="Sarlavha yoki slug bo'yicha qidirish..."
           className="w-full max-w-sm h-10 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
         />
         <button type="submit" className="h-10 px-4 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
@@ -64,10 +28,19 @@ export default function PagesListPage() {
         </button>
       </form>
 
+      {list.error && (
+        <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800 flex items-center justify-between gap-3">
+          <span>{list.error}</span>
+          <button type="button" onClick={list.reload} className="shrink-0 underline cursor-pointer">Qayta urinish</button>
+        </div>
+      )}
+
       <DataTable
         columns={[
           { key: "id", label: "ID" },
-          { key: "title_uz", label: "Sarlavha" },
+          // Pages imported from the old site have no title of their own (it lives on the menu item
+          // that links to them) -- show the slug instead of an empty cell nobody can tell apart.
+          { key: "title_uz", label: "Sarlavha", render: (item) => item.title_uz || <span className="text-foreground-400">{item.slug}</span> },
           { key: "slug", label: "Slug" },
           { key: "korish", label: "Ko'rishlar" },
           {
@@ -80,12 +53,13 @@ export default function PagesListPage() {
             ),
           },
         ]}
-        items={items}
-        loading={loading}
+        items={list.items}
+        loading={list.loading}
+        showEmpty={!list.error}
         editPathFor={(item) => `/admin/pages/${item.id}`}
-        onDelete={onDelete}
+        onDelete={(item) => list.remove(item, item.title_uz || item.slug)}
       />
-      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
+      <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>
   );
 }

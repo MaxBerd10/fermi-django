@@ -1,47 +1,12 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { adminResource } from "@/api/admin";
 import type { AdminPost } from "@/admin/types";
 import DataTable from "@/admin/components/DataTable";
 import Pagination from "@/admin/components/Pagination";
-
-const postsApi = adminResource<AdminPost>("news");
+import { useAdminList } from "@/admin/hooks/useAdminList";
+import { formatDateTime } from "@/admin/format";
 
 export default function NewsListPage() {
-  const [items, setItems] = useState<AdminPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
-  const pageSize = 20;
-
-  async function load() {
-    setLoading(true);
-    try {
-      const { items, meta } = await postsApi.list({ page, pageSize, search: search || undefined });
-      setItems(items);
-      setTotal(meta?.total ?? 0);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
-
-  function onSearchSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setPage(1);
-    load();
-  }
-
-  async function onDelete(item: AdminPost) {
-    if (!window.confirm(`"${item.title_uz}" yangiligini o'chirishni tasdiqlaysizmi?`)) return;
-    await postsApi.remove(item.id);
-    load();
-  }
+  const list = useAdminList<AdminPost>("news");
 
   return (
     <div>
@@ -52,10 +17,10 @@ export default function NewsListPage() {
         </Link>
       </div>
 
-      <form onSubmit={onSearchSubmit} className="mb-4 flex gap-2">
+      <form onSubmit={list.submitSearch} className="mb-4 flex gap-2">
         <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={list.searchInput}
+          onChange={(e) => list.setSearchInput(e.target.value)}
           placeholder="Sarlavha bo'yicha qidirish..."
           className="w-full max-w-sm h-10 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
         />
@@ -64,11 +29,18 @@ export default function NewsListPage() {
         </button>
       </form>
 
+      {list.error && (
+        <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800 flex items-center justify-between gap-3">
+          <span>{list.error}</span>
+          <button type="button" onClick={list.reload} className="shrink-0 underline cursor-pointer">Qayta urinish</button>
+        </div>
+      )}
+
       <DataTable
         columns={[
           { key: "id", label: "ID" },
           { key: "title_uz", label: "Sarlavha" },
-          { key: "date", label: "Sana" },
+          { key: "date", label: "Sana", render: (item) => formatDateTime(item.date) },
           { key: "seen", label: "Ko'rishlar" },
           {
             key: "status",
@@ -80,12 +52,13 @@ export default function NewsListPage() {
             ),
           },
         ]}
-        items={items}
-        loading={loading}
+        items={list.items}
+        loading={list.loading}
+        showEmpty={!list.error}
         editPathFor={(item) => `/admin/news/${item.id}`}
-        onDelete={onDelete}
+        onDelete={(item) => list.remove(item, item.title_uz)}
       />
-      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
+      <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>
   );
 }

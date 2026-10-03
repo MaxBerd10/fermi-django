@@ -1,19 +1,13 @@
-import type { EntityConfig } from "./genericTypes";
-
-const STATUS_OPTIONS = [
-  { value: 1, label: "Faol" },
-  { value: 0, label: "Nofaol" },
-];
+import type { EntityConfig, ListColumn } from "./genericTypes";
 
 export const facultyConfig: EntityConfig = {
   resource: "faculty",
   title: "Fakultetlar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Rasm", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
     { kind: "lang-html", base: "content", label: "Matn" },
   ],
 };
@@ -21,12 +15,11 @@ export const facultyConfig: EntityConfig = {
 export const departmentsConfig: EntityConfig = {
   resource: "departments",
   title: "Kafedralar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Rasm", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
     { kind: "lang-html", base: "content", label: "Matn" },
   ],
 };
@@ -34,7 +27,7 @@ export const departmentsConfig: EntityConfig = {
 export const leaderConfig: EntityConfig = {
   resource: "leaders",
   title: "Rahbariyat",
-  listColumns: [{ key: "id", label: "ID" }, { key: "name_uz", label: "F.I.SH" }, { key: "position_uz", label: "Lavozim" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "name_uz", label: "F.I.SH" }, { key: "position_uz", label: "Lavozim" }],
   deleteConfirmField: "name_uz",
   fields: [
     { kind: "lang-text", base: "name", label: "F.I.SH", requiredUz: true },
@@ -42,47 +35,31 @@ export const leaderConfig: EntityConfig = {
     { kind: "async-select", key: "category_id", label: "Toifa", required: true, optionsResource: "leadercategories", optionsLabelKey: "title_uz" },
     { kind: "media", key: "rasm", label: "Foto", required: true },
     { kind: "text", key: "phone", label: "Telefon", required: true },
-    { kind: "text", key: "faks", label: "Faks" },
     { kind: "text", key: "email", label: "Email", required: true },
     { kind: "lang-text", base: "reception_days", label: "Qabul kunlari", requiredUz: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
     { kind: "lang-html", base: "activity", label: "Faoliyati" },
     { kind: "lang-html", base: "biography", label: "Tarjimai holi" },
-  ],
-};
-
-export const leadercategoryConfig: EntityConfig = {
-  resource: "leadercategories",
-  title: "Rahbariyat toifalari",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
-  deleteConfirmField: "title_uz",
-  fields: [
-    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "checkbox", key: "is_faculty", label: "Fakultet toifasimi" },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const documentsConfig: EntityConfig = {
   resource: "documents",
   title: "Hujjatlar to'plami",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const documentsitemConfig: EntityConfig = {
   resource: "documents-items",
   title: "Hujjat elementlari",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "async-select", key: "document_id", label: "Hujjatlar to'plami", required: true, optionsResource: "documents", optionsLabelKey: "title_uz" },
     { kind: "lang-text", base: "title", label: "Nomi" },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
     { kind: "lang-html", base: "content", label: "Matn" },
   ],
 };
@@ -90,85 +67,77 @@ export const documentsitemConfig: EntityConfig = {
 export const imgConfig: EntityConfig = {
   resource: "gallery-images",
   title: "Foto galereya",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "media", key: "img", label: "Rasm", required: true },
     { kind: "lang-text", base: "title", label: "Nomi" },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
-    { kind: "lang-html", base: "content", label: "Izoh" },
   ],
 };
 
 export const videoConfig: EntityConfig = {
   resource: "videos",
   title: "Video",
-  listColumns: [{ key: "id", label: "ID" }, { key: "url", label: "URL" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "url", label: "URL" }],
   deleteConfirmField: "url",
   fields: [
     { kind: "text", key: "video", label: "Video fayl yo'li" },
     { kind: "text", key: "url", label: "Tashqi video URL (YouTube va h.k.)" },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const courseConfig: EntityConfig = {
   resource: "courses",
   title: "Kurslar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const scheduleConfig: EntityConfig = {
   resource: "schedules",
   title: "Dars jadvali",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "async-select", key: "course_id", label: "Kurs", required: true, optionsResource: "courses", optionsLabelKey: "title_uz" },
     { kind: "media", key: "file", label: "Fayl (PDF)", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const resultCategoryConfig: EntityConfig = {
   resource: "result-categories",
   title: "Qabul natijalari — yo'nalishlar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const resultFileConfig: EntityConfig = {
   resource: "result-files",
   title: "Qabul natijalari — fayllar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "async-select", key: "category_id", label: "Yo'nalish", required: true, optionsResource: "result-categories", optionsLabelKey: "title_uz" },
     { kind: "media", key: "file", label: "Fayl (PDF)", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const coruselConfig: EntityConfig = {
   resource: "corusel",
   title: "Bosh sahifa banneri",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi" },
     { kind: "media", key: "img", label: "Rasm" },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
     { kind: "lang-html", base: "content", label: "Matn" },
   ],
 };
@@ -176,162 +145,147 @@ export const coruselConfig: EntityConfig = {
 export const networkConfig: EntityConfig = {
   resource: "networks",
   title: "Ijtimoiy tarmoqlar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "titlte", label: "Nomi" }, { key: "url", label: "Havola" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "titlte", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "titlte",
   fields: [
     { kind: "text", key: "titlte", label: "Nomi", required: true },
     { kind: "text", key: "icon", label: "Ikonka (masalan: ri-telegram-line)", required: true },
     { kind: "text", key: "url", label: "Havola", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
 export const usefulSitesConfig: EntityConfig = {
   resource: "useful-sites",
   title: "Foydali havolalar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Rasm", required: true },
     { kind: "text", key: "url", label: "Havola", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
-export const aboutConfig: EntityConfig = {
-  resource: "about",
-  title: "Institut haqida",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "status", label: "Holat" }],
-  deleteConfirmField: "title_uz",
-  fields: [
-    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "media", key: "img", label: "Rasm", required: true },
-    { kind: "text", key: "url", label: "Batafsil havola (ichki yo'l)", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
-    { kind: "lang-html", base: "content", label: "Matn" },
-  ],
+// --- Inbound submissions (public forms) -----------------------------------------------------
+// These arrive from the site's own forms, so nobody creates them here (noCreate) and the
+// submitted content is shown read-only. Only the review state is editable: `status` is 1 while
+// unread and 0 once looked at (opening a record marks it read -- apps/admin_api/forms_views.py).
+
+const SUBMISSION_STATUS_OPTIONS = [
+  { value: 1, label: "Yangi (ko'rilmagan)" },
+  { value: 0, label: "Ko'rib chiqilgan" },
+];
+
+const SUBMISSION_BADGES: NonNullable<ListColumn["badges"]> = {
+  "1": { label: "Yangi", tone: "amber" },
+  "0": { label: "Ko'rilgan", tone: "gray" },
 };
 
 export const contactConfig: EntityConfig = {
   resource: "contacts",
   title: "Murojaatlar (Aloqa formasi)",
-  addLabel: "Qo'shish",
+  noCreate: true,
   listColumns: [
     { key: "id", label: "ID" },
+    { key: "created_at", label: "Sana", kind: "datetime" },
     { key: "name", label: "Ism" },
     { key: "subject", label: "Mavzu" },
-    { key: "email", label: "Email" },
-    { key: "status", label: "Holat" },
+    { key: "phone", label: "Telefon" },
+    { key: "status", label: "Holat", kind: "badge", badges: SUBMISSION_BADGES },
   ],
   deleteConfirmField: "name",
   fields: [
-    { kind: "text", key: "name", label: "Ism", required: true },
-    { kind: "text", key: "subject", label: "Mavzu", required: true },
-    { kind: "text", key: "phone", label: "Telefon", required: true },
-    { kind: "text", key: "email", label: "Email", required: true },
-    { kind: "select", key: "status", label: "Holat", options: STATUS_OPTIONS },
-    { kind: "textarea", key: "message", label: "Xabar matni", required: true },
+    { kind: "readonly", key: "created_at", label: "Kelgan vaqti", format: "datetime" },
+    { kind: "readonly", key: "name", label: "Ism" },
+    { kind: "readonly", key: "subject", label: "Mavzu" },
+    { kind: "readonly", key: "phone", label: "Telefon" },
+    { kind: "readonly", key: "email", label: "Email" },
+    { kind: "readonly", key: "message", label: "Xabar matni" },
+    { kind: "select", key: "status", label: "Holat", options: SUBMISSION_STATUS_OPTIONS },
   ],
 };
 
 export const acceptanceConfig: EntityConfig = {
   resource: "acceptances",
   title: "Qabul arizalari",
-  addLabel: "Qo'shish",
+  noCreate: true,
   listColumns: [
     { key: "id", label: "ID" },
+    { key: "created_at", label: "Sana", kind: "datetime" },
     { key: "fish", label: "F.I.SH" },
     { key: "subject", label: "Mavzu" },
     { key: "phone", label: "Telefon" },
+    { key: "status", label: "Holat", kind: "badge", badges: SUBMISSION_BADGES },
   ],
   deleteConfirmField: "fish",
   fields: [
-    { kind: "async-select", key: "category_id", label: "Toifa", required: true, optionsResource: "leadercategories", optionsLabelKey: "title_uz" },
-    { kind: "text", key: "fish", label: "F.I.SH", required: true },
-    { kind: "text", key: "subject", label: "Mavzu", required: true },
-    { kind: "text", key: "phone", label: "Telefon", required: true },
-    { kind: "text", key: "email", label: "Email", required: true },
-    { kind: "geo-selects", label: "Manzil", regionKey: "region_id", districtKey: "district_id", quarterKey: "quater_id", required: true },
+    { kind: "readonly", key: "created_at", label: "Kelgan vaqti", format: "datetime" },
+    { kind: "readonly", key: "fish", label: "F.I.SH" },
+    { kind: "readonly", key: "subject", label: "Mavzu" },
+    { kind: "readonly", key: "phone", label: "Telefon" },
+    { kind: "readonly", key: "email", label: "Email" },
+    { kind: "select", key: "status", label: "Holat", options: SUBMISSION_STATUS_OPTIONS },
   ],
 };
 
 export const virtualConfig: EntityConfig = {
   resource: "virtual-submissions",
   title: "Virtual qabulxona murojaatlari",
-  addLabel: "Qo'shish",
+  noCreate: true,
   listColumns: [
     { key: "id", label: "ID" },
+    { key: "created_at", label: "Sana", kind: "datetime" },
     { key: "fish", label: "F.I.SH" },
     { key: "phone", label: "Telefon" },
     { key: "email", label: "Email" },
+    { key: "status", label: "Holat", kind: "badge", badges: SUBMISSION_BADGES },
   ],
   deleteConfirmField: "fish",
   fields: [
-    { kind: "text", key: "fish", label: "F.I.SH", required: true },
-    { kind: "async-select", key: "faculty_id", label: "Fakultet", required: true, optionsResource: "faculty", optionsLabelKey: "title_uz" },
-    { kind: "geo-selects", label: "Viloyat / tuman", regionKey: "region_id", districtKey: "district_id", required: true },
-    { kind: "text", key: "address", label: "Manzil", required: true },
-    { kind: "text", key: "phone", label: "Telefon", required: true },
-    { kind: "text", key: "email", label: "Email", required: true },
-    { kind: "text", key: "gender", label: "Jinsi" },
-    { kind: "media", key: "file", label: "Biriktirilgan fayl" },
-    { kind: "textarea", key: "text", label: "Murojaat matni", required: true },
+    { kind: "readonly", key: "created_at", label: "Kelgan vaqti", format: "datetime" },
+    { kind: "readonly", key: "fish", label: "F.I.SH" },
+    { kind: "readonly", key: "phone", label: "Telefon" },
+    { kind: "readonly", key: "email", label: "Email" },
+    { kind: "readonly", key: "gender", label: "Jinsi" },
+    { kind: "readonly", key: "address", label: "Manzil" },
+    { kind: "readonly", key: "text", label: "Murojaat matni" },
+    { kind: "file-link", key: "file", label: "Biriktirilgan fayl", nameKey: "file_name" },
+    { kind: "select", key: "status", label: "Holat", options: SUBMISSION_STATUS_OPTIONS },
   ],
 };
 
 export const contestConfig: EntityConfig = {
   resource: "contest-submissions",
   title: "Tanlov arizalari",
-  addLabel: "Qo'shish",
+  noCreate: true,
   listColumns: [
     { key: "id", label: "ID" },
+    { key: "created_at", label: "Sana", kind: "datetime" },
     { key: "full_name", label: "F.I.SH" },
     { key: "contest_title", label: "Tanlov" },
     { key: "phone", label: "Telefon" },
-    { key: "status", label: "Holat" },
+    { key: "status", label: "Holat", kind: "badge", badges: SUBMISSION_BADGES },
   ],
   deleteConfirmField: "full_name",
   fields: [
-    { kind: "text", key: "full_name", label: "F.I.SH", required: true },
-    // NewsPost, filtered by nothing here -- every post shows up, not just
-    // "tanlovlar"-category ones, same tradeoff virtualConfig's faculty_id
-    // async-select makes (the options endpoint has no category filter of
-    // its own to reuse).
-    { kind: "async-select", key: "contest_id", label: "Tanlov (yangilik)", optionsResource: "news", optionsLabelKey: "title_uz" },
-    { kind: "text", key: "phone", label: "Telefon", required: true },
-    { kind: "text", key: "email", label: "Email", required: true },
-    { kind: "select", key: "status", label: "Holat", options: STATUS_OPTIONS },
-    { kind: "media", key: "file", label: "Biriktirilgan hujjat" },
-    { kind: "textarea", key: "message", label: "Izoh" },
-  ],
-};
-
-export const translationConfig: EntityConfig = {
-  resource: "translations",
-  title: "Tarjimalar (UI matnlari)",
-  listColumns: [
-    { key: "id", label: "ID" },
-    { key: "category", label: "Kategoriya" },
-    { key: "message", label: "Asl matn (kalit)" },
-    { key: "translation_uz", label: "UZ tarjimasi" },
-  ],
-  deleteConfirmField: "message",
-  fields: [
-    { kind: "text", key: "category", label: "Kategoriya", required: true },
-    { kind: "textarea", key: "message", label: "Asl matn (kalit — kod ichida Yii::t() orqali chaqiriladi)", required: true },
-    { kind: "lang-text", base: "translation", label: "Tarjima" },
+    { kind: "readonly", key: "created_at", label: "Kelgan vaqti", format: "datetime" },
+    { kind: "readonly", key: "contest_title", label: "Qaysi tanlovga" },
+    { kind: "readonly", key: "full_name", label: "F.I.SH" },
+    { kind: "readonly", key: "phone", label: "Telefon" },
+    { kind: "readonly", key: "email", label: "Email" },
+    { kind: "readonly", key: "message", label: "Izoh" },
+    { kind: "file-link", key: "file", label: "Yuborilgan hujjat", nameKey: "file_name" },
+    { kind: "select", key: "status", label: "Holat", options: SUBMISSION_STATUS_OPTIONS },
   ],
 };
 
 export const connectLeaderConfig: EntityConfig = {
   resource: "connect-leaders",
   title: "Aloqa uchun mas'ullar",
-  listColumns: [{ key: "id", label: "ID" }, { key: "name", label: "Nomi" }, { key: "status", label: "Holat" }],
+  listColumns: [{ key: "id", label: "ID" }, { key: "name", label: "Nomi" }],
   deleteConfirmField: "name",
   fields: [
     { kind: "text", key: "name", label: "Nomi", required: true },
-    { kind: "select", key: "status", label: "Holat", required: true, options: STATUS_OPTIONS },
   ],
 };
 
@@ -389,7 +343,6 @@ export const ALL_ENTITY_CONFIGS = [
   facultyConfig,
   departmentsConfig,
   leaderConfig,
-  leadercategoryConfig,
   documentsConfig,
   documentsitemConfig,
   imgConfig,
@@ -401,13 +354,11 @@ export const ALL_ENTITY_CONFIGS = [
   coruselConfig,
   networkConfig,
   usefulSitesConfig,
-  aboutConfig,
   contactConfig,
   acceptanceConfig,
   virtualConfig,
   contestConfig,
   connectLeaderConfig,
-  translationConfig,
 ];
 
 export const SINGLETON_CONFIGS = [counterConfig, settingConfig, logoConfig, resultsPageConfig];

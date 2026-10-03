@@ -23,10 +23,8 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     items: [
       { to: "/admin/news", label: "Yangiliklar", icon: "ri-newspaper-line" },
       { to: "/admin/pages", label: "Sahifalar", icon: "ri-file-text-line" },
-      { to: "/admin/about", label: "Institut haqida", icon: "ri-information-line" },
       { to: "/admin/gallery-images", label: "Foto galereya", icon: "ri-image-line" },
       { to: "/admin/videos", label: "Video", icon: "ri-video-line" },
-      { to: "/admin/corusel", label: "Bosh sahifa banneri", icon: "ri-slideshow-line" },
     ],
   },
   {
@@ -35,7 +33,6 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
       { to: "/admin/faculty", label: "Fakultetlar", icon: "ri-building-line" },
       { to: "/admin/departments", label: "Kafedralar", icon: "ri-building-2-line" },
       { to: "/admin/leaders", label: "Rahbariyat", icon: "ri-team-line" },
-      { to: "/admin/leadercategories", label: "Rahbariyat toifalari", icon: "ri-price-tag-3-line" },
     ],
   },
   {
@@ -69,11 +66,9 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     label: "Sozlamalar",
     items: [
       { to: "/admin/networks", label: "Ijtimoiy tarmoqlar", icon: "ri-share-line" },
-      { to: "/admin/useful-sites", label: "Foydali havolalar", icon: "ri-links-line" },
       { to: "/admin/counter", label: "Statistika", icon: "ri-bar-chart-line" },
       { to: "/admin/setting", label: "Umumiy sozlamalar", icon: "ri-settings-3-line" },
       { to: "/admin/logo", label: "Logotip", icon: "ri-shield-star-line" },
-      { to: "/admin/translations", label: "Tarjimalar (UI)", icon: "ri-translate-2" },
     ],
   },
 ];

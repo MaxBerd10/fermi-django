@@ -11,11 +11,13 @@ interface DataTableProps<T extends { id: number }> {
   columns: Column<T>[];
   items: T[];
   loading: boolean;
+  /** False while a load error is on screen, so a failed request doesn't read as "no records". */
+  showEmpty?: boolean;
   editPathFor: (item: T) => string;
   onDelete: (item: T) => void;
 }
 
-export default function DataTable<T extends { id: number }>({ columns, items, loading, editPathFor, onDelete }: DataTableProps<T>) {
+export default function DataTable<T extends { id: number }>({ columns, items, loading, showEmpty = true, editPathFor, onDelete }: DataTableProps<T>) {
   if (loading) {
     return (
       <div className="py-16 flex justify-center">
@@ -25,7 +27,7 @@ export default function DataTable<T extends { id: number }>({ columns, items, lo
   }
 
   if (items.length === 0) {
-    return <div className="py-16 text-center text-sm text-foreground-500">Hech qanday yozuv topilmadi.</div>;
+    return showEmpty ? <div className="py-16 text-center text-sm text-foreground-500">Hech qanday yozuv topilmadi.</div> : null;
   }
 
   return (

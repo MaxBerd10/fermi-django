@@ -11,6 +11,10 @@ import { ApiError } from "@/types/api";
  * apps.forms.models.ContestSubmission), just scoped to one announcement
  * via `contestId`.
  */
+// Mirrors MAX_VISITOR_UPLOAD_BYTES in apps/forms/views.py -- checked here too so a big file fails
+// instantly with a clear message instead of after a slow upload the server then refuses.
+const MAX_FILE_BYTES = 10 * 1024 * 1024;
+
 export default function ContestApplicationForm({ contestId }: { contestId: number }) {
   const { t } = useTranslation();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -35,6 +39,12 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
 
     const file = formData.get("file") as File;
 
+    if (file && file.size > MAX_FILE_BYTES) {
+      setStatus("error");
+      setError(t("contest.fileTooLarge"));
+      return;
+    }
+
     try {
       const res = await submitContestApplication({
         contestId,
@@ -49,7 +59,8 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
       form.reset();
     } catch (err) {
       setStatus("error");
-      setError(err instanceof ApiError ? err.message : t("contest.submitError"));
+      if (err instanceof ApiError && err.status === 413) setError(t("contest.fileTooLarge"));
+      else setError(err instanceof ApiError ? err.message : t("contest.submitError"));
     }
   };
 

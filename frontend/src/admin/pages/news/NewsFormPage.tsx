@@ -6,6 +6,8 @@ import GalleryPicker from "@/admin/components/GalleryPicker";
 import MediaPicker from "@/admin/components/MediaPicker";
 import RichTextEditor from "@/admin/components/RichTextEditor";
 import { ApiError } from "@/types/api";
+import { adminErrorMessage } from "../../hooks/useAdminList";
+import { fromTashkentInput, toTashkentInput } from "../../format";
 
 const postsApi = adminResource<AdminPost>("news");
 const categoriesApi = adminResource<AdminPostcategory>("postcategories");
@@ -44,12 +46,16 @@ export default function NewsFormPage() {
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
-    categoriesApi.list({ pageSize: 100 }).then((r) => setCategories(r.items));
+    categoriesApi
+      .list({ pageSize: 100 })
+      .then((r) => setCategories(r.items))
+      .catch((err) => setError(adminErrorMessage(err, "Kategoriyalarni yuklab bo'lmadi.")));
     if (!isNew) {
-      postsApi.get(Number(id)).then((data) => {
-        setForm(data);
-        setLoading(false);
-      });
+      postsApi
+        .get(Number(id))
+        .then((data) => setForm(data))
+        .catch((err) => setError(adminErrorMessage(err, "Yangilikni yuklab bo'lmadi.")))
+        .finally(() => setLoading(false));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
@@ -119,11 +125,11 @@ export default function NewsFormPage() {
         setNotice((n) => n || "Saqlandi.");
       }
     } catch (err) {
-      if (err instanceof ApiError) {
+      if (err instanceof ApiError && err.status === 400) {
         setError(err.message);
         setFieldErrors(err.fields ?? {});
       } else {
-        setError("Saqlashda xatolik yuz berdi.");
+        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
       }
     } finally {
       setSaving(false);
@@ -171,10 +177,24 @@ export default function NewsFormPage() {
                 onChange={(e) => set("status", Number(e.target.value))}
                 className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
               >
-                <option value={1}>Faol</option>
-                <option value={0}>Nofaol</option>
+                <option value={1}>E'lon qilingan</option>
+                <option value={0}>Qoralama (saytda ko'rinmaydi)</option>
               </select>
             </div>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-foreground-700 mb-1.5">Nashr sanasi</label>
+            <input
+              type="datetime-local"
+              value={toTashkentInput(form.date)}
+              onChange={(e) => set("date", e.target.value ? fromTashkentInput(e.target.value) : null)}
+              className="w-full sm:w-64 h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
+            />
+            <p className="mt-1 text-xs text-foreground-500">
+              Bo'sh qoldirilsa — hozirgi vaqt. O'tgan sana qo'yilsa yangilik shu sanada chiqqandek ko'rinadi; kelajak sanasi
+              qo'yilsa — shu vaqtgacha saytda ko'rinmaydi.
+            </p>
+            {fieldErrors.date && <p className="mt-1 text-xs text-accent-600">{fieldErrors.date[0]}</p>}
           </div>
           <MediaPicker label="Asosiy rasm (muqova)" value={form.img} onChange={(path) => set("img", path)} />
           <GalleryPicker label="Qo'shimcha rasmlar (galereya)" value={form.gallery} onChange={(paths) => set("gallery", paths)} />

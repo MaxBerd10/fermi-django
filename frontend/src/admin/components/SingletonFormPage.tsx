@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { adminResource } from "@/api/admin";
-import { fieldKey, type EntityConfig } from "../genericTypes";
+import { fieldKey, type EntityConfig, type FieldSpec } from "../genericTypes";
 import GenericField from "./GenericField";
 import { ApiError } from "@/types/api";
+import { adminErrorMessage } from "../hooks/useAdminList";
 
 type Values = Record<string, unknown>;
+
+/** A lang-* field is posted as <base>_uz/_ru/_en, so its validation errors live under those keys. */
+function errorsFor(field: FieldSpec, fieldErrors: Record<string, string[]>): string[] {
+  if ("base" in field) return (["uz", "ru", "en"] as const).flatMap((lang) => fieldErrors[`${field.base}_${lang}`] ?? []);
+  return fieldErrors[fieldKey(field)] ?? [];
+}
 
 /** For 1-row config tables (Counter/Setting/Logo) — no list, no create, no delete. */
 export default function SingletonFormPage({ config }: { config: EntityConfig }) {
@@ -17,10 +24,22 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
-    api.list({ pageSize: 1 }).then((r) => {
-      if (r.items[0]) setValues(r.items[0]);
-      setLoading(false);
-    });
+    let cancelled = false;
+    setLoading(true);
+    api
+      .list({ pageSize: 1 })
+      .then((r) => {
+        if (!cancelled && r.items[0]) setValues(r.items[0]);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(adminErrorMessage(err, "Ma'lumotlarni yuklab bo'lmadi."));
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [config.resource]);
 
@@ -38,11 +57,11 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
       await api.update(values.id as number, values);
       setSaved(true);
     } catch (err) {
-      if (err instanceof ApiError) {
+      if (err instanceof ApiError && err.status === 400) {
         setError(err.message);
         setFieldErrors(err.fields ?? {});
       } else {
-        setError("Saqlashda xatolik yuz berdi.");
+        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
       }
     } finally {
       setSaving(false);
@@ -67,11 +86,11 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
       <form onSubmit={onSubmit} className="space-y-6">
         <div className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
           {config.fields.map((field) => {
-            const key = fieldKey(field);
+            const messages = errorsFor(field, fieldErrors);
             return (
-              <div key={key}>
+              <div key={fieldKey(field)}>
                 <GenericField field={field} values={values} onChange={onChange} />
-                {fieldErrors[key] && <p className="mt-1 text-xs text-accent-600">{fieldErrors[key][0]}</p>}
+                {messages.length > 0 && <p className="mt-1 text-xs text-accent-600">{messages[0]}</p>}
               </div>
             );
           })}

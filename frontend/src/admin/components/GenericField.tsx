@@ -5,6 +5,7 @@ import type { Region, District, Quarter } from "@/types/content";
 import type { FieldSpec } from "../genericTypes";
 import MediaPicker from "./MediaPicker";
 import RichTextEditor from "./RichTextEditor";
+import { formatDateTime } from "../format";
 
 type Values = Record<string, unknown>;
 
@@ -187,6 +188,43 @@ export default function GenericField({ field, values, onChange }: Props) {
           onChange={(e) => onChange(field.key, e.target.value.replace("T", " ") + ":00")}
           className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
         />
+      </div>
+    );
+  }
+
+  if (field.kind === "readonly") {
+    const raw = values[field.key];
+    return (
+      <div>
+        <label className="block text-sm font-medium text-foreground-700 mb-1.5">{field.label}</label>
+        <div className="min-h-11 px-4 py-2.5 rounded-md border border-background-200 bg-background-100 text-sm text-foreground-800 whitespace-pre-wrap break-words">
+          {(field.format === "datetime" ? formatDateTime(raw) : String(raw ?? "")) || "—"}
+        </div>
+      </div>
+    );
+  }
+
+  if (field.kind === "file-link") {
+    const url = values[field.key] as string | null | undefined;
+    const name = field.nameKey ? (values[field.nameKey] as string | undefined) : undefined;
+    return (
+      <div>
+        <label className="block text-sm font-medium text-foreground-700 mb-1.5">{field.label}</label>
+        {url ? (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 h-11 px-4 rounded-md border border-primary-200 bg-primary-50 text-sm font-medium text-primary-700 hover:bg-primary-100 max-w-full"
+          >
+            <i className="ri-file-download-line" />
+            <span className="truncate">{name || "Faylni ochish"}</span>
+          </a>
+        ) : (
+          <div className="min-h-11 px-4 py-2.5 rounded-md border border-background-200 bg-background-100 text-sm text-foreground-500">
+            Fayl biriktirilmagan
+          </div>
+        )}
       </div>
     );
   }

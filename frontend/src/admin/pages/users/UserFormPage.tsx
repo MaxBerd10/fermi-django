@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getUser, createUser, updateUser, type AdminUserInput } from "@/api/adminUsers";
 import { useAdminAuth } from "@/admin/AdminAuthContext";
 import { ApiError } from "@/types/api";
+import { adminErrorMessage } from "@/admin/hooks/useAdminList";
 
 export default function UserFormPage() {
   const { id } = useParams();
@@ -16,14 +17,15 @@ export default function UserFormPage() {
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [saved, setSaved] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
     if (!isNew) {
-      getUser(Number(id)).then((data) => {
-        setForm({ username: data.username, email: data.email, status: data.status, role: data.role });
-        setLoading(false);
-      });
+      getUser(Number(id))
+        .then((data) => setForm({ username: data.username, email: data.email, status: data.status, role: data.role }))
+        .catch((err) => setError(adminErrorMessage(err, "Foydalanuvchini yuklab bo'lmadi.")))
+        .finally(() => setLoading(false));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
@@ -36,6 +38,7 @@ export default function UserFormPage() {
     e.preventDefault();
     setSaving(true);
     setError("");
+    setSaved(false);
     setFieldErrors({});
     try {
       const payload = { ...form };
@@ -46,13 +49,14 @@ export default function UserFormPage() {
       } else {
         await updateUser(Number(id), payload);
         setPassword("");
+        setSaved(true);
       }
     } catch (err) {
-      if (err instanceof ApiError) {
+      if (err instanceof ApiError && err.status === 400) {
         setError(err.message);
         setFieldErrors(err.fields ?? {});
       } else {
-        setError("Saqlashda xatolik yuz berdi.");
+        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
       }
     } finally {
       setSaving(false);
@@ -73,7 +77,8 @@ export default function UserFormPage() {
         {isNew ? "Yangi foydalanuvchi" : "Foydalanuvchini tahrirlash"}
       </h1>
 
-      {error && <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {saved && <div role="status" className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
       {isSelf && <div className="mb-4 p-3 rounded-md bg-primary-50 border border-primary-200 text-sm text-primary-800">Bu — sizning o'z hisobingiz.</div>}
 
       <form onSubmit={onSubmit} className="space-y-4 bg-background-50 border border-background-200 rounded-lg p-5">

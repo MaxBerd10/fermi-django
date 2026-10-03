@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { me } from "@/api/auth";
-import { getAccessToken } from "@/api/client";
+import { AUTH_EXPIRED_EVENT, getAccessToken } from "@/api/client";
 import type { AuthUser } from "@/types/content";
 
 interface AdminAuthState {
@@ -38,6 +38,16 @@ export function AdminAuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     check();
+  }, []);
+
+  // Fired by the API client when a refresh fails for good (token expired or revoked).
+  useEffect(() => {
+    const onExpired = () => {
+      setUser(null);
+      setStatus("unauthed");
+    };
+    window.addEventListener(AUTH_EXPIRED_EVENT, onExpired);
+    return () => window.removeEventListener(AUTH_EXPIRED_EVENT, onExpired);
   }, []);
 
   return (

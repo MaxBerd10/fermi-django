@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import { mediaUrl, uploadMedia } from "@/api/admin";
 import MediaLibraryModal from "./MediaLibraryModal";
+import { adminErrorMessage } from "../hooks/useAdminList";
+
+const IMAGE_EXT = /\.(jpe?g|png|gif|webp|avif|svg)(\?.*)?$/i;
 
 interface MediaPickerProps {
   label: string;
@@ -23,8 +26,9 @@ export default function MediaPicker({ label, value, onChange }: MediaPickerProps
     try {
       const result = await uploadMedia(file);
       onChange(result.path);
-    } catch {
-      setError("Fayl yuklashda xatolik yuz berdi.");
+    } catch (err) {
+      // Show the server's own reason (wrong type, too large, ...) instead of a bare "error".
+      setError(adminErrorMessage(err, "Fayl yuklashda xatolik yuz berdi."));
     } finally {
       setUploading(false);
       if (inputRef.current) inputRef.current.value = "";
@@ -37,9 +41,21 @@ export default function MediaPicker({ label, value, onChange }: MediaPickerProps
     <div>
       <label className="block text-sm font-medium text-foreground-700 mb-1.5">{label}</label>
       <div className="flex items-center gap-3">
-        {previewUrl && (
-          <img src={previewUrl} alt="" className="w-16 h-16 object-cover rounded-md border border-background-300" />
-        )}
+        {previewUrl &&
+          (IMAGE_EXT.test(previewUrl) ? (
+            <img src={previewUrl} alt="" className="w-16 h-16 object-cover rounded-md border border-background-300" />
+          ) : (
+            // A PDF/Office file has no thumbnail -- an <img> of it was just a broken-image icon.
+            <a
+              href={previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 h-10 px-3 max-w-[16rem] rounded-md border border-background-300 bg-background-100 text-sm text-primary-700 hover:bg-primary-50"
+            >
+              <i className="ri-file-download-line" />
+              <span className="truncate">{decodeURIComponent(previewUrl.split("/").pop() ?? "Fayl")}</span>
+            </a>
+          ))}
         <button
           type="button"
           disabled={uploading}
