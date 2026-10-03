@@ -171,6 +171,13 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
     "EXCEPTION_HANDLER": "config.exception_handler.exception_handler",
+    # Same as DRF's defaults, with the JSON parser swapped for one that keeps every Uzbek field sent
+    # to /api/v1/admin/ in the Latin alphabet (see apps/admin_api/uz_script.py).
+    "DEFAULT_PARSER_CLASSES": [
+        "apps.admin_api.uz_script.UzbekLatinJSONParser",
+        "rest_framework.parsers.FormParser",
+        "rest_framework.parsers.MultiPartParser",
+    ],
     # Login/register brute-force protection lives here, in code, rather than in
     # nginx — the exact gap the old site had until today, and the fix stays in
     # sync with the code by construction instead of risking the same "nginx has

@@ -21,6 +21,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .common import IsAdminStaff
+from .uz_script import to_latin
 
 _ENDPOINT = "https://translate.googleapis.com/translate_a/t"
 _LANGS = {"uz", "ru", "en"}
@@ -94,6 +95,9 @@ class TranslateView(APIView):
 
         keys = list(texts.keys())
         values = [texts[key] for key in keys]
+        if source == "uz":
+            # Cyrillic Uzbek translates badly -- send the Latin form (the site's canonical script).
+            values = [to_latin(value) for value in values]
         output = []
         try:
             for target in targets:

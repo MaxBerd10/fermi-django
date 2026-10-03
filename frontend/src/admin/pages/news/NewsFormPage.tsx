@@ -218,6 +218,11 @@ export default function NewsFormPage() {
                 <span className="text-xs text-foreground-500">Bo'sh qolsa, saqlashda UZ dan avtomatik tarjima qilinadi</span>
               )}
             </div>
+            {lang === "uz" && (
+              <p className="text-xs text-foreground-500">
+                O'zbekcha matn lotin alifbosida bo'lishi kerak. Kirill harfida yozilsa, saqlashda avtomatik lotinga o'giriladi.
+              </p>
+            )}
             <div>
               <label className="block text-sm font-medium text-foreground-700 mb-1.5">
                 Sarlavha {lang === "uz" && "*"}
