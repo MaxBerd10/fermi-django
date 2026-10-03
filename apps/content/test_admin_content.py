@@ -226,3 +226,49 @@ def test_images_with_cyrillic_spaces_or_percent_in_the_file_name_survive_a_save(
     write_blocks_from_html(page, _html(page))
 
     assert _snapshot(page) == before
+
+
+def test_a_one_character_block_in_one_language_does_not_shift_the_others(page):
+    """extract() drops one-character paragraphs. Legacy news-163 had a lone 'O' in ru only, so
+    on save every later ru block slid one position out of line with Uzbek."""
+    _add(page, 1, "paragraph", {"uz": {"text": "FARMONI"}, "ru": {"text": "О"}, "en": {"text": "DECREE"}})
+    _add(page, 2, "paragraph", {"uz": {"text": "2022-2026 yillarga"}, "ru": {"text": "СТРАТЕГИИ"}, "en": {"text": "STRATEGY"}})
+    _add(page, 3, "paragraph", _same({"text": "Oxirgi"}))
+    before = _snapshot(page)
+
+    write_blocks_from_html(page, _html(page))
+
+    assert _snapshot(page) == before
+
+
+def test_an_edit_next_to_a_protected_block_still_lands_on_the_right_block(page):
+    _add(page, 1, "paragraph", {"uz": {"text": "A"}, "ru": {"text": "О"}, "en": {"text": "A"}})
+    _add(page, 2, "paragraph", _same({"text": "Ikkinchi"}))
+    html = {lang: text.replace("Ikkinchi", "Ikkinchi tuzatildi") for lang, text in _html(page).items()}
+
+    write_blocks_from_html(page, html)
+
+    first, second = ContentBlock.objects.filter(page=page).order_by("order")
+    assert first.data["ru"] == {"text": "О"}
+    assert second.data["uz"]["text"] == "Ikkinchi tuzatildi"
+
+
+def test_a_zero_width_space_bold_paragraph_is_kept_not_dropped(page):
+    _add(page, 1, "paragraph", _same({"text": "Matn"}))
+    _add(page, 2, "paragraph", _same({"text": "​", "bold": True}))
+    before = _snapshot(page)
+
+    write_blocks_from_html(page, _html(page))
+
+    assert _snapshot(page) == before
+
+
+def test_an_image_block_whose_file_row_is_gone_is_kept(page):
+    _add(page, 1, "paragraph", _same({"text": "Oldin"}))
+    _add(page, 2, "image", _same({"image_id": 987654, "alt": ""}))
+    _add(page, 3, "paragraph", _same({"text": "Keyin"}))
+    before = _snapshot(page)
+
+    write_blocks_from_html(page, _html(page))
+
+    assert _snapshot(page) == before

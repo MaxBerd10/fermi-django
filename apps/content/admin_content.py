@@ -29,6 +29,15 @@ is a table block" or "this paragraph is bold":
    unchanged keeps its row and every attribute; an edited block carries its
    hidden attributes over from the block it replaced.
 
+3. A text block that would not survive its own round trip -- extract() drops a
+   one-character or zero-width-space paragraph and normalises whitespace, so
+   re-parsing it yields nothing or different text -- is treated like the
+   un-expressible types: it travels as a placeholder in every language and is
+   never rewritten. Without this, such a block vanishing from ONE language's
+   HTML shifted every later block of that language one position out of line
+   with Uzbek (positional pairing, see _positional_pairs) -- found by a
+   read-only production dry run on a legacy decree page.
+
 Round trip, not lossless in the byte sense: whitespace and attribute order may
 differ from what a human originally typed -- expected and harmless, same as any
 WYSIWYG editor. test_admin_content.py pins the property that matters: saving
@@ -93,9 +102,52 @@ def _placeholder_label(block: ContentBlock, payload: dict) -> str:
         return f"Rasmlar galereyasi ({len(payload.get('items') or [])} ta) — tahrirlanmaydi"
     if kind == "video":
         return "Video — tahrirlanmaydi"
+    if kind in ("heading", "paragraph", "list"):
+        raw = payload.get("text") or " ".join(payload.get("items") or [])
+        snippet = re.sub(r"[\s\u200b]+", " ", str(raw)).strip()[:40]
+        return f"Matn: {snippet} — tahrirlanmaydi" if snippet else "Bo\u02bbsh qator — tahrirlanmaydi"
+    if kind == "image":
+        return "Rasm (fayl topilmadi) — tahrirlanmaydi"
     if kind == "staff_card":
         return f"Xodim: {payload.get('full_name') or ''} — tahrirlanmaydi".replace("  ", " ")
     return "Maxsus (eski sayt) blok — tahrirlanmaydi"
+
+
+def _text_fragment(block_type: str, payload: dict) -> str | None:
+    """The editor HTML for one heading/paragraph/list payload (None for any other type)."""
+    if block_type == "heading":
+        tag = "h3" if payload.get("level") == 3 else "h2"
+        return f"<{tag}>{_esc(payload.get('text'))}</{tag}>"
+    if block_type == "paragraph":
+        # Never <strong> for a bold paragraph: extract() reads a fully-bold <p> as a
+        # heading, so that would silently change the block's type. Its `bold` flag is
+        # carried over by the reconciliation in write_blocks_from_html instead.
+        return f"<p>{_esc(payload.get('text'))}</p>"
+    if block_type == "list":
+        return "<ul>" + "".join(f"<li>{_esc(item)}</li>" for item in payload.get("items", [])) + "</ul>"
+    return None
+
+
+def _survives_round_trip(block_type: str, payload: dict) -> bool:
+    fragment = _text_fragment(block_type, payload)
+    extracted = extract(fragment).blocks if fragment else []
+    if len(extracted) != 1 or extracted[0].block_type != block_type:
+        return False
+    return all(extracted[0].payload.get(field) == payload.get(field) for field in _VISIBLE_FIELDS[block_type])
+
+
+def _is_protected(block: ContentBlock) -> bool:
+    """True when the editor must carry this block as an untouchable placeholder: a type it
+    cannot express, a text block that would not survive its own round trip in every
+    language, or an image whose file row is gone (no <img> can be written for it)."""
+    kind = block.block_type
+    if kind in PRESERVED_TYPES:
+        return True
+    if kind == "image":
+        return not Image.objects.filter(pk=(block.data.get("uz") or {}).get("image_id")).exists()
+    if kind in _VISIBLE_FIELDS:
+        return not all(_survives_round_trip(kind, block.data.get(lang) or {}) for lang in LANGS)
+    return True
 
 
 def blocks_to_html(page: Page | None, lang: str, request=None, skip_types=()) -> str:
@@ -117,28 +169,16 @@ def blocks_to_html(page: Page | None, lang: str, request=None, skip_types=()) ->
         kind = block.block_type
         if kind in skip_types:
             continue
-        if kind == "heading":
-            tag = "h3" if payload.get("level") == 3 else "h2"
-            parts.append(f"<{tag}>{_esc(payload.get('text'))}</{tag}>")
-        elif kind == "paragraph":
-            # Never <strong> for a bold paragraph: extract() reads a fully-bold <p>
-            # as a heading, so that would silently change the block's type. Its
-            # `bold` flag is carried over by the reconciliation in
-            # write_blocks_from_html instead.
-            parts.append(f"<p>{_esc(payload.get('text'))}</p>")
-        elif kind == "list":
-            items = "".join(f"<li>{_esc(item)}</li>" for item in payload.get("items", []))
-            parts.append(f"<ul>{items}</ul>")
-        elif kind == "image":
-            image_id = payload.get("image_id")
-            image = Image.objects.filter(pk=image_id).first() if image_id else None
-            if image:
-                parts.append(f'<p><img src="{_attr(absolute(image.file.url))}" alt="{_attr(payload.get("alt", ""))}" /></p>')
-        elif kind in PRESERVED_TYPES:
+        if _is_protected(block):
             parts.append(
                 f'<div data-preserved-block="{block.id}" data-block-type="{kind}" class="preserved-block">'
-                f"{_esc(_placeholder_label(block, payload))}</div>"
+                f"{_esc(_placeholder_label(block, block.data.get('uz') or payload))}</div>"
             )
+        elif kind == "image":
+            image = Image.objects.filter(pk=payload.get("image_id")).first()
+            parts.append(f'<p><img src="{_attr(absolute(image.file.url))}" alt="{_attr(payload.get("alt", ""))}" /></p>')
+        else:
+            parts.append(_text_fragment(kind, payload))
     return "\n".join(parts)
 
 
@@ -248,7 +288,8 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str]) -> None:
 
     existing = list(ContentBlock.objects.filter(page=page).order_by("order"))
     by_id = {block.id: block for block in existing}
-    kept_ids = [i for i in placeholder_ids if i in by_id and by_id[i].block_type in PRESERVED_TYPES]
+    protected_ids = {block.id for block in existing if _is_protected(block)}
+    kept_ids = [i for i in placeholder_ids if i in protected_ids]
 
     # uz is the structural authority (its placeholders say what stays and where);
     # ru/en are just their text, so their placeholders are stripped before parsing.
@@ -289,7 +330,7 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str]) -> None:
         slot_layout.append(("keep", block_id))
 
     # Reconcile new text blocks against the page's existing text blocks.
-    olds = [b for b in existing if b.block_type not in PRESERVED_TYPES]
+    olds = [b for b in existing if b.id not in protected_ids]
     matcher = difflib.SequenceMatcher(
         a=[_block_key(b.block_type, b.data) for b in olds],
         b=[_block_key(t, d) for t, d in new_slots],
