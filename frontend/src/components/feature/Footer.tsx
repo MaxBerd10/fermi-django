@@ -5,6 +5,7 @@ import { LEADER_SECTION_MENU_ID } from "@/lib/leaderSection";
 import { useApi } from "../../hooks/useApi";
 import { getSettings } from "../../api/settings";
 import { optimizedImageUrl } from "@/lib/imageProxy";
+import { resolveSocialPlatform, SOCIAL_PLATFORM_ICON } from "@/lib/socialPlatform";
 import BrandMark from "../shared/BrandMark";
 import WwwUzCounter from "../shared/WwwUzCounter";
 
@@ -17,14 +18,6 @@ const YELLOW = "#ffd600";
 const FALLBACK_ADDRESS = "Fargʻona sh., Yangi Turon, 2-a uy";
 const FALLBACK_PHONE = "+998 95 062-23-45, +998 95 063-23-45";
 const FALLBACK_EMAIL = "info@fjsti.uz, fmioz@mail.ru";
-
-const SOCIAL_ICON_MAP: Record<string, string> = {
-  facebook: "ri-facebook-fill",
-  twitter: "ri-twitter-x-line",
-  youtube: "ri-youtube-fill",
-  telegram: "ri-telegram-fill",
-  instagram: "ri-instagram-line",
-};
 
 const FOOTER_SERVICES = [
   { labelKey: "quickServices.item1.title", href: "/virtual-reception/17", icon: "ri-customer-service-2-line" },
@@ -64,6 +57,11 @@ const PORTALS = [
   { key: "footer.hukumatPortali", href: "https://gov.uz" },
   { key: "footer.vazirlik", href: "https://ssv.uz" },
 ] as const;
+
+function socialIconClass(network: { icon: string; title: string; url: string }): string {
+  const platform = resolveSocialPlatform(network);
+  return platform ? SOCIAL_PLATFORM_ICON[platform] : "ri-links-line";
+}
 
 function firstTel(phone: string) {
   return phone.split(/[,\s]/)[0] || phone;
@@ -176,7 +174,7 @@ export default function Footer() {
                     className="w-8 h-8 rounded-lg border border-white/20 bg-white/5 hover:border-[#ffd600] hover:bg-[#ffd600] hover:text-[#0a1158] flex items-center justify-center transition-all cursor-pointer"
                     aria-label={s.title}
                   >
-                    <i className={`${SOCIAL_ICON_MAP[s.icon] ?? "ri-links-line"} text-sm`} />
+                    <i className={`${socialIconClass(s)} text-sm`} />
                   </a>
                 ))}
               </div>

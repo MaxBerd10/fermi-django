@@ -9,13 +9,14 @@ import PageHeader from "@/components/shared/PageHeader";
 import { Reveal } from "@/components/Animation";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { MAP_EMBED_URL } from "@/lib/siteConstants";
+import { resolveSocialPlatform, SOCIAL_PLATFORM_ICON, type SocialPlatform } from "@/lib/socialPlatform";
 
-const SOCIAL_ICON_MAP: Record<string, { icon: string; color: string }> = {
-  facebook: { icon: "ri-facebook-fill", color: "bg-blue-50 text-blue-600 hover:bg-blue-100" },
-  twitter: { icon: "ri-twitter-x-line", color: "bg-gray-100 text-gray-700 hover:bg-gray-200" },
-  youtube: { icon: "ri-youtube-fill", color: "bg-red-50 text-red-600 hover:bg-red-100" },
-  telegram: { icon: "ri-telegram-fill", color: "bg-sky-50 text-sky-600 hover:bg-sky-100" },
-  instagram: { icon: "ri-instagram-line", color: "bg-pink-50 text-pink-600 hover:bg-pink-100" },
+const SOCIAL_COLOR: Record<SocialPlatform, string> = {
+  facebook: "bg-blue-50 text-blue-600 hover:bg-blue-100",
+  twitter: "bg-gray-100 text-gray-700 hover:bg-gray-200",
+  youtube: "bg-red-50 text-red-600 hover:bg-red-100",
+  telegram: "bg-sky-50 text-sky-600 hover:bg-sky-100",
+  instagram: "bg-pink-50 text-pink-600 hover:bg-pink-100",
 };
 
 export default function AloqaPage() {
@@ -157,7 +158,10 @@ export default function AloqaPage() {
                   <h3 className="font-heading font-semibold text-foreground-900 mb-3 text-sm">{t("aloqa.socialNetworks")}</h3>
                   <div className="flex flex-wrap gap-2">
                     {settings.networks.map((s) => {
-                      const meta = SOCIAL_ICON_MAP[s.icon] || { icon: "ri-links-line", color: "bg-background-100 text-foreground-700" };
+                      const platform = resolveSocialPlatform(s);
+                      const meta = platform
+                        ? { icon: SOCIAL_PLATFORM_ICON[platform], color: SOCIAL_COLOR[platform] }
+                        : { icon: "ri-links-line", color: "bg-background-100 text-foreground-700" };
                       return (
                         <a key={s.title} href={s.url} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-2.5 py-1.5 rounded-xl text-sm font-medium cursor-pointer transition-colors ${meta.color}`}>
                           <i className={`${meta.icon} w-4 h-4 flex items-center justify-center`} />
