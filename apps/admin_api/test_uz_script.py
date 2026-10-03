@@ -85,3 +85,23 @@ def test_public_endpoints_are_not_rewritten(client, db):
     """Only /api/v1/admin/ is touched -- a public form field that happens to end in _uz is not."""
     res = client.post("/api/v1/auth/login", {"username": "админ", "password": "x"}, content_type="application/json")
     assert res.status_code == 401
+
+
+def test_uzbek_only_cyrillic_letter_inside_a_latin_word_becomes_latin():
+    assert to_latin("ja\u04b3onda") == "jahonda"
+    assert to_latin("\u0425orijiy fuqarolar") == "Xorijiy fuqarolar"
+
+
+def test_repair_classifies_each_stored_text():
+    from apps.admin_api.uz_script import repair
+    assert repair("Qabul") == ("Qabul", "clean")
+    assert repair("\u040e\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u043e\u043d") == ("O\u02bbzbekiston", "uzbek")
+    assert repair("\u041alinik ordinatura qabul-2022") == ("Klinik ordinatura qabul-2022", "mixed")
+    assert repair("Kitobdan yaxshi do`st yo`q ja\u04b3onda,") == ("Kitobdan yaxshi do`st yo`q jahonda,", "mixed")
+    # Russian prose in an uz slot (no Uzbek-only letters) is left for a human, never "translated" to Latin
+    russian = "\u0412\u043e\u0437\u043d\u0430\u0433\u0440\u0430\u0436\u0434\u0435\u043d\u0438\u0435 \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432"
+    assert repair(russian) == (russian, "leave")
+
+
+def test_a_cyrillic_letter_glued_to_a_latin_word_by_an_apostrophe_is_fixed():
+    assert to_latin("о‘tkazildi") == "o‘tkazildi"

@@ -33,7 +33,8 @@ _HOMOGLYPHS = {
 }
 _CYRILLIC_RE = re.compile("[Ѐ-ӿ]")
 _LATIN_RE = re.compile("[A-Za-z]")
-_WORD_RE = re.compile(r"[A-Za-zЀ-ӿʻʼ]+")
+# apostrophe-like marks count as part of a word, so "о‘tkazildi" (Cyrillic о, Latin rest) is one mixed word
+_WORD_RE = re.compile(r"[A-Za-zЀ-ӿʻʼ‘’'`]+")
 _TAG_SPLIT_RE = re.compile(r"(<[^>]*>)")
 
 
@@ -65,7 +66,11 @@ def _convert_word(word: str) -> str:
     if not has_cyrillic(word):
         return word
     if _LATIN_RE.search(word):
-        return "".join(_HOMOGLYPHS.get(ch, ch) for ch in word)
+        # A Latin word with a Cyrillic slip: look-alikes become the Latin letter, the Uzbek-only
+        # ones (ҳ қ ғ ў) become their Latin spelling.
+        return "".join(
+            _HOMOGLYPHS.get(ch) or (_convert_letter(ch, "", "") if has_cyrillic(ch) else ch) for ch in word
+        )
     out = []
     for i, ch in enumerate(word):
         prev = word[i - 1] if i else ""
@@ -87,6 +92,44 @@ def to_latin(text: str) -> str:
     if "<" not in text:
         return _plain_to_latin(text)
     return "".join(part if part.startswith("<") else _plain_to_latin(part) for part in _TAG_SPLIT_RE.split(text))
+
+
+_UZBEK_ONLY_LETTERS = set("\u045e\u049b\u0493\u04b3\u040e\u049a\u0492\u04b2")  # ў қ ғ ҳ and capitals
+
+
+def _fix_mixed_plain(text: str) -> str:
+    def fix(match):
+        word = match.group(0)
+        return _convert_word(word) if (_LATIN_RE.search(word) and has_cyrillic(word)) else word
+    return _WORD_RE.sub(fix, text)
+
+
+def fix_mixed_script_words(text: str) -> str:
+    """Only repairs words that mix both alphabets ("Xorijiy" typed with a Cyrillic Х); a purely
+    Cyrillic word -- possibly Russian prose that belongs where it is -- is left alone."""
+    if not isinstance(text, str) or not has_cyrillic(text):
+        return text
+    if "<" not in text:
+        return _fix_mixed_plain(text)
+    return "".join(part if part.startswith("<") else _fix_mixed_plain(part) for part in _TAG_SPLIT_RE.split(text))
+
+
+def repair(text: str) -> tuple[str, str]:
+    """For text ALREADY stored in an Uzbek slot. Returns (new_text, kind):
+    "uzbek"   -- Cyrillic Uzbek (has ў қ ғ ҳ, mostly Cyrillic): fully converted to Latin
+    "mixed"   -- Latin text with Cyrillic slips inside words: just those words repaired
+    "leave"   -- still Cyrillic (Russian prose, or Uzbek too short to tell): untouched, for a human
+    "clean"   -- nothing to do"""
+    if not isinstance(text, str) or not has_cyrillic(text):
+        return text, "clean"
+    letters = [ch for ch in text if ch.isalpha()]
+    cyrillic = sum(1 for ch in letters if has_cyrillic(ch))
+    if _UZBEK_ONLY_LETTERS & set(text) and cyrillic * 2 >= len(letters):
+        return to_latin(text), "uzbek"
+    fixed = fix_mixed_script_words(text)
+    if has_cyrillic(fixed):
+        return fixed, ("mixed" if fixed != text else "leave")
+    return fixed, "mixed"
 
 
 def latinize_payload(value, in_uz: bool = False):
