@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from apps.site_settings.models import SiteCounter, SiteLogo, SiteSetting, SocialNetwork, UsefulSite
 
-from .common import AdminPagination, IsAdminStaff, SingletonAdminViewSet, resolve_or_create_image
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, SingletonAdminViewSet, resolve_or_create_image
 
 
 class AdminSettingSerializer(serializers.ModelSerializer):
@@ -83,7 +83,8 @@ class AdminNetworkSerializer(serializers.ModelSerializer):
         return 1
 
 
-class AdminNetworkViewSet(viewsets.ModelViewSet):
+class AdminNetworkViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title', 'url')
     queryset = SocialNetwork.objects.order_by("order", "id")
     serializer_class = AdminNetworkSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -126,7 +127,8 @@ class AdminUsefulSiteSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminUsefulSiteViewSet(viewsets.ModelViewSet):
+class AdminUsefulSiteViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'url')
     queryset = UsefulSite.objects.select_related("image").order_by("order", "id")
     serializer_class = AdminUsefulSiteSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

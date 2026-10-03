@@ -23,7 +23,7 @@ from rest_framework.response import Response
 from apps.departments.models import Department, StaffMember
 from apps.faculties.models import Faculty
 
-from .common import AdminPagination, IsAdminStaff, resolve_or_create_image
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, resolve_or_create_image
 
 _ROLE_REKTOR = 1
 _ROLE_PROREKTOR = 2
@@ -162,9 +162,17 @@ class AdminLeaderSerializer(serializers.ModelSerializer):
         instance.bio_uz = data.get("biography_uz", instance.bio_uz or "")
         instance.bio_ru = data.get("biography_ru", instance.bio_ru or "")
         instance.bio_en = data.get("biography_en", instance.bio_en or "")
-        category_id = data.get("category_id")
-        if category_id is not None:
-            _apply_category_id(instance, int(category_id))
+        # The form's category <select> posts "" while nothing is picked, and an
+        # id is always a string over multipart-ish form state -- int("") used to
+        # raise a bare ValueError here (an opaque 500) instead of a message.
+        raw_category = data.get("category_id")
+        if raw_category not in (None, ""):
+            try:
+                _apply_category_id(instance, int(raw_category))
+            except (TypeError, ValueError):
+                raise serializers.ValidationError({"category_id": ["Toifa notoʻgʻri."]})
+        if not (instance.institute_role or instance.faculty_id or instance.department_id):
+            raise serializers.ValidationError({"category_id": ["Toifani tanlang."]})
         image = resolve_or_create_image(data.get("rasm"))
         if image is not None:
             instance.photo = image
@@ -173,7 +181,8 @@ class AdminLeaderSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminLeaderViewSet(viewsets.ModelViewSet):
+class AdminLeaderViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('full_name_uz', 'full_name_ru', 'full_name_en', 'title_uz', 'email', 'phone')
     queryset = StaffMember.objects.select_related("photo", "department", "faculty").order_by("order", "id")
     serializer_class = AdminLeaderSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

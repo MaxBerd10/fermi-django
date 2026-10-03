@@ -1,3 +1,5 @@
+import uuid
+
 from rest_framework import status
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.exceptions import ValidationError
@@ -33,6 +35,14 @@ def validate_visitor_upload(upload):
         raise ValidationError({"file": "Fayl hajmi 10 MB dan oshmasligi kerak."})
 
 
+def _private_upload_name(filename: str) -> str:
+    """A visitor's attachment (CV, passport scan, ...) is served from the same
+    public /media/ origin as site documents, so its URL is its only protection.
+    A random directory makes that URL unguessable -- without it the path was just
+    uploads/documents/<year>/<month>/<original filename>, trivially enumerable."""
+    return f"{uuid.uuid4().hex}/{filename}"
+
+
 class ContactFormView(APIView):
     permission_classes = [AllowAny]
     throttle_classes = [ScopedRateThrottle]
@@ -66,13 +76,17 @@ class ContestFormView(APIView):
     def post(self, request):
         serializer = ContestSubmissionSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        instance = serializer.save()
-
+        # Validate the attachment BEFORE anything is saved -- a rejected file
+        # used to leave the submission row behind (minus its file) while the
+        # visitor saw an error, so their retry then created a duplicate.
         upload = request.FILES.get("file")
         if upload:
             validate_visitor_upload(upload)
+        instance = serializer.save()
+
+        if upload:
             document = Document(title=upload.name)
-            document.file.save(upload.name, upload, save=False)
+            document.file.save(_private_upload_name(upload.name), upload, save=False)
             document.save()
             instance.file = document
             instance.save(update_fields=["file"])
@@ -89,17 +103,19 @@ class VirtualReceptionFormView(APIView):
     def post(self, request):
         serializer = VirtualSubmissionSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        instance = serializer.save()
-
+        # Validated before saving -- see ContestFormView.
         upload = request.FILES.get("file")
         if upload:
             validate_visitor_upload(upload)
+        instance = serializer.save()
+
+        if upload:
             # Whatever the visitor attaches (a scanned document, a photo of
             # a passport page, ...) is restricted above rather than through
             # Document's pdf/xlsx-only validator, which is scoped to files
             # the SITE itself publishes.
             document = Document(title=upload.name)
-            document.file.save(upload.name, upload, save=False)
+            document.file.save(_private_upload_name(upload.name), upload, save=False)
             document.save()
             instance.file = document
             instance.save(update_fields=["file"])

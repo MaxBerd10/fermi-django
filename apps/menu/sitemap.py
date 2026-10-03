@@ -28,11 +28,11 @@ def _menu_item_urls():
 
 
 def _news_detail_entries():
-    # The only content type genuinely absent from the menu tree: each
-    # article's own detail page. `published_at` is a required field (every
-    # row is "published" -- see NewsPost's own fields), so no draft filter
-    # is needed, and it doubles as a real, meaningful <lastmod>.
-    for slug, published_at in NewsPost.objects.values_list("slug", "published_at"):
+    # The only content type genuinely absent from the menu tree: each article's
+    # own detail page. Only published posts -- not drafts, not future-dated ones
+    # (see NewsPost.objects.published()). `published_at` doubles as a real,
+    # meaningful <lastmod>.
+    for slug, published_at in NewsPost.objects.published().values_list("slug", "published_at"):
         yield f"/detail/{slug}?menuId={NEWS_DETAIL_MENU_ID}", published_at
 
 

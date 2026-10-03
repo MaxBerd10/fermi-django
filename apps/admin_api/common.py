@@ -5,6 +5,7 @@ view here has to satisfy (list/get/create/update/delete against
 from urllib.parse import unquote, urlparse
 
 from django.conf import settings
+from django.db.models import Q
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import BasePermission
 
@@ -16,6 +17,25 @@ class AdminPagination(PageNumberPagination):
     page_size = 20
     page_size_query_param = "pageSize"
     max_page_size = 200
+
+
+class AdminSearchMixin:
+    """The admin list pages' "Qidirish" box sends ?search=<text>; without this,
+    every resource but users silently ignored it and returned the whole list --
+    so finding one news post among hundreds meant paging through all of them.
+    Case-insensitive substring match over `search_fields`, any one hit suffices."""
+
+    search_fields: tuple[str, ...] = ()
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        term = (self.request.query_params.get("search") or "").strip()
+        if term and self.search_fields:
+            condition = Q()
+            for field in self.search_fields:
+                condition |= Q(**{f"{field}__icontains": term})
+            queryset = queryset.filter(condition)
+        return queryset
 
 
 class IsAdminStaff(BasePermission):

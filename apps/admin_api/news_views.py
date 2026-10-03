@@ -2,14 +2,15 @@
 and admin/types.ts::AdminPost/AdminPostcategory for the exact contract.
 
 A few AdminPost fields have no real backing model yet and are accepted but
-inert here rather than faking persistence: `status` (no draft/published
-concept on NewsPost -- every post is always live), `seen` (no view
-counter), `meta_key`, and the per-language `file`/`file_en`/`file_ru`
-attachments. Each always reads back as its "nothing happened" value (1, 0,
-None) regardless of what was last written. Real support for any of these
+inert here rather than faking persistence: `meta_key` and the per-language
+`file`/`file_en`/`file_ru` attachments. Each always reads back as None
+regardless of what was last written. (`status` and `date` are real: draft/
+published and the publication date -- see NewsPost.is_published/published_at.) Real support for any of these
 is a model change, not an API-layer one -- left for when it's actually
 wanted rather than guessed at now.
 """
+from django.db import transaction
+from django.utils.dateparse import parse_datetime
 from django.utils.text import slugify
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
@@ -19,7 +20,7 @@ from apps.content.models import ContentBlock, Page
 from apps.media_lib.models import Image
 from apps.news.models import NewsCategory, NewsPost
 
-from .common import AdminPagination, IsAdminStaff, OwnedPageCleanupMixin, resolve_or_create_image
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, OwnedPageCleanupMixin, resolve_or_create_image
 
 
 class AdminPostcategorySerializer(serializers.ModelSerializer):
@@ -36,7 +37,8 @@ class AdminPostcategorySerializer(serializers.ModelSerializer):
         return 1
 
 
-class AdminPostcategoryViewSet(viewsets.ModelViewSet):
+class AdminPostcategoryViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('name_uz', 'name_ru', 'name_en', 'slug')
     queryset = NewsCategory.objects.all().order_by("name_uz")
     serializer_class = AdminPostcategorySerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -73,7 +75,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
 
     def _content(self, obj, lang):
         request = self.context.get("request")
-        return blocks_to_html(obj.page, lang, request=request)
+        return blocks_to_html(obj.page, lang, request=request, skip_types=("gallery",))
 
     def get_content_uz(self, obj):
         return self._content(obj, "uz")
@@ -88,10 +90,10 @@ class AdminPostSerializer(serializers.ModelSerializer):
         return obj.published_at.isoformat() if obj.published_at else None
 
     def get_seen(self, obj):
-        return 0
+        return obj.view_count
 
     def get_status(self, obj):
-        return 1
+        return 1 if obj.is_published else 0
 
     def get_img(self, obj):
         if not obj.cover:
@@ -133,6 +135,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         return self._save(instance, validated_data)
 
+    @transaction.atomic
     def _save(self, instance, validated_data):
         request = self.context["request"]
         data = request.data
@@ -141,7 +144,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
         instance.title_ru = data.get("title_ru", instance.title_ru or "") or instance.title_uz
         instance.title_en = data.get("title_en", instance.title_en or "") or instance.title_uz
 
-        slug = (data.get("slug") or "").strip() or slugify(instance.title_uz, allow_unicode=False)
+        slug = _unique_slug((data.get("slug") or "").strip() or slugify(instance.title_uz, allow_unicode=False), instance)
         instance.slug = slug
 
         excerpt_source = data.get("content_uz") or ""
@@ -155,14 +158,33 @@ class AdminPostSerializer(serializers.ModelSerializer):
         instance.excerpt_en = strip_tags(data.get("content_en") or "").strip()[:500] or instance.excerpt_uz
 
         category_id = data.get("category_id")
-        instance.category_id = category_id or None
+        if category_id in (None, "", 0, "0"):
+            instance.category_id = None
+        elif NewsCategory.objects.filter(pk=category_id).exists():
+            instance.category_id = int(category_id)
+        else:
+            raise serializers.ValidationError({"category_id": ["Bunday kategoriya mavjud emas."]})
 
         image = resolve_or_create_image(data.get("img"))
         instance.cover = image
 
-        if not instance.published_at:
-            from django.utils import timezone
+        from django.utils import timezone
+        raw_date = data.get("date")
+        if raw_date:
+            # Lets an editor back-date (or schedule) a post -- e.g. publishing
+            # yesterday's event report under yesterday's date. A naive value from
+            # the form's datetime-local input is read in the site's own timezone.
+            parsed = parse_datetime(str(raw_date))
+            if parsed is None:
+                raise serializers.ValidationError({"date": ["Sana notoʻgʻri formatda."]})
+            instance.published_at = timezone.make_aware(parsed) if timezone.is_naive(parsed) else parsed
+        elif not instance.published_at:
             instance.published_at = timezone.now()
+
+        # status 1 = published, 0 = draft (hidden from the public site); see NewsPost.is_published.
+        # A client that doesn't send it (e.g. a script) leaves the current value alone.
+        if data.get("status") not in (None, ""):
+            instance.is_published = str(data["status"]) != "0"
 
         if not instance.page_id:
             instance.page = Page.objects.create(slug=f"news-{slug}")
@@ -189,6 +211,21 @@ class AdminPostSerializer(serializers.ModelSerializer):
         return instance
 
 
+def _unique_slug(base: str, instance: NewsPost) -> str:
+    """Two posts with the same title (or a title that slugifies to nothing,
+    e.g. one typed entirely in Cyrillic) used to collide on the unique slug --
+    and on the Page slug derived from it -- as an unhandled IntegrityError.
+    Suffix -2, -3, ... instead; the post's own current slug always counts as free."""
+    base = base or "yangilik"
+    candidate, n = base, 2
+    taken = NewsPost.objects.exclude(pk=instance.pk) if instance.pk else NewsPost.objects.all()
+    pages = Page.objects.exclude(pk=instance.page_id) if instance.page_id else Page.objects.all()
+    while taken.filter(slug=candidate).exists() or pages.filter(slug=f"news-{candidate}").exists():
+        candidate = f"{base}-{n}"
+        n += 1
+    return candidate
+
+
 def _gallery_image_ids(page: Page) -> list[int]:
     block = page.blocks.filter(block_type=ContentBlock.BlockType.GALLERY).first()
     if not block:
@@ -212,7 +249,8 @@ def _append_gallery_block(page: Page, image_ids: list[int]) -> None:
     block.save()
 
 
-class AdminPostViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
+class AdminPostViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'slug')
     queryset = NewsPost.objects.select_related("cover", "page").order_by("-published_at")
     serializer_class = AdminPostSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

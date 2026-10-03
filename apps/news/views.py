@@ -16,7 +16,10 @@ class NewsPostViewSet(viewsets.ReadOnlyModelViewSet):
         return NewsPostDetailSerializer
 
     def get_queryset(self):
-        queryset = super().get_queryset()
+        # published() compares against "now", so it must run per request: calling it on the
+        # class-level queryset would freeze that moment at import time and hide every post
+        # published after the server started.
+        queryset = super().get_queryset().published()
         category_slug = self.request.query_params.get("category")
         if category_slug:
             queryset = queryset.filter(category__slug=category_slug)

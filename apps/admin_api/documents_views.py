@@ -12,7 +12,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from apps.documents.models import Document, DocumentItem
 
-from .common import AdminPagination, IsAdminStaff
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
 
 
 class AdminDocumentSerializer(serializers.ModelSerializer):
@@ -43,7 +43,8 @@ class AdminDocumentSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminDocumentViewSet(viewsets.ModelViewSet):
+class AdminDocumentViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'slug')
     queryset = Document.objects.order_by("title_uz")
     serializer_class = AdminDocumentSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -85,7 +86,8 @@ class AdminDocumentItemSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminDocumentItemViewSet(viewsets.ModelViewSet):
+class AdminDocumentItemViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'slug')
     queryset = DocumentItem.objects.select_related("document").order_by("order", "id")
     serializer_class = AdminDocumentItemSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

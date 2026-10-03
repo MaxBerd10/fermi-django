@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from apps.site_settings.models import HomeBanner
 
-from .common import AdminPagination, IsAdminStaff, resolve_or_create_image
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, resolve_or_create_image
 
 
 class AdminBannerSerializer(serializers.ModelSerializer):
@@ -43,7 +43,8 @@ class AdminBannerSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminBannerViewSet(viewsets.ModelViewSet):
+class AdminBannerViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en')
     queryset = HomeBanner.objects.select_related("image").order_by("order", "id")
     serializer_class = AdminBannerSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

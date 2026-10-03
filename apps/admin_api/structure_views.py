@@ -12,6 +12,7 @@ from apps.faculties.models import Faculty
 
 from .common import (
     AdminPagination,
+    AdminSearchMixin,
     IsAdminStaff,
     OwnedPageCleanupMixin,
     PageContentSerializerMixin,
@@ -63,7 +64,8 @@ class AdminFacultySerializer(PageContentSerializerMixin, serializers.ModelSerial
         return instance
 
 
-class AdminFacultyViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
+class AdminFacultyViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelViewSet):
+    search_fields = ('name_uz', 'name_ru', 'name_en', 'slug')
     queryset = Faculty.objects.select_related("logo", "page").order_by("order", "id")
     serializer_class = AdminFacultySerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -114,7 +116,8 @@ class AdminDepartmentSerializer(PageContentSerializerMixin, serializers.ModelSer
         return instance
 
 
-class AdminDepartmentViewSet(OwnedPageCleanupMixin, viewsets.ModelViewSet):
+class AdminDepartmentViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelViewSet):
+    search_fields = ('name_uz', 'name_ru', 'name_en', 'slug')
     queryset = Department.objects.select_related("logo", "page").order_by("name_uz")
     serializer_class = AdminDepartmentSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

@@ -9,7 +9,7 @@ from apps.media_lib.models import GalleryPhoto
 from apps.schedule.models import Course, ScheduleFile
 from apps.video.models import VideoClip
 
-from .common import AdminPagination, IsAdminStaff, resolve_or_create_document, resolve_or_create_image
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, resolve_or_create_document, resolve_or_create_image
 
 
 class AdminGalleryPhotoSerializer(serializers.ModelSerializer):
@@ -67,7 +67,8 @@ class AdminGalleryPhotoSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminGalleryPhotoViewSet(viewsets.ModelViewSet):
+class AdminGalleryPhotoViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('caption_uz', 'caption_ru', 'caption_en')
     queryset = GalleryPhoto.objects.select_related("image").order_by("-order", "-id")
     serializer_class = AdminGalleryPhotoSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -108,7 +109,8 @@ class AdminVideoClipSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminVideoClipViewSet(viewsets.ModelViewSet):
+class AdminVideoClipViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('youtube_id',)
     queryset = VideoClip.objects.order_by("-order", "-id")
     serializer_class = AdminVideoClipSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -144,7 +146,8 @@ class AdminCourseSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminCourseViewSet(viewsets.ModelViewSet):
+class AdminCourseViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en')
     queryset = Course.objects.order_by("order", "id")
     serializer_class = AdminCourseSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -191,7 +194,8 @@ class AdminScheduleFileSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminScheduleFileViewSet(viewsets.ModelViewSet):
+class AdminScheduleFileViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'course__title_uz')
     queryset = ScheduleFile.objects.select_related("course", "document").order_by("order", "id")
     serializer_class = AdminScheduleFileSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -209,7 +213,8 @@ class AdminConnectLeaderSerializer(serializers.ModelSerializer):
         return 1
 
 
-class AdminConnectLeaderViewSet(viewsets.ModelViewSet):
+class AdminConnectLeaderViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('name',)
     queryset = ConnectLeader.objects.order_by("order", "id")
     serializer_class = AdminConnectLeaderSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

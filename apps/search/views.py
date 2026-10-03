@@ -12,7 +12,7 @@ _MAX_RESULTS = 20
 
 
 def _matching_news_posts(q):
-    posts = NewsPost.objects.filter(
+    posts = NewsPost.objects.published().filter(
         Q(title_uz__icontains=q) | Q(title_ru__icontains=q) | Q(title_en__icontains=q)
         | Q(excerpt_uz__icontains=q) | Q(excerpt_ru__icontains=q) | Q(excerpt_en__icontains=q)
     ).order_by("-published_at")[:_MAX_RESULTS]

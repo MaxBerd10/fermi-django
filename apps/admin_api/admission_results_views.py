@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from apps.admission_results.models import ResultCategory, ResultFile, ResultsPage
 
-from .common import AdminPagination, IsAdminStaff, SingletonAdminViewSet, resolve_or_create_document
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, SingletonAdminViewSet, resolve_or_create_document
 
 
 class AdminResultCategorySerializer(serializers.ModelSerializer):
@@ -38,7 +38,8 @@ class AdminResultCategorySerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminResultCategoryViewSet(viewsets.ModelViewSet):
+class AdminResultCategoryViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en')
     queryset = ResultCategory.objects.order_by("order", "id")
     serializer_class = AdminResultCategorySerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
@@ -85,7 +86,8 @@ class AdminResultFileSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminResultFileViewSet(viewsets.ModelViewSet):
+class AdminResultFileViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'category__title_uz')
     queryset = ResultFile.objects.select_related("category", "document").order_by("order", "id")
     serializer_class = AdminResultFileSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]

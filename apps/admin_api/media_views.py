@@ -71,6 +71,16 @@ class MediaListView(APIView):
         })
 
 
+# What the admin's pickers actually offer (see MediaPicker/RichTextEditor `accept`). Anything
+# else -- html, svg, js -- would be served from the site's own /media/ origin, so an upload
+# endpoint with no allow-list is a stored-XSS foothold for whoever gets hold of an admin login.
+ALLOWED_UPLOAD_EXTENSIONS = frozenset({
+    ".jpg", ".jpeg", ".png", ".gif", ".webp",
+    ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx",
+})
+MAX_ADMIN_UPLOAD_BYTES = 25 * 1024 * 1024
+
+
 class MediaUploadView(APIView):
     permission_classes = [IsAuthenticated, IsAdminStaff]
     parser_classes = [MultiPartParser]
@@ -79,6 +89,14 @@ class MediaUploadView(APIView):
         upload = request.FILES.get("file")
         if not upload:
             return Response({"detail": "file talab qilinadi."}, status=400)
+        extension = os.path.splitext(upload.name)[1].lower()
+        if extension not in ALLOWED_UPLOAD_EXTENSIONS:
+            return Response(
+                {"detail": "Bu fayl turi qabul qilinmaydi. Ruxsat etilgan: rasm (JPG, PNG, GIF, WEBP), PDF, Word, Excel, PowerPoint."},
+                status=400,
+            )
+        if upload.size > MAX_ADMIN_UPLOAD_BYTES:
+            return Response({"detail": "Fayl hajmi 25 MB dan oshmasligi kerak."}, status=400)
         folder = request.data.get("path", "uploads/admin")
         content_type = mimetypes.guess_type(upload.name)[0] or "application/octet-stream"
         saved_path = default_storage.save(f"{folder.strip('/')}/{upload.name}", upload)

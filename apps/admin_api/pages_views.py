@@ -12,7 +12,7 @@ from rest_framework.permissions import IsAuthenticated
 from apps.content.admin_content import blocks_to_html, write_blocks_from_html
 from apps.content.models import Page
 
-from .common import AdminPagination, IsAdminStaff
+from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
 
 
 class AdminPageSerializer(serializers.ModelSerializer):
@@ -92,7 +92,8 @@ class AdminPageSerializer(serializers.ModelSerializer):
         return instance
 
 
-class AdminPageViewSet(viewsets.ModelViewSet):
+class AdminPageViewSet(AdminSearchMixin, viewsets.ModelViewSet):
+    search_fields = ('title_uz', 'title_ru', 'title_en', 'slug')
     # Page is shared infrastructure (a department's body, a faculty's,
     # a news post's, ... all point one at a page instead of storing raw
     # HTML themselves -- see Page's own docstring) -- "Sahifalar" in the
