@@ -62,18 +62,18 @@ export default function SearchPage() {
               className="flex items-center gap-3 mb-6"
             >
               <div className="relative flex-1">
-                <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center text-foreground-400" />
+                <i className="ri-search-line absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center text-xl text-foreground-400" aria-hidden="true" />
                 <input
                   type="search"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder={t("search.placeholder")}
-                  className="w-full h-12 !pl-11 !pr-4 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  className="w-full !h-14 !pl-14 !pr-3 sm:!pr-5 min-w-0 page-input !text-base focus:outline-none focus:border-primary-500 transition-colors duration-200"
                 />
               </div>
               <button
                 type="submit"
-                className="h-12 px-6 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer transition-colors duration-300"
+                className="h-14 px-5 sm:px-8 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer transition-colors duration-300"
               >
                 {t("nav.searchSubmit")}
               </button>
