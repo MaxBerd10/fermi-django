@@ -1,6 +1,6 @@
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
-import RichContent from "@/components/shared/RichContent";
+import RawHtmlBlock from "./RawHtmlBlock";
 import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
@@ -163,7 +163,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
 
     case "raw_html":
       return (
-        <RichContent
+        <RawHtmlBlock
           html={block.data.html}
           className={`cms-article--rich ${getCmsArticleModifier(block.data.slug)}`}
           slug={block.data.slug}

@@ -1,4 +1,15 @@
 import { useTranslation } from "react-i18next";
+import {
+  CARD_ACTIONS_CLASS,
+  CARD_CLASS,
+  CARD_ICON_CLASS,
+  CARD_MAIN_CLASS,
+  CARD_META_CLASS,
+  CARD_TITLE_CLASS,
+  fileIconClass,
+  PRIMARY_BUTTON_CLASS,
+  SECONDARY_BUTTON_CLASS,
+} from "./documentCardClasses";
 
 interface DocumentCardProps {
   url: string;
@@ -39,34 +50,22 @@ export default function DocumentCard({ url, title, filename, fileSize }: Documen
   const meta = [extension, fileSize > 0 ? formatFileSize(fileSize) : ""].filter(Boolean).join(" · ");
 
   return (
-    <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-primary-100 bg-primary-50/40 p-4 lg:flex-row lg:items-center lg:p-5">
-      <div className="flex min-w-0 flex-1 items-center gap-4">
-        <span
-          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0a1158] text-xl text-[#ffd600]"
-          aria-hidden="true"
-        >
-          <i className="ri-file-pdf-2-line" />
+    <div className={CARD_CLASS}>
+      <div className={CARD_MAIN_CLASS}>
+        <span className={CARD_ICON_CLASS} aria-hidden="true">
+          <i className={fileIconClass(extension)} />
         </span>
         <span className="min-w-0">
-          <span className="block font-heading text-base font-bold leading-snug text-primary-900">{title}</span>
-          <span className="mt-0.5 block text-sm text-foreground-600">{meta}</span>
+          <span className={CARD_TITLE_CLASS}>{title}</span>
+          <span className={CARD_META_CLASS}>{meta}</span>
         </span>
       </div>
-      <div className="flex flex-col gap-2.5 sm:flex-row">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cms-download-btn inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[#0a1158] px-5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#060a3d]"
-        >
+      <div className={CARD_ACTIONS_CLASS}>
+        <a href={url} target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
           <i className="ri-external-link-line" aria-hidden="true" />
           {t("document.open")}
         </a>
-        <a
-          href={url}
-          download
-          className="cms-download-btn inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-primary-200 bg-white px-5 text-sm font-semibold text-primary-900 transition-colors hover:border-[#0a1158]"
-        >
+        <a href={url} download target="_blank" rel="noopener noreferrer" className={SECONDARY_BUTTON_CLASS}>
           <i className="ri-download-2-line" aria-hidden="true" />
           {t("document.download")}
         </a>
