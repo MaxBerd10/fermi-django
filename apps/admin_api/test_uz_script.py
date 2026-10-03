@@ -105,3 +105,24 @@ def test_repair_classifies_each_stored_text():
 
 def test_a_cyrillic_letter_glued_to_a_latin_word_by_an_apostrophe_is_fixed():
     assert to_latin("о‘tkazildi") == "o‘tkazildi"
+
+
+@pytest.mark.parametrize("before, after", [
+    ("о&lsquo;quv jarayoni", "o&lsquo;quv jarayoni"),                       # Cyrillic о + HTML apostrophe entity
+    ("А.Sidikov, Yoshlar masalalari", "A.Sidikov, Yoshlar masalalari"),     # lone Cyrillic initial
+    ("и va geliokollektorlarni", "i va geliokollektorlarni"),               # stray Cyrillic и
+    ("<p>Қўшимча маълумот https://fjsti.uz</p>", "<p>Qoʻshimcha maʼlumot https://fjsti.uz</p>"),
+    ("ӱyicha chora-tadbirlar", "oʻyicha chora-tadbirlar"),
+])
+def test_repair_fixes_small_slips_inside_latin_text(before, after):
+    from apps.admin_api.uz_script import repair
+    assert repair(before)[0] == after
+
+
+def test_repair_keeps_russian_quotations_inside_latin_text():
+    from apps.admin_api.uz_script import repair
+    text = "«Заболеваемость мочекаменной болезнью» mavzusida maʼruza o‘qildi"
+    assert repair(text)[0] == text
+    # a lone Russian conjunction between two Russian words is not a stray letter
+    ru = "тесты и Sidikov"
+    assert repair(ru)[0] == ru

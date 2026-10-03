@@ -20,7 +20,7 @@ _MAP = {
     "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "ё": "yo", "ж": "j", "з": "z", "и": "i",
     "й": "y", "к": "k", "л": "l", "м": "m", "н": "n", "о": "o", "п": "p", "р": "r", "с": "s",
     "т": "t", "у": "u", "ф": "f", "х": "x", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "shch",
-    "ы": "i", "э": "e", "ю": "yu", "я": "ya", "ў": "oʻ", "қ": "q", "ғ": "gʻ", "ҳ": "h",
+    "ы": "i", "ӱ": "o\u02bb", "э": "e", "ю": "yu", "я": "ya", "ў": "oʻ", "қ": "q", "ғ": "gʻ", "ҳ": "h",
     "ъ": "ʼ", "ь": "",
 }
 # Cyrillic letters that look exactly like a Latin one: inside a word that is otherwise Latin they
@@ -94,14 +94,34 @@ def to_latin(text: str) -> str:
     return "".join(part if part.startswith("<") else _plain_to_latin(part) for part in _TAG_SPLIT_RE.split(text))
 
 
-_UZBEK_ONLY_LETTERS = set("\u045e\u049b\u0493\u04b3\u040e\u049a\u0492\u04b2")  # ў қ ғ ҳ and capitals
+_UZBEK_ONLY_LETTERS = set("\u045e\u049b\u0493\u04b3\u040e\u049a\u0492\u04b2\u04f1\u04f0")  # ў қ ғ ҳ and capitals
+
+
+# HTML spells the Uzbek apostrophe as an entity ("о&lsquo;quv"); inside an HTML segment that is still
+# part of the word, so the Cyrillic о is recognised as a slip in a Latin word.
+_ENTITY_APOS = r"&(?:lsquo|rsquo|apos|#39|#8216|#8217);"
+_MIXED_WORD_RE = re.compile(r"(?:[A-Za-z\u0400-\u04ff\u02bb\u02bc\u2018\u2019'`]|" + _ENTITY_APOS + r")+")
+# A single Cyrillic letter standing alone before a Latin word, e.g. the initial in "А.Sidikov" or a
+# stray "и va ...": nothing Cyrillic on either side, Latin right after.
+_LONE_LETTER_RE = re.compile(r"(?<![\u0400-\u04ff])(?<![\u0400-\u04ff]\s)(?<![\u0400-\u04ff]\.)([\u0400-\u04ff])(?=\.?\s*[A-Za-z])")
+# A run of Cyrillic words ("Қўшимча маълумот учун") with no Latin word inside it.
+_CYRILLIC_RUN_RE = re.compile(r"[\u0400-\u04ff][\u0400-\u04ff\s.,;:!?\u2018\u2019\u02bb\u02bc'`-]*[\u0400-\u04ff]|[\u0400-\u04ff]")
 
 
 def _fix_mixed_plain(text: str) -> str:
-    def fix(match):
+    def fix_word(match):
         word = match.group(0)
         return _convert_word(word) if (_LATIN_RE.search(word) and has_cyrillic(word)) else word
-    return _WORD_RE.sub(fix, text)
+
+    def fix_run(match):
+        run = match.group(0)
+        # Only a run that contains an Uzbek-only letter is certainly Uzbek; a Russian quotation
+        # (or a run too short to tell) stays as it is.
+        return to_latin(run) if _UZBEK_ONLY_LETTERS & set(run) else run
+
+    text = _MIXED_WORD_RE.sub(fix_word, text)
+    text = _LONE_LETTER_RE.sub(lambda m: _convert_letter(m.group(1), "", ""), text)
+    return _CYRILLIC_RUN_RE.sub(fix_run, text)
 
 
 def fix_mixed_script_words(text: str) -> str:
