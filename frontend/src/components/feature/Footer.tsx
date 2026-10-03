@@ -4,6 +4,7 @@ import { FOUNDED_YEAR } from "@/lib/siteConstants";
 import { LEADER_SECTION_MENU_ID } from "@/lib/leaderSection";
 import { useApi } from "../../hooks/useApi";
 import { getSettings } from "../../api/settings";
+import { optimizedImageUrl } from "@/lib/imageProxy";
 import BrandMark from "../shared/BrandMark";
 import WwwUzCounter from "../shared/WwwUzCounter";
 
@@ -80,6 +81,8 @@ export default function Footer() {
   const phone = settings?.setting?.phone?.trim() || FALLBACK_PHONE;
   const email = settings?.setting?.email?.trim() || FALLBACK_EMAIL;
   const networks = settings?.networks ?? [];
+  // Managed in the admin panel ("Foydali saytlar"); anything that is not a plain web link is skipped.
+  const usefulSites = (settings?.usefulSites ?? []).filter((site) => /^https?:\/\//i.test(site.url) && site.title);
 
   const linkCls =
     "inline-flex items-center min-h-[28px] text-[0.8125rem] text-white/70 hover:text-[#ffd600] transition-colors cursor-pointer";
@@ -299,6 +302,36 @@ export default function Footer() {
           className="mt-5 pt-3.5 flex flex-col gap-3"
           style={{ borderTop: `1px solid ${YELLOW}44` }}
         >
+          {usefulSites.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
+                {t("footer.usefulSites")}
+              </span>
+              {usefulSites.map((site) => (
+                <a
+                  key={`${site.url}-${site.title}`}
+                  href={site.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-white/70 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors cursor-pointer"
+                >
+                  {site.img && (
+                    <img
+                      src={optimizedImageUrl(site.img, 200)}
+                      alt=""
+                      width={16}
+                      height={16}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-4 h-4 object-contain rounded-sm"
+                    />
+                  )}
+                  {site.title}
+                </a>
+              ))}
+            </div>
+          )}
+
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-[10px] font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
               {t("footer.davlatPortallari")}

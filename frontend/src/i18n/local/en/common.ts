@@ -1744,6 +1744,7 @@ export default {
   "footer.jcpmJurnali": "JCPM journal",
   "footer.korrupsiyagaQarshi": "Anti-corruption",
   "footer.davlatPortallari": "Government portals",
+  "footer.usefulSites": "Useful sites",
   "footer.prezidentPortali": "President's portal",
   "footer.hukumatPortali": "Government portal",
   "footer.vazirlik": "Ministry",

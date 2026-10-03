@@ -2,6 +2,8 @@
 SingletonAdminViewSet) + admin/networks, admin/useful-sites (plain lists).
 See entityConfigs.ts's settingConfig/logoConfig/counterConfig/
 networkConfig/usefulSitesConfig."""
+from django.core.exceptions import ValidationError as DjangoValidationError
+from django.core.validators import URLValidator
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
 
@@ -119,7 +121,12 @@ class AdminUsefulSiteSerializer(serializers.ModelSerializer):
         instance.title_uz = data.get("title_uz", instance.title_uz or "")
         instance.title_ru = data.get("title_ru") or instance.title_uz
         instance.title_en = data.get("title_en") or instance.title_uz
-        instance.url = data.get("url", instance.url or "")
+        instance.url = str(data.get("url", instance.url or "")).strip()
+        try:
+            # The footer renders this as a link, so only real http(s) addresses are accepted.
+            URLValidator(schemes=["http", "https"])(instance.url)
+        except DjangoValidationError:
+            raise serializers.ValidationError({"url": ["To'g'ri havola kiriting (https://... bilan boshlansin)."]})
         image = resolve_or_create_image(data.get("img"))
         if image is not None:
             instance.image = image

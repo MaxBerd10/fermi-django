@@ -364,6 +364,19 @@ def test_useful_site_create_falls_back_uz_to_blank_ru_en(admin_client, db):
     assert UsefulSite.objects.get(id=res.data["id"]).url == "https://gov.uz"
 
 
+
+@pytest.mark.parametrize("url", ["javascript:alert(1)", "gov.uz", "ftp://gov.uz", "   "])
+def test_useful_site_rejects_anything_but_an_http_link(admin_client, db, url):
+    res = admin_client.post("/api/v1/admin/useful-sites", {"title_uz": "Vazirlik", "url": url}, format="json")
+    assert res.status_code == 400
+    assert not UsefulSite.objects.exists()
+
+
+def test_useful_site_without_a_logo_is_listed_publicly(admin_client, client, db):
+    admin_client.post("/api/v1/admin/useful-sites", {"title_uz": "Vazirlik", "url": "https://ssv.uz"}, format="json")
+    public = client.get("/api/v1/settings").data["usefulSites"]
+    assert [(site["url"], site["img"]) for site in public] == [("https://ssv.uz", None)]
+
 # --- admin/news: cover URL round-trip, gallery, translate -----------------
 
 def _news_payload(**overrides):

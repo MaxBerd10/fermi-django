@@ -156,13 +156,13 @@ export const networkConfig: EntityConfig = {
 
 export const usefulSitesConfig: EntityConfig = {
   resource: "useful-sites",
-  title: "Foydali havolalar",
+  title: "Foydali saytlar",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
-    { kind: "media", key: "img", label: "Rasm", required: true },
-    { kind: "text", key: "url", label: "Havola", required: true },
+    { kind: "media", key: "img", label: "Logotip (ixtiyoriy)" },
+    { kind: "text", key: "url", label: "Havola (https://...)", required: true },
   ],
 };
 
