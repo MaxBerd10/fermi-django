@@ -40,6 +40,7 @@ import difflib
 import html as html_lib
 import re
 from types import SimpleNamespace
+from urllib.parse import unquote
 
 from django.conf import settings
 from django.db import transaction
@@ -152,7 +153,11 @@ def _resolve_admin_image(src: str | None) -> Image | None:
     idx = src.find(media_url)
     if idx == -1:
         return ImageDownloader().get_or_download(src)
-    relative = src[idx + len(media_url):]
+    # blocks_to_html emits image.file.url, which percent-encodes the file name -- a Cyrillic
+    # letter or a space in it ("%D0%A1hina-1.png") must be decoded back before the lookup, or
+    # the image is "not found" and its block is silently dropped on save (51 production news
+    # posts lost a photo that way in the pre-deploy dry run).
+    relative = unquote(src[idx + len(media_url):].split("?", 1)[0].split("#", 1)[0])
     return Image.objects.filter(file=relative).first()
 
 

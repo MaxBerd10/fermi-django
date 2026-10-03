@@ -211,3 +211,18 @@ def test_translated_placeholders_in_ru_en_never_become_stray_paragraphs(page):
     blocks = list(ContentBlock.objects.filter(page=page).order_by("order"))
     assert [b.block_type for b in blocks] == ["table", "paragraph"]
     assert blocks[1].data["uz"]["text"] == "Matn" and blocks[1].data["ru"]["text"] == "Текст"
+
+
+@pytest.mark.parametrize("name", ["\u0421hina-1.png", "Rasm nomi bilan.png", "foto (2) \u02bbtest.png", "a%b.png"])
+def test_images_with_cyrillic_spaces_or_percent_in_the_file_name_survive_a_save(page, name):
+    """image.file.url percent-encodes the name; the lookup must decode it again or the block is dropped."""
+    img = Image(alt_text="x")
+    img.file.save(name, ContentFile(_png()), save=True)
+    _add(page, 1, "paragraph", _same({"text": "Oldin"}))
+    _add(page, 2, "image", _same({"image_id": img.id, "alt": ""}))
+    _add(page, 3, "paragraph", _same({"text": "Keyin"}))
+    before = _snapshot(page)
+
+    write_blocks_from_html(page, _html(page))
+
+    assert _snapshot(page) == before
