@@ -7,6 +7,21 @@ interface DocumentCardProps {
   fileSize: number;
 }
 
+/**
+ * "Hxteu8Tx-Sbornik_konferensii_ab12CdE.pdf" -> "Sbornik konferensii": drops the extension and the
+ * random upload prefix/suffix, and turns underscores into spaces -- the fallback title for a
+ * document that has neither a caption nor a title of its own.
+ */
+export function humanizeFilename(filename: string): string {
+  const base = filename.replace(/\.[A-Za-z0-9]{2,5}$/, "");
+  const cleaned = base
+    .replace(/^[A-Za-z0-9]{8}-/, "")
+    .replace(/_[A-Za-z0-9]{7}(?=\.|$)/, "")
+    .replace(/[_\s]+/g, " ")
+    .trim();
+  return cleaned || filename;
+}
+
 function formatFileSize(bytes: number): string {
   if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;

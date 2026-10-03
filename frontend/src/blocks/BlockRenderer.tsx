@@ -1,7 +1,7 @@
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import RichContent from "@/components/shared/RichContent";
-import DocumentCard from "./DocumentCard";
+import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
@@ -11,11 +11,6 @@ function toAbsoluteUrl(path: string): string {
   if (!path || path.startsWith("http")) return path;
   const apiOrigin = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/api\/v1\/?$/, "") || "";
   return apiOrigin ? `${apiOrigin}${path}` : path;
-}
-
-function formatFileSize(bytes: number): string {
-  if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
 /**
@@ -265,49 +260,15 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
         );
       }
 
-      if (style === "card") {
-        return (
-          <DocumentCard
-            url={documentUrl}
-            title={caption || document.title || document.filename}
-            filename={document.filename}
-            fileSize={document.file_size}
-          />
-        );
-      }
-
-      if (style === "button") {
-        return (
-          <a
-            href={documentUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cms-download-btn mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-[#0a1158] hover:bg-[#060a3d] text-white text-sm font-semibold transition-colors shadow-md"
-          >
-            <i className="ri-file-download-line" aria-hidden="true" />
-            Hujjatni yuklab olish
-          </a>
-        );
-      }
-
+      // Every other document -- the old "button" style, the unstyled default, and "card" -- is one
+      // card (name, type, size, open + download); only "roadmap" above embeds a viewer.
       return (
-        <figure className="mx-auto max-w-lg">
-          <a
-            href={documentUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl border border-primary-100 bg-primary-50/40 p-4 transition hover:bg-primary-50"
-          >
-            <i className="ri-file-pdf-2-line text-2xl text-primary-600" aria-hidden="true" />
-            <span className="min-w-0">
-              <span className="block truncate font-display font-bold text-primary-900">
-                {document.title || document.filename}
-              </span>
-              <span className="text-sm text-foreground-600">PDF · {formatFileSize(document.file_size)}</span>
-            </span>
-          </a>
-          {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
-        </figure>
+        <DocumentCard
+          url={documentUrl}
+          title={caption || document.title || humanizeFilename(document.filename)}
+          filename={document.filename}
+          fileSize={document.file_size}
+        />
       );
     }
 
