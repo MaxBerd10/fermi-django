@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageHeader from "@/components/shared/PageHeader";
+import Paginator from "@/components/shared/Paginator";
+import { usePagination } from "@/hooks/usePagination";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { getImentorTestStats, getImentorSampleQuestions } from "@/api/imentor";
 import { downloadTestResultPdf } from "@/lib/testResultPdf";
 import type { ImentorSubjectStat, ImentorSampleQuestion, ImentorQuestionLang } from "@/types/imentor";
 
+const SUBJECTS_PER_PAGE = 12;
+const STUDY_QUESTIONS_PER_PAGE = 10;
 const STUDY_QUESTION_COUNT = 30;
 const QUIZ_QUESTION_COUNT = 20;
 const SUBJECT_ICONS = ["ri-stethoscope-line", "ri-microscope-line", "ri-capsule-line", "ri-pulse-line", "ri-heart-pulse-line", "ri-flask-line"];
@@ -47,6 +51,11 @@ export default function TestPage() {
     .sort((a, b) =>
       sortBy === "alpha" ? a.subject_name.localeCompare(b.subject_name) : b.questions_total - a.questions_total,
     );
+
+  const subjectsTopRef = useRef<HTMLDivElement>(null);
+  const studyTopRef = useRef<HTMLDivElement>(null);
+  const subjectPaging = usePagination(filteredSubjects, SUBJECTS_PER_PAGE, `${query}|${sortBy}`, subjectsTopRef);
+  const studyPaging = usePagination(questions, STUDY_QUESTIONS_PER_PAGE, subject?.subject_code, studyTopRef);
 
   useEffect(() => {
     let cancelled = false;
@@ -285,8 +294,8 @@ export default function TestPage() {
                   <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
                 )}
 
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {filteredSubjects?.map((s, i) => (
+                <div ref={subjectsTopRef} className="scroll-mt-24 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {subjectPaging.pageItems.map((s, i) => (
                     <button
                       key={s.subject_code}
                       type="button"
@@ -296,7 +305,7 @@ export default function TestPage() {
                       <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-[4rem] bg-[#f6f8ff] transition-colors group-hover:bg-[#edf1ff]" aria-hidden />
                       <div className="relative flex items-start gap-3">
                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8edff] text-[#0a1158] transition-colors group-hover:bg-[#0a1158] group-hover:text-white">
-                          <i className={`${SUBJECT_ICONS[i % SUBJECT_ICONS.length]} text-lg`} />
+                          <i className={`${SUBJECT_ICONS[(subjectPaging.offset + i) % SUBJECT_ICONS.length]} text-lg`} />
                         </div>
                         <div className="min-w-0">
                           <div className="font-heading text-[15px] font-bold leading-snug text-foreground-900 line-clamp-3">{s.subject_name}</div>
@@ -314,6 +323,9 @@ export default function TestPage() {
                       </div>
                     </button>
                   ))}
+                </div>
+                <div className="mt-6">
+                  <Paginator page={subjectPaging.page} totalPages={subjectPaging.totalPages} onChange={subjectPaging.go} />
                 </div>
               </>
             )}
@@ -345,8 +357,9 @@ export default function TestPage() {
 
               {error && <p className="text-sm text-red-600 mb-4" role="alert">{error}</p>}
 
-              <div className="space-y-2 mb-5">
-                {questions.map((q, i) => {
+              <div ref={studyTopRef} className="scroll-mt-24 space-y-2 mb-5">
+                {studyPaging.pageItems.map((q, pageIndex) => {
+                  const i = studyPaging.offset + pageIndex;
                   const content = pickLang(q, lang);
                   const isOpen = openStudyIndex === i;
                   return (
@@ -399,6 +412,9 @@ export default function TestPage() {
                     </div>
                   );
                 })}
+              </div>
+              <div className="mb-5 -mt-1">
+                <Paginator page={studyPaging.page} totalPages={studyPaging.totalPages} onChange={studyPaging.go} />
               </div>
 
               <button type="button" onClick={startQuiz} className="uni-btn cursor-pointer w-full sm:w-auto">

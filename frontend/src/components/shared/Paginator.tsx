@@ -1,0 +1,85 @@
+import { useTranslation } from "react-i18next";
+// Moved here from main.tsx -- see NewsCard.tsx's copy of this comment.
+import "@/styles/news-content.css";
+
+/** Full run of page numbers when it fits, otherwise 1 … [current ± sibling] … last. */
+function getPageWindow(current: number, total: number, siblingCount = 1): (number | "…")[] {
+  const totalSlots = siblingCount * 2 + 5;
+  if (total <= totalSlots) {
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+
+  const left = Math.max(current - siblingCount, 1);
+  const right = Math.min(current + siblingCount, total);
+  const showLeftDots = left > 2;
+  const showRightDots = right < total - 1;
+
+  if (!showLeftDots && showRightDots) {
+    const count = 3 + siblingCount * 2;
+    return [...Array.from({ length: count }, (_, i) => i + 1), "…", total];
+  }
+
+  if (showLeftDots && !showRightDots) {
+    const count = 3 + siblingCount * 2;
+    return [1, "…", ...Array.from({ length: count }, (_, i) => total - count + 1 + i)];
+  }
+
+  return [1, "…", ...Array.from({ length: right - left + 1 }, (_, i) => left + i), "…", total];
+}
+
+/** Page buttons for any paged list; the parent owns the current page (see usePagination / NewsPagination). */
+export default function Paginator({
+  page,
+  totalPages,
+  onChange,
+}: {
+  page: number;
+  totalPages: number;
+  onChange: (page: number) => void;
+}) {
+  const { t } = useTranslation();
+
+  if (totalPages <= 1) return null;
+
+  return (
+    <nav className="news-pagination" aria-label={t("common.pagination")}>
+      <button
+        type="button"
+        onClick={() => onChange(page - 1)}
+        disabled={page <= 1}
+        className="news-pagination__btn news-pagination__nav"
+        aria-label={t("common.prevPage")}
+      >
+        <i className="ri-arrow-left-s-line" aria-hidden="true" />
+      </button>
+
+      {getPageWindow(page, totalPages).map((p, i) =>
+        p === "…" ? (
+          <span key={`dots-${i}`} className="news-pagination__dots" aria-hidden="true">
+            {p}
+          </span>
+        ) : (
+          <button
+            key={p}
+            type="button"
+            onClick={() => onChange(p)}
+            className={`news-pagination__btn ${p === page ? "news-pagination__btn--active" : ""}`}
+            aria-current={p === page ? "page" : undefined}
+          >
+            {p}
+          </button>
+        )
+      )}
+
+      <button
+        type="button"
+        onClick={() => onChange(page + 1)}
+        disabled={page >= totalPages}
+        className="news-pagination__btn news-pagination__nav"
+        aria-label={t("common.nextPage")}
+      >
+        <i className="ri-arrow-right-s-line" aria-hidden="true" />
+      </button>
+    </nav>
+  );
+}
