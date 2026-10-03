@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import Underline from "@tiptap/extension-underline";
-import Link from "@tiptap/extension-link";
 import Image from "@tiptap/extension-image";
 import { uploadMedia } from "@/api/admin";
 import MediaLibraryModal from "./MediaLibraryModal";
+import { PreservedBlock } from "./PreservedBlock";
 
 interface RichTextEditorProps {
   label: string;
@@ -44,6 +43,8 @@ function ToolbarButton({ active, disabled, onClick, title, icon }: ToolbarButton
  * that content actually uses (p/strong/em/ul/ol/a/img/h2-h3/blockquote)
  * cleanly; more exotic CKEditor-only inline styling may not survive a
  * resave pixel-for-pixel, but the content stays intact and editable.
+ * Blocks the editor can't express (tables, PDFs, galleries, staff cards)
+ * appear as dashed chips (PreservedBlock) and are kept as-is on save.
  * A "Kod" (HTML source) toggle is kept for anyone who wants to hand-edit
  * markup the visual toolbar doesn't expose.
  */
@@ -56,10 +57,11 @@ export default function RichTextEditor({ label, value, onChange }: RichTextEdito
 
   const editor = useEditor({
     extensions: [
-      StarterKit,
-      Underline,
-      Link.configure({ openOnClick: false, autolink: true }),
+      // StarterKit v3 already bundles Underline and Link -- registering them again as separate
+      // extensions logged "Duplicate extension names" on every editor mount.
+      StarterKit.configure({ link: { openOnClick: false, autolink: true } }),
       Image,
+      PreservedBlock,
     ],
     content: value,
     onUpdate: ({ editor }) => {
@@ -69,7 +71,14 @@ export default function RichTextEditor({ label, value, onChange }: RichTextEdito
     },
     editorProps: {
       attributes: {
-        class: "prose max-w-none min-h-[220px] px-4 py-3 focus:outline-none [&_img]:max-w-full [&_img]:rounded-md",
+        // .preserved-block: a table/PDF/gallery the editor can't edit as text (see PreservedBlock.ts).
+        class:
+          "prose max-w-none min-h-[220px] px-4 py-3 focus:outline-none [&_img]:max-w-full [&_img]:rounded-md " +
+          "[&_.preserved-block]:my-3 [&_.preserved-block]:cursor-grab [&_.preserved-block]:select-none [&_.preserved-block]:rounded-md " +
+          "[&_.preserved-block]:border [&_.preserved-block]:border-dashed [&_.preserved-block]:border-primary-400 " +
+          "[&_.preserved-block]:bg-primary-50 [&_.preserved-block]:px-3 [&_.preserved-block]:py-2.5 " +
+          "[&_.preserved-block]:text-sm [&_.preserved-block]:font-medium [&_.preserved-block]:text-primary-700 " +
+          "[&_.preserved-block.ProseMirror-selectednode]:border-solid [&_.preserved-block.ProseMirror-selectednode]:ring-2 [&_.preserved-block.ProseMirror-selectednode]:ring-primary-500",
       },
     },
   });
