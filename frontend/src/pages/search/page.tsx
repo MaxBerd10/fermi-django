@@ -68,7 +68,7 @@ export default function SearchPage() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder={t("search.placeholder")}
-                  className="w-full h-12 pl-11 pr-4 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  className="w-full h-12 !pl-11 !pr-4 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 transition-colors duration-200"
                 />
               </div>
               <button
