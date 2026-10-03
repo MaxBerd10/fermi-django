@@ -73,3 +73,34 @@ def test_search_with_empty_query_returns_empty_results(client, db):
 def test_search_with_no_query_param_returns_empty_results(client, db):
     res = client.get("/api/v1/search")
     assert res.data == {"posts": [], "pages": []}
+
+
+def test_search_words_may_come_in_any_order_and_with_other_endings(client, db):
+    """"konferensiya tillar" must find "Tillar konferensiyasi materiallari" -- the whole phrase is not a substring."""
+    item = MenuItem.objects.create(
+        label_uz="Tillar konferensiyasi materiallari (15.10.2025)", label_ru="Материалы", label_en="Languages",
+        url="/blog/1888/tillar-konferensiyasi-materiallari-15102025",
+    )
+    res = client.get("/api/v1/search", {"q": "konferensiya tillar"})
+    assert [p["slug"] for p in res.data["pages"]] == ["tillar-konferensiyasi-materiallari-15102025"]
+    assert item.label_uz == res.data["pages"][0]["title"]["uz"]
+    # every word has to match: an unrelated extra word narrows the result to nothing
+    assert client.get("/api/v1/search", {"q": "konferensiya tillar sport"}).data["pages"] == []
+
+
+def test_search_title_matches_rank_before_excerpt_only_matches(client, db):
+    def post(slug, title, excerpt, hours):
+        return NewsPost.objects.create(
+            slug=slug, title_uz=title, title_ru="x", title_en="x", excerpt_uz=excerpt, excerpt_ru="x", excerpt_en="x",
+            page=Page.objects.create(slug=slug), published_at=timezone.now() - timezone.timedelta(hours=hours),
+        )
+    post("newer-excerpt-only", "Boshqa yangilik", "Qabul haqida batafsil", 1)
+    post("older-title-match", "Qabul boshlandi", "Matn", 5)
+    slugs = [p["slug"] for p in client.get("/api/v1/search", {"q": "qabul"}).data["posts"]]
+    assert slugs == ["older-title-match", "newer-excerpt-only"]
+
+
+def test_search_typed_in_cyrillic_uzbek_finds_latin_uzbek_text(client, db):
+    MenuItem.objects.create(label_uz="Qabul qoidalari", label_ru="a", label_en="b", url="/blog/1/qabul-qoidalari")
+    cyrillic = "қабул"   # қабул
+    assert [p["slug"] for p in client.get("/api/v1/search", {"q": cyrillic}).data["pages"]] == ["qabul-qoidalari"]
