@@ -38,6 +38,13 @@ is a table block" or "this paragraph is bold":
    with Uzbek (positional pairing, see _positional_pairs) -- found by a
    read-only production dry run on a legacy decree page.
 
+4. A file the editor attaches (toolbar "Fayl qo'shish") travels in as a *new-document marker*,
+   `<div data-new-document="<media path>" data-title="Nom">...</div>`, because the file already sits
+   in the media folder but no block exists for it yet. On save the marker becomes a real `document`
+   block (card style) positioned where the marker was; see _materialize_new_documents. Only the
+   Uzbek HTML decides this (the editor offers the button on the Uzbek tab only); markers in ru/en
+   are stripped.
+
 Round trip, not lossless in the byte sense: whitespace and attribute order may
 differ from what a human originally typed -- expected and harmless, same as any
 WYSIWYG editor. test_admin_content.py pins the property that matters: saving
@@ -58,7 +65,7 @@ from apps.content.legacy_import.html_extract import ExtractionResult, extract
 from apps.content.legacy_import.media import ImageDownloader
 from apps.content.legacy_import.merge import LANGS
 from apps.content.models import ContentBlock, Page
-from apps.media_lib.models import Image
+from apps.media_lib.models import Document, Image
 
 # Block types the rich-text editor has no HTML for.
 PRESERVED_TYPES = frozenset({"table", "document", "gallery", "video", "staff_card", "raw_html"})
@@ -81,6 +88,60 @@ _PRESERVED_RE = re.compile(
     r"""<div\b[^>]*?(?:data-preserved-block|class\s*=\s*["']preserved-block)[^>]*>.*?</div>""", re.S | re.I
 )
 _PRESERVED_ID_RE = re.compile(r"""data-preserved-block\s*=\s*["']?(\d+)""", re.I)
+
+
+# A file the editor just attached: {path in MEDIA_ROOT, optional title}, no block yet.
+_NEW_DOC_RE = re.compile(
+    r"""<div\b[^>]*\bdata-new-document\s*=\s*["']([^"']+)["'][^>]*>.*?</div>""", re.I | re.S
+)
+_NEW_DOC_TITLE_RE = re.compile(r"""\bdata-title\s*=\s*["']([^"']*)["']""", re.I)
+_DOCUMENT_EXTENSIONS = (".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx")
+
+
+def _humanize_file_name(path: str) -> str:
+    name = unquote(path.rsplit("/", 1)[-1])
+    name = re.sub(r"\.[A-Za-z0-9]{2,5}$", "", name)
+    name = re.sub(r"_[A-Za-z0-9]{7}$", "", name)         # Django's duplicate-name suffix
+    return re.sub(r"[_\s]+", " ", name).strip() or "Hujjat"
+
+
+def _materialize_new_documents(page: Page, uz_html: str) -> str:
+    """Turns each new-document marker in the Uzbek HTML into a real `document` block on the page and
+    swaps the marker for the ordinary preserved-block placeholder of that block, so the regular
+    placeholder machinery below positions it. Only files under MEDIA_ROOT with a document extension
+    are accepted; anything else is dropped (a marker is user-controllable HTML)."""
+    created: dict[str, int] = {}
+
+    def convert(match):
+        path = unquote(html_lib.unescape(match.group(1))).lstrip("/")
+        media_prefix = settings.MEDIA_URL.strip("/") + "/"
+        if path.startswith(media_prefix):
+            path = path[len(media_prefix):]
+        if ".." in path.split("/") or not path.lower().endswith(_DOCUMENT_EXTENSIONS):
+            return ""
+        if path in created:
+            return ""                                   # the same marker pasted twice
+        document = Document.objects.filter(file=path).first()
+        if document is None:
+            document = Document(file=path, title="")
+            document.save()
+        title_match = _NEW_DOC_TITLE_RE.search(match.group(0))
+        title = html_lib.unescape(title_match.group(1)).strip() if title_match else ""
+        title = (title or _humanize_file_name(path))[:200]
+        last = ContentBlock.objects.filter(page=page).order_by("-order").values_list("order", flat=True).first() or 0
+        block = ContentBlock(
+            page=page, order=last + 1, block_type="document",
+            data={lang: {"style": "card", "document_id": document.id, "caption": title} for lang in LANGS},
+        )
+        block.full_clean()
+        block.save()
+        created[path] = block.id
+        return (
+            f'<div data-preserved-block="{block.id}" data-block-type="document" class="preserved-block">'
+            f"{_esc(_placeholder_label(block, block.data['uz']))}</div>"
+        )
+
+    return _NEW_DOC_RE.sub(convert, uz_html)
 
 
 def _esc(text) -> str:
@@ -284,7 +345,9 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str]) -> None:
     changed them -- see the module docstring: preserved-block placeholders
     keep their block (and move with the chip), and unchanged or in-place
     edited text blocks keep their row and hidden attributes."""
-    uz_segments, placeholder_ids = _split_preserved(html_by_lang.get("uz") or "")
+    uz_html = _materialize_new_documents(page, html_by_lang.get("uz") or "")
+    html_by_lang = {**html_by_lang, "ru": _NEW_DOC_RE.sub("", html_by_lang.get("ru") or ""), "en": _NEW_DOC_RE.sub("", html_by_lang.get("en") or "")}
+    uz_segments, placeholder_ids = _split_preserved(uz_html)
 
     existing = list(ContentBlock.objects.filter(page=page).order_by("order"))
     by_id = {block.id: block for block in existing}

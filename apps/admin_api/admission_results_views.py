@@ -82,6 +82,10 @@ class AdminResultFileSerializer(serializers.ModelSerializer):
         document = resolve_or_create_document(data.get("file"))
         if document:
             instance.document = document
+        if not instance.category_id:
+            raise serializers.ValidationError({"category_id": ["Yo'nalishni tanlang."]})
+        if not instance.document_id:
+            raise serializers.ValidationError({"file": ["Fayl tanlash majburiy."]})
         instance.save()
         return instance
 

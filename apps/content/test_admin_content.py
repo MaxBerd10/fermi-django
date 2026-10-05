@@ -272,3 +272,40 @@ def test_an_image_block_whose_file_row_is_gone_is_kept(page):
     write_blocks_from_html(page, _html(page))
 
     assert _snapshot(page) == before
+
+
+def test_a_file_attached_in_the_editor_becomes_a_document_card_where_it_was_put(page):
+    from django.core.files.base import ContentFile as _CF
+    from django.core.files.storage import default_storage
+    saved = default_storage.save("uploads/admin/Nizom_2026.pdf", _CF(b"%PDF-1.4 test"))
+    marker = f'<div data-new-document="{saved}" data-title="Ichki tartib nizomi" class="preserved-block">Hujjat</div>'
+    html = {lang: "<p>Oldin</p>" for lang in LANGS}
+    html["uz"] = f"<p>Oldin</p>\n{marker}\n<p>Keyin</p>"
+    html["ru"] = f"<p>Oldin</p>\n{marker}\n<p>Keyin</p>"     # a stray marker in ru/en must not create anything
+    html["en"] = "<p>Oldin</p><p>Keyin</p>"
+    html["ru"] = html["ru"]
+
+    write_blocks_from_html(page, html)
+
+    blocks = list(ContentBlock.objects.filter(page=page).order_by("order"))
+    assert [b.block_type for b in blocks] == ["paragraph", "document", "paragraph"]
+    document_block = blocks[1]
+    assert document_block.data["uz"]["style"] == "card"
+    assert document_block.data["uz"]["caption"] == "Ichki tartib nizomi"
+    assert document_block.data["ru"]["document_id"] == document_block.data["uz"]["document_id"]
+    assert Document.objects.filter(pk=document_block.data["uz"]["document_id"], file=saved).exists()
+    assert ContentBlock.objects.filter(page=page, block_type="document").count() == 1
+
+    # the next load shows it as an ordinary chip, and saving that untouched changes nothing
+    before = _snapshot(page)
+    write_blocks_from_html(page, _html(page))
+    assert _snapshot(page) == before
+
+
+def test_new_document_markers_only_accept_real_document_files(page):
+    marker_exe = '<div data-new-document="uploads/admin/virus.exe" class="preserved-block">x</div>'
+    marker_up = '<div data-new-document="../../etc/passwd.pdf" class="preserved-block">x</div>'
+    html = {lang: "<p>Matn</p>" for lang in LANGS}
+    html["uz"] = f"<p>Matn</p>{marker_exe}{marker_up}"
+    write_blocks_from_html(page, html)
+    assert [b.block_type for b in ContentBlock.objects.filter(page=page)] == ["paragraph"]

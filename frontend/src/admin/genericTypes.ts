@@ -36,6 +36,8 @@ export interface EntityConfig {
   listColumns: ListColumn[];
   fields: FieldSpec[];
   deleteConfirmField: string;
+  /** Extra sentence in the delete confirmation: what ELSE disappears with this record. */
+  deleteWarning?: string;
 }
 
 /** A stable React key / field-error lookup key for any FieldSpec variant. */

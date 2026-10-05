@@ -2,6 +2,7 @@ import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import RawHtmlBlock from "./RawHtmlBlock";
 import DocumentCard, { humanizeFilename } from "./DocumentCard";
+import LinkifiedText from "./LinkifiedText";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
@@ -41,17 +42,17 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     case "paragraph":
       return block.data.bold ? (
         <p>
-          <strong>{block.data.text}</strong>
+          <strong><LinkifiedText text={block.data.text} /></strong>
         </p>
       ) : (
-        <p>{block.data.text}</p>
+        <p><LinkifiedText text={block.data.text} /></p>
       );
 
     case "list":
       return (
         <ol>
           {block.data.items.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}><LinkifiedText text={item} /></li>
           ))}
         </ol>
       );

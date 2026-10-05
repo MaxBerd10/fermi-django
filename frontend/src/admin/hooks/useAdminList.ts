@@ -71,8 +71,9 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
   );
 
   const remove = useCallback(
-    async (item: T, label: string): Promise<void> => {
-      if (!window.confirm(`"${label}" yozuvini o'chirishni tasdiqlaysizmi?`)) return;
+    async (item: T, label: string, warning?: string): Promise<void> => {
+      const extra = warning ? `\n\n${warning}` : "";
+      if (!window.confirm(`"${label}" yozuvini o'chirishni tasdiqlaysizmi?${extra}\n\nO'chirilgan yozuvni qaytarib bo'lmaydi.`)) return;
       try {
         await api.remove(item.id);
       } catch (err) {

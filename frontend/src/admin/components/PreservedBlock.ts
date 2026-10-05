@@ -37,11 +37,24 @@ export const PreservedBlock = Node.create({
         parseHTML: (element) => element.textContent ?? "",
         renderHTML: () => ({}),
       },
+      // A file just uploaded through the toolbar ("Fayl qo'shish"): no block exists for it yet, so it is sent
+      // as <div data-new-document="<media path>" data-title="..."> and the server creates the document card
+      // on save (see _materialize_new_documents in apps/content/admin_content.py).
+      newDocument: {
+        default: null,
+        parseHTML: (element) => element.getAttribute("data-new-document"),
+        renderHTML: (attributes) => (attributes.newDocument ? { "data-new-document": attributes.newDocument } : {}),
+      },
+      docTitle: {
+        default: "",
+        parseHTML: (element) => element.getAttribute("data-title") ?? "",
+        renderHTML: (attributes) => (attributes.docTitle ? { "data-title": attributes.docTitle } : {}),
+      },
     };
   },
 
   parseHTML() {
-    return [{ tag: "div[data-preserved-block]" }];
+    return [{ tag: "div[data-preserved-block]" }, { tag: "div[data-new-document]" }];
   },
 
   renderHTML({ node, HTMLAttributes }) {

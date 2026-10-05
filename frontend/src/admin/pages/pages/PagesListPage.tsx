@@ -57,7 +57,7 @@ export default function PagesListPage() {
         loading={list.loading}
         showEmpty={!list.error}
         editPathFor={(item) => `/admin/pages/${item.id}`}
-        onDelete={(item) => list.remove(item, item.title_uz || item.slug)}
+        onDelete={(item) => list.remove(item, item.title_uz || item.slug, "Agar bu sahifa menyuda bo'lsa, menyudagi havola \"topilmadi\" xatosini beradi. Avval Menyu daraxtidan olib tashlang.")}
       />
       <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>

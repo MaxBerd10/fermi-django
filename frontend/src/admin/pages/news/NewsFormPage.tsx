@@ -239,6 +239,7 @@ export default function NewsFormPage() {
               label="Matn"
               value={(form[`content_${lang}` as keyof AdminPost] as string) ?? ""}
               onChange={(v) => set(`content_${lang}` as keyof AdminPost, v as never)}
+              allowFiles={lang === "uz"}
             />
           </div>
         ))}

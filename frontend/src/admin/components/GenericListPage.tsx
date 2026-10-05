@@ -88,7 +88,7 @@ export default function GenericListPage({ config }: { config: EntityConfig }) {
         loading={list.loading}
         showEmpty={!list.error}
         editPathFor={(item) => `/admin/${config.resource}/${item.id}`}
-        onDelete={(item) => list.remove(item, String(item[config.deleteConfirmField] ?? item.id))}
+        onDelete={(item) => list.remove(item, String(item[config.deleteConfirmField] ?? item.id), config.deleteWarning)}
       />
       <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>

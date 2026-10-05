@@ -56,7 +56,7 @@ export default function NewsListPage() {
         loading={list.loading}
         showEmpty={!list.error}
         editPathFor={(item) => `/admin/news/${item.id}`}
-        onDelete={(item) => list.remove(item, item.title_uz)}
+        onDelete={(item) => list.remove(item, item.title_uz, "Yangilik saytdan butunlay o'chadi. Vaqtincha yashirmoqchi bo'lsangiz, o'chirmang: yangilikni oching va \"Holat\" ni \"Qoralama\" qiling.")}
       />
       <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>

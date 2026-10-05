@@ -122,6 +122,7 @@ export default function PagesFormPage() {
               label="Matn"
               value={(form[`content_${lang}` as keyof AdminPage] as string) ?? ""}
               onChange={(v) => set(`content_${lang}` as keyof AdminPage, v as never)}
+              allowFiles={lang === "uz"}
             />
           </div>
         ))}

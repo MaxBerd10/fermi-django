@@ -63,6 +63,8 @@ class AdminGalleryPhotoSerializer(serializers.ModelSerializer):
         image = resolve_or_create_image(data.get("img"))
         if image is not None:
             instance.image = image
+        if not instance.image_id:
+            raise serializers.ValidationError({"img": ["Rasm tanlash majburiy."]})
         instance.save()
         return instance
 
@@ -190,6 +192,10 @@ class AdminScheduleFileSerializer(serializers.ModelSerializer):
         document = resolve_or_create_document(data.get("file"))
         if document is not None:
             instance.document = document
+        if not instance.course_id:
+            raise serializers.ValidationError({"course_id": ["Kursni tanlang."]})
+        if not instance.document_id:
+            raise serializers.ValidationError({"file": ["Fayl tanlash majburiy."]})
         instance.save()
         return instance
 

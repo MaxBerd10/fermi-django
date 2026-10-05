@@ -10,6 +10,15 @@ interface RichTextEditorProps {
   label: string;
   value: string;
   onChange: (html: string) => void;
+  /** Offers the "Fayl qo'shish" button. Only the Uzbek editor takes it: the server reads new files from the Uzbek text. */
+  allowFiles?: boolean;
+}
+
+const DOCUMENT_ACCEPT = ".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx";
+
+/** "Nizom_2026_ab12CdE.pdf" -> "Nizom 2026" -- the title the file's card gets unless the editor renames it. */
+function titleFromFileName(name: string): string {
+  return name.replace(/\.[A-Za-z0-9]{2,5}$/, "").replace(/[_\s]+/g, " ").trim() || "Hujjat";
 }
 
 interface ToolbarButtonProps {
@@ -48,11 +57,12 @@ function ToolbarButton({ active, disabled, onClick, title, icon }: ToolbarButton
  * A "Kod" (HTML source) toggle is kept for anyone who wants to hand-edit
  * markup the visual toolbar doesn't expose.
  */
-export default function RichTextEditor({ label, value, onChange }: RichTextEditorProps) {
-  const [mode, setMode] = useState<"visual" | "code">("visual");
+export default function RichTextEditor({ label, value, onChange, allowFiles = false }: RichTextEditorProps) {
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const documentInputRef = useRef<HTMLInputElement>(null);
+  const [uploadError, setUploadError] = useState("");
   const lastEmittedHtml = useRef(value);
 
   const editor = useEditor({
@@ -111,41 +121,42 @@ export default function RichTextEditor({ label, value, onChange }: RichTextEdito
     }
   }
 
-  function setLink() {
-    if (!editor) return;
-    const previous = editor.getAttributes("link").href as string | undefined;
-    const url = window.prompt("Havola manzili (URL):", previous ?? "https://");
-    if (url === null) return;
-    if (url === "") {
-      editor.chain().focus().extendMarkRange("link").unsetLink().run();
-      return;
+  async function onUploadDocument(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file || !editor) return;
+    setUploading(true);
+    setUploadError("");
+    try {
+      const result = await uploadMedia(file);
+      const title = titleFromFileName(file.name);
+      editor
+        .chain()
+        .focus()
+        .insertContent({
+          type: "preservedBlock",
+          attrs: {
+            newDocument: result.path,
+            docTitle: title,
+            blockType: "document",
+            label: `Hujjat: ${title} (saqlaganingizda sahifaga qo'shiladi)`,
+          },
+        })
+        .run();
+    } catch (err) {
+      setUploadError(err instanceof Error ? err.message : "Faylni yuklab bo'lmadi.");
+    } finally {
+      setUploading(false);
+      if (documentInputRef.current) documentInputRef.current.value = "";
     }
-    editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
   }
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-1.5">
+      <div className="mb-1.5">
         <label className="block text-sm font-medium text-foreground-700">{label}</label>
-        <div className="flex rounded-md border border-background-300 overflow-hidden">
-          <button
-            type="button"
-            onClick={() => setMode("visual")}
-            className={`text-xs px-2.5 py-1 cursor-pointer ${mode === "visual" ? "bg-primary-500 text-background-50" : "text-foreground-600 hover:bg-background-100"}`}
-          >
-            Vizual
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode("code")}
-            className={`text-xs px-2.5 py-1 cursor-pointer ${mode === "code" ? "bg-primary-500 text-background-50" : "text-foreground-600 hover:bg-background-100"}`}
-          >
-            Kod
-          </button>
-        </div>
       </div>
 
-      {mode === "visual" ? (
+      {(
         <div className="rounded-md border border-background-300 bg-background-50 overflow-hidden">
           {editor && (
             <div className="flex flex-wrap items-center gap-0.5 px-2 py-1.5 border-b border-background-200 bg-background-100">
@@ -161,9 +172,15 @@ export default function RichTextEditor({ label, value, onChange }: RichTextEdito
               <ToolbarButton title="Ro'yxat (raqamli)" icon="ri-list-ordered" active={editor.isActive("orderedList")} onClick={() => editor.chain().focus().toggleOrderedList().run()} />
               <ToolbarButton title="Iqtibos" icon="ri-double-quotes-l" active={editor.isActive("blockquote")} onClick={() => editor.chain().focus().toggleBlockquote().run()} />
               <span className="w-px h-5 bg-background-300 mx-1" />
-              <ToolbarButton title="Havola" icon="ri-link" active={editor.isActive("link")} onClick={setLink} />
               <ToolbarButton title="Rasm (yuklash)" icon={uploading ? "ri-loader-4-line animate-spin" : "ri-image-add-line"} onClick={() => fileInputRef.current?.click()} />
               <ToolbarButton title="Rasm (kutubxonadan)" icon="ri-folder-image-line" onClick={() => setLibraryOpen(true)} />
+              {allowFiles && (
+                <ToolbarButton
+                  title="Fayl qo'shish (PDF, Word, Excel...)"
+                  icon={uploading ? "ri-loader-4-line animate-spin" : "ri-file-upload-line"}
+                  onClick={() => documentInputRef.current?.click()}
+                />
+              )}
               <span className="w-px h-5 bg-background-300 mx-1" />
               <ToolbarButton title="Bekor qilish" icon="ri-arrow-go-back-line" disabled={!editor.can().undo()} onClick={() => editor.chain().focus().undo().run()} />
               <ToolbarButton title="Qaytarish" icon="ri-arrow-go-forward-line" disabled={!editor.can().redo()} onClick={() => editor.chain().focus().redo().run()} />
@@ -171,16 +188,15 @@ export default function RichTextEditor({ label, value, onChange }: RichTextEdito
           )}
           <EditorContent editor={editor} />
         </div>
-      ) : (
-        <textarea
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          rows={14}
-          className="w-full px-4 py-3 rounded-md border border-background-300 bg-background-50 text-sm font-mono focus:outline-none focus:border-primary-500"
-        />
       )}
+      <p className="mt-1.5 text-xs text-foreground-500">
+        Havolani (https://...) matn ichiga shunchaki yozing, sayt uni avtomatik bosiladigan qiladi.
+        {allowFiles && " PDF/Word/Excel faylni yuqoridagi fayl belgisi bilan qo'shing: sahifada tayyor karta bo'lib chiqadi."}
+      </p>
+      {uploadError && <p role="alert" className="mt-1 text-xs text-accent-600">{uploadError}</p>}
 
       <input ref={fileInputRef} type="file" className="hidden" accept=".jpg,.jpeg,.png,.gif,.webp" onChange={onUploadFile} />
+      <input ref={documentInputRef} type="file" className="hidden" accept={DOCUMENT_ACCEPT} onChange={onUploadDocument} />
       {libraryOpen && (
         <MediaLibraryModal
           onSelect={(_path, url) => {

@@ -202,3 +202,45 @@ def test_django_model_validation_errors_become_a_400(admin_client, db):
         format="json",
     )
     assert res.status_code == 400
+
+
+# --- handover audit (2026-10-05): what a non-technical editor runs into ----------------------------
+
+@pytest.mark.parametrize("resource, payload, field", [
+    ("gallery-images", {"title_uz": "Rasm"}, "img"),
+    ("schedules", {"title_uz": "Jadval", "course_id": None}, "course_id"),
+    ("result-files", {"title_uz": "Natija", "category_id": None}, "category_id"),
+])
+def test_forgetting_the_file_is_a_readable_400_not_a_500(admin_client, db, resource, payload, field):
+    res = admin_client.post(f"/api/v1/admin/{resource}", payload, format="json")
+    assert res.status_code == 400
+    assert field in res.json()
+
+
+def test_validation_messages_reach_the_editor_in_uzbek(admin_client, db):
+    res = admin_client.post("/api/v1/admin/networks", {"title": "x", "icon": "ri-x", "url": "not a url"}, format="json")
+    assert res.status_code == 400
+    assert res.json()["url"] == ["To'g'ri havola kiriting (https:// bilan boshlansin)."]
+
+
+def test_deleting_something_still_in_use_explains_itself(admin_client, db):
+    from apps.media_lib.models import Image, Video
+    image = Image(alt_text="p")
+    image.file.save("p.png", ContentFile(base64.b64decode("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==")), save=True)
+    Video.objects.create(file="v.mp4", poster=image)
+    from django.db.models import ProtectedError
+    with pytest.raises(ProtectedError):
+        image.delete()
+    from config.exception_handler import PROTECTED_MESSAGE, exception_handler
+    response = exception_handler(ProtectedError("x", set()), {})
+    assert response.status_code == 400 and response.data["detail"] == PROTECTED_MESSAGE
+
+
+def test_a_web_address_typed_in_the_text_survives_a_save(admin_client, category):
+    """Blocks store plain text, so the editor's link marks are not kept -- but a URL written out in the text is, and the
+    public site turns it into a clickable link (frontend/src/blocks/LinkifiedText.tsx)."""
+    html = "<p>Batafsil: https://fjsti.uz/aloqa yoki info@fjsti.uz</p>"
+    res = admin_client.post("/api/v1/admin/news", {"title_uz": "LINK", "content_uz": html, "category_id": category.id}, format="json")
+    assert res.status_code == 201, res.content
+    back = admin_client.get(f"/api/v1/admin/news/{res.data['id']}").json()["content_uz"]
+    assert "https://fjsti.uz/aloqa" in back and "info@fjsti.uz" in back

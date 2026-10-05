@@ -77,7 +77,7 @@ export default function MenuTreePage() {
 
   async function onDelete(node: AdminMenuNode) {
     const childWarning = node.children.length > 0 ? ` (va uning ${node.children.length} ta ichki elementi)` : "";
-    if (!window.confirm(`"${node.titleUz}"${childWarning}ni o'chirishni tasdiqlaysizmi?`)) return;
+    if (!window.confirm(`"${node.titleUz}"${childWarning}ni o'chirishni tasdiqlaysizmi? Menyudan yo'qoladi (sahifaning o'zi o'chmaydi).`)) return;
     await deleteMenuNode(node.id);
     if (selectedId === node.id) setSelectedId(null);
     await load();

@@ -76,6 +76,7 @@ export default function GenericField({ field, values, onChange }: Props) {
             label={`${field.label} (${lang})`}
             value={(values[`${field.base}_${lang}`] as string) ?? ""}
             onChange={(v) => onChange(`${field.base}_${lang}`, v)}
+            allowFiles={lang === "uz"}
           />
         ))}
       </div>

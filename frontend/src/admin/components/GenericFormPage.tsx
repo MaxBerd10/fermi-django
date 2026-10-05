@@ -69,6 +69,22 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
     setError("");
     setSaved(false);
     setFieldErrors({});
+    // A file/picture/select cannot use the browser's own "required" check -- say what is missing before the round trip.
+    const missing: Record<string, string[]> = {};
+    for (const field of config.fields) {
+      if (!("required" in field) || !field.required) continue;
+      if (field.kind !== "media" && field.kind !== "async-select" && field.kind !== "select") continue;
+      const value = values[field.key];
+      if (value === undefined || value === null || value === "" || value === 0) {
+        missing[field.key] = [field.kind === "media" ? "Fayl yoki rasm tanlang." : "Ro'yxatdan birini tanlang."];
+      }
+    }
+    if (Object.keys(missing).length > 0) {
+      setFieldErrors(missing);
+      setError("Majburiy maydonlar to'ldirilmagan. Qizil yozuvli joylarni tekshiring.");
+      setSaving(false);
+      return;
+    }
     try {
       if (isNew) {
         const created = await api.create(values);

@@ -5,6 +5,7 @@ export const facultyConfig: EntityConfig = {
   title: "Fakultetlar",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
+  deleteWarning: "Fakultet o'chsa, uning sahifasi va rahbarlari (dekan, o'rinbosarlar) ham o'chadi.",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Rasm", required: true },
@@ -17,6 +18,7 @@ export const departmentsConfig: EntityConfig = {
   title: "Kafedralar",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
+  deleteWarning: "Kafedra o'chsa, uning sahifasi va BARCHA xodimlari (mudir, o'qituvchilar) ham o'chadi.",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Rasm", required: true },
@@ -29,6 +31,7 @@ export const leaderConfig: EntityConfig = {
   title: "Rahbariyat",
   listColumns: [{ key: "id", label: "ID" }, { key: "name_uz", label: "F.I.SH" }, { key: "position_uz", label: "Lavozim" }],
   deleteConfirmField: "name_uz",
+  deleteWarning: "Xodim saytdagi kafedra/fakultet sahifasidan ham yo'qoladi.",
   fields: [
     { kind: "lang-text", base: "name", label: "F.I.SH", requiredUz: true },
     { kind: "lang-text", base: "position", label: "Lavozim", requiredUz: true },
@@ -47,6 +50,7 @@ export const documentsConfig: EntityConfig = {
   title: "Hujjatlar to'plami",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
+  deleteWarning: "To'plam o'chsa, uning ichidagi barcha hujjat elementlari ham o'chadi.",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
   ],
@@ -91,6 +95,7 @@ export const courseConfig: EntityConfig = {
   title: "Kurslar",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
+  deleteWarning: "Kurs o'chsa, unga biriktirilgan dars jadvallari ham o'chadi.",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
   ],
@@ -113,6 +118,7 @@ export const resultCategoryConfig: EntityConfig = {
   title: "Qabul natijalari — yo'nalishlar",
   listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
   deleteConfirmField: "title_uz",
+  deleteWarning: "Yo'nalish o'chsa, undagi barcha natija fayllari ham o'chadi.",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
   ],
