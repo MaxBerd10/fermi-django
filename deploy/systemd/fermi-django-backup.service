@@ -7,4 +7,4 @@ Type=oneshot
 User=www-data
 Group=www-data
 EnvironmentFile=/etc/fermi-django.env
-ExecStart=/var/www/fermi-django/deploy/backup-db.sh
+ExecStart=/home/fermi-django/deploy/backup-db.sh

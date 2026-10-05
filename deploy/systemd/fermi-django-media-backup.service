@@ -1,0 +1,8 @@
+[Unit]
+Description=FerMI uploaded-files mirror (one-shot, triggered by fermi-django-media-backup.timer)
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+ExecStart=/home/fermi-django/deploy/backup-media.sh

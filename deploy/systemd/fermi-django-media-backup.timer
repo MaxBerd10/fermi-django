@@ -1,0 +1,11 @@
+[Unit]
+Description=Mirror FerMI uploaded files daily
+
+[Timer]
+# 03:45 -- after the 03:15 database dump
+OnCalendar=*-*-* 03:45:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
