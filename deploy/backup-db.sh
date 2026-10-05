@@ -35,7 +35,10 @@ for var in DB_NAME DB_USER DB_PASSWORD DB_HOST DB_PORT; do
     fi
 done
 
+# Dumps hold user password hashes and form submissions: readable by the service user only.
+umask 077
 mkdir -p "$BACKUP_DIR"
+chmod 700 "$BACKUP_DIR"
 
 timestamp="$(date -u +%Y%m%dT%H%M%SZ)"
 dest="$BACKUP_DIR/${DB_NAME}_${timestamp}.dump"

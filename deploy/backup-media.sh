@@ -15,5 +15,14 @@ BACKUP_DIR="${BACKUP_DIR:-/var/backups/fermi-django}"
 DEST="$BACKUP_DIR/media-mirror"
 
 mkdir -p "$DEST"
+
+# Safety: never let the mirror fill the disk the site itself runs on. Needs room for twice the media size.
+need_kb=$(( $(du -sk "$MEDIA_DIR" | cut -f1) * 2 ))
+free_kb=$(df -Pk "$BACKUP_DIR" | awk 'NR==2 {print $4}')
+if [ "$free_kb" -lt "$need_kb" ]; then
+    echo "backup-media.sh: not enough free disk space (${free_kb} KB free, ${need_kb} KB needed) -- skipped" >&2
+    exit 1
+fi
+
 rsync -a "$MEDIA_DIR/" "$DEST/"
 echo "backup-media.sh: mirrored $MEDIA_DIR -> $DEST ($(du -sh "$DEST" | cut -f1))"
