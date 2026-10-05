@@ -8,6 +8,7 @@ const AdminLayout = lazy(() => import("./AdminLayout"));
 const AdminLoginPage = lazy(() => import("./pages/AdminLoginPage"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const AdminStatistics = lazy(() => import("./pages/AdminStatistics"));
+const AdminHelp = lazy(() => import("./pages/AdminHelp"));
 const NewsListPage = lazy(() => import("./pages/news/NewsListPage"));
 const NewsFormPage = lazy(() => import("./pages/news/NewsFormPage"));
 const PagesListPage = lazy(() => import("./pages/pages/PagesListPage"));
@@ -29,6 +30,7 @@ export default function AdminRoutes() {
         children: [
           { index: true, element: <AdminDashboard /> },
           { path: "statistics", element: <AdminStatistics /> },
+          { path: "help", element: <AdminHelp /> },
           { path: "news", element: <NewsListPage /> }, { path: "news/new", element: <NewsFormPage /> }, { path: "news/:id", element: <NewsFormPage /> },
           { path: "pages", element: <PagesListPage /> }, { path: "pages/new", element: <PagesFormPage /> }, { path: "pages/:id", element: <PagesFormPage /> },
           ...ALL_ENTITY_CONFIGS.flatMap((config) => [{ path: config.resource, element: <GenericListPage config={config} /> }, { path: `${config.resource}/new`, element: <GenericFormPage config={config} /> }, { path: `${config.resource}/:id`, element: <GenericFormPage config={config} /> }]),

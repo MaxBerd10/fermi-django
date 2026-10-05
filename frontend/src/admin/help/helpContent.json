@@ -1,0 +1,351 @@
+{
+  "title": "Admin panel qoʻllanmasi",
+  "subtitle": "FJSTI sayti (fermi.uz) kontentini oʻzingiz qoʻyish va oʻchirish uchun qadam-baqadam yoʻriqnoma",
+  "sections": [
+    {
+      "id": "boshlash",
+      "title": "1. Boshlash: kirish va xavfsizlik",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Admin panel manzili: fermi.uz/admin. Login va parol bilan kirasiz. Saytning oʻzini koʻrish uchun chap pastdagi «Saytni koʻrish» tugmasini bosing."
+        },
+        {
+          "type": "steps",
+          "title": "Yangi xodimga kirish huquqi berish",
+          "items": [
+            "Chap menyuda «Foydalanuvchilar» bandini oching.",
+            "«Yangi qoʻshish» tugmasini bosing.",
+            "Login, elektron pochta va kuchli parol kiriting (kamida 8 belgi, harf va raqam aralash; «12345678» yoki «password» kabi oddiy parollarni tizim qabul qilmaydi).",
+            "Rolni «Administrator» qilib belgilang va saqlang. Loginni va parolni xodimga shaxsan bering."
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Muhim",
+          "items": [
+            "Har bir xodimga ALOHIDA login bering. Bitta login bilan hamma kirsa, kim nima oʻzgartirganini bilib boʻlmaydi, parolni almashtirsangiz hammaga qayta aytish kerak boʻladi.",
+            "Parolni telegramda yoki qogʻozga yozib qoʻymang. Xodim ishdan ketsa, uning hisobini «Foydalanuvchilar» boʻlimidan oʻchiring.",
+            "Hech kimga parolingizni bermang. Sizdan parolni soʻrab yozishgan boʻlsa, bu firibgarlik."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bir marta kirgandan keyin brauzeringiz sizni bir necha hafta eslab qoladi. Sessiya tugasa «Sessiya tugadi» xabari chiqadi: qaytadan kiring. Uzun matn yozayotgan boʻlsangiz, oraliqda «Saqlash» tugmasini bosib turing."
+        }
+      ]
+    },
+    {
+      "id": "qoidalar",
+      "title": "2. Eng muhim qoidalar",
+      "blocks": [
+        {
+          "type": "warn",
+          "title": "Bularni doim eslab qoling",
+          "items": [
+            "Oʻzbekcha matnni LOTIN harfida yozing. Kirill harfida yozsangiz, saqlashda tizim avtomatik lotinga oʻgiradi, lekin shunga ishonmasdan lotinda yozgan yaxshi.",
+            "Matnni avval OʻZBEKCHA («uz») boʻlimiga yozing. Rus va ingliz tillari uchun «RU va EN ga tarjima qilish» tugmasini bosing, tarjimani koʻzdan kechirib, kerak boʻlsa tuzating.",
+            "Har oʻzgarishdan keyin «Saqlash» tugmasini bosing va «Saqlandi.» yozuvini koʻring. Saqlamasdan boshqa sahifaga oʻtsangiz, yozganingiz yoʻqoladi.",
+            "OʻCHIRILGAN yozuvni qaytarib boʻlmaydi. Yangilikni vaqtincha yashirmoqchi boʻlsangiz, oʻchirmang: uni ochib «Holat» ni «Qoralama» qiling.",
+            "Bir yozuvni ikki kishi bir vaqtda tahrirlamang: oxirgi saqlagan odamning variantida qoladi.",
+            "Rasm va fayllarga tushunarli nom bering (masalan «Qabul-nizomi-2026.pdf», «IMG_0045.pdf» emas)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yangilik",
+      "title": "3. Yangilik qoʻshish va oʻzgartirish",
+      "blocks": [
+        {
+          "type": "steps",
+          "title": "Yangi yangilik",
+          "items": [
+            "Chap menyuda «Yangiliklar» → «Yangi qoʻshish».",
+            "«Kategoriya» ni tanlang (masalan: Tadbirlar, Tanlovlar, Xalqaro hamkorlik).",
+            "«Holat»: «Eʼlon qilingan» yoki «Qoralama» (qoralama saytda koʻrinmaydi).",
+            "«Nashr sanasi»: boʻsh qoldirsangiz hozirgi vaqt qoʻyiladi. Kelajak sanasi yozsangiz, yangilik oʻsha vaqtgacha saytda koʻrinmaydi.",
+            "«Asosiy rasm (muqova)»: bosib rasm tanlang yoki kompyuterdan yuklang.",
+            "Sarlavhani va matnni oʻzbekcha boʻlimga yozing.",
+            "«RU va EN ga tarjima qilish» tugmasini bosing. Tarjimani tekshiring.",
+            "«Saqlash» ni bosing. Soʻng «Saytni koʻrish» orqali yangilik chiqqanini tekshiring."
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Maslahat",
+          "items": [
+            "Rasm hajmi 2 MB dan oshmasin, kengligi 1600 pikseldan ortiq boʻlmasin: sayt tez ochiladi. Telefon rasmlarini kichraytirib yuklang.",
+            "Qoʻshimcha rasmlar uchun «Qoʻshimcha rasmlar (galereya)» boʻlimidan foydalaning: ular yangilik oxirida rasmlar toʻplami boʻlib chiqadi."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Mavjud yangilikni oʻzgartirish uchun roʻyxatdan uning yonidagi qalam belgisini bosing. Qidirish oynasi sarlavha boʻyicha izlaydi. Oʻchirish uchun savat belgisi (tasdiqlash soʻraladi)."
+        }
+      ]
+    },
+    {
+      "id": "matn",
+      "title": "4. Matn bilan ishlash: tugmalar nima qiladi",
+      "blocks": [
+        {
+          "type": "table",
+          "head": [
+            "Tugma",
+            "Nima qiladi"
+          ],
+          "rows": [
+            [
+              "Qalin / Kursiv / Tagiga chizilgan",
+              "Belgilangan soʻzlarni ajratadi."
+            ],
+            [
+              "Sarlavha 2 / Sarlavha 3",
+              "Boʻlim sarlavhasi (sayt dizayniga mos katta yozuv)."
+            ],
+            [
+              "Roʻyxat",
+              "Punktlar roʻyxati. Diqqat: saytda roʻyxat raqamlangan koʻrinishda chiqadi."
+            ],
+            [
+              "Rasm (yuklash / kutubxonadan)",
+              "Matn ichiga rasm qoʻyadi."
+            ],
+            [
+              "Fayl qoʻshish",
+              "PDF, Word, Excel faylni qoʻshadi (keyingi boʻlimga qarang)."
+            ],
+            [
+              "Bekor qilish / Qaytarish",
+              "Soʻnggi harakatni bekor qiladi yoki qaytaradi."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Havola (internet manzil) qoʻshish uchun uni matn ichiga oddiygina yozing, masalan https://fjsti.uz/aloqa yoki info@fjsti.uz. Sayt uni oʻzi bosiladigan havolaga aylantiradi."
+        },
+        {
+          "type": "tip",
+          "title": "Koʻk chiziqli «chip» bloklar",
+          "items": [
+            "Editorda nuqtali koʻk ramkali «Jadval…», «Hujjat…», «Galereya…» deb yozilgan qatorlar bor. Bular matn emas, tayyor bloklar: tahrir qilib boʻlmaydi, lekin sudrab boshqa joyga olib oʻtish mumkin.",
+            "Ularni oʻchirish uchun ustiga bosing va klaviaturada Delete (yoki Backspace) bosing. Tasodifan oʻchirib qoʻysangiz, saqlashdan oldin «Bekor qilish» ni bosing.",
+            "Hech narsa oʻzgartirmay «Saqlash» bossangiz, ular joyida qoladi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fayl",
+      "title": "5. PDF, Word, Excel fayl qoʻshish",
+      "blocks": [
+        {
+          "type": "steps",
+          "title": "Qadamlar",
+          "items": [
+            "Yangilik yoki sahifaning OʻZBEKCHA matn oynasida, kerakli joyga kursorni qoʻying.",
+            "Asboblar panelidagi «Fayl qoʻshish» belgisini bosing va faylni tanlang (25 MB gacha; PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX).",
+            "Matnda koʻk ramkali «Hujjat: … (saqlaganingizda sahifaga qoʻshiladi)» qatori paydo boʻladi.",
+            "«Saqlash» ni bosing. Saytda faylning nomi, turi, hajmi va «Brauzerda ochish» / «Yuklab olish» tugmalari bor tayyor karta chiqadi."
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Eslatma",
+          "items": [
+            "Karta sarlavhasi fayl nomidan olinadi («Nizom_2026.pdf» → «Nizom 2026»). Shuning uchun faylni yuklashdan oldin tushunarli nom bering.",
+            "Katta (masalan 600 betlik) toʻplamlarni PDF qilib yuklang: Word fayl brauzerda ochilmaydi, faqat yuklanadi.",
+            "Faylni olib tashlash: koʻk ramkali «Hujjat» qatorini tanlang va Delete bosing, soʻng saqlang."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sahifa",
+      "title": "6. Sahifalar va menyu",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "«Sahifalar» — «Institut haqida», «Qabul nizomi» kabi doimiy sahifalar. Tahrirlash yangilik bilan bir xil: oʻzbekcha matn, tarjima, saqlash."
+        },
+        {
+          "type": "steps",
+          "title": "Yangi sahifa qoʻshib, menyuda koʻrsatish",
+          "items": [
+            "«Sahifalar» → «Yangi qoʻshish»: manzil nomi (slug, lotin harfda, boʻshliqsiz: masalan qabul-nizomi) va matnni kiriting, saqlang.",
+            "«Menyu daraxti» ga oʻting. Kerakli boʻlimning yonidagi «+» bilan yangi band qoʻshing.",
+            "Oʻng tomondagi oynada bandning nomini yozing va «Saytdagi sahifaga» ni tanlab, roʻyxatdan sahifangizni belgilang.",
+            "«Saqlash» ni bosing va saytning menyusida chiqqanini tekshiring. Bandlarni sichqoncha bilan sudrab tartibini oʻzgartirasiz."
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Ehtiyot boʻling",
+          "items": [
+            "Menyudagi bandni oʻchirsangiz, uning ichidagi barcha pastki bandlar ham menyudan yoʻqoladi (sahifaning oʻzi oʻchmaydi).",
+            "Sahifani oʻchirishdan oldin uni menyudan olib tashlang, aks holda menyu havolasi «topilmadi» xatosini beradi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tuzilma",
+      "title": "7. Fakultet, kafedra va xodimlar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "«Fakultetlar» va «Kafedralar» — tuzilma sahifalari. «Rahbariyat» — xodimlar (kafedra mudiri, dekan, prorektor va boshqalar): ism, lavozim, rasm, telefon, qabul kunlari."
+        },
+        {
+          "type": "steps",
+          "title": "Kafedra mudirini yoki xodim rasmini almashtirish",
+          "items": [
+            "«Rahbariyat» boʻlimiga kiring, qidirishda ismini yozing.",
+            "Xodimni oching, «Rasm» maydonidan yangi rasmni tanlang (tik, yuz aniq koʻringan portret).",
+            "Saqlang va kafedra sahifasida tekshiring."
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Muhim",
+          "items": [
+            "Kafedrani yoki fakultetni oʻchirsangiz, uning sahifasi va BARCHA xodimlari ham oʻchib ketadi. Faqat butunlay yopilgan kafedrani oʻchiring.",
+            "Xodim ketgan boʻlsa, uni «Rahbariyat» dan oʻchiring: u kafedra sahifasidan ham yoʻqoladi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "galereya",
+      "title": "8. Foto galereya, video, hujjatlar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "«Foto galereya» — saytning rasmlar sahifasi: «Yangi qoʻshish», rasmni tanlang (majburiy), nom yozing. «Video» — videolar: YouTube havolasini «YouTube video havolasi» maydoniga qoʻying (tavsiya etiladi; katta video faylni oʻzimizning serverga yuklamang). Pastdagi texnik maydonni boʻsh qoldiring."
+        },
+        {
+          "type": "p",
+          "text": "«Hujjatlar toʻplami» va «Hujjat elementlari» — hujjatlar boʻlimidagi toʻplamlar (masalan qoidalar, nizomlar): avval toʻplam, soʻng uning ichiga element qoʻshiladi. «Kurslar» va «Dars jadvali» — kurs yaratib, unga jadval faylini (Excel) biriktirasiz. «Qabul natijalari» — yoʻnalish yaratib, unga natija fayllarini qoʻshasiz."
+        },
+        {
+          "type": "warn",
+          "title": "Eslatma",
+          "items": [
+            "Kursni oʻchirsangiz, uning dars jadvallari ham oʻchadi. Yoʻnalishni oʻchirsangiz, undagi natija fayllari ham oʻchadi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "murojaat",
+      "title": "9. Murojaatlar va arizalar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Saytdagi formalardan kelgan hamma narsa «Murojaatlar» boʻlimiga tushadi: «Aloqa formasi», «Qabul arizalari», «Virtual qabulxona», «Tanlov arizalari». Ularni faqat koʻrasiz va holatini belgilaysiz, yangi yozuv qoʻshib boʻlmaydi."
+        },
+        {
+          "type": "steps",
+          "title": "Arizani koʻrish",
+          "items": [
+            "Boʻlimni oching: yangi (koʻrilmagan) arizalar «Yangi» belgisi bilan chiqadi.",
+            "Arizani ochsangiz u avtomatik «Koʻrilgan» boʻladi. Biriktirilgan fayl boʻlsa, yuklab olish havolasi bor.",
+            "Arizachi bilan bogʻlanish uchun telefon yoki pochtasini ishlating."
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Tanlov eʼloni va ariza qabuli",
+          "items": [
+            "Tanlov eʼlon qilish uchun yangilik qoʻshing va kategoriyasini «Tanlovlar» qiling: sahifa oxirida «Ariza topshirish» formasi oʻzi paydo boʻladi.",
+            "Kelgan arizalar «Tanlov arizalari» boʻlimida, qaysi tanlovga ekani bilan koʻrinadi.",
+            "Tanlov tugagach eʼlonni «Qoralama» qiling yoki muddatni matnda yangilang."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sozlamalar",
+      "title": "10. Sozlamalar",
+      "blocks": [
+        {
+          "type": "table",
+          "head": [
+            "Boʻlim",
+            "Nima uchun"
+          ],
+          "rows": [
+            [
+              "Ijtimoiy tarmoqlar",
+              "Footer va «Aloqa» sahifasidagi Facebook, Telegram va boshqa havolalar."
+            ],
+            [
+              "Foydali saytlar",
+              "Footerda «Foydali saytlar» qatorida chiqadigan havolalar (logotip ixtiyoriy)."
+            ],
+            [
+              "Statistika",
+              "Bosh sahifadagi raqamlar (talabalar, professorlar soni va boshqalar)."
+            ],
+            [
+              "Umumiy sozlamalar",
+              "Telefon, pochta, manzil: footer va «Aloqa» sahifasida chiqadi."
+            ],
+            [
+              "Logotip",
+              "Sayt logotipi va nomi."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xatolar",
+      "title": "11. Xato chiqsa nima qilish kerak",
+      "blocks": [
+        {
+          "type": "table",
+          "head": [
+            "Xabar",
+            "Nima qilish kerak"
+          ],
+          "rows": [
+            [
+              "«Sessiya tugadi»",
+              "Qaytadan kiring. Saqlanmagan matnni qayta yozish kerak boʻlishi mumkin."
+            ],
+            [
+              "«Bu maydon toʻldirilishi shart»",
+              "Qizil yozuv koʻrsatgan maydonni toʻldiring (rasm yoki fayl tanlash ham shu)."
+            ],
+            [
+              "«Fayl hajmi … dan oshmasligi kerak»",
+              "Faylni kichraytiring (rasm 2 MB gacha, hujjat 25 MB gacha)."
+            ],
+            [
+              "«Bu yozuvni oʻchirib boʻlmaydi: u boshqa joyda ishlatilmoqda»",
+              "Avval uni ishlatayotgan joydan (masalan menyu yoki jadval) olib tashlang, soʻng qayta oʻchiring."
+            ],
+            [
+              "«Serverda xatolik yuz berdi»",
+              "1-2 daqiqadan soʻng qayta urining. Takrorlansa, texnik mutaxassisga vaqtni va nima qilayotganingizni ayting."
+            ],
+            [
+              "Sahifa yangilanmayapti",
+              "Brauzerda Cmd+Shift+R (Windows: Ctrl+F5) bosing."
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Texnik yordam",
+          "items": [
+            "Muammo boʻlsa: nima qilayotgan edingiz, qaysi sahifa, qaysi vaqt, ekrandagi xabar. Shu maʼlumotlarni (ekran rasmi bilan) texnik mutaxassisga yuboring: shunda tez topiladi."
+          ]
+        }
+      ]
+    }
+  ]
+}

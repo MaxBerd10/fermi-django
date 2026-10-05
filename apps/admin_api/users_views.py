@@ -6,6 +6,8 @@ Both 9 and 0 map onto is_active=False on write; on read, only 10/9 are
 ever returned (never 0 -- there's no separate "deleted" state, matching
 the "accepted but inert" precedent used elsewhere for fields with no
 full backing)."""
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db.models import Q
 from rest_framework import serializers, viewsets
 from rest_framework.exceptions import ValidationError
@@ -45,15 +47,24 @@ class AdminUserSerializer(serializers.ModelSerializer):
         if role is not None:
             instance.is_staff = role == "admin"
 
+    @staticmethod
+    def _check_password(password, user):
+        """The staff-management form used to accept any password ("1", "123456") because set_password() runs
+        no validators; these are the same rules Django applies everywhere else (AUTH_PASSWORD_VALIDATORS)."""
+        try:
+            validate_password(password, user)
+        except DjangoValidationError as exc:
+            raise serializers.ValidationError({"password": list(exc.messages)})
+
     def create(self, validated_data):
         data = self.context["request"].data
         user = User(username=data.get("username", ""), email=data.get("email", ""))
         self._apply_status_and_role(user, data)
         password = data.get("password")
-        if password:
-            user.set_password(password)
-        else:
-            user.set_unusable_password()
+        if not password:
+            raise serializers.ValidationError({"password": ["Parol kiriting."]})
+        self._check_password(password, user)
+        user.set_password(password)
         user.save()
         return user
 
@@ -64,6 +75,7 @@ class AdminUserSerializer(serializers.ModelSerializer):
         self._apply_status_and_role(instance, data)
         password = data.get("password")
         if password:
+            self._check_password(password, instance)
             instance.set_password(password)
         instance.save()
         return instance

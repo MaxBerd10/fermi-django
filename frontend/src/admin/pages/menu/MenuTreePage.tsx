@@ -14,6 +14,15 @@ function findNode(nodes: AdminMenuNode[], id: number): AdminMenuNode | null {
   return null;
 }
 
+function findParentId(nodes: AdminMenuNode[], id: number, parent: number | null = null): number | null {
+  for (const n of nodes) {
+    if (n.id === id) return parent;
+    const found = findParentId(n.children, id, n.id);
+    if (found !== null) return found;
+  }
+  return null;
+}
+
 export default function MenuTreePage() {
   const [tree, setTree] = useState<AdminMenuNode[]>([]);
   const [loading, setLoading] = useState(true);
@@ -150,7 +159,7 @@ export default function MenuTreePage() {
 
         <div>
           {selectedNode ? (
-            <MenuNodeEditor node={selectedNode} onSave={onSave} onClose={() => setSelectedId(null)} />
+            <MenuNodeEditor node={selectedNode} parentId={findParentId(tree, selectedNode.id)} onSave={onSave} onClose={() => setSelectedId(null)} />
           ) : (
             <div className="bg-background-50 border border-background-200 rounded-lg p-5 text-sm text-foreground-500 text-center">
               Tahrirlash uchun chapdan biror elementni tanlang.

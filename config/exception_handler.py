@@ -34,8 +34,13 @@ _UZ_MESSAGES = {
     "Authentication credentials were not provided.": "Tizimga qaytadan kiring.",
     "You do not have permission to perform this action.": "Bu amal uchun ruxsat yo'q.",
     "Not found.": "Topilmadi.",
+    "This password is too common.": "Bu parol juda oddiy (osongina topiladi). Boshqasini tanlang.",
+    "This password is entirely numeric.": "Parol faqat raqamlardan iborat bo'lmasin.",
+    "The password is too similar to the username.": "Parol loginga juda o'xshash. Boshqasini tanlang.",
+    "The password is too similar to the email address.": "Parol pochtaga juda o'xshash. Boshqasini tanlang.",
 }
 _UZ_PATTERNS = [
+    (re.compile(r"This password is too short\. It must contain at least (\d+) characters?\."), r"Parol juda qisqa: kamida \1 ta belgi bo'lsin."),
     (re.compile(r"Ensure this field has no more than (\d+) characters\."), r"Eng ko'pi bilan \1 ta belgi kiritish mumkin."),
     (re.compile(r"Ensure this field has at least (\d+) characters\."), r"Kamida \1 ta belgi kiriting."),
     (re.compile(r"Invalid pk .* object does not exist\."), "Tanlangan yozuv topilmadi."),

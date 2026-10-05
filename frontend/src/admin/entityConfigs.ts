@@ -85,8 +85,8 @@ export const videoConfig: EntityConfig = {
   listColumns: [{ key: "id", label: "ID" }, { key: "url", label: "URL" }],
   deleteConfirmField: "url",
   fields: [
-    { kind: "text", key: "video", label: "Video fayl yo'li" },
-    { kind: "text", key: "url", label: "Tashqi video URL (YouTube va h.k.)" },
+    { kind: "text", key: "url", label: "YouTube video havolasi (tavsiya etiladi, masalan https://youtu.be/…)" },
+    { kind: "text", key: "video", label: "Yuklangan video fayl yo'li (texnik maydon: odatda bo'sh qoldiring)" },
   ],
 };
 

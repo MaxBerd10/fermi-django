@@ -244,3 +244,18 @@ def test_a_web_address_typed_in_the_text_survives_a_save(admin_client, category)
     assert res.status_code == 201, res.content
     back = admin_client.get(f"/api/v1/admin/news/{res.data['id']}").json()["content_uz"]
     assert "https://fjsti.uz/aloqa" in back and "info@fjsti.uz" in back
+
+
+@pytest.mark.parametrize("password, fragment", [("123", "qisqa"), ("12345678", "raqam"), ("password", "oddiy")])
+def test_staff_accounts_cannot_be_given_a_weak_password(admin_client, db, password, fragment):
+    res = admin_client.post("/api/v1/admin/users", {"username": "yangi", "email": "y@fjsti.uz", "password": password, "role": "admin", "status": 10}, format="json")
+    assert res.status_code == 400
+    assert any(fragment in message for message in res.json()["password"])
+    assert not User.objects.filter(username="yangi").exists()
+
+
+def test_a_strong_password_creates_the_account_and_a_missing_one_is_refused(admin_client, db):
+    ok = admin_client.post("/api/v1/admin/users", {"username": "yangi", "email": "y@fjsti.uz", "password": "Qizil-Anor-2026!", "role": "admin", "status": 10}, format="json")
+    assert ok.status_code == 201 and User.objects.get(username="yangi").check_password("Qizil-Anor-2026!")
+    none = admin_client.post("/api/v1/admin/users", {"username": "yana", "email": "a@fjsti.uz", "role": "admin"}, format="json")
+    assert none.status_code == 400 and none.json()["password"] == ["Parol kiriting."]
