@@ -10,6 +10,7 @@ import { Reveal } from "@/components/Animation";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { MAP_EMBED_URL } from "@/lib/siteConstants";
 import { resolveSocialPlatform, SOCIAL_PLATFORM_ICON, type SocialPlatform } from "@/lib/socialPlatform";
+import { HEMIS_URL } from "@/lib/externalLinks";
 
 const SOCIAL_COLOR: Record<SocialPlatform, string> = {
   facebook: "bg-blue-50 text-blue-600 hover:bg-blue-100",
@@ -144,7 +145,7 @@ export default function AloqaPage() {
                     <i className="ri-customer-service-2-line w-5 h-5 flex items-center justify-center text-primary-600" />
                     <span className="text-sm font-medium text-foreground-800">{t("nav.virtualReception")}</span>
                   </Link>
-                  <a href="http://hemis.fjsti.uz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2.5 rounded-xl bg-secondary-50 hover:bg-secondary-100 transition-colors cursor-pointer">
+                  <a href={HEMIS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2.5 rounded-xl bg-secondary-50 hover:bg-secondary-100 transition-colors cursor-pointer">
                     <i className="ri-dashboard-3-line w-5 h-5 flex items-center justify-center text-secondary-600" />
                     <span className="text-sm font-medium text-foreground-800">HEMIS</span>
                   </a>

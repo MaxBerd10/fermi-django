@@ -1,3 +1,4 @@
+import { HEMIS_URL } from "@/lib/externalLinks";
 export const heroSlides = [
   {
     id: 1,
@@ -30,7 +31,7 @@ export const heroSlides = [
 
 export const quickServices = [
   { id: "virtual", icon: "ri-customer-service-2-line", title: "Virtual qabulxona", desc: "Rasmiy murojaat", href: "/virtual-qabulxona", color: "primary" },
-  { id: "hemis", icon: "ri-database-2-line", title: "HEMIS", desc: "Masofaviy taʻlimni boshqarish tizimi", href: "https://hemis.fjsti.uz", color: "accent" },
+  { id: "hemis", icon: "ri-database-2-line", title: "HEMIS", desc: "Masofaviy taʻlimni boshqarish tizimi", href: HEMIS_URL, color: "accent" },
   { id: "scopus", icon: "ri-book-open-line", title: "Scopus", desc: "Ilmiy nashrlar", href: "https://www.scopus.com/standard/marketing.uri", color: "primary" },
   { id: "doctorium", icon: "ri-stethoscope-line", title: "Doctorium", desc: "Shifokorlar platformasi", href: "https://doctorium.com/", color: "secondary" },
   { id: "qabul", icon: "ri-user-add-line", title: "Onlayn qabul", desc: "Ariza topshirish", href: "https://my.uzedu.uz", color: "accent" },
@@ -100,58 +101,6 @@ export const announcements = [
   { id: 7, sticky: false, tag: "Muhim", date: "2026-06-05", title: "Talabalar turar joyi arizalari qabul boshlandi", href: "/yangiliklar/turar-joy" },
 ];
 
-export const faculties = [
-  {
-    id: 1,
-    name: "Davolash ishi fakulteti",
-    students: 2840,
-    kafedra: 12,
-    dean: "t.f.d., prof. Karimov A.A.",
-    image: "https://fjsti.uz/uploads/img/logo/Davolash%20logo.png",
-    href: "/fakultetlar/davolash-ishi",
-  },
-  {
-    id: 2,
-    name: "Tibbiy profilaktika va jamoat salomatligi fakulteti",
-    students: 1520,
-    kafedra: 8,
-    dean: "t.f.n., dots. Yusupova M.X.",
-    image: "https://fjsti.uz/uploads/img/fakultet/TPI%20fakulteti/TPI%20logo.jpg",
-    href: "/fakultetlar/tibbiy-profilaktika",
-  },
-  {
-    id: 3,
-    name: "Xalqaro fakultet",
-    students: 980,
-    kafedra: 4,
-    dean: "t.f.d., prof. Rahmonov B.T.",
-    image: "https://fjsti.uz/uploads/img/logo/International%20faculty.png",
-    href: "/fakultetlar/xalqaro",
-  },
-  {
-    id: 4,
-    name: "Pediatriya fakulteti",
-    students: 898,
-    kafedra: 6,
-    dean: "t.f.n., dots. Toshmatov F.O.",
-    image: "https://fjsti.uz/uploads/img/fakultet/Pediatriya%20fakulteti/logo%20ped.jpg",
-    href: "/fakultetlar/pediatriya",
-  },
-];
-
-export const departments = [
-  { id: 1, name: "Pediatriya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Pediatriya%20kafedrasi.jpg", href: "/kafedralar/pediatriya" },
-  { id: 2, name: "Mikrobiologiya, virusologiya va immunologiya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Mikrobilogiya.jpg", href: "/kafedralar/mikrobiologiya" },
-  { id: 3, name: "Oʻzbek va xorijiy tillar kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Xorijiy%20tillar.jpg", href: "/kafedralar/xorijiy-tillar" },
-  { id: 4, name: "Kommunal va mehnat gigienasi kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Kommunal.jpg", href: "/kafedralar/kommunal-gigiena" },
-  { id: 5, name: "Tibbiy va biologik kimyo kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Tibbiy%20kimyo%20kafedrasi.jpg", href: "/kafedralar/tibbiy-kimyo" },
-  { id: 6, name: "Epidemiologiya va yuqumli kasalliklar kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Epid%20kafedrasi.jpg", href: "/kafedralar/epidemiologiya" },
-  { id: 7, name: "Akusherlik va ginekologiya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Akusherlik.jpg", href: "/kafedralar/akusherlik" },
-  { id: 8, name: "Stomatologiya va otoloringologiya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Stomatologiya%20kafedarsi.jpg", href: "/kafedralar/stomatologiya" },
-  { id: 9, name: "Fiziologiya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Fiziologiya.jpg", href: "/kafedralar/fiziologiya" },
-  { id: 10, name: "Gistologiya va biologiya kafedrasi", image: "https://fjsti.uz/uploads/img/kafedra/Kafedra%20logo/Sayt%20uchun/Gistologiya.jpg", href: "/kafedralar/gistologiya" },
-];
-
 export const events = [
   {
     id: 1,
@@ -212,7 +161,7 @@ export const partners = [
   { name: "SSV", icon: "ri-heart-pulse-line", href: "https://ssv.uz/uz" },
   { name: "Study in Uzbekistan", icon: "ri-global-line", href: "https://studyin-uzbekistan.uz/universities/80" },
   { name: "Korrupsiyaga qarshi", icon: "ri-shield-check-line", href: "/about/korrupsiyaga-qarshi-kurashish-davlat-dasturlari" },
-  { name: "HEMIS", icon: "ri-database-2-line", href: "https://hemis.fjsti.uz" },
+  { name: "HEMIS", icon: "ri-database-2-line", href: HEMIS_URL },
 ];
 
 export const navItems = [
@@ -286,7 +235,7 @@ export const navItems = [
     href: "/xizmatlar",
     children: [
       { label: "Virtual qabulxona", href: "/virtual-qabulxona" },
-      { label: "HEMIS", href: "https://hemis.fjsti.uz" },
+      { label: "HEMIS", href: HEMIS_URL },
       { label: "Scopus", href: "https://www.scopus.com" },
       { label: "Doctorium", href: "https://doctorium.com" },
       { label: "Karyera markazi", href: "/karyera" },

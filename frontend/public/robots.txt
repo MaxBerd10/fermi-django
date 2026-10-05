@@ -6,4 +6,4 @@ Disallow: /royxatdan-otish
 Disallow: /parolni-tiklash
 Disallow: /search
 
-Sitemap: https://fjsti.uz/sitemap.xml
+Sitemap: https://fermi.uz/sitemap.xml

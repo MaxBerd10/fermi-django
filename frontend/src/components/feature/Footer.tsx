@@ -8,6 +8,7 @@ import { optimizedImageUrl } from "@/lib/imageProxy";
 import { resolveSocialPlatform, SOCIAL_PLATFORM_ICON } from "@/lib/socialPlatform";
 import BrandMark from "../shared/BrandMark";
 import WwwUzCounter from "../shared/WwwUzCounter";
+import { HEMIS_URL } from "@/lib/externalLinks";
 
 const LOGO_IMG = "/images/logo-96.webp";
 
@@ -23,7 +24,7 @@ const FOOTER_SERVICES = [
   { labelKey: "quickServices.item1.title", href: "/virtual-reception/17", icon: "ri-customer-service-2-line" },
   { labelKey: "footer.qabul", href: "/qabul", icon: "ri-file-user-line" },
   { labelKey: "quickServices.item2.title", href: "/aloqa", icon: "ri-map-pin-line" },
-  { labelKey: "quickServices.item3.title", href: "http://hemis.fjsti.uz", icon: "ri-dashboard-3-line" },
+  { labelKey: "quickServices.item3.title", href: HEMIS_URL, icon: "ri-dashboard-3-line" },
   { labelKey: "quickServices.item4.title", href: "https://www.scopus.com/standard/marketing.uri", icon: "ri-article-line" },
   { labelKey: "quickServices.item5.title", href: "https://doctorium.com/", icon: "ri-stethoscope-line" },
 ] as const;
@@ -49,7 +50,7 @@ const XIZMAT_LINKS: FooterLink[] = [
   { labelKey: "quickServices.item1.title", to: "/virtual-reception/17" },
   { labelKey: "footer.jcpmJurnali", to: "/yangiliklar" },
   { labelKey: "nav.testBaza", to: "/blog/29/mutaxassisliklar-boyicha-testlar-toplami" },
-  { labelKey: "quickServices.item3.title", to: "http://hemis.fjsti.uz", external: true },
+  { labelKey: "quickServices.item3.title", to: HEMIS_URL, external: true },
 ];
 
 const PORTALS = [

@@ -5,6 +5,7 @@ import { getSettings } from "@/api/settings";
 import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
 import { CountUp, useInViewOnce, usePrefersReducedMotion } from "@/components/Animation";
+import { HEMIS_URL } from "@/lib/externalLinks";
 
 const FALLBACK_TITLE = "Fargʻona jamoat salomatligi tibbiyot instituti";
 
@@ -26,7 +27,7 @@ const QUICK_TOOLS: {
   { key: "admit", icon: "ri-file-user-line", href: "/qabul", accent: true },
   { key: "path", icon: "ri-route-line", href: "#pathfinder" },
   { key: "test", icon: "ri-questionnaire-line", href: "https://online-imtixon.uz", external: true },
-  { key: "hemis", icon: "ri-dashboard-3-line", href: "http://hemis.fjsti.uz", external: true },
+  { key: "hemis", icon: "ri-dashboard-3-line", href: HEMIS_URL, external: true },
   { key: "contact", icon: "ri-map-pin-line", href: "/aloqa" },
 ];
 

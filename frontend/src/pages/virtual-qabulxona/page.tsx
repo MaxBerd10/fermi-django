@@ -12,6 +12,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import AiPanel from "@/components/ai/AiPanel";
 import { translateRegionName } from "@/lib/regionNames";
 import { FEATURES } from "@/lib/featureFlags";
+import { HEMIS_URL } from "@/lib/externalLinks";
 
 export default function VirtualQabulxonaPage() {
   const { t, i18n } = useTranslation();
@@ -289,7 +290,7 @@ export default function VirtualQabulxonaPage() {
               <div className="page-card p-4 space-y-2">
                 <h3 className="font-heading font-semibold text-foreground-900 text-sm mb-2">{t("vq.formTitle")}</h3>
                 <p className="text-xs text-foreground-600 leading-relaxed">{t("vq.formSubtitle")}</p>
-                <a href="http://hemis.fjsti.uz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold text-[#0a1158] hover:underline">
+                <a href={HEMIS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold text-[#0a1158] hover:underline">
                   <i className="ri-dashboard-3-line" /> HEMIS
                 </a>
                 <a href="/qabul" className="flex items-center gap-2 text-sm font-semibold text-[#0a1158] hover:underline">
