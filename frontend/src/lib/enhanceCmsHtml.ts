@@ -1269,13 +1269,17 @@ function buildCouncilMainLayout(body: HTMLElement) {
 function buildCouncilDecisionsLayout(body: HTMLElement) {
   stripRestrictedNotice(body);
   const lines: string[] = [];
+  const seenLines = new Set<string>();
 
   body.querySelectorAll("p, div").forEach((el) => {
     const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
     if (!text || RESTRICTED_TEXT_RE.test(text)) return;
     text.split(/\n+/).forEach((line) => {
       const t = line.trim();
-      if (t.length > 6 && /kengash|bayon|qaror/i.test(t)) lines.push(t);
+      if (t.length > 6 && /kengash|bayon|qaror/i.test(t) && !seenLines.has(t)) {
+        seenLines.add(t);
+        lines.push(t);
+      }
     });
     el.remove();
   });
@@ -1297,8 +1301,7 @@ function buildCouncilDecisionsLayout(body: HTMLElement) {
 
 function buildAutoreferatLayout(body: HTMLElement) {
   stripRestrictedNotice(body);
-  const raw = body.textContent?.replace(/\u00a0/g, " ") ?? "";
-  const blocks = raw.split(/\n\s*\n+/).map((b) => b.trim()).filter(Boolean);
+  const lines = collectLinkedLines(body);
 
   body.innerHTML = "";
   const grid = body.ownerDocument.createElement("div");
@@ -1307,6 +1310,13 @@ function buildAutoreferatLayout(body: HTMLElement) {
   let currentHeader = "";
   let pendingAuthor = "";
   let pendingTitle = "";
+  let pendingHref = "";
+  let lastTopic: HTMLElement | null = null;
+
+  const linkTopic = (topic: HTMLElement | null, href: string) => {
+    if (!topic || !href || topic.querySelector("a")) return;
+    topic.innerHTML = `<a ${fileLinkAttrs(href)}>${topic.innerHTML}</a>`;
+  };
 
   const flushCard = () => {
     if (!pendingAuthor && !pendingTitle) return;
@@ -1317,9 +1327,12 @@ function buildAutoreferatLayout(body: HTMLElement) {
       <h3 class="cms-autoreferat-card__author">${escapeHtml(pendingAuthor)}</h3>
       <p class="cms-autoreferat-card__topic">${escapeHtml(pendingTitle)}</p>
     `;
+    lastTopic = card.querySelector<HTMLElement>(".cms-autoreferat-card__topic");
+    linkTopic(lastTopic, pendingHref);
     grid.appendChild(card);
     pendingAuthor = "";
     pendingTitle = "";
+    pendingHref = "";
   };
 
   const isHeader = (line: string) =>
@@ -1332,25 +1345,29 @@ function buildAutoreferatLayout(body: HTMLElement) {
     /[A-Z]/.test(line) &&
     !isHeader(line);
 
-  blocks.forEach((block) => {
-    block.split(/\n+/).forEach((line) => {
-      const t = line.trim();
-      if (!t) return;
-      if (isHeader(t)) {
-        flushCard();
-        currentHeader = t;
-        return;
-      }
-      if (isAuthor(t)) {
-        flushCard();
-        pendingAuthor = t;
-        return;
-      }
-      if (pendingAuthor && !pendingTitle) {
-        pendingTitle = t;
-        flushCard();
-      }
-    });
+  lines.forEach(({ text: t, href }) => {
+    if (isHeader(t)) {
+      flushCard();
+      currentHeader = t;
+      return;
+    }
+    if (isAuthor(t)) {
+      flushCard();
+      pendingAuthor = t;
+      pendingHref = href ?? "";
+      return;
+    }
+    if (pendingAuthor && !pendingTitle) {
+      pendingTitle = t;
+      pendingHref = pendingHref || href || "";
+      flushCard();
+      return;
+    }
+    // a link that sits on a line of its own: it belongs to the card being built, or to the one just finished
+    if (href) {
+      if (pendingAuthor) pendingHref = pendingHref || href;
+      else linkTopic(lastTopic, href);
+    }
   });
 
   flushCard();
@@ -1363,6 +1380,63 @@ function escapeHtml(text: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+const DOCUMENT_HREF_RE = /\.(pdf|docx?|xlsx?|pptx?|zip|rar)(\?|#|$)/i;
+
+type LinkedLine = { text: string; href?: string };
+
+/**
+ * The same lines as `body.textContent.split(/\n+/)`, but every line also remembers the document link
+ * (pdf/doc/...) that sits on it. The "rebuild from text" layouts below used to read plain text only, which
+ * silently dropped every PDF link on those pages (journal archives, dissertation abstracts).
+ */
+function collectLinkedLines(body: HTMLElement): LinkedLine[] {
+  const walker = body.ownerDocument.createTreeWalker(body, NodeFilter.SHOW_TEXT);
+  const raw: LinkedLine[] = [{ text: "" }];
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    const value = (node.nodeValue ?? "").replace(/ /g, " ");
+    const anchorHref = node.parentElement?.closest("a[href]")?.getAttribute("href") ?? "";
+    const href = DOCUMENT_HREF_RE.test(anchorHref) ? anchorHref : undefined;
+    value.split("\n").forEach((part, i) => {
+      if (i > 0) raw.push({ text: "" });
+      const line = raw[raw.length - 1];
+      line.text += part;
+      if (href && part.trim() && !line.href) line.href = href;
+    });
+  }
+  const lines: LinkedLine[] = [];
+  raw.forEach(({ text, href }) => {
+    const clean = text.trim().replace(/\s+/g, " ");
+    if (!clean) return;
+    const previous = lines[lines.length - 1];
+    // a short "PDF" / "Ochish" line that only carries the link belongs to the title line before it
+    if (href && clean.length < 12 && previous && !previous.href) {
+      previous.href = href;
+      return;
+    }
+    lines.push({ text: clean, href });
+  });
+  return lines;
+}
+
+function fileLinkAttrs(href: string): string {
+  return `href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"`;
+}
+
+/** Pages whose layout is rebuilt from text. Their file links must not be turned into document cards first. */
+const TEXT_LAYOUT_SLUGS = new Set([
+  "institut-ilmiy-kengashi",
+  "ilmiy-kengash",
+  "avtoreferatlar",
+  "tahrir-hayati-kengashi",
+  "jcpm-2023",
+  "jcpm-2024",
+  "jcpm-2025",
+]);
+
+export function rebuildsLayoutFromText(slug?: string): boolean {
+  return !!slug && TEXT_LAYOUT_SLUGS.has(slug);
 }
 
 function buildJournalEditorialLayout(body: HTMLElement) {
@@ -1410,18 +1484,16 @@ function buildJournalEditorialLayout(body: HTMLElement) {
 
 function buildJournalArchiveLayout(body: HTMLElement, year: string) {
   stripRestrictedNotice(body);
-  const raw = body.textContent?.replace(/\u00a0/g, " ") ?? "";
-  const seen = new Set<string>();
-  const titles: string[] = [];
+  const entries = new Map<string, LinkedLine>();
 
-  raw.split(/\n+/).forEach((line) => {
-    const t = line.trim().replace(/\s+/g, " ");
-    if (t.length < 12) return;
-    const key = t.toLowerCase();
-    if (seen.has(key)) return;
-    seen.add(key);
-    titles.push(t);
+  collectLinkedLines(body).forEach((line) => {
+    if (line.text.length < 12) return;
+    const key = line.text.toLowerCase();
+    const existing = entries.get(key);
+    if (!existing) entries.set(key, { ...line });
+    else if (!existing.href && line.href) existing.href = line.href;
   });
+  const titles = [...entries.values()];
 
   body.innerHTML = "";
   const head = body.ownerDocument.createElement("div");
@@ -1432,10 +1504,13 @@ function buildJournalArchiveLayout(body: HTMLElement, year: string) {
   const list = body.ownerDocument.createElement("ul");
   list.className = "cms-journal-archive__list";
 
-  titles.forEach((title, i) => {
+  titles.forEach(({ text, href }, i) => {
     const li = body.ownerDocument.createElement("li");
     li.className = "cms-journal-archive__item";
-    li.innerHTML = `<span class="cms-journal-archive__num">${i + 1}</span><span class="cms-journal-archive__title">${escapeHtml(title)}</span>`;
+    const title = href
+      ? `<a class="cms-journal-archive__title cms-journal-archive__title--link" ${fileLinkAttrs(href)}>${escapeHtml(text)}</a>`
+      : `<span class="cms-journal-archive__title">${escapeHtml(text)}</span>`;
+    li.innerHTML = `<span class="cms-journal-archive__num">${i + 1}</span>${title}`;
     list.appendChild(li);
   });
 

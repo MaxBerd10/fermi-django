@@ -2226,6 +2226,38 @@
   }
 }
 
+/* a title that opens the article PDF */
+a.cms-journal-archive__title--link {
+  color: #0a1158;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a.cms-journal-archive__title--link:hover,
+a.cms-journal-archive__title--link:focus-visible {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cms-journal-archive__item:has(a.cms-journal-archive__title--link) {
+  cursor: pointer;
+}
+
+.cms-article--autoreferat .cms-autoreferat-card__topic a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(10, 17, 88, 0.3);
+  text-underline-offset: 3px;
+}
+
+.cms-article--autoreferat .cms-autoreferat-card__topic a:hover,
+.cms-article--autoreferat .cms-autoreferat-card__topic a:focus-visible {
+  color: #1d4ed8;
+  text-decoration-color: currentColor;
+}
+
 .cms-journal-archive__note {
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
