@@ -526,27 +526,47 @@ export default function Navbar() {
               className="nav-dropdown-panel py-2 max-h-[70vh] overflow-y-auto animate-fade-in-up"
               style={{ animationDuration: "0.1s" }}
             >
-              {openItem.children.map((child) => (
-                <div
-                  key={child.id}
-                  onMouseEnter={(e) => {
-                    cancelClose();
-                    setHoveredChild(child.id);
-                    hoveredChildElRef.current = e.currentTarget;
-                    setHoveredChildRect(e.currentTarget.getBoundingClientRect());
-                  }}
-                >
-                  <NavLink
-                    href={normalizeMenuHref(child.href)}
-                    className="group flex items-center justify-between gap-3 mx-1.5 px-3.5 py-2.5 font-heading text-sm font-medium text-foreground-800 hover:text-primary-800 hover:bg-primary-50 rounded-lg cursor-pointer transition-colors duration-200 leading-snug"
-                  >
-                    <span className="line-clamp-2">{normalizeYearLabels(child.title)}</span>
-                    {child.children.length > 0 && (
-                      <i className="ri-arrow-right-s-line text-foreground-300 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
+              {openItem.children.map((child) => {
+                const showFlyout = (row: HTMLElement) => {
+                  cancelClose();
+                  setHoveredChild(child.id);
+                  hoveredChildElRef.current = row;
+                  setHoveredChildRect(row.getBoundingClientRect());
+                };
+                const rowClass =
+                  "group flex items-center justify-between gap-3 mx-1.5 px-3.5 py-2.5 font-heading text-sm font-medium text-foreground-800 hover:text-primary-800 hover:bg-primary-50 rounded-lg transition-colors duration-200 leading-snug";
+                return (
+                  <div key={child.id} onMouseEnter={(e) => showFlyout(e.currentTarget)}>
+                    {child.children.length > 0 ? (
+                      // A row with a submenu only opens it. It is not a link: most of these rows have no page of
+                      // their own (their address is "#" or "/", which sent visitors to the home page), and the
+                      // ones that do also list that page as the first item inside.
+                      <div
+                        role="button"
+                        tabIndex={0}
+                        aria-haspopup="menu"
+                        aria-expanded={hoveredChild === child.id}
+                        className={`${rowClass} cursor-default ${hoveredChild === child.id ? "bg-primary-50 text-primary-800" : ""}`}
+                        onClick={(e) => e.currentTarget.parentElement && showFlyout(e.currentTarget.parentElement)}
+                        onFocus={(e) => e.currentTarget.parentElement && showFlyout(e.currentTarget.parentElement)}
+                        onKeyDown={(e) => {
+                          if ((e.key === "Enter" || e.key === " " || e.key === "ArrowRight") && e.currentTarget.parentElement) {
+                            e.preventDefault();
+                            showFlyout(e.currentTarget.parentElement);
+                          }
+                        }}
+                      >
+                        <span className="line-clamp-2">{normalizeYearLabels(child.title)}</span>
+                        <i className="ri-arrow-right-s-line text-foreground-300 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
+                      </div>
+                    ) : (
+                      <NavLink href={normalizeMenuHref(child.href)} className={`${rowClass} cursor-pointer`}>
+                        <span className="line-clamp-2">{normalizeYearLabels(child.title)}</span>
+                      </NavLink>
                     )}
-                  </NavLink>
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </div>,
           document.body
