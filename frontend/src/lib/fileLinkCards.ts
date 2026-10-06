@@ -57,28 +57,30 @@ function buildCard(doc: Document, href: string, title: string, extension: string
 
 /**
  * CMS HTML from the old site often has a file offered as one bare link on its own line
- * ("<p><strong><a href=".../x.pdf">Natijalarni yuklab olish</a></strong></p>"). Each such
- * paragraph -- exactly one file link and nothing else of substance -- becomes the same card a
- * document block gets (name, type, open button). A link inside running prose, a list of many
- * files, or a paragraph that also holds an image is left exactly as it was.
+ * ("<p><strong><a href=".../x.pdf">Natijalarni yuklab olish</a></strong></p>"). The editors wrapped
+ * these in whatever the toolbar gave them: a paragraph, a <div>, a heading. Each such element --
+ * exactly one file link and nothing else of substance -- becomes the same card a document block
+ * gets (name, type, open button), so every file reads as a file. A link inside running prose, a
+ * list of many files, or an element that also holds an image/video is left exactly as it was.
  */
 export function convertFileLinkParagraphs(html: string, openLabel: string): string {
   if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)/i.test(html)) return html;
   const doc = new DOMParser().parseFromString(html, "text/html");
   let changed = false;
 
-  doc.body.querySelectorAll("p").forEach((paragraph) => {
-    if (paragraph.closest("table, ul, ol, blockquote")) return;
-    if (paragraph.querySelector("img, iframe, video")) return;
-    const fileAnchors = Array.from(paragraph.querySelectorAll("a[href]")).filter((a) =>
+  doc.body.querySelectorAll("p, div, h1, h2, h3, h4, h5, h6").forEach((block) => {
+    if (!block.isConnected) return; // already swallowed by an outer element that was turned into a card
+    if (block.closest("table, ul, ol, blockquote")) return;
+    if (block.querySelector("img, iframe, video")) return;
+    const fileAnchors = Array.from(block.querySelectorAll("a[href]")).filter((a) =>
       fileExtension(a.getAttribute("href") || ""),
     );
     if (fileAnchors.length !== 1) return;
     const anchor = fileAnchors[0];
     const title = normalize(anchor.textContent);
     const href = anchor.getAttribute("href") || "";
-    if (!title || normalize(paragraph.textContent).length > title.length * 1.15 + 3) return;
-    paragraph.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
+    if (!title || normalize(block.textContent).length > title.length * 1.15 + 3) return;
+    block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
     changed = true;
   });
 

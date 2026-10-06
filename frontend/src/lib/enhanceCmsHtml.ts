@@ -77,6 +77,8 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   stripLegacyStyles(body);
 
+  if (slug === "ilmiy-konferensiyalar") moveVideoToTop(body);
+
   if (slug === "institut-tarixi") {
     buildHistoryLayout(body);
     return body.innerHTML;
@@ -1213,6 +1215,23 @@ function stripRestrictedNotice(body: HTMLElement) {
     const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
     if (RESTRICTED_TEXT_RE.test(text)) el.remove();
   });
+}
+
+/**
+ * The conference page keeps its video at the very bottom, after twenty-odd files, and the editors had
+ * wrapped it in a link to a PDF (so a click on the player could open that file). Pull the player out
+ * of the link and put it first, where a visitor sees it.
+ */
+function moveVideoToTop(body: HTMLElement) {
+  const iframe = body.querySelector("iframe");
+  if (!iframe) return;
+  const holder = iframe.closest("a")?.parentElement ?? iframe.parentElement;
+  const wrapper = body.ownerDocument.createElement("div");
+  wrapper.className = "cms-video-embed";
+  wrapper.appendChild(iframe);
+  body.insertBefore(wrapper, body.firstChild);
+  // what is left of the old holder is an empty link and blank space
+  if (holder && holder !== body && !holder.textContent?.trim()) holder.remove();
 }
 
 function buildCouncilMainLayout(body: HTMLElement) {

@@ -2524,3 +2524,56 @@ a.cms-journal-archive__title--link:focus-visible {
     background: rgba(10, 17, 88, 0.35);
   }
 }
+
+/* A file link inside running text (not a card): always say what it is. */
+.prose-content a[href$=".pdf" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".doc" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".docx" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".xls" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".xlsx" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".pdf" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".doc" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".docx" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".xls" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".xlsx" i]:not(.cms-download-btn)::after {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.05em 0.45em;
+  border-radius: 0.3em;
+  background: #e8eaf5;
+  color: #0a1158;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.prose-content a[href$=".pdf" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".pdf" i]:not(.cms-download-btn)::after {
+  content: "PDF";
+}
+.prose-content a[href$=".doc" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".docx" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".doc" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".docx" i]:not(.cms-download-btn)::after {
+  content: "DOC";
+}
+.prose-content a[href$=".xls" i]:not(.cms-download-btn)::after,
+.prose-content a[href$=".xlsx" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".xls" i]:not(.cms-download-btn)::after,
+.cms-article a[href$=".xlsx" i]:not(.cms-download-btn)::after {
+  content: "XLS";
+}
+
+.cms-video-embed {
+  margin: 0 0 1.5rem;
+}
+.cms-video-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
