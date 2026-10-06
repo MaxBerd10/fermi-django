@@ -2577,3 +2577,20 @@ a.cms-journal-archive__title--link:focus-visible {
   height: auto;
   border: 0;
 }
+
+.prose-content a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after {
+  content: "LEX.UZ";
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.05em 0.45em;
+  border-radius: 0.3em;
+  background: #e8eaf5;
+  color: #0a1158;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  vertical-align: middle;
+  text-decoration: none;
+}

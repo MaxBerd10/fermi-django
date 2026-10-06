@@ -9,12 +9,15 @@ import {
   PRIMARY_BUTTON_CLASS,
 } from "@/blocks/documentCardClasses";
 
+const LEX_UZ_RE = /^https?:\/\/(www\.)?lex\.uz\//i;
 const FILE_PATH_RE = /\.(pdf|docx?|xlsx?|pptx?|zip|rar)$/i;
 
 function fileExtension(href: string): string | null {
   const path = href.split(/[?#]/)[0];
   const match = FILE_PATH_RE.exec(path);
-  return match ? match[1].toLowerCase() : null;
+  if (match) return match[1].toLowerCase();
+  // legal acts are linked to the national database: give them the same card, typed "LEX.UZ"
+  return LEX_UZ_RE.test(path) ? "lex.uz" : null;
 }
 
 function normalize(text: string | null): string {
