@@ -434,6 +434,49 @@
   object-fit: contain;
 }
 
+/* The institute seal stands in for a post that has no photo. It only exists as a 256px image, so it is never
+   stretched to fill a card or a hero: it sits in the middle at (at most) its own size on a plain tile. */
+.news-logo-fallback {
+  display: block;
+  width: min(100%, 15rem);
+  height: min(100%, 15rem);
+  margin: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.news-card__media:has(.news-logo-fallback) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.news-card__media .news-logo-fallback {
+  width: auto;
+  height: 82%;
+  max-width: 82%;
+  max-height: 15rem;
+  aspect-ratio: 1 / 1;
+}
+
+.news-article__hero--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background: #ffffff;
+}
+
+.news-article__hero--logo img {
+  width: 15rem;
+  max-width: 70%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
 .news-article__video-badge {
   position: absolute;
   inset: 0;

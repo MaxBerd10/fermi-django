@@ -13,7 +13,7 @@ import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
-import { getNewsArticleImage } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { formatLongDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
@@ -99,7 +99,7 @@ export default function DetailPage() {
               </div>
 
               {heroImage && (
-                <div className={`news-article__hero${useContainHero ? " news-article__hero--contain" : ""}`}>
+                <div className={`news-article__hero${isPlaceholderLogo(heroImage) ? " news-article__hero--logo" : useContainHero ? " news-article__hero--contain" : ""}`}>
                   <img src={optimizedImageUrl(heroImage, 1200)} alt={article.title} />
                   {article.isVideo && (
                     <span className="news-article__video-badge" aria-hidden>

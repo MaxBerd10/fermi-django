@@ -8,6 +8,11 @@ const API_ORIGIN = (
 
 const DOCUMENT_PLACEHOLDER_IMAGE = "/images/logo.png?v=2";
 
+/** True for the institute seal used as the picture of a post that has no photo of its own. */
+export function isPlaceholderLogo(src?: string | null): boolean {
+  return !!src && src.startsWith("/images/logo");
+}
+
 /** CMS menyu slug → API dagi haqiqiy kategoriya slug */
 const NEWS_CATEGORY_SLUG_ALIASES: Record<string, string> = {
   "yoshlar-ittifoqi-tomonidan-otkazilgan-tadbirlar": "yoshlar-ittifoqi-tadbirlari",

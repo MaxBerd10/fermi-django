@@ -9,7 +9,7 @@ import { formatShortDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
 import { mergeNewsByDate } from "@/lib/telegramNews";
 import { localizeTelegramCards } from "@/lib/uzTranslate";
-import { getNewsArticleImage } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 
 function newsHref(article: NewsArticle) {
@@ -168,7 +168,7 @@ export default function NewsAnnouncements() {
               to={newsHref(featured)}
               className="group flex flex-col h-full rounded-[1.35rem] overflow-hidden bg-white/95 border border-[#e5e5e5]/80 shadow-[0_12px_40px_rgba(15,23,42,0.06)] cursor-pointer"
             >
-              <div className="aspect-[16/9] overflow-hidden bg-[#e5e5e5] shrink-0">
+              <div className="relative aspect-[16/9] overflow-hidden bg-[#e5e5e5] shrink-0">
                 {(() => {
                   const featuredImg = getNewsArticleImage(featured);
                   // Document-only posts deliberately use the institute mark as their
@@ -177,6 +177,22 @@ export default function NewsAnnouncements() {
                   const featuredDisplayImg = featuredImg?.startsWith("/images/logo.png")
                     ? "/images/logo.webp"
                     : featuredImg;
+                  // The seal only exists as a small image: show it at its own size in the middle of a white tile
+                  // instead of stretching it to fill the whole card (that is what made it blurry).
+                  if (isPlaceholderLogo(featuredImg)) {
+                    return (
+                      <div className="w-full h-full flex items-center justify-center bg-white">
+                        <img
+                          src={featuredImg}
+                          alt={featured.title}
+                          width={256}
+                          height={256}
+                          className="news-logo-fallback group-hover:scale-[1.03] transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    );
+                  }
                   return featuredDisplayImg ? (
                     <img
                       src={optimizedImageUrl(featuredDisplayImg, featured.hasDocument || featured.isVideo ? 320 : 900)}

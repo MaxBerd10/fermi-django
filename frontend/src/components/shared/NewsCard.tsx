@@ -8,7 +8,7 @@ import { buildNewsDetailHref, newsCategoryTagStyle, NEWS_DEFAULT_MENU_ID } from 
 // card (e.g. the homepage, which has its own inline markup, not this
 // component). See RichContent.tsx's copy of this comment for the pattern.
 import "@/styles/news-content.css";
-import { getNewsArticleImage } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { useMemo, useState, useEffect } from "react";
 
@@ -50,7 +50,7 @@ export default function NewsCard({
           <img
             src={optimizedImageUrl(imgSrc, 480)}
             alt={article.title}
-            className={`news-card__img${isBannerLike ? " news-card__img--contain" : ""}`}
+            className={`news-card__img${isPlaceholderLogo(imgSrc) ? " news-logo-fallback" : isBannerLike ? " news-card__img--contain" : ""}`}
             loading="lazy"
             onError={() => {
               const fallback = getNewsArticleImage({ ...article, img: "" }, index + 1);
