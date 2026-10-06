@@ -18,6 +18,9 @@ import { optimizedImageUrl } from "@/lib/imageProxy";
 import { formatLongDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
 import AiSummaryBlock from "@/components/ai/AiSummaryBlock";
+
+// AI xulosa vaqtincha o'chiq — OpenAI kaliti hali yo'q. Kalit qo'shilgach `true` qiling.
+const AI_SUMMARY_ENABLED = false;
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 import { localizeTelegramArticle } from "@/lib/uzTranslate";
 import { isTelegramNewsSlug } from "@/lib/telegramNews";
@@ -124,7 +127,9 @@ export default function DetailPage() {
                 </a>
               )}
 
-              <AiSummaryBlock title={article.title} content={article.content} className="mb-5" />
+              {AI_SUMMARY_ENABLED && (
+                <AiSummaryBlock title={article.title} content={article.content} className="mb-5" />
+              )}
 
               {/* See blog/page.tsx's identical comment: without a real h2 in
                   the body, PageHeader's h1 is followed straight by the
