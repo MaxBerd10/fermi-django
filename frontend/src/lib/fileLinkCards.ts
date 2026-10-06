@@ -9,15 +9,16 @@ import {
   PRIMARY_BUTTON_CLASS,
 } from "@/blocks/documentCardClasses";
 
-const LEX_UZ_RE = /^https?:\/\/(www\.)?lex\.uz\//i;
+const LEGAL_PORTAL_RE = /^https?:\/\/(?:www\.)?(lex\.uz|dd\.gov\.uz)\//i;
 const FILE_PATH_RE = /\.(pdf|docx?|xlsx?|pptx?|zip|rar)$/i;
 
 function fileExtension(href: string): string | null {
   const path = href.split(/[?#]/)[0];
   const match = FILE_PATH_RE.exec(path);
   if (match) return match[1].toLowerCase();
-  // legal acts are linked to the national database: give them the same card, typed "LEX.UZ"
-  return LEX_UZ_RE.test(path) ? "lex.uz" : null;
+  // legal acts and the year's state programme are linked to the national portals: same card, typed by the portal
+  const portal = LEGAL_PORTAL_RE.exec(path);
+  return portal ? portal[1].toLowerCase() : null;
 }
 
 function normalize(text: string | null): string {

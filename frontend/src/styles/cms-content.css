@@ -2548,6 +2548,7 @@ a.cms-journal-archive__title--link:focus-visible {
   line-height: 1.6;
   vertical-align: middle;
   text-decoration: none;
+  text-indent: 0; /* the legacy paragraph's first-line indent would otherwise stretch the pill */
 }
 .prose-content a[href$=".pdf" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".pdf" i]:not(.cms-download-btn)::after {
@@ -2578,9 +2579,23 @@ a.cms-journal-archive__title--link:focus-visible {
   border: 0;
 }
 
+/* Links to the national legal portals carry the portal's name, like file links carry their type. */
+.prose-content a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.prose-content a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after {
+  content: "DD.GOV.UZ";
+}
 .prose-content a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after {
   content: "LEX.UZ";
+}
+.prose-content a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.prose-content a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
+.prose-content a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after {
   display: inline-block;
   margin-left: 0.45em;
   padding: 0.05em 0.45em;
@@ -2593,4 +2608,5 @@ a.cms-journal-archive__title--link:focus-visible {
   line-height: 1.6;
   vertical-align: middle;
   text-decoration: none;
+  text-indent: 0;
 }
