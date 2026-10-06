@@ -28,6 +28,7 @@ function buildCard(doc: Document, href: string, title: string, extension: string
     return node;
   };
   const card = el("div", CARD_CLASS);
+  card.setAttribute("data-file-card", "");
 
   const main = el("div", CARD_MAIN_CLASS);
   const icon = el("span", CARD_ICON_CLASS);
@@ -84,5 +85,35 @@ export function convertFileLinkParagraphs(html: string, openLabel: string): stri
     changed = true;
   });
 
+  // A title link left loose inside a <div> that also holds other blocks (<div><span><a>Title</a></span><div>..</div></div>):
+  // lift the link's own inline wrapper out as a card, but only when nothing but blocks sits beside it.
+  const INLINE = new Set(["SPAN", "STRONG", "B", "EM", "I", "U", "FONT"]);
+  const isBlockish = (node: Node) =>
+    node.nodeType === Node.ELEMENT_NODE && !INLINE.has((node as Element).tagName) && (node as Element).tagName !== "A";
+  Array.from(doc.body.querySelectorAll("a[href]")).forEach((anchor) => {
+    const href = anchor.getAttribute("href") || "";
+    const extension = fileExtension(href);
+    if (!extension || !anchor.isConnected || anchor.classList.contains("cms-download-btn")) return;
+    if (anchor.closest("table, ul, ol, blockquote, p, li, h1, h2, h3, h4, h5, h6, [data-file-card]")) return;
+    if (anchor.querySelector("img, iframe, video")) return;
+    const title = normalize(anchor.textContent);
+    if (!title) return;
+    let wrapper: Element = anchor;
+    while (
+      wrapper.parentElement &&
+      INLINE.has(wrapper.parentElement.tagName) &&
+      normalize(wrapper.parentElement.textContent) === title
+    ) {
+      wrapper = wrapper.parentElement;
+    }
+    const parent = wrapper.parentElement;
+    if (!parent) return;
+    const loneInline = Array.from(parent.childNodes).every(
+      (node) => node === wrapper || isBlockish(node) || (node.nodeType === Node.TEXT_NODE && !node.textContent?.trim()),
+    );
+    if (!loneInline) return;
+    wrapper.replaceWith(buildCard(doc, href, title, extension, openLabel));
+    changed = true;
+  });
   return changed ? doc.body.innerHTML : html;
 }
