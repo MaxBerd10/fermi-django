@@ -90,10 +90,10 @@ export function convertFileLinkParagraphs(html: string, openLabel: string): stri
     const fileAnchors = Array.from(block.querySelectorAll("a[href]")).filter((a) =>
       fileExtension(a.getAttribute("href") || ""),
     );
-    if (fileAnchors.length !== 1) return;
-    const anchor = fileAnchors[0];
-    const title = normalize(anchor.textContent);
-    const href = anchor.getAttribute("href") || "";
+    // one file, possibly cut into several <a> pieces by the editor ("20" + "24/2025 o'quv yili...")
+    const href = fileAnchors[0]?.getAttribute("href") || "";
+    if (!fileAnchors.length || fileAnchors.some((a) => a.getAttribute("href") !== href)) return;
+    const title = normalize(fileAnchors.map((a) => a.textContent).join(""));
     if (!title || !isLoneLinkLine(normalize(block.textContent), title)) return;
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
     changed = true;

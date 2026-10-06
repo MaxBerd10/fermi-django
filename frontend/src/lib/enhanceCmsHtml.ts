@@ -148,6 +148,31 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   return body.innerHTML;
 }
 
+/** A pixel length from legacy markup ("789.594px", "15mm", "36pt") as CSS px, or 0 when it is not an absolute length. */
+function toPx(length: string): number {
+  const match = /^(-?\d*\.?\d+)(px|pt|mm|cm|in)$/i.exec(length.trim());
+  if (!match) return 0;
+  const n = parseFloat(match[1]);
+  const factor = { px: 1, pt: 4 / 3, mm: 96 / 25.4, cm: 96 / 2.54, in: 96 }[match[2].toLowerCase() as "px"];
+  return n * factor;
+}
+
+/**
+ * Old editors saved the margins they saw on screen: "margin: 0 789px 0 0" on a short block squeezes it to
+ * nothing (one letter per line) on any narrower screen. A margin shorthand whose left/right sides are wider
+ * than 48px is cut down to its top and bottom values.
+ */
+function dropWideSideMargins(whole: string, value: string): string {
+  const parts = value.trim().split(/\s+/);
+  if (parts.length < 2) return whole;
+  const top = parts[0];
+  const right = parts[1];
+  const bottom = parts[2] ?? top;
+  const left = parts[3] ?? right;
+  if (Math.abs(toPx(right)) <= 48 && Math.abs(toPx(left)) <= 48) return whole;
+  return `margin: ${top} 0 ${bottom} 0;`;
+}
+
 function stripLegacyStyles(root: ParentNode) {
   root.querySelectorAll("[style]").forEach((el) => {
     const style = el.getAttribute("style") ?? "";
@@ -156,6 +181,7 @@ function stripLegacyStyles(root: ParentNode) {
       .replace(/font-size\s*:\s*[^;]+;?/gi, "")
       .replace(/color\s*:\s*[^;]+;?/gi, "")
       .replace(/text-align\s*:\s*justify;?/gi, "")
+      .replace(/margin\s*:\s*([^;]+);?/gi, (whole, value: string) => dropWideSideMargins(whole, value))
       .replace(/^\s*;\s*/g, "")
       .trim();
     if (cleaned) el.setAttribute("style", cleaned);

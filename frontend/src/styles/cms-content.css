@@ -102,6 +102,14 @@
   font-weight: 500;
 }
 
+/* Named anchors (<a id="...">, no href) -- pasted from lex.uz -- are not links: no underline, no link colour. */
+.prose-content a:not([href]),
+.cms-article a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
 /* BlockRenderer already wraps a table block in its own overflow-x-auto div
    -- display:block here (on the <table> itself, not a wrapper) broke the
    browser's native table column-sizing algorithm, so a long cell's content
