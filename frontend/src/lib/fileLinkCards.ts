@@ -25,6 +25,16 @@ function normalize(text: string | null): string {
   return (text ?? "").replace(/[\s ​]+/g, " ").trim();
 }
 
+/** "Yuklab olish uchun bosing >>>>" style prompts the editors typed in front of a file link. */
+const CALL_TO_ACTION_RE = /yuklab|bosing|ko['\u2018\u2019\u02bb`]?rish|\u0441\u043a\u0430\u0447\u0430\u0442\u044c|\u043d\u0430\u0436\u043c\u0438\u0442\u0435|download|click|>>/i;
+
+/** The line is just the link, optionally behind a short "click to download >>>" prompt. */
+function isLoneLinkLine(lineText: string, title: string): boolean {
+  if (lineText.length <= title.length * 1.15 + 3) return true;
+  const rest = lineText.replace(title, "").trim();
+  return rest.length <= 60 && rest.length < lineText.length && CALL_TO_ACTION_RE.test(rest);
+}
+
 function buildCard(doc: Document, href: string, title: string, extension: string, openLabel: string): HTMLElement {
   const el = (tag: string, className: string) => {
     const node = doc.createElement(tag);
@@ -84,7 +94,7 @@ export function convertFileLinkParagraphs(html: string, openLabel: string): stri
     const anchor = fileAnchors[0];
     const title = normalize(anchor.textContent);
     const href = anchor.getAttribute("href") || "";
-    if (!title || normalize(block.textContent).length > title.length * 1.15 + 3) return;
+    if (!title || !isLoneLinkLine(normalize(block.textContent), title)) return;
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
     changed = true;
   });
