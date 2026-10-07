@@ -299,15 +299,25 @@ function promoteCenteredHeadings(root: ParentNode) {
 
     const style = p.getAttribute("style") ?? "";
     const isCenter = /text-align\s*:\s*center/i.test(style);
-    const strong = p.querySelector(":scope > strong, :scope > span > strong");
+    // the editors wrapped the bold text in one, two or three font/size <span>s, depending on the toolbar clicks
+    const strong = p.querySelector(":scope > strong, :scope span strong");
     if (!isCenter || !strong) return;
 
     const plain = p.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
     const strongText = strong.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (plain !== strongText) return;
+    if (!strongText || plain !== strongText) return;
 
+    // the big page-title style only goes to a heading that really opens the text, not to the first one that
+    // happens to be found after other content (a heading found only now, through a deeper <span>, would be one)
+    let before = p.previousElementSibling;
+    let opensText = p.parentElement === p.ownerDocument.body;
+    while (opensText && before) {
+      const isHeroImage = before.classList.contains("cms-hero-figure");
+      if (!isHeroImage && (before.textContent?.trim() || before.querySelector("img"))) opensText = false;
+      before = before.previousElementSibling;
+    }
     const h2 = p.ownerDocument.createElement("h2");
-    h2.className = firstTitle ? "cms-institute-title" : "cms-section-title";
+    h2.className = firstTitle && opensText ? "cms-institute-title" : "cms-section-title";
     h2.innerHTML = strong.innerHTML.trim();
     firstTitle = false;
     p.replaceWith(h2);
