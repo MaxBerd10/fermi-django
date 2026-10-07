@@ -184,13 +184,36 @@ function findSectionForSlug(nodes: MenuNode[], slug: string): MenuNode | null {
   return null;
 }
 
+function findParentNode(nodes: MenuNode[], id: number, parent: MenuNode | null = null): MenuNode | null {
+  for (const n of nodes) {
+    if (n.id === id) return parent;
+    const found = findParentNode(n.children ?? [], id, n);
+    if (found) return found;
+  }
+  return null;
+}
+
+/** A menu entry that is a page of its own (not an empty heading with nothing but sub-entries). */
+function isDirectLink(node: MenuNode): boolean {
+  const href = normalizeMenuHref(node.href);
+  return (node.children?.length ?? 0) === 0 && Boolean(href) && href !== "#" && href !== "/";
+}
+
 export function resolveMenuSection(
   menu: MenuNode[],
   menuId?: number,
   slug?: string,
 ): MenuSectionContext | null {
-  const sectionNode = (menuId ? findNodeById(menu, menuId) : null) ?? (slug ? findSectionForSlug(menu, slug) : null);
+  let sectionNode = (menuId ? findNodeById(menu, menuId) : null) ?? (slug ? findSectionForSlug(menu, slug) : null);
   if (!sectionNode) return null;
+
+  // A heading with sub-pages that sits in the middle of a list of ordinary pages ("Interaktiv xizmatlar":
+  // Virtual qabulxona, "Fuqarolar murojaatlari" > its statistics page, Vakant lavozimlar, ...) is one list with
+  // the rest. Its own pages carry the heading's id in their address, and used to open a one-entry list of
+  // their own -- the section's list vanished the moment one of them was clicked. A menu made only of
+  // headings (Tuzilma > Fakultetlar, Kafedralar, ...) keeps one list per heading.
+  const parentNode = findParentNode(menu, sectionNode.id);
+  if (parentNode && (parentNode.children ?? []).some(isDirectLink)) sectionNode = parentNode;
 
   const sectionId = sectionNode.id;
   const configured = MENU_SECTION_THEMES[sectionId];
