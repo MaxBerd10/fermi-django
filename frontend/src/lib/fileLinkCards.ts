@@ -180,7 +180,7 @@ export function convertFileLinkParagraphs(
 
   doc.body.querySelectorAll("p, div, h1, h2, h3, h4, h5, h6").forEach((block) => {
     if (!block.isConnected) return; // already swallowed by an outer element that was turned into a card
-    if (block.closest("table, blockquote")) return;
+    if (block.closest("table, blockquote, [data-file-card]")) return; // a card built by an earlier pass is final
     const listItem = block.closest("li");
     if (listItem) {
       // judged once per item, before its first line turns into a card (a card's own text would fail the test)
