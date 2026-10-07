@@ -79,6 +79,7 @@ export default function MenuSectionNav({
             key={link.id}
             link={link}
             active={isMenuSectionLinkActive(link, pathname, currentSlug)}
+            sectionId={section.sectionId}
           />
         ))}
         {filteredLinks.length === 0 && (
@@ -89,11 +90,12 @@ export default function MenuSectionNav({
   );
 }
 
-function MenuLinkItem({ link, active }: { link: MenuSectionLink; active: boolean }) {
+function MenuLinkItem({ link, active, sectionId }: { link: MenuSectionLink; active: boolean; sectionId: number }) {
   return (
     <li>
       <Link
         to={link.href}
+        state={{ menuSection: sectionId }}
         className={`cms-sidebar__link menu-sidebar__link ${active ? "cms-sidebar__link--active" : ""}`}
         style={{ paddingLeft: `calc(1.25rem + ${link.depth * 0.65}rem)` }}
       >

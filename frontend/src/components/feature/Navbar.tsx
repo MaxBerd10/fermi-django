@@ -213,7 +213,20 @@ export default function Navbar() {
 
   const isExternal = (url: string) => url.startsWith("http");
 
-  const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className: string }) => {
+  // `section` = the menu section the link was clicked in. A few menu entries share one page (the photo gallery
+  // sits under three different sections), and that page uses it to show the list of the section the visitor
+  // came from rather than a fixed one.
+  const NavLink = ({
+    href,
+    children,
+    className,
+    section,
+  }: {
+    href: string;
+    children: React.ReactNode;
+    className: string;
+    section?: number;
+  }) => {
     if (isExternal(href)) {
       return (
         <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
@@ -229,7 +242,7 @@ export default function Navbar() {
       );
     }
     return (
-      <Link to={href} className={className}>
+      <Link to={href} className={className} state={section ? { menuSection: section } : undefined}>
         {children}
       </Link>
     );
@@ -502,6 +515,7 @@ export default function Navbar() {
                               {child.children.map((grandchild) => (
                                 <NavLink
                                   key={grandchild.id}
+                                  section={child.id}
                                   href={normalizeMenuHref(grandchild.href)}
                                   className="block min-h-[40px] px-3 py-2 text-sm text-foreground-500 hover:text-primary-800 hover:bg-primary-50 cursor-pointer transition-colors rounded-lg"
                                 >
@@ -513,6 +527,7 @@ export default function Navbar() {
                         ) : (
                           <NavLink
                             key={child.id}
+                            section={item.id}
                             href={normalizeMenuHref(child.href)}
                             className="block min-h-[44px] px-3 py-2.5 text-sm font-medium text-foreground-600 hover:text-primary-800 hover:bg-primary-50 cursor-pointer transition-colors rounded-lg"
                           >
@@ -601,7 +616,7 @@ export default function Navbar() {
                         <i className="ri-arrow-right-s-line text-foreground-300 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
                       </div>
                     ) : (
-                      <NavLink href={normalizeMenuHref(child.href)} className={`${rowClass} cursor-pointer`}>
+                      <NavLink href={normalizeMenuHref(child.href)} section={openItem.id} className={`${rowClass} cursor-pointer`}>
                         <span className="line-clamp-2">{normalizeYearLabels(child.title)}</span>
                       </NavLink>
                     )}
@@ -632,6 +647,7 @@ export default function Navbar() {
               {hoveredChildNode.children.map((grandchild) => (
                 <NavLink
                   key={grandchild.id}
+                  section={hoveredChildNode.id}
                   href={normalizeMenuHref(grandchild.href)}
                   className="block mx-1.5 px-3.5 py-2.5 font-heading text-sm font-medium text-foreground-800 hover:text-primary-800 hover:bg-primary-50 rounded-lg cursor-pointer transition-colors duration-200 leading-snug"
                 >
