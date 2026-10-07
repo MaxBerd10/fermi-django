@@ -1,4 +1,5 @@
 ﻿import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import DOMPurify from "dompurify";
 import { enhanceCmsHtml } from "@/lib/enhanceCmsHtml";
 import { optimizedImageUrl } from "@/lib/imageProxy";
@@ -68,10 +69,12 @@ export default function RichContent({
   enhanced?: boolean;
   slug?: string;
 }) {
+  const { t } = useTranslation();
+  const usmleTitle = t("usmle.introTitle");
   const processed = useMemo(() => {
-    const withLayout = enhanced ? enhanceCmsHtml(html, { slug }) : html;
+    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, usmleTitle }) : html;
     return sanitizeHtml(withLayout);
-  }, [html, enhanced, slug]);
+  }, [html, enhanced, slug, usmleTitle]);
 
   if (!processed) return null;
 

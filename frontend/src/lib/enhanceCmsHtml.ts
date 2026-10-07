@@ -2,7 +2,7 @@
  * Legacy CKEditor HTML → clean semantic markup for `.cms-article` styling.
  * Runs in the browser (DOMParser); safe no-op during SSR/build.
  */
-export type CmsEnhanceOptions = { slug?: string };
+export type CmsEnhanceOptions = { slug?: string; usmleTitle?: string };
 
 export function getCmsArticleModifier(slug?: string): string {
   if (slug === "institut-xaqida") return "cms-article--about";
@@ -90,7 +90,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   }
 
   if (slug === "usmle-dasturi") {
-    buildUsmleLayout(body);
+    buildUsmleLayout(body, options?.usmleTitle);
     return body.innerHTML;
   }
 
@@ -1206,7 +1206,7 @@ function buildRegulationsLayout(body: HTMLElement) {
   });
 }
 
-function buildUsmleLayout(body: HTMLElement) {
+function buildUsmleLayout(body: HTMLElement, title?: string) {
   body.querySelectorAll(".hatnote, [class*='navigation-not-searchable']").forEach((el) => el.remove());
   // Wikipedia's "Step 3[edit]" heading: drop the edit link and its brackets, then the now-bare "Step 3" line
   // (the step card below carries that title itself)
@@ -1250,6 +1250,14 @@ function buildUsmleLayout(body: HTMLElement) {
     if (p.closest(".cms-usmle-step")) return;
     if (p.textContent && p.textContent.length > 120) p.classList.add("cms-usmle-intro");
   });
+
+  // the text used to open with two long paragraphs and nothing to say what they are about
+  if (title) {
+    const heading = body.ownerDocument.createElement("h2");
+    heading.className = "cms-section-title";
+    heading.textContent = title;
+    body.insertBefore(heading, body.firstChild);
+  }
 }
 
 const RESTRICTED_TEXT_RE =

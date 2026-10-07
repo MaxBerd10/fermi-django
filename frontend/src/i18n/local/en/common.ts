@@ -1354,6 +1354,7 @@ export default {
 
   "contest.formTitle": "Submit an application",
   "document.open": "Open in browser",
+  "usmle.introTitle": "About the USMLE",
   "document.download": "Download",
   "common.pagination": "Pagination",
   "common.prevPage": "Previous page",

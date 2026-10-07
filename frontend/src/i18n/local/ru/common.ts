@@ -1354,6 +1354,7 @@ export default {
 
   "contest.formTitle": "Подать заявку",
   "document.open": "Открыть в браузере",
+  "usmle.introTitle": "Об экзамене USMLE",
   "document.download": "Скачать",
   "common.pagination": "Страницы",
   "common.prevPage": "Предыдущая страница",
