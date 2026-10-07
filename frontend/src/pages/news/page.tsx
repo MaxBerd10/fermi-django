@@ -56,6 +56,14 @@ export default function NewsCategoryPage() {
 
   const categoryConfig = getNewsCategoryConfig(slug);
 
+  // A news category reached from another menu section (Faoliyat > Madaniy-ma'rifiy fa'oliyat > Madaniy-ma'rifiy
+  // tadbirlar, /news/2019/...) lists THAT section's pages beside it. Only the two news roots -- "Institut
+  // yangiliklari" (1844) and the "Institut" nav entry (1826) -- keep the all-news category list.
+  const NEWS_ROOT_MENU_IDS = [NEWS_DEFAULT_MENU_ID, 1826];
+  const sectionNavId =
+    categoryConfig?.menuSectionId ??
+    (resolvedMenuId > 0 && !NEWS_ROOT_MENU_IDS.includes(resolvedMenuId) ? resolvedMenuId : undefined);
+
 
 
   useEffect(() => {
@@ -158,9 +166,9 @@ export default function NewsCategoryPage() {
 
         theme={categoryConfig?.theme}
 
-        menuSectionId={categoryConfig?.menuSectionId}
+        menuSectionId={sectionNavId}
 
-        showAllNews={!categoryConfig?.menuSectionId}
+        showAllNews={!sectionNavId}
 
         hero={
 
