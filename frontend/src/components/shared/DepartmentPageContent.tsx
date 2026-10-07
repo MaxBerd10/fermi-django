@@ -23,15 +23,20 @@ export default function DepartmentPageContent({
   const [headOpen, setHeadOpen] = useState(false);
 
   const hasContent = department.blocks.length > 0;
+  // "Institut tarixi" is stored as a department record but is a page of the "Institut haqida" section: it
+  // gets no "Kafedralar" banner and no "Kafedra haqida" heading.
+  const isHistory = slug === "institut-tarixi";
 
   return (
     <div className={`department-page department-page--${theme}`}>
-      <DepartmentHero
-        title={department.title}
-        logoUrl={department.img}
-        theme={theme}
-        isFallback={isFallback}
-      />
+      {!isHistory && (
+        <DepartmentHero
+          title={department.title}
+          logoUrl={department.img}
+          theme={theme}
+          isFallback={isFallback}
+        />
+      )}
 
       {head && (
         <section className="department-page__head" aria-labelledby="department-head-heading">
@@ -48,9 +53,15 @@ export default function DepartmentPageContent({
 
       {hasContent ? (
         <section className="department-page__about" aria-labelledby="department-about-heading">
-          <h2 id="department-about-heading" className="department-page__section-title">
-            {t("department.aboutTitle")}
-          </h2>
+          {isHistory ? (
+            <h2 id="department-about-heading" className="sr-only">
+              {department.title}
+            </h2>
+          ) : (
+            <h2 id="department-about-heading" className="department-page__section-title">
+              {t("department.aboutTitle")}
+            </h2>
+          )}
           <div className="department-page__article cms-article cms-article--rich cms-article--menu-section cms-article--kafedra space-y-4">
             {department.blocks
               .slice()

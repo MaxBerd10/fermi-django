@@ -14,6 +14,8 @@ import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
 import { normalizeYearLabels } from "@/lib/siteConstants";
 import { DEPARTMENT_MENU_ID } from "@/lib/departmentSection";
+import { useMenu } from "@/context/MenuContext";
+import { resolveMenuSection } from "@/lib/menuSection";
 
 export default function DepartmentPage() {
   const { t } = useTranslation();
@@ -26,6 +28,7 @@ export default function DepartmentPage() {
   const { contentRef, remembered } = useRememberedContentHeight(`department:${slug}`, loading);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
+  const { menu: menuTree } = useMenu();
 
   useEffect(() => {
     if (!slug) {
@@ -95,6 +98,8 @@ export default function DepartmentPage() {
   if (error || !dept) return <ErrorState message={error ?? undefined} />;
 
   const isHistory = slug === "institut-tarixi";
+  // "Institut tarixi" belongs to the "Institut haqida" section, so its list is that section's, not the kafedra list.
+  const sidebarMenuId = (isHistory && resolveMenuSection(menuTree, resolvedMenuId, slug)?.sectionId) || DEPARTMENT_MENU_ID;
   const displayTitle = normalizeYearLabels(dept.title.trim());
 
   return (
@@ -120,7 +125,7 @@ export default function DepartmentPage() {
 
           <aside className="lg:col-span-4 min-w-0">
             <Reveal delay={100}>
-              <MenuSectionNav menuId={DEPARTMENT_MENU_ID} currentSlug={slug} />
+              <MenuSectionNav menuId={sidebarMenuId} currentSlug={slug} />
             </Reveal>
           </aside>
         </div>
