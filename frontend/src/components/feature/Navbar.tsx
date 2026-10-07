@@ -116,7 +116,17 @@ export default function Navbar() {
   }, [menu]);
 
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // A short pause before the flyout switches to another row: on the way to the flyout the pointer
+  // crosses the rows between, and each of them used to swap the flyout away before it was reached.
+  const switchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelSwitch = () => {
+    if (switchTimerRef.current) {
+      clearTimeout(switchTimerRef.current);
+      switchTimerRef.current = null;
+    }
+  };
   const cancelClose = () => {
+    cancelSwitch();
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
       closeTimerRef.current = null;
@@ -133,7 +143,13 @@ export default function Navbar() {
       hoveredChildElRef.current = null;
     }, 280);
   };
-  useEffect(() => () => cancelClose(), []);
+  useEffect(
+    () => () => {
+      if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+      if (switchTimerRef.current) clearTimeout(switchTimerRef.current);
+    },
+    [],
+  );
 
   useEffect(() => {
     // The dropdown/flyout portals are `position: fixed`, sized from a rect captured once at
@@ -533,10 +549,19 @@ export default function Navbar() {
                   hoveredChildElRef.current = row;
                   setHoveredChildRect(row.getBoundingClientRect());
                 };
+                const onRowEnter = (row: HTMLElement) => {
+                  // the first flyout opens at once; switching from one row's flyout to another's waits a moment
+                  if (hoveredChild === null || hoveredChild === child.id) {
+                    showFlyout(row);
+                    return;
+                  }
+                  cancelSwitch();
+                  switchTimerRef.current = setTimeout(() => showFlyout(row), 140);
+                };
                 const rowClass =
                   "group flex items-center justify-between gap-3 mx-1.5 px-3.5 py-2.5 font-heading text-sm font-medium text-foreground-800 hover:text-primary-800 hover:bg-primary-50 rounded-lg transition-colors duration-200 leading-snug";
                 return (
-                  <div key={child.id} onMouseEnter={(e) => showFlyout(e.currentTarget)}>
+                  <div key={child.id} onMouseEnter={(e) => onRowEnter(e.currentTarget)} onMouseLeave={cancelSwitch}>
                     {child.children.length > 0 ? (
                       // A row with a submenu only opens it. It is not a link: most of these rows have no page of
                       // their own (their address is "#" or "/", which sent visitors to the home page), and the
@@ -576,10 +601,20 @@ export default function Navbar() {
         createPortal(
           <div
             className="fixed z-[70] w-80 min-w-[20rem] max-w-[22rem]"
-            // Pinned to the 2nd-level panel's own top (not the hovered row's) so it holds
-            // still while browsing rows within that panel, instead of chasing the cursor
-            // down the list — only its content swaps per hovered row.
-            style={{ left: hoveredChildRect.right + 4, top: openMenuRect?.bottom ? openMenuRect.bottom + 4 : hoveredChildRect.top - 4 }}
+            // Level with the hovered row, so reaching it is a straight move to the right: when it was pinned
+            // to the panel's top, a row near the bottom (Matbuot xizmati) put it ten rows away and the
+            // pointer crossed other rows on the way, replacing it before it could be clicked. Kept inside
+            // the window for rows near the bottom edge.
+            style={{
+              left: hoveredChildRect.right + 4,
+              top: Math.max(
+                8,
+                Math.min(
+                  hoveredChildRect.top - 8,
+                  window.innerHeight - 8 - Math.min(window.innerHeight * 0.7, hoveredChildNode.children.length * 44 + 16),
+                ),
+              ),
+            }}
             onMouseEnter={cancelClose}
             onMouseLeave={scheduleClose}
           >
