@@ -127,6 +127,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   if (slug === "mutaxassisliklar-boyicha-testlar-toplami") normalizeStudentTestCover(body);
   else normalizeHeroImage(body);
   fixHorizontalRulesInLists(body);
+  if (FACULTY_ACTIVITY_SLUGS.has(slug)) liftBoldTitleLines(body);
   promoteCenteredHeadings(body);
   promoteDivHeadings(body);
   promoteSubsectionHeadings(body);
@@ -144,8 +145,48 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
       list.classList.add("cms-feature-list");
     }
   });
+  if (FACULTY_ACTIVITY_SLUGS.has(slug)) unifyHeadingStyle(body);
 
   return body.innerHTML;
+}
+
+/**
+ * The faculty "activity" pages (credit-module system, competencies, strategic plan, mission) were typed with
+ * a title line per section, some as <p>, some as <div>, one of them centred: after the generic promotions
+ * some titles came out as boxed headings, some as plain bold text, the first one in yet another style.
+ * Here every bold, upper-case title line becomes one kind of heading, and whatever the generic pass made
+ * of the others is brought to the same one.
+ */
+const FACULTY_ACTIVITY_SLUGS = new Set([
+  "fakultet-talim-faoliyati",
+  "xalqaro-talim-faoliyati",
+  "pediatriya-fakulteti-faoliyati",
+]);
+
+function liftBoldTitleLines(body: HTMLElement) {
+  body.querySelectorAll("p, div").forEach((el) => {
+    if (el.closest("[data-file-card]") || el.querySelector("a[href], img, p, div, ul, table")) return;
+    // the bold text may be cut into several <strong>s and wrapped in any number of font <span>s
+    const strongs = Array.from(el.querySelectorAll("strong"));
+    if (!strongs.length) return;
+    const text = (el.textContent ?? "").replace(/\u00a0/g, " ").trim();
+    const strongText = strongs.map((st) => st.textContent ?? "").join("").replace(/\u00a0/g, " ").trim();
+    if (!text || text !== strongText || text.length > 120) return;
+    if (text !== text.toUpperCase() || !/\p{L}/u.test(text)) return;
+    const h2 = el.ownerDocument.createElement("h2");
+    h2.className = "cms-section-title";
+    h2.textContent = text;
+    el.replaceWith(h2);
+  });
+}
+
+function unifyHeadingStyle(body: HTMLElement) {
+  body.querySelectorAll("h2.cms-institute-title, h3.cms-subsection-title").forEach((el) => {
+    const h2 = el.ownerDocument.createElement("h2");
+    h2.className = "cms-section-title";
+    h2.innerHTML = el.innerHTML;
+    el.replaceWith(h2);
+  });
 }
 
 /** A pixel length from legacy markup ("789.594px", "15mm", "36pt") as CSS px, or 0 when it is not an absolute length. */
