@@ -28,9 +28,13 @@ function normalize(text: string | null): string {
 /** "Yuklab olish uchun bosing >>>>" style prompts the editors typed in front of a file link. */
 const CALL_TO_ACTION_RE = /yuklab|bosing|ko['\u2018\u2019\u02bb`]?rish|\u0441\u043a\u0430\u0447\u0430\u0442\u044c|\u043d\u0430\u0436\u043c\u0438\u0442\u0435|download|click|>>/i;
 
+/** A short bracketed tag after a file link: "(uzb)", "(rus)", "(2 MB)". */
+const TRAILING_TAG_RE = /^\s*\(\s*[^()]{1,12}\)\s*$/;
+
 /** The line is just the link, optionally behind a short "click to download >>>" prompt. */
 function isLoneLinkLine(lineText: string, title: string): boolean {
   if (lineText.length <= title.length * 1.15 + 3) return true;
+  if (lineText.startsWith(title) && TRAILING_TAG_RE.test(lineText.slice(title.length))) return true;
   const rest = lineText.replace(title, "").trim();
   return rest.length <= 60 && rest.length < lineText.length && CALL_TO_ACTION_RE.test(rest);
 }
@@ -203,8 +207,11 @@ export function convertFileLinkParagraphs(
       if (!byNumber) return;
       href = byNumber;
     }
-    if (!rawTitle || !isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
-    const title = tidyTitle(rawTitle);
+    const lineText = normalize(block.textContent);
+    if (!rawTitle || !isLoneLinkLine(lineText, rawTitle)) return;
+    // "Tibbiy biologiya (uzb)": the language/size tag typed after the link belongs to the file's name
+    const tagged = lineText.startsWith(rawTitle) && TRAILING_TAG_RE.test(lineText.slice(rawTitle.length));
+    const title = tidyTitle(tagged ? lineText : rawTitle);
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel, downloadLabel));
     listItem?.classList.add("cms-li-cards");
     changed = true;
@@ -243,9 +250,9 @@ export function convertFileLinkParagraphs(
   // A paragraph of text that ends with the file link on a line of its own ("explanation<br><a>Fakultetning
   // nizomi (yuklab olish)</a>"): the link line moves out of the paragraph into a card right below it. The
   // <br> may sit inside the editor's font <span>s, so the part after it is taken as a range, not as siblings.
-  Array.from(doc.body.querySelectorAll("p")).forEach((p) => {
+  Array.from(doc.body.querySelectorAll("p, div")).forEach((p) => {
     if (!p.isConnected || p.closest("table, ul, ol, blockquote, [data-file-card]")) return;
-    if (p.querySelector("img, iframe, video")) return;
+    if (p.querySelector("img, iframe, video, p, div")) return; // only a text-level block: a <div> of blocks is not a paragraph
     const lastBr = Array.from(p.querySelectorAll("br")).pop();
     if (!lastBr) return;
     const tailRange = doc.createRange();
@@ -268,7 +275,9 @@ export function convertFileLinkParagraphs(
       (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent) && a.getAttribute("href") !== href,
     );
     if (otherFile) return;
-    const card = buildCard(doc, href, tidyTitle(rawTitle), fileExtension(href) || "file", openLabel, downloadLabel);
+    const tailText = normalize(tail.textContent);
+    const tagged = tailText.startsWith(rawTitle) && TRAILING_TAG_RE.test(tailText.slice(rawTitle.length));
+    const card = buildCard(doc, href, tidyTitle(tagged ? tailText : rawTitle), fileExtension(href) || "file", openLabel, downloadLabel);
     tailRange.deleteContents();
     lastBr.remove();
     p.after(card);
