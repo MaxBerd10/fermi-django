@@ -1182,7 +1182,9 @@ function buildRegulationsLayout(body: HTMLElement) {
     }
   });
 
-  body.querySelectorAll("a[href*='.pdf']").forEach((a) => {
+  // the buttons of a file card (convertFileLinkParagraphs) are already styled -- only bare links get this look
+  body.querySelectorAll("a[href*='.pdf']:not(.cms-download-btn)").forEach((a) => {
+    if (a.closest("[data-file-card]")) return;
     a.classList.add("cms-reg-pdf-link");
     const row = a.closest("p, div");
     row?.classList.add("cms-reg-pdf-wrap");
