@@ -93,9 +93,9 @@ export default function BlogPage() {
   if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 2600} />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
-  // The legacy public "Institut haqida" page was intentionally a full-width
-  // banner plus document, not a long navigation article.
-  const hasSidebar = Boolean(menuSection) && slug !== "institut-xaqida";
+  // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
+  // a visitor reading the section page by page loses the list and has to go back to the menu each time.
+  const hasSidebar = Boolean(menuSection);
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
