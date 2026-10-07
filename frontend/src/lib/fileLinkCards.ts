@@ -87,7 +87,7 @@ function buildCard(
   icon.appendChild(el("i", fileIconClass(extension)));
   const text = el("span", "min-w-0");
   const titleEl = el("span", CARD_TITLE_CLASS);
-  titleEl.textContent = title.replace(/\s*\((?:yuklab olish|download|\u0441\u043a\u0430\u0447\u0430\u0442\u044c)\)\s*$/i, "") || title;
+  titleEl.textContent = title.replace(/^https?:\/\/(www\.)?/i, "").replace(/\s*\((?:yuklab olish|download|\u0441\u043a\u0430\u0447\u0430\u0442\u044c)\)\s*$/i, "") || title;
   const meta = el("span", CARD_META_CLASS);
   meta.textContent = extension.toUpperCase();
   text.append(titleEl, meta);
@@ -123,7 +123,7 @@ export function convertFileLinkParagraphs(
   tidyTitle: (title: string) => string = (title) => title,
   downloadLabel?: string,
 ): string {
-  if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)/i.test(html)) return html;
+  if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)|lex\.uz|dd\.gov\.uz/i.test(html)) return html;
   const doc = new DOMParser().parseFromString(html, "text/html");
   let changed = false;
 
