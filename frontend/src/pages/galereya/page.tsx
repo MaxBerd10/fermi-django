@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_PAGE_SIZE } from "@/lib/pagination";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { listGallery } from "@/api/gallery";
@@ -37,7 +38,7 @@ export default function GaleryaPage() {
       .finally(() => setLoading(false));
   }, [page]);
 
-  const pageSize = 12;
+  const pageSize = API_PAGE_SIZE;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (

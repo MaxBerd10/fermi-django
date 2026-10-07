@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { API_PAGE_SIZE } from "@/lib/pagination";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { listVideo } from "@/api/video";
@@ -99,7 +100,7 @@ export default function VideoPage() {
       .finally(() => setLoading(false));
   }, [page]);
 
-  const pageSize = 9;
+  const pageSize = API_PAGE_SIZE;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (

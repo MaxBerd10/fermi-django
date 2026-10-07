@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_PAGE_SIZE } from "@/lib/pagination";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { listNews } from "@/api/news";
@@ -38,12 +39,13 @@ export default function NewsPage() {
         const applyTelegram = (telegramNews: NewsArticle[]) => {
           if (cancelled) return;
           setItems(mergeNewsByDate(telegramNews, res.data));
-          setTotal((res.meta?.total ?? res.data.length) + telegramNews.length);
+          // the pager counts the server's pages only: Telegram posts are merged into page 1, not added to it
+          setTotal(res.meta?.total ?? res.data.length);
           localizeTelegramCards(telegramNews, i18n.language)
             .then((localized) => {
               if (cancelled) return;
               setItems(mergeNewsByDate(localized, res.data));
-              setTotal((res.meta?.total ?? res.data.length) + localized.length);
+              setTotal(res.meta?.total ?? res.data.length);
             })
             .catch(() => {});
         };
@@ -61,7 +63,7 @@ export default function NewsPage() {
     };
   }, [page, i18n.language]);
 
-  const pageSize = 9;
+  const pageSize = API_PAGE_SIZE;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_PAGE_SIZE } from "@/lib/pagination";
 
 import { useParams, useSearchParams } from "react-router-dom";
 
@@ -138,7 +139,7 @@ export default function NewsCategoryPage() {
 
 
 
-  const pageSize = 9;
+  const pageSize = API_PAGE_SIZE;
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
