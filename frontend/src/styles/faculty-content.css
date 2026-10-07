@@ -64,29 +64,35 @@
   }
 }
 
+/* The logo sits on a light tile: several faculty logos are dark emblems with dark lettering on a transparent
+   background (invisible on this navy banner), and a wide one needs a wider tile to be readable at all. */
 .faculty-hero__logo-wrap {
   flex-shrink: 0;
-  width: 5.5rem;
+  width: auto;
+  min-width: 5.5rem;
+  max-width: min(13rem, 42vw);
   height: 5.5rem;
-  padding: 0.625rem;
+  padding: 0.5rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .faculty-hero__logo-wrap {
-    width: 6.5rem;
+    min-width: 6.5rem;
+    max-width: 15rem;
     height: 6.5rem;
   }
 }
 
 .faculty-hero__logo {
+  height: 100%;
+  width: auto;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
 }
 
