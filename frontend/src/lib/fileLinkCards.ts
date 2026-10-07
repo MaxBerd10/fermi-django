@@ -102,6 +102,21 @@ export function convertFileLinkParagraphs(
   const doc = new DOMParser().parseFromString(html, "text/html");
   let changed = false;
 
+  // A picture that links to a file the page already offers as a text link or a card (a poster of the same PDF):
+  // the picture stays, the link around it goes -- one click target for the file, not three.
+  const plainFileHrefs = new Set(
+    Array.from(doc.body.querySelectorAll("a[href]"))
+      .filter((a) => fileExtension(a.getAttribute("href") || "") && !a.querySelector("img") && normalize(a.textContent))
+      .map((a) => a.getAttribute("href") as string),
+  );
+  Array.from(doc.body.querySelectorAll("a[href]")).forEach((a) => {
+    const href = a.getAttribute("href") || "";
+    if (!fileExtension(href) || !a.querySelector("img") || normalize(a.textContent)) return;
+    if (!plainFileHrefs.has(href)) return;
+    a.replaceWith(...Array.from(a.childNodes));
+    changed = true;
+  });
+
   doc.body.querySelectorAll("p, div, h1, h2, h3, h4, h5, h6").forEach((block) => {
     if (!block.isConnected) return; // already swallowed by an outer element that was turned into a card
     if (block.closest("table, ul, ol, blockquote")) return;
