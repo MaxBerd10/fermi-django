@@ -5,6 +5,9 @@ import DOMPurify from "dompurify";
 import { enhanceCmsHtml } from "@/lib/enhanceCmsHtml";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { MenuSectionOriginContext, inAppPath } from "@/lib/menuSectionOrigin";
+import { findMenuTitleBySlug } from "@/lib/menuSection";
+import { normalizeYearLabels } from "@/lib/siteConstants";
+import { useMenu } from "@/context/MenuContext";
 // Moved here from main.tsx (see that file's remaining imports) -- these style
 // enhanceCmsHtml's output, which only this component ever calls, so loading
 // them eagerly on every route (including ones that never render CMS HTML,
@@ -75,10 +78,15 @@ export default function RichContent({
   const navigate = useNavigate();
   const originSection = useContext(MenuSectionOriginContext);
   const usmleTitle = t("usmle.introTitle");
+  const { menu } = useMenu();
   const processed = useMemo(() => {
-    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, usmleTitle }) : html;
+    const pageTitle = (target: string) => {
+      const title = findMenuTitleBySlug(menu, target);
+      return title && normalizeYearLabels(title);
+    };
+    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, usmleTitle, pageTitle }) : html;
     return sanitizeHtml(withLayout);
-  }, [html, enhanced, slug, usmleTitle]);
+  }, [html, enhanced, slug, usmleTitle, menu]);
 
   if (!processed) return null;
 

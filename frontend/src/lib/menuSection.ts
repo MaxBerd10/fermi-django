@@ -261,3 +261,24 @@ export function getMenuSectionIntroKey(menuId?: number, slug?: string): string |
   if (root) return `section.intro.${root.theme}`;
   return null;
 }
+
+// The page's own title isn't part of the Page/ContentBlock API (see
+// apps/content/serializers.py::PageSerializer) — every one of these ~235
+// pages is reached from a real nav entry, and that entry's own label is
+// already a real, localized title, so this looks it up there instead of
+// duplicating the same string into the CMS content. Matches on `href`, not
+// `urlValue` — api/menu.ts always leaves urlValue blank (see its own
+// comment: Navbar never branched on it, so it was never worth deriving)
+// and only `href` (Django's `url` field, already a full "/blog/:menuId/:slug"
+// path) actually carries the real slug. normalizeMenuHref() first, same as
+// every other renderer of this href (Navbar.tsx, menuSection.ts, ...) — the
+// raw href off the menu tree can still say a stale year (e.g. "...-2025")
+// that this function's own "-2026" URL slug won't literally match otherwise.
+export function findMenuTitleBySlug(nodes: MenuNode[], slug: string): string | null {
+  for (const node of nodes) {
+    if (normalizeMenuHref(node.href)?.endsWith(`/${slug}`)) return node.title.trim();
+    const found = findMenuTitleBySlug(node.children ?? [], slug);
+    if (found) return found;
+  }
+  return null;
+}

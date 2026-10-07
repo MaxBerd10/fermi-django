@@ -2,7 +2,12 @@
  * Legacy CKEditor HTML → clean semantic markup for `.cms-article` styling.
  * Runs in the browser (DOMParser); safe no-op during SSR/build.
  */
-export type CmsEnhanceOptions = { slug?: string; usmleTitle?: string };
+export type CmsEnhanceOptions = {
+  slug?: string;
+  usmleTitle?: string;
+  /** The menu's label for the /blog page with this slug, or null when the menu has none. */
+  pageTitle?: (slug: string) => string | null;
+};
 
 export function getCmsArticleModifier(slug?: string): string {
   if (slug === "institut-xaqida") return "cms-article--about";
@@ -80,6 +85,30 @@ function unwrapBlankLinks(root: HTMLElement): void {
   });
 }
 
+const BLOG_ADDRESS_RE = /^(?:https?:\/\/[^/\s]+)?\/blog\/\d+\/([^/?#\s]+)\/?$/;
+
+/**
+ * An editor pasted the page address as the link's own text ("/blog/378/horijiy-fuqarolar-...-tartibi"). The
+ * menu knows the page's real name, so the link reads that instead; a text that names a different page than the
+ * href, or a page the menu does not list, is left as typed.
+ */
+function labelAddressLinks(root: HTMLElement, pageTitle: (slug: string) => string | null): void {
+  root.querySelectorAll("a[href]").forEach((anchor) => {
+    if (anchor.querySelector("img, picture, svg, video, iframe, i[class]")) return;
+    const shown = BLOG_ADDRESS_RE.exec((anchor.textContent ?? "").replace(/[\s\u00a0\u200b]+/g, ""));
+    const target = BLOG_ADDRESS_RE.exec(anchor.getAttribute("href") || "");
+    if (!shown || !target || shown[1] !== target[1]) return;
+    let slug = target[1];
+    try {
+      slug = decodeURIComponent(slug);
+    } catch {
+      // keep the raw slug
+    }
+    const title = pageTitle(slug);
+    if (title) anchor.textContent = title;
+  });
+}
+
 export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): string {
   if (!html?.trim()) return html;
   if (typeof DOMParser === "undefined") return html;
@@ -90,6 +119,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   stripLegacyStyles(body);
   unwrapBlankLinks(body);
+  if (options?.pageTitle) labelAddressLinks(body, options.pageTitle);
 
   if (slug === "ilmiy-konferensiyalar") moveVideoToTop(body);
 

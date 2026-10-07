@@ -3,7 +3,6 @@ import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
 import type { Page } from "@/types/content";
-import type { MenuNode } from "@/types/menu";
 import { ApiError } from "@/types/api";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import PageHeader from "@/components/shared/PageHeader";
@@ -13,30 +12,9 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
-import { resolveMenuSection } from "@/lib/menuSection";
+import { findMenuTitleBySlug, resolveMenuSection } from "@/lib/menuSection";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
-
-// The page's own title isn't part of the Page/ContentBlock API (see
-// apps/content/serializers.py::PageSerializer) — every one of these ~235
-// pages is reached from a real nav entry, and that entry's own label is
-// already a real, localized title, so this looks it up there instead of
-// duplicating the same string into the CMS content. Matches on `href`, not
-// `urlValue` — api/menu.ts always leaves urlValue blank (see its own
-// comment: Navbar never branched on it, so it was never worth deriving)
-// and only `href` (Django's `url` field, already a full "/blog/:menuId/:slug"
-// path) actually carries the real slug. normalizeMenuHref() first, same as
-// every other renderer of this href (Navbar.tsx, menuSection.ts, ...) — the
-// raw href off the menu tree can still say a stale year (e.g. "...-2025")
-// that this function's own "-2026" URL slug won't literally match otherwise.
-function findTitleBySlug(nodes: MenuNode[], slug: string): string | null {
-  for (const node of nodes) {
-    if (normalizeMenuHref(node.href)?.endsWith(`/${slug}`)) return node.title.trim();
-    const found = findTitleBySlug(node.children ?? [], slug);
-    if (found) return found;
-  }
-  return null;
-}
 
 /**
  * Generic renderer for every static/informational page pulled from the old
@@ -72,7 +50,7 @@ export default function BlogPage() {
   );
   const sidebarSection =
     originSection && slug && !originSection.links.some((link) => link.href.endsWith(`/${slug}`)) ? originSection : menuSection;
-  const rawTitle = (slug && findTitleBySlug(menuTree, slug)) || menuSection?.title;
+  const rawTitle = (slug && findMenuTitleBySlug(menuTree, slug)) || menuSection?.title;
   // Same year-rename Navbar.tsx already applies to this exact label when rendering
   // the nav link itself — without it, a page reached via a "-2026" URL would show
   // its own stale "-2025" title even though the link the visitor clicked said 2026.
