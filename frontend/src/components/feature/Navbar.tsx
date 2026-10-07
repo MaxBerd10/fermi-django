@@ -38,6 +38,9 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<number | null>(null);
   const [openMenuRect, setOpenMenuRect] = useState<Rect | null>(null);
   const [hoveredChild, setHoveredChild] = useState<number | null>(null);
+  // A row clicked (or confirmed with Enter) keeps its flyout in place: the pointer can then travel to the
+  // flyout across the rows in between without each of them swapping it away. Cleared with the flyout.
+  const [pinnedChild, setPinnedChild] = useState<number | null>(null);
   const [hoveredChildRect, setHoveredChildRect] = useState<Rect | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [lang, setLang] = useState<"uz" | "ru" | "en">((i18n.language?.slice(0, 2) as "uz" | "ru" | "en") || "uz");
@@ -175,6 +178,10 @@ export default function Navbar() {
     raf = requestAnimationFrame(track);
     return () => cancelAnimationFrame(raf);
   }, [openMenu]);
+
+  useEffect(() => {
+    if (hoveredChild === null) setPinnedChild(null);
+  }, [hoveredChild]);
 
   // Light hero banners need dark frosted nav for readable contrast
   const solid = true;
@@ -549,7 +556,16 @@ export default function Navbar() {
                   hoveredChildElRef.current = row;
                   setHoveredChildRect(row.getBoundingClientRect());
                 };
+                const pinFlyout = (row: HTMLElement) => {
+                  showFlyout(row);
+                  setPinnedChild(child.id);
+                };
                 const onRowEnter = (row: HTMLElement) => {
+                  if (pinnedChild !== null && pinnedChild !== child.id) {
+                    // another row is pinned: only a click on this row moves the flyout
+                    cancelClose();
+                    return;
+                  }
                   // the first flyout opens at once; switching from one row's flyout to another's waits a moment
                   if (hoveredChild === null || hoveredChild === child.id) {
                     showFlyout(row);
@@ -571,13 +587,13 @@ export default function Navbar() {
                         tabIndex={0}
                         aria-haspopup="menu"
                         aria-expanded={hoveredChild === child.id}
-                        className={`${rowClass} cursor-default ${hoveredChild === child.id ? "bg-primary-50 text-primary-800" : ""}`}
-                        onClick={(e) => e.currentTarget.parentElement && showFlyout(e.currentTarget.parentElement)}
+                        className={`${rowClass} cursor-default ${hoveredChild === child.id ? "bg-primary-50 text-primary-800" : ""} ${pinnedChild === child.id ? "font-semibold" : ""}`}
+                        onClick={(e) => e.currentTarget.parentElement && pinFlyout(e.currentTarget.parentElement)}
                         onFocus={(e) => e.currentTarget.parentElement && showFlyout(e.currentTarget.parentElement)}
                         onKeyDown={(e) => {
                           if ((e.key === "Enter" || e.key === " " || e.key === "ArrowRight") && e.currentTarget.parentElement) {
                             e.preventDefault();
-                            showFlyout(e.currentTarget.parentElement);
+                            pinFlyout(e.currentTarget.parentElement);
                           }
                         }}
                       >
@@ -601,20 +617,11 @@ export default function Navbar() {
         createPortal(
           <div
             className="fixed z-[70] w-80 min-w-[20rem] max-w-[22rem]"
-            // Level with the hovered row, so reaching it is a straight move to the right: when it was pinned
-            // to the panel's top, a row near the bottom (Matbuot xizmati) put it ten rows away and the
-            // pointer crossed other rows on the way, replacing it before it could be clicked. Kept inside
-            // the window for rows near the bottom edge.
-            style={{
-              left: hoveredChildRect.right + 4,
-              top: Math.max(
-                8,
-                Math.min(
-                  hoveredChildRect.top - 8,
-                  window.innerHeight - 8 - Math.min(window.innerHeight * 0.7, hoveredChildNode.children.length * 44 + 16),
-                ),
-              ),
-            }}
+            // Pinned to the 2nd-level panel's own top (not the hovered row's) so it holds
+            // still while browsing rows within that panel, instead of chasing the cursor
+            // down the list -- only its content swaps per hovered row. A row that is clicked
+            // keeps it there (pinnedChild), so the pointer can cross the rows to reach it.
+            style={{ left: hoveredChildRect.right + 4, top: openMenuRect?.bottom ? openMenuRect.bottom + 4 : hoveredChildRect.top - 4 }}
             onMouseEnter={cancelClose}
             onMouseLeave={scheduleClose}
           >
