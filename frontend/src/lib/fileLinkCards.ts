@@ -40,6 +40,31 @@ function opensInBrowser(extension: string): boolean {
   return extension === "pdf" || extension.includes("."); // "." = a portal link such as lex.uz
 }
 
+/**
+ * "11.2-ilova" typed as three links ("11." "2" "-ilova") whose targets disagree: pick the one file whose name
+ * starts with the label's number ("11.2-ilova.pdf"). Only when exactly one distinct file matches.
+ */
+function hrefForNumberedLabel(anchors: Element[], label: string): string | null {
+  const number = /^\s*(\d+(?:\.\d+)*)/.exec(label)?.[1];
+  if (!number) return null;
+  const escaped = number.replace(/\./g, "\\.");
+  const starts = new RegExp("^" + escaped + "(?:[-_ ]|$)");
+  const matches = new Set(
+    anchors
+      .map((a) => a.getAttribute("href") || "")
+      .filter((href) => {
+        let name = href.split(/[?#]/)[0].split("/").pop() || "";
+        try {
+          name = decodeURIComponent(name);
+        } catch {
+          /* keep the raw name */
+        }
+        return starts.test(name.replace(/\.[a-z0-9]+$/i, ""));
+      }),
+  );
+  return matches.size === 1 ? Array.from(matches)[0] : null;
+}
+
 function buildCard(
   doc: Document,
   href: string,
@@ -126,9 +151,16 @@ export function convertFileLinkParagraphs(
       (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent),
     );
     // one file, possibly cut into several <a> pieces by the editor ("20" + "24/2025 o'quv yili...")
-    const href = fileAnchors[0]?.getAttribute("href") || "";
-    if (!fileAnchors.length || fileAnchors.some((a) => a.getAttribute("href") !== href)) return;
+    if (!fileAnchors.length) return;
     const rawTitle = normalize(fileAnchors.map((a) => a.textContent).join(""));
+    let href = fileAnchors[0].getAttribute("href") || "";
+    if (fileAnchors.some((a) => a.getAttribute("href") !== href)) {
+      // pieces pointing at different files: "11." + "2" + "-ilova" where the tail was pasted with the link of annex 1.
+      // The label's own number says which file it is.
+      const byNumber = hrefForNumberedLabel(fileAnchors, rawTitle);
+      if (!byNumber) return;
+      href = byNumber;
+    }
     if (!rawTitle || !isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
     const title = tidyTitle(rawTitle);
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel, downloadLabel));
