@@ -47,6 +47,7 @@ function formatFileSize(bytes: number): string {
 export default function DocumentCard({ url, title, filename, fileSize }: DocumentCardProps) {
   const { t } = useTranslation();
   const extension = (filename.split(".").pop() || "file").toUpperCase();
+  const opensInBrowser = /^(PDF|PNG|JPE?G|GIF|WEBP|SVG|TXT)$/.test(extension);
   const meta = [extension, fileSize > 0 ? formatFileSize(fileSize) : ""].filter(Boolean).join(" · ");
 
   return (
@@ -61,14 +62,24 @@ export default function DocumentCard({ url, title, filename, fileSize }: Documen
         </span>
       </div>
       <div className={CARD_ACTIONS_CLASS}>
-        <a href={url} target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
-          <i className="ri-external-link-line" aria-hidden="true" />
-          {t("document.open")}
-        </a>
-        <a href={url} download target="_blank" rel="noopener noreferrer" className={SECONDARY_BUTTON_CLASS}>
-          <i className="ri-download-2-line" aria-hidden="true" />
-          {t("document.download")}
-        </a>
+        {opensInBrowser ? (
+          <>
+            <a href={url} target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
+              <i className="ri-external-link-line" aria-hidden="true" />
+              {t("document.open")}
+            </a>
+            <a href={url} download target="_blank" rel="noopener noreferrer" className={SECONDARY_BUTTON_CLASS}>
+              <i className="ri-download-2-line" aria-hidden="true" />
+              {t("document.download")}
+            </a>
+          </>
+        ) : (
+          // a .pptx/.docx/.xlsx/.zip never shows in a browser tab, so "open in the browser" would just download too
+          <a href={url} download target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
+            <i className="ri-download-2-line" aria-hidden="true" />
+            {t("document.download")}
+          </a>
+        )}
       </div>
     </div>
   );

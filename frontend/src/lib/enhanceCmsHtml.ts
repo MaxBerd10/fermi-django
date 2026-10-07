@@ -1208,7 +1208,13 @@ function buildRegulationsLayout(body: HTMLElement) {
 
 function buildUsmleLayout(body: HTMLElement) {
   body.querySelectorAll(".hatnote, [class*='navigation-not-searchable']").forEach((el) => el.remove());
-  body.querySelectorAll('a[title="Edit section"]').forEach((el) => el.remove());
+  // Wikipedia's "Step 3[edit]" heading: drop the edit link and its brackets, then the now-bare "Step 3" line
+  // (the step card below carries that title itself)
+  body.querySelectorAll('a[title^="Edit section"], a[href*="action=edit"]').forEach((el) => el.remove());
+  // what is left of that heading is "Step 3[]" (the brackets sit in separate spans, so match on the whole line)
+  body.querySelectorAll("p").forEach((p) => {
+    if (/^Step\s*\d\s*(\[\s*\])?$/i.test(p.textContent?.replace(/\u00a0/g, " ").trim() ?? "")) p.remove();
+  });
 
   const steps: Element[] = [];
   body.querySelectorAll("p").forEach((p) => {
@@ -1229,7 +1235,8 @@ function buildUsmleLayout(body: HTMLElement) {
     p.replaceWith(card);
   });
 
-  body.querySelectorAll('a[href*=".pptx"], a[href*=".pdf"]').forEach((a) => {
+  body.querySelectorAll('a[href*=".pptx"]:not(.cms-download-btn), a[href*=".pdf"]:not(.cms-download-btn)').forEach((a) => {
+    if (a.closest("[data-file-card]")) return; // a file card's own buttons are already styled
     a.classList.add("cms-usmle-download");
     if (a.parentElement?.tagName === "P" && a.parentElement.textContent?.trim() === a.textContent?.trim()) {
       const wrap = body.ownerDocument.createElement("div");

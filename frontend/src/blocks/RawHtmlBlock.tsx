@@ -14,9 +14,10 @@ export default function RawHtmlBlock({ html, slug, className }: { html: string; 
   const { t, i18n } = useTranslation();
   const isUzbek = (i18n.resolvedLanguage || i18n.language || "uz").startsWith("uz");
   const openLabel = t("document.open");
+  const downloadLabel = t("document.download");
   const withCards = useMemo(
-    () => (rebuildsLayoutFromText(slug) ? html : convertFileLinkParagraphs(html, openLabel, isUzbek ? normalizeUzbekApostrophes : undefined)),
-    [html, openLabel, slug, isUzbek],
+    () => (rebuildsLayoutFromText(slug) ? html : convertFileLinkParagraphs(html, openLabel, isUzbek ? normalizeUzbekApostrophes : undefined, downloadLabel)),
+    [html, openLabel, downloadLabel, slug, isUzbek],
   );
   return <RichContent html={withCards} className={className} slug={slug} />;
 }

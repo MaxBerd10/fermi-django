@@ -35,7 +35,19 @@ function isLoneLinkLine(lineText: string, title: string): boolean {
   return rest.length <= 60 && rest.length < lineText.length && CALL_TO_ACTION_RE.test(rest);
 }
 
-function buildCard(doc: Document, href: string, title: string, extension: string, openLabel: string): HTMLElement {
+/** Only these show in a browser tab; a .pptx/.docx/.xlsx/.zip just downloads, so its card must say "download". */
+function opensInBrowser(extension: string): boolean {
+  return extension === "pdf" || extension.includes("."); // "." = a portal link such as lex.uz
+}
+
+function buildCard(
+  doc: Document,
+  href: string,
+  title: string,
+  extension: string,
+  openLabel: string,
+  downloadLabel?: string,
+): HTMLElement {
   const el = (tag: string, className: string) => {
     const node = doc.createElement(tag);
     node.className = className;
@@ -61,9 +73,11 @@ function buildCard(doc: Document, href: string, title: string, extension: string
   link.href = href;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  const linkIcon = el("i", "ri-external-link-line");
+  const download = Boolean(downloadLabel) && !opensInBrowser(extension);
+  if (download) link.setAttribute("download", "");
+  const linkIcon = el("i", download ? "ri-download-2-line" : "ri-external-link-line");
   linkIcon.setAttribute("aria-hidden", "true");
-  link.append(linkIcon, doc.createTextNode(openLabel));
+  link.append(linkIcon, doc.createTextNode(download ? (downloadLabel as string) : openLabel));
   actions.appendChild(link);
 
   card.append(main, actions);
@@ -82,6 +96,7 @@ export function convertFileLinkParagraphs(
   html: string,
   openLabel: string,
   tidyTitle: (title: string) => string = (title) => title,
+  downloadLabel?: string,
 ): string {
   if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)/i.test(html)) return html;
   const doc = new DOMParser().parseFromString(html, "text/html");
@@ -100,7 +115,7 @@ export function convertFileLinkParagraphs(
     const rawTitle = normalize(fileAnchors.map((a) => a.textContent).join(""));
     if (!rawTitle || !isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
     const title = tidyTitle(rawTitle);
-    block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
+    block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel, downloadLabel));
     changed = true;
   });
 
@@ -131,7 +146,7 @@ export function convertFileLinkParagraphs(
       (node) => node === wrapper || isBlockish(node) || (node.nodeType === Node.TEXT_NODE && !node.textContent?.trim()),
     );
     if (!loneInline) return;
-    wrapper.replaceWith(buildCard(doc, href, tidyTitle(title), extension, openLabel));
+    wrapper.replaceWith(buildCard(doc, href, tidyTitle(title), extension, openLabel, downloadLabel));
     changed = true;
   });
   return changed ? doc.body.innerHTML : html;
