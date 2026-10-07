@@ -67,6 +67,19 @@ export function getCmsArticleModifier(slug?: string): string {
   return "";
 }
 
+/**
+ * An editor's stray link around nothing but a space ("<a href='...docx'>&nbsp;</a>") shows no text, yet the
+ * file-type badge CSS still paints "DOC" there and the click lands on a (usually long dead) file. The link
+ * goes, its content stays.
+ */
+function unwrapBlankLinks(root: HTMLElement): void {
+  root.querySelectorAll("a[href]").forEach((anchor) => {
+    if (anchor.querySelector("img, picture, svg, video, iframe, i[class]")) return;
+    if ((anchor.textContent ?? "").replace(/[\s\u00a0\u200b]+/g, "") !== "") return;
+    anchor.replaceWith(...Array.from(anchor.childNodes));
+  });
+}
+
 export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): string {
   if (!html?.trim()) return html;
   if (typeof DOMParser === "undefined") return html;
@@ -76,6 +89,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   const body = doc.body;
 
   stripLegacyStyles(body);
+  unwrapBlankLinks(body);
 
   if (slug === "ilmiy-konferensiyalar") moveVideoToTop(body);
 
