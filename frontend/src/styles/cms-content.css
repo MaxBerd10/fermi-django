@@ -323,6 +323,17 @@
   margin: 0;
 }
 
+/* a list item that holds only file cards: no boxed bullet around the cards */
+.cms-article--rich .cms-feature-list > li.cms-li-cards {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+.cms-article--rich .cms-feature-list > li.cms-li-cards::before {
+  display: none;
+}
+
 .cms-article--rich p {
   text-align: left !important;
 }

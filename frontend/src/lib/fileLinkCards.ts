@@ -142,9 +142,27 @@ export function convertFileLinkParagraphs(
     changed = true;
   });
 
+  // A file-link line inside a list item is fine when the item holds nothing but such lines (the editors put a
+  // heading and its files into one <li>, each file in its own <p>): the lines become cards, the item stops
+  // being a boxed bullet. An item with real text, or a link inside prose, stays as it was.
+  const fileLineItems = new Map<Element, boolean>();
+  const holdsOnlyFileLines = (li: Element) => {
+    const anchors = Array.from(li.querySelectorAll("a[href]")).filter(
+      (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent),
+    );
+    const squash = (text: string | null) => normalize(text).replace(/\s+/g, "");
+    return anchors.length > 0 && squash(li.textContent) === squash(anchors.map((a) => a.textContent).join(""));
+  };
+
   doc.body.querySelectorAll("p, div, h1, h2, h3, h4, h5, h6").forEach((block) => {
     if (!block.isConnected) return; // already swallowed by an outer element that was turned into a card
-    if (block.closest("table, ul, ol, blockquote")) return;
+    if (block.closest("table, blockquote")) return;
+    const listItem = block.closest("li");
+    if (listItem) {
+      // judged once per item, before its first line turns into a card (a card's own text would fail the test)
+      if (!fileLineItems.has(listItem)) fileLineItems.set(listItem, holdsOnlyFileLines(listItem));
+      if (block.parentElement !== listItem || !fileLineItems.get(listItem)) return;
+    }
     if (block.querySelector("img, iframe, video")) return;
     // an anchor with no visible text (an editor's stray "&nbsp;" link, sometimes pointing at a different file) is not a link
     const fileAnchors = Array.from(block.querySelectorAll("a[href]")).filter(
@@ -164,6 +182,7 @@ export function convertFileLinkParagraphs(
     if (!rawTitle || !isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
     const title = tidyTitle(rawTitle);
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel, downloadLabel));
+    listItem?.classList.add("cms-li-cards");
     changed = true;
   });
 
