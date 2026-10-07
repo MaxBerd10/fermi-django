@@ -62,7 +62,7 @@ function buildCard(
   icon.appendChild(el("i", fileIconClass(extension)));
   const text = el("span", "min-w-0");
   const titleEl = el("span", CARD_TITLE_CLASS);
-  titleEl.textContent = title;
+  titleEl.textContent = title.replace(/\s*\((?:yuklab olish|download|\u0441\u043a\u0430\u0447\u0430\u0442\u044c)\)\s*$/i, "") || title;
   const meta = el("span", CARD_META_CLASS);
   meta.textContent = extension.toUpperCase();
   text.append(titleEl, meta);
@@ -150,5 +150,40 @@ export function convertFileLinkParagraphs(
     wrapper.replaceWith(buildCard(doc, href, tidyTitle(title), extension, openLabel, downloadLabel));
     changed = true;
   });
+  // A paragraph of text that ends with the file link on a line of its own ("explanation<br><a>Fakultetning
+  // nizomi (yuklab olish)</a>"): the link line moves out of the paragraph into a card right below it. The
+  // <br> may sit inside the editor's font <span>s, so the part after it is taken as a range, not as siblings.
+  Array.from(doc.body.querySelectorAll("p")).forEach((p) => {
+    if (!p.isConnected || p.closest("table, ul, ol, blockquote, [data-file-card]")) return;
+    if (p.querySelector("img, iframe, video")) return;
+    const lastBr = Array.from(p.querySelectorAll("br")).pop();
+    if (!lastBr) return;
+    const tailRange = doc.createRange();
+    tailRange.setStartAfter(lastBr);
+    tailRange.setEnd(p, p.childNodes.length);
+    const tail = tailRange.cloneContents();
+    const tailAnchors = Array.from(tail.querySelectorAll("a[href]")).filter(
+      (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent),
+    );
+    const href = tailAnchors[0]?.getAttribute("href") || "";
+    if (!tailAnchors.length || tailAnchors.some((a) => a.getAttribute("href") !== href)) return;
+    const rawTitle = normalize(tailAnchors.map((a) => a.textContent).join(""));
+    if (!rawTitle || !isLoneLinkLine(normalize(tail.textContent), rawTitle)) return;
+    // there must be real text above the link line, and no different file link in the paragraph
+    const aboveRange = doc.createRange();
+    aboveRange.setStart(p, 0);
+    aboveRange.setEndBefore(lastBr);
+    if (!normalize(aboveRange.cloneContents().textContent)) return;
+    const otherFile = Array.from(p.querySelectorAll("a[href]")).some(
+      (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent) && a.getAttribute("href") !== href,
+    );
+    if (otherFile) return;
+    const card = buildCard(doc, href, tidyTitle(rawTitle), fileExtension(href) || "file", openLabel, downloadLabel);
+    tailRange.deleteContents();
+    lastBr.remove();
+    p.after(card);
+    changed = true;
+  });
+
   return changed ? doc.body.innerHTML : html;
 }
