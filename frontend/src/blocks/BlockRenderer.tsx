@@ -245,7 +245,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
                 <i className="ri-file-pdf-2-line" aria-hidden="true" />
                 {caption || document.title || document.filename}
               </span>
-              <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download">
+              <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download cms-download-btn">
                 <i className="ri-download-2-line" aria-hidden="true" />
                 Yuklab olish
               </a>
