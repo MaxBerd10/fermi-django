@@ -2,6 +2,8 @@
  * Legacy CKEditor HTML → clean semantic markup for `.cms-article` styling.
  * Runs in the browser (DOMParser); safe no-op during SSR/build.
  */
+import { repairLegacyHref } from "@/lib/legacyLinks";
+
 export type CmsEnhanceOptions = {
   slug?: string;
   usmleTitle?: string;
@@ -85,6 +87,14 @@ function unwrapBlankLinks(root: HTMLElement): void {
   });
 }
 
+/** Addresses that were mistyped or moved with the old site (see legacyLinks.ts) point to where they were meant to. */
+function repairLinks(root: HTMLElement): void {
+  root.querySelectorAll("a[href]").forEach((anchor) => {
+    const repaired = repairLegacyHref(anchor.getAttribute("href") || "");
+    if (repaired) anchor.setAttribute("href", repaired);
+  });
+}
+
 const BLOG_ADDRESS_RE = /^(?:https?:\/\/[^/\s]+)?\/blog\/\d+\/([^/?#\s]+)\/?$/;
 
 /**
@@ -119,6 +129,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   stripLegacyStyles(body);
   unwrapBlankLinks(body);
+  repairLinks(body);
   if (options?.pageTitle) labelAddressLinks(body, options.pageTitle);
 
   if (slug === "ilmiy-konferensiyalar") moveVideoToTop(body);

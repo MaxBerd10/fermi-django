@@ -8,7 +8,7 @@ import { createContext } from "react";
 export const MenuSectionOriginContext = createContext<number | undefined>(undefined);
 
 /** Addresses of pages that belong to this single-page app; other links (files, outside sites) are left to the browser. */
-const APP_ROUTE_RE = /^\/(blog|departments|faculty|leader|news|detail|documents|galereya|video|full-gallery|yangiliklar)(\/|\?|#|$)/;
+const APP_ROUTE_RE = /^(?:\/$|\/(?:blog|departments|faculty|leader|news|detail|documents|galereya|video|full-gallery|yangiliklar)(?:\/|\?|#|$))/;
 
 /** The in-app path of a content link, or null when the browser should handle it. */
 export function inAppPath(href: string, origin: string): string | null {
