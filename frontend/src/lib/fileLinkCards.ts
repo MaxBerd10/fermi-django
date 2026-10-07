@@ -106,8 +106,9 @@ export function convertFileLinkParagraphs(
     if (!block.isConnected) return; // already swallowed by an outer element that was turned into a card
     if (block.closest("table, ul, ol, blockquote")) return;
     if (block.querySelector("img, iframe, video")) return;
-    const fileAnchors = Array.from(block.querySelectorAll("a[href]")).filter((a) =>
-      fileExtension(a.getAttribute("href") || ""),
+    // an anchor with no visible text (an editor's stray "&nbsp;" link, sometimes pointing at a different file) is not a link
+    const fileAnchors = Array.from(block.querySelectorAll("a[href]")).filter(
+      (a) => fileExtension(a.getAttribute("href") || "") && normalize(a.textContent),
     );
     // one file, possibly cut into several <a> pieces by the editor ("20" + "24/2025 o'quv yili...")
     const href = fileAnchors[0]?.getAttribute("href") || "";
