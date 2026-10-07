@@ -78,7 +78,11 @@ function buildCard(doc: Document, href: string, title: string, extension: string
  * gets (name, type, open button), so every file reads as a file. A link inside running prose, a
  * list of many files, or an element that also holds an image/video is left exactly as it was.
  */
-export function convertFileLinkParagraphs(html: string, openLabel: string): string {
+export function convertFileLinkParagraphs(
+  html: string,
+  openLabel: string,
+  tidyTitle: (title: string) => string = (title) => title,
+): string {
   if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)/i.test(html)) return html;
   const doc = new DOMParser().parseFromString(html, "text/html");
   let changed = false;
@@ -93,8 +97,9 @@ export function convertFileLinkParagraphs(html: string, openLabel: string): stri
     // one file, possibly cut into several <a> pieces by the editor ("20" + "24/2025 o'quv yili...")
     const href = fileAnchors[0]?.getAttribute("href") || "";
     if (!fileAnchors.length || fileAnchors.some((a) => a.getAttribute("href") !== href)) return;
-    const title = normalize(fileAnchors.map((a) => a.textContent).join(""));
-    if (!title || !isLoneLinkLine(normalize(block.textContent), title)) return;
+    const rawTitle = normalize(fileAnchors.map((a) => a.textContent).join(""));
+    if (!rawTitle || !isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
+    const title = tidyTitle(rawTitle);
     block.replaceWith(buildCard(doc, href, title, fileExtension(href) || "file", openLabel));
     changed = true;
   });
@@ -126,7 +131,7 @@ export function convertFileLinkParagraphs(html: string, openLabel: string): stri
       (node) => node === wrapper || isBlockish(node) || (node.nodeType === Node.TEXT_NODE && !node.textContent?.trim()),
     );
     if (!loneInline) return;
-    wrapper.replaceWith(buildCard(doc, href, title, extension, openLabel));
+    wrapper.replaceWith(buildCard(doc, href, tidyTitle(title), extension, openLabel));
     changed = true;
   });
   return changed ? doc.body.innerHTML : html;

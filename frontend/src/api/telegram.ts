@@ -2,6 +2,7 @@ import type { NewsArticle } from "../types/content";
 import { ApiError } from "../types/api";
 import i18n from "../i18n";
 import { FEATURES } from "@/lib/featureFlags";
+import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
 
 function activeLang() {
   return (i18n.resolvedLanguage || i18n.language || "uz").slice(0, 2);
@@ -35,7 +36,15 @@ export async function listTelegramNews(): Promise<NewsArticle[]> {
       signal: controller.signal,
       cache: lang === "uz" ? "default" : "no-store",
     });
-    return await readEnvelope<NewsArticle[]>(response);
+    const items = await readEnvelope<NewsArticle[]>(response);
+    // the feed bypasses api/client.ts's resolveLocale, so the Uzbek apostrophes are tidied here
+    return lang === "uz"
+      ? items.map((item) => ({
+          ...item,
+          title: normalizeUzbekApostrophes(item.title),
+          content: normalizeUzbekApostrophes(item.content),
+        }))
+      : items;
   } finally {
     window.clearTimeout(timer);
   }

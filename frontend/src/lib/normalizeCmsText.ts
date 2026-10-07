@@ -6,9 +6,27 @@
 // safe to run over real HTML, unlike normalizeCmsOrthography below.
 const APOSTROPHE_VARIANTS_RE = /[‘’ʼ`´]/g;
 
+// The plain straight apostrophe between two letters ("Ma'daniy", "o'tkazilgan"): a menu label or a heading
+// typed on a keyboard that never autocorrected it. It is safe to rewrite in text, never inside markup
+// (an href may contain one), so the HTML case below only walks the text between tags.
+const STRAIGHT_BETWEEN_LETTERS_RE = /(\p{L})'(?=\p{L})/gu;
+
+// The same marks spelled as HTML entities (Telegram posts: "Farg&#39;ona", editors: "o&lsquo;quv"): the browser
+// decodes them only after this runs, so they would reach the page as straight/curly marks again.
+const ENTITY_BETWEEN_LETTERS_RE = /(\p{L})(?:&#0*39;|&#x0*27;|&apos;|&lsquo;|&rsquo;|&#0*821[67];)(?=\p{L})/giu;
+
 export function normalizeUzbekApostrophes(text: string): string {
   if (!text) return text;
-  return text.replace(APOSTROPHE_VARIANTS_RE, "ʻ");
+  const tidy = (part: string) =>
+    part
+      .replace(ENTITY_BETWEEN_LETTERS_RE, "$1ʻ")
+      .replace(APOSTROPHE_VARIANTS_RE, "ʻ")
+      .replace(STRAIGHT_BETWEEN_LETTERS_RE, "$1ʻ");
+  if (!text.includes("<")) return tidy(text);
+  return text
+    .split(/(<[^>]*>)/)
+    .map((part, i) => (i % 2 === 1 ? part : tidy(part)))
+    .join("");
 }
 
 /** CMS va menyu matnlaridagi imlo va belgilarni toʻgʻrilash.
