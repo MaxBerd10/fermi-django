@@ -142,6 +142,30 @@ export function convertFileLinkParagraphs(
     changed = true;
   });
 
+  // A picture and its label inside ONE file link ("<a href=x.pdf><img>BAKALAVR</a>"): the picture stays as a plain
+  // picture (no link around it -- one click target per file) and the label becomes the file's card below it.
+  doc.body.querySelectorAll("p, div").forEach((block) => {
+    if (block.closest("table, blockquote, [data-file-card]") || !block.querySelector("img")) return;
+    if (block.querySelector("iframe, video, ul, ol, p, div")) return;
+    const labelled = Array.from(block.querySelectorAll("a[href]")).filter(
+      (a) => fileExtension(a.getAttribute("href") || "") && a.querySelector("img") && normalize(a.textContent),
+    );
+    if (labelled.length !== 1) return;
+    const anchor = labelled[0];
+    const href = anchor.getAttribute("href") || "";
+    const rawTitle = normalize(anchor.textContent);
+    if (!isLoneLinkLine(normalize(block.textContent), rawTitle)) return;
+    const wrap = doc.createElement("div");
+    anchor.querySelectorAll("img").forEach((img) => {
+      const holder = doc.createElement("p");
+      holder.appendChild(img.cloneNode(true));
+      wrap.appendChild(holder);
+    });
+    wrap.appendChild(buildCard(doc, href, tidyTitle(rawTitle), fileExtension(href) || "file", openLabel, downloadLabel));
+    block.replaceWith(wrap);
+    changed = true;
+  });
+
   // A file-link line inside a list item is fine when the item holds nothing but such lines (the editors put a
   // heading and its files into one <li>, each file in its own <p>): the lines become cards, the item stops
   // being a boxed bullet. An item with real text, or a link inside prose, stays as it was.
