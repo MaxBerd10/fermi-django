@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
 import type { Page } from "@/types/content";
@@ -14,6 +14,7 @@ import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
 import { resolveMenuSection } from "@/lib/menuSection";
+import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
 // The page's own title isn't part of the Page/ContentBlock API (see
@@ -58,6 +59,19 @@ export default function BlogPage() {
     () => resolveMenuSection(menuTree, resolvedMenuId, slug),
     [menuTree, resolvedMenuId, slug],
   );
+  // A page reached through a link inside another section's page (Faoliyat > Doktorantura links to the
+  // specialty pages of Abiturient > Doktorantura) keeps THAT section's list beside it, as long as the page is
+  // not itself one of that section's entries -- the list does not jump away from where the visitor was.
+  const clickedSectionId = (useLocation().state as { menuSection?: number } | null)?.menuSection;
+  const originSection = useMemo(
+    () =>
+      typeof clickedSectionId === "number" && clickedSectionId !== menuSection?.sectionId
+        ? resolveMenuSection(menuTree, clickedSectionId)
+        : null,
+    [menuTree, clickedSectionId, menuSection?.sectionId],
+  );
+  const sidebarSection =
+    originSection && slug && !originSection.links.some((link) => link.href.endsWith(`/${slug}`)) ? originSection : menuSection;
   const rawTitle = (slug && findTitleBySlug(menuTree, slug)) || menuSection?.title;
   // Same year-rename Navbar.tsx already applies to this exact label when rendering
   // the nav link itself — without it, a page reached via a "-2026" URL would show
@@ -95,7 +109,7 @@ export default function BlogPage() {
 
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
-  const hasSidebar = Boolean(menuSection);
+  const hasSidebar = Boolean(sidebarSection);
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
@@ -108,7 +122,7 @@ export default function BlogPage() {
     <div className="text-foreground-950" ref={contentRef}>
       <PageHeader
         title={title}
-        breadcrumb={menuSection ? t(menuSection.breadcrumbKey) : t("footer.institutHaqida")}
+        breadcrumb={sidebarSection ? t(sidebarSection.breadcrumbKey) : t("footer.institutHaqida")}
         compact
       />
 
@@ -121,9 +135,11 @@ export default function BlogPage() {
             <Reveal>
               {sortedBlocks.length > 0 ? (
                 <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4">
-                  {sortedBlocks.map((block) => (
-                    <BlockRenderer key={block.id} block={block} />
-                  ))}
+                  <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
+                    {sortedBlocks.map((block) => (
+                      <BlockRenderer key={block.id} block={block} />
+                    ))}
+                  </MenuSectionOriginContext.Provider>
                 </article>
               ) : (
                 <div className="page-card px-5 py-8 text-center">
@@ -137,7 +153,7 @@ export default function BlogPage() {
           {hasSidebar && (
             <aside className="lg:col-span-4 min-w-0">
               <Reveal delay={100}>
-                <MenuSectionNav menuId={menuSection.sectionId} currentSlug={slug} />
+                <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />
               </Reveal>
             </aside>
           )}

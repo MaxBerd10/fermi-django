@@ -1,8 +1,10 @@
-﻿import { useMemo } from "react";
+﻿import { useContext, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import DOMPurify from "dompurify";
 import { enhanceCmsHtml } from "@/lib/enhanceCmsHtml";
 import { optimizedImageUrl } from "@/lib/imageProxy";
+import { MenuSectionOriginContext, inAppPath } from "@/lib/menuSectionOrigin";
 // Moved here from main.tsx (see that file's remaining imports) -- these style
 // enhanceCmsHtml's output, which only this component ever calls, so loading
 // them eagerly on every route (including ones that never render CMS HTML,
@@ -70,6 +72,8 @@ export default function RichContent({
   slug?: string;
 }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const originSection = useContext(MenuSectionOriginContext);
   const usmleTitle = t("usmle.introTitle");
   const processed = useMemo(() => {
     const withLayout = enhanced ? enhanceCmsHtml(html, { slug, usmleTitle }) : html;
@@ -78,9 +82,22 @@ export default function RichContent({
 
   if (!processed) return null;
 
+  // A link to another page of the site opens inside the app (no reload) and tells that page which section it
+  // was clicked in. Files, outside sites, new-tab and modifier clicks stay with the browser.
+  const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const anchor = (event.target as Element).closest("a[href]");
+    if (!anchor || anchor.hasAttribute("download") || (anchor.getAttribute("target") || "_self") !== "_self") return;
+    const path = inAppPath(anchor.getAttribute("href") || "", window.location.origin);
+    if (!path) return;
+    event.preventDefault();
+    navigate(path, { state: originSection ? { menuSection: originSection } : undefined });
+  };
+
   return (
     <div
       className={`prose-content [&_img]:!max-w-full [&_img]:!h-auto [&_img]:!w-auto [&_iframe]:!w-full [&_iframe]:!h-auto [&_iframe]:aspect-video ${className}`}
+      onClick={onClick}
       dangerouslySetInnerHTML={{ __html: processed }}
     />
   );
