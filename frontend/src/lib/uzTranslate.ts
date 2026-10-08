@@ -60,14 +60,35 @@ async function translateChunk(text: string, lang: string): Promise<string> {
   return source;
 }
 
-async function translateLong(text: string, lang: string): Promise<string> {
-  const source = String(text || "").trim();
-  if (source.length <= 450) return translateChunk(source, lang);
-  const parts = [];
-  for (let index = 0; index < source.length; index += 420) {
-    parts.push(await translateChunk(source.slice(index, index + 420), lang));
+/** Pieces of at most `max` characters, cut at sentence ends (or spaces), never in the middle of a word. */
+function splitAtSentences(text: string, max = 420): string[] {
+  const pieces: string[] = [];
+  let rest = text.trim();
+  while (rest.length > max) {
+    const window = rest.slice(0, max);
+    const cut = Math.max(window.lastIndexOf(". "), window.lastIndexOf("! "), window.lastIndexOf("? "), window.lastIndexOf("; "));
+    const at = cut > max * 0.4 ? cut + 1 : Math.max(window.lastIndexOf(" "), max * 0.4);
+    pieces.push(rest.slice(0, at).trim());
+    rest = rest.slice(at).trim();
   }
+  if (rest) pieces.push(rest);
+  return pieces;
+}
+
+async function translateLine(text: string, lang: string): Promise<string> {
+  const parts: string[] = [];
+  for (const piece of splitAtSentences(text)) parts.push(await translateChunk(piece, lang));
   return parts.join(" ");
+}
+
+/** The article's lines as plain text, one per line (<br> and the end of a block start a new line). */
+function htmlLines(html: string): string[] {
+  const separator = "\u0001";
+  const withBreaks = html.replace(/<br\s*\/?>/gi, separator).replace(/<\/(p|div|li|h[1-6])>/gi, separator);
+  return stripHtml(withBreaks)
+    .split(separator)
+    .map((line) => line.trim())
+    .filter(Boolean);
 }
 
 export async function localizeTelegramCards(items: NewsArticle[], lang: string): Promise<NewsArticle[]> {
@@ -75,7 +96,7 @@ export async function localizeTelegramCards(items: NewsArticle[], lang: string):
   if (code === "uz") return items;
   const out = [];
   for (const item of items) {
-    if (!isTelegramNewsSlug(item.slug)) {
+    if (!isTelegramNewsSlug(item.slug) || item.translated) {
       out.push(item);
       continue;
     }
@@ -89,16 +110,16 @@ export async function localizeTelegramArticle(article: NewsArticle, lang: string
   const code = lang.slice(0, 2);
   if (code === "uz" || !isTelegramNewsSlug(article.slug)) return article;
   const title = await translateChunk(article.title, code);
-  const body = await translateLong(stripHtml(article.content), code);
+  const lines = htmlLines(article.content);
+  const translatedLines: string[] = [];
+  for (const line of lines) translatedLines.push(await translateLine(line, code));
   return {
     ...article,
     title,
-    content: body
-      .split(/\n+/)
-      .map((paragraph) => paragraph.trim())
-      .filter(Boolean)
-      .map((paragraph) => `<p>${paragraph.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>`)
-      .join("") || article.content,
+    content:
+      translatedLines
+        .map((line) => `<p>${line.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>`)
+        .join("") || article.content,
     translated: title !== article.title,
   };
 }

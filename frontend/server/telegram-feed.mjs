@@ -723,7 +723,9 @@ export async function getTelegramPost(slugOrId, lang = "uz") {
   const post = posts.find((item) => item.slug === `tg-${key}` || String(item.id) === key) || null;
   if (!post) return null;
   const [localized] = await localizePosts([post], lang, { full: true, wait: true });
-  return localized;
+  // the page only re-translates in the browser when the body really came back untranslated
+  const translated = lang === "uz" || htmlToText(localized.content) !== htmlToText(post.content);
+  return { ...localized, translated };
 }
 
 export async function handleTelegramFeedRequest(request, response) {

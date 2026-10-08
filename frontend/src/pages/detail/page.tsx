@@ -49,7 +49,9 @@ export default function DetailPage() {
         setArticle(data);
         setLoading(false);
         const lang = i18n.language;
-        if (isTelegramNewsSlug(slug) && lang.slice(0, 2) !== "uz") {
+        // the server already returns the article translated, with its paragraphs and bold text; only an article
+        // that came back untranslated gets the browser's plain-text fallback
+        if (isTelegramNewsSlug(slug) && lang.slice(0, 2) !== "uz" && !data.translated) {
           localizeTelegramArticle(data, lang)
             .then((localized) => {
               setArticle(localized);
