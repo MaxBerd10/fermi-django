@@ -13,6 +13,17 @@ export function isPlaceholderLogo(src?: string | null): boolean {
   return !!src && src.startsWith("/images/logo");
 }
 
+/**
+ * Categories whose cover is one whole picture to be read (a contest poster, an infographic, a photo of a
+ * flyer posted as it was taken): every part of it is content, so it is shown whole -- on the article and on its
+ * card in a list alike -- instead of being cropped to fit.
+ */
+const WHOLE_COVER_CATEGORIES = new Set(["telegram", "tanlovlar"]);
+
+export function showsWholeCover(category?: { slug?: string | null } | null): boolean {
+  return !!category?.slug && WHOLE_COVER_CATEGORIES.has(category.slug);
+}
+
 /** CMS menyu slug → API dagi haqiqiy kategoriya slug */
 const NEWS_CATEGORY_SLUG_ALIASES: Record<string, string> = {
   "yoshlar-ittifoqi-tomonidan-otkazilgan-tadbirlar": "yoshlar-ittifoqi-tadbirlari",

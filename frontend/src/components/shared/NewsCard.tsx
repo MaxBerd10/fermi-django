@@ -8,7 +8,7 @@ import { buildNewsDetailHref, newsCategoryTagStyle, NEWS_DEFAULT_MENU_ID } from 
 // card (e.g. the homepage, which has its own inline markup, not this
 // component). See RichContent.tsx's copy of this comment for the pattern.
 import "@/styles/news-content.css";
-import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo, showsWholeCover } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { useMemo, useState, useEffect } from "react";
 
@@ -33,8 +33,8 @@ export default function NewsCard({
   // 16:10 shape, so `cover` zooms in and cuts off whatever doesn't fit. Show the whole
   // photo instead, same as we already do for flyer/banner-shaped images (the logo used
   // for document-only posts needs this too, so it doesn't get cropped either).
-  const isBannerLike =
-    article.hasDocument || /flayer|flyer|banner|\.png$/i.test(imgSrc) || article.category?.slug === "telegram";
+  // (a contest poster is the same: the article shows it whole, so its card does too)
+  const isBannerLike = article.hasDocument || /flayer|flyer|banner|\.png$/i.test(imgSrc) || showsWholeCover(article.category);
 
   useEffect(() => {
     setImgSrc(imageSrc);

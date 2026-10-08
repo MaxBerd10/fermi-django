@@ -13,7 +13,7 @@ import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
-import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo, showsWholeCover } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { formatLongDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
@@ -74,7 +74,7 @@ export default function DetailPage() {
   // (every line of it is content, e.g. the iShifo contest call's evaluation
   // chart) rather than a photo that crops fine -- object-fit:cover's default
   // 28rem-tall crop was cutting real content off the bottom of a wide one.
-  const useContainHero = categorySlug === "telegram" || categorySlug === "tanlovlar";
+  const useContainHero = showsWholeCover(article.category);
   const hasBodyHeading = article.blocks
     ? article.blocks.some((b) => b.block_type === "heading")
     : /<h[1-6][ >]/i.test(article.content);

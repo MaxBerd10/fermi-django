@@ -9,7 +9,7 @@ import { formatShortDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
 import { mergeNewsByDate } from "@/lib/telegramNews";
 import { localizeTelegramCards } from "@/lib/uzTranslate";
-import { getNewsArticleImage, isPlaceholderLogo } from "@/lib/newsImages";
+import { getNewsArticleImage, isPlaceholderLogo, showsWholeCover } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 
 function newsHref(article: NewsArticle) {
@@ -198,7 +198,11 @@ export default function NewsAnnouncements() {
                       src={optimizedImageUrl(featuredDisplayImg, featured.hasDocument || featured.isVideo ? 320 : 900)}
                       alt={featured.title}
                       className={`w-full h-full group-hover:scale-[1.03] transition-transform duration-500 ${
-                        featured.hasDocument || featured.isVideo ? "object-contain p-8 bg-white" : "object-cover object-top"
+                        featured.hasDocument || featured.isVideo
+                          ? "object-contain p-8 bg-white"
+                          : showsWholeCover(featured.category)
+                            ? "object-contain bg-slate-100"
+                            : "object-cover object-top"
                       }`}
                       loading="lazy"
                     />
@@ -255,7 +259,13 @@ export default function NewsAnnouncements() {
                         <img
                           src={optimizedImageUrl(thumbDisplayImg, 200)}
                           alt=""
-                          className={`w-full h-full ${n.hasDocument || n.isVideo ? "object-contain p-2 bg-white" : "object-cover object-top"}`}
+                          className={`w-full h-full ${
+                            n.hasDocument || n.isVideo
+                              ? "object-contain p-2 bg-white"
+                              : showsWholeCover(n.category)
+                                ? "object-contain bg-slate-100"
+                                : "object-cover object-top"
+                          }`}
                           loading="lazy"
                         />
                       ) : (
