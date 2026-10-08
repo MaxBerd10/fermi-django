@@ -28,10 +28,13 @@ function normalize(text: string | null): string {
 }
 
 /** "Yuklab olish uchun bosing >>>>" style prompts the editors typed in front of a file link. */
-const CALL_TO_ACTION_RE = /yuklab|bosing|ko['\u2018\u2019\u02bb`]?rish|\u0441\u043a\u0430\u0447\u0430\u0442\u044c|\u043d\u0430\u0436\u043c\u0438\u0442\u0435|download|click|>>/i;
+const CALL_TO_ACTION_RE = /yuklab|bosing|batafsil|bilish|learn more|to learn|\u0443\u0437\u043d\u0430\u0442\u044c|\u043f\u043e\u0434\u0440\u043e\u0431\u043d|ko['\u2018\u2019\u02bb`]?rish|\u0441\u043a\u0430\u0447\u0430\u0442\u044c|\u043d\u0430\u0436\u043c\u0438\u0442\u0435|download|click|>>/i;
 
 /** A short bracketed tag after a file link: "(uzb)", "(rus)", "(2 MB)". */
 const TRAILING_TAG_RE = /^\s*\(\s*[^()]{1,12}\)\s*$/;
+
+/** A prompt typed inside the link text before the file's name ("Learn more....... Constitution ..."): not part of the name. */
+const LEADING_PROMPT_RE = /^(?:\u0443\u0437\u043d\u0430\u0442\u044c \u0431\u043e\u043b\u044c\u0448\u0435|batafsil bilish uchun|to learn more|learn more|yuklab olish uchun bosing)\s*(?:\.{2,}|\u2026|:|>>+)\s*/i;
 
 /** The line is just the link, optionally behind a short "click to download >>>" prompt. */
 function isLoneLinkLine(lineText: string, title: string): boolean {
@@ -93,7 +96,11 @@ function buildCard(
   icon.appendChild(el("i", fileIconClass(extension)));
   const text = el("span", "min-w-0");
   const titleEl = el("span", CARD_TITLE_CLASS);
-  titleEl.textContent = title.replace(/^https?:\/\/(www\.)?/i, "").replace(/\s*\((?:yuklab olish|download|\u0441\u043a\u0430\u0447\u0430\u0442\u044c)\)\s*$/i, "") || title;
+  titleEl.textContent =
+    title
+      .replace(/^https?:\/\/(www\.)?/i, "")
+      .replace(/\s*\((?:yuklab olish|download|\u0441\u043a\u0430\u0447\u0430\u0442\u044c)\)\s*$/i, "")
+      .replace(LEADING_PROMPT_RE, "") || title;
   const meta = el("span", CARD_META_CLASS);
   meta.textContent = extension.toUpperCase();
   text.append(titleEl, meta);
