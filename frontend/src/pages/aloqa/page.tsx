@@ -1,3 +1,4 @@
+import { FORM_FIELD, FORM_TEXTAREA } from "@/lib/formFields";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -103,18 +104,18 @@ export default function AloqaPage() {
             </Reveal>
 
             <Reveal delay={80}>
-              <form onSubmit={onSubmit} className="page-card p-4 md:p-5">
+              <form onSubmit={onSubmit} className="page-card p-5 md:p-7">
                 <h3 className="font-heading text-base font-semibold text-foreground-950 mb-3">{t("contact.sendMessage")}</h3>
                 {status === "success" && <div className="mb-3 p-2.5 rounded-xl bg-secondary-50 border border-secondary-200/80 text-sm text-secondary-800">{t("aloqa.successMessage")}</div>}
                 {status === "error" && <div className="mb-3 p-2.5 rounded-xl bg-accent-50 border border-accent-200/80 text-sm text-accent-800">{error}</div>}
-                <div className="grid sm:grid-cols-2 gap-2.5">
-                  <input name="name" required placeholder={t("aloqa.namePlaceholder")} className="h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
-                  <input name="email" type="email" required placeholder={t("contact.email")} className="h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
-                  <input name="phone" required placeholder={t("contact.phone")} className="h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
-                  <input name="subject" required placeholder={t("aloqa.subjectPlaceholder")} className="h-10 px-3 page-input !h-auto text-sm focus:outline-none focus:border-primary-500" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <input name="name" required placeholder={t("aloqa.namePlaceholder")} className={FORM_FIELD} />
+                  <input name="email" type="email" required placeholder={t("contact.email")} className={FORM_FIELD} />
+                  <input name="phone" required placeholder={t("contact.phone")} className={FORM_FIELD} />
+                  <input name="subject" required placeholder={t("aloqa.subjectPlaceholder")} className={FORM_FIELD} />
                 </div>
-                <textarea name="message" required rows={4} placeholder={t("aloqa.messagePlaceholder")} className="mt-2.5 w-full px-3 py-2 page-input !h-auto text-sm focus:outline-none focus:border-primary-500 resize-none" />
-                <button type="submit" disabled={status === "loading"} className="mt-3 inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60 transition-colors">
+                <textarea name="message" required rows={4} placeholder={t("aloqa.messagePlaceholder")} className={`mt-4 ${FORM_TEXTAREA}`} />
+                <button type="submit" disabled={status === "loading"} className="mt-5 inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-base font-semibold cursor-pointer disabled:opacity-60 transition-colors">
                   {status === "loading" ? t("contact.sending") : t("contact.sendMessage")}
                 </button>
               </form>

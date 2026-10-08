@@ -1,3 +1,4 @@
+import { FORM_FIELD, FORM_LABEL, FORM_TEXTAREA } from "@/lib/formFields";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { submitContestApplication } from "@/api/forms";
@@ -94,57 +95,57 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
 
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1">
+              <label className={FORM_LABEL}>
                 {t("contest.fullName")} <span className="text-red-500">*</span>
               </label>
               <input
                 name="fullName"
                 type="text"
                 required
-                className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500"
+                className={FORM_FIELD}
                 placeholder={t("contest.fullNamePlaceholder")}
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1">
+              <label className={FORM_LABEL}>
                 {t("contest.phoneLabel")} <span className="text-red-500">*</span>
               </label>
               <input
                 name="phone"
                 type="tel"
                 required
-                className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500"
+                className={FORM_FIELD}
                 placeholder="+998 90 123 45 67"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground-700 mb-1">
+            <label className={FORM_LABEL}>
               {t("contest.emailLabel")} <span className="text-red-500">*</span>
             </label>
             <input
               name="email"
               type="email"
               required
-              className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500"
+              className={FORM_FIELD}
               placeholder="email@example.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground-700 mb-1.5">{t("contest.messageLabel")}</label>
+            <label className={FORM_LABEL}>{t("contest.messageLabel")}</label>
             <textarea
               name="message"
               rows={4}
               maxLength={2000}
-              className="w-full px-4 py-3 page-input text-sm focus:outline-none focus:border-primary-500 resize-y"
+              className={FORM_TEXTAREA}
               placeholder={t("contest.messagePlaceholder")}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground-700 mb-1.5">{t("contest.fileLabel")}</label>
+            <label className={FORM_LABEL}>{t("contest.fileLabel")}</label>
             <input
               name="file"
               type="file"

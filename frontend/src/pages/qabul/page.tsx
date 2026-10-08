@@ -1,3 +1,4 @@
+import { FORM_FIELD, FORM_LABEL, FORM_TEXTAREA } from "@/lib/formFields";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -18,11 +19,6 @@ const colorMap: Record<string, string> = {
   secondary: "bg-secondary-50 border-secondary-200 text-secondary-700",
   accent: "bg-accent-50 border-accent-200 text-accent-700",
 };
-
-const LABEL_CLASS = "block text-sm font-semibold text-foreground-700 mb-1.5";
-// .page-input (global.css) sets a fixed padding/height/font-size outside Tailwind's layer, so the sizes are forced here
-const FIELD_CLASS = "w-full page-input !h-12 !px-4 !text-base focus:outline-none focus:border-primary-500";
-const TEXTAREA_CLASS = "w-full page-input !h-auto !min-h-[8rem] !px-4 !py-3 !text-base resize-y focus:outline-none focus:border-primary-500";
 
 export default function QabulPage() {
   const { t, i18n } = useTranslation();
@@ -261,52 +257,52 @@ export default function QabulPage() {
               phone and e-mail take two each; region, district, quarter and date one each), 2 on a tablet, 1 on a phone. */}
           <form onSubmit={onSubmit} className="max-w-6xl mx-auto grid gap-x-5 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-2">
-              <label htmlFor="qabul-fish" className={LABEL_CLASS}>{t("qabul.fullName")} <span className="text-red-500">*</span></label>
-              <input id="qabul-fish" name="fish" required className={FIELD_CLASS} />
+              <label htmlFor="qabul-fish" className={FORM_LABEL}>{t("qabul.fullName")} <span className="text-red-500">*</span></label>
+              <input id="qabul-fish" name="fish" required className={FORM_FIELD} />
             </div>
             <div className="lg:col-span-2">
-              <label htmlFor="qabul-categoryId" className={LABEL_CLASS}>{t("qabul.recipientLabel")} <span className="text-red-500">*</span></label>
-              <select id="qabul-categoryId" name="categoryId" required className={FIELD_CLASS}>
+              <label htmlFor="qabul-categoryId" className={FORM_LABEL}>{t("qabul.recipientLabel")} <span className="text-red-500">*</span></label>
+              <select id="qabul-categoryId" name="categoryId" required className={FORM_FIELD}>
                 <option value="">{t("qabul.selectPlaceholder")}</option>
                 {leaders.map((l) => <option key={l.id} value={l.id}>{l.name}</option>)}
               </select>
             </div>
             <div className="lg:col-span-2">
-              <label htmlFor="qabul-phone" className={LABEL_CLASS}>{t("contact.phone")} <span className="text-red-500">*</span></label>
-              <input id="qabul-phone" name="phone" required placeholder="+998 90 123 45 67" className={FIELD_CLASS} />
+              <label htmlFor="qabul-phone" className={FORM_LABEL}>{t("contact.phone")} <span className="text-red-500">*</span></label>
+              <input id="qabul-phone" name="phone" required placeholder="+998 90 123 45 67" className={FORM_FIELD} />
             </div>
             <div className="lg:col-span-2">
-              <label htmlFor="qabul-email" className={LABEL_CLASS}>{t("contact.email")} <span className="text-red-500">*</span></label>
-              <input id="qabul-email" name="email" type="email" required className={FIELD_CLASS} />
+              <label htmlFor="qabul-email" className={FORM_LABEL}>{t("contact.email")} <span className="text-red-500">*</span></label>
+              <input id="qabul-email" name="email" type="email" required className={FORM_FIELD} />
             </div>
             <div>
-              <label htmlFor="qabul-region" className={LABEL_CLASS}>{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
-              <select id="qabul-region" required value={regionId} onChange={(e) => setRegionId(e.target.value)} className={FIELD_CLASS}>
+              <label htmlFor="qabul-region" className={FORM_LABEL}>{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
+              <select id="qabul-region" required value={regionId} onChange={(e) => setRegionId(e.target.value)} className={FORM_FIELD}>
                 <option value="">{t("qabul.selectPlaceholder")}</option>
                 {regions.map((r) => <option key={r.id} value={r.id}>{translateRegionName(r, t)}</option>)}
               </select>
             </div>
             <div>
-              <label htmlFor="qabul-district" className={LABEL_CLASS}>{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
-              <select id="qabul-district" required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className={`${FIELD_CLASS} disabled:opacity-50`}>
+              <label htmlFor="qabul-district" className={FORM_LABEL}>{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
+              <select id="qabul-district" required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className={`${FORM_FIELD} disabled:opacity-50`}>
                 <option value="">{t("qabul.selectPlaceholder")}</option>
                 {districts.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
               </select>
             </div>
             <div>
-              <label htmlFor="qabul-quarter" className={LABEL_CLASS}>{t("qabul.quarterLabel")} <span className="text-red-500">*</span></label>
-              <select id="qabul-quarter" name="quarterId" required disabled={!districtId} className={`${FIELD_CLASS} disabled:opacity-50`}>
+              <label htmlFor="qabul-quarter" className={FORM_LABEL}>{t("qabul.quarterLabel")} <span className="text-red-500">*</span></label>
+              <select id="qabul-quarter" name="quarterId" required disabled={!districtId} className={`${FORM_FIELD} disabled:opacity-50`}>
                 <option value="">{t("qabul.selectPlaceholder")}</option>
                 {quarters.map((q) => <option key={q.id} value={q.id}>{q.name}</option>)}
               </select>
             </div>
             <div>
-              <label htmlFor="qabul-date" className={LABEL_CLASS}>{t("qabul.dateLabel")} <span className="text-red-500">*</span></label>
-              <input id="qabul-date" name="date" type="date" required className={FIELD_CLASS} />
+              <label htmlFor="qabul-date" className={FORM_LABEL}>{t("qabul.dateLabel")} <span className="text-red-500">*</span></label>
+              <input id="qabul-date" name="date" type="date" required className={FORM_FIELD} />
             </div>
             <div className="sm:col-span-2 lg:col-span-4">
-              <label htmlFor="qabul-subject" className={LABEL_CLASS}>{t("qabul.subjectLabel")} <span className="text-red-500">*</span></label>
-              <textarea id="qabul-subject" name="subject" required rows={5} className={TEXTAREA_CLASS} />
+              <label htmlFor="qabul-subject" className={FORM_LABEL}>{t("qabul.subjectLabel")} <span className="text-red-500">*</span></label>
+              <textarea id="qabul-subject" name="subject" required rows={5} className={FORM_TEXTAREA} />
             </div>
             <div className="sm:col-span-2 lg:col-span-4">
               <button type="submit" disabled={status === "loading"} className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-base font-semibold cursor-pointer disabled:opacity-60 transition-colors w-full sm:w-auto">

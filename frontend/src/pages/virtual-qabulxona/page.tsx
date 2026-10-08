@@ -1,3 +1,4 @@
+import { FORM_FIELD, FORM_LABEL, FORM_TEXTAREA } from "@/lib/formFields";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { getRegions, getDistricts } from "@/api/lookups";
@@ -130,23 +131,23 @@ export default function VirtualQabulxonaPage() {
 
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("vq.fullName")} <span className="text-red-500">*</span></label>
-                    <input name="fish" type="text" required className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500" placeholder={t("vq.fullNamePlaceholder")} />
+                    <label className={FORM_LABEL}>{t("vq.fullName")} <span className="text-red-500">*</span></label>
+                    <input name="fish" type="text" required className={FORM_FIELD} placeholder={t("vq.fullNamePlaceholder")} />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("aloqa.emailCardTitle")} <span className="text-red-500">*</span></label>
-                    <input name="email" type="email" required className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500" placeholder="email@example.com" />
+                    <label className={FORM_LABEL}>{t("aloqa.emailCardTitle")} <span className="text-red-500">*</span></label>
+                    <input name="email" type="email" required className={FORM_FIELD} placeholder="email@example.com" />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("vq.phoneNumberLabel")} <span className="text-red-500">*</span></label>
-                    <input name="phone" type="tel" required className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500" placeholder="+998 90 123 45 67" />
+                    <label className={FORM_LABEL}>{t("vq.phoneNumberLabel")} <span className="text-red-500">*</span></label>
+                    <input name="phone" type="tel" required className={FORM_FIELD} placeholder="+998 90 123 45 67" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("vq.genderLabel")} <span className="text-red-500">*</span></label>
-                    <select name="gender" required className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500">
+                    <label className={FORM_LABEL}>{t("vq.genderLabel")} <span className="text-red-500">*</span></label>
+                    <select name="gender" required className={FORM_FIELD}>
                       <option value="">{t("qabul.selectPlaceholder")}</option>
                       <option value="Erkak">{t("vq.genderMale")}</option>
                       <option value="Ayol">{t("vq.genderFemale")}</option>
@@ -156,22 +157,22 @@ export default function VirtualQabulxonaPage() {
 
                 <div className="grid sm:grid-cols-3 gap-3">
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
-                    <select required value={regionId} onChange={(e) => setRegionId(e.target.value)} className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500">
+                    <label className={FORM_LABEL}>{t("qabul.regionLabel")} <span className="text-red-500">*</span></label>
+                    <select required value={regionId} onChange={(e) => setRegionId(e.target.value)} className={FORM_FIELD}>
                       <option value="">{t("qabul.selectPlaceholder")}</option>
                       {regions.map((r) => <option key={r.id} value={r.id}>{translateRegionName(r, t)}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
-                    <select required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500 disabled:opacity-50">
+                    <label className={FORM_LABEL}>{t("qabul.districtLabel")} <span className="text-red-500">*</span></label>
+                    <select required value={districtId} onChange={(e) => setDistrictId(e.target.value)} disabled={!regionId} className={`${FORM_FIELD} disabled:opacity-50`}>
                       <option value="">{t("qabul.selectPlaceholder")}</option>
                       {districts.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground-700 mb-1">{t("vq.facultyLabel")} <span className="text-red-500">*</span></label>
-                    <select name="facultyId" required className="w-full h-10 px-3 page-input text-sm focus:outline-none focus:border-primary-500">
+                    <label className={FORM_LABEL}>{t("vq.facultyLabel")} <span className="text-red-500">*</span></label>
+                    <select name="facultyId" required className={FORM_FIELD}>
                       <option value="">{t("qabul.selectPlaceholder")}</option>
                       {faculties.map((f) => <option key={f.id} value={f.id}>{f.title}</option>)}
                     </select>
@@ -179,19 +180,19 @@ export default function VirtualQabulxonaPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground-700 mb-1.5">{t("contact.address")} <span className="text-red-500">*</span></label>
-                  <input name="address" type="text" required className="w-full h-11 px-4 page-input text-sm focus:outline-none focus:border-primary-500" placeholder={t("vq.addressPlaceholder")} />
+                  <label className={FORM_LABEL}>{t("contact.address")} <span className="text-red-500">*</span></label>
+                  <input name="address" type="text" required className={FORM_FIELD} placeholder={t("vq.addressPlaceholder")} />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground-700 mb-1.5">{t("vq.messageLabel")} <span className="text-red-500">*</span></label>
+                  <label className={FORM_LABEL}>{t("vq.messageLabel")} <span className="text-red-500">*</span></label>
                   <textarea
                     ref={textRef}
                     name="text"
                     required
                     rows={5}
                     maxLength={2000}
-                    className="w-full px-4 py-3 page-input text-sm focus:outline-none focus:border-primary-500 resize-y"
+                    className={FORM_TEXTAREA}
                     placeholder={t("vq.messagePlaceholder")}
                   />
                   <AiPanel title={t("ai.receptionTitle")} subtitle={t("ai.receptionSub")} className="mt-3">
@@ -254,7 +255,7 @@ export default function VirtualQabulxonaPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground-700 mb-1.5">{t("vq.fileLabel")}</label>
+                  <label className={FORM_LABEL}>{t("vq.fileLabel")}</label>
                   <input name="file" type="file" accept=".pdf,.docx,.png,.jpg,.xlsx,.svg,.pptx" className="w-full text-sm text-foreground-600 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-primary-50 file:text-primary-700 file:text-sm" />
                 </div>
 
