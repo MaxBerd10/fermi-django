@@ -103,7 +103,7 @@ export default function DetailPage() {
                 {article.seen > 0 && (
                   <span className="news-article__meta-item">
                     <i className="ri-eye-line" aria-hidden />
-                    {article.seen} {t("news.viewsSuffix")}
+                    {t("news.views", { count: article.seen })}
                   </span>
                 )}
               </div>

@@ -725,7 +725,13 @@ export async function getTelegramPost(slugOrId, lang = "uz") {
   const [localized] = await localizePosts([post], lang, { full: true, wait: true });
   // the page only re-translates in the browser when the body really came back untranslated
   const translated = lang === "uz" || htmlToText(localized.content) !== htmlToText(post.content);
-  return { ...localized, translated };
+  // The title is taken from the post's first bold line, and the page shows the title above the text -- so a post
+  // that opens with that very line would read it twice. Drop the line from the body, translated or not.
+  const leadingBold = /^\s*<b>([\s\S]*?)<\/b>(?:\s*<br\s*\/?>)*/i;
+  const opening = leadingBold.exec(post.content);
+  const opensWithTitle = Boolean(opening) && htmlToText(opening[1]).slice(0, 160) === post.title;
+  const content = opensWithTitle && leadingBold.test(localized.content) ? localized.content.replace(leadingBold, "") : localized.content;
+  return { ...localized, content, translated };
 }
 
 export async function handleTelegramFeedRequest(request, response) {
