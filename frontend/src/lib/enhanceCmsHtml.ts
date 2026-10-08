@@ -2,7 +2,7 @@
  * Legacy CKEditor HTML → clean semantic markup for `.cms-article` styling.
  * Runs in the browser (DOMParser); safe no-op during SSR/build.
  */
-import { repairLegacyHref } from "@/lib/legacyLinks";
+import { isDeadHref, repairLegacyHref } from "@/lib/legacyLinks";
 
 export type CmsEnhanceOptions = {
   slug?: string;
@@ -89,9 +89,19 @@ function unwrapBlankLinks(root: HTMLElement): void {
 
 /** Addresses that were mistyped or moved with the old site (see legacyLinks.ts) point to where they were meant to. */
 function repairLinks(root: HTMLElement): void {
+  const bare = (url: string) => url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").replace(/\/$/, "");
   root.querySelectorAll("a[href]").forEach((anchor) => {
-    const repaired = repairLegacyHref(anchor.getAttribute("href") || "");
-    if (repaired) anchor.setAttribute("href", repaired);
+    const href = anchor.getAttribute("href") || "";
+    if (isDeadHref(href)) {
+      anchor.replaceWith(...Array.from(anchor.childNodes));
+      return;
+    }
+    const repaired = repairLegacyHref(href);
+    if (!repaired) return;
+    // a link whose text is its own address ("www.tdsi.uz") shows the new address too
+    const shownAsAddress = bare((anchor.textContent ?? "").trim()) === bare(href);
+    anchor.setAttribute("href", repaired);
+    if (shownAsAddress && /^https?:\/\//i.test(repaired) && !anchor.querySelector("img")) anchor.textContent = bare(repaired);
   });
 }
 

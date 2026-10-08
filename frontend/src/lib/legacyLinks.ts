@@ -17,6 +17,23 @@ const MOVED_PAGES: Array<[RegExp, string]> = [
   [/^\/blog\/\d+\/e(?:ka|ko)foaol-talabalar-va-yashil-universitet-tadbirlari\/?$/i, "/galereya"],
 ];
 
+/** Sites of other institutions whose address changed (the old one no longer resolves). */
+const MOVED_HOSTS: Array<[RegExp, string]> = [
+  [/^(https?:\/\/)(?:www\.)?tdsi\.uz(?=[/?#]|$)/i, "$1tsdi.uz"], // Toshkent davlat stomatologiya instituti
+  [/^(https?:\/\/)(?:www\.)?kkmeduniver\.uz(?=[/?#]|$)/i, "$1kkmi.uz"], // Qoraqalpogʻiston tibbiyot instituti
+];
+
+/**
+ * Addresses that lead nowhere and have no replacement: files of the old site that were never copied over, and a
+ * portal that no longer exists. A link to them is worse than no link, so the text stays and the link goes.
+ */
+const DEAD_LINK_RE =
+  /^https?:\/\/(?:www\.)?(?:sammi\.uz\/|dd\.gov\.uz(?:[/?#]|$)|api\.fermi\.uz\/uploads\/|fjsti\.uz\/uploads\/)/i;
+
+export function isDeadHref(href: string): boolean {
+  return DEAD_LINK_RE.test(href.trim());
+}
+
 /** The repaired address, or null when the link is fine as typed. */
 export function repairLegacyHref(href: string): string | null {
   const value = href.trim();
@@ -32,6 +49,10 @@ export function repairLegacyHref(href: string): string | null {
 
   // a mistyped host ("fsjti" for "fjsti")
   if (/^https?:\/\/hemis\.fsjti\.uz(?=[/?#]|$)/i.test(value)) return value.replace(/fsjti/i, "fjsti");
+
+  for (const [pattern, replacement] of MOVED_HOSTS) {
+    if (pattern.test(value)) return value.replace(pattern, replacement);
+  }
 
   let path = value;
   try {
