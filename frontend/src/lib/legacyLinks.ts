@@ -13,8 +13,6 @@ const MOVED_PAGES: Array<[RegExp, string]> = [
     /^\/blog\/\d+\/2-fargona-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi\/?$/i,
     "/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
   ],
-  // "Yashil Universitet tadbirlari" (two misspelled copies of one address): the events live in the gallery
-  [/^\/blog\/\d+\/e(?:ka|ko)foaol-talabalar-va-yashil-universitet-tadbirlari\/?$/i, "/galereya"],
 ];
 
 /**
