@@ -105,6 +105,44 @@ function repairLinks(root: HTMLElement): void {
   });
 }
 
+/**
+ * A link to a video (YouTube) opens the video in its own tab, so the lesson list stays where it is, and carries a
+ * play mark (see .cms-video-link in cms-content.css) so it reads as a video before it is clicked.
+ */
+function markVideoLinks(root: HTMLElement): void {
+  root.querySelectorAll("a[href]").forEach((anchor) => {
+    if (!/^https?:\/\/(?:www\.|m\.)?(?:youtu\.be|youtube\.com)\//i.test(anchor.getAttribute("href") || "")) return;
+    if (anchor.querySelector("img, iframe")) return;
+    anchor.setAttribute("target", "_blank");
+    anchor.setAttribute("rel", "noopener noreferrer");
+    anchor.classList.add("cms-video-link");
+  });
+}
+
+/**
+ * "Klinik fikrlashga doir video darslar": seven sections, each a "... bo'limi mavzulari" line followed by a numbered
+ * list of lesson links. The lines had been typed as <div>, <p> or bold text and the items as bold lines; every section
+ * line becomes one kind of heading, and an item is just its text (a lesson without a video yet reads as plain text).
+ */
+const VIDEO_LESSON_SLUGS = new Set(["klinik-fikrlashga-doir-video-darslar"]);
+
+function normalizeVideoLessons(body: HTMLElement) {
+  body.querySelectorAll("div, p, h2, h3").forEach((el) => {
+    if (el.closest("li") || el.querySelector("div, p, ol, ul, a[href]")) return;
+    const text = (el.textContent ?? "").replace(/[\s\u00a0\u200b]+/g, " ").trim();
+    if (text.length > 120 || !/bo['\u2018\u2019\u02bb`]limi mavzulari/i.test(text)) return;
+    const h2 = el.ownerDocument.createElement("h2");
+    h2.className = "cms-section-title";
+    h2.textContent = text.replace(/\.$/, "");
+    el.replaceWith(h2);
+  });
+  body.querySelectorAll("ol > li").forEach((li) => {
+    li.querySelectorAll("strong, b").forEach((bold) => bold.replaceWith(...Array.from(bold.childNodes)));
+    if (!li.querySelector("a[href]")) li.classList.add("cms-video-pending");
+  });
+  body.querySelectorAll("ol").forEach((list) => list.classList.add("cms-video-list"));
+}
+
 const BLOG_ADDRESS_RE = /^(?:https?:\/\/[^/\s]+)?\/blog\/\d+\/([^/?#\s]+)\/?$/;
 
 /**
@@ -140,6 +178,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   stripLegacyStyles(body);
   unwrapBlankLinks(body);
   repairLinks(body);
+  markVideoLinks(body);
   if (options?.pageTitle) labelAddressLinks(body, options.pageTitle);
 
   if (slug === "ilmiy-konferensiyalar") moveVideoToTop(body);
@@ -192,6 +231,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   if (slug === "mutaxassisliklar-boyicha-testlar-toplami") normalizeStudentTestCover(body);
   else normalizeHeroImage(body);
   fixHorizontalRulesInLists(body);
+  if (VIDEO_LESSON_SLUGS.has(slug)) normalizeVideoLessons(body);
   if (FACULTY_ACTIVITY_SLUGS.has(slug)) liftBoldTitleLines(body);
   promoteCenteredHeadings(body);
   promoteDivHeadings(body);
@@ -432,6 +472,7 @@ function promoteCenteredHeadings(root: ParentNode) {
 
 function promoteDivHeadings(root: ParentNode) {
   root.querySelectorAll("div").forEach((div) => {
+    if (div.closest("li")) return; // the line of a list item is the item's text, not a section title
     if (div.querySelector(":scope > div, :scope > ul, :scope > ol, :scope > table")) return;
 
     const strong = div.querySelector(":scope > strong, :scope > span strong, :scope > a strong");
@@ -455,6 +496,7 @@ function promoteDivHeadings(root: ParentNode) {
 
 function promoteSubsectionHeadings(root: ParentNode) {
   root.querySelectorAll("p").forEach((p) => {
+    if (p.closest("li")) return;
     const strong = p.querySelector(":scope > strong, :scope > span > strong");
     if (!strong) return;
 
