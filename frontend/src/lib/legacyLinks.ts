@@ -24,11 +24,12 @@ const MOVED_HOSTS: Array<[RegExp, string]> = [
 ];
 
 /**
- * Addresses that lead nowhere and have no replacement: files of the old site that were never copied over, and a
- * portal that no longer exists. A link to them is worse than no link, so the text stays and the link goes.
+ * Addresses that lead nowhere and have no replacement: files of the old site that were never copied over, a
+ * portal that no longer exists, and two lex.uz documents that were withdrawn (the ru texts of the higher-education
+ * standard and classifier orders). A link to them is worse than no link, so the text stays and the link goes.
  */
 const DEAD_LINK_RE =
-  /^https?:\/\/(?:www\.)?(?:sammi\.uz\/|dd\.gov\.uz(?:[/?#]|$)|api\.fermi\.uz\/uploads\/|fjsti\.uz\/uploads\/)/i;
+  /^https?:\/\/(?:www\.)?(?:sammi\.uz\/|dd\.gov\.uz(?:[/?#]|$)|api\.fermi\.uz\/uploads\/|fjsti\.uz\/uploads\/|lex\.uz\/(?:(?:uz|ru)\/)?docs\/-?(?:5705038|5701176)(?:[/?#]|$))/i;
 
 export function isDeadHref(href: string): boolean {
   return DEAD_LINK_RE.test(href.trim());
