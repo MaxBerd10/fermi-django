@@ -1,4 +1,4 @@
-import { isDeadHref } from "@/lib/legacyLinks";
+import { isDeadHref, repairLegacyHref } from "@/lib/legacyLinks";
 import {
   CARD_ACTIONS_CLASS,
   CARD_CLASS,
@@ -131,6 +131,11 @@ export function convertFileLinkParagraphs(
 ): string {
   if (!html || typeof DOMParser === "undefined" || !/\.(pdf|docx?|xlsx?|pptx?|zip|rar)|lex\.uz|dd\.gov\.uz/i.test(html)) return html;
   const doc = new DOMParser().parseFromString(html, "text/html");
+  // an address that moved is repaired first, so the card is typed and linked by where the file really is now
+  doc.body.querySelectorAll("a[href]").forEach((anchor) => {
+    const repaired = repairLegacyHref(anchor.getAttribute("href") || "");
+    if (repaired) anchor.setAttribute("href", repaired);
+  });
   let changed = false;
 
   // A picture that links to a file the page already offers as a text link or a card (a poster of the same PDF):

@@ -17,6 +17,22 @@ const MOVED_PAGES: Array<[RegExp, string]> = [
   [/^\/blog\/\d+\/e(?:ka|ko)foaol-talabalar-va-yashil-universitet-tadbirlari\/?$/i, "/galereya"],
 ];
 
+/**
+ * The old site had one page per year of state programme ("dd.gov.uz/uz/pages/2016"); the programme's decree sits on
+ * lex.uz, and the ru/en texts of the same page already link there. Year -> lex.uz document (checked by title).
+ */
+const PROGRAMME_DECREES: Record<string, number> = {
+  "2016": 2903502, "2015": 2575143, "2014": 2347400, "2013": 2135768, "2012": 1967131, "2011": 1745082,
+  "2009": 1437232, "2008": 1323062, "2006": 973445, "2005": 436991, "2002": 1743746, "2001": 388442,
+  "2000": 261518, "1999": 2291986, "1998": 692590,
+};
+const PROGRAMME_PAGE_RE = /^https?:\/\/(?:www\.)?dd\.gov\.uz\/uz\/pages\/(\d{4})\/?$/i;
+
+function programmeDecree(href: string): string | null {
+  const year = PROGRAMME_PAGE_RE.exec(href.trim())?.[1];
+  return year && PROGRAMME_DECREES[year] ? `https://lex.uz/docs/-${PROGRAMME_DECREES[year]}` : null;
+}
+
 /** Sites of other institutions whose address changed (the old one no longer resolves). */
 const MOVED_HOSTS: Array<[RegExp, string]> = [
   [/^(https?:\/\/)(?:www\.)?tdsi\.uz(?=[/?#]|$)/i, "$1tsdi.uz"], // Toshkent davlat stomatologiya instituti
@@ -32,7 +48,7 @@ const DEAD_LINK_RE =
   /^https?:\/\/(?:www\.)?(?:sammi\.uz\/|dd\.gov\.uz(?:[/?#]|$)|api\.fermi\.uz\/uploads\/|fjsti\.uz\/uploads\/|lex\.uz\/(?:(?:uz|ru)\/)?docs\/-?(?:5705038|5701176)(?:[/?#]|$))/i;
 
 export function isDeadHref(href: string): boolean {
-  return DEAD_LINK_RE.test(href.trim());
+  return DEAD_LINK_RE.test(href.trim()) && !programmeDecree(href);
 }
 
 /** The repaired address, or null when the link is fine as typed. */
@@ -50,6 +66,9 @@ export function repairLegacyHref(href: string): string | null {
 
   // a mistyped host ("fsjti" for "fjsti")
   if (/^https?:\/\/hemis\.fsjti\.uz(?=[/?#]|$)/i.test(value)) return value.replace(/fsjti/i, "fjsti");
+
+  const decree = programmeDecree(value);
+  if (decree) return decree;
 
   for (const [pattern, replacement] of MOVED_HOSTS) {
     if (pattern.test(value)) return value.replace(pattern, replacement);
