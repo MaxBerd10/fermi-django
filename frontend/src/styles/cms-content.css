@@ -365,6 +365,43 @@
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 2a10 10 0 100 20 10 10 0 000-20zM10 7.5v9l7-4.5z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
+/* a line that is only a link to another page of the site: one link row with an arrow */
+.cms-article .cms-page-link {
+  margin: 0.45rem 0;
+}
+
+.cms-article .cms-page-link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid var(--cms-accent);
+  border-radius: 0.65rem;
+  color: #0a1158;
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.cms-article .cms-page-link a::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 1.1em;
+  height: 1.1em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.2 6.3l5.4 5.4a.4.4 0 010 .6l-5.4 5.4-1.4-1.4 3.3-3.3H5v-2h10.1l-3.3-3.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.2 6.3l5.4 5.4a.4.4 0 010 .6l-5.4 5.4-1.4-1.4 3.3-3.3H5v-2h10.1l-3.3-3.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cms-article .cms-page-link a:hover {
+  background: #fff;
+  border-color: var(--cms-accent);
+}
+
 .cms-article--rich p {
   text-align: left !important;
 }

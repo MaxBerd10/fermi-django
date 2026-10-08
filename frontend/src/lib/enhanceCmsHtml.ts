@@ -105,6 +105,46 @@ function repairLinks(root: HTMLElement): void {
   });
 }
 
+/** A path of this site's own pages (the same ones RichContent opens in the app). */
+const SITE_PAGE_RE =
+  /^(?:https?:\/\/(?:www\.)?fermi\.uz)?\/(?:blog|departments|faculty|leader|news|detail|documents|galereya|video|full-gallery|yangiliklar)(?:[/?#]|$)/i;
+
+/**
+ * A paragraph that is nothing but one link to another page of the site ("related reading" lines typed between the
+ * rules of an article) reads as plain text. It becomes a link row (see .cms-page-link in cms-content.css) and the
+ * rules between two such rows go, so a run of them is one tidy group.
+ */
+function markPageLinkLines(body: HTMLElement): void {
+  const norm = (text: string | null) => (text ?? "").replace(/[\s\u00a0\u200b]+/g, " ").trim();
+  body.querySelectorAll("p").forEach((p) => {
+    if (p.closest("li, table, blockquote, [data-file-card]") || p.querySelector("img")) return;
+    const anchors = Array.from(p.querySelectorAll("a[href]"));
+    if (anchors.length !== 1 || !SITE_PAGE_RE.test(anchors[0].getAttribute("href") || "")) return;
+    const linkText = norm(anchors[0].textContent);
+    if (!linkText || linkText.length > 220 || norm(p.textContent) !== linkText) return;
+    // rebuilt from scratch: the editor's spans, bold and inline style would otherwise be read as a heading by later passes
+    const row = p.ownerDocument.createElement("div");
+    row.className = "cms-page-link";
+    const link = p.ownerDocument.createElement("a");
+    link.setAttribute("href", anchors[0].getAttribute("href") || "");
+    link.textContent = linkText;
+    row.appendChild(link);
+    p.replaceWith(row);
+  });
+  // rules and blank lines between two link rows go: a run of rows is one group
+  const isSeparator = (el: Element) =>
+    el.matches("hr, .cms-section-divider") || (el.tagName === "P" && !norm(el.textContent) && !el.querySelector("img, iframe, video"));
+  body.querySelectorAll(".cms-page-link").forEach((row) => {
+    const between: Element[] = [];
+    let next = row.nextElementSibling;
+    while (next && isSeparator(next)) {
+      between.push(next);
+      next = next.nextElementSibling;
+    }
+    if (next?.classList.contains("cms-page-link")) between.forEach((el) => el.remove());
+  });
+}
+
 /**
  * A link to a video (YouTube) opens the video in its own tab, so the lesson list stays where it is, and carries a
  * play mark (see .cms-video-link in cms-content.css) so it reads as a video before it is clicked.
@@ -231,6 +271,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   if (slug === "mutaxassisliklar-boyicha-testlar-toplami") normalizeStudentTestCover(body);
   else normalizeHeroImage(body);
   fixHorizontalRulesInLists(body);
+  markPageLinkLines(body);
   if (VIDEO_LESSON_SLUGS.has(slug)) normalizeVideoLessons(body);
   if (FACULTY_ACTIVITY_SLUGS.has(slug)) liftBoldTitleLines(body);
   promoteCenteredHeadings(body);
