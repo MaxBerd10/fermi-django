@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useSearchParams, Link } from "react-router-dom";
+import { useLocation, useParams, useSearchParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getNewsArticle } from "@/api/news";
 import type { NewsArticle } from "@/types/content";
@@ -22,6 +22,7 @@ import AiSummaryBlock from "@/components/ai/AiSummaryBlock";
 // AI xulosa vaqtincha o'chiq — OpenAI kaliti hali yo'q. Kalit qo'shilgach `true` qiling.
 const AI_SUMMARY_ENABLED = false;
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
+import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { localizeTelegramArticle } from "@/lib/uzTranslate";
 import { isTelegramNewsSlug } from "@/lib/telegramNews";
 
@@ -31,6 +32,9 @@ export default function DetailPage() {
   const [searchParams] = useSearchParams();
   const menuIdParam = searchParams.get("menuId");
   const menuId = menuIdParam ? Number(menuIdParam) : NEWS_DEFAULT_MENU_ID;
+  // An article reached through a link inside a page of some menu section keeps THAT section's list beside it, the
+  // same way a /blog page does (see pages/blog/page.tsx) -- the list does not jump to the news list.
+  const originSection = (useLocation().state as { menuSection?: number } | null)?.menuSection;
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +83,8 @@ export default function DetailPage() {
     <div className="text-foreground-950" ref={contentRef}>
       <PageHeader title={article.title} breadcrumb={t("detail.breadcrumb")} compact />
 
-      <NewsSectionLayout currentSlug={categorySlug}>
+      <MenuSectionOriginContext.Provider value={originSection}>
+      <NewsSectionLayout currentSlug={originSection ? undefined : categorySlug} menuSectionId={originSection}>
         <Reveal>
           <article className="news-article">
             <div className="news-article__content">
@@ -207,6 +212,7 @@ export default function DetailPage() {
           </Reveal>
         )}
       </NewsSectionLayout>
+      </MenuSectionOriginContext.Provider>
     </div>
   );
 }
