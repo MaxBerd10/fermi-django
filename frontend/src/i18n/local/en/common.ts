@@ -6,6 +6,7 @@ export default {
   "common.loadError": "There was an error loading this data.",
   "common.readMore": "Read more",
   "common.viewAll": "View all",
+  "common.download": "Download",
   "common.downloadFile": "Download the document",
   "common.requestTooLarge": "The file being sent is too large. Please choose a smaller one (up to 10 MB).",
   "common.genericError": "Something went wrong.",

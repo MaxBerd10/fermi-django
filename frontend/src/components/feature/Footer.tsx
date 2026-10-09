@@ -348,7 +348,8 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2.5 pt-2.5 border-t border-white/10">
+          {/* room for the floating "FerMI Ai" button (fixed, bottom right) so it never sits on the links at the end of the page */}
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2.5 pt-2.5 pb-14 sm:pb-0 sm:pr-44 border-t border-white/10">
             <div className="flex flex-wrap items-center gap-2.5 min-w-0">
               <WwwUzCounter />
               <p className="text-[11px] text-white/45 leading-snug">

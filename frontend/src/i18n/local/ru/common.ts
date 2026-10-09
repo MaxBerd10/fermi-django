@@ -6,6 +6,7 @@ export default {
   "common.loadError": "Ошибка при загрузке данных.",
   "common.readMore": "Подробнее",
   "common.viewAll": "Все",
+  "common.download": "Скачать",
   "common.downloadFile": "Скачать документ",
   "common.requestTooLarge": "Отправляемый файл слишком большой. Выберите файл поменьше (до 10 МБ).",
   "common.genericError": "Произошла ошибка.",

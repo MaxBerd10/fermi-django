@@ -6,6 +6,7 @@ export default {
   "common.loadError": "Maʻlumotni yuklashda xatolik yuz berdi.",
   "common.readMore": "Batafsil",
   "common.viewAll": "Barchasi",
+  "common.download": "Yuklab olish",
   "common.downloadFile": "Hujjatni yuklab olish",
   "common.requestTooLarge": "Yuborilayotgan fayl juda katta. Kichikroq fayl tanlang (10 MB gacha).",
   "common.genericError": "Xatolik yuz berdi.",

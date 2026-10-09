@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import RawHtmlBlock from "./RawHtmlBlock";
@@ -35,6 +36,7 @@ function toAbsoluteUrl(path: string): string {
  * (the backend rejects invalid block data before it's ever saved).
  */
 export function BlockRenderer({ block }: { block: ContentBlock }) {
+  const { t } = useTranslation();
   switch (block.block_type) {
     case "heading":
       return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2>{block.data.text}</h2>;
@@ -247,7 +249,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
               </span>
               <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download cms-download-btn">
                 <i className="ri-download-2-line" aria-hidden="true" />
-                Yuklab olish
+                {t("common.download")}
               </a>
             </div>
             <div className="cms-roadmap-pdf__frame">
