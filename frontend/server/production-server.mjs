@@ -9,6 +9,7 @@ import { handleSiteStatsRequest } from "./site-stats.mjs";
 import { startTelegramMediaCache, handleTelegramMediaRequest } from "./telegram-media-cache.mjs";
 import { handleImageProxyRequest } from "./image-proxy.mjs";
 import { handlePdfCheckRequest } from "./pdf-check.mjs";
+import { clearApiCache, serveCachedApiGet } from "./api-cache.mjs";
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const distDir = resolve(rootDir, "out");
@@ -312,6 +313,22 @@ async function streamProxy(request, response, baseUrl, targetPath) {
   Readable.fromWeb(upstream.body).pipe(response);
 }
 
+function isWriteMethod(request) {
+  return !["GET", "HEAD", "OPTIONS"].includes(request.method || "GET");
+}
+
+// A save made through this server (admin panel or django-admin) empties the API cache, before the request
+// goes to Django and again once Django has answered, so the editor sees the change on the next load.
+async function proxyAndDropCacheOnWrite(request, response) {
+  if (!isWriteMethod(request)) return await streamProxy(request, response, fermiApiBaseUrl);
+  clearApiCache();
+  try {
+    return await streamProxy(request, response, fermiApiBaseUrl);
+  } finally {
+    clearApiCache();
+  }
+}
+
 async function cachedGet(url, headers, ttlMs) {
   const cacheKey = url.toString();
   const cached = responseCache.get(cacheKey);
@@ -462,7 +479,13 @@ const server = createServer(async (request, response) => {
     }
     if (pathname.startsWith("/api/v1/")) {
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
-      return await streamProxy(request, response, fermiApiBaseUrl);
+      const apiUrl = new URL(request.url || "/", "http://localhost");
+      if (await serveCachedApiGet(request, response, fermiApiBaseUrl, apiUrl, safeUpstreamHeaders(request.headers))) return;
+      return await proxyAndDropCacheOnWrite(request, response);
+    }
+    if (pathname.startsWith("/django-admin/") && isWriteMethod(request)) {
+      if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      return await proxyAndDropCacheOnWrite(request, response);
     }
     if (pathname.startsWith("/django-admin/") || pathname.startsWith("/static/") || pathname.startsWith("/media/")) {
       // Django's real admin (see config/urls.py's own comment on why it's
