@@ -63,20 +63,17 @@ export default function KeyslarPage() {
           <p className="mt-2 text-sm leading-relaxed text-white/75">{t("keyslar.pickSubjectHint")}</p>
         </div>
         <div className="hidden shrink-0 grid-cols-3 gap-2 lg:grid">
-          {subjects && subjects.length > 0 && (
-            <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
-              <i className="ri-file-text-line text-lg text-secondary-300" />
-              <strong className="mt-1 block text-xl leading-none">{subjects.length}</strong>
-              <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerSubjectsLabel")}</span>
-            </div>
-          )}
-          {totalCases > 0 && (
-            <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
-              <i className="ri-heart-pulse-line text-lg text-secondary-300" />
-              <strong className="mt-1 block text-xl leading-none">{totalCases}</strong>
-              <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerCasesLabel")}</span>
-            </div>
-          )}
+          {/* always shown, so the cards do not appear one after another while the catalog loads */}
+          <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
+            <i className="ri-file-text-line text-lg text-secondary-300" />
+            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{subjects ? subjects.length : "…"}</strong>
+            <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerSubjectsLabel")}</span>
+          </div>
+          <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
+            <i className="ri-heart-pulse-line text-lg text-secondary-300" />
+            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{subjects ? totalCases : "…"}</strong>
+            <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerCasesLabel")}</span>
+          </div>
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
             <i className="ri-file-search-line text-lg text-secondary-300" />
             <strong className="mt-1 block text-xl leading-none">✓</strong>
