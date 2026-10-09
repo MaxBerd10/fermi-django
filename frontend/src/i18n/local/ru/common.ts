@@ -427,8 +427,8 @@ export default {
   "faculties.advisorOpen": "Перейти: {{name}}",
   "faculties.viewAll": "Все факультеты",
   "faculties.viewAllDepartments": "Смотреть все",
-  "events.eyebrow": "Календарь мероприятий",
-  "events.heading": "Предстоящие мероприятия",
+  "events.eyebrow": "Мероприятия",
+  "events.heading": "Последние мероприятия",
   "events.intro": "Научные конференции, открытые лекции, дни талантов и клинические семинары — неотъемлемая часть жизни института. Выберите подходящее событие в календаре и примите участие.",
 
   "events.item1.month": "ИЮЛ",

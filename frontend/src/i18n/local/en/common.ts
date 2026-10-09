@@ -427,8 +427,8 @@ export default {
   "faculties.advisorOpen": "Open: {{name}}",
   "faculties.viewAll": "All faculties",
   "faculties.viewAllDepartments": "View all",
-  "events.eyebrow": "Events calendar",
-  "events.heading": "Upcoming events",
+  "events.eyebrow": "Events",
+  "events.heading": "Latest events",
   "events.intro": "Scientific conferences, open lectures, talent days and clinical seminars are part of institute life. Browse the calendar, pick an event that fits you, and take part.",
 
   "events.item1.month": "JUL",

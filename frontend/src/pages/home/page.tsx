@@ -44,7 +44,7 @@ export default function Home() {
         <DeferredSection placeholderClassName="min-h-[568px] lg:min-h-[320px]">
           <Gallery />
         </DeferredSection>
-        <DeferredSection placeholderClassName="min-h-[1556px] lg:min-h-[927px]">
+        <DeferredSection placeholderClassName="min-h-[1404px] lg:min-h-[927px]">
           <EventsJournal />
         </DeferredSection>
         <DeferredSection placeholderClassName="min-h-[360px] lg:min-h-[220px]">

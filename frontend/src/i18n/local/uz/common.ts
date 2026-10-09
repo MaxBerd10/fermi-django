@@ -427,8 +427,8 @@ export default {
   "faculties.advisorOpen": "{{name}} sahifasiga oʻtish",
   "faculties.viewAll": "Barcha fakultetlar",
   "faculties.viewAllDepartments": "Barchasini koʻrish",
-  "events.eyebrow": "Tadbirlar kalendari",
-  "events.heading": "Yaqinlashayotgan tadbirlar",
+  "events.eyebrow": "Tadbirlar",
+  "events.heading": "Soʻnggi tadbirlar",
   "events.intro": "Ilmiy konferensiyalar, ochiq maʻruzalar, talent kunlari va klinik seminarlar — institut hayotining ajralmas qismi. Tadbirlar kalendaridan sizga mos uchrashuvni tanlang va ishtirok eting.",
 
   "events.item1.month": "IYUL",
