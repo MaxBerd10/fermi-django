@@ -61,10 +61,10 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    # Conservative starting value -- raise once HTTPS is confirmed working in
-    # production for a while. Do not add SECURE_HSTS_PRELOAD without reading what
-    # that commitment means (it's very hard to undo once submitted).
-    SECURE_HSTS_SECONDS = 3600
+    # 6 months (same value the Node server sends on the pages). Do not add
+    # SECURE_HSTS_PRELOAD without reading what that commitment means (it's very
+    # hard to undo once submitted).
+    SECURE_HSTS_SECONDS = 15552000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 INSTALLED_APPS = [

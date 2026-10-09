@@ -157,6 +157,8 @@ function applySecurityHeaders(response) {
   response.setHeader("Content-Security-Policy", CONTENT_SECURITY_POLICY);
   // pages opened from other sites get no handle on this one (and the reverse)
   response.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+  // browsers use HTTPS only for 6 months after a visit (ignored over plain http); no "preload" on purpose
+  response.setHeader("Strict-Transport-Security", "max-age=15552000; includeSubDomains");
 }
 
 function sendJson(response, statusCode, body) {

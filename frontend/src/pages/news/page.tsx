@@ -20,6 +20,7 @@ import NewsPagination from "@/components/shared/NewsPagination";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 
 import { Reveal } from "@/components/Animation";
 
@@ -50,6 +51,12 @@ export default function NewsCategoryPage() {
   const [loading, setLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
+
+  // The list is far taller than a spinner (measured: ~5,200px on a desktop, two columns, ~9,450px on a phone, one
+  // column, for a full page of 20), so without a placeholder of its own size the footer jumps thousands of pixels once
+  // the cards arrive (CLS 0.5). A repeat visit uses the height this URL really had; a first visit uses these.
+  const { contentRef, remembered } = useRememberedContentHeight(`news:${menuId ?? ""}:${slug ?? ""}:${page}`, loading);
+  const firstVisitHeight = typeof window !== "undefined" && window.innerWidth >= 1024 ? 5200 : 9400;
 
 
 
@@ -133,7 +140,7 @@ export default function NewsCategoryPage() {
 
 
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState minHeightPx={remembered ?? firstVisitHeight} />;
 
   if (error) return <ErrorState message={error} />;
 
@@ -153,7 +160,7 @@ export default function NewsCategoryPage() {
 
   return (
 
-    <div className="text-foreground-950">
+    <div className="text-foreground-950" ref={contentRef}>
 
       <PageHeader title={pageTitle} breadcrumb={breadcrumb} compact />
 
