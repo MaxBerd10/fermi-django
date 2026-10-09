@@ -270,7 +270,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
 
   const topicFilter = ready && (
     <div className="mt-5">
-      <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-foreground-400">{t("test.syllabusTitle")}</span>
+      <span className="mb-2.5 block text-sm font-bold uppercase tracking-wide text-foreground-500">{t("test.syllabusTitle")}</span>
 
       {/* phones: a compact picker */}
       <select
@@ -291,7 +291,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
       </select>
 
       {/* wide screens: the whole syllabus as a list that stays beside the questions */}
-      <div className="hidden max-h-[36vh] space-y-1 overflow-y-auto pr-1 lg:block">
+      <div className="hidden max-h-[46vh] space-y-1 overflow-y-auto pr-1 lg:block">
         {[{ key: "", code: "", title: t("test.allTopics"), items: totalItems }, ...topics].map((topic) => {
           const active = topicKey === topic.key;
           return (
@@ -300,19 +300,19 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
               type="button"
               onClick={() => setTopicKey(topic.key)}
               aria-pressed={active}
-              className={`flex w-full items-start gap-2.5 rounded-xl px-3 py-2 text-left text-[13px] leading-snug transition-colors cursor-pointer ${
+              className={`flex w-full items-start gap-3 rounded-xl px-3.5 py-2.5 text-left text-[15px] leading-snug transition-colors cursor-pointer ${
                 active ? "bg-[#0a1158] text-white" : "text-foreground-700 hover:bg-[#f1f3f9]"
               }`}
             >
               {topic.code ? (
-                <span className={`mt-px inline-flex min-w-7 shrink-0 justify-center rounded-md px-1 py-0.5 text-[10px] font-bold uppercase ${active ? "bg-white/20" : "bg-[#e8edff] text-[#0a1158]"}`}>
+                <span className={`mt-px inline-flex min-w-8 shrink-0 justify-center rounded-md px-1.5 py-0.5 text-xs font-bold uppercase ${active ? "bg-white/20" : "bg-[#e8edff] text-[#0a1158]"}`}>
                   {topic.code}
                 </span>
               ) : (
                 <i className="ri-stack-line mt-px shrink-0" aria-hidden />
               )}
-              <span className="min-w-0 flex-1 line-clamp-2">{topic.title}</span>
-              <span className={`shrink-0 text-[11px] font-semibold ${active ? "text-white/80" : "text-foreground-400"}`}>{topic.items}</span>
+              <span className="min-w-0 flex-1 line-clamp-3">{topic.title}</span>
+              <span className={`shrink-0 text-xs font-semibold ${active ? "text-white/80" : "text-foreground-400"}`}>{topic.items}</span>
             </button>
           );
         })}
@@ -335,7 +335,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
   } else {
     main = (
       <>
-        <div className="mb-3 text-xs font-medium text-foreground-500">
+        <div className="mb-3 text-sm font-medium text-foreground-500">
           {topicKey ? topics.find((topic) => topic.key === topicKey)?.title : t("test.allTopics")} · {countLabel(items.length)}
         </div>
         <div ref={listTopRef} className="scroll-mt-24 space-y-2">
@@ -392,7 +392,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
   }
 
   return (
-    <div className="lg:grid lg:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] lg:items-start lg:gap-8">
+    <div className="lg:grid lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:items-start lg:gap-10">
       <aside className="mb-6 lg:sticky lg:top-24 lg:mb-0 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
         {aside}
         {topicFilter}

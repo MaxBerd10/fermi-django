@@ -127,12 +127,12 @@ export default function KeyslarPage() {
               subjectCode={subject.subject_code}
               aside={
                 <div>
-                  <button type="button" onClick={backToSubjects} className="mb-3 inline-flex items-center gap-1 text-xs font-medium text-foreground-500 hover:text-[#0a1158] cursor-pointer">
+                  <button type="button" onClick={backToSubjects} className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-foreground-500 hover:text-[#0a1158] cursor-pointer">
                     <i className="ri-arrow-left-line" />
                     {t("keyslar.backToSubjects")}
                   </button>
-                  <h2 className="font-heading text-lg font-bold leading-snug text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
-                  <p className="mt-1 text-xs text-foreground-500">
+                  <h2 className="font-heading text-2xl font-bold leading-tight text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
+                  <p className="mt-2 text-sm text-foreground-500">
                     {subject.department_name ? `${subject.department_name} · ` : ""}
                     {t("keyslar.casesCount", { count: caseItems(subject) })}
                   </p>
