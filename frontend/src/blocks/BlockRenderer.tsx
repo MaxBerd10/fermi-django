@@ -4,6 +4,7 @@ import { optimizedImageUrl } from "@/lib/imageProxy";
 import RawHtmlBlock from "./RawHtmlBlock";
 import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import LinkifiedText from "./LinkifiedText";
+import RoadmapPdfFrame from "./RoadmapPdfFrame";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
@@ -252,13 +253,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
                 {t("common.download")}
               </a>
             </div>
-            <div className="cms-roadmap-pdf__frame">
-              <iframe
-                src={documentUrl}
-                title={caption || document.title || document.filename}
-                className="cms-roadmap-pdf__iframe"
-              />
-            </div>
+            <RoadmapPdfFrame src={documentUrl} title={caption || document.title || document.filename} />
           </section>
         );
       }

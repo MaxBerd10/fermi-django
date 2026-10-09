@@ -2133,6 +2133,20 @@
   background: #f1f5f9;
 }
 
+.cms-roadmap-pdf__frame--viewer { position: relative; }
+
+.cms-roadmap-pdf__loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 2.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
 .cms-roadmap-pdf__iframe {
   display: block;
   width: 100%;
