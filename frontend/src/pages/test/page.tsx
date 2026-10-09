@@ -249,7 +249,12 @@ export default function TestPage() {
                       {subject.department_name ? `${subject.department_name} · ` : ""}
                       {t("test.questionsCount", { count: subject.questions_total })}
                     </p>
-                    <button type="button" onClick={startQuiz} className="uni-btn mt-5 w-full cursor-pointer">
+                    {/* a plain solid button, not .uni-btn: its backdrop blur and hover transform leave a stray bar when drawn inside this scrolling, sticky panel */}
+                    <button
+                      type="button"
+                      onClick={startQuiz}
+                      className="mt-5 inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0a1158] px-5 text-[15px] font-semibold text-white transition-colors hover:bg-[#1a2780] focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 focus-visible:ring-offset-2"
+                    >
                       <i className="ri-pencil-ruler-2-line" />
                       {t("test.testYourself")}
                     </button>
