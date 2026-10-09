@@ -17,10 +17,10 @@ type GalleryItem = {
 export default function Gallery() {
   const { t, i18n } = useTranslation();
   const [items, setItems] = useState<GalleryItem[]>(() =>
-    CAMPUS_PHOTOS.map((c, i) => ({
+    CAMPUS_PHOTOS.map((c) => ({
       id: c.id,
       img: c.img,
-      title: t(`gallery.caption${i + 1}`),
+      title: "",
       href: "/galereya",
     }))
   );
@@ -35,10 +35,11 @@ export default function Gallery() {
 
         const fromApi: GalleryItem[] = (galleryRes.data ?? [])
           .filter((g) => isHomeSafeImage(g.img, g.title))
-          .map((g, i) => ({
+          .map((g) => ({
             id: g.id,
             img: g.img,
-            title: g.title?.trim() || t(`gallery.caption${(i % 5) + 1}`),
+            // only the photo's own caption (set in the admin panel); an invented one would describe a different photo
+            title: g.title?.trim() || "",
             href: `/full-gallery/${g.id}`,
           }));
 
@@ -54,7 +55,7 @@ export default function Gallery() {
             merged.push({
               id: c.id,
               img: c.img,
-              title: t(`gallery.caption${merged.length + 1}`),
+              title: "",
               href: "/galereya",
             });
           }
@@ -94,7 +95,7 @@ export default function Gallery() {
                 >
                   <img
                     src={optimizedImageUrl(item.img, 480)}
-                    alt={item.title}
+                    alt={item.title || `${t("gallery.headingPrefix")} ${t("gallery.headingHighlight")}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -102,11 +103,13 @@ export default function Gallery() {
                     height={360}
                   />
                 </Link>
-                <figcaption className="mt-2">
-                  <h3 className="font-medium text-foreground-900 text-xs leading-snug line-clamp-2">
-                    {item.title}
-                  </h3>
-                </figcaption>
+                {item.title && (
+                  <figcaption className="mt-2">
+                    <h3 className="font-medium text-foreground-900 text-xs leading-snug line-clamp-2">
+                      {item.title}
+                    </h3>
+                  </figcaption>
+                )}
               </figure>
             ))}
           </div>

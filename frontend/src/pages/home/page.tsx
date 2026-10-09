@@ -41,7 +41,7 @@ export default function Home() {
         <DeferredSection placeholderClassName="min-h-[1053px] lg:min-h-[709px]">
           <Leadership />
         </DeferredSection>
-        <DeferredSection placeholderClassName="min-h-[675px] lg:min-h-[336px]">
+        <DeferredSection placeholderClassName="min-h-[568px] lg:min-h-[320px]">
           <Gallery />
         </DeferredSection>
         <DeferredSection placeholderClassName="min-h-[1556px] lg:min-h-[927px]">
