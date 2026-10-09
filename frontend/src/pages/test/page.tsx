@@ -29,8 +29,6 @@ export default function TestPage() {
   const [error, setError] = useState<string | null>(null);
   const [subject, setSubject] = useState<ImentorSubjectStat | null>(null);
   const [quizQuestions, setQuizQuestions] = useState<ImentorSampleQuestion[]>([]);
-  // set when the quiz was started from one topic of the syllabus instead of the whole subject
-  const [quizTopic, setQuizTopic] = useState<{ code: string; title: string } | null>(null);
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -58,13 +56,12 @@ export default function TestPage() {
     setStage("study");
   }
 
-  function startQuiz(topic: { code: string; title: string } | null = null) {
+  function startQuiz() {
     if (!subject) return;
     setStage("loading");
     setError(null);
     setPdfError(null);
-    setQuizTopic(topic);
-    getImentorSampleQuestions({ subjectCode: subject.subject_code, topicCode: topic?.code || undefined, count: QUIZ_QUESTION_COUNT })
+    getImentorSampleQuestions({ subjectCode: subject.subject_code, count: QUIZ_QUESTION_COUNT })
       .then((data) => {
         if (data.questions.length === 0) {
           setError(t("test.noContent"));
@@ -99,14 +96,13 @@ export default function TestPage() {
   }
 
   function retry() {
-    startQuiz(quizTopic);
+    startQuiz();
   }
 
   function backToSubjects() {
     setStage("picking");
     setSubject(null);
     setQuizQuestions([]);
-    setQuizTopic(null);
     setError(null);
     setPdfError(null);
   }
@@ -158,6 +154,17 @@ export default function TestPage() {
 
   const score = quizQuestions.reduce((sum, q, i) => sum + (answers[i] === q.correctOptionIndex ? 1 : 0), 0);
   const scorePercent = quizQuestions.length > 0 ? Math.round((score / quizQuestions.length) * 100) : 0;
+
+  // the only way into the random test: shown above and below the list of questions
+  const quizCallout = (
+    <div className="mb-5 rounded-2xl border border-[#dfe5ff] bg-[#f6f8ff] p-4 sm:flex sm:items-center sm:justify-between sm:gap-4">
+      <p className="mb-3 text-sm text-foreground-600 sm:mb-0">{t("test.testYourselfHint", { count: QUIZ_QUESTION_COUNT })}</p>
+      <button type="button" onClick={startQuiz} className="uni-btn cursor-pointer w-full shrink-0 sm:w-auto">
+        <i className="ri-pencil-ruler-2-line" />
+        {t("test.testYourself")}
+      </button>
+    </div>
+  );
 
   const banner = (
     <div className="relative flex min-h-36 items-center overflow-hidden rounded-[1.35rem] bg-[#0a1158] px-6 py-5 text-white shadow-[0_14px_30px_rgba(10,17,88,0.18)] sm:px-7 sm:py-6 lg:px-10 xl:px-12">
@@ -253,27 +260,9 @@ export default function TestPage() {
 
               {error && <p className="text-sm text-red-600 mb-4" role="alert">{error}</p>}
 
-              <button type="button" onClick={() => startQuiz(null)} className="uni-btn cursor-pointer w-full sm:w-auto mb-6">
-                <i className="ri-pencil-ruler-2-line" />
-                {t("test.quizWholeSubject", { count: QUIZ_QUESTION_COUNT })}
-              </button>
+              {quizCallout}
 
-              <TopicExplorer
-                kind="tests"
-                subjectCode={subject.subject_code}
-                topicActions={(topic) =>
-                  topic.code ? (
-                    <button
-                      type="button"
-                      onClick={() => startQuiz({ code: topic.code, title: topic.title })}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#0a1158] px-4 py-2 text-xs font-semibold text-[#0a1158] transition-colors hover:bg-[#0a1158] hover:text-white cursor-pointer"
-                    >
-                      <i className="ri-pencil-ruler-2-line" />
-                      {t("test.quizTopic")}
-                    </button>
-                  ) : null
-                }
-              />
+              <TopicExplorer kind="tests" subjectCode={subject.subject_code} footer={quizCallout} />
             </div>
           )}
 
