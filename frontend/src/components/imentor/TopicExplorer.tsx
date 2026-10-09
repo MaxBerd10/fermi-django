@@ -177,16 +177,17 @@ function RowPlaceholder({ number, failed, onRetry }: { number: number; failed: b
 interface Props {
   kind: ImentorDocumentKind;
   subjectCode: string;
-  /** shown under the list, e.g. the "test yourself" button */
-  footer?: ReactNode;
+  /** top of the side panel: the subject's name and its main action */
+  aside?: ReactNode;
 }
 
 /**
  * Every question (or clinical case) of a subject, in the order its teachers wrote them, ten to a page. A subject
  * with 500 questions shows all 500; the topic list only narrows the view. The questions live in many small
  * documents on iMentor's side, so only the documents the current page needs are fetched.
+ * On a wide screen the side panel (subject, action, topics) stays in view while the questions scroll.
  */
-export default function TopicExplorer({ kind, subjectCode, footer }: Props) {
+export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
   const { t, i18n } = useTranslation();
   const lang = (i18n.language || "uz").slice(0, 2);
   const isTests = kind === "tests";
@@ -264,86 +265,139 @@ export default function TopicExplorer({ kind, subjectCode, footer }: Props) {
     };
   }, [paging.pageItems, fetchDocument]);
 
-  if (failed) return <p className="text-sm text-red-600">{t("test.loadError")}</p>;
-  if (!documents)
-    return (
-      <div className="flex items-center gap-2 py-4 text-sm text-foreground-500">
+  const countLabel = (count: number) => (isTests ? t("test.questionsCount", { count }) : t("keyslar.casesCount", { count }));
+  const ready = documents !== null && documents.length > 0;
+
+  const topicFilter = ready && (
+    <div className="mt-5">
+      <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-foreground-400">{t("test.syllabusTitle")}</span>
+
+      {/* phones: a compact picker */}
+      <select
+        value={topicKey}
+        onChange={(event) => setTopicKey(event.target.value)}
+        aria-label={t("test.syllabusTitle")}
+        className="h-11 w-full rounded-xl border border-[#e4e7f0] bg-white px-3 text-sm text-foreground-900 outline-none focus:border-[#0a1158] focus:ring-2 focus:ring-[#dfe5ff] lg:hidden"
+      >
+        <option value="">
+          {t("test.allTopics")} · {totalItems}
+        </option>
+        {topics.map((topic) => (
+          <option key={topic.key} value={topic.key}>
+            {topic.code ? `${topic.code.toUpperCase()} — ` : ""}
+            {topic.title.length > 90 ? `${topic.title.slice(0, 90)}…` : topic.title} · {topic.items}
+          </option>
+        ))}
+      </select>
+
+      {/* wide screens: the whole syllabus as a list that stays beside the questions */}
+      <div className="hidden max-h-[36vh] space-y-1 overflow-y-auto pr-1 lg:block">
+        {[{ key: "", code: "", title: t("test.allTopics"), items: totalItems }, ...topics].map((topic) => {
+          const active = topicKey === topic.key;
+          return (
+            <button
+              key={topic.key || "all"}
+              type="button"
+              onClick={() => setTopicKey(topic.key)}
+              aria-pressed={active}
+              className={`flex w-full items-start gap-2.5 rounded-xl px-3 py-2 text-left text-[13px] leading-snug transition-colors cursor-pointer ${
+                active ? "bg-[#0a1158] text-white" : "text-foreground-700 hover:bg-[#f1f3f9]"
+              }`}
+            >
+              {topic.code ? (
+                <span className={`mt-px inline-flex min-w-7 shrink-0 justify-center rounded-md px-1 py-0.5 text-[10px] font-bold uppercase ${active ? "bg-white/20" : "bg-[#e8edff] text-[#0a1158]"}`}>
+                  {topic.code}
+                </span>
+              ) : (
+                <i className="ri-stack-line mt-px shrink-0" aria-hidden />
+              )}
+              <span className="min-w-0 flex-1 line-clamp-2">{topic.title}</span>
+              <span className={`shrink-0 text-[11px] font-semibold ${active ? "text-white/80" : "text-foreground-400"}`}>{topic.items}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  let main: ReactNode;
+  if (failed) {
+    main = <p className="text-sm text-red-600">{t("test.loadError")}</p>;
+  } else if (!documents) {
+    main = (
+      <div className="flex min-h-[60vh] items-start gap-2 pt-2 text-sm text-foreground-500">
         <i className="ri-loader-4-line animate-spin" />
         {t("test.loading")}
       </div>
     );
-  if (documents.length === 0) return <p className="text-sm text-foreground-500">{t("test.noTopics")}</p>;
-
-  const countLabel = (count: number) => (isTests ? t("test.questionsCount", { count }) : t("keyslar.casesCount", { count }));
+  } else if (documents.length === 0) {
+    main = <p className="text-sm text-foreground-500">{t("test.noTopics")}</p>;
+  } else {
+    main = (
+      <>
+        <div className="mb-3 text-xs font-medium text-foreground-500">
+          {topicKey ? topics.find((topic) => topic.key === topicKey)?.title : t("test.allTopics")} · {countLabel(items.length)}
+        </div>
+        <div ref={listTopRef} className="scroll-mt-24 space-y-2">
+          {paging.pageItems.map(({ document, index, code }, pageIndex) => {
+            const number = paging.offset + pageIndex + 1;
+            const rowKey = `${document.id}:${index}`;
+            const detail = details[document.id];
+            const toggle = () => setOpenRows((current) => ({ ...current, [rowKey]: !current[rowKey] }));
+            if (!detail || detail === "error") {
+              return (
+                <RowPlaceholder
+                  key={rowKey}
+                  number={number}
+                  failed={detail === "error"}
+                  onRetry={() => {
+                    setDetails((current) => {
+                      const next = { ...current };
+                      delete next[document.id];
+                      return next;
+                    });
+                    void fetchDocument(document);
+                  }}
+                />
+              );
+            }
+            if (isTests) {
+              const test = detail as ImentorTestDetail;
+              const translated = test.payload.translations?.[lang]?.questions;
+              const source = test.payload.questions;
+              const question = (translated && translated.length === source.length ? translated : source)[index];
+              if (!question) return null;
+              return (
+                <QuestionRow
+                  key={rowKey}
+                  number={number}
+                  code={topicKeyCode(topicKey, code)}
+                  question={question}
+                  correct={source[index]?.correctOptionIndex ?? question.correctOptionIndex}
+                  open={!!openRows[rowKey]}
+                  onToggle={toggle}
+                />
+              );
+            }
+            const item = (detail as ImentorKeyDetail).payload.questions[index];
+            if (!item) return null;
+            return <CaseRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} item={item} open={!!openRows[rowKey]} onToggle={toggle} />;
+          })}
+        </div>
+        <div className="mt-5">
+          <Paginator page={paging.page} totalPages={paging.totalPages} onChange={paging.go} />
+        </div>
+      </>
+    );
+  }
 
   return (
-    <div>
-      <div className="mb-4 rounded-2xl border border-[#e4e7f0] bg-[#fafbfe] p-3 sm:p-4">
-        <label className="block">
-          <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-foreground-400">{t("test.syllabusTitle")}</span>
-          <select
-            value={topicKey}
-            onChange={(event) => setTopicKey(event.target.value)}
-            className="h-11 w-full rounded-xl border border-[#e4e7f0] bg-white px-3 text-sm text-foreground-900 outline-none focus:border-[#0a1158] focus:ring-2 focus:ring-[#dfe5ff]"
-          >
-            <option value="">
-              {t("test.allTopics")} · {countLabel(totalItems)}
-            </option>
-            {topics.map((topic) => (
-              <option key={topic.key} value={topic.key}>
-                {topic.code ? `${topic.code.toUpperCase()} — ` : ""}
-                {topic.title.length > 110 ? `${topic.title.slice(0, 110)}…` : topic.title} · {topic.items}
-              </option>
-            ))}
-          </select>
-        </label>
-        <p className="mt-2 text-xs text-foreground-500">
-          {t("test.topicsCount", { count: topics.length })} · {countLabel(items.length)}
-        </p>
-      </div>
-
-      <div ref={listTopRef} className="scroll-mt-24 space-y-2">
-        {paging.pageItems.map(({ document, index, code }, pageIndex) => {
-          const number = paging.offset + pageIndex + 1;
-          const rowKey = `${document.id}:${index}`;
-          const detail = details[document.id];
-          const toggle = () => setOpenRows((current) => ({ ...current, [rowKey]: !current[rowKey] }));
-          if (!detail || detail === "error") {
-            return (
-              <RowPlaceholder
-                key={rowKey}
-                number={number}
-                failed={detail === "error"}
-                onRetry={() => {
-                  setDetails((current) => {
-                    const next = { ...current };
-                    delete next[document.id];
-                    return next;
-                  });
-                  void fetchDocument(document);
-                }}
-              />
-            );
-          }
-          if (isTests) {
-            const test = detail as ImentorTestDetail;
-            const translated = test.payload.translations?.[lang]?.questions;
-            const source = test.payload.questions;
-            const question = (translated && translated.length === source.length ? translated : source)[index];
-            if (!question) return null;
-            return <QuestionRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} question={question} correct={source[index]?.correctOptionIndex ?? question.correctOptionIndex} open={!!openRows[rowKey]} onToggle={toggle} />;
-          }
-          const item = (detail as ImentorKeyDetail).payload.questions[index];
-          if (!item) return null;
-          return <CaseRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} item={item} open={!!openRows[rowKey]} onToggle={toggle} />;
-        })}
-      </div>
-
-      <div className="mt-5">
-        <Paginator page={paging.page} totalPages={paging.totalPages} onChange={paging.go} />
-      </div>
-
-      {footer && <div className="mt-6">{footer}</div>}
+    <div className="lg:grid lg:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] lg:items-start lg:gap-8">
+      <aside className="mb-6 lg:sticky lg:top-24 lg:mb-0 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
+        {aside}
+        {topicFilter}
+      </aside>
+      <div className="min-w-0">{main}</div>
     </div>
   );
 }

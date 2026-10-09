@@ -122,22 +122,23 @@ export default function KeyslarPage() {
 
         {stage === "list" && subject && (
           <div className="page-card p-5 md:p-6">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-start justify-between gap-3 mb-5">
+            <TopicExplorer
+              kind="keys"
+              subjectCode={subject.subject_code}
+              aside={
                 <div>
-                  <div className="font-heading font-bold text-foreground-900">{parseSubjectName(subject.subject_name).title}</div>
-                  <div className="text-xs text-foreground-500">
+                  <button type="button" onClick={backToSubjects} className="mb-3 inline-flex items-center gap-1 text-xs font-medium text-foreground-500 hover:text-[#0a1158] cursor-pointer">
+                    <i className="ri-arrow-left-line" />
+                    {t("keyslar.backToSubjects")}
+                  </button>
+                  <h2 className="font-heading text-lg font-bold leading-snug text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
+                  <p className="mt-1 text-xs text-foreground-500">
                     {subject.department_name ? `${subject.department_name} · ` : ""}
                     {t("keyslar.casesCount", { count: caseItems(subject) })}
-                  </div>
+                  </p>
                 </div>
-                <button type="button" onClick={backToSubjects} className="text-xs text-foreground-400 hover:text-primary-700 cursor-pointer whitespace-nowrap">
-                  <i className="ri-arrow-left-line mr-0.5" />
-                  {t("keyslar.backToSubjects")}
-                </button>
-              </div>
-              <TopicExplorer kind="keys" subjectCode={subject.subject_code} />
-            </div>
+              }
+            />
           </div>
         )}
       </div>
