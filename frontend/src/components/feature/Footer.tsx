@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { mailHref, telHref } from "../../lib/contactLinks";
 import { useTranslation } from "react-i18next";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
 import { LEADER_SECTION_MENU_ID } from "@/lib/leaderSection";
@@ -62,14 +63,6 @@ const PORTALS = [
 function socialIconClass(network: { icon: string; title: string; url: string }): string {
   const platform = resolveSocialPlatform(network);
   return platform ? SOCIAL_PLATFORM_ICON[platform] : "ri-links-line";
-}
-
-function firstTel(phone: string) {
-  return phone.split(/[,\s]/)[0] || phone;
-}
-
-function firstEmail(email: string) {
-  return email.trim().split(/[,\s]/)[0] || email;
 }
 
 export default function Footer() {
@@ -260,13 +253,13 @@ export default function Footer() {
                   <span className="leading-snug">{address}</span>
                 </li>
                 <li>
-                  <a href={`tel:${firstTel(phone)}`} className="flex gap-2 items-start group cursor-pointer">
+                  <a href={telHref(phone)} className="flex gap-2 items-start group cursor-pointer">
                     <i className="ri-phone-line text-[#ffd600] mt-0.5 flex-shrink-0" />
                     <span className="leading-snug group-hover:text-[#ffd600] transition-colors">{phone}</span>
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${firstEmail(email)}`} className="flex gap-2 items-start group cursor-pointer">
+                  <a href={mailHref(email)} className="flex gap-2 items-start group cursor-pointer">
                     <i className="ri-mail-line text-[#ffd600] mt-0.5 flex-shrink-0" />
                     <span className="leading-snug break-all group-hover:text-[#ffd600] transition-colors">{email}</span>
                   </a>

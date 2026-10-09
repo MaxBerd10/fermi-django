@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { mailHref, telHref } from "@/lib/contactLinks";
 import { useTranslation } from "react-i18next";
 import { submitContact } from "@/api/forms";
 import { getSettings } from "@/api/settings";
@@ -86,7 +87,7 @@ export default function ContactMap() {
             )}
             {phone && (
               <a
-                href={`tel:${phone.split(" ")[0]}`}
+                href={telHref(phone)}
                 className="inline-flex items-center gap-1.5 rounded-full bg-white border border-[#e5e5e5] px-3 py-1.5 text-xs font-semibold text-[#0a0a0a] hover:border-[#ffd600] cursor-pointer"
               >
                 <i className="ri-phone-line text-[#0a1158]" />
@@ -95,7 +96,7 @@ export default function ContactMap() {
             )}
             {email && (
               <a
-                href={`mailto:${email.trim().split(" ")[0]}`}
+                href={mailHref(email)}
                 className="inline-flex items-center gap-1.5 rounded-full bg-white border border-[#e5e5e5] px-3 py-1.5 text-xs font-semibold text-[#0a0a0a] hover:border-[#ffd600] cursor-pointer"
               >
                 <i className="ri-mail-line text-[#0a1158]" />

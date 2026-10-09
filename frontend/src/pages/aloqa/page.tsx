@@ -1,4 +1,5 @@
 import { FORM_FIELD, FORM_TEXTAREA } from "@/lib/formFields";
+import { mailHref, telHref } from "@/lib/contactLinks";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -72,7 +73,7 @@ export default function AloqaPage() {
                       <i className="ri-phone-line text-lg" />
                     </div>
                     <h3 className="font-heading font-semibold text-foreground-900 mb-1.5 text-sm">{t("contact.phone")}</h3>
-                    <a href={`tel:${settings.setting.phone.split(" ")[0]}`} className="text-sm text-foreground-700 hover:text-primary-600 transition-colors">{settings.setting.phone}</a>
+                    <a href={telHref(settings.setting.phone)} className="text-sm text-foreground-700 hover:text-primary-600 transition-colors">{settings.setting.phone}</a>
                   </div>
                 )}
                 {settings?.setting?.email && (
@@ -81,7 +82,7 @@ export default function AloqaPage() {
                       <i className="ri-mail-line text-lg" />
                     </div>
                     <h3 className="font-heading font-semibold text-foreground-900 mb-1.5 text-sm">{t("aloqa.emailCardTitle")}</h3>
-                    <a href={`mailto:${settings.setting.email.trim().split(" ")[0]}`} className="text-sm text-foreground-700 hover:text-secondary-700 transition-colors">{settings.setting.email}</a>
+                    <a href={mailHref(settings.setting.email)} className="text-sm text-foreground-700 hover:text-secondary-700 transition-colors">{settings.setting.email}</a>
                   </div>
                 )}
                 {settings?.setting?.address && (

@@ -219,10 +219,10 @@ export default function Hero() {
               <p className="sr-only">{institute}</p>
 
               <div className="mt-6 flex flex-wrap items-center gap-2.5">
-                <a href="/institut" className="hero-v2__btn-primary">
+                <Link to="/institut" className="hero-v2__btn-primary">
                   {t("footer.institutHaqida")}
                   <i className="ri-arrow-right-line" />
-                </a>
+                </Link>
                 <Link to="/qabul" className="hero-v2__btn-ghost">
                   {t("hero.band.cta")}
                   <i className="ri-arrow-right-line" />
@@ -244,7 +244,7 @@ export default function Hero() {
                   aria-label={`${t("hero.virtualTour")} — ${t("hero.virtualTourSoon")}`}
                   className="hero-v2__btn-text disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  <i className="ri-walking-line text-lg" aria-hidden />
+                  <i className="ri-compass-3-line text-lg" aria-hidden />
                   {t("hero.virtualTour")}
                 </button>
               </div>
