@@ -1,9 +1,10 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MedicalAtmosphere from "./MedicalAtmosphere";
 import { MenuProvider } from "../../context/MenuContext";
+import { whenPageSettled } from "../../lib/whenPageSettled";
 
 // The chat widget pulls in the AI client and the ~5 KB knowledge base, none of
 // which the first paint needs — most visits never open it. Load it after the
@@ -11,7 +12,15 @@ import { MenuProvider } from "../../context/MenuContext";
 // a beat later.
 const AiChatWidget = lazy(() => import("./AiChatWidget"));
 
+/** true once the page has finished loading and the browser has a spare moment. */
+function useAfterPageSettled() {
+  const [settled, setSettled] = useState(false);
+  useEffect(() => whenPageSettled(() => setSettled(true)), []);
+  return settled;
+}
+
 export default function Layout() {
+  const widgetReady = useAfterPageSettled();
   return (
     <MenuProvider>
       <div className="relative min-h-screen text-foreground-900 flex flex-col bg-transparent">
@@ -32,9 +41,11 @@ export default function Layout() {
           </main>
           <Footer />
         </div>
-        <Suspense fallback={null}>
-          <AiChatWidget />
-        </Suspense>
+        {widgetReady && (
+          <Suspense fallback={null}>
+            <AiChatWidget />
+          </Suspense>
+        )}
       </div>
     </MenuProvider>
   );

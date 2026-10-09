@@ -59,7 +59,7 @@ export default function ContactMap() {
     "mt-1 w-full h-9 px-3 rounded-lg bg-white border border-[#e5e5e5] text-sm text-[#0a0a0a] placeholder:text-[#555555] focus:outline-none focus:border-[#0a1158] transition-colors";
 
   return (
-    <section id="aloqa" className="pt-3 pb-6 md:pt-4 md:pb-7 bg-transparent border-t border-[#e5e5e5]/60">
+    <section className="pt-3 pb-6 md:pt-4 md:pb-7 bg-transparent border-t border-[#e5e5e5]/60">
       <div className="section-container">
         <Reveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-4">

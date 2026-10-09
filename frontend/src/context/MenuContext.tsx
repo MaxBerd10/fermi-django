@@ -3,6 +3,7 @@ import { getMenu } from "../api/menu";
 import type { MenuNode } from "../types/menu";
 import i18n from "../i18n";
 import { navItems } from "../mocks/homeData";
+import { whenPageSettled } from "../lib/whenPageSettled";
 
 interface MenuContextValue {
   menu: MenuNode[];
@@ -95,21 +96,25 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     // Language switches do a full page reload (see Navbar's changeLanguage), so the first
     // switch to a language with no cache yet sits on an empty navbar for the request's
     // duration. Quietly warm the other languages' caches in the background so that by the
-    // time someone switches, the menu is already there.
+    // time someone switches, the menu is already there. Only once the page has settled:
+    // two more menu requests during the first load slow down what the visitor is waiting for.
     let cancelled = false;
-    for (const otherLang of SUPPORTED_LANGS) {
-      if (otherLang === lang || readMenuCache(otherLang)) continue;
-      getMenu(otherLang)
-        .then((data) => {
-          if (!cancelled) writeMenuCache(otherLang, data);
-        })
-        .catch(() => {
-          // The active language already has a visible fallback. Other caches
-          // can be refreshed once the menu endpoint is available again.
-        });
-    }
+    const cancelWarmUp = whenPageSettled(() => {
+      for (const otherLang of SUPPORTED_LANGS) {
+        if (otherLang === lang || readMenuCache(otherLang)) continue;
+        getMenu(otherLang)
+          .then((data) => {
+            if (!cancelled) writeMenuCache(otherLang, data);
+          })
+          .catch(() => {
+            // The active language already has a visible fallback. Other caches
+            // can be refreshed once the menu endpoint is available again.
+          });
+      }
+    }, 8000);
     return () => {
       cancelled = true;
+      cancelWarmUp();
     };
   }, [lang]);
 

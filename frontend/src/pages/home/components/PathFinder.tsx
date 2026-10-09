@@ -93,7 +93,7 @@ export default function PathFinder() {
   const stepLabels = [t("pathFinder.stepLabel1"), t("pathFinder.stepLabel2"), t("pathFinder.stepLabel3")];
 
   return (
-    <section id="pathfinder" className="py-5 md:py-6 bg-transparent overflow-hidden relative border-t border-[#e5e5e5]/60">
+    <section className="py-5 md:py-6 bg-transparent overflow-hidden relative border-t border-[#e5e5e5]/60">
       <div className="section-container relative z-10">
         <Reveal className="mb-5 max-w-3xl">
           <p className="section-eyebrow !mb-2">{t("pathFinder.eyebrow")}</p>

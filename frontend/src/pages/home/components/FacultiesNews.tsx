@@ -138,7 +138,7 @@ export default function FacultiesNews() {
   }
 
   return (
-    <section id="faculties-news" className="py-5 md:py-6 bg-transparent overflow-hidden border-t border-[#e5e5e5]/60">
+    <section className="py-5 md:py-6 bg-transparent overflow-hidden border-t border-[#e5e5e5]/60">
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-12 gap-5 lg:gap-6 lg:items-stretch">
           {/* Left: intro top + AI bottom (aligned with cards) */}

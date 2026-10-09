@@ -21,11 +21,12 @@
     <meta name="twitter:image" content="https://fermi.uz/icon-512.png" />
     <link rel="canonical" href="https://fermi.uz" />
     <!-- Local, preloaded fonts keep the first paint stable without making it wait on
-         a third-party font stylesheet. The complete declarations live in index.css. -->
+         a third-party font stylesheet. The complete declarations live in index.css.
+         Only the "latin" files are preloaded: they hold every letter Uzbek, Russian-page Latin
+         text and English use (including the oʻ/gʻ apostrophe, U+02BB). The "latin-ext" files
+         (rare accented letters) are fetched only if a page actually contains such a letter. -->
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/source-sans-3-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/vendor/remixicon/remixicon-used.css">
   </head>
   <body>
