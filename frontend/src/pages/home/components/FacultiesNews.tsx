@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FACULTY_MENU_ID } from "@/lib/facultySection";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { listFaculty } from "@/api/faculty";
@@ -172,7 +173,8 @@ export default function FacultiesNews() {
                 </div>
               </div>
 
-              <Link to="/institut" className="uni-btn self-start cursor-pointer">
+              {/* there is no page listing the faculties; a faculty page lists all of them in its side menu (same as the departments card below) */}
+              <Link to={`/faculty/${FACULTY_MENU_ID}/${faculties[0].slug}`} className="uni-btn self-start cursor-pointer">
                 {t("faculties.viewAll")}
                 <i className="ri-arrow-right-line" />
               </Link>
