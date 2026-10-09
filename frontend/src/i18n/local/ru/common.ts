@@ -424,6 +424,7 @@ export default {
   "faculties.pathFinderDesc": "PathFinder — за 3 шага подберите трек по интересам, следующие действия и путь к поступлению.",
   "faculties.clinicalTitle": "Клиническая практика",
   "faculties.clinicalDesc": "Реальные сценарии в симуляционном центре и клиниках-партнёрах — выпускник выходит готовым к работе.",
+  "faculties.advisorOpen": "Перейти: {{name}}",
   "faculties.viewAll": "Все факультеты",
   "faculties.viewAllDepartments": "Смотреть все",
   "events.eyebrow": "Календарь мероприятий",

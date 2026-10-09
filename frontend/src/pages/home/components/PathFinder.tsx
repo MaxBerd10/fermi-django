@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Animation";
 import { aiPathfinder } from "@/api/ai";
 import AiPanel from "@/components/ai/AiPanel";
 import { FEATURES } from "@/lib/featureFlags";
+import { staticPathfinderAdvice } from "@/lib/staticAdvisor";
 
 type Interest = "clinic" | "public" | "science" | "global";
 type Level = "bakalavriat" | "magistratura" | "ordinatura";
@@ -69,22 +70,20 @@ export default function PathFinder() {
   async function runAiAdvice() {
     if (!freeText.trim() && !interest) return;
     setAiError("");
+    const input = { freeText, interest: interest || undefined, level: level || undefined, lang: i18n.language };
+    // without the AI service (or when it fails) the advice is built on the site itself: see lib/staticAdvisor.ts
     if (!FEATURES.ai) {
-      setAiError(t("ai.error"));
+      setAiResult(staticPathfinderAdvice(input));
+      setStep(2);
       return;
     }
     setAiLoading(true);
     try {
-      const res = await aiPathfinder({
-        freeText,
-        interest: interest || undefined,
-        level: level || undefined,
-        lang: i18n.language,
-      });
-      setAiResult(res);
+      setAiResult(await aiPathfinder(input));
       setStep(2);
-    } catch (e) {
-      setAiError(e instanceof Error ? e.message : t("ai.error"));
+    } catch {
+      setAiResult(staticPathfinderAdvice(input));
+      setStep(2);
     } finally {
       setAiLoading(false);
     }

@@ -9,6 +9,7 @@ import type { FacultyListItem } from "@/types/content";
 import { Reveal } from "@/components/Animation";
 import AiPanel from "@/components/ai/AiPanel";
 import { FEATURES } from "@/lib/featureFlags";
+import { staticFacultyAdvice } from "@/lib/staticAdvisor";
 
 function facultyDescKey(title: string, index: number): string {
   const s = title.toLowerCase();
@@ -197,15 +198,16 @@ export default function FacultiesNews() {
                 disabled={advisorLoading || !advisorQ.trim()}
                 onClick={async () => {
                   setAdvisorError("");
+                  // without the AI service (or when it fails) the answer is built on the site itself: see lib/staticAdvisor.ts
                   if (!FEATURES.ai) {
-                    setAdvisorError(t("ai.error"));
+                    setAdvisor(staticFacultyAdvice(advisorQ, i18n.language));
                     return;
                   }
                   setAdvisorLoading(true);
                   try {
                     setAdvisor(await aiFaculty(advisorQ, i18n.language));
-                  } catch (e) {
-                    setAdvisorError(e instanceof Error ? e.message : t("ai.error"));
+                  } catch {
+                    setAdvisor(staticFacultyAdvice(advisorQ, i18n.language));
                   } finally {
                     setAdvisorLoading(false);
                   }
@@ -236,6 +238,11 @@ export default function FacultiesNews() {
                         </li>
                       ))}
                     </ul>
+                  )}
+                  {advisor.href && advisor.href.startsWith("/") && !advisor.href.startsWith("/#") && (
+                    <Link to={advisor.href} className="uni-link cursor-pointer pt-1 text-xs">
+                      {t("faculties.advisorOpen", { name: advisor.faculty })}
+                    </Link>
                   )}
                 </div>
               )}

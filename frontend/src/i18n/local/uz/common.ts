@@ -424,6 +424,7 @@ export default {
   "faculties.pathFinderDesc": "PathFinder — 3 qadamda qiziqishingizga mos taʻlim yoʻnalishi, keyingi qadamlar va qabulga yoʻl-yoʻriq.",
   "faculties.clinicalTitle": "Klinik amaliyot",
   "faculties.clinicalDesc": "Simulyatsiya markazi va hamkor shifoxonalarda real vaziyatlar mashq qilinadi — bitiruvchi ishga tayyor chiqadi.",
+  "faculties.advisorOpen": "{{name}} sahifasiga oʻtish",
   "faculties.viewAll": "Barcha fakultetlar",
   "faculties.viewAllDepartments": "Barchasini koʻrish",
   "events.eyebrow": "Tadbirlar kalendari",

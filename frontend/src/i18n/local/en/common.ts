@@ -424,6 +424,7 @@ export default {
   "faculties.pathFinderDesc": "PathFinder — in 3 steps get a track that matches your interests, next actions and a clear route to admissions.",
   "faculties.clinicalTitle": "Clinical practice",
   "faculties.clinicalDesc": "Train in real scenarios at the simulation centre and partner hospitals — graduates leave job-ready.",
+  "faculties.advisorOpen": "Open: {{name}}",
   "faculties.viewAll": "All faculties",
   "faculties.viewAllDepartments": "View all",
   "events.eyebrow": "Events calendar",
