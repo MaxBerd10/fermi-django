@@ -97,7 +97,8 @@ export default function KeyslarPage() {
             {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
             {subjects === null && !error && (
-              <div className="flex items-center gap-2 text-foreground-500 text-sm">
+              // tall enough that the footer is below the first screen while the catalog loads, so it does not jump down
+              <div className="flex min-h-screen items-start gap-2 pt-2 text-foreground-500 text-sm">
                 <i className="ri-loader-4-line animate-spin" />
                 {t("test.loading")}
               </div>
