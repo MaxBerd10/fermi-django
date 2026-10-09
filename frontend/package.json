@@ -12,11 +12,11 @@
     "type-check": "tsc --noEmit --project tsconfig.app.json"
   },
   "dependencies": {
-    "@tiptap/extension-image": "^3.28.0",
-    "@tiptap/extension-link": "^3.28.0",
-    "@tiptap/extension-underline": "^3.28.0",
-    "@tiptap/react": "^3.28.0",
-    "@tiptap/starter-kit": "^3.28.0",
+    "@tiptap/extension-image": "^3.31.4",
+    "@tiptap/extension-link": "^3.31.4",
+    "@tiptap/extension-underline": "^3.31.4",
+    "@tiptap/react": "^3.31.4",
+    "@tiptap/starter-kit": "^3.31.4",
     "dompurify": "^3.4.14",
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",

@@ -1,3 +1,6 @@
+import logging
+import re
+
 from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth.password_validation import validate_password
@@ -17,6 +20,20 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import RegisterSerializer
 
 User = get_user_model()
+
+security_log = logging.getLogger("fermi.security")
+
+
+def _log_safe(value: str, limit: int = 120) -> str:
+    """A request header put into a log line: control characters stripped and the length capped, so a client
+    cannot forge extra log lines or flood the log."""
+    return re.sub(r"[^\x20-\x7e]", "?", str(value or ""))[:limit]
+
+
+def _client_hint(request) -> str:
+    """Where a request came from, as the service log should show it: the proxy chain's X-Forwarded-For and the
+    socket address. (The username is never logged -- people paste passwords into that box.)"""
+    return f"xff={_log_safe(request.META.get('HTTP_X_FORWARDED_FOR'))} remote={_log_safe(request.META.get('REMOTE_ADDR'))}"
 
 
 def _serialize_user(user) -> dict:
@@ -177,7 +194,10 @@ class LoginView(APIView):
         password = request.data.get("password", "")
         user = authenticate(request, username=username, password=password)
         if user is None:
+            security_log.warning("failed sign-in %s", _client_hint(request))
             return Response({"detail": "Login yoki parol noto'g'ri."}, status=status.HTTP_401_UNAUTHORIZED)
+        if user.is_staff:
+            security_log.info("staff sign-in id=%s %s", user.id, _client_hint(request))
         return Response(_issue_tokens(user))
 
 

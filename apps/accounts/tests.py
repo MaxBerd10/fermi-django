@@ -191,3 +191,43 @@ def test_password_reset_confirm_enforces_password_validation(client, registered_
         "/api/v1/auth/password-reset", {"uid": uid, "token": token, "password": "1234"}, format="json"
     )
     assert res.status_code == 400
+
+
+def test_password_must_be_at_least_twelve_characters(client, db):
+    short = client.post(
+        "/api/v1/auth/register",
+        {"username": "carol", "email": "carol@example.com", "password": "Xk9!mQ2#vLp"},  # 11 characters
+        format="json",
+    )
+    assert short.status_code == 400
+    assert not User.objects.filter(username="carol").exists()
+
+    long_enough = client.post(
+        "/api/v1/auth/register",
+        {"username": "carol", "email": "carol@example.com", "password": "Xk9!mQ2#vLpz"},  # 12 characters
+        format="json",
+    )
+    assert long_enough.status_code == 201
+
+
+def test_failed_sign_in_is_logged_without_the_username(client, db, caplog):
+    with caplog.at_level("INFO", logger="fermi.security"):
+        res = client.post(
+            "/api/v1/auth/login",
+            {"username": "mallory-secret-name", "password": "wrong"},
+            format="json",
+            HTTP_X_FORWARDED_FOR="203.0.113.7\r\nFAKE LOG LINE",
+        )
+    assert res.status_code == 401
+    lines = [r.getMessage() for r in caplog.records if r.name == "fermi.security"]
+    assert any(line.startswith("failed sign-in") and "203.0.113.7" in line for line in lines)
+    assert not any("mallory-secret-name" in line for line in lines)
+    assert not any("\n" in line or "\r" in line for line in lines)
+
+
+def test_staff_sign_in_is_logged(client, db, caplog):
+    User.objects.create_user(username="staffer", email="s@example.com", password="StrongPass123!", is_staff=True)
+    with caplog.at_level("INFO", logger="fermi.security"):
+        res = client.post("/api/v1/auth/login", {"username": "staffer", "password": "StrongPass123!"}, format="json")
+    assert res.status_code == 200
+    assert any(r.getMessage().startswith("staff sign-in") for r in caplog.records if r.name == "fermi.security")

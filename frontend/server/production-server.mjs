@@ -89,6 +89,7 @@ const mimeTypes = {
   ".woff": "font/woff",
   ".woff2": "font/woff2",
   ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
 };
 
 const responseCache = new Map();
@@ -96,6 +97,7 @@ const pendingRequests = new Map();
 const aiRateLimits = new Map();
 const imentorRateLimits = new Map();
 const telegramRateLimits = new Map();
+const translateRateLimits = new Map();
 const telegramMediaRateLimits = new Map();
 const imageProxyRateLimits = new Map();
 const pdfCheckRateLimits = new Map();
@@ -143,6 +145,8 @@ const CONTENT_SECURITY_POLICY = [
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'self'",
+  // a form (a hijacked or injected one included) can only submit to this site
+  "form-action 'self'",
 ].join("; ");
 
 function applySecurityHeaders(response) {
@@ -151,6 +155,8 @@ function applySecurityHeaders(response) {
   response.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   response.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   response.setHeader("Content-Security-Policy", CONTENT_SECURITY_POLICY);
+  // pages opened from other sites get no handle on this one (and the reverse)
+  response.setHeader("Cross-Origin-Opener-Policy", "same-origin");
 }
 
 function sendJson(response, statusCode, body) {
@@ -192,6 +198,12 @@ function allowAiRequest(request) {
 // of the short response cache in cachedGet().
 function allowImentorRequest(request) {
   return allowRateLimit(imentorRateLimits, request, 60_000, 60);
+}
+
+// /telegram-feed/translate hands text to free translation services whose daily quota is shared by the whole
+// site, so one visitor gets far fewer calls than the feed itself (the page asks for a handful per article).
+function allowTranslateRequest(request) {
+  return allowRateLimit(translateRateLimits, request, 60_000, 20);
 }
 
 function allowTelegramFeedRequest(request) {
@@ -412,6 +424,9 @@ const server = createServer(async (request, response) => {
     if (pathname.startsWith("/openai-api/")) return await handleOpenAi(request, response);
     if (pathname.startsWith("/telegram-feed")) {
       if (!allowTelegramFeedRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      if (/^\/telegram-feed\/translate\/?$/.test(pathname) && !allowTranslateRequest(request)) {
+        return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      }
       const handled = await handleTelegramFeedRequest(request, response);
       if (handled) return;
     }

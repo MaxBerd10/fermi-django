@@ -750,6 +750,13 @@ export async function handleTelegramFeedRequest(request, response) {
   try {
     if (pathname === "/telegram-feed/translate" || pathname === "/telegram-feed/translate/") {
       const text = String(requestUrl.searchParams.get("q") || "");
+      // the page sends pieces of at most ~450 characters; anything much longer is not the page
+      if (!text.trim() || text.length > 600) {
+        response.statusCode = 400;
+        response.setHeader("Content-Type", "application/json; charset=utf-8");
+        response.end(JSON.stringify({ success: false, error: { message: "Text must be 1-600 characters" } }));
+        return true;
+      }
       const translated = await translateText(text, lang);
       response.statusCode = 200;
       response.setHeader("Content-Type", "application/json; charset=utf-8");
