@@ -343,7 +343,16 @@ async function cachedGet(url, headers, ttlMs) {
         body: await upstream.arrayBuffer(),
         expiresAt: Date.now() + ttlMs,
       };
-      if (upstream.ok) responseCache.set(cacheKey, result);
+      if (upstream.ok) {
+        responseCache.set(cacheKey, result);
+        // keep memory bounded: drop the oldest entries (Map keeps insertion order) once there are many
+        if (responseCache.size > 600) {
+          for (const key of responseCache.keys()) {
+            responseCache.delete(key);
+            if (responseCache.size <= 500) break;
+          }
+        }
+      }
       return result;
     })
     .finally(() => pendingRequests.delete(cacheKey));
@@ -372,7 +381,10 @@ async function handleImentor(request, response) {
   // requests for the exact same subject/count within this window share one upstream
   // call and get the same (still shuffled) set — a small trade against pure randomness
   // in exchange for not being able to hammer a third party's server into the ground.
-  const ttlMs = isStats ? 60_000 : 8_000;
+  // A test/case document (and the list of them) changes only when a teacher saves one, and the topic
+  // browser requests the list of a subject plus one document per click: keep those a few minutes.
+  const isDocument = /\/v1\/external\/(tests|keys)\/(\d+\/)?$/.test(upstreamPath);
+  const ttlMs = isStats ? 60_000 : isDocument ? 300_000 : 8_000;
   const result = await cachedGet(target, { "X-Api-Key": imentorApiKey }, ttlMs);
 
   response.statusCode = result.statusCode;

@@ -1,18 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageHeader from "@/components/shared/PageHeader";
-import Paginator from "@/components/shared/Paginator";
-import { usePagination } from "@/hooks/usePagination";
+import CatalogBrowser from "@/components/imentor/CatalogBrowser";
+import TopicExplorer from "@/components/imentor/TopicExplorer";
+import { parseSubjectName } from "@/lib/imentorCatalog";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { getImentorTestStats, getImentorSampleQuestions } from "@/api/imentor";
 import { downloadTestResultPdf } from "@/lib/testResultPdf";
 import type { ImentorSubjectStat, ImentorSampleQuestion, ImentorQuestionLang } from "@/types/imentor";
 
-const SUBJECTS_PER_PAGE = 12;
-const STUDY_QUESTIONS_PER_PAGE = 10;
-const STUDY_QUESTION_COUNT = 30;
+// iMentor answers a random-sample request with 10 to 30 questions
 const QUIZ_QUESTION_COUNT = 20;
-const SUBJECT_ICONS = ["ri-stethoscope-line", "ri-microscope-line", "ri-capsule-line", "ri-pulse-line", "ri-heart-pulse-line", "ri-flask-line"];
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
 
 function pickLang(q: ImentorSampleQuestion, lang: string): ImentorQuestionLang {
@@ -30,32 +28,15 @@ export default function TestPage() {
   const [subjects, setSubjects] = useState<ImentorSubjectStat[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [subject, setSubject] = useState<ImentorSubjectStat | null>(null);
-  const [questions, setQuestions] = useState<ImentorSampleQuestion[]>([]);
   const [quizQuestions, setQuizQuestions] = useState<ImentorSampleQuestion[]>([]);
-  const [openStudyIndex, setOpenStudyIndex] = useState<number | null>(null);
+  // set when the quiz was started from one topic of the syllabus instead of the whole subject
+  const [quizTopic, setQuizTopic] = useState<{ code: string; title: string } | null>(null);
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [pdfError, setPdfError] = useState<string | null>(null);
-  const [query, setQuery] = useState("");
-  const [sortBy, setSortBy] = useState<"questions" | "alpha">("questions");
-
-  const filteredSubjects = subjects
-    ?.filter((s) => {
-      const q = query.trim().toLowerCase();
-      if (!q) return true;
-      return s.subject_name.toLowerCase().includes(q) || (s.department_name || "").toLowerCase().includes(q);
-    })
-    .sort((a, b) =>
-      sortBy === "alpha" ? a.subject_name.localeCompare(b.subject_name) : b.questions_total - a.questions_total,
-    );
-
-  const subjectsTopRef = useRef<HTMLDivElement>(null);
-  const studyTopRef = useRef<HTMLDivElement>(null);
-  const subjectPaging = usePagination(filteredSubjects, SUBJECTS_PER_PAGE, `${query}|${sortBy}`, subjectsTopRef);
-  const studyPaging = usePagination(questions, STUDY_QUESTIONS_PER_PAGE, subject?.subject_code, studyTopRef);
 
   useEffect(() => {
     let cancelled = false;
@@ -73,31 +54,17 @@ export default function TestPage() {
 
   function openSubject(s: ImentorSubjectStat) {
     setSubject(s);
-    setStage("loading");
     setError(null);
-    getImentorSampleQuestions({ subjectCode: s.subject_code, count: STUDY_QUESTION_COUNT })
-      .then((data) => {
-        if (data.questions.length === 0) {
-          setError(t("test.noContent"));
-          setStage("picking");
-          return;
-        }
-        setQuestions(data.questions);
-        setOpenStudyIndex(null);
-        setStage("study");
-      })
-      .catch(() => {
-        setError(t("test.loadError"));
-        setStage("picking");
-      });
+    setStage("study");
   }
 
-  function startQuiz() {
+  function startQuiz(topic: { code: string; title: string } | null = null) {
     if (!subject) return;
     setStage("loading");
     setError(null);
     setPdfError(null);
-    getImentorSampleQuestions({ subjectCode: subject.subject_code, count: QUIZ_QUESTION_COUNT })
+    setQuizTopic(topic);
+    getImentorSampleQuestions({ subjectCode: subject.subject_code, topicCode: topic?.code || undefined, count: QUIZ_QUESTION_COUNT })
       .then((data) => {
         if (data.questions.length === 0) {
           setError(t("test.noContent"));
@@ -132,14 +99,14 @@ export default function TestPage() {
   }
 
   function retry() {
-    startQuiz();
+    startQuiz(quizTopic);
   }
 
   function backToSubjects() {
     setStage("picking");
     setSubject(null);
-    setQuestions([]);
     setQuizQuestions([]);
+    setQuizTopic(null);
     setError(null);
     setPdfError(null);
   }
@@ -246,88 +213,15 @@ export default function TestPage() {
             {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("test.noContent")}</p>}
 
             {subjects && subjects.length > 0 && (
-              <>
-                <section className="rounded-[1.35rem] border border-[#e5e8f1] bg-white p-3 shadow-[0_8px_28px_rgba(20,32,86,0.05)] sm:p-4">
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <label className="relative block flex-1">
-                      <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-lg text-[#64709c]" aria-hidden />
-                      <input
-                        type="search"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        placeholder={t("test.searchPlaceholder")}
-                        className="h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-[#0a1158] focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]"
-                      />
-                    </label>
-                    <div className="flex rounded-xl border border-[#e4e7f0] bg-[#fafbfe] p-1 sm:w-auto">
-                      <button
-                        type="button"
-                        onClick={() => setSortBy("questions")}
-                        className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
-                          sortBy === "questions" ? "bg-[#0a1158] text-white shadow-sm" : "text-foreground-500 hover:text-[#0a1158]"
-                        }`}
-                      >
-                        <i className="ri-bar-chart-grouped-line mr-1.5" />
-                        {t("test.sortByQuestions")}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setSortBy("alpha")}
-                        className={`h-10 rounded-lg px-3 text-xs font-semibold transition-colors ${
-                          sortBy === "alpha" ? "bg-[#0a1158] text-white shadow-sm" : "text-foreground-500 hover:text-[#0a1158]"
-                        }`}
-                      >
-                        <i className="ri-sort-alphabet-asc mr-1.5" />
-                        {t("test.sortByAlpha")}
-                      </button>
-                    </div>
-                  </div>
-                </section>
-
-                <div className="mt-6 mb-3 flex items-center justify-between gap-3">
-                  <p className="text-sm font-medium text-foreground-500">
-                    {t("test.resultsCount", { count: filteredSubjects?.length ?? 0, total: subjects.length })}
-                  </p>
-                </div>
-
-                {filteredSubjects && filteredSubjects.length === 0 && (
-                  <p className="text-sm text-foreground-500">{t("test.noSearchResults")}</p>
-                )}
-
-                <div ref={subjectsTopRef} className="scroll-mt-24 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {subjectPaging.pageItems.map((s, i) => (
-                    <button
-                      key={s.subject_code}
-                      type="button"
-                      onClick={() => openSubject(s)}
-                      className="group relative flex min-h-48 flex-col overflow-hidden rounded-2xl border border-[#e4e7f0] bg-white p-4 text-left shadow-[0_6px_18px_rgba(20,32,86,0.04)] transition-all hover:-translate-y-0.5 hover:border-[#b8c5f4] hover:shadow-[0_14px_28px_rgba(20,32,86,0.10)] focus:outline-none focus:ring-2 focus:ring-secondary-400 focus:ring-offset-2 cursor-pointer"
-                    >
-                      <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-[4rem] bg-[#f6f8ff] transition-colors group-hover:bg-[#edf1ff]" aria-hidden />
-                      <div className="relative flex items-start gap-3">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8edff] text-[#0a1158] transition-colors group-hover:bg-[#0a1158] group-hover:text-white">
-                          <i className={`${SUBJECT_ICONS[(subjectPaging.offset + i) % SUBJECT_ICONS.length]} text-lg`} />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="font-heading text-[15px] font-bold leading-snug text-foreground-900 line-clamp-3">{s.subject_name}</div>
-                          {s.department_name && <div className="mt-1 text-xs text-foreground-500 line-clamp-1">{s.department_name}</div>}
-                        </div>
-                      </div>
-                      <div className="relative mt-auto flex items-end justify-between gap-3 pt-4">
-                        <span className="inline-flex items-center gap-1 rounded-full bg-[#eef2ff] px-2.5 py-1 text-[11px] font-bold text-[#0a1158]">
-                          <i className="ri-question-line" />
-                          {t("test.questionsCount", { count: s.questions_total })}
-                        </span>
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e1e5ef] text-foreground-400 transition-all group-hover:border-[#0a1158] group-hover:bg-[#0a1158] group-hover:text-white group-hover:translate-x-0.5">
-                          <i className="ri-arrow-right-line" />
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <Paginator page={subjectPaging.page} totalPages={subjectPaging.totalPages} onChange={subjectPaging.go} />
-                </div>
-              </>
+              <CatalogBrowser
+                subjects={subjects}
+                countOf={(s) => s.questions_total}
+                countLabel={(count) => t("test.questionsCount", { count })}
+                sortByCountLabel={t("test.sortByQuestions")}
+                searchPlaceholder={t("test.searchPlaceholder")}
+                noResultsLabel={t("test.noSearchResults")}
+                onPick={openSubject}
+              />
             )}
           </div>
         )}
@@ -343,84 +237,43 @@ export default function TestPage() {
 
           {stage === "study" && subject && (
             <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-between mb-1">
+              <div className="flex items-start justify-between gap-3 mb-4">
                 <div>
-                  <div className="font-heading font-bold text-foreground-900">{subject.subject_name}</div>
-                  <div className="text-xs text-foreground-500">{t("test.questionsCount", { count: questions.length })}</div>
+                  <div className="font-heading font-bold text-foreground-900">{parseSubjectName(subject.subject_name).title}</div>
+                  <div className="text-xs text-foreground-500">
+                    {subject.department_name ? `${subject.department_name} · ` : ""}
+                    {t("test.questionsCount", { count: subject.questions_total })}
+                  </div>
                 </div>
                 <button type="button" onClick={backToSubjects} className="text-xs text-foreground-400 hover:text-primary-700 cursor-pointer whitespace-nowrap">
                   <i className="ri-arrow-left-line mr-0.5" />
                   {t("test.backToSubjects")}
                 </button>
               </div>
-              <p className="text-sm text-foreground-500 mb-4">{t("test.studyHint")}</p>
 
               {error && <p className="text-sm text-red-600 mb-4" role="alert">{error}</p>}
 
-              <div ref={studyTopRef} className="scroll-mt-24 space-y-2 mb-5">
-                {studyPaging.pageItems.map((q, pageIndex) => {
-                  const i = studyPaging.offset + pageIndex;
-                  const content = pickLang(q, lang);
-                  const isOpen = openStudyIndex === i;
-                  return (
-                    <div key={i} className="page-card overflow-hidden">
-                      <button
-                        type="button"
-                        onClick={() => setOpenStudyIndex(isOpen ? null : i)}
-                        className="w-full flex items-center gap-3 p-3.5 text-left cursor-pointer"
-                      >
-                        <span className="w-7 h-7 shrink-0 rounded-full bg-primary-50 text-primary-700 flex items-center justify-center text-xs font-bold">
-                          {i + 1}
-                        </span>
-                        <span className="flex-1 text-sm font-medium text-foreground-800 line-clamp-1">{content.question}</span>
-                        <i className={`ri-arrow-down-s-line text-foreground-400 transition-transform shrink-0 ${isOpen ? "rotate-180" : ""}`} />
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-3.5 pb-3.5">
-                          <p className="text-sm font-semibold text-foreground-900 mb-2.5 leading-snug">{content.question}</p>
-                          <div className="space-y-1.5">
-                            {content.options.map((opt, oi) => {
-                              const isCorrect = oi === q.correctOptionIndex;
-                              return (
-                                <div
-                                  key={oi}
-                                  className={`flex items-center gap-2.5 px-3 py-2 rounded-lg border text-sm ${
-                                    isCorrect ? "border-green-500 bg-green-50 font-medium text-foreground-900" : "border-[#e5e5e5] text-foreground-600"
-                                  }`}
-                                >
-                                  <span
-                                    className={`w-5 h-5 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold ${
-                                      isCorrect ? "bg-green-500 text-white" : "bg-[#eee] text-foreground-500"
-                                    }`}
-                                  >
-                                    {isCorrect ? <i className="ri-check-line" /> : OPTION_LETTERS[oi]}
-                                  </span>
-                                  {opt}
-                                </div>
-                              );
-                            })}
-                          </div>
-                          {content.explanation && (
-                            <div className="mt-2.5 text-xs text-foreground-500">
-                              <span className="font-semibold text-foreground-700">{t("test.explanation")}: </span>
-                              {content.explanation}
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="mb-5 -mt-1">
-                <Paginator page={studyPaging.page} totalPages={studyPaging.totalPages} onChange={studyPaging.go} />
-              </div>
-
-              <button type="button" onClick={startQuiz} className="uni-btn cursor-pointer w-full sm:w-auto">
+              <button type="button" onClick={() => startQuiz(null)} className="uni-btn cursor-pointer w-full sm:w-auto mb-6">
                 <i className="ri-pencil-ruler-2-line" />
-                {t("test.testYourself")}
+                {t("test.quizWholeSubject", { count: QUIZ_QUESTION_COUNT })}
               </button>
+
+              <TopicExplorer
+                kind="tests"
+                subjectCode={subject.subject_code}
+                topicActions={(topic) =>
+                  topic.code ? (
+                    <button
+                      type="button"
+                      onClick={() => startQuiz({ code: topic.code, title: topic.title })}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#0a1158] px-4 py-2 text-xs font-semibold text-[#0a1158] transition-colors hover:bg-[#0a1158] hover:text-white cursor-pointer"
+                    >
+                      <i className="ri-pencil-ruler-2-line" />
+                      {t("test.quizTopic")}
+                    </button>
+                  ) : null
+                }
+              />
             </div>
           )}
 

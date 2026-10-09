@@ -68,3 +68,57 @@ export interface ImentorScenariosResponse {
   count_returned: number;
   results: ImentorCaseScenario[];
 }
+
+/** One document in iMentor: a set of questions (or clinical cases) on one topic of a subject's syllabus. */
+export interface ImentorDocument {
+  id: number;
+  kind: "test" | "case";
+  topic: string;
+  topic_code: string;
+  syllabus_id: number | null;
+  variant_label?: string;
+  subject_code: string;
+  question_count: number;
+  author_display_name?: string;
+  created_at?: string;
+}
+
+export interface ImentorDocumentListResponse {
+  count: number;
+  page: number;
+  page_size: number;
+  results: ImentorDocument[];
+}
+
+export interface ImentorTestQuestionContent {
+  question: string;
+  options: string[];
+  explanation?: string;
+  optionExplanations?: string[];
+  correctOptionIndex?: number;
+  references?: ImentorReference[];
+}
+
+export interface ImentorTestDetail extends ImentorDocument {
+  payload: {
+    topic?: string;
+    primaryLanguage?: string;
+    questions: ImentorTestQuestionContent[];
+    translations?: Record<string, { topic?: string; questions: ImentorTestQuestionContent[] }>;
+  };
+}
+
+export interface ImentorCaseItem {
+  scenario: string;
+  answer: string;
+  focus?: string;
+}
+
+export interface ImentorKeyDetail extends ImentorDocument {
+  payload: {
+    topic?: string;
+    questions: ImentorCaseItem[];
+  };
+}
+
+export type ImentorDocumentKind = "tests" | "keys";
