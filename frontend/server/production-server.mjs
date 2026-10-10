@@ -104,6 +104,7 @@ const imageProxyRateLimits = new Map();
 const pdfCheckRateLimits = new Map();
 const proxyRateLimits = new Map();
 const siteStatsRateLimits = new Map();
+const adminLoginRateLimits = new Map();
 
 // Hard daily ceiling on OpenAI calls across ALL visitors combined — independent of
 // per-IP rate limiting, which only slows down a single abuser but does nothing to
@@ -233,6 +234,12 @@ function allowPdfCheckRequest(request) {
 // General ceiling on the pass-through to the real backend API/DB — loose enough
 // for normal browsing, tight enough to blunt a single client scraping or
 // hammering it directly through this proxy.
+// Password guessing on Django's admin login form: 10 submissions per 15 minutes per IP is plenty for a person
+// who mistyped, and far too few for a guessing script (the general 120/min limit above is not).
+function allowAdminLoginAttempt(request) {
+  return allowRateLimit(adminLoginRateLimits, request, 15 * 60_000, 10);
+}
+
 function allowProxyRequest(request) {
   return allowRateLimit(proxyRateLimits, request, 60_000, 120);
 }
@@ -496,6 +503,10 @@ const server = createServer(async (request, response) => {
       return await proxyAndDropCacheOnWrite(request, response);
     }
     if (pathname.startsWith("/django-admin/") && isWriteMethod(request)) {
+      if (pathname === "/django-admin/login/" && !allowAdminLoginAttempt(request)) {
+        response.setHeader("Retry-After", "900");
+        return sendJson(response, 429, { error: "Too many login attempts. Please try again in 15 minutes." });
+      }
       if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
       return await proxyAndDropCacheOnWrite(request, response);
     }
