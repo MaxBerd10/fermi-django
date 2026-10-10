@@ -269,6 +269,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   }
 
   if (slug === "mutaxassisliklar-boyicha-testlar-toplami") normalizeStudentTestCover(body);
+  else if (slug === "monografiya") normalizeBookCover(body);
   else normalizeHeroImage(body);
   fixHorizontalRulesInLists(body);
   markPageLinkLines(body);
@@ -429,6 +430,20 @@ function normalizeStudentTestCover(root: ParentNode) {
   img.removeAttribute("style");
   img.removeAttribute("height");
   img.removeAttribute("width");
+  figure.appendChild(img);
+  container.replaceWith(figure);
+}
+
+/** A monograph's cover is a portrait picture: shown at book size (not stretched to the article's full width). */
+function normalizeBookCover(root: ParentNode) {
+  const img = root.querySelector("img");
+  if (!img) return;
+  const container = img.closest("p, div");
+  if (!container) return;
+
+  const figure = img.ownerDocument.createElement("figure");
+  figure.className = "cms-book-cover";
+  img.removeAttribute("style"); // width/height attributes stay: they reserve the space while the picture loads
   figure.appendChild(img);
   container.replaceWith(figure);
 }

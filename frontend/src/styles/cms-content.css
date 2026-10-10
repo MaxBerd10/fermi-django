@@ -461,6 +461,21 @@
   object-position: center;
 }
 
+/* A monograph's portrait cover, at book size and centred above its PDF card. */
+.cms-book-cover {
+  margin: 0.25rem auto 1.5rem;
+  width: min(100%, 17.5rem);
+}
+
+.prose-content .cms-book-cover img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(10, 17, 88, 0.18);
+}
+
 .cms-article--about .cms-institute-title {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 800;
