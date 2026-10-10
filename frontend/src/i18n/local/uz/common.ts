@@ -1174,7 +1174,7 @@ export default {
   "gallery.headingPrefix": "Institut hayotidan",
   "gallery.headingHighlight": "lavhalar",
   "gallery.intro": "Kampus, klinik amaliyot, ilmiy tadbirlar va talabalar hayotidan eng yaxshi lahzalar shu yerda. Galereya orqali FerMI muhitini yaqindan his eting.",
-  "gallery.viewAllAlbums": "Barcha albomlar",
+  "gallery.viewAllAlbums": "Barcha rasmlar",
   "gallery.altText": "Galereya",
   "gallery.photoCaption": "Institut hayotidan foto lavha",
   "gallery.caption1": "Rasmiy tadbirlar va mehmon uchrashuvlari",

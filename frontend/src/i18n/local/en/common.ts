@@ -1174,7 +1174,7 @@ export default {
   "gallery.headingPrefix": "Moments from",
   "gallery.headingHighlight": "institute life",
   "gallery.intro": "Campus life, clinical practice, academic events and student moments — captured here. Explore the gallery to feel the FerMI environment up close.",
-  "gallery.viewAllAlbums": "All albums",
+  "gallery.viewAllAlbums": "All photos",
   "gallery.altText": "Gallery",
   "gallery.photoCaption": "A photo from institute life",
   "gallery.caption1": "Events and official meetings",

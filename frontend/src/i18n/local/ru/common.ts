@@ -1174,7 +1174,7 @@ export default {
   "gallery.headingPrefix": "Моменты из жизни",
   "gallery.headingHighlight": "института",
   "gallery.intro": "Кампус, клиническая практика, научные мероприятия и студенческая жизнь — лучшие моменты собраны здесь. Галерея поможет ближе почувствовать атмосферу FerMI.",
-  "gallery.viewAllAlbums": "Все альбомы",
+  "gallery.viewAllAlbums": "Все фото",
   "gallery.altText": "Галерея",
   "gallery.photoCaption": "Фото из жизни института",
   "gallery.caption1": "Мероприятия и официальные встречи",
