@@ -11,6 +11,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal } from "@/components/Animation";
 import AiPanel from "@/components/ai/AiPanel";
 import { FEATURES } from "@/lib/featureFlags";
+import { staticSearchHints } from "@/lib/staticHelpers";
 
 export default function SearchPage() {
   const { t, i18n } = useTranslation();
@@ -38,12 +39,16 @@ export default function SearchPage() {
     search(q)
       .then((res) => setResults(res.data))
       .finally(() => setLoading(false));
+    const staticHints = staticSearchHints(q, i18n.language);
+    const showStatic = () => setAiHints(staticHints.suggestions.length ? staticHints : null);
     if (FEATURES.ai) {
       setAiLoading(true);
       aiSearch(q, i18n.language)
         .then(setAiHints)
-        .catch((e) => setAiError(e instanceof Error ? e.message : t("ai.error")))
+        .catch(showStatic)
         .finally(() => setAiLoading(false));
+    } else {
+      showStatic();
     }
   }, [q, i18n.language, t]);
 

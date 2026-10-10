@@ -13,6 +13,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import AiPanel from "@/components/ai/AiPanel";
 import { translateRegionName } from "@/lib/regionNames";
 import { FEATURES } from "@/lib/featureFlags";
+import { staticQabulAnswer } from "@/lib/staticHelpers";
 
 const colorMap: Record<string, string> = {
   primary: "bg-primary-50 border-primary-200 text-primary-700",
@@ -145,8 +146,13 @@ export default function QabulPage() {
                 disabled={aiLoading || !aiQ.trim()}
                 onClick={async () => {
                   setAiError("");
+                  const showStatic = () => {
+                    const res = staticQabulAnswer(aiQ, i18n.language);
+                    setAiReply(res.reply);
+                    setAiLinks(res.links);
+                  };
                   if (!FEATURES.ai) {
-                    setAiError(t("ai.error"));
+                    showStatic();
                     return;
                   }
                   setAiLoading(true);
@@ -154,8 +160,8 @@ export default function QabulPage() {
                     const res = await aiQabul(aiQ, i18n.language);
                     setAiReply(res.reply);
                     setAiLinks(res.links || []);
-                  } catch (e) {
-                    setAiError(e instanceof Error ? e.message : t("ai.error"));
+                  } catch {
+                    showStatic();
                   } finally {
                     setAiLoading(false);
                   }

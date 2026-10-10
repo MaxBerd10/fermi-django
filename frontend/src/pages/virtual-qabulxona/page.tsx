@@ -13,6 +13,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import AiPanel from "@/components/ai/AiPanel";
 import { translateRegionName } from "@/lib/regionNames";
 import { FEATURES } from "@/lib/featureFlags";
+import { staticReceptionHelp } from "@/lib/staticHelpers";
 import { HEMIS_URL } from "@/lib/externalLinks";
 
 export default function VirtualQabulxonaPage() {
@@ -205,15 +206,15 @@ export default function VirtualQabulxonaPage() {
                           if (!text.trim()) return;
                           setAiError("");
                           if (!FEATURES.ai) {
-                            setAiError(t("ai.error"));
+                            setAiHelp(staticReceptionHelp(text, i18n.language));
                             return;
                           }
                           setAiLoading(true);
                           try {
                             const res = await aiReception(text, i18n.language);
                             setAiHelp(res);
-                          } catch (e) {
-                            setAiError(e instanceof Error ? e.message : t("ai.error"));
+                          } catch {
+                            setAiHelp(staticReceptionHelp(text, i18n.language));
                           } finally {
                             setAiLoading(false);
                           }
