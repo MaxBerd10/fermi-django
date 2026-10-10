@@ -2,7 +2,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from django.views.decorators.cache import cache_control
+from django.http import Http404
 from django.views.static import serve
+
+from apps.media_lib.private import is_private_path
 
 # django.views.static.serve sets no Cache-Control by default (only
 # Last-Modified/conditional-GET support) -- a real, always-on Lighthouse hit
@@ -10,7 +13,15 @@ from django.views.static import serve
 # numbers. A week is a reasonable balance: uploaded files are rarely replaced
 # in place, but this isn't a content-hashed filename either, so not a full
 # year like the JS/CSS bundles in production-server.mjs's serveStatic().
-media_serve = cache_control(public=True, max_age=604800)(serve)
+_cached_serve = cache_control(public=True, max_age=604800)(serve)
+
+
+def media_serve(request, path):
+    # What visitors sent in (passports, CVs) is never public: it is opened only through the signed links the
+    # staff-only admin API hands out (apps/media_lib/private.py).
+    if is_private_path(path):
+        raise Http404
+    return _cached_serve(request, path, document_root=settings.MEDIA_ROOT)
 
 urlpatterns = [
     # Not "admin/" -- the deployed frontend's own SPA also claims that path
@@ -43,5 +54,5 @@ urlpatterns = [
     # here (see its own streamProxy calls), with no separate nginx-level static
     # file serving in front of it. Fine at this site's traffic scale; move to
     # nginx `alias` or S3/CDN if that ever becomes a bottleneck.
-    path("media/<path:path>", media_serve, {"document_root": settings.MEDIA_ROOT}),
+    path("media/<path:path>", media_serve),
 ]

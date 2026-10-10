@@ -1,4 +1,5 @@
 import os
+import time
 
 from django.core.validators import FileExtensionValidator
 from django.db import models
@@ -40,6 +41,14 @@ class Video(models.Model):
         return self.file.name
 
 
+def document_upload_to(instance, filename):
+    """Site documents are filed by month; a visitor's attachment (flagged by the form that stores it) goes to the
+    private area instead -- see apps/media_lib/private.py. `filename` already carries the random folder."""
+    if getattr(instance, "is_private_upload", False):
+        return f"uploads/private/{filename}"
+    return time.strftime("uploads/documents/%Y/%m/") + filename
+
+
 class Document(models.Model):
     """
     A downloadable file. Rendered as a plain download/view link, not an
@@ -53,7 +62,7 @@ class Document(models.Model):
     """
 
     file = models.FileField(
-        upload_to="uploads/documents/%Y/%m/",
+        upload_to=document_upload_to,
         validators=[FileExtensionValidator(allowed_extensions=["pdf", "xlsx"])],
     )
     title = models.CharField(max_length=255, blank=True)

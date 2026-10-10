@@ -153,6 +153,25 @@ A 301 on the direct `127.0.0.1:8000` check is expected and correct
 `-H "X-Forwarded-Proto: https"` — nginx supplies that header for real
 requests, curl doesn't by default.
 
+## Visitor attachments are private
+
+What visitors attach to the virtual reception and contest forms (passport scans, CVs, ...) is stored under
+`media/uploads/private/<random>/` and is **never** served from `/media/` (`config/urls.py` answers 404 for that
+prefix). Staff open a file through a signed link that the admin API puts in the submission's `file` field; it
+works without a login for 15 minutes and then answers 410 (reload the submission to get a fresh one). See
+`apps/media_lib/private.py`.
+
+Files stored before this existed are moved with a management command (dry run first; `--restore` undoes it):
+
+```bash
+cd /home/fermi-django && set -a && . /etc/fermi-django.env && set +a
+.venv/bin/python manage.py move_visitor_uploads            # lists what would move
+.venv/bin/python manage.py move_visitor_uploads --apply    # moves (backup JSON in /var/backups/fermi-django)
+```
+
+The Django admin's own Document list (`/django-admin/`) links such files through `/media/`, which now answers 404 for
+them; use the admin panel's submissions pages instead.
+
 ## What's deliberately NOT here yet
 
 - **Media backups.** See the note at the end of the "Database backups"

@@ -15,6 +15,7 @@ from rest_framework.response import Response
 
 from apps.faculties.models import Faculty
 from apps.forms.models import AcceptanceSubmission, ContactSubmission, ContestSubmission, VirtualSubmission
+from apps.media_lib.private import is_private_path, signed_private_url
 from apps.news.models import NewsPost
 
 from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
@@ -48,7 +49,11 @@ class StatusFieldMixin(serializers.Serializer):
 def _file_fields(obj, request):
     if not obj.file:
         return None, None
-    url = request.build_absolute_uri(obj.file.file.url) if request else obj.file.file.url
+    if is_private_path(obj.file.file.name):
+        # A visitor's attachment: a signed link that stops working after a few minutes (see media_lib/private.py).
+        url = signed_private_url(obj.file.file.name, request)
+    else:
+        url = request.build_absolute_uri(obj.file.file.url) if request else obj.file.file.url
     return url, (obj.file.title or obj.file.filename)
 
 

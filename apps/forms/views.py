@@ -21,9 +21,9 @@ from .serializers import (
 )
 
 
-# Visitor attachments are stored under the same public /media/ origin as site
-# documents.  Do not accept browser-executable formats (HTML/SVG/JS) there,
-# even if a client lies about its MIME type.  This is intentionally limited to
+# Visitor attachments are stored in the private area (not served from /media/).  Still
+# do not accept browser-executable formats (HTML/SVG/JS), even if a client lies about
+# its MIME type.  This is intentionally limited to
 # the formats a visitor realistically attaches to a reception request.
 MAX_VISITOR_UPLOAD_BYTES = 10 * 1024 * 1024
 VISITOR_UPLOAD_EXTENSIONS = {".pdf", ".jpg", ".jpeg", ".png", ".doc", ".docx", ".xls", ".xlsx"}
@@ -60,6 +60,7 @@ def _save_with_attachment(serializer, upload):
                 # restricted by validate_visitor_upload rather than through Document's pdf/xlsx-only
                 # validator, which is scoped to files the SITE itself publishes.
                 document = Document(title=upload.name)
+                document.is_private_upload = True  # stored outside the public /media/ area
                 document.file.save(_private_upload_name(upload.name), upload, save=False)
                 document.save()
                 instance.file = document
@@ -71,10 +72,9 @@ def _save_with_attachment(serializer, upload):
 
 
 def _private_upload_name(filename: str) -> str:
-    """A visitor's attachment (CV, passport scan, ...) is served from the same
-    public /media/ origin as site documents, so its URL is its only protection.
-    A random directory makes that URL unguessable -- without it the path was just
-    uploads/documents/<year>/<month>/<original filename>, trivially enumerable."""
+    """A visitor's attachment (CV, passport scan, ...) is filed in the private area (see
+    apps/media_lib/private.py: not served from /media/, opened only through short-lived signed links) under a
+    random folder, so even the storage path cannot be guessed."""
     return f"{uuid.uuid4().hex}/{filename}"
 
 
