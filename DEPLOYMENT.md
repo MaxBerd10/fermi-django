@@ -157,7 +157,10 @@ requests, curl doesn't by default.
 
 What visitors attach to the virtual reception and contest forms (passport scans, CVs, ...) is stored under
 `media/uploads/private/<random>/` and is **never** served from `/media/` (`config/urls.py` answers 404 for that
-prefix). Staff open a file through a signed link that the admin API puts in the submission's `file` field; it
+prefix). **nginx serves `/media/` itself** (`location /media/ { alias .../media/; }`), so Django never sees those
+requests: the server block must also carry, *before* that location,
+`location ^~ /media/uploads/private/ { return 404; }`. Check from outside after any nginx change:
+`curl -I https://your-domain.uz/media/uploads/private/<an existing file>` must be 404. Staff open a file through a signed link that the admin API puts in the submission's `file` field; it
 works without a login for 15 minutes and then answers 410 (reload the submission to get a fresh one). See
 `apps/media_lib/private.py`.
 

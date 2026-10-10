@@ -176,3 +176,18 @@ def test_move_command_leaves_a_document_the_site_itself_uses(db, tmp_path):
 
     document.refresh_from_db()
     assert document.file.name == old and "also used by ScheduleFile" in out.getvalue()
+
+
+def test_every_folder_the_move_command_creates_is_handed_to_www_data(tmp_path, monkeypatch):
+    """The first run left `uploads/private` itself root-owned (only the inner folder was handed over), which
+    would have made the site fail on the next upload."""
+    from apps.media_lib.management.commands import move_visitor_uploads as command
+
+    handed = []
+    monkeypatch.setattr(command, "_hand_to_www_data", lambda paths: handed.extend(paths))
+    target = tmp_path / "uploads" / "private" / "abc"
+
+    command._makedirs_owned(str(target))
+
+    assert target.is_dir()
+    assert handed == [str(target), str(tmp_path / "uploads" / "private"), str(tmp_path / "uploads")]

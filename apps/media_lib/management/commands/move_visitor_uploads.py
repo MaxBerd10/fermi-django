@@ -53,6 +53,17 @@ def _hand_to_www_data(paths):
         os.chown(path, uid, gid)
 
 
+def _makedirs_owned(path):
+    """makedirs, then hand EVERY folder it had to create (not just the last one) to www-data: a root-owned
+    `uploads/private` would stop the site from adding new folders under it (a 500 on the next upload)."""
+    created, folder = [], path
+    while folder and not os.path.isdir(folder):
+        created.append(folder)
+        folder = os.path.dirname(folder)
+    os.makedirs(path, exist_ok=True)
+    _hand_to_www_data(created)
+
+
 class Command(BaseCommand):
     help = "Move old visitor attachments into the private (not publicly served) area."
 
@@ -104,9 +115,9 @@ class Command(BaseCommand):
 
     def _move(self, document, old, new):
         source, target = default_storage.path(old), default_storage.path(new)
-        os.makedirs(os.path.dirname(target), exist_ok=True)
+        _makedirs_owned(os.path.dirname(target))
         shutil.move(source, target)
-        _hand_to_www_data([os.path.dirname(target), target])
+        _hand_to_www_data([target])
         document.file.name = new
         document.save(update_fields=["file"])
 
@@ -121,7 +132,7 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.WARNING(f"  skipped #{entry['id']} (changed since)"))
                 continue
             source, target = default_storage.path(entry["new"]), default_storage.path(entry["old"])
-            os.makedirs(os.path.dirname(target), exist_ok=True)
+            _makedirs_owned(os.path.dirname(target))
             shutil.move(source, target)
             _hand_to_www_data([target])
             document.file.name = entry["old"]
