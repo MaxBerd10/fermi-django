@@ -91,6 +91,23 @@ export default function MenuSectionNav({
 }
 
 function MenuLinkItem({ link, active, sectionId }: { link: MenuSectionLink; active: boolean; sectionId: number }) {
+  // an item that points to another site (e.g. a document on lex.uz) opens in a new tab, like in the top menu
+  if (/^https?:\/\//i.test(link.href)) {
+    return (
+      <li>
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cms-sidebar__link menu-sidebar__link"
+          style={{ paddingLeft: `calc(1.25rem + ${link.depth * 0.65}rem)` }}
+        >
+          {normalizeYearLabels(link.title)}
+          <i className="ri-external-link-line ml-1.5 text-[0.85em] opacity-60" aria-hidden="true" />
+        </a>
+      </li>
+    );
+  }
   return (
     <li>
       <Link
