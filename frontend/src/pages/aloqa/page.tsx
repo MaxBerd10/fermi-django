@@ -35,7 +35,10 @@ export default function AloqaPage() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    // Kept before the first await: React clears e.currentTarget once the handler yields, so reading it after
+    // the request threw a TypeError and showed "error" for a message that had in fact been sent.
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     setStatus("loading");
     setError("");
     try {
@@ -47,7 +50,7 @@ export default function AloqaPage() {
         message: String(fd.get("message") || ""),
       });
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setStatus("error");
       setError(err instanceof ApiError ? err.message : t("aloqa.submitError"));
