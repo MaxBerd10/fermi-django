@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib import admin
+from django.utils.html import escape
 from django.utils.safestring import mark_safe
 
 from apps.media_lib.models import Document, Image, Video
@@ -40,8 +41,9 @@ def _recent_media_reference() -> str:
         items = list(qs)
         if not items:
             continue
-        rows = "".join(f"<li>#{o.id} — {name_fn(o)}</li>" for o in items)
-        sections.append(f"<strong>{label}</strong><ul style='margin-top:2px'>{rows}</ul>")
+        # name_fn can return a visitor-supplied file name (Document.title), so it is escaped before mark_safe
+        rows = "".join(f"<li>#{o.id} — {escape(name_fn(o))}</li>" for o in items)
+        sections.append(f"<strong>{escape(label)}</strong><ul style='margin-top:2px'>{rows}</ul>")
     return mark_safe("".join(sections)) if sections else "Hozircha yuklangan media yo'q."
 
 

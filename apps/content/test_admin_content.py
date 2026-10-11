@@ -309,3 +309,18 @@ def test_new_document_markers_only_accept_real_document_files(page):
     html["uz"] = f"<p>Matn</p>{marker_exe}{marker_up}"
     write_blocks_from_html(page, html)
     assert [b.block_type for b in ContentBlock.objects.filter(page=page)] == ["paragraph"]
+
+
+def test_the_recent_media_list_in_the_django_admin_escapes_visitor_supplied_names(db):
+    """Document.title is the file name a visitor uploaded; it is shown inside mark_safe help text."""
+    from apps.content.admin import _recent_media_reference
+    from apps.media_lib.models import Document
+
+    from django.core.files.base import ContentFile
+
+    document = Document(title='<img src=x onerror=alert(1)>.pdf')
+    document.file.save("a.pdf", ContentFile(b"%PDF-1.4 x"), save=True)
+
+    html = str(_recent_media_reference())
+
+    assert "<img" not in html and "&lt;img src=x onerror=alert(1)&gt;.pdf" in html

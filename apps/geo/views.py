@@ -12,6 +12,14 @@ class RegionViewSet(viewsets.ReadOnlyModelViewSet):
     pagination_class = None  # a fixed 14-region list
 
 
+def _as_id(value, name):
+    """A query-string id must be a whole number: anything else is a 400, not the 500 a failed int cast gave."""
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        raise ValidationError({name: f"{name} butun son bo'lishi kerak."})
+
+
 class DistrictListView(ListAPIView):
     """GET /api/v1/districts?regionId=<id> -- always filtered, never a
     bare "every district" listing (matches the old site's own API, which
@@ -25,7 +33,7 @@ class DistrictListView(ListAPIView):
         region_id = self.request.query_params.get("regionId")
         if not region_id:
             raise ValidationError({"regionId": "regionId talab qilinadi."})
-        return District.objects.filter(region_id=region_id)
+        return District.objects.filter(region_id=_as_id(region_id, "regionId"))
 
 
 class QuarterListView(ListAPIView):
@@ -38,7 +46,7 @@ class QuarterListView(ListAPIView):
         district_id = self.request.query_params.get("districtId")
         if not district_id:
             raise ValidationError({"districtId": "districtId talab qilinadi."})
-        return Quarter.objects.filter(district_id=district_id)
+        return Quarter.objects.filter(district_id=_as_id(district_id, "districtId"))
 
 
 class ConnectLeaderViewSet(viewsets.ReadOnlyModelViewSet):
