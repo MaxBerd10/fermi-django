@@ -436,6 +436,12 @@ async function handleOpenAi(request, response) {
 }
 
 async function serveStatic(request, response) {
+  // The site's own pages and assets are read-only: a PUT/DELETE/PATCH/POST here used to get the home page back
+  // with a 200, which a security scan reports as "unnecessary HTTP methods enabled".
+  if (!["GET", "HEAD"].includes(request.method || "GET")) {
+    response.setHeader("Allow", "GET, HEAD");
+    return sendJson(response, 405, { error: "Method not allowed" });
+  }
   const requestUrl = new URL(request.url || "/", "http://localhost");
   const requestedPath = decodeURIComponent(requestUrl.pathname);
   const candidate = resolve(distDir, `.${requestedPath === "/" ? "/index.html" : requestedPath}`);
