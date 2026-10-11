@@ -241,3 +241,8 @@ else:
     }
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "no-reply@fermi.uz")
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
+
+# Visitor sign-up (POST /api/v1/auth/register) is closed unless explicitly switched on: nothing on the public site
+# uses a visitor account, and an open endpoint only collects unverified accounts. Set PUBLIC_REGISTRATION_ENABLED=true
+# in /etc/fermi-django.env to open it again.
+PUBLIC_REGISTRATION_ENABLED = env_bool("PUBLIC_REGISTRATION_ENABLED", False)

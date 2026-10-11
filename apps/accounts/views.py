@@ -89,6 +89,8 @@ class RegisterView(APIView):
     throttle_scope = "auth_register"
 
     def post(self, request):
+        if not settings.PUBLIC_REGISTRATION_ENABLED:
+            return Response({"detail": "Ro'yxatdan o'tish hozircha yopiq."}, status=status.HTTP_403_FORBIDDEN)
         serializer = RegisterSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()

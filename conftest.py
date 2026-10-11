@@ -27,3 +27,10 @@ def _isolated_media_root(settings, tmp_path):
     asserts on the saved filename. Each test gets its own throwaway directory.
     """
     settings.MEDIA_ROOT = tmp_path
+
+
+@pytest.fixture(autouse=True)
+def _public_registration_on_for_tests(settings):
+    """Production keeps sign-up closed (settings.PUBLIC_REGISTRATION_ENABLED); the sign-up tests exercise the flow
+    itself, and test_registration_closed.py covers the closed default."""
+    settings.PUBLIC_REGISTRATION_ENABLED = True
