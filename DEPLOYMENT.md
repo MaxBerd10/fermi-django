@@ -144,7 +144,7 @@ sudo systemctl status fermi-django
 curl -I http://127.0.0.1:8000/api/v1/settings   # direct to gunicorn, bypasses nginx/Node
 curl -I https://your-domain.uz/api/v1/settings  # through the full chain
 curl -I https://your-domain.uz/media/<some-real-uploaded-file-path>
-curl -I https://your-domain.uz/django-admin/
+curl -I https://your-domain.uz/django-admin/   # 404: closed by default (DJANGO_ADMIN_ENABLED)
 sudo journalctl -u fermi-django -n 100 --no-pager
 ```
 

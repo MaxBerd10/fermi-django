@@ -97,6 +97,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "config.middleware.DjangoAdminGateMiddleware",
     # Serves collected static files (admin CSS/JS included) directly from
     # Django -- there's no separate static-file server in front of it, so
     # without this the admin at /django-admin/ would render unstyled.
@@ -246,3 +247,8 @@ FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
 # uses a visitor account, and an open endpoint only collects unverified accounts. Set PUBLIC_REGISTRATION_ENABLED=true
 # in /etc/fermi-django.env to open it again.
 PUBLIC_REGISTRATION_ENABLED = env_bool("PUBLIC_REGISTRATION_ENABLED", False)
+
+# Django's stock admin (/django-admin/) is closed unless switched on: the site is managed through its own admin panel
+# (/admin/), and nobody had signed in to the stock one in the last 30 days (checked 2026-10-11). Set
+# DJANGO_ADMIN_ENABLED=true in /etc/fermi-django.env and restart to open it again.
+DJANGO_ADMIN_ENABLED = env_bool("DJANGO_ADMIN_ENABLED", False)
