@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { adminResource } from "@/api/admin";
 import type { AdminMenuNode } from "../menuTypes";
 import type { MenuNodeInput } from "@/api/adminMenu";
@@ -7,6 +8,7 @@ interface PageOption {
   id: number;
   slug: string;
   title_uz?: string;
+  menu_title?: string | null;
 }
 
 interface Props {
@@ -25,10 +27,18 @@ export default function MenuNodeEditor({ node, parentId, onSave, onClose }: Prop
   const [mode, setMode] = useState<"page" | "other">("other");
 
   useEffect(() => {
-    adminResource<PageOption>("pages")
-      .list({ pageSize: 200 })
-      .then(({ items }) => setPages(items))
-      .catch(() => setPages([]));
+    // The list endpoint caps a page at 200 and there are more pages than that: read them all, or the ones past the
+    // first 200 would be missing from the choice below.
+    (async () => {
+      const resource = adminResource<PageOption>("pages");
+      const all: PageOption[] = [];
+      for (let page = 1; page <= 10; page++) {
+        const { items, meta } = await resource.list({ pageSize: 200, page });
+        all.push(...items);
+        if (!items.length || all.length >= (meta?.total ?? 0)) break;
+      }
+      setPages(all);
+    })().catch(() => setPages([]));
   }, []);
 
   useEffect(() => {
@@ -103,10 +113,24 @@ export default function MenuNodeEditor({ node, parentId, onSave, onClose }: Prop
               >
                 <option value="">Sahifani tanlang…</option>
                 {pages.map((p) => (
-                  <option key={p.id} value={p.slug}>{p.title_uz || p.slug}</option>
+                  <option key={p.id} value={p.slug}>{p.title_uz || p.menu_title || p.slug}</option>
                 ))}
               </select>
-              <p className="mt-1.5 text-xs text-foreground-500">Ro'yxatda sahifa yo'q bo'lsa, avval «Sahifalar» bo'limida uni yarating.</p>
+              {(() => {
+                const chosen = pages.find((p) => (form.url_value ?? "").endsWith(`/${p.slug}`));
+                return chosen ? (
+                  <Link
+                    to={`/admin/pages/${chosen.id}`}
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700"
+                  >
+                    <i className="ri-edit-box-line" /> Sahifa ichini tahrirlash (matn, rasm, PDF) →
+                  </Link>
+                ) : null;
+              })()}
+              <p className="mt-1.5 text-xs text-foreground-500">
+                Bu yerda faqat menyu bandining nomi va u qaysi sahifaga olib borishi o'zgaradi. Sahifaning ichidagi matn, rasm va PDF'ni
+                «Sahifalar» bo'limida (yoki yuqoridagi havola orqali) tahrirlaysiz. Ro'yxatda sahifa yo'q bo'lsa, avval «Sahifalar» bo'limida uni yarating.
+              </p>
             </>
           ) : (
             <>
