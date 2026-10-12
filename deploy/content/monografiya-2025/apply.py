@@ -6,8 +6,9 @@
 #   MODE=apply sudo -E -u www-data .venv/bin/python manage.py shell < deploy/content/monografiya-2025/apply.py
 #   MODE=restore ... (puts the page text back from the backup; the copied files stay, they are harmless)
 #
-# dry (default) only shows; apply backs the page up first and changes it in one transaction; running apply twice
-# changes nothing the second time.
+# dry (default) only shows; apply copies the PDF/cover into media/monografiya/ (overwrites if
+# already there) and, if the snippet is missing, backs the page up and prepends it. Running
+# apply twice recopies the files but leaves the page HTML unchanged the second time.
 import datetime
 import glob
 import json
@@ -76,22 +77,24 @@ if MODE == "restore":
     print("RESTORED from", files[-1])
 else:
     todo = [l for l in langs if MARKER not in block.data[l]["html"]]
-    print("will add the monograph to:", todo or "(already there, nothing to do)")
+    print("will add the monograph to:", todo or "(already there, HTML unchanged)")
     print("files to copy to", DEST_DIR, ":", FILES)
-    if MODE == "apply" and todo:
-        os.makedirs(BACKUP_DIR, exist_ok=True)
-        path = os.path.join(BACKUP_DIR, "page-monografiya-%s.json" % datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
-        with open(path, "w") as fh:
-            json.dump({"id": block.id, "data": block.data}, fh, ensure_ascii=True)
+    if MODE == "apply":
         copy_files()
-        data = json.loads(json.dumps(block.data))
-        for l in todo:
-            data[l]["html"] = SNIPPET + data[l]["html"]
-        with transaction.atomic():
-            block.data = data
-            block.clean()
-            block.save(update_fields=["data"])
-        print("BACKUP:", path)
+        print("COPIED files to", DEST_DIR)
+        if todo:
+            os.makedirs(BACKUP_DIR, exist_ok=True)
+            path = os.path.join(BACKUP_DIR, "page-monografiya-%s.json" % datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+            with open(path, "w") as fh:
+                json.dump({"id": block.id, "data": block.data}, fh, ensure_ascii=True)
+            data = json.loads(json.dumps(block.data))
+            for l in todo:
+                data[l]["html"] = SNIPPET + data[l]["html"]
+            with transaction.atomic():
+                block.data = data
+                block.clean()
+                block.save(update_fields=["data"])
+            print("BACKUP:", path)
         print("DONE. The page shows it within about a minute (API cache): %s/blog/2042/monografiya" % "https://fermi.uz")
     else:
-        print("DRY RUN: nothing was changed. Run again with MODE=apply to change." if MODE != "apply" else "Nothing to change.")
+        print("DRY RUN: nothing was changed. Run again with MODE=apply to copy the files and update the page.")
