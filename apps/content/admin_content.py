@@ -59,11 +59,13 @@ from types import SimpleNamespace
 from urllib.parse import unquote
 
 from django.conf import settings
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db import transaction
 
 from apps.content.legacy_import.html_extract import ExtractionResult, extract
 from apps.content.legacy_import.media import ImageDownloader
 from apps.content.legacy_import.merge import LANGS
+from apps.content import raw_editing
 from apps.content.models import ContentBlock, Page
 from apps.media_lib.models import Document, Image
 
@@ -211,15 +213,20 @@ def _is_protected(block: ContentBlock) -> bool:
     return True
 
 
-def blocks_to_html(page: Page | None, lang: str, request=None, skip_types=()) -> str:
+def blocks_to_html(page: Page | None, lang: str, request=None, skip_types=(), open_raw: bool = False) -> str:
     """Renders one language's worth of a page's blocks back into editable
     HTML -- the inverse of write_blocks_from_html below, for populating the
     rich text editor when an existing news post / page is opened.
 
     `skip_types` omits block types a caller edits through its own control
-    instead (a news post's photo gallery has a dedicated GalleryPicker)."""
+    instead (a news post's photo gallery has a dedicated GalleryPicker).
+
+    `open_raw` opens a legacy page (raw HTML plus PDF cards) for editing instead of showing its HTML as one locked
+    chip; see raw_editing.py. Only the admin's "Sahifalar" form asks for it, and it must ask on the way back too."""
     if page is None:
         return ""
+    if open_raw and not skip_types and raw_editing.is_raw_capable(page):
+        return raw_editing.page_editor_html(page, lang)
 
     def absolute(url: str) -> str:
         return request.build_absolute_uri(url) if request is not None else url
@@ -334,7 +341,7 @@ def _carry_hidden_attributes(block_type: str, old_data: dict, new_data: dict) ->
 
 
 @transaction.atomic
-def write_blocks_from_html(page: Page, html_by_lang: dict[str, str]) -> None:
+def write_blocks_from_html(page: Page, html_by_lang: dict[str, str], open_raw: bool = False) -> None:
     """Replaces `page`'s blocks with ones extracted from html_by_lang (one
     HTML string per uz/ru/en) -- reuses extract() (the legacy importers'
     own, tested HTML parser) but pairs the three languages' blocks
@@ -345,6 +352,13 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str]) -> None:
     changed them -- see the module docstring: preserved-block placeholders
     keep their block (and move with the chip), and unchanged or in-place
     edited text blocks keep their row and hidden attributes."""
+    if open_raw and raw_editing.is_raw_capable(page):
+        raw_editing.write_page_from_html(page, html_by_lang)
+        return
+    if any('data-preserved-block="raw:' in (html_by_lang.get(lang) or "") for lang in LANGS):
+        # The form was opened with the legacy-HTML pieces as chips, but the page no longer has that shape (someone
+        # else edited it meanwhile): saving would delete the page's text, so refuse and let the editor reload.
+        raise DjangoValidationError("Sahifa boshqa joyda o'zgartirilgan. Sahifani qayta yuklab, qaytadan urinib ko'ring.")
     uz_html = _materialize_new_documents(page, html_by_lang.get("uz") or "")
     html_by_lang = {**html_by_lang, "ru": _NEW_DOC_RE.sub("", html_by_lang.get("ru") or ""), "en": _NEW_DOC_RE.sub("", html_by_lang.get("en") or "")}
     uz_segments, placeholder_ids = _split_preserved(uz_html)

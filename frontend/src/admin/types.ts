@@ -36,6 +36,10 @@ export interface AdminPage {
   status: number;
   korish: number;
   meta_key: string | null;
+  /** Menu entry that opens this page (legacy pages have no title of their own). */
+  menu_title?: string | null;
+  /** The page keeps its text as legacy HTML: the editor offers links, alignment and per-language files. */
+  raw_editing?: boolean;
 }
 
 export interface AdminPostcategory {

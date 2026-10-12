@@ -382,12 +382,19 @@ function stripLegacyStyles(root: ParentNode) {
   });
 }
 
+/**
+ * Puts a page's picture into its figure. The picture usually sits in a <p>/<div> (legacy CKEditor markup) that the
+ * figure replaces; a picture saved by the admin editor stands bare at the top level, so it is replaced itself.
+ */
+function wrapImageInFigure(img: Element, figure: HTMLElement) {
+  const container = img.closest("p, div") ?? img;
+  container.replaceWith(figure);
+  figure.appendChild(img);
+}
+
 function normalizeHeroImage(root: ParentNode) {
   const img = root.querySelector("img");
   if (!img) return;
-
-  const container = img.closest("p, div");
-  if (!container) return;
 
   const figure = img.ownerDocument.createElement("figure");
   figure.className = "cms-hero-figure";
@@ -396,8 +403,7 @@ function normalizeHeroImage(root: ParentNode) {
   img.removeAttribute("height");
   img.removeAttribute("width");
 
-  figure.appendChild(img);
-  container.replaceWith(figure);
+  wrapImageInFigure(img, figure);
 }
 
 function buildAboutHeroLayout(root: HTMLElement) {
@@ -422,30 +428,24 @@ function buildAboutHeroLayout(root: HTMLElement) {
 function normalizeStudentTestCover(root: ParentNode) {
   const img = root.querySelector("img");
   if (!img) return;
-  const container = img.closest("p, div");
-  if (!container) return;
 
   const figure = img.ownerDocument.createElement("figure");
   figure.className = "cms-student__cover";
   img.removeAttribute("style");
   img.removeAttribute("height");
   img.removeAttribute("width");
-  figure.appendChild(img);
-  container.replaceWith(figure);
+  wrapImageInFigure(img, figure);
 }
 
 /** A monograph's cover is a portrait picture: shown at book size (not stretched to the article's full width). */
 function normalizeBookCover(root: ParentNode) {
   const img = root.querySelector("img");
   if (!img) return;
-  const container = img.closest("p, div");
-  if (!container) return;
 
   const figure = img.ownerDocument.createElement("figure");
   figure.className = "cms-book-cover";
   img.removeAttribute("style"); // width/height attributes stay: they reserve the space while the picture loads
-  figure.appendChild(img);
-  container.replaceWith(figure);
+  wrapImageInFigure(img, figure);
 }
 
 function unwrapListParagraphs(root: ParentNode) {

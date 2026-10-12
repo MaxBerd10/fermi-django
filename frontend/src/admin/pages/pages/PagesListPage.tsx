@@ -20,7 +20,7 @@ export default function PagesListPage() {
         <input
           value={list.searchInput}
           onChange={(e) => list.setSearchInput(e.target.value)}
-          placeholder="Sarlavha yoki slug bo'yicha qidirish..."
+          placeholder="Sarlavha, menyudagi nom yoki slug bo'yicha qidirish..."
           className="w-full max-w-sm h-10 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
         />
         <button type="submit" className="h-10 px-4 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
@@ -38,9 +38,14 @@ export default function PagesListPage() {
       <DataTable
         columns={[
           { key: "id", label: "ID" },
-          // Pages imported from the old site have no title of their own (it lives on the menu item
-          // that links to them) -- show the slug instead of an empty cell nobody can tell apart.
-          { key: "title_uz", label: "Sarlavha", render: (item) => item.title_uz || <span className="text-foreground-400">{item.slug}</span> },
+          // Pages imported from the old site have no title of their own (it lives on the menu item that links to
+          // them): show that menu name, or the slug when no menu entry points here.
+          {
+            key: "title_uz",
+            label: "Sarlavha",
+            render: (item) =>
+              item.title_uz || item.menu_title || <span className="text-foreground-400">{item.slug}</span>,
+          },
           { key: "slug", label: "Slug" },
           { key: "korish", label: "Ko'rishlar" },
           {

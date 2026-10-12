@@ -11,8 +11,20 @@ from rest_framework.permissions import IsAuthenticated
 
 from apps.content.admin_content import blocks_to_html, write_blocks_from_html
 from apps.content.models import Page
+from apps.content.raw_editing import is_raw_capable
+from apps.menu.models import MenuItem
 
 from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
+
+
+def menu_titles_by_slug() -> dict[str, str]:
+    """slug -> the (Uzbek) label of the menu entry whose link ends in that slug; the first entry wins."""
+    titles: dict[str, str] = {}
+    for url, label in MenuItem.objects.exclude(url="").values_list("url", "label_uz"):
+        slug = url.split("?", 1)[0].split("#", 1)[0].rstrip("/").rsplit("/", 1)[-1]
+        if slug and slug not in titles:
+            titles[slug] = label
+    return titles
 
 
 class AdminPageSerializer(serializers.ModelSerializer):
@@ -26,6 +38,8 @@ class AdminPageSerializer(serializers.ModelSerializer):
     file_en = serializers.SerializerMethodField()
     file_ru = serializers.SerializerMethodField()
     meta_key = serializers.SerializerMethodField()
+    menu_title = serializers.SerializerMethodField()
+    raw_editing = serializers.SerializerMethodField()
     slug = serializers.CharField(required=False, allow_blank=True)
 
     class Meta:
@@ -34,10 +48,11 @@ class AdminPageSerializer(serializers.ModelSerializer):
             "id", "title_uz", "title_ru", "title_en",
             "content_uz", "content_ru", "content_en",
             "slug", "file", "file_en", "file_ru", "date", "status", "korish", "meta_key",
+            "menu_title", "raw_editing",
         ]
 
     def _content(self, obj, lang):
-        return blocks_to_html(obj, lang, request=self.context.get("request"))
+        return blocks_to_html(obj, lang, request=self.context.get("request"), open_raw=True)
 
     def get_content_uz(self, obj):
         return self._content(obj, "uz")
@@ -69,6 +84,13 @@ class AdminPageSerializer(serializers.ModelSerializer):
     def get_meta_key(self, obj):
         return None
 
+    def get_raw_editing(self, obj):
+        return is_raw_capable(obj)
+
+    def get_menu_title(self, obj):
+        # An imported page has no title of its own: it is the label of the menu entry that opens it.
+        return menu_titles_by_slug().get(obj.slug)
+
     def create(self, validated_data):
         return self._save(Page(), validated_data)
 
@@ -88,7 +110,7 @@ class AdminPageSerializer(serializers.ModelSerializer):
             "uz": data.get("content_uz") or "",
             "ru": data.get("content_ru") or "",
             "en": data.get("content_en") or "",
-        })
+        }, open_raw=True)
         return instance
 
 
@@ -106,3 +128,16 @@ class AdminPageViewSet(AdminSearchMixin, viewsets.ModelViewSet):
     serializer_class = AdminPageSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
     pagination_class = AdminPagination
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        term = (self.request.query_params.get("search") or "").strip().lower()
+        if term:
+            # AdminSearchMixin already matched titles and slugs; an imported page is also found by its menu label.
+            by_menu = [slug for slug, label in menu_titles_by_slug().items() if term in label.lower()]
+            if by_menu:
+                matched = Page.objects.filter(
+                    department__isnull=True, faculty__isnull=True, news_post__isnull=True, slug__in=by_menu
+                )
+                queryset = (queryset | matched).distinct().order_by("-updated_at")
+        return queryset

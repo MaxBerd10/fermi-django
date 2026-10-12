@@ -123,6 +123,7 @@ export default function PagesFormPage() {
               value={(form[`content_${lang}` as keyof AdminPage] as string) ?? ""}
               onChange={(v) => set(`content_${lang}` as keyof AdminPage, v as never)}
               allowFiles={lang === "uz"}
+              rawHtml={Boolean(form.raw_editing)}
             />
           </div>
         ))}
