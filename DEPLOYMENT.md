@@ -153,6 +153,19 @@ A 301 on the direct `127.0.0.1:8000` check is expected and correct
 `-H "X-Forwarded-Proto: https"` — nginx supplies that header for real
 requests, curl doesn't by default.
 
+## Editable interface texts ("Sayt matnlari")
+
+Every button, heading, footer line and home-page paragraph (about 1,800 texts per language) can be changed from the admin
+panel under *Sozlamalar -> Sayt matnlari*, in uz/ru/en. The built-in wording (`frontend/src/i18n/local/<lang>/common.ts`)
+stays the default; an edit is a row in `site_settings.SiteText` and a language left blank keeps its default. Deleting the
+row ("Asl matnga qaytarish") restores the default.
+
+How it reaches visitors: Django serves `GET /api/v1/site-texts`; the Node server (`production-server.mjs`) puts that JSON into
+`index.html` as `<script id="site-texts" type="application/json">`, so a page opens with the edited wording and no extra
+request (`src/i18n/index.ts` merges it over the defaults). The Node copy lives 20 s and is dropped by any write through
+the server; if Django is unreachable the page is served with the built-in wording. After deploying the migration
+(`site_settings 0003`) nothing else is needed.
+
 ## Visitor attachments are private
 
 What visitors attach to the virtual reception and contest forms (passport scans, CVs, ...) is stored under

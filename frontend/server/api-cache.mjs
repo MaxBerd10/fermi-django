@@ -22,7 +22,7 @@ const MAX_QUERY_LENGTH = 300;
 const UPSTREAM_TIMEOUT_MS = 15_000;
 
 const CACHEABLE_PATH =
-  /^\/api\/v1\/(?:(?:menu|pages|faculties|departments|leaders|gallery|schedule|documents|video|districts|quarters)(?:\/[^/]+)*|news|settings|admission-results-page)\/?$/;
+  /^\/api\/v1\/(?:(?:menu|pages|faculties|departments|leaders|gallery|schedule|documents|video|districts|quarters)(?:\/[^/]+)*|news|settings|site-texts|admission-results-page)\/?$/;
 
 /** @type {Map<string, {at: number, status: number, headers: [string, string][], body: Buffer}>} */
 const store = new Map();

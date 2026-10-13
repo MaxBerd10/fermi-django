@@ -17,6 +17,7 @@ const GenericListPage = lazy(() => import("./components/GenericListPage"));
 const GenericFormPage = lazy(() => import("./components/GenericFormPage"));
 const SingletonFormPage = lazy(() => import("./components/SingletonFormPage"));
 const MenuTreePage = lazy(() => import("./pages/menu/MenuTreePage"));
+const SiteTextsPage = lazy(() => import("./pages/site-texts/SiteTextsPage"));
 const UserListPage = lazy(() => import("./pages/users/UserListPage"));
 const UserFormPage = lazy(() => import("./pages/users/UserFormPage"));
 
@@ -36,6 +37,7 @@ export default function AdminRoutes() {
           ...ALL_ENTITY_CONFIGS.flatMap((config) => [{ path: config.resource, element: <GenericListPage config={config} /> }, { path: `${config.resource}/new`, element: <GenericFormPage config={config} /> }, { path: `${config.resource}/:id`, element: <GenericFormPage config={config} /> }]),
           ...SINGLETON_CONFIGS.map((config) => ({ path: config.resource, element: <SingletonFormPage config={config} /> })),
           { path: "menu-tree", element: <MenuTreePage /> },
+          { path: "site-texts", element: <SiteTextsPage /> },
           { path: "users", element: <UserListPage /> }, { path: "users/new", element: <UserFormPage /> }, { path: "users/:id", element: <UserFormPage /> },
         ],
       }],

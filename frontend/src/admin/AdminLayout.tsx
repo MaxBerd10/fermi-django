@@ -66,6 +66,7 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
   {
     label: "Sozlamalar",
     items: [
+      { to: "/admin/site-texts", label: "Sayt matnlari", icon: "ri-translate-2" },
       { to: "/admin/networks", label: "Ijtimoiy tarmoqlar", icon: "ri-share-line" },
       { to: "/admin/useful-sites", label: "Foydali saytlar", icon: "ri-links-line" },
       { to: "/admin/counter", label: "Statistika", icon: "ri-bar-chart-line" },

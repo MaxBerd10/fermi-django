@@ -1,5 +1,5 @@
 import { createReadStream, existsSync, readFileSync } from "node:fs";
-import { stat } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import { dirname, extname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -329,10 +329,12 @@ function isWriteMethod(request) {
 async function proxyAndDropCacheOnWrite(request, response) {
   if (!isWriteMethod(request)) return await streamProxy(request, response, fermiApiBaseUrl);
   clearApiCache();
+  dropSiteTextsCache();
   try {
     return await streamProxy(request, response, fermiApiBaseUrl);
   } finally {
     clearApiCache();
+    dropSiteTextsCache();
   }
 }
 
@@ -435,6 +437,57 @@ async function handleOpenAi(request, response) {
   response.end(await upstream.text());
 }
 
+// The admin-edited interface texts (Django: /api/v1/site-texts) are put into index.html as a JSON data block, so a page
+// opens with its edited wording and needs no extra request (see src/i18n/index.ts, which reads the block). The copy
+// is refreshed at most every SITE_TEXTS_TTL_MS; a refresh never delays a page once a copy exists, and a write through
+// this server drops the copy so the editor's change shows on the very next load.
+const SITE_TEXTS_TTL_MS = 20_000;
+const SITE_TEXTS_TIMEOUT_MS = 2_500;
+let siteTextsCopy = { json: null, at: 0 };
+let siteTextsPending = null;
+let siteTextsFailedAt = 0; // Django unreachable: do not make every page wait for the timeout again for a while
+const SITE_TEXTS_RETRY_MS = 10_000;
+
+function dropSiteTextsCache() {
+  siteTextsCopy = { json: null, at: 0 };
+}
+
+function refreshSiteTexts() {
+  if (!siteTextsPending) {
+    siteTextsPending = fetch(new URL("/api/v1/site-texts", fermiApiBaseUrl), { signal: AbortSignal.timeout(SITE_TEXTS_TIMEOUT_MS) })
+      .then(async (upstream) => {
+        if (!upstream.ok) throw new Error(`site-texts ${upstream.status}`);
+        const body = await upstream.text();
+        JSON.parse(body); // never keep something that is not JSON
+        siteTextsCopy = { json: body, at: Date.now() };
+        siteTextsFailedAt = 0;
+      })
+      .catch(() => {
+        siteTextsFailedAt = Date.now(); // Django briefly down: keep the last good copy
+      })
+      .finally(() => {
+        siteTextsPending = null;
+      });
+  }
+  return siteTextsPending;
+}
+
+async function siteTextsJson() {
+  const fresh = siteTextsCopy.json !== null && Date.now() - siteTextsCopy.at < SITE_TEXTS_TTL_MS;
+  if (fresh) return siteTextsCopy.json;
+  if (siteTextsCopy.json === null && siteTextsFailedAt && Date.now() - siteTextsFailedAt < SITE_TEXTS_RETRY_MS) return null;
+  const refreshing = refreshSiteTexts();
+  if (siteTextsCopy.json === null) await refreshing; // first ever load (or right after an edit): wait, bounded by the timeout
+  return siteTextsCopy.json;
+}
+
+/** `<` is escaped so the data can never close its own <script> block, whatever an editor typed. */
+function injectSiteTexts(html, json) {
+  if (json === null || !html.includes("</head>")) return html;
+  const safe = json.replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+  return html.replace("</head>", () => `<script id="site-texts" type="application/json">${safe}</script></head>`);
+}
+
 async function serveStatic(request, response) {
   // The site's own pages and assets are read-only: a PUT/DELETE/PATCH/POST here used to get the home page back
   // with a 200, which a security scan reports as "unnecessary HTTP methods enabled".
@@ -457,6 +510,11 @@ async function serveStatic(request, response) {
   response.statusCode = 200;
   response.setHeader("Content-Type", mimeTypes[extension] || "application/octet-stream");
   response.setHeader("Cache-Control", filePath.includes(`${distDir}/assets/`) ? "public, max-age=31536000, immutable" : "no-cache");
+  if (extension === ".html") {
+    const page = injectSiteTexts(await readFile(filePath, "utf8"), await siteTextsJson());
+    response.setHeader("Content-Length", Buffer.byteLength(page));
+    return response.end(request.method === "HEAD" ? undefined : page);
+  }
   createReadStream(filePath).pipe(response);
 }
 

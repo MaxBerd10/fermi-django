@@ -33,6 +33,7 @@ from .settings_views import (
     AdminSettingViewSet,
     AdminUsefulSiteViewSet,
 )
+from .site_texts_views import AdminSiteTextsView
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
 from .translate_views import TranslateView
 from .users_views import AdminUserViewSet
@@ -77,6 +78,7 @@ router.register("admin/result-files", AdminResultFileViewSet, basename="admin-re
 router.register("admin/results-page", AdminResultsPageViewSet, basename="admin-results-page")
 
 urlpatterns = router.urls + [
+    path("admin/site-texts", AdminSiteTextsView.as_view()),
     path("admin/media/list", MediaListView.as_view()),
     path("admin/media/upload", MediaUploadView.as_view()),
     path("admin/translate", TranslateView.as_view()),

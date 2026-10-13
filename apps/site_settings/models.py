@@ -106,3 +106,24 @@ class HomeBanner(models.Model):
 
     def __str__(self) -> str:
         return self.title_uz or f"Banner #{self.pk}"
+
+
+class SiteText(models.Model):
+    """An admin-edited replacement for one interface text (a button, a heading, a footer line, a home-page paragraph).
+
+    The default wording of every such text lives in the frontend's translation files (src/i18n/local/<lang>/common.ts),
+    keyed like "home.heroTitle". A row here overrides it for the languages whose field is not blank; a blank field
+    means "keep the default for that language". Deleting the row restores the defaults.
+    """
+
+    key = models.CharField(max_length=120, unique=True)
+    text_uz = models.TextField(blank=True)
+    text_ru = models.TextField(blank=True)
+    text_en = models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["key"]
+
+    def __str__(self) -> str:
+        return self.key
