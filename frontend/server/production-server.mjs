@@ -452,9 +452,12 @@ function dropSiteTextsCache() {
   siteTextsCopy = { json: null, at: 0 };
 }
 
-function refreshSiteTexts() {
+function refreshSiteTexts(host) {
   if (!siteTextsPending) {
-    siteTextsPending = fetch(new URL("/api/v1/site-texts", fermiApiBaseUrl), { signal: AbortSignal.timeout(SITE_TEXTS_TIMEOUT_MS) })
+    // Django answers only the public host name and, with SSL redirect on, only requests marked https: say what nginx
+    // says when it proxies a visitor (the same two headers streamProxy forwards), or it answers 400/301.
+    const headers = { "x-forwarded-host": host || "fermi.uz", "x-forwarded-proto": "https" };
+    siteTextsPending = fetch(new URL("/api/v1/site-texts", fermiApiBaseUrl), { headers, signal: AbortSignal.timeout(SITE_TEXTS_TIMEOUT_MS) })
       .then(async (upstream) => {
         if (!upstream.ok) throw new Error(`site-texts ${upstream.status}`);
         const body = await upstream.text();
@@ -472,11 +475,11 @@ function refreshSiteTexts() {
   return siteTextsPending;
 }
 
-async function siteTextsJson() {
+async function siteTextsJson(host) {
   const fresh = siteTextsCopy.json !== null && Date.now() - siteTextsCopy.at < SITE_TEXTS_TTL_MS;
   if (fresh) return siteTextsCopy.json;
   if (siteTextsCopy.json === null && siteTextsFailedAt && Date.now() - siteTextsFailedAt < SITE_TEXTS_RETRY_MS) return null;
-  const refreshing = refreshSiteTexts();
+  const refreshing = refreshSiteTexts(host);
   if (siteTextsCopy.json === null) await refreshing; // first ever load (or right after an edit): wait, bounded by the timeout
   return siteTextsCopy.json;
 }
@@ -511,7 +514,7 @@ async function serveStatic(request, response) {
   response.setHeader("Content-Type", mimeTypes[extension] || "application/octet-stream");
   response.setHeader("Cache-Control", filePath.includes(`${distDir}/assets/`) ? "public, max-age=31536000, immutable" : "no-cache");
   if (extension === ".html") {
-    const page = injectSiteTexts(await readFile(filePath, "utf8"), await siteTextsJson());
+    const page = injectSiteTexts(await readFile(filePath, "utf8"), await siteTextsJson(request.headers.host));
     response.setHeader("Content-Length", Buffer.byteLength(page));
     return response.end(request.method === "HEAD" ? undefined : page);
   }
