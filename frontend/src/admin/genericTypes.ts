@@ -22,8 +22,8 @@ export type BadgeTone = "green" | "gray" | "amber" | "red";
 export interface ListColumn {
   key: string;
   label: string;
-  /** "badge" maps the raw value through `badges`; "datetime" formats an ISO timestamp. */
-  kind?: "badge" | "datetime";
+  /** "badge" maps the raw value through `badges`; "datetime" formats an ISO timestamp; "image" shows a thumbnail. */
+  kind?: "badge" | "datetime" | "image";
   badges?: Record<string, { label: string; tone: BadgeTone }>;
 }
 

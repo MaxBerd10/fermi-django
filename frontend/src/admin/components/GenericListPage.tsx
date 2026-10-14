@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { BadgeTone, EntityConfig, ListColumn } from "../genericTypes";
+import { mediaUrl } from "@/api/admin";
 import { formatDateTime } from "../format";
 import { useAdminList } from "../hooks/useAdminList";
 import DataTable, { type Column } from "./DataTable";
@@ -29,6 +30,22 @@ function toColumn(col: ListColumn): Column<Item> {
   const badges = col.badges ?? (col.key === "status" ? DEFAULT_STATUS_BADGES : undefined);
   if (col.kind === "datetime") {
     return { key: col.key, label: col.label, render: (item) => <span className="whitespace-nowrap">{formatDateTime(item[col.key])}</span> };
+  }
+  if (col.kind === "image") {
+    return {
+      key: col.key,
+      label: col.label,
+      render: (item) => {
+        const src = mediaUrl(item[col.key] as string | null | undefined);
+        return src ? (
+          <img src={src} alt="" loading="lazy" className="h-14 w-20 rounded-md border border-background-200 object-cover" />
+        ) : (
+          <span className="flex h-14 w-20 items-center justify-center rounded-md border border-dashed border-background-300 text-foreground-300">
+            <i className="ri-image-line text-xl" aria-hidden="true" />
+          </span>
+        );
+      },
+    };
   }
   if (badges) {
     return {
@@ -82,7 +99,7 @@ export default function GenericListPage({ config }: { config: EntityConfig }) {
         loading={list.loading}
         showEmpty={!list.error}
         editPathFor={(item) => `/admin/${config.resource}/${item.id}`}
-        onDelete={(item) => list.remove(item, String(item[config.deleteConfirmField] ?? item.id), config.deleteWarning)}
+        onDelete={(item) => list.remove(item, String(item[config.deleteConfirmField] || `#${item.id}`), config.deleteWarning)}
         isUnread={config.inbox ? (item) => Number(item.status) === 1 : undefined}
         emptyText={config.inbox ? "Hali murojaat kelmagan." : undefined}
       />

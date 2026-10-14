@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MedicalAtmosphere from "./MedicalAtmosphere";
 import { MenuProvider } from "../../context/MenuContext";
+import { getAccessToken } from "../../api/client";
 import { whenPageSettled } from "../../lib/whenPageSettled";
 
 // The chat widget pulls in the AI client and the ~5 KB knowledge base, none of
@@ -11,6 +12,10 @@ import { whenPageSettled } from "../../lib/whenPageSettled";
 // page is interactive; the only visible effect is the floating button appearing
 // a beat later.
 const AiChatWidget = lazy(() => import("./AiChatWidget"));
+
+// The editor's pencil for a signed-in administrator: its own chunk, fetched only when a login token exists, so a
+// plain visitor downloads nothing extra.
+const AdminEditBar = lazy(() => import("./AdminEditBar"));
 
 /** true once the page has finished loading and the browser has a spare moment. */
 function useAfterPageSettled() {
@@ -21,6 +26,7 @@ function useAfterPageSettled() {
 
 export default function Layout() {
   const widgetReady = useAfterPageSettled();
+  const [hasToken] = useState(() => Boolean(getAccessToken()));
   return (
     <MenuProvider>
       <div className="relative min-h-screen text-foreground-900 flex flex-col bg-transparent">
@@ -44,6 +50,7 @@ export default function Layout() {
         {widgetReady && (
           <Suspense fallback={null}>
             <AiChatWidget />
+            {hasToken && <AdminEditBar />}
           </Suspense>
         )}
       </div>

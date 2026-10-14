@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { loadMessages } from "@/i18n/local/index";
 import { listSiteTexts, saveSiteText, type SiteTextRow } from "@/api/adminSiteTexts";
 import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
@@ -80,7 +80,9 @@ export default function SiteTextsPage() {
   const [defaults, setDefaults] = useState<Record<Lang, Record<string, string>> | null>(null);
   const [overrides, setOverrides] = useState<Record<string, SiteTextRow>>({});
   const [loadError, setLoadError] = useState("");
-  const [query, setQuery] = useState("");
+  // /admin/site-texts?q=hero opens the page already filtered (links from the public-site editor bar)
+  const [params] = useSearchParams();
+  const [query, setQuery] = useState(params.get("q") ?? "");
   const [section, setSection] = useState("");
   const [onlyEdited, setOnlyEdited] = useState(false);
   const [limit, setLimit] = useState(PAGE_STEP);

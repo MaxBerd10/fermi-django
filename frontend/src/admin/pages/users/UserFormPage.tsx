@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import FormActionBar from "@/admin/components/FormActionBar";
+import PageHeader from "@/admin/components/PageHeader";
+import { useToast } from "@/admin/components/Toast";
+import { nowLabel } from "@/admin/components/useUnsavedGuard";
 import { getUser, createUser, updateUser, type AdminUserInput } from "@/api/adminUsers";
 import { useAdminAuth } from "@/admin/AdminAuthContext";
 import { ApiError } from "@/types/api";
@@ -17,7 +21,8 @@ export default function UserFormPage() {
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
-  const [saved, setSaved] = useState(false);
+  const toast = useToast();
+  const [savedAt, setSavedAt] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
@@ -38,26 +43,30 @@ export default function UserFormPage() {
     e.preventDefault();
     setSaving(true);
     setError("");
-    setSaved(false);
     setFieldErrors({});
     try {
       const payload = { ...form };
       if (password) payload.password = password;
       if (isNew) {
         const created = await createUser(payload);
+        toast.success("Foydalanuvchi qo'shildi.");
         navigate(`/admin/users/${created.id}`, { replace: true });
       } else {
         await updateUser(Number(id), payload);
         setPassword("");
-        setSaved(true);
+        setSavedAt(nowLabel());
+        toast.success("Saqlandi.");
       }
     } catch (err) {
+      let message: string;
       if (err instanceof ApiError && err.status === 400) {
-        setError(err.message);
+        message = err.message;
         setFieldErrors(err.fields ?? {});
       } else {
-        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
+        message = adminErrorMessage(err, "Saqlashda xatolik yuz berdi.");
       }
+      setError(message);
+      toast.error(message);
     } finally {
       setSaving(false);
     }
@@ -72,16 +81,14 @@ export default function UserFormPage() {
   }
 
   return (
-    <div className="max-w-2xl">
-      <h1 className="font-heading text-2xl font-bold text-foreground-950 mb-6">
-        {isNew ? "Yangi foydalanuvchi" : "Foydalanuvchini tahrirlash"}
-      </h1>
+    <div className="mx-auto max-w-2xl">
+      <PageHeader back={{ to: "/admin/users", label: "Foydalanuvchilar" }} title={isNew ? "Yangi foydalanuvchi" : "Foydalanuvchini tahrirlash"} />
 
-      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
-      {saved && <div role="status" className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
-      {isSelf && <div className="mb-4 p-3 rounded-md bg-primary-50 border border-primary-200 text-sm text-primary-800">Bu — sizning o'z hisobingiz.</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
+      {isSelf && <div className="mb-4 p-3 rounded-lg bg-primary-50 border border-primary-200 text-sm text-primary-800">Bu — sizning o'z hisobingiz.</div>}
 
-      <form onSubmit={onSubmit} className="space-y-4 bg-background-50 border border-background-200 rounded-lg p-5">
+      <form onSubmit={onSubmit}>
+        <div className="space-y-4 rounded-xl border border-background-200 bg-background-50 p-4 sm:p-5">
         <div>
           <label className="block text-sm font-medium text-foreground-700 mb-1.5">Login *</label>
           <input
@@ -143,18 +150,15 @@ export default function UserFormPage() {
               <option value="user">Oddiy foydalanuvchi</option>
               <option value="admin">Administrator</option>
             </select>
-            {isSelf && <p className="mt-1 text-xs text-foreground-400">O'z rolingizni bu yerdan o'zgartira olmaysiz.</p>}
+            {isSelf ? (
+              <p className="mt-1 text-xs text-foreground-400">O'z rolingizni bu yerdan o'zgartira olmaysiz.</p>
+            ) : (
+              <p className="mt-1 text-xs text-foreground-500">Administrator saytning hamma joyini o'zgartira oladi. Oddiy foydalanuvchi admin panelga kira olmaydi.</p>
+            )}
           </div>
         </div>
-
-        <div className="flex items-center gap-3 pt-2">
-          <button type="submit" disabled={saving} className="h-11 px-6 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60">
-            {saving ? "Saqlanmoqda..." : "Saqlash"}
-          </button>
-          <button type="button" onClick={() => navigate("/admin/users")} className="h-11 px-6 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
-            Bekor qilish
-          </button>
         </div>
+        <FormActionBar backTo="/admin/users" saving={saving} dirty={false} savedAt={savedAt} />
       </form>
     </div>
   );

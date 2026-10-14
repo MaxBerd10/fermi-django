@@ -127,7 +127,7 @@ export default function PagesFormPage() {
     <div className="mx-auto max-w-4xl">
       <PageHeader
         back={{ to: "/admin/pages", label: "Sahifalar" }}
-        title={isNew ? "Yangi sahifa" : "Sahifani tahrirlash"}
+        title={isNew ? "Yangi sahifa" : form.title_uz || form.menu_title || "Sahifani tahrirlash"}
         subtitle={!isNew && form.slug ? <>Manzil: <code className="rounded bg-background-200 px-1.5 py-0.5 text-xs">{form.slug}</code></> : undefined}
       />
 
@@ -163,6 +163,9 @@ export default function PagesFormPage() {
               onChange={(e) => set(titleKey, e.target.value as never)}
               className="w-full h-11 px-4 rounded-lg border border-background-300 bg-background-50 text-sm font-medium focus:outline-none focus:border-primary-500"
             />
+            {!form.title_uz && form.menu_title && lang === "uz" && (
+              <p className="mt-1 text-xs text-foreground-500">Bu sahifaning nomi menyudan olinadi: «{form.menu_title}». Shu yerda yozsangiz, o'sha nom ishlatiladi.</p>
+            )}
             {fieldErrors[`title_${lang}`] && <p className="mt-1 text-xs text-red-600">{fieldErrors[`title_${lang}`][0]}</p>}
           </div>
 

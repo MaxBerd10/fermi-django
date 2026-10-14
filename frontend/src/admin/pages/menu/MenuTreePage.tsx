@@ -4,6 +4,8 @@ import type { AdminMenuNode } from "@/admin/menuTypes";
 import type { MenuNodeInput, MovePosition } from "@/api/adminMenu";
 import MenuTreeNode from "@/admin/components/MenuTreeNode";
 import MenuNodeEditor from "@/admin/components/MenuNodeEditor";
+import PageHeader from "@/admin/components/PageHeader";
+import { useToast } from "@/admin/components/Toast";
 
 function findNode(nodes: AdminMenuNode[], id: number): AdminMenuNode | null {
   for (const n of nodes) {
@@ -35,6 +37,7 @@ export default function MenuTreePage() {
   // but the ref removes any dependency on that timing assumption entirely.
   const draggingIdRef = useRef<number | null>(null);
   const [error, setError] = useState("");
+  const toast = useToast();
 
   async function load() {
     setLoading(true);
@@ -96,6 +99,7 @@ export default function MenuTreePage() {
     if (!selectedNode) return;
     await updateMenuNode(selectedNode.id, input);
     await load();
+    toast.success("Menyu saqlandi.");
   }
 
   async function onDrop(info: { nodeId: number; position: MovePosition }) {
@@ -113,21 +117,21 @@ export default function MenuTreePage() {
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="font-heading text-2xl font-bold text-foreground-950">Menyu daraxti</h1>
-          <p className="text-sm text-foreground-500 mt-1">Elementlarni sudrab tartibini o'zgartiring: yuqori/pastki chetiga tashlansa — yonma-yon, o'rtasiga tashlansa — ichiga joylashadi.</p>
-        </div>
-        <button onClick={onAddRoot} className="h-10 px-4 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold flex items-center gap-2 cursor-pointer shrink-0">
-          <i className="ri-add-line" /> Yangi bo'lim
-        </button>
-      </div>
+    <div className="mx-auto max-w-6xl">
+      <PageHeader
+        title="Menyu daraxti"
+        subtitle="Saytning yuqori menyusi. Elementlarni sudrab tartibini o'zgartiring: yuqori/pastki chetiga tashlansa — yonma-yon, o'rtasiga tashlansa — ichiga joylashadi."
+        actions={
+          <button onClick={onAddRoot} className="flex h-10 cursor-pointer items-center gap-2 rounded-lg bg-primary-500 px-4 text-sm font-semibold text-background-50 hover:bg-primary-600">
+            <i className="ri-add-line" aria-hidden="true" /> Yangi bo'lim
+          </button>
+        }
+      />
 
       {error && <div className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-background-50 border border-background-200 rounded-lg p-3">
+        <div className="lg:col-span-2 rounded-xl border border-background-200 bg-background-50 p-3">
           {loading ? (
             <div className="py-16 flex justify-center">
               <i className="ri-loader-4-line w-8 h-8 flex items-center justify-center animate-spin text-primary-500 text-3xl" />
@@ -157,11 +161,11 @@ export default function MenuTreePage() {
           )}
         </div>
 
-        <div>
+        <div className="lg:sticky lg:top-20 lg:self-start">
           {selectedNode ? (
             <MenuNodeEditor node={selectedNode} parentId={findParentId(tree, selectedNode.id)} onSave={onSave} onClose={() => setSelectedId(null)} />
           ) : (
-            <div className="bg-background-50 border border-background-200 rounded-lg p-5 text-sm text-foreground-500 text-center">
+            <div className="rounded-xl border border-dashed border-background-300 bg-background-50 p-6 text-center text-sm text-foreground-500">
               Tahrirlash uchun chapdan biror elementni tanlang.
             </div>
           )}

@@ -7,7 +7,7 @@ from .admission_results_views import (
     AdminResultsPageViewSet,
 )
 from .banner_views import AdminBannerViewSet
-from .dashboard_views import AdminDashboardView
+from .dashboard_views import AdminDashboardView, AdminLocateView
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
 from .home_views import (
     AdminHomeFactViewSet,
@@ -92,6 +92,7 @@ router.register("admin/results-page", AdminResultsPageViewSet, basename="admin-r
 
 urlpatterns = router.urls + [
     path("admin/dashboard", AdminDashboardView.as_view()),
+    path("admin/locate", AdminLocateView.as_view()),
     path("admin/site-texts", AdminSiteTextsView.as_view()),
     path("admin/media/list", MediaListView.as_view()),
     path("admin/media/upload", MediaUploadView.as_view()),

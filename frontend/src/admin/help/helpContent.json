@@ -36,8 +36,91 @@
       ]
     },
     {
+      "id": "qayerda",
+      "title": "2. Saytda nimani qayerdan oʻzgartiraman?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Eng oson yoʻl: admin sifatida kirib turgan boʻlsangiz, saytning oʻzida pastki chapda «Tahrirlash» tugmasi turadi. Oʻsha sahifaga kirib, tugmani bosing — shu sahifaning muharriri ochiladi. Quyida hammasi jadval koʻrinishida."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Saytda koʻrgan narsangiz",
+            "Admin panelda qayerda"
+          ],
+          "rows": [
+            [
+              "Yangilik (matn, rasm, sana)",
+              "Yangiliklar"
+            ],
+            [
+              "Oddiy sahifa (Institut haqida, Qabul nizomi, PDF hujjatli sahifalar)",
+              "Sahifalar (yoki saytda «Tahrirlash» tugmasi)"
+            ],
+            [
+              "Yuqoridagi menyu, ichki menyular",
+              "Sayt tuzilmasi → Menyu daraxti"
+            ],
+            [
+              "Bosh sahifa: hamkorlar, loyihalar, talabalar fikri, raqamlar, «Nega biz»",
+              "Bosh sahifa bloklari"
+            ],
+            [
+              "Bosh sahifa: katta sarlavha, tugma va izoh matnlari; istalgan tugma yoki yozuv",
+              "Sozlamalar → Sayt matnlari (qidirib toping)"
+            ],
+            [
+              "Talabalar soni (katta raqam)",
+              "Sozlamalar → Sayt hisoblagichi"
+            ],
+            [
+              "Telefon, email, manzil, ish vaqti",
+              "Sozlamalar → Umumiy sozlamalar"
+            ],
+            [
+              "Logotip, ijtimoiy tarmoqlar, foydali saytlar",
+              "Sozlamalar"
+            ],
+            [
+              "Fakultetlar, kafedralar, rahbariyat",
+              "Sayt tuzilmasi"
+            ],
+            [
+              "Foto va video galereya",
+              "Kundalik ishlar → Foto galereya / Video"
+            ],
+            [
+              "Qabul natijalari (PDF fayllar)",
+              "Qabul natijalari"
+            ],
+            [
+              "Hujjatlar, kurslar, dars jadvali",
+              "Hujjatlar va oʻquv"
+            ],
+            [
+              "Foydalanuvchilar yuborgan xabar va arizalar",
+              "Murojaatlar"
+            ],
+            [
+              "Bosh sahifadagi 6 ta tezkor tugma havolasi, «Yoʻnalish tanlash» testi",
+              "Hozircha faqat dasturchi orqali (yozuvlari esa Sayt matnlaridan oʻzgaradi)"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Topolmayapsizmi?",
+          "items": [
+            "Admin panelning yuqorisidagi qidiruv oynasiga soʻz yozing yoki Ctrl+K bosing: masalan «rasm», «parol», «telefon».",
+            "Saytdagi biror yozuvni oʻzgartirmoqchi boʻlsangiz, «Sayt matnlari» da oʻsha yozuvning bir qismini qidiruvga yozing."
+          ]
+        }
+      ]
+    },
+    {
       "id": "qoidalar",
-      "title": "2. Eng muhim qoidalar",
+      "title": "3. Eng muhim qoidalar",
       "blocks": [
         {
           "type": "warn",
@@ -55,7 +138,7 @@
     },
     {
       "id": "yangilik",
-      "title": "3. Yangilik qoʻshish va oʻzgartirish",
+      "title": "4. Yangilik qoʻshish va oʻzgartirish",
       "blocks": [
         {
           "type": "steps",
@@ -87,7 +170,7 @@
     },
     {
       "id": "matn",
-      "title": "4. Matn bilan ishlash: tugmalar nima qiladi",
+      "title": "5. Matn bilan ishlash: tugmalar nima qiladi",
       "blocks": [
         {
           "type": "table",
@@ -139,7 +222,7 @@
     },
     {
       "id": "fayl",
-      "title": "5. PDF, Word, Excel fayl qoʻshish",
+      "title": "6. PDF, Word, Excel fayl qoʻshish",
       "blocks": [
         {
           "type": "steps",
@@ -164,7 +247,7 @@
     },
     {
       "id": "sahifa",
-      "title": "6. Sahifalar va menyu",
+      "title": "7. Sahifalar va menyu",
       "blocks": [
         {
           "type": "p",
@@ -192,7 +275,7 @@
     },
     {
       "id": "bosh",
-      "title": "7. Bosh sahifa bloklari va sayt matnlari",
+      "title": "8. Bosh sahifa bloklari va sayt matnlari",
       "blocks": [
         {
           "type": "p",
@@ -261,7 +344,7 @@
     },
     {
       "id": "tuzilma",
-      "title": "8. Fakultet, kafedra va xodimlar",
+      "title": "9. Fakultet, kafedra va xodimlar",
       "blocks": [
         {
           "type": "p",
@@ -288,7 +371,7 @@
     },
     {
       "id": "galereya",
-      "title": "9. Foto galereya, video, hujjatlar",
+      "title": "10. Foto galereya, video, hujjatlar",
       "blocks": [
         {
           "type": "p",
@@ -309,7 +392,7 @@
     },
     {
       "id": "murojaat",
-      "title": "10. Murojaatlar va arizalar",
+      "title": "11. Murojaatlar va arizalar",
       "blocks": [
         {
           "type": "p",
@@ -337,7 +420,7 @@
     },
     {
       "id": "sozlamalar",
-      "title": "11. Sozlamalar",
+      "title": "12. Sozlamalar",
       "blocks": [
         {
           "type": "table",
@@ -372,7 +455,7 @@
     },
     {
       "id": "xatolar",
-      "title": "12. Xato chiqsa nima qilish kerak",
+      "title": "13. Xato chiqsa nima qilish kerak",
       "blocks": [
         {
           "type": "table",

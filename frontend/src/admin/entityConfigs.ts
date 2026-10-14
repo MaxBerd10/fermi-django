@@ -71,7 +71,8 @@ export const documentsitemConfig: EntityConfig = {
 export const imgConfig: EntityConfig = {
   resource: "gallery-images",
   title: "Foto galereya",
-  listColumns: [{ key: "id", label: "ID" }, { key: "title_uz", label: "Nomi" }],
+  addLabel: "Rasm qo'shish",
+  listColumns: [{ key: "img", label: "Rasm", kind: "image" }, { key: "title_uz", label: "Izoh (ixtiyoriy)" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "media", key: "img", label: "Rasm", required: true },
@@ -221,7 +222,7 @@ export const homePartnersConfig: EntityConfig = {
 export const homeProjectsConfig: EntityConfig = {
   resource: "home-projects",
   title: "Bosh sahifa — Bizning loyihalar",
-  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
+  listColumns: [{ key: "img", label: "Rasm", kind: "image" }, { key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "title_uz",
   fields: [
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
