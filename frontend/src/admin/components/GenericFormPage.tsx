@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { adminResource } from "@/api/admin";
-import { fieldKey, type EntityConfig, type FieldSpec } from "../genericTypes";
-import GenericField from "./GenericField";
+import type { EntityConfig } from "../genericTypes";
+import EntityFormFields from "./EntityFormFields";
+import FormActionBar from "./FormActionBar";
+import PageHeader from "./PageHeader";
+import { useToast } from "./Toast";
+import { nowLabel, useUnsavedGuard } from "./useUnsavedGuard";
 import { ApiError } from "@/types/api";
 import { adminErrorMessage } from "../hooks/useAdminList";
 
 type Values = Record<string, unknown>;
-
-/** Validation messages for a field -- a lang-* field is posted as <base>_uz/_ru/_en, so its errors live under those keys. */
-function errorsFor(field: FieldSpec, fieldErrors: Record<string, string[]>): string[] {
-  if ("base" in field) {
-    return (["uz", "ru", "en"] as const).flatMap((lang) => fieldErrors[`${field.base}_${lang}`] ?? []);
-  }
-  return fieldErrors[fieldKey(field)] ?? [];
-}
 
 export default function GenericFormPage({ config }: { config: EntityConfig }) {
   const { id } = useParams();
@@ -23,12 +19,17 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
   const location = useLocation();
   const api = adminResource<Values & { id: number }>(config.resource);
 
+  const toast = useToast();
   const [values, setValues] = useState<Values>({});
+  const [initial, setInitial] = useState("{}");
+  const [savedAt, setSavedAt] = useState<string | null>(null);
+  const dirty = JSON.stringify(values) !== initial;
+  useUnsavedGuard(dirty);
   const [loading, setLoading] = useState(!isNew);
   const [loadError, setLoadError] = useState("");
   const [saving, setSaving] = useState(false);
-  // Arriving from "create" navigates here with state.saved so the confirmation survives the redirect.
-  const [saved, setSaved] = useState(Boolean((location.state as { saved?: boolean } | null)?.saved));
+  // Arriving from "create" navigates here with state.saved: the record was just created.
+  const justCreated = Boolean((location.state as { saved?: boolean } | null)?.saved);
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
@@ -36,6 +37,7 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
     setLoadError("");
     if (isNew) {
       setValues({});
+      setInitial("{}");
       setLoading(false);
       return;
     }
@@ -44,7 +46,10 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
     api
       .get(Number(id))
       .then((data) => {
-        if (!cancelled) setValues(data);
+        if (!cancelled) {
+          setValues(data);
+          setInitial(JSON.stringify(data));
+        }
       })
       .catch((err) => {
         if (!cancelled) setLoadError(adminErrorMessage(err, "Yozuvni yuklab bo'lmadi."));
@@ -60,14 +65,12 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
 
   function onChange(key: string, value: unknown) {
     setValues((v) => ({ ...v, [key]: value }));
-    setSaved(false);
   }
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSaving(true);
     setError("");
-    setSaved(false);
     setFieldErrors({});
     // A file/picture/select cannot use the browser's own "required" check -- say what is missing before the round trip.
     const missing: Record<string, string[]> = {};
@@ -82,26 +85,34 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
     if (Object.keys(missing).length > 0) {
       setFieldErrors(missing);
       setError("Majburiy maydonlar to'ldirilmagan. Qizil yozuvli joylarni tekshiring.");
+      toast.error("Majburiy maydonlar to'ldirilmagan.");
       setSaving(false);
       return;
     }
     try {
       if (isNew) {
         const created = await api.create(values);
+        toast.success("Yaratildi.");
+        setInitial(JSON.stringify(created));
         navigate(`/admin/${config.resource}/${created.id}`, { replace: true, state: { saved: true } });
       } else {
         const updated = await api.update(Number(id), values);
         // The server may normalise what was typed (trimmed text, derived fields) -- show what was really stored.
         setValues(updated);
-        setSaved(true);
+        setInitial(JSON.stringify(updated));
+        setSavedAt(nowLabel());
+        toast.success("Saqlandi.");
       }
     } catch (err) {
+      let message: string;
       if (err instanceof ApiError && err.status === 400) {
-        setError(err.message);
+        message = err.message;
         setFieldErrors(err.fields ?? {});
       } else {
-        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
+        message = adminErrorMessage(err, "Saqlashda xatolik yuz berdi.");
       }
+      setError(message);
+      toast.error(message);
     } finally {
       setSaving(false);
     }
@@ -118,42 +129,24 @@ export default function GenericFormPage({ config }: { config: EntityConfig }) {
   if (loadError) {
     return (
       <div className="max-w-4xl">
-        <div role="alert" className="mb-4 p-4 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{loadError}</div>
+        <div role="alert" className="mb-4 p-4 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{loadError}</div>
         <Link to={`/admin/${config.resource}`} className="text-sm text-primary-600 underline">← Ro'yxatga qaytish</Link>
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl">
-      <h1 className="font-heading text-2xl font-bold text-foreground-950 mb-6">
-        {isNew ? `Yangi: ${config.title}` : `Tahrirlash: ${config.title}`}
-      </h1>
+    <div className="mx-auto max-w-4xl">
+      <PageHeader
+        back={{ to: `/admin/${config.resource}`, label: config.title }}
+        title={isNew ? (config.addLabel ?? "Yangi yozuv") : "Tahrirlash"}
+      />
 
-      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
-      {saved && <div role="status" className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
 
-      <form onSubmit={onSubmit} className="space-y-6">
-        <div className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
-          {config.fields.map((field) => {
-            const messages = errorsFor(field, fieldErrors);
-            return (
-              <div key={fieldKey(field)}>
-                <GenericField field={field} values={values} onChange={onChange} />
-                {messages.length > 0 && <p className="mt-1 text-xs text-accent-600">{messages[0]}</p>}
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="flex items-center gap-3">
-          <button type="submit" disabled={saving} className="h-11 px-6 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60">
-            {saving ? "Saqlanmoqda..." : "Saqlash"}
-          </button>
-          <button type="button" onClick={() => navigate(`/admin/${config.resource}`)} className="h-11 px-6 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
-            Orqaga
-          </button>
-        </div>
+      <form onSubmit={onSubmit}>
+        <EntityFormFields config={config} values={values} onChange={onChange} fieldErrors={fieldErrors} />
+        <FormActionBar backTo={`/admin/${config.resource}`} saving={saving} dirty={dirty} savedAt={savedAt ?? (justCreated ? nowLabel() : null)} />
       </form>
     </div>
   );

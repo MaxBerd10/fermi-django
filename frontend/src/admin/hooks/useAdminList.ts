@@ -61,6 +61,17 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
     load();
   }, [load]);
 
+  // Search as you type: a moment after the last key the list filters itself (Enter still searches at once).
+  useEffect(() => {
+    const term = searchInput.trim();
+    if (term === search) return;
+    const timer = window.setTimeout(() => {
+      setPage(1);
+      setSearch(term);
+    }, 350);
+    return () => window.clearTimeout(timer);
+  }, [searchInput, search]);
+
   const submitSearch = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();

@@ -124,7 +124,7 @@ export default function MenuTreePage() {
         </button>
       </div>
 
-      {error && <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {error && <div className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 bg-background-50 border border-background-200 rounded-lg p-3">

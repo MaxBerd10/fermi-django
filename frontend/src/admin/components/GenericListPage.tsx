@@ -3,6 +3,8 @@ import type { BadgeTone, EntityConfig, ListColumn } from "../genericTypes";
 import { formatDateTime } from "../format";
 import { useAdminList } from "../hooks/useAdminList";
 import DataTable, { type Column } from "./DataTable";
+import ListToolbar from "./ListToolbar";
+import PageHeader from "./PageHeader";
 import Pagination from "./Pagination";
 
 interface Item {
@@ -14,7 +16,7 @@ const TONES: Record<BadgeTone, string> = {
   green: "bg-green-50 text-green-700 border-green-200",
   gray: "bg-background-100 text-foreground-600 border-background-300",
   amber: "bg-amber-50 text-amber-800 border-amber-200",
-  red: "bg-accent-50 text-accent-700 border-accent-200",
+  red: "bg-red-50 text-red-700 border-red-200",
 };
 
 // Default meaning of a bare `status` column (see entityConfigs.ts STATUS_OPTIONS).
@@ -26,7 +28,7 @@ const DEFAULT_STATUS_BADGES: NonNullable<ListColumn["badges"]> = {
 function toColumn(col: ListColumn): Column<Item> {
   const badges = col.badges ?? (col.key === "status" ? DEFAULT_STATUS_BADGES : undefined);
   if (col.kind === "datetime") {
-    return { key: col.key, label: col.label, render: (item) => formatDateTime(item[col.key]) };
+    return { key: col.key, label: col.label, render: (item) => <span className="whitespace-nowrap">{formatDateTime(item[col.key])}</span> };
   }
   if (badges) {
     return {
@@ -36,7 +38,7 @@ function toColumn(col: ListColumn): Column<Item> {
         const badge = badges[String(item[col.key])];
         if (!badge) return String(item[col.key] ?? "");
         return (
-          <span className={`inline-block px-2 py-0.5 rounded-full border text-xs font-medium ${TONES[badge.tone]}`}>
+          <span className={`inline-block whitespace-nowrap px-2 py-0.5 rounded-full border text-xs font-medium ${TONES[badge.tone]}`}>
             {badge.label}
           </span>
         );
@@ -50,33 +52,25 @@ export default function GenericListPage({ config }: { config: EntityConfig }) {
   const list = useAdminList<Item>(config.resource);
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="font-heading text-2xl font-bold text-foreground-950">{config.title}</h1>
-        {!config.noCreate && (
-          <Link
-            to={`/admin/${config.resource}/new`}
-            className="h-10 px-4 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold flex items-center gap-2 cursor-pointer"
-          >
-            <i className="ri-add-line" /> {config.addLabel ?? "Yangi qo'shish"}
-          </Link>
-        )}
-      </div>
+    <div className="mx-auto max-w-6xl">
+      <PageHeader
+        title={config.title}
+        actions={
+          !config.noCreate && (
+            <Link
+              to={`/admin/${config.resource}/new`}
+              className="flex h-10 cursor-pointer items-center gap-2 rounded-lg bg-primary-500 px-4 text-sm font-semibold text-background-50 hover:bg-primary-600"
+            >
+              <i className="ri-add-line" aria-hidden="true" /> {config.addLabel ?? "Yangi qo'shish"}
+            </Link>
+          )
+        }
+      />
 
-      <form onSubmit={list.submitSearch} className="mb-4 flex gap-2">
-        <input
-          value={list.searchInput}
-          onChange={(e) => list.setSearchInput(e.target.value)}
-          placeholder="Qidirish..."
-          className="w-full max-w-sm h-10 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
-        />
-        <button type="submit" className="h-10 px-4 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
-          Qidirish
-        </button>
-      </form>
+      <ListToolbar value={list.searchInput} onChange={list.setSearchInput} onSubmit={list.submitSearch} total={list.error ? undefined : list.total} loading={list.loading} />
 
       {list.error && (
-        <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800 flex items-center justify-between gap-3">
+        <div role="alert" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800 flex items-center justify-between gap-3">
           <span>{list.error}</span>
           <button type="button" onClick={list.reload} className="shrink-0 underline cursor-pointer">Qayta urinish</button>
         </div>
@@ -89,6 +83,8 @@ export default function GenericListPage({ config }: { config: EntityConfig }) {
         showEmpty={!list.error}
         editPathFor={(item) => `/admin/${config.resource}/${item.id}`}
         onDelete={(item) => list.remove(item, String(item[config.deleteConfirmField] ?? item.id), config.deleteWarning)}
+        isUnread={config.inbox ? (item) => Number(item.status) === 1 : undefined}
+        emptyText={config.inbox ? "Hali murojaat kelmagan." : undefined}
       />
       <Pagination page={list.page} pageSize={list.pageSize} total={list.total} onChange={list.setPage} />
     </div>

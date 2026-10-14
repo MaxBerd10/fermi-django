@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
         <p className="text-sm text-foreground-500 mb-6">FJSTI boshqaruv tizimiga kirish</p>
 
         {status === "error" && (
-          <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>
+          <div className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>
         )}
 
         <form onSubmit={onSubmit} className="space-y-4">

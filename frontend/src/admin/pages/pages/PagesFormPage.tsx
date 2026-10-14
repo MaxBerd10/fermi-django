@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { adminResource } from "@/api/admin";
 import type { AdminPage } from "@/admin/types";
+import FormActionBar from "@/admin/components/FormActionBar";
+import LangTabs, { type Lang } from "@/admin/components/LangTabs";
+import PageHeader from "@/admin/components/PageHeader";
 import RichTextEditor from "@/admin/components/RichTextEditor";
+import { useToast } from "@/admin/components/Toast";
+import { nowLabel, useUnsavedGuard } from "@/admin/components/useUnsavedGuard";
 import { ApiError } from "@/types/api";
 import { adminErrorMessage } from "@/admin/hooks/useAdminList";
 
@@ -17,23 +22,36 @@ const EMPTY: Partial<AdminPage> = {
   content_en: "",
 };
 
+function hasText(html: string | null | undefined) {
+  return (html ?? "").replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim() !== "";
+}
+
 export default function PagesFormPage() {
   const { id } = useParams();
   const isNew = !id;
   const navigate = useNavigate();
+  const toast = useToast();
 
   const [form, setForm] = useState<Partial<AdminPage>>(EMPTY);
+  const [initial, setInitial] = useState(() => JSON.stringify(EMPTY));
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
-  const [saved, setSaved] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
+  const [lang, setLang] = useState<Lang>("uz");
+  const [savedAt, setSavedAt] = useState<string | null>(null);
+
+  const dirty = JSON.stringify(form) !== initial;
+  useUnsavedGuard(dirty);
 
   useEffect(() => {
     if (!isNew) {
       pagesApi
         .get(Number(id))
-        .then((data) => setForm(data))
+        .then((data) => {
+          setForm(data);
+          setInitial(JSON.stringify(data));
+        })
         .catch((err) => setError(adminErrorMessage(err, "Sahifani yuklab bo'lmadi.")))
         .finally(() => setLoading(false));
     }
@@ -46,26 +64,43 @@ export default function PagesFormPage() {
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const hadTitle = Boolean((JSON.parse(initial) as Partial<AdminPage>).title_uz);
+    if ((isNew || hadTitle) && !form.title_uz?.trim()) {
+      setLang("uz");
+      toast.error("O'zbekcha sarlavhani kiriting.");
+      window.setTimeout(() => document.getElementById("page-title")?.focus(), 50);
+      return;
+    }
     setSaving(true);
     setError("");
-    setSaved(false);
     setFieldErrors({});
     try {
       if (isNew) {
         const created = await pagesApi.create(form);
+        toast.success("Sahifa qo'shildi.");
+        setInitial(JSON.stringify(created));
         navigate(`/admin/pages/${created.id}`, { replace: true });
       } else {
         // Show what was really stored: the server re-renders the content (and tables/PDFs stay as chips).
-        setForm(await pagesApi.update(Number(id), form));
-        setSaved(true);
+        const updated = await pagesApi.update(Number(id), form);
+        setForm(updated);
+        setInitial(JSON.stringify(updated));
+        setSavedAt(nowLabel());
+        toast.success("Saqlandi.");
       }
     } catch (err) {
+      let message: string;
       if (err instanceof ApiError && err.status === 400) {
-        setError(err.message);
+        message = err.message;
         setFieldErrors(err.fields ?? {});
+        const bad = (["uz", "ru", "en"] as const).find((l) => err.fields?.[`title_${l}`] || err.fields?.[`content_${l}`]);
+        if (bad) setLang(bad);
       } else {
-        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
+        message = adminErrorMessage(err, "Saqlashda xatolik yuz berdi.");
       }
+      setError(message);
+      toast.error(message);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } finally {
       setSaving(false);
     }
@@ -79,63 +114,70 @@ export default function PagesFormPage() {
     );
   }
 
+  const filled = { uz: !!form.title_uz?.trim() || hasText(form.content_uz), ru: !!form.title_ru?.trim() || hasText(form.content_ru), en: !!form.title_en?.trim() || hasText(form.content_en) };
+  const invalid = {
+    uz: !!(fieldErrors.title_uz || fieldErrors.content_uz),
+    ru: !!(fieldErrors.title_ru || fieldErrors.content_ru),
+    en: !!(fieldErrors.title_en || fieldErrors.content_en),
+  };
+  const titleKey = `title_${lang}` as keyof AdminPage;
+  const contentKey = `content_${lang}` as keyof AdminPage;
+
   return (
-    <div className="max-w-4xl">
-      <h1 className="font-heading text-2xl font-bold text-foreground-950 mb-6">
-        {isNew ? "Yangi sahifa" : "Sahifani tahrirlash"}
-      </h1>
+    <div className="mx-auto max-w-4xl">
+      <PageHeader
+        back={{ to: "/admin/pages", label: "Sahifalar" }}
+        title={isNew ? "Yangi sahifa" : "Sahifani tahrirlash"}
+        subtitle={!isNew && form.slug ? <>Manzil: <code className="rounded bg-background-200 px-1.5 py-0.5 text-xs">{form.slug}</code></> : undefined}
+      />
 
-      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
-      {saved && <div role="status" className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
-
-      <form onSubmit={onSubmit} className="space-y-6">
-        <div className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
-          {!isNew && (
-            <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1.5">Slug (manzil)</label>
-              <input value={form.slug ?? ""} disabled className="w-full sm:w-96 h-11 px-4 rounded-md border border-background-300 bg-background-100 text-sm text-foreground-500" />
-            </div>
-          )}
-          <p className="text-xs text-foreground-500">
-            Jadval, PDF-hujjat, galereya va boshqa maxsus bloklar matnda kulrang <b>«tahrirlanmaydi»</b> katakchalar
-            ko'rinishida turadi: ularni sudrab joyini o'zgartirish yoki tanlab o'chirish mumkin, aks holda saqlashda o'zgarmaydi.
-            Eski saytdan ko'chirilgan sahifalarning sarlavhasi menyudan olinadi, shuning uchun bu yerda bo'sh bo'lishi mumkin.
-          </p>
+      {error && (
+        <div role="alert" className="mb-4 flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+          <i className="ri-error-warning-line mt-0.5 text-base" aria-hidden="true" />
+          {error}
         </div>
+      )}
 
-        {(["uz", "ru", "en"] as const).map((lang) => (
-          <div key={lang} className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
-            <h2 className="font-semibold text-foreground-800 uppercase text-xs tracking-wide">{lang}</h2>
-            <div>
-              <label className="block text-sm font-medium text-foreground-700 mb-1.5">
-                Sarlavha {lang === "uz" && (isNew || Boolean(form.title_uz)) && "*"}
-              </label>
-              <input
-                value={(form[`title_${lang}` as keyof AdminPage] as string) ?? ""}
-                onChange={(e) => set(`title_${lang}` as keyof AdminPage, e.target.value as never)}
-                required={lang === "uz" && (isNew || Boolean(form.title_uz))}
-                className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
-              />
-              {fieldErrors[`title_${lang}`] && <p className="mt-1 text-xs text-accent-600">{fieldErrors[`title_${lang}`][0]}</p>}
-            </div>
-            <RichTextEditor
-              label="Matn"
-              value={(form[`content_${lang}` as keyof AdminPage] as string) ?? ""}
-              onChange={(v) => set(`content_${lang}` as keyof AdminPage, v as never)}
-              allowFiles={lang === "uz"}
-              rawHtml={Boolean(form.raw_editing)}
-            />
+      <form onSubmit={onSubmit}>
+        <section className="rounded-xl border border-background-200 bg-background-50 p-4 sm:p-5">
+          <div className="mb-4">
+            <LangTabs value={lang} onChange={setLang} filled={filled} invalid={invalid} />
           </div>
-        ))}
 
-        <div className="flex items-center gap-3">
-          <button type="submit" disabled={saving} className="h-11 px-6 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60">
-            {saving ? "Saqlanmoqda..." : "Saqlash"}
-          </button>
-          <button type="button" onClick={() => navigate("/admin/pages")} className="h-11 px-6 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
-            Bekor qilish
-          </button>
-        </div>
+          <details className="mb-4 rounded-lg bg-background-100 px-3 py-2 text-xs text-foreground-600">
+            <summary className="cursor-pointer font-medium text-foreground-700">Jadval, PDF va boshqa maxsus bloklar haqida</summary>
+            <p className="mt-2 leading-relaxed">
+              Jadval, PDF-hujjat, galereya va boshqa maxsus bloklar matnda kulrang <b>«tahrirlanmaydi»</b> katakchalar
+              ko'rinishida turadi: ularni sudrab joyini o'zgartirish yoki tanlab o'chirish mumkin, aks holda saqlashda o'zgarmaydi.
+              Eski saytdan ko'chirilgan sahifalarning sarlavhasi menyudan olinadi, shuning uchun bu yerda bo'sh bo'lishi mumkin.
+            </p>
+          </details>
+
+          <div className="mb-4">
+            <label htmlFor="page-title" className="mb-1.5 block text-sm font-medium text-foreground-700">
+              Sarlavha {lang === "uz" && (isNew || Boolean(form.title_uz)) && "*"}
+            </label>
+            <input
+              id="page-title"
+              value={(form[titleKey] as string) ?? ""}
+              onChange={(e) => set(titleKey, e.target.value as never)}
+              className="w-full h-11 px-4 rounded-lg border border-background-300 bg-background-50 text-sm font-medium focus:outline-none focus:border-primary-500"
+            />
+            {fieldErrors[`title_${lang}`] && <p className="mt-1 text-xs text-red-600">{fieldErrors[`title_${lang}`][0]}</p>}
+          </div>
+
+          <RichTextEditor
+            key={lang}
+            label="Matn"
+            value={(form[contentKey] as string) ?? ""}
+            onChange={(v) => set(contentKey, v as never)}
+            allowFiles={lang === "uz"}
+            rawHtml={Boolean(form.raw_editing)}
+          />
+          {fieldErrors[`content_${lang}`] && <p className="mt-1 text-xs text-red-600">{fieldErrors[`content_${lang}`][0]}</p>}
+        </section>
+
+        <FormActionBar backTo="/admin/pages" saving={saving} dirty={dirty} savedAt={savedAt} />
       </form>
     </div>
   );

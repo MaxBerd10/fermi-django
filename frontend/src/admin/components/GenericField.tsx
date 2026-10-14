@@ -3,6 +3,7 @@ import { adminResource } from "@/api/admin";
 import { getRegions, getDistricts, getQuarters } from "@/api/lookups";
 import type { Region, District, Quarter } from "@/types/content";
 import type { FieldSpec } from "../genericTypes";
+import type { Lang } from "./LangTabs";
 import MediaPicker from "./MediaPicker";
 import RichTextEditor from "./RichTextEditor";
 import { formatDateTime } from "../format";
@@ -13,6 +14,8 @@ interface Props {
   field: FieldSpec;
   values: Values;
   onChange: (key: string, value: unknown) => void;
+  /** Set by forms that show a UZ/RU/EN switch: lang-* fields then render only this language. */
+  lang?: Lang;
 }
 
 function TextInput({ value, onChange, required }: { value: string; onChange: (v: string) => void; required?: boolean }) {
@@ -26,19 +29,23 @@ function TextInput({ value, onChange, required }: { value: string; onChange: (v:
   );
 }
 
-export default function GenericField({ field, values, onChange }: Props) {
+const LANG_KEYS = ["uz", "ru", "en"] as const;
+
+export default function GenericField({ field, values, onChange, lang }: Props) {
+  // With `lang` set (the form has UZ/RU/EN tabs) only that language is shown, full width; the other inputs stay in
+  // the page (hidden) so the form still posts them and a missing required Uzbek value is still caught.
   if (field.kind === "lang-text") {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {(["uz", "ru", "en"] as const).map((lang) => (
-          <div key={lang}>
-            <label className="block text-xs font-semibold text-foreground-500 uppercase mb-1">
-              {field.label} ({lang}) {lang === "uz" && field.requiredUz && "*"}
+      <div className={lang ? "" : "grid grid-cols-1 sm:grid-cols-3 gap-3"}>
+        {LANG_KEYS.map((l) => (
+          <div key={l} data-lang={l} className={lang && lang !== l ? "hidden" : ""}>
+            <label className={lang ? "block text-sm font-medium text-foreground-700 mb-1.5" : "block text-xs font-semibold text-foreground-500 uppercase mb-1"}>
+              {lang ? field.label : `${field.label} (${l})`} {l === "uz" && field.requiredUz && "*"}
             </label>
             <TextInput
-              value={values[`${field.base}_${lang}`] as string}
-              onChange={(v) => onChange(`${field.base}_${lang}`, v)}
-              required={lang === "uz" && field.requiredUz}
+              value={values[`${field.base}_${l}`] as string}
+              onChange={(v) => onChange(`${field.base}_${l}`, v)}
+              required={l === "uz" && field.requiredUz}
             />
           </div>
         ))}
@@ -48,16 +55,16 @@ export default function GenericField({ field, values, onChange }: Props) {
 
   if (field.kind === "lang-textarea") {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {(["uz", "ru", "en"] as const).map((lang) => (
-          <div key={lang}>
-            <label className="block text-xs font-semibold text-foreground-500 uppercase mb-1">
-              {field.label} ({lang}) {lang === "uz" && field.requiredUz && "*"}
+      <div className={lang ? "" : "grid grid-cols-1 sm:grid-cols-3 gap-3"}>
+        {LANG_KEYS.map((l) => (
+          <div key={l} data-lang={l} className={lang && lang !== l ? "hidden" : ""}>
+            <label className={lang ? "block text-sm font-medium text-foreground-700 mb-1.5" : "block text-xs font-semibold text-foreground-500 uppercase mb-1"}>
+              {lang ? field.label : `${field.label} (${l})`} {l === "uz" && field.requiredUz && "*"}
             </label>
             <textarea
-              value={(values[`${field.base}_${lang}`] as string) ?? ""}
-              onChange={(e) => onChange(`${field.base}_${lang}`, e.target.value)}
-              required={lang === "uz" && field.requiredUz}
+              value={(values[`${field.base}_${l}`] as string) ?? ""}
+              onChange={(e) => onChange(`${field.base}_${l}`, e.target.value)}
+              required={l === "uz" && field.requiredUz}
               rows={4}
               className="w-full px-4 py-3 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
             />
@@ -68,15 +75,16 @@ export default function GenericField({ field, values, onChange }: Props) {
   }
 
   if (field.kind === "lang-html") {
+    const shown = lang ? [lang] : LANG_KEYS;
     return (
       <div className="space-y-4">
-        {(["uz", "ru", "en"] as const).map((lang) => (
+        {shown.map((l) => (
           <RichTextEditor
-            key={lang}
-            label={`${field.label} (${lang})`}
-            value={(values[`${field.base}_${lang}`] as string) ?? ""}
-            onChange={(v) => onChange(`${field.base}_${lang}`, v)}
-            allowFiles={lang === "uz"}
+            key={l}
+            label={lang ? field.label : `${field.label} (${l})`}
+            value={(values[`${field.base}_${l}`] as string) ?? ""}
+            onChange={(v) => onChange(`${field.base}_${l}`, v)}
+            allowFiles={l === "uz"}
           />
         ))}
       </div>

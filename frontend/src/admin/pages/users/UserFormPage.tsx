@@ -77,7 +77,7 @@ export default function UserFormPage() {
         {isNew ? "Yangi foydalanuvchi" : "Foydalanuvchini tahrirlash"}
       </h1>
 
-      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
       {saved && <div role="status" className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
       {isSelf && <div className="mb-4 p-3 rounded-md bg-primary-50 border border-primary-200 text-sm text-primary-800">Bu — sizning o'z hisobingiz.</div>}
 
@@ -90,7 +90,7 @@ export default function UserFormPage() {
             required
             className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
           />
-          {fieldErrors.username && <p className="mt-1 text-xs text-accent-600">{fieldErrors.username[0]}</p>}
+          {fieldErrors.username && <p className="mt-1 text-xs text-red-600">{fieldErrors.username[0]}</p>}
         </div>
 
         <div>
@@ -102,7 +102,7 @@ export default function UserFormPage() {
             required
             className="w-full h-11 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
           />
-          {fieldErrors.email && <p className="mt-1 text-xs text-accent-600">{fieldErrors.email[0]}</p>}
+          {fieldErrors.email && <p className="mt-1 text-xs text-red-600">{fieldErrors.email[0]}</p>}
         </div>
 
         <div>

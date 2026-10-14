@@ -145,7 +145,7 @@ export default function SiteTextsPage() {
         Yangiliklar, sahifa ichidagi matnlar va rasmlar esa «Yangiliklar» va «Sahifalar» bo'limlarida tahrirlanadi.
       </p>
 
-      {loadError && <div role="alert" className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{loadError}</div>}
+      {loadError && <div role="alert" className="mb-4 p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{loadError}</div>}
       {!defaults && !loadError && (
         <div className="py-16 flex justify-center">
           <i className="ri-loader-4-line animate-spin text-primary-500 text-3xl" />
@@ -309,8 +309,8 @@ function TextRow({ textKey, defaults, override, open, onToggle, onSaved }: RowPr
             </div>
           ))}
 
-          {problems.length > 0 && <div role="alert" className="p-2.5 rounded-md bg-accent-50 border border-accent-200 text-xs text-accent-800">{problems.join(" · ")}</div>}
-          {error && <div role="alert" className="p-2.5 rounded-md bg-accent-50 border border-accent-200 text-xs text-accent-800">{error}</div>}
+          {problems.length > 0 && <div role="alert" className="p-2.5 rounded-md bg-red-50 border border-red-200 text-xs text-red-800">{problems.join(" · ")}</div>}
+          {error && <div role="alert" className="p-2.5 rounded-md bg-red-50 border border-red-200 text-xs text-red-800">{error}</div>}
           {saved && <div role="status" className="p-2.5 rounded-md bg-green-50 border border-green-200 text-xs text-green-800">Saqlandi. Saytda bir necha soniyada ko'rinadi.</div>}
 
           <div className="flex flex-wrap items-center gap-2">

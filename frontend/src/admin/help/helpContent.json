@@ -8,7 +8,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Admin panel manzili: fermi.uz/admin. Login va parol bilan kirasiz. Saytning oʻzini koʻrish uchun chap pastdagi «Saytni koʻrish» tugmasini bosing."
+          "text": "Admin panel manzili: fermi.uz/admin. Login va parol bilan kirasiz. Saytning oʻzini koʻrish uchun yuqori oʻngdagi «Saytni koʻrish» tugmasini bosing. Kerakli boʻlimni tez topish uchun yuqoridagi qidiruv oynasiga soʻz yozing (yoki klaviaturada Ctrl+K bosing): masalan «rasm» yoki «parol»."
         },
         {
           "type": "steps",
@@ -45,7 +45,7 @@
           "items": [
             "Oʻzbekcha matnni LOTIN harfida yozing. Kirill harfida yozsangiz, saqlashda tizim avtomatik lotinga oʻgiradi, lekin shunga ishonmasdan lotinda yozgan yaxshi.",
             "Matnni avval OʻZBEKCHA («uz») boʻlimiga yozing. Rus va ingliz tillari uchun «RU va EN ga tarjima qilish» tugmasini bosing, tarjimani koʻzdan kechirib, kerak boʻlsa tuzating.",
-            "Har oʻzgarishdan keyin «Saqlash» tugmasini bosing va «Saqlandi.» yozuvini koʻring. Saqlamasdan boshqa sahifaga oʻtsangiz, yozganingiz yoʻqoladi.",
+            "Har oʻzgarishdan keyin ekran pastidagi «Saqlash» tugmasini bosing va «Saqlandi» yozuvini koʻring. Saqlanmagan oʻzgarish boʻlsa, oʻsha panelda sariq «Saqlanmagan oʻzgarishlar bor» yozuvi turadi. Saqlamasdan boshqa sahifaga oʻtsangiz, yozganingiz yoʻqoladi.",
             "OʻCHIRILGAN yozuvni qaytarib boʻlmaydi. Yangilikni vaqtincha yashirmoqchi boʻlsangiz, oʻchirmang: uni ochib «Holat» ni «Qoralama» qiling.",
             "Bir yozuvni ikki kishi bir vaqtda tahrirlamang: oxirgi saqlagan odamning variantida qoladi.",
             "Rasm va fayllarga tushunarli nom bering (masalan «Qabul-nizomi-2026.pdf», «IMG_0045.pdf» emas)."
@@ -61,12 +61,12 @@
           "type": "steps",
           "title": "Yangi yangilik",
           "items": [
-            "Chap menyuda «Yangiliklar» → «Yangi qoʻshish».",
+            "Chap menyuda «Yangiliklar» → «Yangilik qoʻshish» (yoki bosh sahifadagi katta tugma).",
             "«Kategoriya» ni tanlang (masalan: Tadbirlar, Tanlovlar, Xalqaro hamkorlik).",
             "«Holat»: «Eʼlon qilingan» yoki «Qoralama» (qoralama saytda koʻrinmaydi).",
             "«Nashr sanasi»: boʻsh qoldirsangiz hozirgi vaqt qoʻyiladi. Kelajak sanasi yozsangiz, yangilik oʻsha vaqtgacha saytda koʻrinmaydi.",
             "«Asosiy rasm (muqova)»: bosib rasm tanlang yoki kompyuterdan yuklang.",
-            "Sarlavhani va matnni oʻzbekcha boʻlimga yozing.",
+            "Yuqoridagi UZ / RU / EN tugmalaridan tilni tanlab, sarlavhani va matnni yozing: avval UZ (oʻzbekcha). Yashil nuqta — shu tilda matn bor, boʻsh doira — hali yoʻq.",
             "«RU va EN ga tarjima qilish» tugmasini bosing. Tarjimani tekshiring.",
             "«Saqlash» ni bosing. Soʻng «Saytni koʻrish» orqali yangilik chiqqanini tekshiring."
           ]

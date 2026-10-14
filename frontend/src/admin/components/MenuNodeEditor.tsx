@@ -79,7 +79,7 @@ export default function MenuNodeEditor({ node, parentId, onSave, onClose }: Prop
         </button>
       </div>
 
-      {error && <div className="mb-3 p-2.5 rounded-md bg-accent-50 border border-accent-200 text-xs text-accent-800">{error}</div>}
+      {error && <div className="mb-3 p-2.5 rounded-md bg-red-50 border border-red-200 text-xs text-red-800">{error}</div>}
 
       <form onSubmit={onSubmit} className="space-y-3">
         {(["uz", "ru", "en"] as const).map((lang) => (

@@ -159,6 +159,13 @@ body {
   overflow-x: hidden;
 }
 
+/* The admin has sticky bars (top bar, side menu, save bar). `overflow-x: hidden` on html/body would turn them into
+   scroll containers that never scroll, and sticky would silently stop working; `clip` clips without that effect. */
+html.admin-shell,
+html.admin-shell body {
+  overflow-x: clip;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 17px;

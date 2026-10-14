@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
 import { adminResource } from "@/api/admin";
-import { fieldKey, type EntityConfig, type FieldSpec } from "../genericTypes";
-import GenericField from "./GenericField";
+import type { EntityConfig } from "../genericTypes";
+import EntityFormFields from "./EntityFormFields";
+import FormActionBar from "./FormActionBar";
+import PageHeader from "./PageHeader";
+import { useToast } from "./Toast";
+import { nowLabel, useUnsavedGuard } from "./useUnsavedGuard";
 import { ApiError } from "@/types/api";
 import { adminErrorMessage } from "../hooks/useAdminList";
 
 type Values = Record<string, unknown>;
-
-/** A lang-* field is posted as <base>_uz/_ru/_en, so its validation errors live under those keys. */
-function errorsFor(field: FieldSpec, fieldErrors: Record<string, string[]>): string[] {
-  if ("base" in field) return (["uz", "ru", "en"] as const).flatMap((lang) => fieldErrors[`${field.base}_${lang}`] ?? []);
-  return fieldErrors[fieldKey(field)] ?? [];
-}
 
 /** For 1-row config tables (Counter/Setting/Logo) — no list, no create, no delete. */
 export default function SingletonFormPage({ config }: { config: EntityConfig }) {
@@ -19,7 +17,9 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
   const [values, setValues] = useState<Values>({});
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const toast = useToast();
+  const [initial, setInitial] = useState("{}");
+  const [savedAt, setSavedAt] = useState<string | null>(null);
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
@@ -29,7 +29,10 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
     api
       .list({ pageSize: 1 })
       .then((r) => {
-        if (!cancelled && r.items[0]) setValues(r.items[0]);
+        if (!cancelled && r.items[0]) {
+          setValues(r.items[0]);
+          setInitial(JSON.stringify(r.items[0]));
+        }
       })
       .catch((err) => {
         if (!cancelled) setError(adminErrorMessage(err, "Ma'lumotlarni yuklab bo'lmadi."));
@@ -43,9 +46,11 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [config.resource]);
 
+  const dirty = JSON.stringify(values) !== initial;
+  useUnsavedGuard(dirty);
+
   function onChange(key: string, value: unknown) {
     setValues((v) => ({ ...v, [key]: value }));
-    setSaved(false);
   }
 
   async function onSubmit(e: React.FormEvent) {
@@ -54,15 +59,21 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
     setError("");
     setFieldErrors({});
     try {
-      await api.update(values.id as number, values);
-      setSaved(true);
+      const updated = await api.update(values.id as number, values);
+      setValues(updated);
+      setInitial(JSON.stringify(updated));
+      setSavedAt(nowLabel());
+      toast.success("Saqlandi.");
     } catch (err) {
+      let message: string;
       if (err instanceof ApiError && err.status === 400) {
-        setError(err.message);
+        message = err.message;
         setFieldErrors(err.fields ?? {});
       } else {
-        setError(adminErrorMessage(err, "Saqlashda xatolik yuz berdi."));
+        message = adminErrorMessage(err, "Saqlashda xatolik yuz berdi.");
       }
+      setError(message);
+      toast.error(message);
     } finally {
       setSaving(false);
     }
@@ -77,28 +88,14 @@ export default function SingletonFormPage({ config }: { config: EntityConfig }) 
   }
 
   return (
-    <div className="max-w-3xl">
-      <h1 className="font-heading text-2xl font-bold text-foreground-950 mb-6">{config.title}</h1>
+    <div className="mx-auto max-w-3xl">
+      <PageHeader title={config.title} />
 
-      {error && <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
-      {saved && <div className="mb-4 p-3 rounded-md bg-green-50 border border-green-200 text-sm text-green-800">Saqlandi.</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
 
-      <form onSubmit={onSubmit} className="space-y-6">
-        <div className="bg-background-50 border border-background-200 rounded-lg p-5 space-y-4">
-          {config.fields.map((field) => {
-            const messages = errorsFor(field, fieldErrors);
-            return (
-              <div key={fieldKey(field)}>
-                <GenericField field={field} values={values} onChange={onChange} />
-                {messages.length > 0 && <p className="mt-1 text-xs text-accent-600">{messages[0]}</p>}
-              </div>
-            );
-          })}
-        </div>
-
-        <button type="submit" disabled={saving} className="h-11 px-6 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer disabled:opacity-60">
-          {saving ? "Saqlanmoqda..." : "Saqlash"}
-        </button>
+      <form onSubmit={onSubmit}>
+        <EntityFormFields config={config} values={values} onChange={onChange} fieldErrors={fieldErrors} />
+        <FormActionBar backTo="/admin" saving={saving} dirty={dirty} savedAt={savedAt} />
       </form>
     </div>
   );

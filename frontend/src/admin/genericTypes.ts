@@ -33,6 +33,8 @@ export interface EntityConfig {
   addLabel?: string;
   /** Hides "add new": for records that only ever arrive from a public form (contact/application submissions). */
   noCreate?: boolean;
+  /** A visitor-message inbox: rows whose `status` is 1 (not opened yet) are drawn bold with a dot. */
+  inbox?: boolean;
   listColumns: ListColumn[];
   fields: FieldSpec[];
   deleteConfirmField: string;

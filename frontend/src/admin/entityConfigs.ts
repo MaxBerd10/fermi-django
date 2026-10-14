@@ -294,6 +294,7 @@ export const contactConfig: EntityConfig = {
   resource: "contacts",
   title: "Murojaatlar (Aloqa formasi)",
   noCreate: true,
+  inbox: true,
   listColumns: [
     { key: "id", label: "ID" },
     { key: "created_at", label: "Sana", kind: "datetime" },
@@ -318,6 +319,7 @@ export const acceptanceConfig: EntityConfig = {
   resource: "acceptances",
   title: "Qabul arizalari",
   noCreate: true,
+  inbox: true,
   listColumns: [
     { key: "id", label: "ID" },
     { key: "created_at", label: "Sana", kind: "datetime" },
@@ -341,6 +343,7 @@ export const virtualConfig: EntityConfig = {
   resource: "virtual-submissions",
   title: "Virtual qabulxona murojaatlari",
   noCreate: true,
+  inbox: true,
   listColumns: [
     { key: "id", label: "ID" },
     { key: "created_at", label: "Sana", kind: "datetime" },
@@ -367,6 +370,7 @@ export const contestConfig: EntityConfig = {
   resource: "contest-submissions",
   title: "Tanlov arizalari",
   noCreate: true,
+  inbox: true,
   listColumns: [
     { key: "id", label: "ID" },
     { key: "created_at", label: "Sana", kind: "datetime" },

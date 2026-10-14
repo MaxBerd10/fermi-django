@@ -64,7 +64,7 @@ export default function MediaLibraryModal({ onSelect, onClose }: Props) {
               <i className="ri-loader-4-line w-8 h-8 flex items-center justify-center animate-spin text-primary-500 text-3xl" />
             </div>
           ) : error ? (
-            <div className="p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>
+            <div className="p-3 rounded-md bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>
           ) : (
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
               {listing?.parentPath !== null && listing?.parentPath !== undefined && (

@@ -108,7 +108,7 @@ export default function MenuTreeNode({
             type="button"
             onClick={() => onDelete(node)}
             title="O'chirish"
-            className="w-6 h-6 flex items-center justify-center rounded text-foreground-500 hover:bg-accent-50 hover:text-accent-600 cursor-pointer"
+            className="w-6 h-6 flex items-center justify-center rounded text-foreground-500 hover:bg-red-50 hover:text-red-600 cursor-pointer"
           >
             <i className="ri-delete-bin-line text-sm" />
           </button>

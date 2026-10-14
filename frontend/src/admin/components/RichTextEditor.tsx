@@ -336,7 +336,7 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
         {rawHtml && !allowFiles && " Fayl belgisi faylni shu tilning matniga havola qilib qo'shadi (sahifada tayyor karta bo'lib chiqadi)."}
         {rawHtml && " Matndagi PDF havolasini almashtirish uchun: havola ustiga bosing, «Faylni almashtirish» tugmasi chiqadi."}
       </p>
-      {uploadError && <p role="alert" className="mt-1 text-xs text-accent-600">{uploadError}</p>}
+      {uploadError && <p role="alert" className="mt-1 text-xs text-red-600">{uploadError}</p>}
 
       <input ref={fileInputRef} type="file" className="hidden" accept=".jpg,.jpeg,.png,.gif,.webp" onChange={onUploadFile} />
       <input ref={documentInputRef} type="file" className="hidden" accept={DOCUMENT_ACCEPT} onChange={onUploadDocument} />

@@ -40,10 +40,10 @@ export default function MediaPicker({ label, value, onChange }: MediaPickerProps
   return (
     <div>
       <label className="block text-sm font-medium text-foreground-700 mb-1.5">{label}</label>
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-2">
         {previewUrl &&
           (IMAGE_EXT.test(previewUrl) ? (
-            <img src={previewUrl} alt="" className="w-16 h-16 object-cover rounded-md border border-background-300" />
+            <img src={previewUrl} alt="" className="w-full max-h-44 sm:w-28 sm:h-20 object-cover rounded-lg border border-background-300" />
           ) : (
             // A PDF/Office file has no thumbnail -- an <img> of it was just a broken-image icon.
             <a
@@ -78,13 +78,13 @@ export default function MediaPicker({ label, value, onChange }: MediaPickerProps
           Kutubxonadan
         </button>
         {value && (
-          <button type="button" onClick={() => onChange("")} className="text-sm text-foreground-500 hover:text-accent-600 cursor-pointer">
+          <button type="button" onClick={() => onChange("")} className="text-sm text-foreground-500 hover:text-red-600 cursor-pointer">
             Olib tashlash
           </button>
         )}
       </div>
       <input ref={inputRef} type="file" className="hidden" onChange={onFileSelected} accept=".jpg,.jpeg,.png,.gif,.webp,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx" />
-      {error && <p className="mt-1 text-xs text-accent-600">{error}</p>}
+      {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
       {libraryOpen && (
         <MediaLibraryModal
           onSelect={(path) => {

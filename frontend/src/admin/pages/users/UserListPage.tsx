@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { listUsers, deleteUser, type AdminUserItem } from "@/api/adminUsers";
 import DataTable from "@/admin/components/DataTable";
+import ListToolbar from "@/admin/components/ListToolbar";
+import PageHeader from "@/admin/components/PageHeader";
 import Pagination from "@/admin/components/Pagination";
 import { useAdminAuth } from "@/admin/AdminAuthContext";
 import { ApiError } from "@/types/api";
@@ -52,27 +54,19 @@ export default function UserListPage() {
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="font-heading text-2xl font-bold text-foreground-950">Foydalanuvchilar</h1>
-        <Link to="/admin/users/new" className="h-10 px-4 rounded-md bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold flex items-center gap-2 cursor-pointer">
-          <i className="ri-add-line" /> Yangi qo'shish
-        </Link>
-      </div>
+    <div className="mx-auto max-w-6xl">
+      <PageHeader
+        title="Foydalanuvchilar"
+        actions={
+          <Link to="/admin/users/new" className="flex h-10 cursor-pointer items-center gap-2 rounded-lg bg-primary-500 px-4 text-sm font-semibold text-background-50 hover:bg-primary-600">
+            <i className="ri-add-line" aria-hidden="true" /> Yangi foydalanuvchi
+          </Link>
+        }
+      />
 
-      {error && <div className="mb-4 p-3 rounded-md bg-accent-50 border border-accent-200 text-sm text-accent-800">{error}</div>}
+      {error && <div role="alert" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800">{error}</div>}
 
-      <form onSubmit={onSearchSubmit} className="mb-4 flex gap-2">
-        <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Login yoki email bo'yicha qidirish..."
-          className="w-full max-w-sm h-10 px-4 rounded-md border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
-        />
-        <button type="submit" className="h-10 px-4 rounded-md border border-background-300 text-sm font-medium hover:bg-background-100 cursor-pointer">
-          Qidirish
-        </button>
-      </form>
+      <ListToolbar value={search} onChange={setSearch} onSubmit={onSearchSubmit} placeholder="Login yoki email bo'yicha qidirish..." total={total} loading={loading} />
 
       <DataTable
         columns={[
