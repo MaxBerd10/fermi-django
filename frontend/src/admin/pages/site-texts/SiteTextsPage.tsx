@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { loadMessages } from "@/i18n/local/index";
 import { listSiteTexts, saveSiteText, type SiteTextRow } from "@/api/adminSiteTexts";
 import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
@@ -51,6 +52,15 @@ const SECTION_LABELS: Record<string, string> = {
   conference: "Konferensiyalar",
   council: "Ilmiy kengash",
 };
+
+/** Texts of the home-page lists that now live in their own editor (Bosh sahifa bloklari); editing them here would change nothing. */
+const MOVED_TEXTS: { pattern: RegExp; label: string; to: string }[] = [
+  { pattern: /^partners\.item\d+\./, label: "Hamkorlar", to: "/admin/home-partners" },
+  { pattern: /^voices\.v\d+\.(quote|name|meta)$/, label: "Talabalar fikri", to: "/admin/home-voices" },
+  { pattern: /^voices\.fact\d+\./, label: "Raqamlar", to: "/admin/home-facts" },
+  { pattern: /^whyUs\.(item\d+\.(title|desc)|metric\d+)$/, label: "Nega bizni tanlashadi", to: "/admin/home-why" },
+];
+const movedTo = (key: string) => MOVED_TEXTS.find((entry) => entry.pattern.test(key));
 
 const sectionOf = (key: string) => key.split(".")[0];
 const labelOf = (section: string) => SECTION_LABELS[section] ?? section;
@@ -222,6 +232,7 @@ function TextRow({ textKey, defaults, override, open, onToggle, onSaved }: RowPr
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
+  const moved = movedTo(textKey);
   const problems = LANGS.flatMap((lang) => {
     const missing = missingPlaceholders(defaults[lang][textKey] ?? "", draft[lang]);
     return missing.length ? [`${lang.toUpperCase()}: ${missing.join(", ")} qoldirilishi kerak (u o'rnida qiymat ko'rsatiladi)`] : [];
@@ -256,11 +267,22 @@ function TextRow({ textKey, defaults, override, open, onToggle, onSaved }: RowPr
             {override?.text_uz || defaults.uz[textKey] || defaults.ru[textKey] || defaults.en[textKey]}
           </p>
         </div>
-        {override && <span className="shrink-0 mt-0.5 px-2 py-0.5 rounded-full bg-primary-100 text-primary-700 text-[11px] font-semibold">O'zgartirilgan</span>}
+        {moved && <span className="shrink-0 mt-0.5 px-2 py-0.5 rounded-full bg-background-200 text-foreground-700 text-[11px] font-semibold">Boshqa bo'limda</span>}
+        {override && !moved && <span className="shrink-0 mt-0.5 px-2 py-0.5 rounded-full bg-primary-100 text-primary-700 text-[11px] font-semibold">O'zgartirilgan</span>}
         <i className={`ri-arrow-down-s-line text-lg text-foreground-400 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden />
       </button>
 
-      {open && (
+      {open && moved && (
+        <div className="px-4 pb-4 pt-3 border-t border-background-200 text-sm text-foreground-700">
+          Bu matn endi alohida bo'limdan tahrirlanadi:{" "}
+          <Link to={moved.to} className="font-semibold text-primary-600 underline hover:text-primary-700">
+            Bosh sahifa bloklari → {moved.label}
+          </Link>
+          . U yerda qatorlarni qo'shish, o'chirish va tartibini o'zgartirish ham mumkin.
+        </div>
+      )}
+
+      {open && !moved && (
         <div className="px-4 pb-4 pt-1 space-y-3 border-t border-background-200">
           {LANGS.map((lang) => (
             <div key={lang}>

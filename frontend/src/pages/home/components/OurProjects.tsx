@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { useHomeSections } from "@/api/homeSections";
+import { optimizedImageUrl } from "@/lib/imageProxy";
 
 type Project = {
   id: string;
@@ -6,7 +8,6 @@ type Project = {
   href: string | null;
   icon: string;
   img: string;
-  hintKey: "live" | "soon";
 };
 
 const PROJECTS: Project[] = [
@@ -16,7 +17,6 @@ const PROJECTS: Project[] = [
     href: "https://aishifokor.uz",
     icon: "ri-heart-pulse-line",
     img: "/images/projects/aishifokor.jpg",
-    hintKey: "live",
   },
   {
     id: "imentor",
@@ -24,7 +24,6 @@ const PROJECTS: Project[] = [
     href: "https://imentor.uz",
     icon: "ri-user-star-line",
     img: "/images/projects/imentor.jpg",
-    hintKey: "live",
   },
   {
     id: "itest",
@@ -32,7 +31,6 @@ const PROJECTS: Project[] = [
     href: "https://online-imtixon.uz",
     icon: "ri-questionnaire-line",
     img: "/images/projects/itest.jpg",
-    hintKey: "live",
   },
   {
     id: "teletibbiyot",
@@ -40,7 +38,6 @@ const PROJECTS: Project[] = [
     href: null,
     icon: "ri-vidicon-line",
     img: "/images/projects/teletibbiyot.jpg",
-    hintKey: "soon",
   },
   {
     id: "slikon",
@@ -48,7 +45,6 @@ const PROJECTS: Project[] = [
     href: null,
     icon: "ri-cpu-line",
     img: "/images/projects/slikon.jpg",
-    hintKey: "soon",
   },
   {
     id: "icamera",
@@ -56,7 +52,6 @@ const PROJECTS: Project[] = [
     href: null,
     icon: "ri-camera-line",
     img: "/images/projects/icamera.jpg",
-    hintKey: "soon",
   },
 ];
 
@@ -69,16 +64,18 @@ function ProjectCard({ p, liveLabel, soonLabel, soonHint }: {
   const body = (
     <>
       <div className="relative aspect-[4/3] overflow-hidden bg-[#e5e5e5]">
-        <img
-          src={p.img}
-          alt={p.name}
-          className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 ${
-            p.href ? "group-hover:scale-105" : "grayscale-[30%]"
-          }`}
-          loading="lazy"
-          width={480}
-          height={360}
-        />
+        {p.img && (
+          <img
+            src={p.img}
+            alt={p.name}
+            className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 ${
+              p.href ? "group-hover:scale-105" : "grayscale-[30%]"
+            }`}
+            loading="lazy"
+            width={480}
+            height={360}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1158]/70 via-transparent to-transparent" />
         <span className="absolute left-2.5 bottom-2.5 w-9 h-9 rounded-xl bg-[#0a1158] text-[#ffd600] flex items-center justify-center shadow-md">
           <i className={`${p.icon} text-lg`} aria-hidden />
@@ -134,6 +131,20 @@ function ProjectCard({ p, liveLabel, soonLabel, soonHint }: {
 
 export default function OurProjects() {
   const { t } = useTranslation();
+  const sections = useHomeSections();
+
+  if (sections === undefined) return <div className="min-h-[784px] lg:min-h-[369px]" aria-hidden="true" />;
+  // the editable list; the built-in one only if the request failed
+  const projects: Project[] = sections
+    ? sections.projects.map((p) => ({
+        id: String(p.id),
+        name: p.name,
+        href: p.url,
+        icon: p.icon || "ri-links-line",
+        img: p.img?.startsWith("http") ? optimizedImageUrl(p.img, 480) : (p.img ?? ""),
+      }))
+    : PROJECTS;
+  if (projects.length === 0) return null;
 
   return (
     <section className="pt-5 pb-6 md:pt-6 md:pb-8 bg-transparent border-t border-[#e5e5e5]/60">
@@ -149,7 +160,7 @@ export default function OurProjects() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          {PROJECTS.map((p) => (
+          {projects.map((p) => (
             <ProjectCard
               key={p.id}
               p={p}

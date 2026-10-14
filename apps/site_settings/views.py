@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import SiteCounter, SiteLogo, SiteSetting, SiteText, SocialNetwork, UsefulSite
+from .models import HomeItem, SiteCounter, SiteLogo, SiteSetting, SiteText, SocialNetwork, UsefulSite
 from .serializers import (
     CounterSerializer,
     LogoSerializer,
@@ -46,3 +46,48 @@ class SiteTextsView(APIView):
                 if value.strip():
                     texts[lang][key] = value
         return Response(texts)
+
+
+def _lang3(item: HomeItem, field: str) -> dict[str, str]:
+    """{"uz","ru","en"} of one text field; a language the editors left blank shows the Uzbek wording."""
+    uz = getattr(item, f"{field}_uz")
+    return {"uz": uz, "ru": getattr(item, f"{field}_ru") or uz, "en": getattr(item, f"{field}_en") or uz}
+
+
+class HomeSectionsView(APIView):
+    """GET /api/v1/home-sections -- the editable lists of the home page (partners, project cards, student quotes,
+    headline figures, "why us" cards), only the active ones, in the editors' order. The frontend keeps its built-in
+    copy of the same content only for the case that this request fails."""
+
+    def get(self, request):
+        sections: dict[str, list] = {"partners": [], "projects": [], "voices": [], "facts": [], "why": []}
+        for item in HomeItem.objects.filter(is_active=True).select_related("image"):
+            if item.section == HomeItem.PARTNER:
+                sections["partners"].append(
+                    {"id": item.pk, "name": _lang3(item, "title"), "url": item.url, "icon": item.icon}
+                )
+            elif item.section == HomeItem.PROJECT:
+                if item.image:
+                    img = request.build_absolute_uri(item.image.file.url)
+                else:
+                    img = item.image_path or None
+                sections["projects"].append(
+                    {"id": item.pk, "name": _lang3(item, "title"), "url": item.url or None, "icon": item.icon, "img": img}
+                )
+            elif item.section == HomeItem.VOICE:
+                sections["voices"].append(
+                    {"id": item.pk, "quote": _lang3(item, "text"), "name": _lang3(item, "title"), "meta": _lang3(item, "subtitle")}
+                )
+            elif item.section == HomeItem.FACT:
+                sections["facts"].append({"id": item.pk, "value": item.value, "label": _lang3(item, "title")})
+            elif item.section == HomeItem.WHY:
+                sections["why"].append(
+                    {
+                        "id": item.pk,
+                        "title": _lang3(item, "title"),
+                        "desc": _lang3(item, "text"),
+                        "metric": item.value,
+                        "metricLabel": _lang3(item, "subtitle"),
+                    }
+                )
+        return Response(sections)

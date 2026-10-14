@@ -8,6 +8,13 @@ from .admission_results_views import (
 )
 from .banner_views import AdminBannerViewSet
 from .documents_views import AdminDocumentItemViewSet, AdminDocumentViewSet
+from .home_views import (
+    AdminHomeFactViewSet,
+    AdminHomePartnerViewSet,
+    AdminHomeProjectViewSet,
+    AdminHomeVoiceViewSet,
+    AdminHomeWhyViewSet,
+)
 from .forms_views import (
     AdminAcceptanceViewSet,
     AdminContactViewSet,
@@ -72,6 +79,11 @@ router.register("admin/acceptances", AdminAcceptanceViewSet, basename="admin-acc
 router.register("admin/virtual-submissions", AdminVirtualSubmissionViewSet, basename="admin-virtual-submissions")
 router.register("admin/contest-submissions", AdminContestSubmissionViewSet, basename="admin-contest-submissions")
 router.register("admin/corusel", AdminBannerViewSet, basename="admin-corusel")
+router.register("admin/home-partners", AdminHomePartnerViewSet, basename="admin-home-partners")
+router.register("admin/home-projects", AdminHomeProjectViewSet, basename="admin-home-projects")
+router.register("admin/home-voices", AdminHomeVoiceViewSet, basename="admin-home-voices")
+router.register("admin/home-facts", AdminHomeFactViewSet, basename="admin-home-facts")
+router.register("admin/home-why", AdminHomeWhyViewSet, basename="admin-home-why")
 router.register("admin/users", AdminUserViewSet, basename="admin-users")
 router.register("admin/result-categories", AdminResultCategoryViewSet, basename="admin-result-categories")
 router.register("admin/result-files", AdminResultFileViewSet, basename="admin-result-files")

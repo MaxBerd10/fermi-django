@@ -1,9 +1,11 @@
 ﻿import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { partners } from "@/mocks/homeData";
+import { useHomeSections } from "@/api/homeSections";
 
 export default function Partners() {
   const { t } = useTranslation();
+  const sections = useHomeSections();
   // See EventsJournal: use explicit keys so the production build resolves
   // every language rather than showing a generated key as visible text.
   const partnerNames = [
@@ -16,6 +18,13 @@ export default function Partners() {
     t("partners.item7.name"),
     t("partners.item8.name"),
   ];
+
+  if (sections === undefined) return <div className="min-h-[360px] lg:min-h-[220px]" aria-hidden="true" />;
+  // the editable list; the built-in one only if the request failed
+  const items = sections
+    ? sections.partners.map((p) => ({ key: p.id, name: p.name, icon: p.icon, href: p.url }))
+    : partners.map((p, i) => ({ key: p.name, name: partnerNames[i] ?? p.name, icon: p.icon, href: p.href }));
+  if (items.length === 0) return null;
 
   return (
     <section className="pt-3 pb-5 md:pt-4 md:pb-6 bg-transparent border-t border-[#e5e5e5]/60">
@@ -33,26 +42,26 @@ export default function Partners() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {partners.map((p, i) => {
+          {items.map((p) => {
             const isInternal = p.href.startsWith("/");
             const content = (
               <>
                 <span className="w-8 h-8 rounded-lg bg-white border border-[#e5e5e5] text-[#0a1158] flex items-center justify-center shrink-0">
-                  <i className={`${p.icon} text-sm`} />
+                  <i className={`${p.icon || "ri-links-line"} text-sm`} />
                 </span>
                 <span className="text-xs font-semibold text-[#0a0a0a] leading-snug line-clamp-2">
-                  {partnerNames[i] ?? p.name}
+                  {p.name}
                 </span>
               </>
             );
             const className =
               "flex items-center gap-2 rounded-xl bg-white/95 border border-[#e5e5e5]/80 px-3 py-2.5 hover:border-[#ffd600] hover:bg-white transition-colors cursor-pointer";
             return isInternal ? (
-              <Link key={p.name} to={p.href} className={className}>
+              <Link key={p.key} to={p.href} className={className}>
                 {content}
               </Link>
             ) : (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className={className}>
+              <a key={p.key} href={p.href} target="_blank" rel="noopener noreferrer" className={className}>
                 {content}
               </a>
             );

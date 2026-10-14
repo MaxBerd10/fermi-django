@@ -127,3 +127,49 @@ class SiteText(models.Model):
 
     def __str__(self) -> str:
         return self.key
+
+
+class HomeItem(models.Model):
+    """One entry of a list on the home page that used to be hard-coded in the frontend: a partner link, a project
+    card, a student quote, a headline figure or a "why us" card (`section`). The fields are deliberately generic; each
+    section uses the ones it needs (see HOME_SECTION_FIELDS in admin_api/home_views.py and src/pages/home/components).
+
+    `image_path` holds a built-in picture shipped with the frontend (/images/projects/x.jpg); `image` is one the
+    editors uploaded, and wins when both are set. A blank language falls back to Uzbek when the list is served."""
+
+    PARTNER = "partner"
+    PROJECT = "project"
+    VOICE = "voice"
+    FACT = "fact"
+    WHY = "why"
+    SECTION_CHOICES = [
+        (PARTNER, "Hamkorlar"),
+        (PROJECT, "Loyihalar"),
+        (VOICE, "Talabalar fikri"),
+        (FACT, "Raqamlar"),
+        (WHY, "Nega biz"),
+    ]
+
+    section = models.CharField(max_length=20, choices=SECTION_CHOICES, db_index=True)
+    order = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    subtitle_uz = models.CharField(max_length=255, blank=True)
+    subtitle_ru = models.CharField(max_length=255, blank=True)
+    subtitle_en = models.CharField(max_length=255, blank=True)
+    text_uz = models.TextField(blank=True)
+    text_ru = models.TextField(blank=True)
+    text_en = models.TextField(blank=True)
+    value = models.CharField(max_length=40, blank=True)
+    url = models.CharField(max_length=500, blank=True)
+    icon = models.CharField(max_length=60, blank=True)
+    image = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    image_path = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ["section", "order", "id"]
+
+    def __str__(self) -> str:
+        return f"{self.section}: {self.title_uz or self.text_uz[:40] or self.value}"

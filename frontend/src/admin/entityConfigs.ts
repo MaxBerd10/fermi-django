@@ -1,4 +1,4 @@
-import type { EntityConfig, ListColumn } from "./genericTypes";
+import type { EntityConfig, FieldSpec, ListColumn } from "./genericTypes";
 
 export const facultyConfig: EntityConfig = {
   resource: "faculty",
@@ -169,6 +169,109 @@ export const usefulSitesConfig: EntityConfig = {
     { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
     { kind: "media", key: "img", label: "Logotip (ixtiyoriy)" },
     { kind: "text", key: "url", label: "Havola (https://...)", required: true },
+  ],
+};
+
+// --- Home-page lists (apps/admin_api/home_views.py) --------------------------------------------
+// Only icons that are in the site's icon font subset (public/vendor/remixicon/remixicon-used.css) can be
+// picked: a class outside it would show nothing on the public page. Add a new one to the subset first.
+const HOME_ICON_OPTIONS = [
+  { value: "ri-government-line", label: "Hukumat" },
+  { value: "ri-file-list-line", label: "Hujjatlar" },
+  { value: "ri-building-line", label: "Bino" },
+  { value: "ri-hospital-line", label: "Shifoxona" },
+  { value: "ri-graduation-cap-line", label: "Ta'lim" },
+  { value: "ri-book-open-line", label: "Kitob" },
+  { value: "ri-heart-pulse-line", label: "Salomatlik" },
+  { value: "ri-stethoscope-line", label: "Stetoskop" },
+  { value: "ri-microscope-line", label: "Mikroskop" },
+  { value: "ri-flask-line", label: "Laboratoriya" },
+  { value: "ri-global-line", label: "Xalqaro" },
+  { value: "ri-shield-check-line", label: "Himoya" },
+  { value: "ri-database-2-line", label: "Ma'lumotlar bazasi" },
+  { value: "ri-user-star-line", label: "Mentor" },
+  { value: "ri-team-line", label: "Jamoa" },
+  { value: "ri-questionnaire-line", label: "Test" },
+  { value: "ri-vidicon-line", label: "Video" },
+  { value: "ri-cpu-line", label: "Texnologiya" },
+  { value: "ri-camera-line", label: "Kamera" },
+  { value: "ri-award-line", label: "Mukofot" },
+  { value: "ri-newspaper-line", label: "Yangiliklar" },
+  { value: "ri-mail-line", label: "Pochta" },
+  { value: "ri-links-line", label: "Havola" },
+];
+
+const ORDER_FIELD: FieldSpec = { kind: "number", key: "order", label: "Tartib raqami (kichigi birinchi; bo'sh = oxiriga)" };
+const HIDDEN_FIELD: FieldSpec = { kind: "checkbox", key: "hidden", label: "Saytda ko'rsatilmasin (yashirish)" };
+
+export const homePartnersConfig: EntityConfig = {
+  resource: "home-partners",
+  title: "Bosh sahifa — Hamkorlar",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
+    { kind: "text", key: "url", label: "Havola (https://... yoki /sahifa)", required: true },
+    { kind: "select", key: "icon", label: "Belgi", options: HOME_ICON_OPTIONS },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
+  ],
+};
+
+export const homeProjectsConfig: EntityConfig = {
+  resource: "home-projects",
+  title: "Bosh sahifa — Bizning loyihalar",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
+    { kind: "text", key: "url", label: "Havola (bo'sh qoldirilsa kartada \"Tayyorlanmoqda\" chiqadi)" },
+    { kind: "media", key: "img", label: "Rasm (4:3 nisbatda, kamida 480×360)" },
+    { kind: "select", key: "icon", label: "Belgi", options: HOME_ICON_OPTIONS },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
+  ],
+};
+
+export const homeVoicesConfig: EntityConfig = {
+  resource: "home-voices",
+  title: "Bosh sahifa — Talabalar fikri",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Ism" }, { key: "subtitle_uz", label: "Kurs / lavozim" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-textarea", base: "text", label: "Fikr (iqtibos)", requiredUz: true },
+    { kind: "lang-text", base: "title", label: "Ism", requiredUz: true },
+    { kind: "lang-text", base: "subtitle", label: "Kurs / lavozim (masalan: 3-kurs talabasi)" },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
+  ],
+};
+
+export const homeFactsConfig: EntityConfig = {
+  resource: "home-facts",
+  title: "Bosh sahifa — Raqamlar (talabalar fikri yonida)",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "value", label: "Raqam" }, { key: "title_uz", label: "Izoh" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "text", key: "value", label: "Raqam (masalan: 92% yoki 20+)", required: true },
+    { kind: "lang-text", base: "title", label: "Izoh", requiredUz: true },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
+  ],
+};
+
+export const homeWhyConfig: EntityConfig = {
+  resource: "home-why",
+  title: "Bosh sahifa — Nega bizni tanlashadi",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Sarlavha" }, { key: "value", label: "Raqam" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Sarlavha", requiredUz: true },
+    { kind: "lang-textarea", base: "text", label: "Qisqa tavsif", requiredUz: true },
+    { kind: "text", key: "value", label: "Raqam (masalan: 275+; bo'sh bo'lishi mumkin)" },
+    { kind: "lang-text", base: "subtitle", label: "Raqam izohi (masalan: Professorlar)" },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
   ],
 };
 
@@ -360,6 +463,11 @@ export const ALL_ENTITY_CONFIGS = [
   coruselConfig,
   networkConfig,
   usefulSitesConfig,
+  homePartnersConfig,
+  homeProjectsConfig,
+  homeVoicesConfig,
+  homeFactsConfig,
+  homeWhyConfig,
   contactConfig,
   acceptanceConfig,
   virtualConfig,

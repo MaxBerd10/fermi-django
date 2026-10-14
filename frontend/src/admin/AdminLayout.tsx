@@ -64,6 +64,16 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     ],
   },
   {
+    label: "Bosh sahifa bloklari",
+    items: [
+      { to: "/admin/home-partners", label: "Hamkorlar", icon: "ri-links-line" },
+      { to: "/admin/home-projects", label: "Bizning loyihalar", icon: "ri-stack-line" },
+      { to: "/admin/home-voices", label: "Talabalar fikri", icon: "ri-user-voice-line" },
+      { to: "/admin/home-facts", label: "Raqamlar", icon: "ri-bar-chart-line" },
+      { to: "/admin/home-why", label: "Nega bizni tanlashadi", icon: "ri-award-line" },
+    ],
+  },
+  {
     label: "Sozlamalar",
     items: [
       { to: "/admin/site-texts", label: "Sayt matnlari", icon: "ri-translate-2" },

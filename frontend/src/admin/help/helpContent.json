@@ -191,8 +191,77 @@
       ]
     },
     {
+      "id": "bosh",
+      "title": "7. Bosh sahifa bloklari va sayt matnlari",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bosh sahifadagi hamkorlar, loyihalar kartalari, talabalar fikri, raqamlar va «Nega bizni tanlashadi» kartalari chap menyudagi «Bosh sahifa bloklari» boʻlimidan oʻzgaradi. Har bir qator — saytdagi bitta karta: uni oʻzgartirish, yangisini qoʻshish, vaqtincha yashirish yoki oʻchirish mumkin."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Boʻlim",
+            "Saytda qayerda",
+            "Nimalar oʻzgaradi"
+          ],
+          "rows": [
+            [
+              "Hamkorlar",
+              "«Xalqaro va mahalliy hamkorlar»",
+              "Nomi (3 tilda), havola, belgi"
+            ],
+            [
+              "Bizning loyihalar",
+              "«Bizning loyihalar» kartalari",
+              "Nomi, havola, rasm, belgi. Havola boʻsh boʻlsa karta «Tayyorlanmoqda» deb chiqadi"
+            ],
+            [
+              "Talabalar fikri",
+              "«Talabalar va bitiruvchilar nima deydi»",
+              "Fikr matni, ism, kurs yoki lavozim (3 tilda)"
+            ],
+            [
+              "Raqamlar",
+              "Talabalar fikri yonidagi raqamli kartalar",
+              "Raqam (masalan 92%) va izoh"
+            ],
+            [
+              "Nega bizni tanlashadi",
+              "«Nega bizni tanlashadi?» kartalari",
+              "Sarlavha, qisqa tavsif, raqam va raqam izohi"
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Yangi karta qoʻshish",
+          "items": [
+            "Chap menyuda «Bosh sahifa bloklari» ostidan kerakli boʻlimni oching.",
+            "«Qoʻshish» tugmasini bosing, oʻzbekcha maydonlarni toʻldiring (rus va ingliz tili boʻsh qolsa, oʻzbekcha matn koʻrsatiladi).",
+            "«Tartib raqami» kichik boʻlsa karta oldinroq turadi. Boʻsh qoldirsangiz, karta oxiriga qoʻshiladi.",
+            "«Saqlash» ni bosing — oʻzgarish saytda bir necha soniyada koʻrinadi."
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Bilib qoʻying",
+          "items": [
+            "«Saytda koʻrsatilmasin» belgisi kartani oʻchirmaydi, faqat saytdan olib turadi. Keyin belgini olib tashlasangiz, u yana chiqadi.",
+            "Boʻlimdagi barcha kartalarni yashirsangiz yoki oʻchirsangiz, bosh sahifadagi shu blok umuman chiqmaydi.",
+            "Belgi (ikonka) faqat roʻyxatdagilardan tanlanadi: boshqasi sayt shriftida yoʻq, shuning uchun koʻrinmay qolardi.",
+            "Bu boʻlimlardagi matnlar «Sayt matnlari» roʻyxatida «Boshqa boʻlimda» deb belgilangan: ularni faqat shu yerdan oʻzgartiring."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Tugma va sarlavha yozuvlari (masalan, blok sarlavhasi «Bizning loyihalar» yoki pastki qism matnlari) esa «Sozlamalar → Sayt matnlari» da uch tilda oʻzgartiriladi."
+        }
+      ]
+    },
+    {
       "id": "tuzilma",
-      "title": "7. Fakultet, kafedra va xodimlar",
+      "title": "8. Fakultet, kafedra va xodimlar",
       "blocks": [
         {
           "type": "p",
@@ -219,7 +288,7 @@
     },
     {
       "id": "galereya",
-      "title": "8. Foto galereya, video, hujjatlar",
+      "title": "9. Foto galereya, video, hujjatlar",
       "blocks": [
         {
           "type": "p",
@@ -240,7 +309,7 @@
     },
     {
       "id": "murojaat",
-      "title": "9. Murojaatlar va arizalar",
+      "title": "10. Murojaatlar va arizalar",
       "blocks": [
         {
           "type": "p",
@@ -268,7 +337,7 @@
     },
     {
       "id": "sozlamalar",
-      "title": "10. Sozlamalar",
+      "title": "11. Sozlamalar",
       "blocks": [
         {
           "type": "table",
@@ -303,7 +372,7 @@
     },
     {
       "id": "xatolar",
-      "title": "11. Xato chiqsa nima qilish kerak",
+      "title": "12. Xato chiqsa nima qilish kerak",
       "blocks": [
         {
           "type": "table",
