@@ -83,11 +83,12 @@ export const imgConfig: EntityConfig = {
 export const videoConfig: EntityConfig = {
   resource: "videos",
   title: "Video",
-  listColumns: [{ key: "id", label: "ID" }, { key: "url", label: "URL" }],
-  deleteConfirmField: "url",
+  addLabel: "YouTube video qo'shish",
+  listColumns: [{ key: "title", label: "Video" }, { key: "kind", label: "Turi" }],
+  deleteConfirmField: "title",
   fields: [
-    { kind: "text", key: "url", label: "YouTube video havolasi (tavsiya etiladi, masalan https://youtu.be/…)" },
-    { kind: "text", key: "video", label: "Yuklangan video fayl yo'li (texnik maydon: odatda bo'sh qoldiring)" },
+    { kind: "text", key: "url", label: "YouTube havolasi (masalan: https://youtu.be/dQw4w9WgXcQ)" },
+    { kind: "file-link", key: "video", label: "Yuklangan video fayl (o'zgartirib bo'lmaydi; YouTube havolasi yozilsa, saytda o'sha ko'rsatiladi)" },
   ],
 };
 

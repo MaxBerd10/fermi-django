@@ -259,3 +259,20 @@ def test_a_strong_password_creates_the_account_and_a_missing_one_is_refused(admi
     assert ok.status_code == 201 and User.objects.get(username="yangi").check_password("Qizil-Anor-2026!")
     none = admin_client.post("/api/v1/admin/users", {"username": "yana", "email": "a@fjsti.uz", "role": "admin"}, format="json")
     assert none.status_code == 400 and none.json()["password"] == ["Parol kiriting."]
+
+
+def test_video_admin_stores_only_the_youtube_id_and_keeps_an_uploaded_file(admin_client):
+    from apps.video.models import VideoClip
+
+    for pasted in ("https://youtu.be/dQw4w9WgXcQ", "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=5s", "dQw4w9WgXcQ"):
+        created = admin_client.post(f"{ADMIN}/videos", {"url": pasted}, format="json")
+        assert created.status_code == 201 and created.json()["url"] == "dQw4w9WgXcQ"
+    assert admin_client.post(f"{ADMIN}/videos", {"url": "https://example.com/x"}, format="json").status_code == 400
+
+    clip = VideoClip.objects.create(file="uploads/videos/clips/2025/01/a.mp4")
+    opened = admin_client.get(f"{ADMIN}/videos/{clip.pk}").json()
+    assert opened["title"] == "a.mp4" and opened["kind"] == "Yuklangan fayl"
+    # re-saving the untouched form (which echoes the absolute file URL back) must not rewrite the stored file
+    assert admin_client.put(f"{ADMIN}/videos/{clip.pk}", opened, format="json").status_code == 200
+    clip.refresh_from_db()
+    assert clip.file.name == "uploads/videos/clips/2025/01/a.mp4" and clip.youtube_id == ""

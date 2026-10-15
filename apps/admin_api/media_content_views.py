@@ -1,6 +1,8 @@
 """admin/gallery-images, admin/videos, admin/courses, admin/schedules,
 admin/connect-leaders -- see entityConfigs.ts. All five are simple,
 already backed by existing models with no content/page involved."""
+import re
+
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
 
@@ -9,7 +11,14 @@ from apps.media_lib.models import GalleryPhoto
 from apps.schedule.models import Course, ScheduleFile
 from apps.video.models import VideoClip
 
-from .common import AdminSearchMixin, AdminPagination, IsAdminStaff, resolve_or_create_document, resolve_or_create_image
+from .common import (
+    AdminSearchMixin,
+    AdminPagination,
+    IsAdminStaff,
+    media_relative_path,
+    resolve_or_create_document,
+    resolve_or_create_image,
+)
 
 
 class AdminGalleryPhotoSerializer(serializers.ModelSerializer):
@@ -77,20 +86,50 @@ class AdminGalleryPhotoViewSet(AdminSearchMixin, viewsets.ModelViewSet):
     pagination_class = AdminPagination
 
 
+YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+YOUTUBE_URL_RE = re.compile(
+    r"(?:youtu\.be/|youtube(?:-nocookie)?\.com/(?:watch\?(?:[^#]*&)?v=|embed/|shorts/|live/|v/))([A-Za-z0-9_-]{11})"
+)
+
+
+def youtube_id_from(value: str) -> str:
+    """The 11-character video id from whatever an editor pasted (a watch / youtu.be / embed / shorts link or the bare
+    id). The public /video page builds its embed address from the id alone, so a whole link must never be stored."""
+    value = (value or "").strip()
+    if not value:
+        return ""
+    if YOUTUBE_ID_RE.match(value):
+        return value
+    match = YOUTUBE_URL_RE.search(value)
+    if not match:
+        raise serializers.ValidationError({"url": ["YouTube havolasi tanilmadi. Masalan: https://youtu.be/dQw4w9WgXcQ"]})
+    return match.group(1)
+
+
 class AdminVideoClipSerializer(serializers.ModelSerializer):
     video = serializers.SerializerMethodField()
     url = serializers.CharField(source="youtube_id", required=False, allow_blank=True)
+    title = serializers.SerializerMethodField()
+    kind = serializers.SerializerMethodField()
     status = serializers.SerializerMethodField()
 
     class Meta:
         model = VideoClip
-        fields = ["id", "video", "url", "status"]
+        fields = ["id", "video", "url", "title", "kind", "status"]
 
     def get_video(self, obj):
         if not obj.file:
             return None
         request = self.context.get("request")
         return request.build_absolute_uri(obj.file.url) if request else obj.file.url
+
+    def get_title(self, obj):
+        if obj.youtube_id:
+            return f"YouTube: {obj.youtube_id}"
+        return obj.file.name.rsplit("/", 1)[-1] if obj.file else f"Video #{obj.pk}"
+
+    def get_kind(self, obj):
+        return "YouTube" if obj.youtube_id else "Yuklangan fayl"
 
     def get_status(self, obj):
         return 1
@@ -103,9 +142,11 @@ class AdminVideoClipSerializer(serializers.ModelSerializer):
 
     def _save(self, instance, validated_data):
         data = self.context["request"].data
-        instance.youtube_id = data.get("url") or ""
-        video_path = (data.get("video") or "").lstrip("/")
-        if video_path:
+        instance.youtube_id = youtube_id_from(str(data.get("url") or ""))
+        # A record opened for editing echoes its file back as an absolute URL: normalise it, and only touch the stored
+        # file when the editor really pointed at another one (re-saving an untouched form must not rewrite it).
+        video_path = media_relative_path(str(data.get("video") or ""))
+        if video_path and video_path != (instance.file.name if instance.file else ""):
             instance.file = video_path
         instance.save()
         return instance
