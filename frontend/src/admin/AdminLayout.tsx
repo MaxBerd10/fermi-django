@@ -4,6 +4,7 @@ import { apiClient } from "@/api/client";
 import { logout } from "@/api/auth";
 import { useAdminAuth } from "./AdminAuthContext";
 import CommandPalette from "./components/CommandPalette";
+import { ConfirmProvider } from "./components/ConfirmDialog";
 import { ToastProvider } from "./components/Toast";
 import type { AdminOutletContext, DashboardData } from "./dashboard";
 import { groupOf, NAV_BOTTOM, NAV_GROUPS, NAV_TOP, type NavItem } from "./nav";
@@ -129,6 +130,7 @@ export default function AdminLayout() {
 
   return (
     <ToastProvider>
+      <ConfirmProvider>
       <div className="min-h-screen bg-background-100 lg:flex">
         {menuOpen && <div className="fixed inset-0 z-40 bg-primary-950/50 lg:hidden" onClick={closeMenu} aria-hidden="true" />}
 
@@ -269,6 +271,7 @@ export default function AdminLayout() {
 
         <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
       </div>
+      </ConfirmProvider>
     </ToastProvider>
   );
 }

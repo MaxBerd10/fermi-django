@@ -276,3 +276,14 @@ def test_video_admin_stores_only_the_youtube_id_and_keeps_an_uploaded_file(admin
     assert admin_client.put(f"{ADMIN}/videos/{clip.pk}", opened, format="json").status_code == 200
     clip.refresh_from_db()
     assert clip.file.name == "uploads/videos/clips/2025/01/a.mp4" and clip.youtube_id == ""
+
+
+def test_news_list_filters_by_status_and_category(admin_client, category):
+    _post(admin_client, category, title_uz="Chiqqan", status=1)
+    _post(admin_client, category, title_uz="Qoralama", status=0)
+    titles = lambda params: sorted(i["title_uz"] for i in admin_client.get(f"{ADMIN}/news", params).json()["results"])
+    assert titles({}) == ["Chiqqan", "Qoralama"]
+    assert titles({"status": "1"}) == ["Chiqqan"]
+    assert titles({"status": "0"}) == ["Qoralama"]
+    assert titles({"category": str(category.pk)}) == ["Chiqqan", "Qoralama"]
+    assert titles({"category": "999999"}) == []

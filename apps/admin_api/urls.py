@@ -13,6 +13,7 @@ from .home_views import (
     AdminHomeFactViewSet,
     AdminHomePartnerViewSet,
     AdminHomeProjectViewSet,
+    AdminHomeToolViewSet,
     AdminHomeVoiceViewSet,
     AdminHomeWhyViewSet,
 )
@@ -85,6 +86,7 @@ router.register("admin/home-projects", AdminHomeProjectViewSet, basename="admin-
 router.register("admin/home-voices", AdminHomeVoiceViewSet, basename="admin-home-voices")
 router.register("admin/home-facts", AdminHomeFactViewSet, basename="admin-home-facts")
 router.register("admin/home-why", AdminHomeWhyViewSet, basename="admin-home-why")
+router.register("admin/home-tools", AdminHomeToolViewSet, basename="admin-home-tools")
 router.register("admin/users", AdminUserViewSet, basename="admin-users")
 router.register("admin/result-categories", AdminResultCategoryViewSet, basename="admin-result-categories")
 router.register("admin/result-files", AdminResultFileViewSet, basename="admin-result-files")

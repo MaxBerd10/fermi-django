@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { listUsers, deleteUser, type AdminUserItem } from "@/api/adminUsers";
 import DataTable from "@/admin/components/DataTable";
+import { useConfirm } from "@/admin/components/ConfirmDialog";
 import ListToolbar from "@/admin/components/ListToolbar";
 import PageHeader from "@/admin/components/PageHeader";
 import Pagination from "@/admin/components/Pagination";
@@ -12,6 +13,7 @@ const STATUS_LABELS: Record<number, string> = { 10: "Faol", 9: "Nofaol", 0: "O'c
 
 export default function UserListPage() {
   const { user: currentUser } = useAdminAuth();
+  const confirm = useConfirm();
   const [items, setItems] = useState<AdminUserItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -43,7 +45,13 @@ export default function UserListPage() {
   }
 
   async function onDelete(item: AdminUserItem) {
-    if (!window.confirm(`"${item.username}" hisobini o'chirishni tasdiqlaysizmi?`)) return;
+    const ok = await confirm({
+      title: `«${item.username}» hisobi o'chirilsinmi?`,
+      message: "Bu odam admin panelga kira olmaydi. Qaytarib bo'lmaydi.",
+      confirmLabel: "Ha, o'chirish",
+      danger: true,
+    });
+    if (!ok) return;
     setError("");
     try {
       await deleteUser(item.id);

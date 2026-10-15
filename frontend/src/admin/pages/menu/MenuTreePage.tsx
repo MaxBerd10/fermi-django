@@ -5,6 +5,7 @@ import type { MenuNodeInput, MovePosition } from "@/api/adminMenu";
 import MenuTreeNode from "@/admin/components/MenuTreeNode";
 import MenuNodeEditor from "@/admin/components/MenuNodeEditor";
 import PageHeader from "@/admin/components/PageHeader";
+import { useConfirm } from "@/admin/components/ConfirmDialog";
 import { useToast } from "@/admin/components/Toast";
 
 function findNode(nodes: AdminMenuNode[], id: number): AdminMenuNode | null {
@@ -38,6 +39,7 @@ export default function MenuTreePage() {
   const draggingIdRef = useRef<number | null>(null);
   const [error, setError] = useState("");
   const toast = useToast();
+  const confirm = useConfirm();
 
   async function load() {
     setLoading(true);
@@ -89,7 +91,13 @@ export default function MenuTreePage() {
 
   async function onDelete(node: AdminMenuNode) {
     const childWarning = node.children.length > 0 ? ` (va uning ${node.children.length} ta ichki elementi)` : "";
-    if (!window.confirm(`"${node.titleUz}"${childWarning}ni o'chirishni tasdiqlaysizmi? Menyudan yo'qoladi (sahifaning o'zi o'chmaydi).`)) return;
+    const ok = await confirm({
+      title: `«${node.titleUz}» menyudan o'chirilsinmi?`,
+      message: `${childWarning ? `Uning ichidagi ${node.children.length} ta element ham yo'qoladi. ` : ""}Sahifaning o'zi o'chmaydi, faqat menyudan olib tashlanadi.`,
+      confirmLabel: "Ha, o'chirish",
+      danger: true,
+    });
+    if (!ok) return;
     await deleteMenuNode(node.id);
     if (selectedId === node.id) setSelectedId(null);
     await load();

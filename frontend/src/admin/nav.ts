@@ -49,6 +49,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "Bosh sahifa bloklari",
     icon: "ri-layout-masonry-line",
     items: [
+      { to: "/admin/home-tools", label: "Tezkor tugmalar", icon: "ri-flashlight-line", keywords: "hemis qabul virtual qabulxona yuqori tugma" },
       { to: "/admin/home-partners", label: "Hamkorlar", icon: "ri-links-line", keywords: "hamkor havola portal" },
       { to: "/admin/home-projects", label: "Bizning loyihalar", icon: "ri-stack-line", keywords: "loyiha aishifokor" },
       { to: "/admin/home-voices", label: "Talabalar fikri", icon: "ri-user-voice-line", keywords: "iqtibos fikr" },

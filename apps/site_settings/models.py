@@ -142,12 +142,14 @@ class HomeItem(models.Model):
     VOICE = "voice"
     FACT = "fact"
     WHY = "why"
+    TOOL = "tool"
     SECTION_CHOICES = [
         (PARTNER, "Hamkorlar"),
         (PROJECT, "Loyihalar"),
         (VOICE, "Talabalar fikri"),
         (FACT, "Raqamlar"),
         (WHY, "Nega biz"),
+        (TOOL, "Tezkor tugmalar"),
     ]
 
     section = models.CharField(max_length=20, choices=SECTION_CHOICES, db_index=True)

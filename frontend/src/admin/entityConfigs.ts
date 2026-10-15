@@ -200,6 +200,11 @@ const HOME_ICON_OPTIONS = [
   { value: "ri-award-line", label: "Mukofot" },
   { value: "ri-newspaper-line", label: "Yangiliklar" },
   { value: "ri-mail-line", label: "Pochta" },
+  { value: "ri-chat-smile-3-line", label: "Suhbat" },
+  { value: "ri-file-user-line", label: "Ariza" },
+  { value: "ri-route-line", label: "Yo'nalish" },
+  { value: "ri-dashboard-3-line", label: "Kabinet" },
+  { value: "ri-map-pin-line", label: "Manzil" },
   { value: "ri-links-line", label: "Havola" },
 ];
 
@@ -257,6 +262,23 @@ export const homeFactsConfig: EntityConfig = {
   fields: [
     { kind: "text", key: "value", label: "Raqam (masalan: 92% yoki 20+)", required: true },
     { kind: "lang-text", base: "title", label: "Izoh", requiredUz: true },
+    ORDER_FIELD,
+    HIDDEN_FIELD,
+  ],
+};
+
+export const homeToolsConfig: EntityConfig = {
+  resource: "home-tools",
+  title: "Bosh sahifa — Tezkor tugmalar (yuqori qism)",
+  addLabel: "Tugma qo'shish",
+  listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
+  deleteConfirmField: "title_uz",
+  fields: [
+    { kind: "lang-text", base: "title", label: "Nomi", requiredUz: true },
+    { kind: "lang-textarea", base: "text", label: "Qisqa izoh" },
+    { kind: "text", key: "url", label: "Havola (https://... yoki /sahifa yoki #bolim)", required: true },
+    { kind: "select", key: "icon", label: "Belgi", options: HOME_ICON_OPTIONS },
+    { kind: "checkbox", key: "accent", label: "Ajratib ko'rsatish (sariq tugma; odatda bittasi)" },
     ORDER_FIELD,
     HIDDEN_FIELD,
   ],
@@ -474,6 +496,7 @@ export const ALL_ENTITY_CONFIGS = [
   homeVoicesConfig,
   homeFactsConfig,
   homeWhyConfig,
+  homeToolsConfig,
   contactConfig,
   acceptanceConfig,
   virtualConfig,

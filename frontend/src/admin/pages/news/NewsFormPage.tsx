@@ -8,6 +8,7 @@ import LangTabs, { type Lang } from "@/admin/components/LangTabs";
 import MediaPicker from "@/admin/components/MediaPicker";
 import PageHeader from "@/admin/components/PageHeader";
 import RichTextEditor from "@/admin/components/RichTextEditor";
+import { useConfirm } from "@/admin/components/ConfirmDialog";
 import { useToast } from "@/admin/components/Toast";
 import { nowLabel, useUnsavedGuard } from "@/admin/components/useUnsavedGuard";
 import { ApiError } from "@/types/api";
@@ -52,6 +53,7 @@ export default function NewsFormPage() {
   const isNew = !id;
   const navigate = useNavigate();
   const toast = useToast();
+  const confirm = useConfirm();
 
   const [form, setForm] = useState<Partial<AdminPost>>(EMPTY);
   const [initial, setInitial] = useState(() => JSON.stringify(EMPTY));
@@ -112,7 +114,15 @@ export default function NewsFormPage() {
 
   async function onTranslateClick() {
     const hasExisting = TARGET_LANGS.some((l) => form[`title_${l}`]?.trim() || !isBlank(form[`content_${l}`]));
-    if (hasExisting && !window.confirm("RU va EN maydonlaridagi mavjud matn UZ tarjimasi bilan almashtiriladi. Davom etasizmi?")) return;
+    if (
+      hasExisting &&
+      !(await confirm({
+        title: "Mavjud RU va EN matnlar almashtirilsinmi?",
+        message: "RU va EN maydonlaridagi yozilgan matn UZ matnining yangi tarjimasi bilan almashtiriladi.",
+        confirmLabel: "Ha, tarjima qilish",
+      }))
+    )
+      return;
     setTranslating(true);
     setError("");
     try {

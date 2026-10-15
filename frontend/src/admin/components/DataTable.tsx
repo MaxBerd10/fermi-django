@@ -64,7 +64,9 @@ export default function DataTable<T extends { id: number }>({
     ) : null;
   }
 
-  const [primary, ...rest] = shown;
+  // On a phone the card's heading is the record's name, not its position number.
+  const primary = shown.find((col) => col.key !== "order") ?? shown[0];
+  const rest = shown.filter((col) => col !== primary);
 
   function onRowClick(e: React.MouseEvent, item: T) {
     // A click on a link/button inside the row does its own thing; anywhere else opens the record.

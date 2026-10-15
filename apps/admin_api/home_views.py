@@ -1,6 +1,8 @@
 """admin/home-partners, home-projects, home-voices, home-facts, home-why -- the editable lists of the home page
 (see apps.site_settings.models.HomeItem and entityConfigs.ts). One serializer for all five; each resource is the same
 ViewSet narrowed to one `section`, so the editor form of a section only shows the fields that section uses."""
+import re
+
 from django.db.models import Max
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
@@ -10,16 +12,20 @@ from apps.site_settings.models import HomeItem
 from .common import AdminPagination, AdminSearchMixin, IsAdminStaff, resolve_or_create_image
 
 TEXT_FIELDS = ("title", "subtitle", "text")
+# Where a button / card may lead: this site's own pages, an anchor, a normal web address, a phone or mail link.
+# Anything else (javascript:, data:, ...) would run in the visitor's browser when clicked.
+SAFE_URL_RE = re.compile(r"^(?:https?://|/(?!/)|#|tel:|mailto:)", re.IGNORECASE)
 
 
 class AdminHomeItemSerializer(serializers.ModelSerializer):
     img = serializers.SerializerMethodField()
     hidden = serializers.SerializerMethodField()
+    accent = serializers.SerializerMethodField()
 
     class Meta:
         model = HomeItem
         fields = [
-            "id", "order", "hidden", "value", "url", "icon", "img",
+            "id", "order", "hidden", "accent", "value", "url", "icon", "img",
             "title_uz", "title_ru", "title_en",
             "subtitle_uz", "subtitle_ru", "subtitle_en",
             "text_uz", "text_ru", "text_en",
@@ -27,6 +33,9 @@ class AdminHomeItemSerializer(serializers.ModelSerializer):
 
     def get_hidden(self, obj):
         return 0 if obj.is_active else 1
+
+    def get_accent(self, obj):
+        return 1 if obj.value == "accent" else 0
 
     def get_img(self, obj):
         if obj.image:
@@ -50,6 +59,11 @@ class AdminHomeItemSerializer(serializers.ModelSerializer):
         for name in ("value", "url", "icon"):
             if name in data:
                 setattr(instance, name, str(data.get(name) or "").strip())
+        if instance.url and not SAFE_URL_RE.match(instance.url):
+            raise serializers.ValidationError({"url": ["Havola https:// yoki / bilan boshlanishi kerak (masalan: https://hemis.fjsti.uz yoki /qabul)."]})
+        if instance.section == HomeItem.TOOL and "accent" in data:
+            # a quick button's "value" only says whether it is the highlighted (yellow) one
+            instance.value = "accent" if int(data.get("accent") or 0) else ""
         if "hidden" in data:
             instance.is_active = not int(data.get("hidden") or 0)
         order = data.get("order")
@@ -88,3 +102,4 @@ AdminHomeProjectViewSet = _viewset(HomeItem.PROJECT, ("title_uz", "title_ru", "t
 AdminHomeVoiceViewSet = _viewset(HomeItem.VOICE, ("title_uz", "title_ru", "title_en", "text_uz"))
 AdminHomeFactViewSet = _viewset(HomeItem.FACT, ("title_uz", "title_ru", "title_en", "value"))
 AdminHomeWhyViewSet = _viewset(HomeItem.WHY, ("title_uz", "title_ru", "title_en", "text_uz"))
+AdminHomeToolViewSet = _viewset(HomeItem.TOOL, ("title_uz", "title_ru", "title_en", "url"))

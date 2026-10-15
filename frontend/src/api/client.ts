@@ -127,7 +127,7 @@ const LOCALE_KEYS = ["uz", "ru", "en"] as const;
 // from the Node feed, never through Django's API), so it needs this same
 // fix applied at that separate, later chokepoint instead.
 
-function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
+export function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
   if (Array.isArray(value)) {
     return value.map((item) => resolveLocale(item, lang)) as T;
   }

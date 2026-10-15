@@ -33,12 +33,21 @@ export interface HomeWhy {
   metric: string;
   metricLabel: string;
 }
+export interface HomeTool {
+  id: number;
+  title: string;
+  desc: string;
+  url: string;
+  icon: string;
+  accent: boolean;
+}
 export interface HomeSections {
   partners: HomePartner[];
   projects: HomeProject[];
   voices: HomeVoice[];
   facts: HomeFact[];
   why: HomeWhy[];
+  tools: HomeTool[];
 }
 
 // One request per language per page view: four home sections share it. null = the request failed, and each
@@ -58,12 +67,13 @@ function loadHomeSections(lang: string): Promise<HomeSections | null> {
 }
 
 /** undefined while loading, null if the request failed, else the editable lists. */
-export function useHomeSections(): HomeSections | null | undefined {
+export function useHomeSections(enabled = true): HomeSections | null | undefined {
   const { i18n } = useTranslation();
   const lang = (i18n.resolvedLanguage || i18n.language || "uz").slice(0, 2);
   const [sections, setSections] = useState<HomeSections | null | undefined>(undefined);
 
   useEffect(() => {
+    if (!enabled) return;
     let cancelled = false;
     loadHomeSections(lang).then((data) => {
       if (!cancelled) setSections(data);
@@ -71,7 +81,7 @@ export function useHomeSections(): HomeSections | null | undefined {
     return () => {
       cancelled = true;
     };
-  }, [lang]);
+  }, [lang, enabled]);
 
   return sections;
 }

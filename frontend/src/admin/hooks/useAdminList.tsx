@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { adminResource } from "@/api/admin";
 import { ApiError } from "@/types/api";
+import { useConfirm } from "../components/ConfirmDialog";
 
 export function adminErrorMessage(err: unknown, fallback = "Xatolik yuz berdi. Qayta urinib ko'ring."): string {
   if (err instanceof ApiError) {
@@ -27,8 +28,9 @@ export function adminErrorMessage(err: unknown, fallback = "Xatolik yuz berdi. Q
  *  - a failed delete (a protected foreign key, a 500) threw an unhandled rejection and
  *    the row simply stayed, with no explanation.
  */
-export function useAdminList<T extends { id: number }>(resource: string, pageSize = 20) {
+export function useAdminList<T extends { id: number }>(resource: string, pageSize = 20, filters?: Record<string, string>) {
   const api = useMemo(() => adminResource<T>(resource), [resource]);
+  const confirm = useConfirm();
   const [items, setItems] = useState<T[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -37,13 +39,15 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
   const [searchInput, setSearchInput] = useState("");
   const [search, setSearch] = useState("");
   const ticket = useRef(0);
+  // Extra query params (a status / category filter); a new filter starts again from page 1.
+  const filterKey = JSON.stringify(filters ?? {});
 
   const load = useCallback(async () => {
     const mine = ++ticket.current;
     setLoading(true);
     setError("");
     try {
-      const { items: rows, meta } = await api.list({ page, pageSize, search: search || undefined });
+      const { items: rows, meta } = await api.list({ page, pageSize, search: search || undefined, ...(JSON.parse(filterKey) as Record<string, string>) });
       if (mine !== ticket.current) return;
       setItems(rows);
       setTotal(meta?.total ?? rows.length);
@@ -55,11 +59,13 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
     } finally {
       if (mine === ticket.current) setLoading(false);
     }
-  }, [api, page, pageSize, search]);
+  }, [api, page, pageSize, search, filterKey]);
 
   useEffect(() => {
     load();
   }, [load]);
+
+  useEffect(() => setPage(1), [filterKey]);
 
   // Search as you type: a moment after the last key the list filters itself (Enter still searches at once).
   useEffect(() => {
@@ -83,8 +89,18 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
 
   const remove = useCallback(
     async (item: T, label: string, warning?: string): Promise<void> => {
-      const extra = warning ? `\n\n${warning}` : "";
-      if (!window.confirm(`"${label}" yozuvini o'chirishni tasdiqlaysizmi?${extra}\n\nO'chirilgan yozuvni qaytarib bo'lmaydi.`)) return;
+      const ok = await confirm({
+        title: `«${label}» o'chirilsinmi?`,
+        message: (
+          <>
+            {warning && <p className="mb-2">{warning}</p>}
+            <p>O'chirilgan yozuvni qaytarib bo'lmaydi.</p>
+          </>
+        ),
+        confirmLabel: "Ha, o'chirish",
+        danger: true,
+      });
+      if (!ok) return;
       try {
         await api.remove(item.id);
       } catch (err) {
@@ -95,7 +111,7 @@ export function useAdminList<T extends { id: number }>(resource: string, pageSiz
       if (items.length === 1 && page > 1) setPage(page - 1);
       else await load();
     },
-    [api, items.length, load, page],
+    [api, confirm, items.length, load, page],
   );
 
   return { items, loading, error, page, setPage, total, pageSize, searchInput, setSearchInput, submitSearch, remove, reload: load };

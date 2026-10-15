@@ -255,3 +255,13 @@ class AdminPostViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelVi
     serializer_class = AdminPostSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
     pagination_class = AdminPagination
+
+    def get_queryset(self):
+        """The list's filters: ?status=1 (published) / ?status=0 (draft) and ?category=<id>."""
+        queryset = super().get_queryset()
+        params = self.request.query_params
+        if params.get("status") in ("0", "1"):
+            queryset = queryset.filter(is_published=params["status"] == "1")
+        if (params.get("category") or "").isdigit():
+            queryset = queryset.filter(category_id=int(params["category"]))
+        return queryset

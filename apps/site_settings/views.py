@@ -60,9 +60,29 @@ class HomeSectionsView(APIView):
     copy of the same content only for the case that this request fails."""
 
     def get(self, request):
-        sections: dict[str, list] = {"partners": [], "projects": [], "voices": [], "facts": [], "why": []}
-        for item in HomeItem.objects.filter(is_active=True).select_related("image"):
-            if item.section == HomeItem.PARTNER:
+        # ?only=tools: just the top-section buttons (the Node server puts them into index.html, see production-server.mjs)
+        only_tools = request.query_params.get("only") == "tools"
+        sections: dict[str, list] = (
+            {"tools": []}
+            if only_tools
+            else {"partners": [], "projects": [], "voices": [], "facts": [], "why": [], "tools": []}
+        )
+        items = HomeItem.objects.filter(is_active=True).select_related("image")
+        if only_tools:
+            items = items.filter(section=HomeItem.TOOL)
+        for item in items:
+            if item.section == HomeItem.TOOL:
+                sections["tools"].append(
+                    {
+                        "id": item.pk,
+                        "title": _lang3(item, "title"),
+                        "desc": _lang3(item, "text"),
+                        "url": item.url,
+                        "icon": item.icon,
+                        "accent": item.value == "accent",
+                    }
+                )
+            elif item.section == HomeItem.PARTNER:
                 sections["partners"].append(
                     {"id": item.pk, "name": _lang3(item, "title"), "url": item.url, "icon": item.icon}
                 )

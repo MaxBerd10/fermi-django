@@ -22,6 +22,7 @@ const SLUG_ROUTES = /^\/(blog|faculty|departments|documents|news|detail|about)\/
 
 const HOME: Shortcut[] = [
   { to: "/admin/site-texts?q=hero", label: "Sarlavha va tugma yozuvlari", icon: "ri-translate-2" },
+  { to: "/admin/home-tools", label: "Yuqoridagi tezkor tugmalar", icon: "ri-flashlight-line" },
   { to: "/admin/home-partners", label: "Hamkorlar", icon: "ri-links-line" },
   { to: "/admin/home-projects", label: "Bizning loyihalar", icon: "ri-stack-line" },
   { to: "/admin/home-voices", label: "Talabalar fikri", icon: "ri-user-voice-line" },

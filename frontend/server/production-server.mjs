@@ -329,12 +329,12 @@ function isWriteMethod(request) {
 async function proxyAndDropCacheOnWrite(request, response) {
   if (!isWriteMethod(request)) return await streamProxy(request, response, fermiApiBaseUrl);
   clearApiCache();
-  dropSiteTextsCache();
+  dropInjectedCaches();
   try {
     return await streamProxy(request, response, fermiApiBaseUrl);
   } finally {
     clearApiCache();
-    dropSiteTextsCache();
+    dropInjectedCaches();
   }
 }
 
@@ -437,58 +437,70 @@ async function handleOpenAi(request, response) {
   response.end(await upstream.text());
 }
 
-// The admin-edited interface texts (Django: /api/v1/site-texts) are put into index.html as a JSON data block, so a page
-// opens with its edited wording and needs no extra request (see src/i18n/index.ts, which reads the block). The copy
-// is refreshed at most every SITE_TEXTS_TTL_MS; a refresh never delays a page once a copy exists, and a write through
-// this server drops the copy so the editor's change shows on the very next load.
-const SITE_TEXTS_TTL_MS = 20_000;
-const SITE_TEXTS_TIMEOUT_MS = 2_500;
-let siteTextsCopy = { json: null, at: 0 };
-let siteTextsPending = null;
-let siteTextsFailedAt = 0; // Django unreachable: do not make every page wait for the timeout again for a while
-const SITE_TEXTS_RETRY_MS = 10_000;
+// Admin-edited data that must be on screen from the first paint is put into index.html as JSON data blocks, so a page
+// opens with it and needs no extra request: the interface texts (Django: /api/v1/site-texts, read by src/i18n/index.ts)
+// and the home page's quick buttons (/api/v1/home-sections?only=tools, read by src/lib/homeTools.ts). Each copy is
+// refreshed at most every INJECTED_TTL_MS; a refresh never delays a page once a copy exists, and a write through this
+// server drops the copies so the editor's change shows on the very next load.
+const INJECTED_TTL_MS = 20_000;
+const INJECTED_TIMEOUT_MS = 2_500;
+const INJECTED_RETRY_MS = 10_000; // Django unreachable: do not make every page wait for the timeout again for a while
 
-function dropSiteTextsCache() {
-  siteTextsCopy = { json: null, at: 0 };
-}
+function createInjectedJson({ path, id }) {
+  let copy = { json: null, at: 0 };
+  let pending = null;
+  let failedAt = 0;
 
-function refreshSiteTexts(host) {
-  if (!siteTextsPending) {
-    // Django answers only the public host name and, with SSL redirect on, only requests marked https: say what nginx
-    // says when it proxies a visitor (the same two headers streamProxy forwards), or it answers 400/301.
-    const headers = { "x-forwarded-host": host || "fermi.uz", "x-forwarded-proto": "https" };
-    siteTextsPending = fetch(new URL("/api/v1/site-texts", fermiApiBaseUrl), { headers, signal: AbortSignal.timeout(SITE_TEXTS_TIMEOUT_MS) })
-      .then(async (upstream) => {
-        if (!upstream.ok) throw new Error(`site-texts ${upstream.status}`);
-        const body = await upstream.text();
-        JSON.parse(body); // never keep something that is not JSON
-        siteTextsCopy = { json: body, at: Date.now() };
-        siteTextsFailedAt = 0;
-      })
-      .catch(() => {
-        siteTextsFailedAt = Date.now(); // Django briefly down: keep the last good copy
-      })
-      .finally(() => {
-        siteTextsPending = null;
-      });
+  function refresh(host) {
+    if (!pending) {
+      // Django answers only the public host name and, with SSL redirect on, only requests marked https: say what nginx
+      // says when it proxies a visitor (the same two headers streamProxy forwards), or it answers 400/301.
+      const headers = { "x-forwarded-host": host || "fermi.uz", "x-forwarded-proto": "https" };
+      pending = fetch(new URL(path, fermiApiBaseUrl), { headers, signal: AbortSignal.timeout(INJECTED_TIMEOUT_MS) })
+        .then(async (upstream) => {
+          if (!upstream.ok) throw new Error(`${id} ${upstream.status}`);
+          const body = await upstream.text();
+          JSON.parse(body); // never keep something that is not JSON
+          copy = { json: body, at: Date.now() };
+          failedAt = 0;
+        })
+        .catch(() => {
+          failedAt = Date.now(); // Django briefly down: keep the last good copy
+        })
+        .finally(() => {
+          pending = null;
+        });
+    }
+    return pending;
   }
-  return siteTextsPending;
+
+  return {
+    drop() {
+      copy = { json: null, at: 0 };
+    },
+    async json(host) {
+      const fresh = copy.json !== null && Date.now() - copy.at < INJECTED_TTL_MS;
+      if (fresh) return copy.json;
+      if (copy.json === null && failedAt && Date.now() - failedAt < INJECTED_RETRY_MS) return null;
+      const refreshing = refresh(host);
+      if (copy.json === null) await refreshing; // first ever load (or right after an edit): wait, bounded by the timeout
+      return copy.json;
+    },
+    /** `<` is escaped so the data can never close its own <script> block, whatever an editor typed. */
+    inject(html, json) {
+      if (json === null || !html.includes("</head>")) return html;
+      const safe = json.replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+      return html.replace("</head>", () => `<script id="${id}" type="application/json">${safe}</script></head>`);
+    },
+  };
 }
 
-async function siteTextsJson(host) {
-  const fresh = siteTextsCopy.json !== null && Date.now() - siteTextsCopy.at < SITE_TEXTS_TTL_MS;
-  if (fresh) return siteTextsCopy.json;
-  if (siteTextsCopy.json === null && siteTextsFailedAt && Date.now() - siteTextsFailedAt < SITE_TEXTS_RETRY_MS) return null;
-  const refreshing = refreshSiteTexts(host);
-  if (siteTextsCopy.json === null) await refreshing; // first ever load (or right after an edit): wait, bounded by the timeout
-  return siteTextsCopy.json;
-}
+const siteTexts = createInjectedJson({ path: "/api/v1/site-texts", id: "site-texts" });
+const homeTools = createInjectedJson({ path: "/api/v1/home-sections?only=tools", id: "home-tools" });
 
-/** `<` is escaped so the data can never close its own <script> block, whatever an editor typed. */
-function injectSiteTexts(html, json) {
-  if (json === null || !html.includes("</head>")) return html;
-  const safe = json.replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
-  return html.replace("</head>", () => `<script id="site-texts" type="application/json">${safe}</script></head>`);
+function dropInjectedCaches() {
+  siteTexts.drop();
+  homeTools.drop();
 }
 
 async function serveStatic(request, response) {
@@ -514,7 +526,9 @@ async function serveStatic(request, response) {
   response.setHeader("Content-Type", mimeTypes[extension] || "application/octet-stream");
   response.setHeader("Cache-Control", filePath.includes(`${distDir}/assets/`) ? "public, max-age=31536000, immutable" : "no-cache");
   if (extension === ".html") {
-    const page = injectSiteTexts(await readFile(filePath, "utf8"), await siteTextsJson(request.headers.host));
+    const host = request.headers.host;
+    const [html, textsJson, toolsJson] = await Promise.all([readFile(filePath, "utf8"), siteTexts.json(host), homeTools.json(host)]);
+    const page = homeTools.inject(siteTexts.inject(html, textsJson), toolsJson);
     response.setHeader("Content-Length", Buffer.byteLength(page));
     return response.end(request.method === "HEAD" ? undefined : page);
   }

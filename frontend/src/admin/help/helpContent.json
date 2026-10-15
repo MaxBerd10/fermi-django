@@ -103,8 +103,12 @@
               "Murojaatlar"
             ],
             [
-              "Bosh sahifadagi 6 ta tezkor tugma havolasi, «Yoʻnalish tanlash» testi",
-              "Hozircha faqat dasturchi orqali (yozuvlari esa Sayt matnlaridan oʻzgaradi)"
+              "Bosh sahifaning yuqori qismidagi 6 ta tezkor tugma (Qabul, HEMIS, Virtual qabulxona...)",
+              "Bosh sahifa bloklari → Tezkor tugmalar (nomi, izohi, havolasi, tartibi)"
+            ],
+            [
+              "«Yoʻnalish tanlash» testining savollari",
+              "Hozircha faqat dasturchi orqali"
             ]
           ]
         },

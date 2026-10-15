@@ -126,3 +126,50 @@ def test_the_seed_keeps_wording_editors_already_changed_in_site_texts(db):
     count = HomeItem.objects.count()
     seed(django_apps, None)  # a second run changes nothing
     assert HomeItem.objects.count() == count == 26
+
+
+def test_the_six_quick_buttons_are_seeded_and_served(db, client):
+    tools = client.get(PUBLIC).json()["tools"]
+    assert [t["url"] for t in tools] == [
+        "/virtual-reception/17", "/qabul", "#pathfinder", "https://online-imtixon.uz", "https://hemis.fjsti.uz", "/aloqa",
+    ]
+    assert tools[1]["accent"] is True and tools[0]["accent"] is False
+    assert tools[0]["title"]["ru"] == "Виртуальная приёмная" and tools[0]["desc"]["en"].startswith("Send an official")
+    only = client.get(PUBLIC, {"only": "tools"}).json()
+    assert list(only) == ["tools"] and len(only["tools"]) == 6
+
+
+def test_staff_edit_a_quick_button_and_move_the_highlight(admin_client, client):
+    tool = HomeItem.objects.get(section="tool", url="/aloqa")
+    opened = admin_client.get(f"{ADMIN}/home-tools/{tool.pk}").json()
+    assert opened["accent"] == 0
+    opened.update({"accent": 1, "url": "/aloqa/xabar", "title_uz": "Bog'lanish"})
+    assert admin_client.put(f"{ADMIN}/home-tools/{tool.pk}", opened, format="json").status_code == 200
+    served = next(t for t in client.get(PUBLIC, {"only": "tools"}).json()["tools"] if t["id"] == tool.pk)
+    assert served["accent"] is True and served["url"] == "/aloqa/xabar" and served["title"]["uz"] == "Bog'lanish"
+    opened.update({"accent": 0})
+    admin_client.put(f"{ADMIN}/home-tools/{tool.pk}", opened, format="json")
+    tool.refresh_from_db()
+    assert tool.value == ""
+    assert admin_client.get(f"{ADMIN}/home-partners").json()["count"] == 8  # the other lists are untouched
+
+
+def test_the_tool_seed_keeps_wording_editors_already_changed(db):
+    import importlib
+
+    from django.apps import apps as django_apps
+    from apps.site_settings.models import SiteText
+
+    HomeItem.objects.filter(section="tool").delete()
+    SiteText.objects.create(key="hero.tools.hemis.title", text_uz="HEMIS kabineti", text_ru="", text_en="")
+    importlib.import_module("apps.site_settings.migrations.0007_seed_home_tools").seed(django_apps, None)
+    hemis = HomeItem.objects.get(section="tool", url="https://hemis.fjsti.uz")
+    assert hemis.title_uz == "HEMIS kabineti" and hemis.title_ru == "HEMIS"
+
+
+def test_a_dangerous_link_is_refused(admin_client):
+    for bad in ("javascript:alert(1)", "data:text/html,x", "//evil.example", "  JaVaScRiPt:alert(1)"):
+        res = admin_client.post(f"{ADMIN}/home-tools", {"title_uz": "x", "url": bad}, format="json")
+        assert res.status_code == 400, bad
+    for good in ("/qabul", "#pathfinder", "https://hemis.fjsti.uz", "tel:+998950622345", "mailto:info@fjsti.uz"):
+        assert admin_client.post(f"{ADMIN}/home-tools", {"title_uz": "ok", "url": good}, format="json").status_code == 201

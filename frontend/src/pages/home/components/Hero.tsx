@@ -1,6 +1,8 @@
-﻿import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useHomeSections } from "@/api/homeSections";
+import { readInjectedHomeTools, resolveHomeTools } from "@/lib/homeTools";
 import { getSettings } from "@/api/settings";
 import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
@@ -30,6 +32,50 @@ const QUICK_TOOLS: {
   { key: "hemis", icon: "ri-dashboard-3-line", href: HEMIS_URL, external: true },
   { key: "contact", icon: "ri-map-pin-line", href: "/aloqa" },
 ];
+
+interface QuickToolView {
+  key: string;
+  title: string;
+  desc: string;
+  icon: string;
+  href: string;
+  external: boolean;
+  accent: boolean;
+}
+
+/** The editable buttons: the server-injected block first (no request, no flicker), then the API answer; the
+ *  built-in list above only when neither is available. */
+function useQuickTools(): QuickToolView[] {
+  const { t, i18n } = useTranslation();
+  const lang = ((i18n.resolvedLanguage || i18n.language || "uz").slice(0, 2) as "uz" | "ru" | "en");
+  const injected = useMemo(() => {
+    const raw = readInjectedHomeTools();
+    return raw ? resolveHomeTools(raw, ["ru", "en"].includes(lang) ? lang : "uz") : null;
+  }, [lang]);
+  // With the server-injected block there is nothing to fetch (the lower sections load the lists themselves).
+  const sections = useHomeSections(injected === null);
+  const edited = sections ? sections.tools : injected;
+  if (edited) {
+    return edited.map((tool) => ({
+      key: String(tool.id),
+      title: tool.title,
+      desc: tool.desc,
+      icon: tool.icon || "ri-links-line",
+      href: tool.url,
+      external: /^https?:\/\//.test(tool.url),
+      accent: tool.accent,
+    }));
+  }
+  return QUICK_TOOLS.map((tool) => ({
+    key: tool.key,
+    title: t(`hero.tools.${tool.key}.title`),
+    desc: t(`hero.tools.${tool.key}.desc`),
+    icon: tool.icon,
+    href: tool.href,
+    external: Boolean(tool.external),
+    accent: Boolean(tool.accent),
+  }));
+}
 
 type RadarId = "students" | "tracks" | "practice" | "partners" | "labs" | "staff";
 
@@ -107,6 +153,7 @@ const RADAR_NODES: {
 
 export default function Hero() {
   const { t } = useTranslation();
+  const quickTools = useQuickTools();
   const reduced = usePrefersReducedMotion();
   const { ref, active } = useInViewOnce<HTMLDivElement>(0.1);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -512,15 +559,15 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-3">
-            {QUICK_TOOLS.map((tool, i) => {
+            {quickTools.map((tool, i) => {
               const inner = (
                 <>
                   <span className={`hero-tool__icon ${tool.accent ? "is-accent" : ""}`}>
                     <i className={tool.icon} aria-hidden />
                   </span>
                   <span className="hero-tool__body">
-                    <span className="hero-tool__title">{t(`hero.tools.${tool.key}.title`)}</span>
-                    <span className="hero-tool__desc">{t(`hero.tools.${tool.key}.desc`)}</span>
+                    <span className="hero-tool__title">{tool.title}</span>
+                    <span className="hero-tool__desc">{tool.desc}</span>
                   </span>
                   <span className="hero-tool__go" aria-hidden>
                     <i className={tool.external ? "ri-external-link-line" : "ri-arrow-right-up-line"} />

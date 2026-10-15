@@ -55,6 +55,8 @@ const SECTION_LABELS: Record<string, string> = {
 
 /** Texts of the home-page lists that now live in their own editor (Bosh sahifa bloklari); editing them here would change nothing. */
 const MOVED_TEXTS: { pattern: RegExp; label: string; to: string }[] = [
+  { pattern: /^hero\.tools\.(vq|admit|path|test|hemis|contact)\./, label: "Tezkor tugmalar", to: "/admin/home-tools" },
+  { pattern: /^hero\.tools\.(vq|admit|path|test|hemis|contact)\./, label: "Tezkor tugmalar", to: "/admin/home-tools" },
   { pattern: /^partners\.item\d+\./, label: "Hamkorlar", to: "/admin/home-partners" },
   { pattern: /^voices\.v\d+\.(quote|name|meta)$/, label: "Talabalar fikri", to: "/admin/home-voices" },
   { pattern: /^voices\.fact\d+\./, label: "Raqamlar", to: "/admin/home-facts" },
