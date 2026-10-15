@@ -72,6 +72,7 @@ export default function GenericListPage({ config }: { config: EntityConfig }) {
     <div className="mx-auto max-w-6xl">
       <PageHeader
         title={config.title}
+        subtitle={config.hint}
         actions={
           !config.noCreate && (
             <Link

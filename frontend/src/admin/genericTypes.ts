@@ -31,6 +31,8 @@ export interface EntityConfig {
   resource: string;
   title: string;
   addLabel?: string;
+  /** A sentence under the list title: how this list appears on the site and how many entries look good. */
+  hint?: string;
   /** Hides "add new": for records that only ever arrive from a public form (contact/application submissions). */
   noCreate?: boolean;
   /** A visitor-message inbox: rows whose `status` is 1 (not opened yet) are drawn bold with a dot. */

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { adminResource } from "@/api/admin";
 import type { AdminPage } from "@/admin/types";
 import FormActionBar from "@/admin/components/FormActionBar";
 import LangTabs, { type Lang } from "@/admin/components/LangTabs";
 import PageHeader from "@/admin/components/PageHeader";
+import PagePlacement from "@/admin/components/PagePlacement";
 import RichTextEditor from "@/admin/components/RichTextEditor";
 import { useToast } from "@/admin/components/Toast";
 import { nowLabel, useUnsavedGuard } from "@/admin/components/useUnsavedGuard";
@@ -30,6 +31,8 @@ export default function PagesFormPage() {
   const { id } = useParams();
   const isNew = !id;
   const navigate = useNavigate();
+  const location = useLocation();
+  const justCreated = Boolean((location.state as { created?: boolean } | null)?.created);
   const toast = useToast();
 
   const [form, setForm] = useState<Partial<AdminPage>>(EMPTY);
@@ -79,7 +82,7 @@ export default function PagesFormPage() {
         const created = await pagesApi.create(form);
         toast.success("Sahifa qo'shildi.");
         setInitial(JSON.stringify(created));
-        navigate(`/admin/pages/${created.id}`, { replace: true });
+        navigate(`/admin/pages/${created.id}`, { replace: true, state: { created: true } });
       } else {
         // Show what was really stored: the server re-renders the content (and tables/PDFs stay as chips).
         const updated = await pagesApi.update(Number(id), form);
@@ -128,7 +131,9 @@ export default function PagesFormPage() {
       <PageHeader
         back={{ to: "/admin/pages", label: "Sahifalar" }}
         title={isNew ? "Yangi sahifa" : form.title_uz || form.menu_title || "Sahifani tahrirlash"}
-        subtitle={!isNew && form.slug ? <>Manzil: <code className="rounded bg-background-200 px-1.5 py-0.5 text-xs">{form.slug}</code></> : undefined}
+        subtitle={
+          isNew ? "Saqlagandan keyin sahifani saytning menyusiga qo'shish taklif qilinadi: menyuga qo'shilmaguncha u saytda ko'rinmaydi." : undefined
+        }
       />
 
       {error && (
@@ -136,6 +141,10 @@ export default function PagesFormPage() {
           <i className="ri-error-warning-line mt-0.5 text-base" aria-hidden="true" />
           {error}
         </div>
+      )}
+
+      {!isNew && form.slug && (
+        <PagePlacement slug={form.slug} title={form.title_uz || form.menu_title || ""} titleRu={form.title_ru} titleEn={form.title_en} justCreated={justCreated} />
       )}
 
       <form onSubmit={onSubmit}>

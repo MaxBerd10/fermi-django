@@ -70,6 +70,7 @@ export const documentsitemConfig: EntityConfig = {
 
 export const imgConfig: EntityConfig = {
   resource: "gallery-images",
+  hint: "Bosh sahifada eng so'nggi 5 ta rasm ko'rinadi, hammasi «Galereya» sahifasida. Yangi rasm eng yuqoriga tushadi.",
   title: "Foto galereya",
   addLabel: "Rasm qo'shish",
   listColumns: [{ key: "img", label: "Rasm", kind: "image" }, { key: "title_uz", label: "Izoh (ixtiyoriy)" }],
@@ -213,6 +214,7 @@ const HIDDEN_FIELD: FieldSpec = { kind: "checkbox", key: "hidden", label: "Saytd
 
 export const homePartnersConfig: EntityConfig = {
   resource: "home-partners",
+  hint: "Bosh sahifada hamkorlar kichik tugmalar bo'lib qatorlab chiqadi. 8–12 ta tavsiya etiladi; ko'p bo'lsa ham sahifa buzilmaydi, faqat uzayadi.",
   title: "Bosh sahifa — Hamkorlar",
   listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "title_uz",
@@ -227,6 +229,7 @@ export const homePartnersConfig: EntityConfig = {
 
 export const homeProjectsConfig: EntityConfig = {
   resource: "home-projects",
+  hint: "Loyihalar kartalar bo'lib qatorlab chiqadi. Har biriga 4:3 nisbatdagi rasm qo'ying (rasm bo'lmasa kulrang joy chiqadi). 6 yoki 9 ta bo'lsa tekis turadi.",
   title: "Bosh sahifa — Bizning loyihalar",
   listColumns: [{ key: "img", label: "Rasm", kind: "image" }, { key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
   deleteConfirmField: "title_uz",
@@ -242,6 +245,7 @@ export const homeProjectsConfig: EntityConfig = {
 
 export const homeVoicesConfig: EntityConfig = {
   resource: "home-voices",
+  hint: "Fikrlar navbat bilan almashib turadi. Matn 6 qatordan uzun bo'lsa qisqartirib ko'rsatiladi: 2–3 gapli qisqa fikrlar yaxshi. 3–6 ta tavsiya etiladi.",
   title: "Bosh sahifa — Talabalar fikri",
   listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Ism" }, { key: "subtitle_uz", label: "Kurs / lavozim" }],
   deleteConfirmField: "title_uz",
@@ -256,6 +260,7 @@ export const homeVoicesConfig: EntityConfig = {
 
 export const homeFactsConfig: EntityConfig = {
   resource: "home-facts",
+  hint: "Raqamlar talabalar fikri yonida 2 ustun bo'lib chiqadi. Raqamni qisqa yozing (92%, 20+). 4–6 ta tavsiya etiladi.",
   title: "Bosh sahifa — Raqamlar (talabalar fikri yonida)",
   listColumns: [{ key: "order", label: "Tartib" }, { key: "value", label: "Raqam" }, { key: "title_uz", label: "Izoh" }],
   deleteConfirmField: "title_uz",
@@ -269,6 +274,7 @@ export const homeFactsConfig: EntityConfig = {
 
 export const homeToolsConfig: EntityConfig = {
   resource: "home-tools",
+  hint: "Yuqori qismdagi tugmalar 3 ustunda chiqadi: 6 yoki 9 ta bo'lsa tekis turadi. Izohni qisqa yozing.",
   title: "Bosh sahifa — Tezkor tugmalar (yuqori qism)",
   addLabel: "Tugma qo'shish",
   listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Nomi" }, { key: "url", label: "Havola" }],
@@ -286,6 +292,7 @@ export const homeToolsConfig: EntityConfig = {
 
 export const homeWhyConfig: EntityConfig = {
   resource: "home-why",
+  hint: "Kartalar 4 tadan qatorlab chiqadi: 4 yoki 8 ta bo'lsa tekis turadi. Tavsifni 2–3 gapda yozing.",
   title: "Bosh sahifa — Nega bizni tanlashadi",
   listColumns: [{ key: "order", label: "Tartib" }, { key: "title_uz", label: "Sarlavha" }, { key: "value", label: "Raqam" }],
   deleteConfirmField: "title_uz",

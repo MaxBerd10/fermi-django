@@ -66,21 +66,29 @@ export default function StudentVoices() {
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
               >
-                <div key={voice.id} className="animate-fade-in-up">
-                  <p className="font-heading text-lg md:text-xl text-[#0a0a0a] font-medium leading-snug">
-                    “{voice.quote}”
-                  </p>
-                  <div className="mt-3 flex items-center gap-2.5">
-                    <span className="w-8 h-8 rounded-lg border border-[#e5e5e5] bg-white flex items-center justify-center text-xs font-bold text-[#0a1158]">
-                      {initialsOf(voice.name)}
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-[#0a0a0a]">{voice.name}</p>
-                      <p className="text-[11px] font-semibold text-[#0a1158] uppercase tracking-wide">
-                        {voice.meta}
+                {/* Every quote sits in the same grid cell, only the current one visible: the card is as tall as the
+                    longest quote, so the sections below never jump when the quotes change (editors may write any length). */}
+                <div className="grid">
+                  {voices.map((v, i) => (
+                    <div
+                      key={v.id}
+                      aria-hidden={i !== index % count}
+                      className={`[grid-area:1/1] transition-opacity duration-300 ${i === index % count ? "opacity-100" : "invisible opacity-0"}`}
+                    >
+                      <p className="font-heading text-lg md:text-xl text-[#0a0a0a] font-medium leading-snug line-clamp-6">
+                        “{v.quote}”
                       </p>
+                      <div className="mt-3 flex items-center gap-2.5">
+                        <span className="w-8 h-8 rounded-lg border border-[#e5e5e5] bg-white flex items-center justify-center text-xs font-bold text-[#0a1158]">
+                          {initialsOf(v.name)}
+                        </span>
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-[#0a0a0a] truncate">{v.name}</p>
+                          <p className="text-[11px] font-semibold text-[#0a1158] uppercase tracking-wide truncate">{v.meta}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
                 <div className="mt-3 flex gap-1.5">
                   {voices.map((v, i) => (
