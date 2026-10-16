@@ -53,6 +53,12 @@ class Command(BaseCommand):
                     ]
                 },
             )
+            # the menu button next to the message box opens the Mini App
+            tg.call(
+                "setChatMenuButton",
+                {"menu_button": {"type": "web_app", "text": "Yangilik yuborish", "web_app": {"url": f"{settings.TELEGRAM_SITE_URL}/tg"}}},
+            )
         except tg.TelegramError as exc:
             raise CommandError(f"Telegram refused: {exc}") from None
         self.stdout.write(self.style.SUCCESS(f"Webhook set: {url}"))
+        self.stdout.write(self.style.SUCCESS(f"Mini App menu button: {settings.TELEGRAM_SITE_URL}/tg"))

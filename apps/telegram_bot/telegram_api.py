@@ -10,7 +10,7 @@ from django.conf import settings
 logger = logging.getLogger(__name__)
 
 API = "https://api.telegram.org"
-TIMEOUT = 15
+TIMEOUT = 8
 MAX_DOWNLOAD_BYTES = 20 * 1024 * 1024  # Telegram itself serves at most 20 MB through getFile
 
 
@@ -37,12 +37,19 @@ def call(method: str, params: dict | None = None) -> dict:
     return payload.get("result")
 
 
+def _button(label: str, data: str) -> dict:
+    """(label, "webapp:<url>") opens that address as a Telegram Mini App; anything else is callback data."""
+    if data.startswith("webapp:"):
+        return {"text": label, "web_app": {"url": data[len("webapp:"):]}}
+    return {"text": label, "callback_data": data}
+
+
 def send_message(chat_id: int, text: str, buttons: list[list[tuple[str, str]]] | None = None) -> dict | None:
     """Plain text (no parse mode, so nothing a person typed can break the message). `buttons` = rows of
-    (label, callback_data)."""
+    (label, callback_data | "webapp:<url>")."""
     params: dict = {"chat_id": chat_id, "text": text[:4000], "disable_web_page_preview": True}
     if buttons:
-        params["reply_markup"] = {"inline_keyboard": [[{"text": t, "callback_data": d} for t, d in row] for row in buttons]}
+        params["reply_markup"] = {"inline_keyboard": [[_button(t, d) for t, d in row] for row in buttons]}
     try:
         return call("sendMessage", params)
     except TelegramError as exc:  # a person who blocked the bot must not break the rest of the update

@@ -163,6 +163,16 @@ function applySecurityHeaders(response) {
   response.setHeader("Strict-Transport-Security", "max-age=15552000; includeSubDomains");
 }
 
+// The Telegram Mini App (/tg) is shown inside Telegram: in a frame on Telegram Web, in its own window elsewhere. So that
+// one page (and only it) may be framed by Telegram's own addresses; every other page still refuses any frame.
+function allowTelegramFraming(response) {
+  response.removeHeader("X-Frame-Options");
+  response.setHeader(
+    "Content-Security-Policy",
+    CONTENT_SECURITY_POLICY.replace("frame-ancestors 'self'", "frame-ancestors 'self' https://web.telegram.org https://*.telegram.org"),
+  );
+}
+
 function sendJson(response, statusCode, body) {
   response.statusCode = statusCode;
   response.setHeader("Content-Type", "application/json; charset=utf-8");
@@ -539,6 +549,7 @@ const server = createServer(async (request, response) => {
   applySecurityHeaders(response);
   try {
     const pathname = new URL(request.url || "/", "http://localhost").pathname;
+    if (pathname === "/tg" || pathname.startsWith("/tg/")) allowTelegramFraming(response);
     if (pathname.startsWith("/imentor-api/")) return await handleImentor(request, response);
     if (pathname.startsWith("/openai-api/")) return await handleOpenAi(request, response);
     if (pathname.startsWith("/telegram-feed")) {

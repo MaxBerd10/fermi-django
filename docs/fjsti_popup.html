@@ -1,0 +1,57 @@
+<!-- fjsti.uz: "yangi saytga o'tish yoki eski saytda qolish" oynasi.
+     Eski saytning umumiy shablonida (footer / layout) </body> dan oldin qo'ying.
+     Kutubxona kerak emas; eski brauzerlar uchun ES5. -->
+<style>
+#fjsti-popup{position:fixed;inset:0;z-index:2147483647;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(10,20,40,.65);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+#fjsti-popup.is-open{display:flex}
+#fjsti-popup .fp-box{max-width:460px;width:100%;background:#fff;color:#14213d;border-radius:14px;padding:28px 24px;box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
+#fjsti-popup h2{margin:0 0 10px;font-size:22px;line-height:1.25}
+#fjsti-popup p{margin:0 0 20px;font-size:15px;line-height:1.5;color:#44506a}
+#fjsti-popup .fp-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+#fjsti-popup a,#fjsti-popup button{font:inherit;font-size:15px;font-weight:600;padding:12px 20px;border-radius:10px;cursor:pointer;text-decoration:none;border:2px solid #1d4ed8}
+#fjsti-popup .fp-go{background:#1d4ed8;color:#fff}
+#fjsti-popup .fp-stay{background:#fff;color:#1d4ed8}
+#fjsti-popup a:focus,#fjsti-popup button:focus{outline:3px solid #f59e0b;outline-offset:2px}
+</style>
+
+<div id="fjsti-popup" role="dialog" aria-modal="true" aria-labelledby="fp-title">
+  <div class="fp-box">
+    <h2 id="fp-title">Institut yangi saytga ko'chdi</h2>
+    <p>Farg'ona jamoat salomatligi tibbiyot instituti yangi rasmiy sayti: <b>fermi.uz</b>. Yangi saytga o'tasizmi yoki eski saytda qolasizmi?</p>
+    <div class="fp-actions">
+      <a class="fp-go" id="fp-go" href="https://fermi.uz/">Yangi saytga o'tish</a>
+      <button class="fp-stay" id="fp-stay" type="button">Eski saytda qolish</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var KEY = 'fjsti_popup_stay_until';
+  var STAY_DAYS = 7; // "Eski saytda qolish" bosilgach shuncha kun qayta chiqmaydi
+  var box = document.getElementById('fjsti-popup');
+  var go = document.getElementById('fp-go');
+  var stay = document.getElementById('fp-stay');
+  if (!box || !go || !stay) return;
+
+  try {
+    var until = parseInt(window.localStorage.getItem(KEY) || '0', 10);
+    if (until > new Date().getTime()) return;
+  } catch (e) {}
+
+  function close() {
+    box.className = '';
+    try {
+      window.localStorage.setItem(KEY, String(new Date().getTime() + STAY_DAYS * 86400000));
+    } catch (e) {}
+  }
+
+  stay.onclick = close;
+  document.addEventListener('keydown', function (ev) {
+    if ((ev.key === 'Escape' || ev.keyCode === 27) && box.className.indexOf('is-open') !== -1) close();
+  });
+
+  box.className = 'is-open';
+  go.focus();
+})();
+</script>

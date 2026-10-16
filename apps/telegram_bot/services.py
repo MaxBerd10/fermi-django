@@ -57,6 +57,11 @@ HELP = (
 # ---------------------------------------------------------------------------------------------------------------
 # entry point
 # ---------------------------------------------------------------------------------------------------------------
+def app_buttons() -> list[list[tuple[str, str]]]:
+    """The «Ilovani ochish» button that opens the Mini App (apps/telegram_bot/webapp.py + frontend/src/tg)."""
+    return [[("📱 Ilovani ochish", f"webapp:{settings.TELEGRAM_SITE_URL}/tg")]]
+
+
 def handle_update(update: dict) -> None:
     if isinstance(update.get("message"), dict):
         handle_message(update["message"])
@@ -133,7 +138,7 @@ def _start(chat_id: int, sender: dict, user: BotUser | None, text: str) -> None:
         return
     if user is not None and user.state == BotUser.IDLE:
         if user.status == BotUser.ACTIVE:
-            tg.send_message(chat_id, f"Salom, {user.full_name}! Yangilik uchun rasm va matn yuboring.\n\n{HELP}")
+            tg.send_message(chat_id, f"Salom, {user.full_name}! Yangilik uchun rasm va matn yuboring yoki ilovani oching.\n\n{HELP}", app_buttons())
         else:
             tg.send_message(chat_id, "Ruxsat so'rovingiz adminda ko'rib chiqilmoqda.")
         return
@@ -170,16 +175,23 @@ def _got_department(chat_id: int, user: BotUser, text: str) -> None:
     if len(department) < 2 or len(department) > MAX_NAME or department.startswith("/"):
         tg.send_message(chat_id, "Iltimos, bo'lim yoki kafedra nomini yozing (masalan: Ilmiy bo'lim).")
         return
-    user.department, user.state = department, BotUser.IDLE
+    user.department = department
+    finish_registration(user)
+
+
+def finish_registration(user: BotUser) -> None:
+    """The name and department are known: a person who came with the invite code is active at once, anyone else waits
+    for an approver. Used by the chat and by the Mini App alike."""
+    user.state = BotUser.IDLE
     if user.invited:
         user.status = BotUser.ACTIVE
-        user.save(update_fields=["department", "state", "status"])
-        tg.send_message(chat_id, "✅ Tayyor! Endi yangilik uchun rasm va matn yuboring.\n\n" + HELP)
+        user.save(update_fields=["full_name", "department", "state", "status"])
+        tg.send_message(user.telegram_id, "✅ Tayyor! Endi yangilik uchun rasm va matn yuboring yoki ilovani oching.\n\n" + HELP, app_buttons())
         notify_approvers(f"👤 Yangi xodim ro'yxatdan o'tdi: {user.label}", [[("🚫 Bloklash", f"block:{user.pk}")]])
     else:
         user.status = BotUser.PENDING
-        user.save(update_fields=["department", "state", "status"])
-        tg.send_message(chat_id, "So'rovingiz adminga yuborildi. Ruxsat berilgach sizga xabar beramiz.")
+        user.save(update_fields=["full_name", "department", "state", "status"])
+        tg.send_message(user.telegram_id, "So'rovingiz adminga yuborildi. Ruxsat berilgach sizga xabar beramiz.")
         handle = f" @{user.username}" if user.username else ""
         notify_approvers(
             f"👤 Ruxsat so'rayapti (havolasiz kirgan): {user.label}{handle}",
@@ -195,7 +207,7 @@ def notify_approvers(text: str, buttons: list[list[tuple[str, str]]] | None = No
 def user_changed_status(user: BotUser) -> None:
     """Called when an administrator changes a person's status in the admin panel: tell the person."""
     if user.status == BotUser.ACTIVE and user.state == BotUser.IDLE:
-        tg.send_message(user.telegram_id, "✅ Sizga ruxsat berildi. Endi yangilik uchun rasm va matn yuborishingiz mumkin.\n\n" + HELP)
+        tg.send_message(user.telegram_id, "✅ Sizga ruxsat berildi. Endi yangilik uchun rasm va matn yuborishingiz mumkin.\n\n" + HELP, app_buttons())
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -215,9 +227,10 @@ def _split_title(text: str) -> tuple[str, str]:
     return first, "\n".join(lines[1:])
 
 
-def store_image(data: bytes) -> str:
+def store_image(data: bytes, owner: int) -> str:
     """Checks that `data` really is a picture (JPEG/PNG/WEBP of sane size), re-encodes it as JPEG (which also drops
-    every metadata field, GPS included) and saves it under uploads/telegram/. Returns the MEDIA_ROOT-relative path."""
+    every metadata field, GPS included) and saves it under uploads/telegram/<owner>-<random>.jpg (the owner's Telegram id
+    in the name is how a later "submit" proves the picture is the sender's own). Returns the MEDIA_ROOT-relative path."""
     try:
         image = Image.open(io.BytesIO(data))
         if image.format not in ALLOWED_FORMATS or image.width * image.height > MAX_PIXELS:
@@ -237,7 +250,7 @@ def store_image(data: bytes) -> str:
     buffer = io.BytesIO()
     image.save(buffer, "JPEG", quality=88, optimize=True)
     stamp = timezone.localdate()
-    return default_storage.save(f"uploads/telegram/{stamp:%Y/%m}/{uuid.uuid4().hex}.jpg", ContentFile(buffer.getvalue()))
+    return default_storage.save(f"uploads/telegram/{stamp:%Y/%m}/{owner}-{uuid.uuid4().hex}.jpg", ContentFile(buffer.getvalue()))
 
 
 def _photo_file_id(message: dict) -> str | None:
@@ -286,7 +299,7 @@ def _collect(chat_id: int, user: BotUser, message: dict, text: str) -> None:
     stored = None
     if file_id:
         try:
-            stored = store_image(tg.download_file(file_id))
+            stored = store_image(tg.download_file(file_id), user.telegram_id)
         except (tg.TelegramError, ValueError):
             tg.send_message(chat_id, "Rasmni qabul qilib bo'lmadi. JPG, PNG yoki WEBP rasm yuboring (20 MB gacha).")
             return
@@ -325,10 +338,14 @@ def _cancel_open(chat_id: int, user: BotUser) -> None:
 # ---------------------------------------------------------------------------------------------------------------
 # the draft
 # ---------------------------------------------------------------------------------------------------------------
-def create_draft(sub: BotSubmission):
+def create_draft(sub: BotSubmission, category_id: int | None = None):
     """A DRAFT news post (status 0: hidden from the public site) made through the same serializer the admin panel's
     news form uses, so it is exactly what the panel would save."""
-    category = NewsCategory.objects.filter(slug="tadbirlar").first() or NewsCategory.objects.order_by("id").first()
+    category = (
+        (category_id and NewsCategory.objects.filter(pk=category_id).first())
+        or NewsCategory.objects.filter(slug="tadbirlar").first()
+        or NewsCategory.objects.order_by("id").first()
+    )
     # The page model refuses plain text that looks like markup, so angle brackets are simply dropped from what a person typed
     clean = lambda text: text.replace("<", "").replace(">", "")  # noqa: E731
     paragraphs = "".join(f"<p>{escape(clean(line))}</p>" for line in sub.body.splitlines() if clean(line).strip())
@@ -385,18 +402,27 @@ def _owner_action(callback: dict, user: BotUser, action: str, pk: int, chat_id: 
             tg.answer_callback(callback["id"], "Kunlik chegaraga yetdingiz.", True)
             return
         try:
-            post = create_draft(sub)
+            finalize_submission(sub, user)
         except Exception:
             logger.exception("telegram draft failed")
             tg.answer_callback(callback["id"], "Yangilikni saqlab bo'lmadi. Birozdan keyin qayta urining.", True)
             return
-        sub.status, sub.post = BotSubmission.SENT, post
-        sub.save(update_fields=["status", "post"])
     tg.answer_callback(callback["id"], "Yuborildi!")
     tg.edit_message_text(chat_id, message_id, f"✅ Yuborildi: «{sub.title}». Admin ko'rib chiqadi, tasdiqlansa saytda chiqadi.")
+    notify_new_draft(sub, user)
+
+
+def finalize_submission(sub: BotSubmission, user: BotUser, category_id: int | None = None) -> None:
+    """Turns an open submission into a DRAFT news post (call inside a transaction)."""
+    post = create_draft(sub, category_id)
+    sub.status, sub.post = BotSubmission.SENT, post
+    sub.save(update_fields=["status", "post"])
+
+
+def notify_new_draft(sub: BotSubmission, user: BotUser) -> None:
     notify_approvers(
         f"📰 Yangi yangilik (qoralama): «{sub.title}»\nMuallif: {user.label}\nRasmlar: {len(sub.photo_paths)}\n\n"
-        f"Ko'rib chiqish: {settings.TELEGRAM_SITE_URL}/admin/news/{post.pk}"
+        f"Ko'rib chiqish: {settings.TELEGRAM_SITE_URL}/admin/news/{sub.post_id}"
     )
 
 

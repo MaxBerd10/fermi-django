@@ -36,6 +36,8 @@ const VerifyEmailPage = lazy(() => import("../pages/auth/verify-email/page"));
 // that regular site visitors never touch — keep it fully lazy.
 // Keep admin auth, form metadata and editor code out of every public visit.
 const AdminRoutes = lazy(() => import("../admin/AdminRoutes"));
+// The staff news form that opens inside Telegram (apps/telegram_bot): its own small chunk, outside the public layout.
+const TelegramApp = lazy(() => import("../tg/TelegramApp"));
 
 const routes: RouteObject[] = [
   // Standalone design-concept preview — deliberately outside <Layout/> so
@@ -87,6 +89,7 @@ const routes: RouteObject[] = [
     ],
   },
   { path: "/admin/*", element: <AdminRoutes /> },
+  { path: "/tg", element: <TelegramApp /> },
 ];
 
 export default routes;

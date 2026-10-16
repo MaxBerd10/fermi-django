@@ -35,3 +35,16 @@ at most 20 people without the invite code may start registering per hour (all to
 
 The webhook is `POST /api/v1/telegram/webhook/`; it answers 403 unless Telegram's secret header matches, and 404 while the
 bot is not configured. To switch the bot off: remove the two variables (or `telegram_set_webhook --delete`).
+
+## The Mini App (frontend/src/tg, API in apps/telegram_bot/webapp.py)
+A phone-friendly form inside Telegram: register (name + department), pick pictures (shrunk to 2000 px before upload), title,
+text, category, «Yuborish»; and "Mening yangiliklarim" with the state of each (Tasdiq kutmoqda / Saytda chiqdi / Rad etildi).
+It opens from the bot's menu button ("Yangilik yuborish", set by `telegram_set_webhook`) and from the «📱 Ilovani ochish»
+button in the bot's messages. Address: `https://<site>/tg`.
+* Identity is Telegram's signed `initData` (HMAC with the bot token, at most 12 h old) sent as `Authorization: tma <initData>`;
+  there are no passwords and no sessions. Same people, approval, daily limits and DRAFT-only rule as the chat.
+* Only pictures the person uploaded through the app (`uploads/telegram/YYYY/MM/<telegram id>-<random>.jpg`) can be attached.
+* `/tg` is the only page that may be framed (by *.telegram.org, for Telegram Web); see allowTelegramFraming in
+  frontend/server/production-server.mjs. If Telegram Web shows an empty frame while phones work, check that nginx adds no
+  X-Frame-Options / frame-ancestors header of its own.
+* Telegram's own script is NOT loaded (it would run inside our origin): src/tg/bridge.ts speaks the few events needed.
