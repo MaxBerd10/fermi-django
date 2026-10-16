@@ -42,6 +42,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { to: "/admin/acceptances", label: "Qabul arizalari", icon: "ri-file-edit-line", badge: "acceptances", keywords: "abituriyent ariza" },
       { to: "/admin/virtual-submissions", label: "Virtual qabulxona", icon: "ri-user-voice-line", badge: "virtual-submissions", keywords: "rektor murojaat" },
       { to: "/admin/contest-submissions", label: "Tanlov arizalari", icon: "ri-award-line", badge: "contest-submissions", keywords: "konkurs" },
+      { to: "/admin/telegram-users", label: "Telegram xodimlar", icon: "ri-telegram-line", badge: "telegram", keywords: "bot telegram ruxsat xodim" },
     ],
   },
   {
@@ -95,6 +96,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "Sozlamalar",
     icon: "ri-settings-3-line",
     items: [
+      { to: "/admin/telegram-bot", label: "Telegram bot", icon: "ri-robot-2-line", keywords: "bot telegram havola kod yangilik yuborish" },
       { to: "/admin/setting", label: "Umumiy sozlamalar", icon: "ri-settings-3-line", keywords: "telefon manzil email" },
       { to: "/admin/site-texts", label: "Sayt matnlari", icon: "ri-translate-2", keywords: "tarjima tugma sarlavha" },
       { to: "/admin/logo", label: "Logotip", icon: "ri-shield-star-line" },

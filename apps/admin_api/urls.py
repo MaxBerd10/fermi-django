@@ -44,6 +44,7 @@ from .settings_views import (
 )
 from .site_texts_views import AdminSiteTextsView
 from .structure_views import AdminDepartmentViewSet, AdminFacultyViewSet
+from .telegram_views import AdminTelegramBotView, AdminTelegramUserViewSet
 from .translate_views import TranslateView
 from .users_views import AdminUserViewSet
 
@@ -87,6 +88,7 @@ router.register("admin/home-voices", AdminHomeVoiceViewSet, basename="admin-home
 router.register("admin/home-facts", AdminHomeFactViewSet, basename="admin-home-facts")
 router.register("admin/home-why", AdminHomeWhyViewSet, basename="admin-home-why")
 router.register("admin/home-tools", AdminHomeToolViewSet, basename="admin-home-tools")
+router.register("admin/telegram-users", AdminTelegramUserViewSet, basename="admin-telegram-users")
 router.register("admin/users", AdminUserViewSet, basename="admin-users")
 router.register("admin/result-categories", AdminResultCategoryViewSet, basename="admin-result-categories")
 router.register("admin/result-files", AdminResultFileViewSet, basename="admin-result-files")
@@ -94,6 +96,7 @@ router.register("admin/results-page", AdminResultsPageViewSet, basename="admin-r
 
 urlpatterns = router.urls + [
     path("admin/dashboard", AdminDashboardView.as_view()),
+    path("admin/telegram-bot", AdminTelegramBotView.as_view()),
     path("admin/locate", AdminLocateView.as_view()),
     path("admin/site-texts", AdminSiteTextsView.as_view()),
     path("admin/media/list", MediaListView.as_view()),

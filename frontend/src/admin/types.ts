@@ -18,6 +18,8 @@ export interface AdminPost {
   file_en: string | null;
   file_ru: string | null;
   meta_key: string | null;
+  /** Set when the post was sent through the Telegram bot. */
+  telegram_author?: { name: string; department: string } | null;
 }
 
 export interface AdminPage {

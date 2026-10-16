@@ -59,6 +59,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
     status = serializers.SerializerMethodField()
     img = serializers.SerializerMethodField()
     gallery = serializers.SerializerMethodField()
+    telegram_author = serializers.SerializerMethodField()
     file = serializers.SerializerMethodField()
     file_en = serializers.SerializerMethodField()
     file_ru = serializers.SerializerMethodField()
@@ -70,7 +71,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
             "id", "title_uz", "title_ru", "title_en",
             "content_uz", "content_ru", "content_en",
             "category_id", "date", "seen", "slug", "status",
-            "img", "gallery", "file", "file_en", "file_ru", "meta_key",
+            "img", "gallery", "file", "file_en", "file_ru", "meta_key", "telegram_author",
         ]
 
     def _content(self, obj, lang):
@@ -127,6 +128,13 @@ class AdminPostSerializer(serializers.ModelSerializer):
 
     def get_meta_key(self, obj):
         return None
+
+    def get_telegram_author(self, obj):
+        """Who sent this post through the Telegram bot (name + department), or None for a post written in the panel."""
+        submission = next(iter(obj.telegram_submissions.all()), None)
+        if submission is None:
+            return None
+        return {"name": submission.user.full_name, "department": submission.user.department}
 
     def create(self, validated_data):
         instance = self._save(NewsPost(), validated_data)
@@ -251,7 +259,7 @@ def _append_gallery_block(page: Page, image_ids: list[int]) -> None:
 
 class AdminPostViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelViewSet):
     search_fields = ('title_uz', 'title_ru', 'title_en', 'slug')
-    queryset = NewsPost.objects.select_related("cover", "page").order_by("-published_at")
+    queryset = NewsPost.objects.select_related("cover", "page").prefetch_related("telegram_submissions__user").order_by("-published_at")
     serializer_class = AdminPostSerializer
     permission_classes = [IsAuthenticated, IsAdminStaff]
     pagination_class = AdminPagination
@@ -262,6 +270,8 @@ class AdminPostViewSet(AdminSearchMixin, OwnedPageCleanupMixin, viewsets.ModelVi
         params = self.request.query_params
         if params.get("status") in ("0", "1"):
             queryset = queryset.filter(is_published=params["status"] == "1")
+        if params.get("source") == "telegram":
+            queryset = queryset.filter(telegram_submissions__isnull=False).distinct()
         if (params.get("category") or "").isdigit():
             queryset = queryset.filter(category_id=int(params["category"]))
         return queryset

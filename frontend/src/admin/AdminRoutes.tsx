@@ -18,6 +18,7 @@ const GenericFormPage = lazy(() => import("./components/GenericFormPage"));
 const SingletonFormPage = lazy(() => import("./components/SingletonFormPage"));
 const MenuTreePage = lazy(() => import("./pages/menu/MenuTreePage"));
 const SiteTextsPage = lazy(() => import("./pages/site-texts/SiteTextsPage"));
+const TelegramBotPage = lazy(() => import("./pages/telegram/TelegramBotPage"));
 const UserListPage = lazy(() => import("./pages/users/UserListPage"));
 const UserFormPage = lazy(() => import("./pages/users/UserFormPage"));
 
@@ -38,6 +39,7 @@ export default function AdminRoutes() {
           ...SINGLETON_CONFIGS.map((config) => ({ path: config.resource, element: <SingletonFormPage config={config} /> })),
           { path: "menu-tree", element: <MenuTreePage /> },
           { path: "site-texts", element: <SiteTextsPage /> },
+          { path: "telegram-bot", element: <TelegramBotPage /> },
           { path: "users", element: <UserListPage /> }, { path: "users/new", element: <UserFormPage /> }, { path: "users/:id", element: <UserFormPage /> },
         ],
       }],

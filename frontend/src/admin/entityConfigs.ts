@@ -290,6 +290,49 @@ export const homeToolsConfig: EntityConfig = {
   ],
 };
 
+export const telegramUsersConfig: EntityConfig = {
+  resource: "telegram-users",
+  title: "Telegram bot — xodimlar",
+  hint: "Botga yangilik yuboradigan odamlar. Havola orqali kirganlar darhol «Faol» bo'ladi, havolasiz kirganlar sizning ruxsatingizni kutadi.",
+  noCreate: true,
+  listColumns: [
+    { key: "full_name", label: "Xodim" },
+    { key: "department", label: "Bo'lim" },
+    {
+      key: "status",
+      label: "Holat",
+      kind: "badge",
+      badges: {
+        pending: { label: "Ruxsat kutmoqda", tone: "amber" },
+        active: { label: "Faol", tone: "green" },
+        blocked: { label: "Bloklangan", tone: "red" },
+      },
+    },
+    { key: "posts", label: "Yuborgan" },
+    { key: "last_seen_at", label: "Oxirgi faolligi", kind: "datetime" },
+  ],
+  deleteConfirmField: "full_name",
+  deleteWarning: "Odam ro'yxatdan chiqadi (u botga qayta kirishi mumkin). Yuborgan yangiliklari o'chmaydi. Qayta kirishini istamasangiz, o'chirmang — «Bloklangan» qiling.",
+  fields: [
+    { kind: "readonly", key: "telegram_id", label: "Telegram raqami" },
+    { kind: "readonly", key: "username", label: "Telegram nomi (@)" },
+    { kind: "text", key: "full_name", label: "Ism-familiyasi", required: true },
+    { kind: "text", key: "department", label: "Bo'lim / kafedra / laboratoriya" },
+    {
+      kind: "select",
+      key: "status",
+      label: "Holat",
+      options: [
+        { value: "pending", label: "Ruxsat kutmoqda" },
+        { value: "active", label: "Faol — yangilik yubora oladi" },
+        { value: "blocked", label: "Bloklangan — botdan foydalana olmaydi" },
+      ],
+    },
+    { kind: "checkbox", key: "is_approver", label: "Tasdiqlovchi: yangi yangilik va ruxsat so'rovlari haqida botdan xabar oladi, odamlarga ruxsat bera oladi" },
+    { kind: "readonly", key: "last_seen_at", label: "Oxirgi faolligi", format: "datetime" },
+  ],
+};
+
 export const homeWhyConfig: EntityConfig = {
   resource: "home-why",
   hint: "Kartalar 4 tadan qatorlab chiqadi: 4 yoki 8 ta bo'lsa tekis turadi. Tavsifni 2–3 gapda yozing.",
@@ -504,6 +547,7 @@ export const ALL_ENTITY_CONFIGS = [
   homeFactsConfig,
   homeWhyConfig,
   homeToolsConfig,
+  telegramUsersConfig,
   contactConfig,
   acceptanceConfig,
   virtualConfig,

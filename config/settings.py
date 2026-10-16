@@ -93,6 +93,7 @@ INSTALLED_APPS = [
     "apps.site_settings",
     "apps.forms",
     "apps.admission_results",
+    "apps.telegram_bot",
 ]
 
 MIDDLEWARE = [
@@ -252,3 +253,10 @@ PUBLIC_REGISTRATION_ENABLED = env_bool("PUBLIC_REGISTRATION_ENABLED", False)
 # (/admin/), and nobody had signed in to the stock one in the last 30 days (checked 2026-10-11). Set
 # DJANGO_ADMIN_ENABLED=true in /etc/fermi-django.env and restart to open it again.
 DJANGO_ADMIN_ENABLED = env_bool("DJANGO_ADMIN_ENABLED", False)
+
+
+# The staff news bot (apps/telegram_bot). Off unless both are set: the token from @BotFather, and a random string
+# Telegram sends back in a header with every update so that only Telegram can call the webhook.
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+TELEGRAM_WEBHOOK_SECRET = os.environ.get("TELEGRAM_WEBHOOK_SECRET", "").strip()
+TELEGRAM_SITE_URL = os.environ.get("TELEGRAM_SITE_URL", "https://fermi.uz").rstrip("/")

@@ -10,6 +10,7 @@ from apps.departments.models import Department
 from apps.faculties.models import Faculty
 from apps.forms.models import AcceptanceSubmission, ContactSubmission, ContestSubmission, VirtualSubmission
 from apps.news.models import NewsPost
+from apps.telegram_bot.models import BotUser
 
 from .common import IsAdminStaff
 
@@ -22,7 +23,10 @@ INBOXES = (
 
 
 def unread_counts() -> dict[str, int]:
-    return {resource: model.objects.filter(is_read=False).count() for resource, model in INBOXES}
+    counts = {resource: model.objects.filter(is_read=False).count() for resource, model in INBOXES}
+    # people who asked the staff Telegram bot for permission and wait for an administrator
+    counts["telegram"] = BotUser.objects.filter(status=BotUser.PENDING, state=BotUser.IDLE).count()
+    return counts
 
 
 class AdminDashboardView(APIView):
@@ -34,6 +38,7 @@ class AdminDashboardView(APIView):
             {
                 "unread": unread_counts(),
                 "drafts": NewsPost.objects.filter(is_published=False).count(),
+                "telegram_drafts": NewsPost.objects.filter(is_published=False, telegram_submissions__isnull=False).distinct().count(),
                 "news": [
                     {
                         "id": post.pk,

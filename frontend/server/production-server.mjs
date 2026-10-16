@@ -578,7 +578,11 @@ const server = createServer(async (request, response) => {
       return await streamProxy(request, response, fermiApiBaseUrl, "/api/v1/sitemap.xml");
     }
     if (pathname.startsWith("/api/v1/")) {
-      if (!allowProxyRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      // The Telegram bot's webhook: every message of every staff member arrives from Telegram's few addresses, so a
+      // per-IP limit would throttle the whole bot. Django checks the secret header and limits each person itself.
+      if (pathname !== "/api/v1/telegram/webhook/" && !allowProxyRequest(request)) {
+        return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      }
       const apiUrl = new URL(request.url || "/", "http://localhost");
       if (await serveCachedApiGet(request, response, fermiApiBaseUrl, apiUrl, safeUpstreamHeaders(request.headers))) return;
       return await proxyAndDropCacheOnWrite(request, response);

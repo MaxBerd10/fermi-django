@@ -190,6 +190,19 @@ export default function AdminDashboard() {
             )}
           </Panel>
 
+          {summary && summary.telegram_drafts > 0 && (
+            <Link
+              to="/admin/news?source=telegram"
+              className="flex items-center gap-3 rounded-xl border border-primary-200 bg-primary-50 px-5 py-4 text-sm text-primary-900 hover:border-primary-300"
+            >
+              <i className="ri-telegram-line text-xl text-primary-600" aria-hidden="true" />
+              <span className="flex-1">
+                <b>Telegramdan {summary.telegram_drafts} ta yangilik</b> tasdiqingizni kutmoqda.
+              </span>
+              <i className="ri-arrow-right-s-line" aria-hidden="true" />
+            </Link>
+          )}
+
           {summary && summary.drafts > 0 && (
             <Link
               to="/admin/news"

@@ -13,6 +13,8 @@ export interface DashboardData {
   /** Messages nobody has opened yet, per inbox resource ("contacts", "acceptances", ...). */
   unread: Record<string, number>;
   drafts: number;
+  /** Drafts that staff sent through the Telegram bot and nobody has published yet. */
+  telegram_drafts: number;
   news: DashboardNews[];
 }
 

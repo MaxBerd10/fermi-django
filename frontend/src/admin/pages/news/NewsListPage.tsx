@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { adminResource } from "@/api/admin";
 import type { AdminPost, AdminPostcategory } from "@/admin/types";
 import DataTable from "@/admin/components/DataTable";
@@ -16,12 +16,16 @@ const STATUS_FILTERS = [
 ];
 
 export default function NewsListPage() {
+  const [params] = useSearchParams();
   const [status, setStatus] = useState("");
   const [category, setCategory] = useState("");
+  // ?source=telegram (from the Telegram bot page) opens the list of posts staff sent through the bot
+  const [fromTelegram, setFromTelegram] = useState(params.get("source") === "telegram");
   const [categories, setCategories] = useState<AdminPostcategory[]>([]);
   const filters: Record<string, string> = {};
   if (status) filters.status = status;
   if (category) filters.category = category;
+  if (fromTelegram) filters.source = "telegram";
   const list = useAdminList<AdminPost>("news", 20, filters);
 
   useEffect(() => {
@@ -67,6 +71,16 @@ export default function NewsListPage() {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          onClick={() => setFromTelegram((v) => !v)}
+          aria-pressed={fromTelegram}
+          className={`flex h-11 cursor-pointer items-center gap-2 rounded-lg border px-3 text-sm font-medium ${
+            fromTelegram ? "border-primary-500 bg-primary-50 text-primary-700" : "border-background-300 bg-background-50 text-foreground-600 hover:bg-background-100"
+          }`}
+        >
+          <i className="ri-telegram-line" aria-hidden="true" /> Telegramdan kelganlar
+        </button>
         {categories.length > 0 && (
           <select
             value={category}
@@ -91,7 +105,21 @@ export default function NewsListPage() {
 
       <DataTable
         columns={[
-          { key: "title_uz", label: "Sarlavha" },
+          {
+            key: "title_uz",
+            label: "Sarlavha",
+            render: (item) => (
+              <div>
+                <div>{item.title_uz}</div>
+                {item.telegram_author && (
+                  <div className="mt-0.5 flex items-center gap-1 text-xs text-foreground-500">
+                    <i className="ri-telegram-line" aria-hidden="true" /> {item.telegram_author.name}
+                    {item.telegram_author.department ? ` · ${item.telegram_author.department}` : ""}
+                  </div>
+                )}
+              </div>
+            ),
+          },
           { key: "date", label: "Sana", render: (item) => <span className="whitespace-nowrap">{formatDateTime(item.date)}</span> },
           { key: "seen", label: "Ko'rishlar" },
           {
@@ -107,7 +135,7 @@ export default function NewsListPage() {
         items={list.items}
         loading={list.loading}
         showEmpty={!list.error}
-        emptyText={list.searchInput || status || category ? "Bunday yangilik topilmadi." : "Hali yangilik qo'shilmagan."}
+        emptyText={list.searchInput || status || category || fromTelegram ? "Bunday yangilik topilmadi." : "Hali yangilik qo'shilmagan."}
         editPathFor={(item) => `/admin/news/${item.id}`}
         onDelete={(item) => list.remove(item, item.title_uz, "Yangilik saytdan butunlay o'chadi. Vaqtincha yashirmoqchi bo'lsangiz, o'chirmang: yangilikni oching va \"Holat\" ni \"Qoralama\" qiling.")}
       />

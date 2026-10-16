@@ -224,6 +224,17 @@ export default function NewsFormPage() {
         </div>
       )}
 
+      {form.telegram_author && (
+        <div className="mb-4 flex items-start gap-2 rounded-lg border border-primary-200 bg-primary-50 p-3 text-sm text-primary-900">
+          <i className="ri-telegram-line mt-0.5 text-base" aria-hidden="true" />
+          <span>
+            Bu yangilikni Telegram bot orqali <b>{form.telegram_author.name}</b>
+            {form.telegram_author.department ? ` (${form.telegram_author.department})` : ""} yuborgan.
+            {(form.status ?? 1) === 0 && " U hali saytda ko'rinmayapti: matnni tekshirib, «Holat» ni «E'lon qilingan» qiling va saqlang."}
+          </span>
+        </div>
+      )}
+
       <form onSubmit={onSubmit}>
         <div className="grid grid-cols-1 gap-5 xl:grid-cols-[minmax(0,1fr)_20rem]">
           <div className="space-y-4">
