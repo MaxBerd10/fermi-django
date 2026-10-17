@@ -13,7 +13,7 @@ export interface Me {
   telegram_name: string;
   invited: boolean;
   categories: Category[];
-  limits: { photos: number; per_day: number; sent_today: number; title: number; text: number };
+  limits: { photos: number; files: number; per_day: number; sent_today: number; title: number; text: number };
 }
 export interface Submission {
   id: number;
@@ -21,6 +21,7 @@ export interface Submission {
   state: "pending" | "published" | "removed";
   url: string | null;
   photos: number;
+  files: number;
   thumb: string | null;
   created_at: string;
 }
@@ -71,5 +72,11 @@ export const uploadPhoto = (file: Blob) => {
   form.append("file", file, "photo.jpg");
   return call<{ path: string; url: string }>("upload", { method: "POST", body: form });
 };
-export const submitNews = (payload: { title: string; body: string; photos: string[]; category_id: number | null }) =>
+/** A PDF / Word / Excel / PowerPoint file: kept under its own name (the server checks that it really is one). */
+export const uploadDocument = (file: File) => {
+  const form = new FormData();
+  form.append("file", file, file.name);
+  return call<{ path: string; url: string; title: string }>("upload", { method: "POST", body: form });
+};
+export const submitNews = (payload: { title: string; body: string; photos: string[]; files: { path: string; title: string }[]; category_id: number | null }) =>
   call<{ ok: boolean }>("submit", { method: "POST", body: JSON.stringify(payload) });

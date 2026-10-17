@@ -8,6 +8,8 @@ but waits for an approver's «Ruxsat berish». Strangers outside private chats a
 Everything here is plain text on purpose (no Telegram formatting), so nothing a person types can break a message."""
 import io
 import logging
+import os
+import re
 import uuid
 from datetime import timedelta
 from hmac import compare_digest
@@ -43,13 +45,17 @@ NEW_STRANGERS_PER_HOUR = 20  # people without the invite code who may start regi
 MAX_PIXELS = 50_000_000
 MAX_SIDE = 2560
 ALLOWED_FORMATS = {"JPEG", "PNG", "WEBP"}
+MAX_FILES = 3
+DOCUMENT_EXTENSIONS = (".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx")
+DOCUMENT_PATH_RE = re.compile(r"^uploads/telegram/\d{4}/\d{2}/(\d+)-[0-9a-f]{32}\.(?:pdf|doc|docx|xls|xlsx|ppt|pptx)$")
 
 HELP = (
     "Bu bot FJSTI saytiga yangilik yuborish uchun.\n\n"
-    "1) Rasm(lar) va matn yuboring. Matnning birinchi qatori — sarlavha, qolgani — yangilik matni.\n"
+    "1) Rasm(lar) va matn yuboring. Matnning birinchi qatori — sarlavha, qolgani — yangilik matni. PDF/Word/Excel fayl ham qo'shish mumkin.\n"
     "2) Hammasi tayyor bo'lgach «Yuborish» tugmasini bosing.\n"
     "3) Yangilikni admin ko'rib chiqadi va tasdiqlasa, saytda chiqadi.\n\n"
     f"Bitta yangilikka ko'pi bilan {MAX_PHOTOS} ta rasm. Rasmni «fayl» sifatida yuborsangiz sifati buzilmaydi.\n"
+    "Video bo'lsa YouTube yoki Telegram havolasini matn ichiga yozing.\n"
     "/bekor — yozilgan narsani bekor qilish\n/id — Telegram raqamingiz"
 )
 
@@ -253,6 +259,37 @@ def store_image(data: bytes, owner: int) -> str:
     return default_storage.save(f"uploads/telegram/{stamp:%Y/%m}/{owner}-{uuid.uuid4().hex}.jpg", ContentFile(buffer.getvalue()))
 
 
+def clean_title(name: str) -> str:
+    """The card title of an attached file: its file name without the extension, tidied; quotes and brackets removed."""
+    stem = os.path.splitext(name or "")[0].replace("_", " ").replace("-", " ")
+    return " ".join(re.sub(r"[<>\"'`]", "", stem).split())[:120] or "Hujjat"
+
+
+def store_document(data: bytes, owner: int, filename: str) -> tuple[str, str]:
+    """Saves a PDF / Word / Excel / PowerPoint file after checking that its extension is allowed AND that the first
+    bytes really are that kind of file (a renamed .exe or .html is refused). Returns (media path, card title)."""
+    extension = os.path.splitext(filename or "")[1].lower()
+    if extension not in DOCUMENT_EXTENSIONS or not data:
+        raise ValueError("document type")
+    genuine = (
+        (extension == ".pdf" and data.startswith(b"%PDF-"))
+        or (extension in (".docx", ".xlsx", ".pptx") and data.startswith(b"PK\x03\x04"))
+        or (extension in (".doc", ".xls", ".ppt") and data.startswith(b"\xd0\xcf\x11\xe0"))
+    )
+    if not genuine:
+        raise ValueError("document content")
+    path = default_storage.save(f"uploads/telegram/{timezone.localdate():%Y/%m}/{owner}-{uuid.uuid4().hex}{extension}", ContentFile(data))
+    return path, clean_title(filename)
+
+
+def _document_of(message: dict) -> tuple[str, str] | None:
+    """(file_id, file name) of a non-picture file the person sent."""
+    document = message.get("document")
+    if isinstance(document, dict) and not str(document.get("mime_type", "")).startswith("image/"):
+        return document.get("file_id"), str(document.get("file_name") or "")
+    return None
+
+
 def _photo_file_id(message: dict) -> str | None:
     photos = message.get("photo")
     if isinstance(photos, list) and photos:
@@ -276,17 +313,27 @@ def _open_submission(user: BotUser) -> BotSubmission:
 def _summary(sub: BotSubmission) -> str:
     title = sub.title or "— (hali yo'q: matn yozing, birinchi qator sarlavha bo'ladi)"
     return (
-        f"📝 Sarlavha: {title}\n🖼 Rasmlar: {len(sub.photo_paths)}\n\n"
+        f"📝 Sarlavha: {title}\n🖼 Rasmlar: {len(sub.photo_paths)}\n📎 Fayllar: {len(sub.file_items)}\n\n"
         "Yana rasm yoki matn qo'shishingiz mumkin. Tayyor bo'lsa «Yuborish» ni bosing."
     )
 
 
 def _collect(chat_id: int, user: BotUser, message: dict, text: str) -> None:
     file_id = _photo_file_id(message)
+    document = None if file_id else _document_of(message)
     caption = (message.get("caption") or "").strip()
     body_text = text or caption
-    if not file_id and not text:
-        tg.send_message(chat_id, "Faqat rasm va matn qabul qilinadi.")
+    if not file_id and not document and not text:
+        if message.get("video") or message.get("animation") or message.get("video_note"):
+            tg.send_message(
+                chat_id,
+                "Video qabul qilinmaydi (fayl juda og'ir). Videoni YouTube yoki Telegram kanalga joylab, havolasini matn ichiga yozing — sayt uni bosiladigan qilib qo'yadi.",
+            )
+        else:
+            tg.send_message(chat_id, "Rasm, PDF/Word/Excel fayl va matn qabul qilinadi.")
+        return
+    if document and not document[1].lower().endswith(DOCUMENT_EXTENSIONS):
+        tg.send_message(chat_id, "Bu fayl turi qabul qilinmaydi. Ruxsat etilgan: PDF, Word, Excel, PowerPoint.")
         return
     if len(body_text) > MAX_TEXT:
         tg.send_message(chat_id, f"Matn juda uzun (eng ko'pi {MAX_TEXT} belgi). Qisqartirib qayta yuboring.")
@@ -304,9 +351,23 @@ def _collect(chat_id: int, user: BotUser, message: dict, text: str) -> None:
             tg.send_message(chat_id, "Rasmni qabul qilib bo'lmadi. JPG, PNG yoki WEBP rasm yuboring (20 MB gacha).")
             return
 
+    stored_file = None
+    if document:
+        try:
+            stored_file = store_document(tg.download_file(document[0]), user.telegram_id, document[1])
+        except (tg.TelegramError, ValueError):
+            tg.send_message(chat_id, "Faylni qabul qilib bo'lmadi. PDF, Word yoki Excel fayl yuboring (20 MB gacha).")
+            return
+
     reply = True
     with transaction.atomic():
         sub = _open_submission(user)
+        if stored_file:
+            if len(sub.file_items) >= MAX_FILES:
+                default_storage.delete(stored_file[0])
+                tg.send_message(chat_id, f"Bitta yangilikka ko'pi bilan {MAX_FILES} ta fayl. «Yuborish» ni bosing.")
+                return
+            sub.file_items = [*sub.file_items, {"path": stored_file[0], "title": stored_file[1]}]
         if stored:
             if len(sub.photo_paths) >= MAX_PHOTOS:
                 default_storage.delete(stored)
@@ -350,9 +411,14 @@ def create_draft(sub: BotSubmission, category_id: int | None = None):
     clean = lambda text: text.replace("<", "").replace(">", "")  # noqa: E731
     paragraphs = "".join(f"<p>{escape(clean(line))}</p>" for line in sub.body.splitlines() if clean(line).strip())
     paths = list(sub.photo_paths)
+    # each attached file becomes a card on the page (the editor's "new document" marker, see content/admin_content.py)
+    cards = "".join(
+        f'<div data-new-document="{escape(item["path"])}" data-title="{escape(clean_title(item.get("title", "")))}"></div>'
+        for item in sub.file_items
+    )
     payload = {
         "title_uz": to_latin(clean(sub.title)),
-        "content_uz": to_latin(paragraphs),
+        "content_uz": to_latin(paragraphs) + cards,
         "category_id": category.pk if category else None,
         "status": 0,
         "date": timezone.now().isoformat(),
@@ -421,7 +487,7 @@ def finalize_submission(sub: BotSubmission, user: BotUser, category_id: int | No
 
 def notify_new_draft(sub: BotSubmission, user: BotUser) -> None:
     notify_approvers(
-        f"📰 Yangi yangilik (qoralama): «{sub.title}»\nMuallif: {user.label}\nRasmlar: {len(sub.photo_paths)}\n\n"
+        f"📰 Yangi yangilik (qoralama): «{sub.title}»\nMuallif: {user.label}\nRasmlar: {len(sub.photo_paths)}, fayllar: {len(sub.file_items)}\n\n"
         f"Ko'rib chiqish: {settings.TELEGRAM_SITE_URL}/admin/news/{sub.post_id}"
     )
 

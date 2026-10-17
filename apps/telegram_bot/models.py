@@ -67,6 +67,8 @@ class BotSubmission(models.Model):
     title = models.CharField(max_length=255, blank=True)
     body = models.TextField(blank=True)
     photo_paths = models.JSONField(default=list)  # MEDIA_ROOT-relative paths of the stored pictures
+    file_items = models.JSONField(default=list)  # attached documents: [{"path": ..., "title": ...}] (PDF, Word, Excel, ...)
+    published_notified = models.BooleanField(default=False)  # the author was told (with the link) that the post is public
     media_group_ids = models.JSONField(default=list)  # albums already answered once
     post = models.ForeignKey("news.NewsPost", null=True, blank=True, on_delete=models.SET_NULL, related_name="telegram_submissions")
     created_at = models.DateTimeField(auto_now_add=True)

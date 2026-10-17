@@ -11,6 +11,16 @@ Nothing is published without an administrator (Yangiliklar -> status "E'lon qili
 * "Havolani almashtirish" makes a new code: the old link stops registering people.
 * Approvers (a flag on the person) get a Telegram message for every new person and every new draft.
 
+## Files, video, links, translations
+* PDF / Word / Excel / PowerPoint (up to 3 per news item, 20 MB; the first bytes must really be that kind of file) become a
+  document card on the page (the editor's "new document" marker), in the chat and in the Mini App.
+* Video is not accepted (too heavy, and the site's video page is built on YouTube links): people paste a YouTube/Telegram link
+  into the text and the site makes it clickable.
+* When an administrator publishes a post that came from the bot, its author gets a Telegram message with the public link
+  (once; apps/telegram_bot/notify.py, called from the news editor). The Mini App also lists the link with a copy button.
+* The draft holds the Uzbek text only. Russian/English are filled by the admin form's machine translation (Google's keyless
+  endpoint) when the post is saved/published, and can be checked there.
+
 ## Limits (apps/telegram_bot/services.py)
 10 pictures per news item, 10 sent items per person per day, 6000 characters of text, 30 messages per person per minute;
 at most 20 people without the invite code may start registering per hour (all together); pictures must be JPEG/PNG/WEBP, are re-encoded to JPEG (metadata, GPS included, is dropped) and kept under

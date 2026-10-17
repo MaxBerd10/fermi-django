@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
-import { AppError, getMe, getSubmissions, register, submitNews, uploadPhoto, type Me, type Submission } from "./api";
+import { AppError, getMe, getSubmissions, register, submitNews, uploadDocument, uploadPhoto, type Me, type Submission } from "./api";
 import { close, confirmClosing, expand, initData, ready, theme } from "./bridge";
 import { prepareImage } from "./image";
 
@@ -131,6 +131,20 @@ function formatDate(value: string): string {
 function Home({ me, onNew }: { me: Me; onNew: () => void }) {
   const [items, setItems] = useState<Submission[] | null>(null);
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState<number | null>(null);
+
+  /** The full address of a published news item, ready to paste into a chat. */
+  async function copyLink(item: Submission) {
+    if (!item.url) return;
+    const address = new URL(item.url, window.location.origin).href;
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopied(item.id);
+      window.setTimeout(() => setCopied((id) => (id === item.id ? null : id)), 2500);
+    } catch {
+      window.prompt("Havolani nusxalang:", address);
+    }
+  }
   const left = Math.max(0, me.limits.per_day - me.limits.sent_today);
 
   useEffect(() => {
@@ -177,9 +191,15 @@ function Home({ me, onNew }: { me: Me; onNew: () => void }) {
                   <span className="text-xs text-[color:var(--hint)]">{formatDate(item.created_at)}</span>
                 </div>
                 {item.url && (
-                  <a href={item.url} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-[color:var(--accent)]">
-                    Saytda ko'rish <i className="ri-external-link-line" aria-hidden="true" />
-                  </a>
+                  <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold text-[color:var(--accent)]">
+                    <a href={item.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1">
+                      Saytda ko'rish <i className="ri-external-link-line" aria-hidden="true" />
+                    </a>
+                    <button type="button" onClick={() => void copyLink(item)} className="inline-flex cursor-pointer items-center gap-1 font-semibold">
+                      <i className={copied === item.id ? "ri-check-line" : "ri-file-copy-line"} aria-hidden="true" />
+                      {copied === item.id ? "Nusxalandi" : "Havolani nusxalash"}
+                    </button>
+                  </div>
                 )}
               </div>
             </article>
@@ -192,6 +212,15 @@ function Home({ me, onNew }: { me: Me; onNew: () => void }) {
 
 // --- compose ---------------------------------------------------------------------------------------------------
 
+interface AttachedFile {
+  key: number;
+  name: string;
+  status: "uploading" | "done" | "error";
+  path?: string;
+  title?: string;
+  error?: string;
+}
+
 interface Photo {
   key: number;
   preview: string;
@@ -202,6 +231,8 @@ interface Photo {
 
 function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: () => void }) {
   const [photos, setPhotos] = useState<Photo[]>([]);
+  const [docs, setDocs] = useState<AttachedFile[]>([]);
+  const docInput = useRef<HTMLInputElement>(null);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [category, setCategory] = useState<number | null>(me.categories[0]?.id ?? null);
@@ -210,7 +241,7 @@ function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: (
   const fileInput = useRef<HTMLInputElement>(null);
   const nextKey = useRef(1);
 
-  const dirty = Boolean(title || body || photos.length);
+  const dirty = Boolean(title || body || photos.length || docs.length);
   useEffect(() => {
     confirmClosing(dirty);
     return () => confirmClosing(false);
@@ -237,6 +268,21 @@ function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: (
     for (const { key, file } of fresh) await sendOne(key, file); // one by one: kind to a slow mobile network
   }
 
+  async function addDocuments(list: FileList | null) {
+    const chosen = Array.from(list ?? []).slice(0, Math.max(0, me.limits.files - docs.length));
+    if (docInput.current) docInput.current.value = "";
+    for (const file of chosen) {
+      const key = nextKey.current++;
+      setDocs((current) => [...current, { key, name: file.name, status: "uploading" }]);
+      try {
+        const { path, title: cardTitle } = await uploadDocument(file);
+        setDocs((current) => current.map((d) => (d.key === key ? { ...d, status: "done", path, title: cardTitle } : d)));
+      } catch (err) {
+        setDocs((current) => current.map((d) => (d.key === key ? { ...d, status: "error", error: err instanceof AppError ? err.message : "Yuklab bo'lmadi." } : d)));
+      }
+    }
+  }
+
   function move(index: number, by: -1 | 1) {
     setPhotos((list) => {
       const next = [...list];
@@ -247,15 +293,21 @@ function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: (
     });
   }
 
-  const uploading = photos.some((p) => p.status === "uploading");
-  const failed = photos.some((p) => p.status === "error");
+  const uploading = photos.some((p) => p.status === "uploading") || docs.some((d) => d.status === "uploading");
+  const failed = photos.some((p) => p.status === "error") || docs.some((d) => d.status === "error");
   const canSend = title.trim().length > 0 && !uploading;
 
   async function send() {
     setSending(true);
     setError("");
     try {
-      await submitNews({ title, body, photos: photos.filter((p) => p.path).map((p) => p.path as string), category_id: category });
+      await submitNews({
+        title,
+        body,
+        photos: photos.filter((p) => p.path).map((p) => p.path as string),
+        files: docs.filter((d) => d.path).map((d) => ({ path: d.path as string, title: d.title ?? d.name })),
+        category_id: category,
+      });
       onSent();
     } catch (err) {
       setError(err instanceof AppError ? err.message : "Yuborib bo'lmadi.");
@@ -320,7 +372,35 @@ function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: (
         </div>
         <input ref={fileInput} type="file" accept="image/*" multiple className="hidden" onChange={(e) => void addFiles(e.target.files)} />
         <p className="mt-2 text-xs text-[color:var(--hint)]">Birinchi rasm yangilikning muqovasi bo'ladi. Tartibini strelkalar bilan o'zgartirasiz.</p>
-        {failed && <p className="mt-2 text-xs font-medium text-red-600">Ba'zi rasmlar yuklanmadi: ularni olib tashlab, qayta qo'shing.</p>}
+        {failed && <p className="mt-2 text-xs font-medium text-red-600">Ba'zi fayllar yuklanmadi: ularni olib tashlab, qayta qo'shing.</p>}
+      </section>
+
+      <section className={card}>
+        <div className="mb-2 flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold text-[color:var(--fg)]">Fayllar <span className="font-normal text-[color:var(--hint)]">(ixtiyoriy)</span></h2>
+          <span className="text-xs text-[color:var(--hint)]">{docs.length} / {me.limits.files}</span>
+        </div>
+        <div className="space-y-2">
+          {docs.map((doc) => (
+            <div key={doc.key} className="flex items-center gap-3 rounded-xl bg-[var(--bg)] px-3 py-2.5">
+              <i className={`${doc.status === "error" ? "ri-error-warning-line text-red-600" : doc.status === "uploading" ? "ri-loader-4-line animate-spin" : "ri-file-text-line"} text-xl text-[color:var(--hint)]`} aria-hidden="true" />
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-medium text-[color:var(--fg)]">{doc.name}</div>
+                {doc.error && <div className="text-xs text-red-600">{doc.error}</div>}
+              </div>
+              <button type="button" onClick={() => setDocs((list) => list.filter((d) => d.key !== doc.key))} className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full text-[color:var(--hint)]" aria-label="Faylni olib tashlash">
+                <i className="ri-close-line" aria-hidden="true" />
+              </button>
+            </div>
+          ))}
+          {docs.length < me.limits.files && (
+            <button type="button" onClick={() => docInput.current?.click()} className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-[var(--line)] text-sm font-medium text-[color:var(--hint)]">
+              <i className="ri-attachment-2" aria-hidden="true" /> PDF, Word yoki Excel qo'shish
+            </button>
+          )}
+        </div>
+        <input ref={docInput} type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx" multiple className="hidden" onChange={(e) => void addDocuments(e.target.files)} />
+        <p className="mt-2 text-xs text-[color:var(--hint)]">Video bo'lsa, YouTube yoki Telegram havolasini matn ichiga yozing.</p>
       </section>
 
       <section className={`${card} space-y-4`}>

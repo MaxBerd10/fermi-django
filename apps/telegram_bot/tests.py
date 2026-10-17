@@ -67,6 +67,17 @@ def bot(settings, tmp_path, db):
         setattr(tg, name, function)
 
 
+@pytest.fixture
+def staff(db):
+    from django.contrib.auth import get_user_model
+    from rest_framework_simplejwt.tokens import RefreshToken
+
+    user = get_user_model().objects.create_user(username="tgstaff", password="x", is_staff=True)
+    client = APIClient()
+    client.credentials(HTTP_AUTHORIZATION=f"Bearer {RefreshToken.for_user(user).access_token}")
+    return client
+
+
 def message(user_id, text=None, photo=None, caption=None, group=None, chat_type="private", document=None, is_bot=False):
     body = {"message_id": next(_ids), "from": {"id": user_id, "is_bot": is_bot, "username": f"u{user_id}"}, "chat": {"id": user_id, "type": chat_type}}
     if text is not None:
@@ -215,15 +226,52 @@ def test_a_draft_needs_a_title(bot):
     assert NewsPost.objects.count() == 1
 
 
-def test_only_pictures_of_the_right_kind_are_accepted(bot):
+def test_only_pictures_and_real_documents_are_accepted(bot):
     register(23)
     bot.files["junk"] = b"<html>not a picture</html>"
     say(message(23, photo="junk"))
     assert "qabul qilib bo'lmadi" in bot.texts_to(23)[-1]
-    say(message(23, "x", document={"file_id": "d", "mime_type": "application/pdf"}))
-    assert BotSubmission.objects.filter(user__telegram_id=23, photo_paths=[]).count() >= 0
-    say(message(23, document={"file_id": "d", "mime_type": "application/pdf"}))
-    assert "Faqat rasm va matn" in bot.texts_to(23)[-1]
+    bot.files["fake"] = b"MZ\x90\x00 this is an executable renamed to .pdf"
+    say(message(23, document={"file_id": "fake", "mime_type": "application/pdf", "file_name": "hisobot.pdf"}))
+    assert "Faylni qabul qilib bo'lmadi" in bot.texts_to(23)[-1]
+    say(message(23, document={"file_id": "x", "mime_type": "application/x-msdownload", "file_name": "virus.exe"}))
+    assert "fayl turi qabul qilinmaydi" in bot.texts_to(23)[-1]
+    update = message(23)
+    update["message"]["video"] = {"file_id": "v"}
+    say(update)
+    assert "YouTube" in bot.texts_to(23)[-1]
+    assert BotSubmission.objects.filter(user__telegram_id=23).count() == 0
+
+
+def test_a_pdf_becomes_a_document_card_on_the_draft(bot):
+    from apps.content.models import ContentBlock
+
+    user = register(26)
+    bot.files["pdf"] = b"%PDF-1.4\n%fake but genuine header\n"
+    say(message(26, document={"file_id": "pdf", "mime_type": "application/pdf", "file_name": "Ilmiy_hisobot_2026.pdf"}, caption="Hisobot e'lon qilindi\nMatn"))
+    sub = BotSubmission.objects.get(user=user)
+    assert sub.file_items[0]["title"] == "Ilmiy hisobot 2026" and sub.file_items[0]["path"].endswith(".pdf") and "📎 Fayllar: 1" in bot.sent[-1][1]
+    say(callback(26, bot.sent[-1][2][0][0][1]))
+    post = NewsPost.objects.get()
+    assert ContentBlock.objects.filter(page=post.page, block_type="document").count() == 1
+
+
+def test_a_published_post_tells_its_author_the_link_once(bot, staff, django_capture_on_commit_callbacks):
+    user = register(27)
+    say(message(27, "Chop etiladigan yangilik\nMatn"))
+    say(callback(27, bot.sent[-1][2][0][0][1]))
+    post = NewsPost.objects.get()
+    sent_before = len(bot.texts_to(27))
+    payload = {"title_uz": post.title_uz, "status": 1, "category_id": post.category_id, "content_uz": "<p>Matn</p>"}
+    with django_capture_on_commit_callbacks(execute=True):
+        assert staff.put(f"/api/v1/admin/news/{post.pk}", payload, format="json").status_code == 200
+    note = bot.texts_to(27)[sent_before:]
+    assert len(note) == 1 and "saytda chiqdi" in note[0] and f"https://fermi.uz/detail/{post.slug}" in note[0]
+    with django_capture_on_commit_callbacks(execute=True):
+        staff.put(f"/api/v1/admin/news/{post.pk}", {**payload, "status": 0}, format="json")
+        staff.put(f"/api/v1/admin/news/{post.pk}", payload, format="json")
+    assert len(bot.texts_to(27)) == sent_before + 1  # told once, not on every publish
+    assert BotSubmission.objects.get(user=user).published_notified is True
 
 
 def test_limits_on_pictures_and_on_sent_items_per_day(bot):
@@ -255,17 +303,6 @@ def test_cancel_and_text_is_escaped(bot):
 
 
 # --- admin side ------------------------------------------------------------------------------------------------
-
-@pytest.fixture
-def staff(db):
-    from django.contrib.auth import get_user_model
-    from rest_framework_simplejwt.tokens import RefreshToken
-
-    user = get_user_model().objects.create_user(username="tgstaff", password="x", is_staff=True)
-    client = APIClient()
-    client.credentials(HTTP_AUTHORIZATION=f"Bearer {RefreshToken.for_user(user).access_token}")
-    return client
-
 
 def test_admin_lists_people_and_allowing_one_tells_them(bot, staff):
     person = register(30, code=False)

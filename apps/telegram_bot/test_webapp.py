@@ -171,3 +171,29 @@ def test_a_category_can_be_chosen(app):
     other = NewsCategory.objects.create(slug="elonlar", name_uz="E'lonlar", name_ru="О", name_en="A")
     assert api(500).post(f"{APP}/submit", {"title": "E'lon", "category_id": other.pk}, format="json").status_code == 201
     assert NewsPost.objects.get().category_id == other.pk
+
+
+def test_documents_can_be_uploaded_and_attached_but_only_real_ones(app):
+    from apps.content.models import ContentBlock
+
+    active_user(500)
+    active_user(501)
+    client = api(500)
+    pdf = SimpleUploadedFile("Yillik_hisobot.pdf", b"%PDF-1.7\nbody", content_type="application/pdf")
+    res = client.post(f"{APP}/upload", {"file": pdf}, format="multipart")
+    assert res.status_code == 201 and res.json()["kind"] == "file" and res.json()["title"] == "Yillik hisobot"
+    path = res.json()["path"]
+    fake = SimpleUploadedFile("x.pdf", b"MZ not a pdf", content_type="application/pdf")
+    assert client.post(f"{APP}/upload", {"file": fake}, format="multipart").status_code == 400
+    exe = SimpleUploadedFile("x.exe", b"MZ", content_type="application/octet-stream")
+    assert client.post(f"{APP}/upload", {"file": exe}, format="multipart").status_code == 400
+    # someone else's document, a path outside the telegram folder, too many files: refused
+    theirs = api(501).post(f"{APP}/upload", {"file": SimpleUploadedFile("o.pdf", b"%PDF-1", content_type="application/pdf")}, format="multipart").json()["path"]
+    for bad in ([{"path": theirs, "title": "x"}], [{"path": "uploads/2026/10/a.pdf", "title": "x"}], [{"path": path, "title": "a"}] * 2 + [{"path": "uploads/telegram/2026/10/500-" + "1" * 32 + ".pdf"}] * 2):
+        res = client.post(f"{APP}/submit", {"title": "x", "files": bad}, format="json")
+        assert res.status_code == 400, bad
+    ok = client.post(f"{APP}/submit", {"title": "Hisobot chiqdi", "files": [{"path": path, "title": "Yillik hisobot"}]}, format="json")
+    assert ok.status_code == 201
+    post = NewsPost.objects.get()
+    assert ContentBlock.objects.filter(page=post.page, block_type="document").count() == 1
+    assert client.get(f"{APP}/submissions").json()[0]["files"] == 1

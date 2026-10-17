@@ -191,6 +191,7 @@ class AdminPostSerializer(serializers.ModelSerializer):
 
         # status 1 = published, 0 = draft (hidden from the public site); see NewsPost.is_published.
         # A client that doesn't send it (e.g. a script) leaves the current value alone.
+        was_published = bool(instance.pk and instance.is_published)
         if data.get("status") not in (None, ""):
             instance.is_published = str(data["status"]) != "0"
 
@@ -216,6 +217,11 @@ class AdminPostSerializer(serializers.ModelSerializer):
             "en": data.get("content_en") or "",
         })
         _append_gallery_block(instance.page, gallery_ids)
+        if instance.is_published and not was_published:
+            # a post that staff sent through the Telegram bot: tell its author, with the link, once the save is committed
+            from apps.telegram_bot.notify import notify_published
+
+            transaction.on_commit(lambda: notify_published(instance))
         return instance
 
 

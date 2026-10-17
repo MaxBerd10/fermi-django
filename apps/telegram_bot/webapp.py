@@ -27,6 +27,9 @@ from apps.news.models import NewsCategory
 from . import telegram_api as tg
 from .models import BotConfig, BotSubmission, BotUser
 from .services import (
+    DOCUMENT_EXTENSIONS,
+    DOCUMENT_PATH_RE,
+    MAX_FILES,
     MAX_NAME,
     MAX_PER_DAY,
     MAX_PHOTOS,
@@ -36,7 +39,9 @@ from .services import (
     _today_start,
     finalize_submission,
     finish_registration,
+    clean_title,
     notify_new_draft,
+    store_document,
     store_image,
 )
 
@@ -123,7 +128,7 @@ class TgAppView(APIView):
             "telegram_name": self.tg_user.get("first_name", ""),
             "invited": self.invited() or bool(user and user.invited),
             "categories": [{"id": c.pk, "title": c.name_uz} for c in NewsCategory.objects.order_by("id")],
-            "limits": {"photos": MAX_PHOTOS, "per_day": MAX_PER_DAY, "sent_today": sent_today, "title": MAX_TITLE, "text": MAX_TEXT},
+            "limits": {"photos": MAX_PHOTOS, "files": MAX_FILES, "per_day": MAX_PER_DAY, "sent_today": sent_today, "title": MAX_TITLE, "text": MAX_TEXT},
         }
 
 
@@ -174,6 +179,7 @@ class SubmissionsView(TgAppView):
                     "state": state,
                     "url": url,
                     "photos": len(sub.photo_paths),
+                    "files": len(sub.file_items),
                     "thumb": f"/media/{sub.photo_paths[0]}" if sub.photo_paths else None,
                     "created_at": sub.created_at,
                 }
@@ -182,20 +188,29 @@ class SubmissionsView(TgAppView):
 
 
 class UploadView(TgAppView):
+    """One picture (re-encoded) or one document (PDF/Word/Excel/PowerPoint, checked by content) per request."""
+
     def post(self, request):
         user = self.active_user()
         upload = request.FILES.get("file")
         if upload is None:
-            raise ValidationError({"detail": "Rasm yuborilmadi."})
+            raise ValidationError({"detail": "Fayl yuborilmadi."})
         if upload.size > MAX_UPLOAD_BYTES:
-            raise ValidationError({"detail": "Rasm juda katta (15 MB gacha)."})
+            raise ValidationError({"detail": "Fayl juda katta (15 MB gacha)."})
         if not _counter_ok(f"tg-uploads:{user.telegram_id}", 86400, UPLOADS_PER_DAY):
-            raise ValidationError({"detail": "Bugungi rasm yuklash chegarasiga yetdingiz."})
+            raise ValidationError({"detail": "Bugungi yuklash chegarasiga yetdingiz."})
+        name = upload.name or ""
+        if name.lower().endswith(DOCUMENT_EXTENSIONS):
+            try:
+                path, title = store_document(upload.read(), user.telegram_id, name)
+            except ValueError:
+                raise ValidationError({"detail": "Fayl qabul qilinmadi. PDF, Word yoki Excel fayl tanlang."}) from None
+            return Response({"path": path, "url": f"/media/{path}", "kind": "file", "title": title}, status=201)
         try:
             path = store_image(upload.read(), user.telegram_id)
         except ValueError:
             raise ValidationError({"detail": "Rasm qabul qilinmadi. JPG, PNG yoki WEBP rasm tanlang."}) from None
-        return Response({"path": path, "url": f"/media/{path}"}, status=201)
+        return Response({"path": path, "url": f"/media/{path}", "kind": "image"}, status=201)
 
 
 class SubmitView(TgAppView):
@@ -204,6 +219,7 @@ class SubmitView(TgAppView):
         title = " ".join(str(request.data.get("title") or "").split())
         body = str(request.data.get("body") or "").replace("\r\n", "\n").strip()
         photos = request.data.get("photos") or []
+        files = request.data.get("files") or []
         category_id = request.data.get("category_id")
         if not title:
             raise ValidationError({"title": ["Sarlavha yozing."]})
@@ -221,11 +237,21 @@ class SubmitView(TgAppView):
                 raise ValidationError({"photos": ["Rasm topilmadi. Qayta yuklang."]})
             if path not in clean:
                 clean.append(path)
+        if not isinstance(files, list) or len(files) > MAX_FILES:
+            raise ValidationError({"files": [f"Ko'pi bilan {MAX_FILES} ta fayl."]})
+        items: list[dict] = []
+        for item in files:
+            path = item.get("path") if isinstance(item, dict) else None
+            found = DOCUMENT_PATH_RE.match(path) if isinstance(path, str) else None
+            if not found or found.group(1) != str(user.telegram_id) or not default_storage.exists(path):
+                raise ValidationError({"files": ["Fayl topilmadi. Qayta yuklang."]})
+            if all(path != existing["path"] for existing in items):
+                items.append({"path": path, "title": clean_title(str(item.get("title") or "") + ".x")})
         if BotSubmission.objects.filter(user=user, status=BotSubmission.SENT, created_at__gte=_today_start()).count() >= MAX_PER_DAY:
             raise ValidationError({"detail": f"Bugun {MAX_PER_DAY} ta yangilik yubordingiz — bu kunlik chegara."})
         category = int(category_id) if str(category_id or "").isdigit() else None
         with transaction.atomic():
-            sub = BotSubmission.objects.create(user=user, title=title, body=body, photo_paths=clean)
+            sub = BotSubmission.objects.create(user=user, title=title, body=body, photo_paths=clean, file_items=items)
             try:
                 finalize_submission(sub, user, category)
             except Exception:
