@@ -27,6 +27,7 @@ from rest_framework.request import Request
 from rest_framework.test import APIRequestFactory
 
 from apps.admin_api.news_views import AdminPostSerializer
+from apps.admin_api.translate_views import TranslationError, translate_texts
 from apps.admin_api.uz_script import to_latin
 from apps.news.models import NewsCategory
 
@@ -56,6 +57,7 @@ HELP = (
     "3) Yangilikni admin ko'rib chiqadi va tasdiqlasa, saytda chiqadi.\n\n"
     f"Bitta yangilikka ko'pi bilan {MAX_PHOTOS} ta rasm. Rasmni «fayl» sifatida yuborsangiz sifati buzilmaydi.\n"
     "Video bo'lsa YouTube yoki Telegram havolasini matn ichiga yozing.\n"
+    "Matnni o'zbekcha (lotin yoki kirill — kirill avtomatik lotinga o'tadi) yoki ruscha yozishingiz mumkin.\n"
     "/bekor — yozilgan narsani bekor qilish\n/id — Telegram raqamingiz"
 )
 
@@ -259,6 +261,33 @@ def store_image(data: bytes, owner: int) -> str:
     return default_storage.save(f"uploads/telegram/{stamp:%Y/%m}/{owner}-{uuid.uuid4().hex}.jpg", ContentFile(buffer.getvalue()))
 
 
+RUSSIAN_ONLY_LETTERS = set("ыэщёьЫЭЩЁЬ")
+UZBEK_ONLY_LETTERS = set("ўқғҳЎҚҒҲ")
+
+
+class RussianTranslationFailed(Exception):
+    """A news item written in Russian could not be translated into Uzbek just now."""
+
+
+RUSSIAN_WORDS = frozenset(
+    "и в на не что это как для по из от при был была были будет также который которые его их все но или за до со к о об а то так же".split()
+)
+UZBEK_WORDS = frozenset("ва учун билан бир бу ҳам эди ёки лекин деб бўйича томонидан ҳақида қилинди келди қадар ўз".split())
+
+
+def looks_russian(text: str) -> bool:
+    """Cyrillic text that is Russian rather than Uzbek. Uzbek Cyrillic always shows some of ў қ ғ ҳ, so a text with none
+    of them is Russian when it has letters only Russian uses (ы э щ ё ь) or clearly more Russian than Uzbek little words.
+    The Uzbek-Cyrillic -> Latin converter would turn Russian into nonsense, so it must not see it."""
+    if any(ch in UZBEK_ONLY_LETTERS for ch in text):
+        return False
+    if any(ch in RUSSIAN_ONLY_LETTERS for ch in text):
+        return True
+    words = [w.strip(".,;:!?()«»\"'—-").lower() for w in text.split()]
+    russian = sum(w in RUSSIAN_WORDS for w in words)
+    return russian >= 2 and russian > sum(w in UZBEK_WORDS for w in words)
+
+
 def clean_title(name: str) -> str:
     """The card title of an attached file: its file name without the extension, tidied; quotes and brackets removed."""
     stem = os.path.splitext(name or "")[0].replace("_", " ").replace("-", " ")
@@ -416,15 +445,29 @@ def create_draft(sub: BotSubmission, category_id: int | None = None):
         f'<div data-new-document="{escape(item["path"])}" data-title="{escape(clean_title(item.get("title", "")))}"></div>'
         for item in sub.file_items
     )
+    title, body_html = clean(sub.title), paragraphs
     payload = {
-        "title_uz": to_latin(clean(sub.title)),
-        "content_uz": to_latin(paragraphs) + cards,
+        "title_uz": to_latin(title),
+        "content_uz": to_latin(body_html) + cards,
         "category_id": category.pk if category else None,
         "status": 0,
         "date": timezone.now().isoformat(),
         "img": paths[0] if paths else "",
         "gallery": paths[1:],
     }
+    if looks_russian(title + " " + sub.body):
+        # a Russian news item: keep the original as the Russian version and make the Uzbek and English ones by machine
+        # translation (the site's canonical language is Uzbek Latin, which the editor then checks)
+        try:
+            uz_title, uz_html = translate_texts([title, body_html], "ru", "uz")
+            en_title, en_html = translate_texts([title, body_html], "ru", "en")
+        except TranslationError:
+            raise RussianTranslationFailed from None
+        payload.update(
+            title_uz=to_latin(uz_title), content_uz=to_latin(uz_html) + cards,
+            title_ru=title, content_ru=body_html + cards,
+            title_en=en_title, content_en=en_html + cards,
+        )
     request = Request(APIRequestFactory().post("/api/v1/admin/news", payload, format="json"), parsers=[JSONParser()])
     serializer = AdminPostSerializer(data=payload, context={"request": request})
     serializer.is_valid(raise_exception=True)
@@ -469,6 +512,9 @@ def _owner_action(callback: dict, user: BotUser, action: str, pk: int, chat_id: 
             return
         try:
             finalize_submission(sub, user)
+        except RussianTranslationFailed:
+            tg.answer_callback(callback["id"], "Rus tilidagi matnni hozir tarjima qilib bo'lmadi. Birozdan keyin qayta urining yoki o'zbekcha yozing.", True)
+            return
         except Exception:
             logger.exception("telegram draft failed")
             tg.answer_callback(callback["id"], "Yangilikni saqlab bo'lmadi. Birozdan keyin qayta urining.", True)

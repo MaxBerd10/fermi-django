@@ -409,6 +409,7 @@ function Compose({ me, onBack, onSent }: { me: Me; onBack: () => void; onSent: (
         </Field>
         <Field label="Matn" hint={`${body.length}/${me.limits.text}`}>
           <textarea className={`${input} min-h-40 resize-y`} value={body} maxLength={me.limits.text} onChange={(e) => setBody(e.target.value)} placeholder="Nima bo'ldi, qachon, kim ishtirok etdi..." />
+          <p className="mt-1.5 text-xs text-[color:var(--hint)]">O'zbekcha (lotin yoki kirill) yoki ruscha yozishingiz mumkin: kirill avtomatik lotinga o'giriladi.</p>
         </Field>
         {me.categories.length > 1 && (
           <div>

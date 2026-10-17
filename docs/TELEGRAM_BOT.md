@@ -18,7 +18,10 @@ Nothing is published without an administrator (Yangiliklar -> status "E'lon qili
   into the text and the site makes it clickable.
 * When an administrator publishes a post that came from the bot, its author gets a Telegram message with the public link
   (once; apps/telegram_bot/notify.py, called from the news editor). The Mini App also lists the link with a copy button.
-* The draft holds the Uzbek text only. Russian/English are filled by the admin form's machine translation (Google's keyless
+* Uzbek written in Cyrillic is converted to Latin (the site's canonical script). Text that is clearly Russian (see
+  `looks_russian`) is NOT converted: it is kept as the Russian version and the Uzbek/English versions are machine-translated
+  from it; if the translator is down the person is asked to retry or write in Uzbek.
+* Otherwise the draft holds the Uzbek text only. Russian/English are filled by the admin form's machine translation (Google's keyless
   endpoint) when the post is saved/published, and can be checked there.
 
 ## Limits (apps/telegram_bot/services.py)

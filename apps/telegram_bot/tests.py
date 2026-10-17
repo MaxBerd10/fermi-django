@@ -10,6 +10,7 @@ from apps.content.admin_content import blocks_to_html
 from apps.news.models import NewsCategory, NewsPost
 from apps.telegram_bot import services
 from apps.telegram_bot import telegram_api as tg
+from apps.admin_api.translate_views import TranslationError
 from apps.telegram_bot.models import BotConfig, BotSubmission, BotUser
 
 WEBHOOK = "/api/v1/telegram/webhook/"
@@ -421,3 +422,51 @@ def test_the_bot_survives_a_broken_cache(bot, monkeypatch):
     client = APIClient()
     res = client.post(WEBHOOK, message(40, "/id"), format="json", HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN=SECRET)
     assert res.status_code == 200 and bot.texts_to(40) == ["Sizning Telegram raqamingiz: 40"]
+
+
+# --- Cyrillic ----------------------------------------------------------------------------------------------------
+
+def test_uzbek_cyrillic_is_turned_into_latin_but_russian_is_translated(bot, monkeypatch):
+    from apps.telegram_bot import services as svc
+
+    assert svc.looks_russian("Сегодня в институте прошла конференция") is False  # too short to tell
+    assert svc.looks_russian("Студенты нашего института победили на конференции и получили награды") is True
+    assert svc.looks_russian("Студенты победили\nВсе участвовали") is True  # has ы
+    assert svc.looks_russian("Бугун институтда конференция ўтди") is False  # Uzbek letters
+    assert svc.looks_russian("Талабалар конференцияда қатнашди") is False
+    assert svc.looks_russian("Tadbir bo'ldi") is False
+    assert svc.looks_russian("Янги йил байрами ва бир қанча тадбирлар") is False
+
+    # Uzbek written in Cyrillic: converted to Latin, nothing translated
+    register(60)
+    say(message(60, "Талабалар ғолиб бўлди\nҲамма қатнашди"))
+    say(callback(60, bot.sent[-1][2][0][0][1]))
+    uzbek = NewsPost.objects.get()
+    assert uzbek.title_uz == "Talabalar gʻolib boʻldi"
+
+    # Russian: the original is kept as the Russian version, Uzbek and English come from the translator
+    calls = []
+
+    def fake_translate(texts, source, target):
+        calls.append((source, target))
+        return [f"[{target}] {t}" for t in texts]
+
+    monkeypatch.setattr(svc, "translate_texts", fake_translate)
+    register(61)
+    say(message(61, "Студенты победили на конференции\nВсе участвовали"))
+    say(callback(61, bot.sent[-1][2][0][0][1]))
+    russian = NewsPost.objects.exclude(pk=uzbek.pk).get()
+    assert calls == [("ru", "uz"), ("ru", "en")]
+    assert russian.title_ru == "Студенты победили на конференции"
+    assert russian.title_uz.startswith("[uz]") and russian.title_en.startswith("[en]")
+    assert "Segodnya" not in russian.title_uz  # never the garbled transliteration
+
+    # translator down: no half-made post, the person is told
+    def down(*args):
+        raise TranslationError("down")
+
+    monkeypatch.setattr(svc, "translate_texts", down)
+    register(62)
+    say(message(62, "Студенты победили\nТекст"))
+    say(callback(62, bot.sent[-1][2][0][0][1]))
+    assert NewsPost.objects.count() == 2 and "tarjima qilib bo'lmadi" in bot.answers[-1][0]

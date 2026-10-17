@@ -40,6 +40,7 @@ from .services import (
     finalize_submission,
     finish_registration,
     clean_title,
+    RussianTranslationFailed,
     notify_new_draft,
     store_document,
     store_image,
@@ -254,6 +255,8 @@ class SubmitView(TgAppView):
             sub = BotSubmission.objects.create(user=user, title=title, body=body, photo_paths=clean, file_items=items)
             try:
                 finalize_submission(sub, user, category)
+            except RussianTranslationFailed:
+                raise ValidationError({"detail": "Rus tilidagi matnni hozir tarjima qilib bo'lmadi. Birozdan keyin qayta urining yoki o'zbekcha yozing."}) from None
             except Exception:
                 import logging
 
