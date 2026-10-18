@@ -75,7 +75,7 @@ export default function TelegramBotPage() {
   }
 
   const announcement = info?.invite_link
-    ? `Hurmatli hamkasblar! Institut saytiga yangilik, rasm va e'lonlarni endi Telegram orqali yuborishingiz mumkin. Botga quyidagi havola orqali kiring, ism va bo'limingizni yozing, so'ng rasm va matnni yuboring (birinchi qator — sarlavha). Yangilikni admin ko'rib chiqib tasdiqlagach saytda chiqadi.\n\n${info.invite_link}`
+    ? `Hurmatli hamkasblar! Institut saytiga yangilik, rasm va e'lonlarni endi Telegram orqali yuborishingiz mumkin.\n\n1) Quyidagi havolani bosing va «Start» tugmasini bosing.\n2) «📱 Ilovani ochish» tugmasini bosing, ism va bo'limingizni yozing.\n3) «Yangi yangilik»: rasm va matnni qo'shib «Yuborish» ni bosing.\n\nYangilikni admin ko'rib chiqib tasdiqlagach saytda chiqadi.\n\n${info.invite_link}`
     : "";
 
   return (
@@ -106,7 +106,7 @@ export default function TelegramBotPage() {
             {info.invite_link ? (
               <>
                 <p className="mb-2 text-sm text-foreground-600">
-                  Shu havolani institut guruhlariga tashlang. Havola orqali kirgan odam ism va bo'limini yozadi va darhol yangilik yubora oladi.
+                  Shu havolani institut guruhlariga tashlang. Havolani bosgan odam «Start» ni bosadi, ilovada ism va bo'limini yozadi va darhol yangilik yubora oladi: sizdan hech narsa kerak emas.
                 </p>
                 <div className="flex flex-wrap items-center gap-2">
                   <code className="min-w-0 flex-1 truncate rounded-lg bg-background-100 px-3 py-2.5 text-sm text-foreground-800">{info.invite_link}</code>

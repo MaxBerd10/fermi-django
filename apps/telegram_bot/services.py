@@ -162,9 +162,14 @@ def _start(chat_id: int, sender: dict, user: BotUser | None, text: str) -> None:
         user.state = BotUser.ASK_NAME
         user.invited = user.invited or valid_code
         user.save(update_fields=["state", "invited"])
+    # The Mini App is the front door: registration happens there (name + department on one screen). Typing the name
+    # into the chat still works as a fallback, because the person is left in the "asking for the name" state.
     tg.send_message(
         chat_id,
-        "Assalomu alaykum! Bu FJSTI saytiga yangilik yuborish uchun bot.\n\nAvval tanishib olamiz. Ism va familiyangizni yozing:",
+        "Assalomu alaykum! Bu FJSTI saytiga yangilik yuborish uchun bot.\n\n"
+        "Boshlash uchun pastdagi «📱 Ilovani ochish» tugmasini bosing: ism va bo'limingizni yozasiz, so'ng yangilik yuborasiz.\n\n"
+        "(Ilova ochilmasa, ism va familiyangizni shu yerga yozing.)",
+        app_buttons(),
     )
 
 

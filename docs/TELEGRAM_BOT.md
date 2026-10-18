@@ -5,7 +5,8 @@ Nothing is published without an administrator (Yangiliklar -> status "E'lon qili
 
 ## How people get in
 * The admin panel page **Sozlamalar -> Telegram bot** shows an invite link `t.me/<bot>?start=<code>`.
-  Whoever opens the bot through it types their name and department and is **active** at once.
+  Whoever opens the bot through it presses Start, is offered the «Ilovani ochish» button (the Mini App), types their name and
+  department there and is **active** at once. (Typing the name into the chat still works as a fallback.)
 * Anyone without the code is registered too but stays **pending** until an approver taps "Ruxsat berish" in Telegram
   or the admin sets the status in **Murojaatlar -> Telegram xodimlar**.
 * "Havolani almashtirish" makes a new code: the old link stops registering people.

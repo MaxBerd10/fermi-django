@@ -470,3 +470,13 @@ def test_uzbek_cyrillic_is_turned_into_latin_but_russian_is_translated(bot, monk
     say(message(62, "Студенты победили\nТекст"))
     say(callback(62, bot.sent[-1][2][0][0][1]))
     assert NewsPost.objects.count() == 2 and "tarjima qilib bo'lmadi" in bot.answers[-1][0]
+
+
+def test_start_offers_the_app_and_registering_there_completes_a_chat_start(bot):
+    """The front door is the Mini App: /start with the invite code only offers its button, and the person finishes
+    registering inside the app (apps/telegram_bot/webapp.py RegisterView)."""
+    say(message(70, f"/start {BotConfig.get().invite_code}"))
+    chat_id, text, buttons = bot.sent[-1]
+    assert chat_id == 70 and "Ilovani ochish" in text and buttons[0][0][1] == "webapp:https://fermi.uz/tg"
+    user = BotUser.objects.get(telegram_id=70)
+    assert user.invited and user.state == "ask_name" and user.status == "pending"

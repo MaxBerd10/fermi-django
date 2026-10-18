@@ -197,3 +197,16 @@ def test_documents_can_be_uploaded_and_attached_but_only_real_ones(app):
     post = NewsPost.objects.get()
     assert ContentBlock.objects.filter(page=post.page, block_type="document").count() == 1
     assert client.get(f"{APP}/submissions").json()[0]["files"] == 1
+
+
+def test_a_person_who_pressed_start_with_the_code_registers_in_the_app_as_active(app):
+    from apps.telegram_bot.services import handle_update
+
+    code = BotConfig.get().invite_code
+    handle_update({"update_id": 1, "message": {"message_id": 1, "from": {"id": 700, "is_bot": False}, "chat": {"id": 700, "type": "private"}, "text": f"/start {code}"}})
+    client = api(700)  # the app was opened from the chat button: no start_param, the invite is remembered from the chat
+    me = client.get(f"{APP}/me").json()
+    assert me["registered"] is False and me["invited"] is True
+    res = client.post(f"{APP}/register", {"full_name": "Aliyeva Dilnoza", "department": "Laboratoriya"}, format="json")
+    assert res.json()["status"] == "active" and res.json()["registered"] is True
+    assert BotUser.objects.get(telegram_id=700).state == "idle"
