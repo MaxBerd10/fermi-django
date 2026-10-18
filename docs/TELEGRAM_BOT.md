@@ -62,3 +62,15 @@ button in the bot's messages. Address: `https://<site>/tg`.
   frontend/server/production-server.mjs. If Telegram Web shows an empty frame while phones work, check that nginx adds no
   X-Frame-Options / frame-ancestors header of its own.
 * Telegram's own script is NOT loaded (it would run inside our origin): src/tg/bridge.ts speaks the few events needed.
+
+## Housekeeping
+Pictures/documents that were uploaded but never became part of a sent news item (and old unfinished drafts) pile up in
+`media/uploads/telegram/`. Clean them now and then (as the web user, so nothing root-owned appears):
+
+    sudo -u www-data -E .venv/bin/python manage.py telegram_cleanup            # report only
+    sudo -u www-data -E .venv/bin/python manage.py telegram_cleanup --apply    # delete (files older than 3 days, unused)
+
+## Tests
+`apps/telegram_bot/` has ~500 tests including `test_robustness.py` (malformed Telegram updates, hostile text, bad
+pictures/documents, forged or stale Mini App credentials, wrong JSON shapes, double taps and concurrent races). Run
+`pytest apps/telegram_bot`. What they cannot cover is Telegram's own clients (keyboard, native pickers): see the first real use.
