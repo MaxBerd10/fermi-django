@@ -37,7 +37,7 @@ class TranslationError(Exception):
     pass
 
 
-def translate_texts(texts: list[str], source: str, target: str) -> list[str]:
+def translate_texts(texts: list[str], source: str, target: str, timeout: float = 20) -> list[str]:
     if not any(text.strip() for text in texts):
         return list(texts)
     query = urllib.parse.urlencode({"client": "gtx", "sl": source, "tl": target, "format": "html"})
@@ -51,7 +51,7 @@ def translate_texts(texts: list[str], source: str, target: str) -> list[str]:
         },
     )
     try:
-        with urllib.request.urlopen(request, timeout=20, context=_SSL_CONTEXT) as response:
+        with urllib.request.urlopen(request, timeout=timeout, context=_SSL_CONTEXT) as response:
             result = json.loads(response.read().decode("utf-8"))
     except (urllib.error.URLError, TimeoutError, ValueError) as exc:
         raise TranslationError(str(exc)) from exc

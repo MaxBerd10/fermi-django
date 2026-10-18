@@ -297,6 +297,7 @@ def test_cancel_and_text_is_escaped(bot):
     post = NewsPost.objects.get()
     html = blocks_to_html(post.page, "uz")
     assert "<" not in post.title_uz and ">" not in post.title_uz  # markup typed into the title is dropped
+    assert post.title_uz == "alert(1)"  # tags removed whole, the text between them kept
     assert "<b>" not in html and "<script" not in html and "qalin" in html
     say(message(25, "Yana"))
     say(message(25, "/bekor"))
@@ -447,7 +448,7 @@ def test_uzbek_cyrillic_is_turned_into_latin_but_russian_is_translated(bot, monk
     # Russian: the original is kept as the Russian version, Uzbek and English come from the translator
     calls = []
 
-    def fake_translate(texts, source, target):
+    def fake_translate(texts, source, target, timeout=20):
         calls.append((source, target))
         return [f"[{target}] {t}" for t in texts]
 
@@ -462,7 +463,7 @@ def test_uzbek_cyrillic_is_turned_into_latin_but_russian_is_translated(bot, monk
     assert "Segodnya" not in russian.title_uz  # never the garbled transliteration
 
     # translator down: no half-made post, the person is told
-    def down(*args):
+    def down(*args, **kwargs):
         raise TranslationError("down")
 
     monkeypatch.setattr(svc, "translate_texts", down)

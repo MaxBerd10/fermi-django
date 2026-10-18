@@ -465,6 +465,7 @@ function Done({ onMore }: { onMore: () => void }) {
 export default function TelegramApp() {
   const [me, setMe] = useState<Me | null>(null);
   const [error, setError] = useState("");
+  const [fatal, setFatal] = useState(false); // the signed launch data was refused: retrying cannot help, the app must be reopened
   const [view, setView] = useState<"home" | "compose" | "done">("home");
 
   useEffect(() => {
@@ -478,7 +479,10 @@ export default function TelegramApp() {
     setError("");
     getMe()
       .then(setMe)
-      .catch((err) => setError(err instanceof AppError ? err.message : "Ilovani yuklab bo'lmadi."));
+      .catch((err) => {
+        setFatal(err instanceof AppError && err.status === 401);
+        setError(err instanceof AppError ? err.message : "Ilovani yuklab bo'lmadi.");
+      });
   }, []);
 
   useEffect(() => {
@@ -500,7 +504,11 @@ export default function TelegramApp() {
     content = (
       <Screen>
         <Notice tone="error">{error}</Notice>
-        <button type="button" onClick={load} className={ghost}><i className="ri-refresh-line" aria-hidden="true" /> Qayta urinish</button>
+        {fatal ? (
+          <button type="button" onClick={close} className={ghost}>Yopish</button>
+        ) : (
+          <button type="button" onClick={load} className={ghost}><i className="ri-refresh-line" aria-hidden="true" /> Qayta urinish</button>
+        )}
       </Screen>
     );
   } else if (!me) {

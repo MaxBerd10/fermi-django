@@ -18,7 +18,7 @@ from django.conf import settings
 from django.core.cache import cache
 from django.core.files.base import ContentFile
 from django.core.files.storage import default_storage
-from django.db import transaction
+from django.db import IntegrityError, transaction
 from django.utils import timezone
 from django.utils.html import escape
 from PIL import Image, ImageOps
@@ -47,6 +47,7 @@ MAX_PIXELS = 50_000_000
 MAX_SIDE = 2560
 ALLOWED_FORMATS = {"JPEG", "PNG", "WEBP"}
 MAX_FILES = 3
+TRANSLATE_TIMEOUT = 8  # seconds per call: a stuck translator must not hold a request (and a worker) for long
 DOCUMENT_EXTENSIONS = (".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx")
 DOCUMENT_PATH_RE = re.compile(r"^uploads/telegram/\d{4}/\d{2}/(\d+)-[0-9a-f]{32}\.(?:pdf|doc|docx|xls|xlsx|ppt|pptx)$")
 
@@ -77,6 +78,17 @@ def handle_update(update: dict) -> None:
         handle_callback(update["callback_query"])
 
 
+_CONTROL_RE = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\u202a-\u202e\u2066-\u2069\ufeff\ufffe\uffff]")
+
+
+def clean_text(value) -> str:
+    """Anything a person typed, made safe to keep: not text -> "", and control characters (NUL, which PostgreSQL refuses;
+    the bidirectional overrides that can make text read backwards; byte-order marks) are dropped. Line breaks and tabs stay."""
+    if not isinstance(value, str):
+        return ""
+    return _CONTROL_RE.sub("", value).replace("\r\n", "\n").replace("\r", "\n")
+
+
 def _counter_ok(key: str, window: int, limit: int) -> bool:
     """A fixed-window counter in the cache. If the cache itself is down the bot keeps working, unlimited."""
     try:
@@ -98,7 +110,7 @@ def handle_message(message: dict) -> None:
     telegram_id = sender["id"]
     if not _rate_ok(telegram_id):
         return
-    text = (message.get("text") or "").strip()
+    text = clean_text(message.get("text")).strip()
 
     if text == "/id":
         tg.send_message(chat["id"], f"Sizning Telegram raqamingiz: {telegram_id}")
@@ -293,6 +305,12 @@ def looks_russian(text: str) -> bool:
     return russian >= 2 and russian > sum(w in UZBEK_WORDS for w in words)
 
 
+def strip_markup(text: str) -> str:
+    """Whole HTML tags (<b>x</b>) go first so what is left reads normally; stray angle brackets are dropped after. The page
+    model refuses plain text that looks like markup, so nothing of it may reach a draft."""
+    return re.sub(r"<[^<>]*>", "", text).replace("<", "").replace(">", "")
+
+
 def clean_title(name: str) -> str:
     """The card title of an attached file: its file name without the extension, tidied; quotes and brackets removed."""
     stem = os.path.splitext(name or "")[0].replace("_", " ").replace("-", " ")
@@ -355,7 +373,7 @@ def _summary(sub: BotSubmission) -> str:
 def _collect(chat_id: int, user: BotUser, message: dict, text: str) -> None:
     file_id = _photo_file_id(message)
     document = None if file_id else _document_of(message)
-    caption = (message.get("caption") or "").strip()
+    caption = clean_text(message.get("caption")).strip()
     body_text = text or caption
     if not file_id and not document and not text:
         if message.get("video") or message.get("animation") or message.get("video_note"):
@@ -395,6 +413,10 @@ def _collect(chat_id: int, user: BotUser, message: dict, text: str) -> None:
 
     reply = True
     with transaction.atomic():
+        # One message at a time per person: an album arrives as several messages at once, and without this lock each
+        # of them would open its own submission
+        if BotUser.objects.select_for_update().filter(pk=user.pk).first() is None:
+            return
         sub = _open_submission(user)
         if stored_file:
             if len(sub.file_items) >= MAX_FILES:
@@ -442,7 +464,7 @@ def create_draft(sub: BotSubmission, category_id: int | None = None):
         or NewsCategory.objects.order_by("id").first()
     )
     # The page model refuses plain text that looks like markup, so angle brackets are simply dropped from what a person typed
-    clean = lambda text: text.replace("<", "").replace(">", "")  # noqa: E731
+    clean = strip_markup
     paragraphs = "".join(f"<p>{escape(clean(line))}</p>" for line in sub.body.splitlines() if clean(line).strip())
     paths = list(sub.photo_paths)
     # each attached file becomes a card on the page (the editor's "new document" marker, see content/admin_content.py)
@@ -464,8 +486,8 @@ def create_draft(sub: BotSubmission, category_id: int | None = None):
         # a Russian news item: keep the original as the Russian version and make the Uzbek and English ones by machine
         # translation (the site's canonical language is Uzbek Latin, which the editor then checks)
         try:
-            uz_title, uz_html = translate_texts([title, body_html], "ru", "uz")
-            en_title, en_html = translate_texts([title, body_html], "ru", "en")
+            uz_title, uz_html = translate_texts([title, body_html], "ru", "uz", timeout=TRANSLATE_TIMEOUT)
+            en_title, en_html = translate_texts([title, body_html], "ru", "en", timeout=TRANSLATE_TIMEOUT)
         except TranslationError:
             raise RussianTranslationFailed from None
         payload.update(
@@ -474,9 +496,16 @@ def create_draft(sub: BotSubmission, category_id: int | None = None):
             title_en=en_title, content_en=en_html + cards,
         )
     request = Request(APIRequestFactory().post("/api/v1/admin/news", payload, format="json"), parsers=[JSONParser()])
-    serializer = AdminPostSerializer(data=payload, context={"request": request})
-    serializer.is_valid(raise_exception=True)
-    return serializer.save()
+    for attempt in range(4):
+        try:
+            with transaction.atomic():  # a savepoint: a lost race on a unique address rolls back only this attempt
+                serializer = AdminPostSerializer(data=payload, context={"request": request})
+                serializer.is_valid(raise_exception=True)
+                return serializer.save()
+        except IntegrityError:
+            # two posts with the same title made at the same moment picked the same free address: pick again
+            if attempt == 3:
+                raise
 
 
 def handle_callback(callback: dict) -> None:
@@ -511,6 +540,9 @@ def _owner_action(callback: dict, user: BotUser, action: str, pk: int, chat_id: 
             return
         if not sub.title:
             tg.answer_callback(callback["id"], "Avval matn yozing: birinchi qator sarlavha bo'ladi.", True)
+            return
+        if not strip_markup(sub.title).strip():
+            tg.answer_callback(callback["id"], "Sarlavha oddiy matn bo'lishi kerak (kod emas). Boshqa sarlavha yozing.", True)
             return
         if BotSubmission.objects.filter(user=user, status=BotSubmission.SENT, created_at__gte=_today_start()).count() >= MAX_PER_DAY:
             tg.answer_callback(callback["id"], "Kunlik chegaraga yetdingiz.", True)

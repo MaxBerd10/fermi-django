@@ -7,15 +7,18 @@ notifications and the DRAFT-only rule are exactly those of the chat bot (service
 import hashlib
 import hmac
 import json
+import logging
 import re
 import time
 from hmac import compare_digest
+from datetime import timedelta
 from urllib.parse import parse_qsl
 
 from django.conf import settings
 from django.core.files.storage import default_storage
 from django.db import transaction
 from django.http import Http404
+from django.utils import timezone
 from rest_framework.exceptions import APIException, ValidationError
 from rest_framework.parsers import JSONParser, MultiPartParser
 from rest_framework.permissions import AllowAny
@@ -39,9 +42,11 @@ from .services import (
     _today_start,
     finalize_submission,
     finish_registration,
+    clean_text,
     clean_title,
     RussianTranslationFailed,
     notify_new_draft,
+    strip_markup,
     store_document,
     store_image,
 )
@@ -51,6 +56,14 @@ MAX_UPLOAD_BYTES = 15 * 1024 * 1024
 UPLOADS_PER_DAY = 60
 REQUESTS_PER_MINUTE = 120
 MAX_TITLE = 250
+DUPLICATE_WINDOW = 120  # seconds: the same title+text from the same person within this is one item
+logger = logging.getLogger(__name__)
+
+
+class TooManyRequests(APIException):
+    status_code = 429
+    default_detail = "Juda ko'p so'rov. Biroz kuting."
+    default_code = "throttled"
 
 
 class Unauthorized(APIException):
@@ -102,8 +115,14 @@ class TgAppView(APIView):
         self.tg_user = info["user"]
         self.start_param = info["start_param"]
         if not _counter_ok(f"tg-app-rate:{self.tg_user['id']}", 60, REQUESTS_PER_MINUTE):
-            raise APIException("Juda ko'p so'rov. Biroz kuting.")
+            raise TooManyRequests()
         self.bot_user = BotUser.objects.filter(telegram_id=self.tg_user["id"]).first()
+
+    @property
+    def data(self) -> dict:
+        """The JSON body as an object: `null`, a list or a string (a broken or hostile client) count as empty."""
+        body = self.request.data
+        return body if isinstance(body, dict) else {}
 
     def active_user(self) -> BotUser:
         user = self.bot_user
@@ -140,8 +159,8 @@ class MeView(TgAppView):
 
 class RegisterView(TgAppView):
     def post(self, request):
-        name = " ".join(str(request.data.get("full_name") or "").split())
-        department = " ".join(str(request.data.get("department") or "").split())
+        name = " ".join(clean_text(self.data.get("full_name")).split())
+        department = " ".join(clean_text(self.data.get("department")).split())
         if not 3 <= len(name) <= MAX_NAME:
             raise ValidationError({"full_name": ["Ism va familiyani to'liq yozing."]})
         if not 2 <= len(department) <= MAX_NAME:
@@ -217,13 +236,15 @@ class UploadView(TgAppView):
 class SubmitView(TgAppView):
     def post(self, request):
         user = self.active_user()
-        title = " ".join(str(request.data.get("title") or "").split())
-        body = str(request.data.get("body") or "").replace("\r\n", "\n").strip()
-        photos = request.data.get("photos") or []
-        files = request.data.get("files") or []
-        category_id = request.data.get("category_id")
+        title = " ".join(clean_text(self.data.get("title")).split())
+        body = clean_text(self.data.get("body")).strip()
+        photos = self.data.get("photos") or []
+        files = self.data.get("files") or []
+        category_id = self.data.get("category_id")
         if not title:
             raise ValidationError({"title": ["Sarlavha yozing."]})
+        if not strip_markup(title).strip():
+            raise ValidationError({"title": ["Sarlavha oddiy matn bo'lishi kerak (kod emas)."]})
         if len(title) > MAX_TITLE:
             raise ValidationError({"title": [f"Sarlavha {MAX_TITLE} belgidan oshmasligi kerak."]})
         if len(body) > MAX_TEXT:
@@ -248,19 +269,25 @@ class SubmitView(TgAppView):
                 raise ValidationError({"files": ["Fayl topilmadi. Qayta yuklang."]})
             if all(path != existing["path"] for existing in items):
                 items.append({"path": path, "title": clean_title(str(item.get("title") or "") + ".x")})
-        if BotSubmission.objects.filter(user=user, status=BotSubmission.SENT, created_at__gte=_today_start()).count() >= MAX_PER_DAY:
-            raise ValidationError({"detail": f"Bugun {MAX_PER_DAY} ta yangilik yubordingiz — bu kunlik chegara."})
-        category = int(category_id) if str(category_id or "").isdigit() else None
+        category = int(self.data["category_id"]) if str(self.data.get("category_id") or "").isdigit() and len(str(self.data["category_id"])) < 10 else None
         with transaction.atomic():
+            # one request at a time per person: the checks below and the insert must not race with a double tap
+            if BotUser.objects.select_for_update().filter(pk=user.pk).first() is None:
+                raise ValidationError({"detail": "Sizga hali ruxsat berilmagan."})
+            now = timezone.now()
+            if BotSubmission.objects.filter(
+                user=user, status=BotSubmission.SENT, title=title, body=body, created_at__gte=now - timedelta(seconds=DUPLICATE_WINDOW)
+            ).exists():
+                return Response({"ok": True, "duplicate": True}, status=201)  # the same item sent again (double tap, retry)
+            if BotSubmission.objects.filter(user=user, status=BotSubmission.SENT, created_at__gte=_today_start()).count() >= MAX_PER_DAY:
+                raise ValidationError({"detail": f"Bugun {MAX_PER_DAY} ta yangilik yubordingiz — bu kunlik chegara."})
             sub = BotSubmission.objects.create(user=user, title=title, body=body, photo_paths=clean, file_items=items)
             try:
                 finalize_submission(sub, user, category)
             except RussianTranslationFailed:
                 raise ValidationError({"detail": "Rus tilidagi matnni hozir tarjima qilib bo'lmadi. Birozdan keyin qayta urining yoki o'zbekcha yozing."}) from None
             except Exception:
-                import logging
-
-                logging.getLogger(__name__).exception("mini app draft failed")
+                logger.exception("mini app draft failed")
                 raise ValidationError({"detail": "Yangilikni saqlab bo'lmadi. Birozdan keyin qayta urining."}) from None
         notify_new_draft(sub, user)
         return Response({"ok": True}, status=201)

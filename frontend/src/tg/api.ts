@@ -59,6 +59,9 @@ async function call<T>(path: string, init: RequestInit = {}): Promise<T> {
   const body = await response.json().catch(() => null);
   if (!response.ok) {
     if (response.status === 401) throw new AppError("Ilovani yopib, Telegramdan qayta oching.", 401);
+    // a server that is down or busy answers in English from some proxy: say it in our words instead
+    if (response.status === 429) throw new AppError("Juda ko'p so'rov yuborildi. Bir daqiqa kuting va qayta urining.", 429);
+    if (response.status >= 500) throw new AppError("Server vaqtincha javob bermayapti. Birozdan keyin qayta urining.", response.status);
     throw new AppError(messageOf(body, "Xatolik yuz berdi. Qayta urinib ko'ring."), response.status);
   }
   return body as T;
