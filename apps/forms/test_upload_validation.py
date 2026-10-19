@@ -58,3 +58,38 @@ def test_a_storage_failure_rolls_the_submission_back_and_says_so(db, monkeypatch
     assert res.status_code == 503
     assert "qayta" in res.json()["detail"]
     assert ContestSubmission.objects.count() == 0
+
+
+def _rejects(name, content):
+    try:
+        validate_visitor_upload(SimpleUploadedFile(name, content))
+    except ValidationError as exc:
+        return "file" in exc.detail
+    return False
+
+
+def test_a_file_whose_content_does_not_match_its_extension_is_rejected():
+    assert _rejects("loyiha.pdf", b"MZ\x90\x00 a program")
+    assert _rejects("rasm.png", b"%PDF-1.4")
+    assert _rejects("hujjat.docx", b"not a zip")
+    assert _rejects("jadval.xls", b"plain text")
+
+
+def test_real_looking_files_of_every_allowed_type_are_accepted():
+    for name, content in [
+        ("a.pdf", b"%PDF-1.7\nx"), ("b.jpg", b"\xff\xd8\xff\xe0x"), ("c.jpeg", b"\xff\xd8\xff\xdbx"),
+        ("d.png", b"\x89PNG\r\n\x1a\nx"), ("e.docx", b"PK\x03\x04x"), ("f.xlsx", b"PK\x03\x04x"),
+        ("g.doc", b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1x"), ("h.xls", b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1x"),
+    ]:
+        validate_visitor_upload(SimpleUploadedFile(name, content))
+
+
+def test_contest_application_checks_email_and_message_length(db):
+    from rest_framework.test import APIClient
+
+    ok = {"fullName": "Test Person", "phone": "+998901234567", "email": "a@b.uz", "message": "loyiha"}
+    client = APIClient()
+    assert client.post("/api/v1/forms/contest", ok, format="multipart").status_code == 200
+    assert client.post("/api/v1/forms/contest", {**ok, "email": "nope"}, format="multipart").status_code == 400
+    assert client.post("/api/v1/forms/contest", {**ok, "message": "x" * 5001}, format="multipart").status_code == 400
+    assert client.post("/api/v1/forms/contest", {**ok, "message": ""}, format="multipart").status_code == 200

@@ -32,6 +32,10 @@ class ContestSubmissionSerializer(serializers.ModelSerializer):
         source="contest", queryset=NewsPost.objects.all(), required=False, allow_null=True
     )
     fullName = serializers.CharField(source="full_name")
+    # The model keeps email/message as loose text; without these a mistyped address (nobody can answer it) or a
+    # 50 000-character paste would be stored as it came.
+    email = serializers.EmailField(max_length=255)
+    message = serializers.CharField(max_length=5000, required=False, allow_blank=True)
 
     class Meta:
         model = ContestSubmission

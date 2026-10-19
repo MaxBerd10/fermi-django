@@ -36,6 +36,30 @@ def validate_visitor_upload(upload):
         raise ValidationError({"file": "Faqat PDF, JPG, PNG, DOC/DOCX yoki XLS/XLSX fayl yuklash mumkin."})
     if upload.size > MAX_VISITOR_UPLOAD_BYTES:
         raise ValidationError({"file": "Fayl hajmi 10 MB dan oshmasligi kerak."})
+    if not _looks_like(suffix, upload):
+        raise ValidationError({"file": "Fayl turi kengaytmasiga mos kelmaydi. PDF, rasm, Word yoki Excel faylni yuklang."})
+
+
+# What the first bytes of each allowed format look like. A file named "loyiha.pdf" that is really a program is
+# refused, so staff never open one from the admin panel by mistake.
+_OLE = b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+_SIGNATURES = {
+    "jpg": (b"\xff\xd8\xff",),
+    "jpeg": (b"\xff\xd8\xff",),
+    "png": (b"\x89PNG\r\n\x1a\n",),
+    "doc": (_OLE,),
+    "xls": (_OLE,),
+    "docx": (b"PK",),
+    "xlsx": (b"PK",),
+}
+
+
+def _looks_like(suffix, upload):
+    head = upload.read(1024)
+    upload.seek(0)
+    if suffix == "pdf":
+        return b"%PDF-" in head  # the PDF spec lets a few bytes precede the header
+    return any(head.startswith(sig) for sig in _SIGNATURES[suffix])
 
 
 logger = logging.getLogger(__name__)
