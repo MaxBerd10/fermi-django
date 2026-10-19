@@ -14,6 +14,7 @@ const Leadership = lazy(() => import("@/pages/home/components/Leadership"));
 const Gallery = lazy(() => import("@/pages/home/components/Gallery"));
 const EventsJournal = lazy(() => import("@/pages/home/components/EventsJournal"));
 const Partners = lazy(() => import("@/pages/home/components/Partners"));
+const OpenContests = lazy(() => import("@/pages/home/components/OpenContests"));
 const OurProjects = lazy(() => import("@/pages/home/components/OurProjects"));
 const ContactMap = lazy(() => import("@/pages/home/components/ContactMap"));
 
@@ -23,6 +24,9 @@ export default function Home() {
       <main>
         <Hero />
         <NewsAnnouncements />
+        <DeferredSection placeholderClassName="min-h-[160px]">
+          <OpenContests />
+        </DeferredSection>
         <DeferredSection placeholderClassName="min-h-[917px] lg:min-h-[637px]">
           <About />
         </DeferredSection>
