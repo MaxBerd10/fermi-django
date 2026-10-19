@@ -18,7 +18,7 @@ export function isPlaceholderLogo(src?: string | null): boolean {
  * flyer posted as it was taken): every part of it is content, so it is shown whole -- on the article and on its
  * card in a list alike -- instead of being cropped to fit.
  */
-const WHOLE_COVER_CATEGORIES = new Set(["telegram", "tanlovlar"]);
+const WHOLE_COVER_CATEGORIES = new Set(["telegram", "tanlovlar", "tanlovlar-arxivi"]);
 
 export function showsWholeCover(category?: { slug?: string | null } | null): boolean {
   return !!category?.slug && WHOLE_COVER_CATEGORIES.has(category.slug);

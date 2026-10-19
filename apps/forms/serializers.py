@@ -23,6 +23,9 @@ class AcceptanceSubmissionSerializer(serializers.ModelSerializer):
         fields = ["categoryId", "subject", "fish", "phone", "email", "regionId", "districtId", "quarterId"]
 
 
+OPEN_CONTEST_CATEGORY = "tanlovlar"
+
+
 class ContestSubmissionSerializer(serializers.ModelSerializer):
     # PrimaryKeyRelatedField (not IntegerField, unlike category/region/district
     # ids elsewhere in this app) -- contest is a real ForeignKey, so a bad id
@@ -36,6 +39,15 @@ class ContestSubmissionSerializer(serializers.ModelSerializer):
     # 50 000-character paste would be stored as it came.
     email = serializers.EmailField(max_length=255)
     message = serializers.CharField(max_length=5000, required=False, allow_blank=True)
+
+    def validate_contestId(self, contest):
+        # Applications are open only while the announcement is in the "Tanlovlar" category; moving it to the
+        # archive category (or hiding it) in the admin panel closes the intake, not just the form on the page.
+        if contest is not None and (
+            not contest.is_published or getattr(contest.category, "slug", None) != OPEN_CONTEST_CATEGORY
+        ):
+            raise serializers.ValidationError("Bu tanlov uchun ariza qabuli yopilgan.")
+        return contest
 
     class Meta:
         model = ContestSubmission

@@ -198,6 +198,12 @@ export default function DetailPage() {
                   category is read-only, so this is gated on the slug
                   rather than shown for every article. */}
               {categorySlug === "tanlovlar" && <ContestApplicationForm contestId={article.id} />}
+              {categorySlug === "tanlovlar-arxivi" && (
+                <div className="page-card p-4 md:p-5 mt-6 flex items-start gap-3 text-sm text-foreground-700">
+                  <i className="ri-information-line w-5 h-5 flex items-center justify-center text-foreground-500 flex-shrink-0" aria-hidden />
+                  <p>{t("contest.closedNotice")}</p>
+                </div>
+              )}
             </div>
           </article>
         </Reveal>

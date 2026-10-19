@@ -37,10 +37,11 @@ def test_a_storage_failure_rolls_the_submission_back_and_says_so(db, monkeypatch
 
     from apps.content.models import Page
     from apps.forms.models import ContestSubmission
-    from apps.news.models import NewsPost
+    from apps.news.models import NewsCategory, NewsPost
     from django.utils import timezone
 
     contest = NewsPost.objects.create(
+        category=NewsCategory.objects.create(slug="tanlovlar", name_uz="T", name_ru="T", name_en="T"),
         slug="c", title_uz="C", title_ru="C", title_en="C", excerpt_uz="x", excerpt_ru="x", excerpt_en="x",
         page=Page.objects.create(slug="c"), published_at=timezone.now(),
     )
@@ -93,3 +94,32 @@ def test_contest_application_checks_email_and_message_length(db):
     assert client.post("/api/v1/forms/contest", {**ok, "email": "nope"}, format="multipart").status_code == 400
     assert client.post("/api/v1/forms/contest", {**ok, "message": "x" * 5001}, format="multipart").status_code == 400
     assert client.post("/api/v1/forms/contest", {**ok, "message": ""}, format="multipart").status_code == 200
+
+
+def test_applications_close_when_the_contest_leaves_the_tanlovlar_category(db):
+    from django.utils import timezone
+    from rest_framework.test import APIClient
+
+    from apps.content.models import Page
+    from apps.forms.models import ContestSubmission
+    from apps.news.models import NewsCategory, NewsPost
+
+    open_cat = NewsCategory.objects.create(slug="tanlovlar", name_uz="T", name_ru="T", name_en="T")
+    archive = NewsCategory.objects.create(slug="tanlovlar-arxivi", name_uz="A", name_ru="A", name_en="A")
+    post = NewsPost.objects.create(
+        category=open_cat, slug="c2", title_uz="C", title_ru="C", title_en="C", excerpt_uz="x", excerpt_ru="x",
+        excerpt_en="x", page=Page.objects.create(slug="c2"), published_at=timezone.now(),
+    )
+    payload = {"contestId": post.id, "fullName": "Test Person", "phone": "+998901234567", "email": "a@b.uz"}
+    client = APIClient()
+    assert client.post("/api/v1/forms/contest", payload, format="multipart").status_code == 200
+
+    post.category = archive
+    post.save()
+    res = client.post("/api/v1/forms/contest", payload, format="multipart")
+    assert res.status_code == 400 and "yopilgan" in str(res.json())
+
+    post.category, post.is_published = open_cat, False
+    post.save()
+    assert client.post("/api/v1/forms/contest", payload, format="multipart").status_code == 400
+    assert ContestSubmission.objects.count() == 1
