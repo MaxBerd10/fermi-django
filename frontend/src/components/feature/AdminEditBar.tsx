@@ -20,6 +20,27 @@ interface Located {
 /** Public routes whose last segment is the slug of the page being shown. */
 const SLUG_ROUTES = /^\/(blog|faculty|departments|documents|news|detail|about)\//;
 
+// The editor can fold the pencil down to a small dot (it covered buttons at the corner of some pages); the choice is
+// remembered in this browser only.
+const COMPACT_KEY = "fermi-editbar-compact";
+
+function readCompact(): boolean {
+  try {
+    return window.localStorage.getItem(COMPACT_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function writeCompact(value: boolean) {
+  try {
+    if (value) window.localStorage.setItem(COMPACT_KEY, "1");
+    else window.localStorage.removeItem(COMPACT_KEY);
+  } catch {
+    // private mode or blocked storage: the choice just lasts until the page is reloaded
+  }
+}
+
 const HOME: Shortcut[] = [
   { to: "/admin/site-texts?q=hero", label: "Sarlavha va tugma yozuvlari", icon: "ri-translate-2" },
   { to: "/admin/home-tools", label: "Yuqoridagi tezkor tugmalar", icon: "ri-flashlight-line" },
@@ -63,6 +84,7 @@ export default function AdminEditBar() {
   const { pathname } = useLocation();
   const [isAdmin, setIsAdmin] = useState(false);
   const [open, setOpen] = useState(false);
+  const [compact, setCompact] = useState(readCompact);
   const [located, setLocated] = useState<Located | null>(null);
 
   useEffect(() => {
@@ -119,7 +141,7 @@ export default function AdminEditBar() {
 
   return (
     <div className="fixed bottom-4 left-4 z-[60] print:hidden">
-      {open && (
+      {open && !compact && (
         <div role="menu" className="mb-2 w-72 max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border border-background-200 bg-background-50 shadow-2xl">
           <div className="border-b border-background-200 bg-primary-800 px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-background-50/80">
             Admin: bu sahifani o'zgartirish
@@ -174,15 +196,45 @@ export default function AdminEditBar() {
           </ul>
         </div>
       )}
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        className="flex h-12 cursor-pointer items-center gap-2 rounded-full bg-primary-800 pl-4 pr-5 text-sm font-semibold text-background-50 shadow-xl ring-2 ring-secondary-500 hover:bg-primary-700"
-      >
-        <i className="ri-pencil-line text-lg text-secondary-500" aria-hidden="true" />
-        Tahrirlash
-      </button>
+      {compact ? (
+        <button
+          type="button"
+          onClick={() => {
+            setCompact(false);
+            writeCompact(false);
+          }}
+          aria-label="Tahrirlash tugmasini qayta ko'rsatish"
+          title="Tahrirlash"
+          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-primary-800/80 text-secondary-500 shadow-lg hover:bg-primary-700"
+        >
+          <i className="ri-pencil-line text-base" aria-hidden="true" />
+        </button>
+      ) : (
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            className="flex h-12 cursor-pointer items-center gap-2 rounded-full bg-primary-800 pl-4 pr-5 text-sm font-semibold text-background-50 shadow-xl ring-2 ring-secondary-500 hover:bg-primary-700"
+          >
+            <i className="ri-pencil-line text-lg text-secondary-500" aria-hidden="true" />
+            Tahrirlash
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(false);
+              setCompact(true);
+              writeCompact(true);
+            }}
+            aria-label="Tahrirlash tugmasini kichraytirish"
+            title="Kichraytirish"
+            className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-background-200 bg-background-50 text-foreground-600 shadow-md hover:bg-background-100"
+          >
+            <i className="ri-close-line text-base" aria-hidden="true" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
