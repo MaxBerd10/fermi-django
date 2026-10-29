@@ -2099,12 +2099,14 @@ button.page-card:hover {
   font-size: 0.875rem;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.2s, gap 0.2s;
+  transition: color 0.2s;
 }
 
-.hero-v2__btn-text:hover {
+/* No size change on hover: these sit in a wrapping row, and a button that grows a few pixels under the cursor can
+   push the row onto a new line, which moves it out from under the cursor, which shrinks it again -- a visible shake.
+   (The two buttons are disabled for now, so they get no hover effect at all.) */
+.hero-v2__btn-text:not(:disabled):hover {
   color: #060a3d;
-  gap: 0.5rem;
 }
 
 .hero-v2__pill {
