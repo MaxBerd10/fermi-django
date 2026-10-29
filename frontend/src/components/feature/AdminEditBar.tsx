@@ -155,7 +155,7 @@ export default function AdminEditBar() {
                   </span>
                 ) : located.found && located.edit ? (
                   <Link to={located.edit} role="menuitem" className="flex items-center gap-3 rounded-lg bg-secondary-100 px-3 py-2.5 font-semibold text-primary-900 hover:bg-secondary-200">
-                    <i className="ri-pencil-line text-base" aria-hidden="true" />
+                    <i className="ri-pencil-line flex h-4 w-4 items-center justify-center text-base leading-none" aria-hidden="true" />
                     <span className="min-w-0">
                       <span className="block">Shu {KIND_LABEL[located.kind ?? "page"]} tahrirlash</span>
                       {located.title && <span className="block truncate text-xs font-normal text-foreground-600">{located.title}</span>}
@@ -217,7 +217,7 @@ export default function AdminEditBar() {
             aria-expanded={open}
             className="flex h-12 cursor-pointer items-center gap-2 rounded-full bg-primary-800 pl-4 pr-5 text-sm font-semibold text-background-50 shadow-xl ring-2 ring-secondary-500 hover:bg-primary-700"
           >
-            <i className="ri-pencil-line text-lg text-secondary-500" aria-hidden="true" />
+            <i className="ri-pencil-line flex h-[18px] w-[18px] items-center justify-center text-lg leading-none text-secondary-500" aria-hidden="true" />
             Tahrirlash
           </button>
           <button
@@ -231,7 +231,7 @@ export default function AdminEditBar() {
             title="Kichraytirish"
             className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-background-200 bg-background-50 text-foreground-600 shadow-md hover:bg-background-100"
           >
-            <i className="ri-close-line text-base" aria-hidden="true" />
+            <i className="ri-close-line flex h-4 w-4 items-center justify-center text-base leading-none" aria-hidden="true" />
           </button>
         </div>
       )}
