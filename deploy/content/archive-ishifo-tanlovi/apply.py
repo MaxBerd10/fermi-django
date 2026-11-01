@@ -10,6 +10,7 @@
 #   cd /home/fermi-django && set -a && . /etc/fermi-django.env && set +a
 #   MODE=dry   .venv/bin/python manage.py shell < deploy/content/archive-ishifo-tanlovi/apply.py
 #   MODE=apply .venv/bin/python manage.py shell < deploy/content/archive-ishifo-tanlovi/apply.py
+#   SLUG=innomix-fjsti-innovatsion-loyihalar-tanlovi-2026 MODE=apply .venv/bin/python manage.py shell < deploy/content/archive-ishifo-tanlovi/apply.py   (any other contest)
 #   MODE=undo  .venv/bin/python manage.py shell < deploy/content/archive-ishifo-tanlovi/apply.py   (reopens the contest)
 import os
 
@@ -19,7 +20,8 @@ from apps.menu.models import MenuItem
 from apps.news.models import NewsCategory, NewsPost
 
 MODE = os.environ.get("MODE", "dry")
-POST_SLUG = "ishifo-startap-loyihalar-2026-tanlovi"
+# default: the iShifo contest; another contest: SLUG=<its-slug> MODE=apply ...
+POST_SLUG = os.environ.get("SLUG", "ishifo-startap-loyihalar-2026-tanlovi")
 OPEN_SLUG, ARCHIVE_SLUG = "tanlovlar", "tanlovlar-arxivi"
 ARCHIVE_NAMES = {"uz": "Tanlovlar arxivi", "ru": "Архив конкурсов", "en": "Contests archive"}
 OPEN_MENU_URL = "/news/0/tanlovlar"
