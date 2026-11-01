@@ -39,6 +39,28 @@ loadEnvFile(resolve(rootDir, ".env.production"));
 loadEnvFile(resolve(rootDir, ".env"));
 
 let cache = { expiresAt: 0, posts: null, error: null };
+// The last feed that was read successfully is kept on disk too: restarting the site (every deploy) used to empty
+// the in-memory copy, and while t.me could not be reached (a network outage on the server) the home page then
+// showed no channel posts at all. With the file, a restart plus an outage still shows the last known posts.
+const lastGoodFeedFile = resolve(rootDir, ".tmp/telegram-feed-lastgood.json");
+
+function saveLastGoodFeed(posts) {
+  try {
+    mkdirSync(dirname(lastGoodFeedFile), { recursive: true });
+    writeFileSync(lastGoodFeedFile, JSON.stringify(posts));
+  } catch (error) {
+    console.error("Telegram feed last-good save failed", error);
+  }
+}
+
+function loadLastGoodFeed() {
+  try {
+    const posts = JSON.parse(readFileSync(lastGoodFeedFile, "utf8"));
+    return Array.isArray(posts) && posts.length > 0 ? posts : null;
+  } catch {
+    return null;
+  }
+}
 let openAiApiKey = "";
 let openAiModel = "gpt-4o-mini";
 let openAiDisabled = false;
@@ -306,6 +328,8 @@ async function fetchChannelHtml(username) {
       "User-Agent": "Mozilla/5.0 (compatible; FerMI-web/1.0)",
       Accept: "text/html",
     },
+    // without a limit an unreachable t.me holds every home-page request until the operating system gives up
+    signal: AbortSignal.timeout(8000),
   });
   if (!response.ok) throw new Error(`Telegram channel fetch failed (${response.status})`);
   return response.text();
@@ -318,9 +342,15 @@ export async function getTelegramFeed() {
     const html = await fetchChannelHtml(username);
     const posts = parseTelegramChannelHtml(html, username);
     cache = { expiresAt: Date.now() + CACHE_TTL_MS, posts, error: null };
+    if (posts.length > 0) saveLastGoodFeed(posts);
     return posts;
   } catch (error) {
-    if (cache.posts) return cache.posts;
+    if (cache.posts?.length) return cache.posts;
+    const lastGood = loadLastGoodFeed();
+    if (lastGood) {
+      cache = { expiresAt: Date.now() + 60_000, posts: lastGood, error };
+      return lastGood;
+    }
     cache = { expiresAt: Date.now() + 15_000, posts: [], error };
     throw error;
   }
