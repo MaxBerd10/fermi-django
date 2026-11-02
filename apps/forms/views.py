@@ -143,7 +143,8 @@ class ContestFormView(APIView):
             validate_visitor_upload(upload)
         instance = _save_with_attachment(serializer, upload)
 
-        return Response({"submitted": True, "id": instance.id})
+        # "number" is the applicant's number within the contest; "id" is the global database key.
+        return Response({"submitted": True, "id": instance.id, "number": instance.number})
 
 
 class VirtualReceptionFormView(APIView):

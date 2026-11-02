@@ -123,3 +123,33 @@ def test_applications_close_when_the_contest_leaves_the_tanlovlar_category(db):
     post.save()
     assert client.post("/api/v1/forms/contest", payload, format="multipart").status_code == 400
     assert ContestSubmission.objects.count() == 1
+
+
+def test_applications_are_numbered_within_their_own_contest(db):
+    from django.utils import timezone
+    from rest_framework.test import APIClient
+
+    from apps.content.models import Page
+    from apps.forms.models import ContestSubmission
+    from apps.news.models import NewsCategory, NewsPost
+
+    cat = NewsCategory.objects.create(slug="tanlovlar", name_uz="T", name_ru="T", name_en="T")
+
+    def contest(slug):
+        return NewsPost.objects.create(
+            category=cat, slug=slug, title_uz="C", title_ru="C", title_en="C", excerpt_uz="x", excerpt_ru="x",
+            excerpt_en="x", page=Page.objects.create(slug=slug), published_at=timezone.now(),
+        )
+
+    first, second = contest("n1"), contest("n2")
+    client = APIClient()
+
+    def apply(post):
+        payload = {"contestId": post.id, "fullName": "Test Person", "phone": "+998901234567", "email": "a@b.uz"}
+        res = client.post("/api/v1/forms/contest", payload, format="multipart")
+        assert res.status_code == 200
+        return res.json()["number"]
+
+    assert [apply(first), apply(first), apply(second), apply(first), apply(second)] == [1, 2, 1, 3, 2]
+    # the global database id is unchanged and independent of the per-contest number
+    assert ContestSubmission.objects.filter(contest=second).count() == 2

@@ -55,7 +55,7 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
         message: String(formData.get("message") || ""),
         file: file && file.size > 0 ? file : null,
       });
-      setTicketId(res.id);
+      setTicketId(res.number ?? res.id);
       setStatus("success");
       form.reset();
     } catch (err) {

@@ -141,10 +141,10 @@ class AdminContestSubmissionSerializer(StatusFieldMixin, serializers.ModelSerial
     class Meta:
         model = ContestSubmission
         fields = [
-            "id", "contest_id", "contest_title", "full_name", "phone", "email",
+            "id", "number", "contest_id", "contest_title", "full_name", "phone", "email",
             "message", "status", "created_at", "file", "file_name",
         ]
-        read_only_fields = ["created_at"]
+        read_only_fields = ["created_at", "number"]
 
     def get_contest_title(self, obj):
         return obj.contest.title_uz if obj.contest else None

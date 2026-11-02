@@ -38,6 +38,6 @@ export async function submitContestApplication(input: ContestApplicationInput) {
   if (input.file) {
     formData.append("file", input.file);
   }
-  const { data } = await apiClient.postForm<{ submitted: boolean; id: number }>("forms/contest", formData);
+  const { data } = await apiClient.postForm<{ submitted: boolean; id: number; number: number | null }>("forms/contest", formData);
   return data;
 }

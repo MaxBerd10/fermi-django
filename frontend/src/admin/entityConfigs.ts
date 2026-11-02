@@ -446,7 +446,7 @@ export const contestConfig: EntityConfig = {
   noCreate: true,
   inbox: true,
   listColumns: [
-    { key: "id", label: "ID" },
+    { key: "number", label: "Ariza №" },
     { key: "created_at", label: "Sana", kind: "datetime" },
     { key: "full_name", label: "F.I.SH" },
     { key: "contest_title", label: "Tanlov" },
@@ -457,6 +457,7 @@ export const contestConfig: EntityConfig = {
   fields: [
     { kind: "readonly", key: "created_at", label: "Kelgan vaqti", format: "datetime" },
     { kind: "readonly", key: "contest_title", label: "Qaysi tanlovga" },
+    { kind: "readonly", key: "number", label: "Ariza raqami" },
     { kind: "readonly", key: "full_name", label: "F.I.SH" },
     { kind: "readonly", key: "phone", label: "Telefon" },
     { kind: "readonly", key: "email", label: "Email" },

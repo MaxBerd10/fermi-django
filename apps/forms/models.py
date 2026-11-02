@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models, transaction
 
 from apps.faculties.models import Faculty
 from apps.media_lib.models import Document
@@ -71,13 +71,30 @@ class ContestSubmission(models.Model):
     file = models.ForeignKey(Document, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
     is_read = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    # The applicant's number WITHIN its contest (1, 2, 3, ...), shown to them and to staff; `id` stays the global
+    # database key. Null only for an application that belongs to no contest.
+    number = models.PositiveIntegerField(null=True, blank=True)
 
     class Meta:
         ordering = ["-created_at"]
         verbose_name = "Tanlov arizasi"
+        constraints = [
+            models.UniqueConstraint(fields=["contest", "number"], name="contest_submission_number_unique"),
+        ]
 
     def __str__(self) -> str:
         return self.full_name
+
+    def save(self, *args, **kwargs):
+        if self.number is None and self.contest_id:
+            # Lock the contest row so two applications arriving together cannot take the same number.
+            with transaction.atomic():
+                NewsPost.objects.select_for_update().filter(pk=self.contest_id).first()
+                last = ContestSubmission.objects.filter(contest_id=self.contest_id).aggregate(m=models.Max("number"))["m"]
+                self.number = (last or 0) + 1
+                super().save(*args, **kwargs)
+            return
+        super().save(*args, **kwargs)
 
 
 class VirtualSubmission(models.Model):
