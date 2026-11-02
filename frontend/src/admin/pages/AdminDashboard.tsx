@@ -63,7 +63,7 @@ export default function AdminDashboard() {
       .catch(() => setStats(null));
   }, []);
 
-  const unreadTotal = summary ? Object.values(summary.unread).reduce((a, b) => a + b, 0) : 0;
+  const unreadTotal = summary ? INBOXES.reduce((sum, item) => sum + (summary.unread[item.badge ?? ""] ?? 0), 0) : 0;
   const trend = stats && stats.previous7Days > 0 ? Math.round(((stats.last7Days - stats.previous7Days) / stats.previous7Days) * 100) : null;
 
   return (

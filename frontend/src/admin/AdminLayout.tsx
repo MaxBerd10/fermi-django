@@ -30,6 +30,11 @@ function writeOpenGroups(ids: string[]) {
 }
 
 function SidebarLink({ item, count, onNavigate }: { item: NavItem; count?: number; onNavigate: () => void }) {
+  const location = useLocation();
+  // "Yangiliklar" and "Telegramdan kelganlar" share a path and differ by ?source=telegram: only one is lit at a time.
+  const telegramList = location.pathname === "/admin/news" && new URLSearchParams(location.search).get("source") === "telegram";
+  const isTelegramItem = item.to.includes("?source=telegram");
+  const lit = (pathActive: boolean) => (isTelegramItem ? telegramList : item.to === "/admin/news" ? pathActive && !telegramList : pathActive);
   return (
     <NavLink
       to={item.to}
@@ -37,7 +42,7 @@ function SidebarLink({ item, count, onNavigate }: { item: NavItem; count?: numbe
       onClick={onNavigate}
       className={({ isActive }) =>
         `group relative flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-          isActive
+          lit(isActive)
             ? "bg-background-50/15 text-background-50"
             : "text-background-50/70 hover:bg-background-50/10 hover:text-background-50"
         }`
@@ -45,7 +50,7 @@ function SidebarLink({ item, count, onNavigate }: { item: NavItem; count?: numbe
     >
       {({ isActive }) => (
         <>
-          {isActive && <span className="absolute inset-y-1.5 left-0 w-1 rounded-r bg-secondary-500" aria-hidden="true" />}
+          {lit(isActive) && <span className="absolute inset-y-1.5 left-0 w-1 rounded-r bg-secondary-500" aria-hidden="true" />}
           <i className={`${item.icon} flex h-5 w-5 shrink-0 items-center justify-center text-base`} aria-hidden="true" />
           <span className="flex-1 truncate">{item.label}</span>
           {count ? (
@@ -87,6 +92,14 @@ export default function AdminLayout() {
   useEffect(() => {
     refreshSummary();
   }, [location.pathname, refreshSummary]);
+
+  // An editor who leaves the panel open all day still sees new Telegram drafts and messages come in.
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") refreshSummary();
+    }, 60_000);
+    return () => window.clearInterval(timer);
+  }, [refreshSummary]);
 
   // The section being worked in is always open, whatever was collapsed before.
   useEffect(() => {

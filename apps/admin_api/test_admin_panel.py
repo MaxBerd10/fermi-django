@@ -287,3 +287,34 @@ def test_news_list_filters_by_status_and_category(admin_client, category):
     assert titles({"status": "0"}) == ["Qoralama"]
     assert titles({"category": str(category.pk)}) == ["Chiqqan", "Qoralama"]
     assert titles({"category": "999999"}) == []
+
+
+def test_dashboard_counts_telegram_drafts_for_the_menu_badge(admin_client):
+    from django.utils import timezone
+
+    from apps.news.models import NewsCategory, NewsPost
+    from apps.telegram_bot.models import BotSubmission, BotUser
+
+    cat = NewsCategory.objects.create(slug="institut-yangiliklari", name_uz="Y", name_ru="Y", name_en="Y")
+    author = BotUser.objects.create(telegram_id=77, full_name="Karimov", status="active", state="idle")
+
+    def draft(slug, published):
+        post = NewsPost.objects.create(
+            category=cat, slug=slug, title_uz="T", title_ru="T", title_en="T", excerpt_uz="x", excerpt_ru="x",
+            excerpt_en="x", page=Page.objects.create(slug=slug), published_at=timezone.now(), is_published=published,
+        )
+        BotSubmission.objects.create(user=author, status="sent", post=post)
+        return post
+
+    waiting, done = draft("wait", False), draft("done", True)
+    # a draft written in the admin panel itself did not come through the bot: not counted
+    NewsPost.objects.create(
+        category=cat, slug="own", title_uz="T", title_ru="T", title_en="T", excerpt_uz="x", excerpt_ru="x",
+        excerpt_en="x", page=Page.objects.create(slug="own"), published_at=timezone.now(), is_published=False,
+    )
+    data = admin_client.get("/api/v1/admin/dashboard").json()
+    assert data["unread"]["telegram-news"] == 1 and data["telegram_drafts"] == 1
+
+    waiting.is_published = True
+    waiting.save()
+    assert admin_client.get("/api/v1/admin/dashboard").json()["unread"]["telegram-news"] == 0

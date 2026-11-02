@@ -22,10 +22,17 @@ INBOXES = (
 )
 
 
+def telegram_draft_count() -> int:
+    """News staff sent through the Telegram bot that nobody has published yet."""
+    return NewsPost.objects.filter(is_published=False, telegram_submissions__isnull=False).distinct().count()
+
+
 def unread_counts() -> dict[str, int]:
     counts = {resource: model.objects.filter(is_read=False).count() for resource, model in INBOXES}
     # people who asked the staff Telegram bot for permission and wait for an administrator
     counts["telegram"] = BotUser.objects.filter(status=BotUser.PENDING, state=BotUser.IDLE).count()
+    # news waiting for an editor's approval (shown as a badge on the menu item that opens them)
+    counts["telegram-news"] = telegram_draft_count()
     return counts
 
 
@@ -38,7 +45,7 @@ class AdminDashboardView(APIView):
             {
                 "unread": unread_counts(),
                 "drafts": NewsPost.objects.filter(is_published=False).count(),
-                "telegram_drafts": NewsPost.objects.filter(is_published=False, telegram_submissions__isnull=False).distinct().count(),
+                "telegram_drafts": telegram_draft_count(),
                 "news": [
                     {
                         "id": post.pk,

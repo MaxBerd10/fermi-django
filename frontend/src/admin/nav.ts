@@ -28,6 +28,13 @@ export const NAV_GROUPS: NavGroup[] = [
     icon: "ri-edit-box-line",
     items: [
       { to: "/admin/news", label: "Yangiliklar", icon: "ri-newspaper-line", keywords: "xabar e'lon post" },
+      {
+        to: "/admin/news?source=telegram",
+        label: "Telegramdan kelganlar",
+        icon: "ri-telegram-line",
+        badge: "telegram-news",
+        keywords: "bot qoralama tasdiqlash xodim yangilik",
+      },
       { to: "/admin/pages", label: "Sahifalar", icon: "ri-file-text-line", keywords: "matn sahifa cms" },
       { to: "/admin/gallery-images", label: "Foto galereya", icon: "ri-image-line", keywords: "rasm surat" },
       { to: "/admin/videos", label: "Video", icon: "ri-video-line", keywords: "video roliklar" },
