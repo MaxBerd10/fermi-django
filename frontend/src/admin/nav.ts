@@ -29,7 +29,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { to: "/admin/news", label: "Yangiliklar", icon: "ri-newspaper-line", keywords: "xabar e'lon post" },
       {
-        to: "/admin/news?source=telegram",
+        to: "/admin/news?source=telegram&status=0",
         label: "Telegramdan kelganlar",
         icon: "ri-telegram-line",
         badge: "telegram-news",

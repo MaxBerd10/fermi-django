@@ -192,7 +192,7 @@ export default function AdminDashboard() {
 
           {summary && summary.telegram_drafts > 0 && (
             <Link
-              to="/admin/news?source=telegram"
+              to="/admin/news?source=telegram&status=0"
               className="flex items-center gap-3 rounded-xl border border-primary-200 bg-primary-50 px-5 py-4 text-sm text-primary-900 hover:border-primary-300"
             >
               <i className="ri-telegram-line text-xl text-primary-600" aria-hidden="true" />

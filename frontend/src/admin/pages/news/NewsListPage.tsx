@@ -16,11 +16,24 @@ const STATUS_FILTERS = [
 ];
 
 export default function NewsListPage() {
-  const [params] = useSearchParams();
-  const [status, setStatus] = useState("");
+  const [params, setParams] = useSearchParams();
   const [category, setCategory] = useState("");
-  // ?source=telegram (from the Telegram bot page) opens the list of posts staff sent through the bot
-  const [fromTelegram, setFromTelegram] = useState(params.get("source") === "telegram");
+  // The status and "from Telegram" filters live in the address (?status=0&source=telegram), so the menu links
+  // ("Yangiliklar" / "Telegramdan kelganlar") and the buttons below always agree on what the list shows.
+  const status = params.get("status") ?? "";
+  const fromTelegram = params.get("source") === "telegram";
+  const setParam = (key: string, value: string) =>
+    setParams(
+      (current) => {
+        const next = new URLSearchParams(current);
+        if (value) next.set(key, value);
+        else next.delete(key);
+        return next;
+      },
+      { replace: true },
+    );
+  const setStatus = (value: string) => setParam("status", value);
+  const setFromTelegram = (on: boolean) => setParam("source", on ? "telegram" : "");
   const [categories, setCategories] = useState<AdminPostcategory[]>([]);
   const filters: Record<string, string> = {};
   if (status) filters.status = status;
@@ -73,7 +86,7 @@ export default function NewsListPage() {
         </div>
         <button
           type="button"
-          onClick={() => setFromTelegram((v) => !v)}
+          onClick={() => setFromTelegram(!fromTelegram)}
           aria-pressed={fromTelegram}
           className={`flex h-11 cursor-pointer items-center gap-2 rounded-lg border px-3 text-sm font-medium ${
             fromTelegram ? "border-primary-500 bg-primary-50 text-primary-700" : "border-background-300 bg-background-50 text-foreground-600 hover:bg-background-100"
