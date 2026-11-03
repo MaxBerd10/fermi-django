@@ -562,7 +562,9 @@
   margin: 1.25em auto;
 }
 
-.cms-article--news a {
+/* the document cards' buttons (cms-download-btn) keep their own colours: this rule used to turn the white text of
+   "Brauzerda ochish" navy on its navy button, so the label vanished on every news post with a PDF card */
+.cms-article--news a:not(.cms-download-btn) {
   color: #0a1158;
   font-weight: 600;
   text-decoration: underline;
