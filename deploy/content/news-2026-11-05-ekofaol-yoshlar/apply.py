@@ -52,15 +52,12 @@ TITLE = {
 PARAGRAPHS = {
     "uz": [
         "Tibbiy profilaktika va jamoat salomatligi fakulteti tyutori M.Yursinaliyev tomonidan talaba-yoshlar oʻrtasida ekologik madaniyatni shakllantirish, atrof-muhitni asrashga masʼuliyat bilan munosabatda boʻlishni kuchaytirish hamda yashil tashabbuslarni qoʻllab-quvvatlash maqsadida “Ekofaol yoshlar” loyihasi doirasida ekologik tadbirlar amalga oshirildi.",
-        "Tadbir davomida ishtirokchilar institut hududidagi daraxtlar tanasini oqladi, quruq shoxlarni kesib, hududni tozaladi.",
     ],
     "ru": [
         "Тьютор факультета медицинской профилактики и общественного здоровья М. Юрсиналиев в рамках проекта «Экоактивная молодёжь» провёл экологические мероприятия, направленные на формирование экологической культуры среди студенческой молодёжи, усиление ответственного отношения к охране окружающей среды и поддержку «зелёных» инициатив.",
-        "В ходе мероприятия участники побелили стволы деревьев на территории института, обрезали сухие ветви и привели территорию в порядок.",
     ],
     "en": [
         "Tutor of the Faculty of Medical Prevention and Public Health M. Yursinaliyev held environmental events under the “Eco-Active Youth” project to build an environmental culture among students, strengthen a responsible attitude to protecting the environment and support green initiatives.",
-        "During the event the participants whitewashed tree trunks on the institute grounds, pruned dry branches and tidied up the area.",
     ],
 }
 
