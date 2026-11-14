@@ -104,6 +104,7 @@ const imageProxyRateLimits = new Map();
 const pdfCheckRateLimits = new Map();
 const proxyRateLimits = new Map();
 const siteStatsRateLimits = new Map();
+const siteStatsHitRateLimits = new Map();
 const adminLoginRateLimits = new Map();
 
 // Hard daily ceiling on OpenAI calls across ALL visitors combined — independent of
@@ -256,6 +257,12 @@ function allowProxyRequest(request) {
 
 function allowSiteStatsRequest(request) {
   return allowRateLimit(siteStatsRateLimits, request, 60_000, 60);
+}
+
+// The visit counter ping is cheap, and a whole campus can sit behind ONE public address, so it gets a far higher
+// ceiling than the other routes -- and going over it is never an error: the extra pings are simply not counted.
+function allowSiteStatsHitRequest(request) {
+  return allowRateLimit(siteStatsHitRateLimits, request, 60_000, 1200);
 }
 
 async function readRequestBody(request, maxBytes = 100_000) {
@@ -561,7 +568,16 @@ const server = createServer(async (request, response) => {
       if (handled) return;
     }
     if (pathname.startsWith("/site-stats/")) {
-      if (!allowSiteStatsRequest(request)) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      if (pathname === "/site-stats/hit" && request.method === "POST") {
+        if (!allowSiteStatsHitRequest(request)) {
+          // over the ceiling: answer exactly like a counted ping (204) so the browser console stays clean
+          request.resume();
+          response.statusCode = 204;
+          return response.end();
+        }
+      } else if (!allowSiteStatsRequest(request)) {
+        return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      }
       const handled = await handleSiteStatsRequest(request, response);
       if (handled) return;
     }

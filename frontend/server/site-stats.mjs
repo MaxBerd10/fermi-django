@@ -70,6 +70,36 @@ function persist() {
   }
 }
 
+// recordHit used to rewrite the whole stats file synchronously on EVERY visit. With a whole campus behind one Wi-Fi
+// address that is many blocking disk writes per second, so the write is now batched: at most one per few seconds,
+// and always flushed when the server stops (a deploy restart) so no counted visit is lost.
+const PERSIST_DELAY_MS = 5000;
+let persistTimer = null;
+
+function schedulePersist() {
+  if (persistTimer) return;
+  persistTimer = setTimeout(() => {
+    persistTimer = null;
+    persist();
+  }, PERSIST_DELAY_MS);
+  persistTimer.unref?.();
+}
+
+export function flushStats() {
+  if (!persistTimer) return;
+  clearTimeout(persistTimer);
+  persistTimer = null;
+  persist();
+}
+
+process.on("exit", flushStats);
+for (const signal of ["SIGTERM", "SIGINT"]) {
+  process.once(signal, () => {
+    flushStats();
+    process.exit(0);
+  });
+}
+
 function tashkentParts(date = new Date()) {
   return Object.fromEntries(
     TASHKENT_DATE_PARTS.formatToParts(date)
@@ -134,7 +164,7 @@ export function recordHit(rawPath, requestMeta = {}) {
     stats.byPath[path] = (stats.byPath[path] || 0) + 1;
   }
 
-  persist();
+  schedulePersist();
   return true;
 }
 

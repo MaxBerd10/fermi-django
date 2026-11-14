@@ -158,25 +158,27 @@ def test_virtual_reception_rejects_a_nonexistent_faculty_id(client, db):
 # --- Rate limiting: shared "public_form" throttle scope ---------------------
 
 def test_public_form_throttle_is_shared_across_all_three_endpoints(client, db):
-    # DEFAULT_THROTTLE_RATES["public_form"] = "10/min", and all three views
-    # share that one scope -- so 10 total requests across contact/qabul are
-    # allowed before the 11th (to either endpoint) is throttled.
-    for i in range(5):
-        res = client.post(
-            "/api/v1/forms/contact",
-            {"name": f"Flood {i}", "email": f"f{i}@example.com", "phone": "+998900000000",
-             "subject": "Spam", "message": "Spam"},
-            format="json",
-        )
-        assert res.status_code == 204
+    # All the public form views share the one "public_form" scope (rate from DEFAULT_THROTTLE_RATES), so that many
+    # requests across contact/qabul are allowed before the next one (to either endpoint) is throttled.
+    from django.conf import settings
 
-    for i in range(5):
-        res = client.post(
-            "/api/v1/forms/qabul",
-            {"fish": f"Flood {i}", "phone": "+998900000000", "email": f"g{i}@example.com"},
-            format="json",
-        )
-        assert res.status_code == 200
+    limit = int(settings.REST_FRAMEWORK["DEFAULT_THROTTLE_RATES"]["public_form"].split("/")[0])
+    for i in range(limit):
+        if i % 2 == 0:
+            res = client.post(
+                "/api/v1/forms/contact",
+                {"name": f"Flood {i}", "email": f"f{i}@example.com", "phone": "+998900000000",
+                 "subject": "Spam", "message": "Spam"},
+                format="json",
+            )
+            assert res.status_code == 204
+        else:
+            res = client.post(
+                "/api/v1/forms/qabul",
+                {"fish": f"Flood {i}", "phone": "+998900000000", "email": f"g{i}@example.com"},
+                format="json",
+            )
+            assert res.status_code == 200
 
     res = client.post(
         "/api/v1/forms/contact",
