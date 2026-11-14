@@ -8,7 +8,8 @@
 #   limit_conn fermi_per_ip      25        -> 400
 #   limit_req  fermi_general     15r/s b60 -> 100r/s b400
 #   /api/v1/forms/  (applications)  5r/m b10 (shared with login) -> its own zone, 120r/m b60
-#   /api/v1/auth/   (login etc.)    5r/m b10 -> unchanged (brute-force protection stays as strict as before)
+#   /api/v1/auth/   (login etc.)    5r/m b10 -> same limit, in a zone with a NEW name ("fermi_auth_strict"): nginx REFUSES a
+#                                      reload when an existing zone changes its key, and `nginx -t` does not notice that
 #
 # Touches ONLY the two fermi files below, never another site's config. The server is shared (about 50 sites), so:
 # it backs both files up, runs `nginx -t`, puts the old files back by itself if the test fails, and only then does a
@@ -27,6 +28,7 @@ VHOST_FILE="${VHOST_FILE:-/etc/nginx/sites-enabled/fermi-django-frontend}"
 BACKUP_ROOT="${BACKUP_ROOT:-/root/nginx-fermi-backup}"
 NGINX_BIN="${NGINX_BIN:-nginx}"
 RELOAD_CMD="${RELOAD_CMD:-systemctl reload nginx}"
+ERROR_LOG="${ERROR_LOG:-/var/log/nginx/error.log}"
 
 say() { printf '%s\n' "$*"; }
 die() { say "STOP: $*"; exit 1; }
@@ -85,13 +87,13 @@ map $uri $fermi_forms_key {
     default "";
     ~^/api/v1/forms/ $binary_remote_addr;
 }
-limit_req_zone $fermi_auth_key zone=fermi_sensitive:10m rate=5r/m;
+limit_req_zone $fermi_auth_key zone=fermi_auth_strict:10m rate=5r/m;
 limit_req_zone $fermi_forms_key zone=fermi_forms:10m rate=120r/m;
 EOF
 
 sed -e 's/limit_conn fermi_per_ip 25;/limit_conn fermi_per_ip 400;/' \
     -e 's/limit_req zone=fermi_general burst=60 nodelay;/limit_req zone=fermi_general burst=400 nodelay;/' \
-    -e 's/^\([[:space:]]*\)limit_req zone=fermi_sensitive burst=10 nodelay;/&\n\1limit_req zone=fermi_forms burst=60 nodelay;/' \
+    -e 's/^\([[:space:]]*\)limit_req zone=fermi_sensitive burst=10 nodelay;/\1limit_req zone=fermi_auth_strict burst=10 nodelay;\n\1limit_req zone=fermi_forms burst=60 nodelay;/' \
     "$VHOST_FILE" > "$work/vhost"
 
 say "MODE: $MODE"
@@ -123,6 +125,20 @@ if ! nginx_ok; then
   exit 1
 fi
 
+log_lines_before=0
+[ -f "$ERROR_LOG" ] && log_lines_before="$(wc -l < "$ERROR_LOG")"
 $RELOAD_CMD
+sleep "${RELOAD_WAIT:-2}"
+# `nginx -t` passes but a real reload can still be refused (nginx then silently keeps the OLD configuration and logs an
+# [emerg] line): look at what the reload itself wrote to the error log
+if [ -f "$ERROR_LOG" ] && tail -n +"$((log_lines_before + 1))" "$ERROR_LOG" | grep -i "emerg" | grep -qi "limit_req\|limit_conn\|fermi"; then
+  say "nginx refused the reload:"
+  tail -n +"$((log_lines_before + 1))" "$ERROR_LOG" | grep -i "emerg" | grep -i "limit_req\|limit_conn\|fermi" | tail -n 3
+  restore_from "$backup"
+  nginx_ok || die "nginx -t failed after restoring the old files; look at it by hand."
+  $RELOAD_CMD
+  say "ROLLED BACK: the old files are back and nginx was reloaded with them."
+  exit 1
+fi
 say "DONE: nginx reloaded with the campus-friendly limits."
 say "(to put the old limits back: MODE=undo bash deploy/nginx/campus-limits.sh)"
