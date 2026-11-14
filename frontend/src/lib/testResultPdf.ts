@@ -43,7 +43,14 @@ type PdfMake = {
  * left single quotation mark o\u2018 g\u2018 (U+2018) is in that font and looks the same, so the PDF uses it.
  */
 export function pdfText(text: string): string {
-  return text.replace(/\u02bb/g, "\u2018");
+  return (
+    text
+      .replace(/\u02bb/g, "\u2018")
+      // the explanations chain steps with arrows ("nafas qisilishi \u2192 aritmiya \u2192 ..."); the font has none of the arrows either
+      .replace(/\u2194/g, "<->")
+      .replace(/[\u2192\u21d2]/g, "->")
+      .replace(/\u2190/g, "<-")
+  );
 }
 
 /** dd.mm.yyyy: the browser's own "medium" format came out as "2026 M11 14" for the Uzbek locale. */
