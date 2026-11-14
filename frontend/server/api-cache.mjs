@@ -34,6 +34,21 @@ const DROPPED_HEADERS = new Set([
   "connection", "transfer-encoding", "content-encoding", "keep-alive", "content-length", "set-cookie",
 ]);
 
+function cacheKey(request, requestUrl) {
+  return `${String(request.headers.host || "")}|${requestUrl.pathname}${requestUrl.search}`;
+}
+
+/**
+ * True when this request would be answered from the copy kept in memory (fresh, or old but still sent at once):
+ * it costs Django and the database nothing, so the caller may count it against a far higher limit than a request
+ * that has to go all the way to Django.
+ */
+export function hasCachedAnswer(request, requestUrl) {
+  if (!isCacheableApiGet(request, requestUrl.pathname, requestUrl.search)) return false;
+  const entry = store.get(cacheKey(request, requestUrl));
+  return !!entry && Date.now() - entry.at < STALE_MS;
+}
+
 export function clearApiCache() {
   generation += 1;
   store.clear();
@@ -96,7 +111,7 @@ export async function serveCachedApiGet(request, response, baseUrl, requestUrl, 
   if (!isCacheableApiGet(request, requestUrl.pathname, requestUrl.search)) return false;
 
   const host = String(request.headers.host || "");
-  const key = `${host}|${requestUrl.pathname}${requestUrl.search}`;
+  const key = cacheKey(request, requestUrl);
   const target = new URL(`${requestUrl.pathname}${requestUrl.search}`, baseUrl);
   const headers = { ...upstreamHeaders, accept: "application/json", "accept-encoding": "identity" };
   delete headers.cookie;

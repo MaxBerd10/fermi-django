@@ -9,7 +9,7 @@ import { handleSiteStatsRequest } from "./site-stats.mjs";
 import { startTelegramMediaCache, handleTelegramMediaRequest } from "./telegram-media-cache.mjs";
 import { handleImageProxyRequest } from "./image-proxy.mjs";
 import { handlePdfCheckRequest } from "./pdf-check.mjs";
-import { clearApiCache, serveCachedApiGet } from "./api-cache.mjs";
+import { clearApiCache, hasCachedAnswer, serveCachedApiGet } from "./api-cache.mjs";
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const distDir = resolve(rootDir, "out");
@@ -103,6 +103,7 @@ const telegramMediaRateLimits = new Map();
 const imageProxyRateLimits = new Map();
 const pdfCheckRateLimits = new Map();
 const proxyRateLimits = new Map();
+const cachedApiRateLimits = new Map();
 const siteStatsRateLimits = new Map();
 const siteStatsHitRateLimits = new Map();
 const adminLoginRateLimits = new Map();
@@ -251,8 +252,17 @@ function allowAdminLoginAttempt(request) {
   return allowRateLimit(adminLoginRateLimits, request, 15 * 60_000, 10);
 }
 
+// Everything that has to reach Django (writes, article pages, anything not in the memory copy). A whole campus can sit
+// behind ONE public address and a single page view makes several such calls, so 120 a minute (one address) was
+// used up by a handful of visitors; 600 is still far below what Django could not take from one address.
 function allowProxyRequest(request) {
-  return allowRateLimit(proxyRateLimits, request, 60_000, 120);
+  return allowRateLimit(proxyRateLimits, request, 60_000, 600);
+}
+
+// API answers served from the in-memory copy (see api-cache.mjs): cheap, and every visitor of a campus asks for the
+// same menu / news list / settings on each page view, so they get a much higher ceiling.
+function allowCachedApiRequest(request) {
+  return allowRateLimit(cachedApiRateLimits, request, 60_000, 6000);
 }
 
 function allowSiteStatsRequest(request) {
@@ -607,10 +617,11 @@ const server = createServer(async (request, response) => {
     if (pathname.startsWith("/api/v1/")) {
       // The Telegram bot's webhook: every message of every staff member arrives from Telegram's few addresses, so a
       // per-IP limit would throttle the whole bot. Django checks the secret header and limits each person itself.
-      if (pathname !== "/api/v1/telegram/webhook/" && !allowProxyRequest(request)) {
-        return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
-      }
       const apiUrl = new URL(request.url || "/", "http://localhost");
+      if (pathname !== "/api/v1/telegram/webhook/") {
+        const allowed = hasCachedAnswer(request, apiUrl) ? allowCachedApiRequest(request) : allowProxyRequest(request);
+        if (!allowed) return sendJson(response, 429, { error: "Too many requests. Please try again shortly." });
+      }
       if (await serveCachedApiGet(request, response, fermiApiBaseUrl, apiUrl, safeUpstreamHeaders(request.headers))) return;
       return await proxyAndDropCacheOnWrite(request, response);
     }
