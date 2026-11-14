@@ -1,6 +1,7 @@
 // The production server proxies this route and keeps the iMentor credential private.
 // Keeping the path relative also works behind a reverse proxy and on any domain.
 import { FEATURES } from "@/lib/featureFlags";
+import { normalizeUzbekText } from "@/lib/uzbekApostrophes";
 
 const BASE_URL = "/imentor-api";
 
@@ -26,5 +27,6 @@ export async function imentorGet<T>(path: string, params?: Record<string, string
     throw new Error(`iMentor API xatosi: ${response.status}`);
   }
 
-  return response.json() as Promise<T>;
+  // the question bank spells oʻ gʻ in several ways; show them all the same (see lib/uzbekApostrophes.ts)
+  return normalizeUzbekText((await response.json()) as T);
 }

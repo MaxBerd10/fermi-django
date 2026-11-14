@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Paginator from "@/components/shared/Paginator";
 import { usePagination } from "@/hooks/usePagination";
 import { COURSES, PROGRAMS, buildCatalog, programInfo, type CatalogEntry } from "@/lib/imentorCatalog";
+import { searchKey } from "@/lib/uzbekApostrophes";
 import type { ImentorSubjectStat } from "@/types/imentor";
 
 const SUBJECTS_PER_PAGE = 12;
@@ -101,12 +102,12 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
   const visible = useMemo(() => {
     let list: CatalogEntry<ImentorSubjectStat>[];
     if (searching) {
-      const q = query.trim().toLowerCase();
+      const q = searchKey(query.trim());
       list = catalog.filter(
         ({ item, parsed }) =>
-          item.subject_name.toLowerCase().includes(q) ||
-          parsed.title.toLowerCase().includes(q) ||
-          (item.department_name || "").toLowerCase().includes(q),
+          searchKey(item.subject_name).includes(q) ||
+          searchKey(parsed.title).includes(q) ||
+          searchKey(item.department_name || "").includes(q),
       );
     } else if (programKey) {
       list = programEntries.filter((entry) => {
