@@ -23,6 +23,21 @@ function resolveInitialLanguage(): SupportedLang {
 
 const initialLang = resolveInitialLanguage();
 
+// Russian pages need the Cyrillic font files (index.css has the declarations). They are NOT preloaded for everybody
+// (see index.html: an Uzbek visitor never uses them), only when Russian is the chosen language, so Russian text is not
+// held back waiting for them. The language switcher reloads the page, so deciding once here is enough.
+if (initialLang === 'ru') {
+  for (const file of ['manrope-cyrillic', 'source-sans-3-cyrillic']) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'font';
+    link.type = 'font/woff2';
+    link.crossOrigin = 'anonymous';
+    link.href = `/fonts/${file}.woff2`;
+    document.head.appendChild(link);
+  }
+}
+
 // Texts edited in the admin panel; present when the Node server put them into index.html (the normal case).
 const injectedSiteTexts = readInjectedSiteTexts();
 
