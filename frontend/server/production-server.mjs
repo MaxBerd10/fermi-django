@@ -551,7 +551,11 @@ async function serveStatic(request, response) {
   const extension = extname(filePath).toLowerCase();
   response.statusCode = 200;
   response.setHeader("Content-Type", mimeTypes[extension] || "application/octet-stream");
-  response.setHeader("Cache-Control", filePath.includes(`${distDir}/assets/`) ? "public, max-age=31536000, immutable" : "no-cache");
+  // The build's hashed files never change under their name, and neither do the site's own fonts (a replaced font gets a
+  // new file name, as the Cyrillic ones did): both can be kept for a year, so a visit does not re-ask for every font
+  // file. Everything else (icons, images, the icon-font CSS that grows with new icons) is revalidated.
+  const keepForever = filePath.includes(`${distDir}/assets/`) || filePath.includes(`${distDir}/fonts/`);
+  response.setHeader("Cache-Control", keepForever ? "public, max-age=31536000, immutable" : "no-cache");
   if (extension === ".html") {
     const host = request.headers.host;
     const [html, textsJson, toolsJson] = await Promise.all([readFile(filePath, "utf8"), siteTexts.json(host), homeTools.json(host)]);
