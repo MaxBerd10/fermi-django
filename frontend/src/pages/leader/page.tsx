@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { getLeaders } from "@/api/leaders";
 import type { LeadersResponse } from "@/types/content";
 import { ApiError } from "@/types/api";
+import NotFound from "@/pages/NotFound";
+import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
 import PageHeader from "@/components/shared/PageHeader";
 import LeaderSectionNav from "@/components/shared/LeaderSectionNav";
@@ -28,6 +30,7 @@ export default function LeaderPage() {
   const [data, setData] = useState<LeadersResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const [query, setQuery] = useState("");
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -47,11 +50,15 @@ export default function LeaderPage() {
     if (!slug) return;
     setLoading(true);
     setError(null);
+    setNotFound(false);
     setQuery("");
     setOpenId(null);
     getLeaders(slug, resolvedMenuId)
       .then(setData)
-      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError")))
+      .catch((e) => {
+        setNotFound(isNotFound(e));
+        setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("common.genericError"));
+      })
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, menuId, i18n.language]);
@@ -75,6 +82,7 @@ export default function LeaderPage() {
   usePageMeta(data?.category.title);
 
   if (loading) return <LoadingState minHeightPx={remembered ?? coldStartMinHeight} />;
+  if (notFound) return <NotFound />;
   if (error || !data) return <ErrorState message={error ?? undefined} />;
 
   const introKey = getLeaderPageIntroKey(slug);

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { getDepartment, listDepartments } from "@/api/departments";
 import type { DepartmentDetail, Leader } from "@/types/content";
 import { ApiError } from "@/types/api";
+import NotFound from "@/pages/NotFound";
+import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
 import PageHeader from "@/components/shared/PageHeader";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
@@ -25,6 +27,7 @@ export default function DepartmentPage() {
   const [isFallback, setIsFallback] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const { contentRef, remembered } = useRememberedContentHeight(`department:${slug}`, loading);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
@@ -39,6 +42,7 @@ export default function DepartmentPage() {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setNotFound(false);
     setIsFallback(false);
 
     async function load() {
@@ -57,7 +61,8 @@ export default function DepartmentPage() {
         const meta = listResult.find((item) => item.slug === slug);
         if (!meta) {
           if (!cancelled) {
-            setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError"));
+            setNotFound(isNotFound(e));
+            setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("common.genericError"));
           }
           return;
         }
@@ -95,6 +100,7 @@ export default function DepartmentPage() {
   // department pages (~1,000-11,000px) rather than the old 80vh, which was
   // an order of magnitude short and shoved the footer down by that whole gap.
   if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 3600} />;
+  if (notFound) return <NotFound />;
   if (error || !dept) return <ErrorState message={error ?? undefined} />;
 
   const isHistory = slug === "institut-tarixi";

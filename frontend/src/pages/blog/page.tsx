@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
 import type { Page } from "@/types/content";
 import { ApiError } from "@/types/api";
+import NotFound from "@/pages/NotFound";
+import { isNotFound } from "@/lib/loadErrors";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import PageHeader from "@/components/shared/PageHeader";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
@@ -29,6 +31,7 @@ export default function BlogPage() {
   const [page, setPage] = useState<Page | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const { contentRef, remembered } = useRememberedContentHeight(`blog:${slug}`, loading);
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
@@ -61,12 +64,16 @@ export default function BlogPage() {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setNotFound(false);
     getPage(normalizePageSlug(slug), resolvedMenuId)
       .then((data) => {
         if (!cancelled) setPage(data);
       })
       .catch((e) => {
-        if (!cancelled) setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError"));
+        if (!cancelled) {
+          setNotFound(isNotFound(e));
+          setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("common.genericError"));
+        }
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -83,6 +90,7 @@ export default function BlogPage() {
   // template covers ~235 pages of widely varying length; the cold-start
   // default is a conservative median from real measured pages, not 80vh.
   if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 2600} />;
+  if (notFound) return <NotFound />;
   if (error || !page) return <ErrorState message={error ?? undefined} />;
 
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it

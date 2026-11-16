@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { getNewsArticle } from "@/api/news";
 import type { NewsArticle } from "@/types/content";
 import { ApiError } from "@/types/api";
+import NotFound from "@/pages/NotFound";
+import { isNotFound } from "@/lib/loadErrors";
 import PageHeader from "@/components/shared/PageHeader";
 import RichContent from "@/components/shared/RichContent";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
@@ -38,12 +40,14 @@ export default function DetailPage() {
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const { contentRef, remembered } = useRememberedContentHeight(`detail:${slug}`, loading);
 
   useEffect(() => {
     if (!slug) return;
     setLoading(true);
     setError(null);
+    setNotFound(false);
     getNewsArticle(slug, menuId)
       .then((data) => {
         setArticle(data);
@@ -59,7 +63,10 @@ export default function DetailPage() {
             .catch(() => {});
         }
       })
-      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("detail.loadError")))
+      .catch((e) => {
+        setNotFound(isNotFound(e));
+        setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("detail.loadError"));
+      })
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, menuId, i18n.language]);
@@ -67,6 +74,7 @@ export default function DetailPage() {
   usePageMeta(article?.title, article ? stripHtml(article.content).slice(0, 160) : null);
 
   if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 2200} />;
+  if (notFound) return <NotFound />;
   if (error || !article) return <ErrorState message={error ?? undefined} />;
 
   const categorySlug = article.category?.slug;

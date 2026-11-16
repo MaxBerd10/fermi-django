@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { getFaculty } from "@/api/faculty";
 import type { FacultyDetail } from "@/types/content";
 import { ApiError } from "@/types/api";
+import NotFound from "@/pages/NotFound";
+import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
 import PageHeader from "@/components/shared/PageHeader";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
@@ -20,15 +22,20 @@ export default function FacultyPage() {
   const [faculty, setFaculty] = useState<FacultyDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const { contentRef, remembered } = useRememberedContentHeight(`faculty:${slug}`, loading);
 
   useEffect(() => {
     if (!slug) return;
     setLoading(true);
     setError(null);
+    setNotFound(false);
     getFaculty(slug, menuId ? Number(menuId) : undefined)
       .then(setFaculty)
-      .catch((e) => setError(e instanceof ApiError && e.status !== 404 ? e.message : t("common.genericError")))
+      .catch((e) => {
+        setNotFound(isNotFound(e));
+        setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("common.genericError"));
+      })
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug, menuId]);
@@ -38,6 +45,7 @@ export default function FacultyPage() {
   // See departments/page.tsx's identical comment -- cold-start default
   // picked from real measured faculty pages, not the old too-short 80vh.
   if (loading) return <LoadingState minHeight="min-h-[80vh]" minHeightPx={remembered ?? 4200} />;
+  if (notFound) return <NotFound />;
   if (error || !faculty) return <ErrorState message={error ?? undefined} />;
 
   return (
