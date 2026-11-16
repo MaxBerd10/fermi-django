@@ -1,4 +1,5 @@
 import type { NewsArticle } from "@/types/content";
+import i18n from "@/i18n";
 import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
 
 const API_ORIGIN = (
@@ -123,6 +124,8 @@ export function getNewsArticleImage(
   return DOCUMENT_PLACEHOLDER_IMAGE;
 }
 
+const isUzbekUi = () => (i18n.resolvedLanguage || i18n.language || "uz").slice(0, 2) === "uz";
+
 export function enrichNewsArticle(article: NewsArticle, index = 0): NewsArticle {
   return {
     ...article,
@@ -134,8 +137,10 @@ export function enrichNewsArticle(article: NewsArticle, index = 0): NewsArticle 
     // class of bug for Telegram content too. Safe to run over content's real
     // HTML tags (<b>, <br/>, ...): only replaces apostrophe-shaped
     // characters, never touches tag syntax or attribute quoting.
-    title: normalizeUzbekApostrophes(article.title),
-    content: normalizeUzbekApostrophes(article.content),
+    // only for Uzbek: this also runs over a Telegram post that arrives already translated, and there the same
+    // tidying turned the English apostrophe of "institute's" into the Uzbek mark ("instituteʻs")
+    title: isUzbekUi() ? normalizeUzbekApostrophes(article.title) : article.title,
+    content: isUzbekUi() ? normalizeUzbekApostrophes(article.content) : article.content,
     img: getNewsArticleImage(article, index),
   };
 }
