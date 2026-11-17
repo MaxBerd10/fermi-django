@@ -1,0 +1,9 @@
+# Security contact of fermi.uz (Fergana Medical Institute of Public Health), format: RFC 9116.
+# If you found a security problem on this site, please write to the address below. Describe what you found and how to
+# repeat it; please do not read, change or delete other people's data while testing. Messages in Uzbek, Russian or
+# English are welcome.
+
+Contact: mailto:info@fjsti.uz
+Expires: 2027-10-31T23:59:00.000Z
+Preferred-Languages: uz, ru, en
+Canonical: https://fermi.uz/.well-known/security.txt
