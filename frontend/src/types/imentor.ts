@@ -91,6 +91,8 @@ export interface ImentorDocument {
   available_languages?: string[];
   /** the language actually returned by a detail request made with ?language= */
   language?: string;
+  /** who made the translation, once iMentor reports it ("ai" = its translator, anything else = a teacher / reviewed) */
+  translated_by?: string;
 }
 
 export interface ImentorDocumentListResponse {

@@ -58,6 +58,35 @@ function CaseText({ text }: { text: string }) {
   );
 }
 
+/** A question / case shown in a language other than the one its author wrote it in: iMentor's AI translator made it. */
+function isAiTranslation(document: ImentorDocument, language: string) {
+  return !!document.primary_language && document.primary_language !== language && (!document.translated_by || document.translated_by === "ai");
+}
+
+/**
+ * iMentor counts a document as available in a language when most of its questions (at least 60%) are translated, so the
+ * rest of that document is still in the author's language. A Russian page showing a text with no Cyrillic letter in it is
+ * one of those: it is the original, not a translation.
+ */
+function looksUntranslated(text: string, language: string) {
+  return language === "ru" && !/[А-Яа-яЁё]/.test(text);
+}
+
+function AiBadge({ original }: { original?: boolean }) {
+  const { t } = useTranslation();
+  return original ? (
+    <span className="mr-2 inline-flex items-center gap-1 rounded-md bg-[#eef1f8] px-1.5 py-0.5 align-middle text-[10px] font-semibold text-foreground-600">
+      <i className="ri-translate-2" aria-hidden />
+      {t("imentor.originalLanguage")}
+    </span>
+  ) : (
+    <span title={t("imentor.aiNote")} className="mr-2 inline-flex items-center gap-1 rounded-md bg-amber-50 px-1.5 py-0.5 align-middle text-[10px] font-semibold text-amber-800">
+      <i className="ri-translate-2" aria-hidden />
+      {t("imentor.aiTranslated")}
+    </span>
+  );
+}
+
 function TopicTag({ code }: { code: string }) {
   if (!code) return null;
   return <span className="mr-2 inline-flex rounded-md bg-[#e8edff] px-1.5 py-0.5 align-middle text-[10px] font-bold uppercase text-[#0a1158]">{code}</span>;
@@ -66,6 +95,7 @@ function TopicTag({ code }: { code: string }) {
 function QuestionRow({
   number,
   code,
+  translated,
   question,
   correct,
   open,
@@ -73,17 +103,20 @@ function QuestionRow({
 }: {
   number: number;
   code: string;
+  translated: boolean;
   question: ImentorTestQuestionContent;
   correct: number | undefined;
   open: boolean;
   onToggle: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = imentorLanguage(i18n.language);
   return (
     <div className="overflow-hidden rounded-xl border border-[#e4e7f0] bg-white">
       <button type="button" onClick={onToggle} aria-expanded={open} className="flex w-full items-center gap-3 p-3.5 text-left cursor-pointer">
         <span className="flex h-7 min-w-7 shrink-0 items-center justify-center rounded-full bg-primary-50 px-1 text-xs font-bold text-primary-700">{number}</span>
         <span className="flex-1 text-sm font-medium text-foreground-800 line-clamp-2">
+          {translated && <AiBadge original={looksUntranslated(question.question, lang)} />}
           <TopicTag code={code} />
           {question.question}
         </span>
@@ -126,13 +159,15 @@ function QuestionRow({
   );
 }
 
-function CaseRow({ number, code, item, open, onToggle }: { number: number; code: string; item: ImentorCaseItem; open: boolean; onToggle: () => void }) {
-  const { t } = useTranslation();
+function CaseRow({ number, code, translated, item, open, onToggle }: { number: number; code: string; translated: boolean; item: ImentorCaseItem; open: boolean; onToggle: () => void }) {
+  const { t, i18n } = useTranslation();
+  const lang = imentorLanguage(i18n.language);
   return (
     <div className="rounded-xl border border-[#e4e7f0] bg-white p-4">
       <div className="mb-3 flex items-start gap-3">
         <span className="flex h-7 min-w-7 shrink-0 items-center justify-center rounded-full bg-primary-50 px-1 text-xs font-bold text-primary-700">{number}</span>
         <div className="flex-1 text-sm leading-relaxed text-foreground-800">
+          {translated && <AiBadge original={looksUntranslated(item.scenario, lang)} />}
           <TopicTag code={code} />
           <CaseText text={item.scenario} />
         </div>
@@ -268,6 +303,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
     };
   }, [paging.pageItems, fetchDocument]);
 
+  const hasTranslations = !!documents?.some((document) => isAiTranslation(document, lang));
   const countLabel = (count: number) => (isTests ? t("test.questionsCount", { count }) : t("keyslar.casesCount", { count }));
   const ready = documents !== null && documents.length > 0;
 
@@ -341,6 +377,12 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
         <div className="mb-3 text-sm font-medium text-foreground-500">
           {topicKey ? topics.find((topic) => topic.key === topicKey)?.title : t("test.allTopics")} · {countLabel(items.length)}
         </div>
+        {hasTranslations && (
+          <p className="mb-3 flex items-start gap-2 rounded-lg bg-amber-50 px-3 py-2 text-xs leading-snug text-amber-900">
+            <i className="ri-translate-2 mt-0.5 shrink-0" aria-hidden />
+            {t("imentor.aiNote")}
+          </p>
+        )}
         <div ref={listTopRef} className="scroll-mt-24 space-y-2">
           {paging.pageItems.map(({ document, index, code }, pageIndex) => {
             const number = paging.offset + pageIndex + 1;
@@ -377,6 +419,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
                   key={rowKey}
                   number={number}
                   code={topicKeyCode(topicKey, code)}
+                  translated={isAiTranslation(document, lang)}
                   question={question}
                   correct={source[index]?.correctOptionIndex ?? question.correctOptionIndex}
                   open={!!openRows[rowKey]}
@@ -389,7 +432,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
             const cases = translatedCases && translatedCases.length === keyDetail.payload.questions.length ? translatedCases : keyDetail.payload.questions;
             const item = cases[index];
             if (!item) return null;
-            return <CaseRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} item={item} open={!!openRows[rowKey]} onToggle={toggle} />;
+            return <CaseRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} translated={isAiTranslation(document, lang)} item={item} open={!!openRows[rowKey]} onToggle={toggle} />;
           })}
         </div>
         <div className="mt-5">

@@ -369,6 +369,8 @@ export default function TestPage() {
                     </div>
                   )}
 
+                  <p className="mb-4 text-xs leading-snug text-foreground-400">{t("imentor.aiNoteShort")}</p>
+
                   {isAnswered && (
                     <button type="button" onClick={nextQuestion} className="uni-btn cursor-pointer">
                       {index + 1 < quizQuestions.length ? t("test.next") : t("test.finish")}
