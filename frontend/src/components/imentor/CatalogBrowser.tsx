@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Paginator from "@/components/shared/Paginator";
 import { usePagination } from "@/hooks/usePagination";
-import { COURSES, PROGRAMS, buildCatalog, programInfo, type CatalogEntry } from "@/lib/imentorCatalog";
+import { COURSES, PROGRAMS, buildCatalog, programInfo, subjectSearchTexts, type CatalogEntry } from "@/lib/imentorCatalog";
 import { searchKey } from "@/lib/uzbekApostrophes";
 import type { ImentorSubjectStat } from "@/types/imentor";
 
@@ -25,8 +25,8 @@ interface Props {
 }
 
 /**
- * Programme -> year -> subject picker shared by the test and the case pages. The programme and the year are read
- * from the subject names (see lib/imentorCatalog.ts); the choice lives in the address (?f=&k=&q=), so the browser's
+ * Programme -> year -> subject picker shared by the test and the case pages. The programme and the year are
+ * separate fields of every subject that iMentor sends (see lib/imentorCatalog.ts); the choice lives in the address (?f=&k=&q=), so the browser's
  * back button steps out of a level and a link opens the same view.
  */
 export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCountLabel, searchPlaceholder, noResultsLabel, onPick }: Props) {
@@ -63,7 +63,7 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
     return () => window.clearTimeout(timer);
   }, [text, setParams]);
 
-  const catalog = useMemo(() => buildCatalog(subjects.filter((s) => s.subject_code && s.subject_name)), [subjects]);
+  const catalog = useMemo(() => buildCatalog(subjects.filter((s) => s.subject_code && s.subject_name), lang), [subjects, lang]);
 
   function update(changes: Record<string, string | null>, options?: { replace?: boolean }) {
     const next = new URLSearchParams(params);
@@ -104,10 +104,7 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
     if (searching) {
       const q = searchKey(query.trim());
       list = catalog.filter(
-        ({ item, parsed }) =>
-          searchKey(item.subject_name).includes(q) ||
-          searchKey(parsed.title).includes(q) ||
-          searchKey(item.department_name || "").includes(q),
+        ({ item, parsed }) => searchKey(parsed.title).includes(q) || subjectSearchTexts(item).some((text) => searchKey(text).includes(q)),
       );
     } else if (programKey) {
       list = programEntries.filter((entry) => {
@@ -201,7 +198,7 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
                     <i className={program.icon} />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-heading text-[15px] font-bold leading-snug text-foreground-900">{program.name[lang]}</span>
+                    <span className="block font-heading text-[15px] font-bold leading-snug text-foreground-900">{(program.key !== "other" && entries[0]?.parsed.programName) || program.name[lang]}</span>
                     <span className="mt-1 block text-xs text-foreground-500">
                       {t("catalog.subjectsCount", { count: entries.length })} · {countLabel(total)}
                     </span>
@@ -229,7 +226,7 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
                 <i className="ri-arrow-left-line" />
                 {t("catalog.backToFaculties")}
               </button>
-              <h2 className="font-heading text-lg font-bold text-foreground-900">{programInfo(programKey).name[lang]}</h2>
+              <h2 className="font-heading text-lg font-bold text-foreground-900">{(programKey !== "other" && programEntries[0]?.parsed.programName) || programInfo(programKey).name[lang]}</h2>
               <p className="mt-1 mb-3 text-sm text-foreground-500">{t("catalog.pickCourse")}</p>
               <div className="mb-5 flex flex-wrap gap-2">
                 {courseChip("", t("catalog.allCourses"), programEntries.length)}
@@ -258,17 +255,17 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
                   </div>
                   <div className="min-w-0">
                     <div className="font-heading text-[15px] font-bold leading-snug text-foreground-900 line-clamp-3">{parsed.title}</div>
-                    {item.department_name && <div className="mt-1 text-xs text-foreground-500 line-clamp-1">{item.department_name}</div>}
+                    {parsed.department && <div className="mt-1 text-xs text-foreground-500 line-clamp-1">{parsed.department}</div>}
                   </div>
                 </div>
                 <div className="relative mt-3 flex flex-wrap gap-1.5">
                   {searching && parsed.program !== "other" && (
-                    <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{programInfo(parsed.program).name[lang]}</span>
+                    <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{parsed.programName || programInfo(parsed.program).name[lang]}</span>
                   )}
                   {parsed.course !== null && (
                     <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{t("catalog.courseN", { n: parsed.course })}</span>
                   )}
-                  {parsed.semester !== null && <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{parsed.semester}-sem</span>}
+                  {parsed.semester !== null && <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{t("catalog.semesterN", { n: parsed.semester })}</span>}
                   {parsed.track && <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{parsed.track}</span>}
                   {parsed.intake && <span className="rounded-full bg-[#f1f3f9] px-2 py-0.5 text-[10.5px] font-semibold text-foreground-600">{parsed.intake}</span>}
                 </div>

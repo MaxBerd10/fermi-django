@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageHeader from "@/components/shared/PageHeader";
 import CatalogBrowser from "@/components/imentor/CatalogBrowser";
 import TopicExplorer from "@/components/imentor/TopicExplorer";
-import { parseSubjectName } from "@/lib/imentorCatalog";
+import { subjectInfo } from "@/lib/imentorCatalog";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { imentorLanguage, languageCount, subjectsInLanguage, type ImentorLanguage } from "@/lib/imentorLanguage";
 import { getImentorKeyStats } from "@/api/imentor";
@@ -30,9 +30,12 @@ export default function KeyslarPage() {
 
   useEffect(() => {
     let cancelled = false;
-    getImentorKeyStats()
+    getImentorKeyStats(lang)
       .then((data) => {
-        if (!cancelled) setSubjects(data);
+        if (cancelled) return;
+        setSubjects(data);
+        // the open subject comes again in the new language (its name and department change with the language)
+        setSubject((current) => (current ? data.find((s) => s.subject_code === current.subject_code) ?? current : current));
       })
       .catch(() => {
         if (!cancelled) setError(t("test.loadError"));
@@ -40,7 +43,7 @@ export default function KeyslarPage() {
     return () => {
       cancelled = true;
     };
-  }, [t]);
+  }, [t, lang]);
 
   function openSubject(s: ImentorSubjectStat) {
     setSubject(s);
@@ -140,9 +143,9 @@ export default function KeyslarPage() {
                     <i className="ri-arrow-left-line" />
                     {t("keyslar.backToSubjects")}
                   </button>
-                  <h2 className="font-heading text-2xl font-bold leading-tight text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
+                  <h2 className="font-heading text-2xl font-bold leading-tight text-foreground-900">{subjectInfo(subject, lang).title}</h2>
                   <p className="mt-2 text-sm text-foreground-500">
-                    {subject.department_name ? `${subject.department_name} · ` : ""}
+                    {subjectInfo(subject, lang).department ? `${subjectInfo(subject, lang).department} · ` : ""}
                     {t("keyslar.casesCount", { count: caseItems(subject, lang) })}
                   </p>
                 </div>

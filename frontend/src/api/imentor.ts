@@ -12,13 +12,14 @@ import type { ImentorLanguage } from "@/lib/imentorLanguage";
 
 // Most departments in the catalog have no published tests/cases yet — stats' `by_subject`
 // only lists subjects that actually have content, so pickers built from it never dead-end.
-export async function getImentorTestStats() {
-  const data = await imentorGet<ImentorStatsResponse>("v1/external/tests/stats/");
+// With `language`, subject / department names and titles come back in that language (and the per-language counts follow it).
+export async function getImentorTestStats(language?: ImentorLanguage) {
+  const data = await imentorGet<ImentorStatsResponse>("v1/external/tests/stats/", { language });
   return data.by_subject.filter((s) => (s.test_count || 0) > 0);
 }
 
-export async function getImentorKeyStats() {
-  const data = await imentorGet<ImentorStatsResponse>("v1/external/keys/stats/");
+export async function getImentorKeyStats(language?: ImentorLanguage) {
+  const data = await imentorGet<ImentorStatsResponse>("v1/external/keys/stats/", { language });
   // The per-language numbers of the key stats count DOCUMENTS (a document holds several clinical cases, about 3), although
   // the pages show CASES; iMentor marks the unit with `totals.languages_unit` ("cases") once it reports cases. Until then
   // convert with the subject's own cases-per-document ratio, so a subject card and its list show the same number.

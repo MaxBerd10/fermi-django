@@ -1,12 +1,10 @@
+import type { ImentorI18n, ImentorSubjectStat } from "@/types/imentor";
+
 /**
- * iMentor groups tests and cases by department (kafedra) and subject only. A faculty / study programme and a
- * year of study are not separate fields there: the teachers type them into the subject name
- * ("Davolash ishi 2023-2024 (Milliy) 5-semestr Patologik fiziologiya", "Yuqumli kasalliklar 9-s DI",
- * "TPI Falsafa 3 sm"). This reads them back out, so the pickers can go Yo'nalish -> Kurs -> Fan.
- *
- * It is a best-effort reading of free text: a name it cannot place lands in "other" / "no year" instead of
- * being hidden. When iMentor starts returning real faculty / course fields, replace `parseSubjectName` with
- * them -- nothing else in the pickers needs to change.
+ * iMentor sends the study programme, the year of study, the semester and the intake year of every subject as
+ * separate fields (programme_code, course, semester, study_year, pure_title, ...), and the names of subjects and
+ * departments in each language, so the pickers can go Yo'nalish -> Kurs -> Fan without reading anything out of free
+ * text. A subject whose programme iMentor does not know lands in "other" / "no year" instead of being hidden.
  */
 
 export interface ProgramInfo {
@@ -26,7 +24,6 @@ export const PROGRAMS: ProgramInfo[] = [
   { key: "hamshiralik", name: { uz: "Oliy hamshiralik ishi", ru: "Высшее сестринское дело", en: "Nursing" }, icon: "ri-user-heart-line" },
   { key: "fundamental", name: { uz: "Fundamental tibbiyot", ru: "Фундаментальная медицина", en: "Fundamental medicine" }, icon: "ri-microscope-line" },
   { key: "biologik", name: { uz: "Tibbiy biologik ish", ru: "Медико-биологическое дело", en: "Medical biology" }, icon: "ri-flask-line" },
-  { key: "xalqaro", name: { uz: "Xalqaro fakultet", ru: "Международный факультет", en: "International faculty" }, icon: "ri-global-line" },
   { key: "biotibbiyot", name: { uz: "Biotibbiyot muhandisligi", ru: "Биомедицинская инженерия", en: "Biomedical engineering" }, icon: "ri-cpu-line" },
   { key: "other", name: { uz: "Boshqa fanlar", ru: "Другие предметы", en: "Other subjects" }, icon: "ri-book-open-line" },
 ];
@@ -36,123 +33,68 @@ export function programInfo(key: string): ProgramInfo {
   return PROGRAM_BY_KEY.get(key) ?? PROGRAM_BY_KEY.get("other")!;
 }
 
-/** The programme named in full at the start of the subject ("Davolash ishi 2023-2024 ..."). */
-const LEADING_PROGRAM: Array<[RegExp, string]> = [
-  [/^davolash ishi\b/i, "davolash"],
-  [/^pediatriya ishi\b/i, "pediatriya"],
-  [/^tibbiy profilaktika ishi\b/i, "profilaktika"],
-  [/^stomatologiya\s+(?:\d{4}|\d{1,2}\s*-?\s*s\b)/i, "stomatologiya"],
-  [/^farmatsiya\s+\d{4}/i, "farmatsiya"],
-  [/^oliy hamshiralik ishi\b/i, "hamshiralik"],
-  [/^fundamental tibbiyot\b/i, "fundamental"],
-  [/^tibbiy biologik ish/i, "biologik"],
-];
-
-/** Short programme codes teachers append or prepend ("... 9-s DI", "TPI Falsafa 3 sm"); case matters, they are upper-case. */
-const PROGRAM_CODES: Array<[RegExp, string]> = [
-  [/(?:\b|(?<=[a-z]))TPI\b/, "profilaktika"],
-  [/(?:\b|(?<=[a-z]))OHI\b/, "hamshiralik"],
-  [/\b(?:FT|TBI)\b/, "fundamental"],
-  [/\b(?:PED|Ped|PI)\b/, "pediatriya"],
-  [/\b(?:STOM|Stom)\b/, "stomatologiya"],
-  [/\b(?:FARM)\b/, "farmatsiya"],
-  [/\b(?:BM)\b/, "biotibbiyot"],
-  [/\b(?:DI)\b/, "davolash"],
-];
+/** iMentor's programme_code -> the key used in the address (?f=) and in PROGRAMS above */
+const PROGRAM_KEY_BY_CODE: Record<string, string> = {
+  davolash: "davolash",
+  pediatriya: "pediatriya",
+  "tibbiy-profilaktika": "profilaktika",
+  stomatologiya: "stomatologiya",
+  farmatsiya: "farmatsiya",
+  "oliy-hamshiralik": "hamshiralik",
+  "fundamental-tibbiyot": "fundamental",
+  "tibbiy-biologik": "biologik",
+  "biotibbiyot-muhandisligi": "biotibbiyot",
+};
 
 export interface ParsedSubject {
   program: string;
-  /** year of study 1..6, or null when the name does not say */
+  /** year of study 1..6, or null when iMentor does not say */
   course: number | null;
   semester: number | null;
-  /** the subject without programme / year / semester decorations */
+  /** the subject without programme / year / semester decorations, in the visitor's language */
   title: string;
   /** "2023-2024" */
   intake: string | null;
-  /** "Milliy" / "Xorijiy" / ... */
+  /** "Milliy" / "Xorijiy" / ... in the visitor's language */
   track: string | null;
+  /** the department's name in the visitor's language */
+  department: string;
+  /** the programme's name as iMentor writes it, in the visitor's language (null when none is sent) */
+  programName: string | null;
 }
 
 const MAX_COURSE = 6;
+type Lang = "uz" | "ru" | "en";
 
-function courseFromSemester(semester: number): number | null {
-  const course = Math.ceil(semester / 2);
-  return course >= 1 && course <= MAX_COURSE ? course : null;
+/** the text in the visitor's language; the answer already comes in that language, so the plain field is the fallback */
+const pick = (texts: ImentorI18n | undefined, lang: Lang): string => (texts?.[lang] || "").trim();
+
+export function subjectInfo(subject: ImentorSubjectStat, lang: Lang): ParsedSubject {
+  const course = typeof subject.course === "number" && subject.course >= 1 && subject.course <= MAX_COURSE ? subject.course : null;
+  return {
+    program: PROGRAM_KEY_BY_CODE[subject.programme_code || ""] ?? "other",
+    course,
+    semester: typeof subject.semester === "number" ? subject.semester : null,
+    title: pick(subject.pure_title_i18n, lang) || (subject.pure_title || "").trim() || pick(subject.subject_name_i18n, lang) || subject.subject_name,
+    intake: subject.study_year?.trim() || null,
+    track: pick(subject.track_i18n, lang) || null,
+    department: pick(subject.department_name_i18n, lang) || subject.department_name || "",
+    programName: pick(subject.programme_name_i18n, lang) || null,
+  };
 }
 
-export function parseSubjectName(rawName: string): ParsedSubject {
-  const name = rawName.replace(/\s+/g, " ").trim();
+/** The subject's full name (title, programme, year, semester) in the visitor's language. */
+export function subjectFullName(subject: ImentorSubjectStat, lang: Lang): string {
+  return pick(subject.subject_name_i18n, lang) || subject.subject_name;
+}
 
-  let program = "other";
-  for (const [pattern, key] of LEADING_PROGRAM) {
-    if (pattern.test(name)) {
-      program = key;
-      break;
-    }
+/** Every spelling of the subject's and department's name (all languages), so a search finds it however it is typed. */
+export function subjectSearchTexts(subject: ImentorSubjectStat): string[] {
+  const texts = [subject.subject_name, subject.department_name || "", subject.pure_title || ""];
+  for (const group of [subject.subject_name_i18n, subject.department_name_i18n, subject.pure_title_i18n]) {
+    if (group) texts.push(...Object.values(group).filter((text): text is string => Boolean(text)));
   }
-  if (program === "other") {
-    for (const [pattern, key] of PROGRAM_CODES) {
-      if (pattern.test(name)) {
-        program = key;
-        break;
-      }
-    }
-  }
-  if (program === "other" && /\bdavolash\b/i.test(name)) program = "davolash";
-  if (program === "other" && /\bfundamental tibbiyot\b/i.test(name)) program = "fundamental";
-  if (program === "other" && /\(xalqaro\)/i.test(name)) program = "xalqaro";
-
-  // "4-kurs" / "1k" says the year of study directly; otherwise it follows from the semester
-  let course: number | null = null;
-  const explicitCourse = /(?<!\d)([1-6])\s*-?\s*kurs\b/i.exec(name);
-  if (explicitCourse) course = Number(explicitCourse[1]);
-
-  // "5-semestr", "9-s", "3 sm", "2sm", "11 sm", "5s"; not part of a year ("2023-2024") or a group number
-  const semesterMatch = /(?<![\d-])(\d{1,2})(?:\s*-\s*\d{1,2}(?=\s*-?\s*semestr))?\s*-?\s*(?:semestr|sem|sm|s)(?![a-zA-Z])/i.exec(name);
-  const semester = semesterMatch ? Number(semesterMatch[1]) : null;
-  if (course === null && semester !== null) course = courseFromSemester(semester);
-  if (course === null) {
-    const oneK = /(?<!\d)([1-6])\s*k\b/i.exec(name);
-    if (oneK) course = Number(oneK[1]);
-  }
-
-  const intake = /\b(20\d{2})\s*[-\s]\s*(20\d{2})\b/.exec(name);
-  const singleYear = intake ? null : /^(?:davolash ishi|pediatriya ishi|tibbiy profilaktika ishi)\s+(20\d{2})\b/i.exec(name);
-  const trackMatch = /\((milliy|xorijiy|yevro|gibrid)[^)]*\)|\b(milliy|xorijiy)\b/i.exec(name);
-
-  let title = name
-    .replace(/\((?:milliy|xorijiy|yevro|gibrid|xalqaro)[^)]*\)/gi, " ")
-    .replace(/\b(?:milliy|xorijiy|gibrid)\b/gi, " ")
-    .replace(/\b(?:\d{3}-\d{3,4})\b/g, " ")
-    .replace(/\b20\d{2}\s*[-\s]\s*20\d{2}\b/g, " ")
-    .replace(/(?<!\d)\d{1,2}(?:\s*-\s*\d{1,2}(?=\s*-?\s*semestr))?\s*-?\s*(?:semestr|sem|sm|s)(?![a-zA-Z])\.?/gi, " ")
-    .replace(/(?<!\d)[1-6]\s*-?\s*kurs\b/gi, " ")
-    .replace(/(?<!\d)\d\s*k\b/gi, " ")
-    .replace(/([a-z])(?:TPI|OHI)\b/g, "$1");
-  title = title.replace(/^(?:davolash ishi|pediatriya ishi|tibbiy profilaktika ishi|oliy hamshiralik ishi|fundamental tibbiyot|tibbiy biologik ishi?)\b/i, " ");
-  title = title.replace(/^\s*20\d{2}\b/, " ");
-  title = title.replace(/^(?:stomatologiya|farmatsiya)\s+(?=[^\s])/i, (m) => (program === "stomatologiya" || program === "farmatsiya" ? " " : m));
-  // programme codes at either end ("BM Dinshunoslik", "... 9-s DI", "... 5-s FT+TBI", "... (DI)")
-  title = title
-    .replace(/\((?:PED|PI|STOM|FARM|BM|DI|TPI|FT|OHI|TBI)\)/g, " ")
-    .replace(/^(?:\s*(?:PED|Ped-?|STOM|FARM|BM|DI|TPI|FT|OHI|PI)\b[\s-]*)+/, " ")
-    .replace(/(?:[\s,.]*\b(?:TPI|OHI|FT|TBI|PED|PI|STOM|Stom|DI|BM)\b(?:\s*\+\s*(?:TPI|OHI|FT|TBI|PED|PI|STOM|DI|BM))*)+\s*$/g, " ")
-    .replace(/\(\s*\)/g, " ")
-    .replace(/\s+[,.;-]+\s*$/g, " ")
-    .replace(/^[\s,.;:-]+|[\s,.;:-]+$/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-  if (!title) title = name;
-  title = title.charAt(0).toUpperCase() + title.slice(1);
-
-  return {
-    program,
-    course,
-    semester,
-    title,
-    intake: intake ? `${intake[1]}-${intake[2]}` : singleYear ? singleYear[1] : null,
-    track: trackMatch ? (trackMatch[1] || trackMatch[2]).replace(/^./, (c) => c.toUpperCase()) : null,
-  };
+  return texts;
 }
 
 export interface CatalogEntry<T> {
@@ -160,8 +102,8 @@ export interface CatalogEntry<T> {
   parsed: ParsedSubject;
 }
 
-export function buildCatalog<T extends { subject_name: string }>(subjects: T[]): CatalogEntry<T>[] {
-  return subjects.map((item) => ({ item, parsed: parseSubjectName(item.subject_name) }));
+export function buildCatalog(subjects: ImentorSubjectStat[], lang: Lang): CatalogEntry<ImentorSubjectStat>[] {
+  return subjects.map((item) => ({ item, parsed: subjectInfo(item, lang) }));
 }
 
 export const COURSES = [1, 2, 3, 4, 5, 6] as const;

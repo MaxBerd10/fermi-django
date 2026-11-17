@@ -46,11 +46,31 @@ export interface ImentorCaseScenario {
   topic?: string;
 }
 
+/** a text in each language, as iMentor sends it ({ uz, ru, en }) */
+export type ImentorI18n = Partial<Record<"uz" | "ru" | "en", string>>;
+
 export interface ImentorSubjectStat {
   subject_code: string;
+  /** in the language asked for with ?language= (as stored when none is asked) */
   subject_name: string;
   department_code?: string;
   department_name?: string;
+  subject_name_i18n?: ImentorI18n;
+  department_name_i18n?: ImentorI18n;
+  /** programme / course / semester / year as separate fields (iMentor reads them out of its own subject names) */
+  programme_code?: string;
+  programme_name_i18n?: ImentorI18n;
+  /** "milliy" | "xorijiy" | "xorijiy-gibrid" | "yevro" | "xalqaro" | "" */
+  track?: string;
+  track_i18n?: ImentorI18n;
+  /** "2023-2024", "" when the name has none */
+  study_year?: string;
+  course?: number | null;
+  semester?: number | null;
+  semesters?: number[];
+  /** the subject without programme / year / semester */
+  pure_title?: string;
+  pure_title_i18n?: ImentorI18n;
   test_count?: number;
   case_count?: number;
   questions_total: number;
@@ -93,6 +113,8 @@ export interface ImentorDocument {
   language?: string;
   /** who made the translation, once iMentor reports it ("ai" = its translator, anything else = a teacher / reviewed) */
   translated_by?: string;
+  /** the real language of `topic` when it is not the one asked for (iMentor has no translation of that topic) */
+  topic_language?: string;
 }
 
 export interface ImentorDocumentListResponse {

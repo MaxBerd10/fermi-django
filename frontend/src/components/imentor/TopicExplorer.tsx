@@ -7,6 +7,8 @@ import { imentorLanguage } from "@/lib/imentorLanguage";
 import type { ImentorCaseItem, ImentorDocument, ImentorDocumentKind, ImentorKeyDetail, ImentorTestDetail, ImentorTestQuestionContent } from "@/types/imentor";
 
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
+/** how a language is called in its own language (for the hint on a topic title that is not translated) */
+const LANGUAGE_NAMES: Record<string, string> = { uz: "Oʻzbekcha", ru: "Русский", en: "English" };
 const PER_PAGE = 10;
 const PARALLEL_FETCHES = 3;
 
@@ -16,6 +18,8 @@ interface TopicGroup {
   key: string;
   code: string;
   title: string;
+  /** set when iMentor has no translation of the topic title and shows it in another language */
+  titleLanguage?: string;
   documents: ImentorDocument[];
   items: number;
 }
@@ -36,7 +40,7 @@ function groupByTopic(documents: ImentorDocument[]): TopicGroup[] {
   const topics = new Map<string, TopicGroup>();
   for (const document of documents) {
     const key = `${document.syllabus_id ?? ""}|${document.variant_label ?? ""}|${document.topic_code || document.topic}`;
-    const topic = topics.get(key) ?? { key, code: document.topic_code, title: document.topic, documents: [], items: 0 };
+    const topic = topics.get(key) ?? { key, code: document.topic_code, title: document.topic, titleLanguage: document.topic_language, documents: [], items: 0 };
     topic.documents.push(document);
     topic.items += document.question_count || 0;
     topics.set(key, topic);
@@ -323,7 +327,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
 
       {/* wide screens: the whole syllabus as a list that stays beside the questions */}
       <div className="hidden max-h-[46vh] space-y-1 overflow-y-auto pr-1 lg:block">
-        {[{ key: "", code: "", title: t("test.allTopics"), items: totalItems }, ...topics].map((topic) => {
+        {[{ key: "", code: "", title: t("test.allTopics"), titleLanguage: undefined as string | undefined, items: totalItems }, ...topics].map((topic) => {
           const active = topicKey === topic.key;
           return (
             <button
@@ -343,6 +347,14 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
                 <i className="ri-stack-line mt-px shrink-0" aria-hidden />
               )}
               <span className="min-w-0 flex-1 line-clamp-3">{topic.title}</span>
+              {topic.titleLanguage && topic.titleLanguage !== lang && (
+                <span
+                  title={t("imentor.topicLanguageHint", { language: LANGUAGE_NAMES[topic.titleLanguage] ?? topic.titleLanguage })}
+                  className={`mt-px shrink-0 rounded px-1 py-0.5 text-[10px] font-bold uppercase ${active ? "bg-white/20" : "bg-[#f1f3f9] text-foreground-500"}`}
+                >
+                  {topic.titleLanguage}
+                </span>
+              )}
               <span className={`shrink-0 text-xs font-semibold ${active ? "text-white/80" : "text-foreground-400"}`}>{topic.items}</span>
             </button>
           );
