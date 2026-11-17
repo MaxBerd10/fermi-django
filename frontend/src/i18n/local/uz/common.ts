@@ -1605,7 +1605,6 @@ export default {
   "imentor.aiTranslated": "AI tarjimasi",
   "imentor.aiNote": "Tarjima qilingan savollar va keyslar iMentorʼning sunʼiy intellekt tarjimoni yordamida tayyorlangan va oʻqituvchilar tomonidan hali tekshirilmagan boʻlishi mumkin.",
   "imentor.aiNoteShort": "Baʼzi savollar sunʼiy intellekt tarjimoni yordamida tarjima qilingan boʻlishi mumkin.",
-  "imentor.originalLanguage": "Asl tilda",
   "test.loadError": "Maʻlumotlarni yuklashda xatolik yuz berdi. Qayta urinib koʻring.",
   "test.questionOf": "Savol {{current}} / {{total}}",
   "test.next": "Keyingi savol",

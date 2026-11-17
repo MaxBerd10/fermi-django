@@ -1605,7 +1605,6 @@ export default {
   "imentor.aiTranslated": "AI translation",
   "imentor.aiNote": "Translated questions and cases were prepared by iMentor's AI translator and may not have been checked by teachers yet.",
   "imentor.aiNoteShort": "Some questions may have been translated by an AI translator.",
-  "imentor.originalLanguage": "Original language",
   "test.loadError": "Failed to load data. Please try again.",
   "test.questionOf": "Question {{current}} / {{total}}",
   "test.next": "Next question",

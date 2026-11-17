@@ -1609,7 +1609,6 @@ export default {
   "imentor.aiTranslated": "Автоперевод ИИ",
   "imentor.aiNote": "Переведённые вопросы и случаи подготовлены ИИ-переводчиком iMentor и могут быть ещё не проверены преподавателями.",
   "imentor.aiNoteShort": "Часть вопросов может быть переведена ИИ-переводчиком.",
-  "imentor.originalLanguage": "Язык оригинала",
   "test.loadError": "Ошибка при загрузке данных. Попробуйте снова.",
   "test.questionOf": "Вопрос {{current}} / {{total}}",
   "test.next": "Следующий вопрос",
