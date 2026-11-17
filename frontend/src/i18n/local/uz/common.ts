@@ -1600,6 +1600,8 @@ export default {
   "test.backToStudy": "Tayyorgarlikka qaytish",
   "test.loading": "Yuklanmoqda...",
   "test.noContent": "Bu fanda hozircha test savollari mavjud emas.",
+  "imentor.languageHint": "Hozir oʻzbek tilidagi materiallar koʻrsatilmoqda. Sayt tilini oʻzgartirsangiz, tanlangan tildagilari chiqadi.",
+  "imentor.noContentInLanguage": "Bu tilda hozircha materiallar mavjud emas. Sayt tilini oʻzgartirib koʻring.",
   "test.loadError": "Maʻlumotlarni yuklashda xatolik yuz berdi. Qayta urinib koʻring.",
   "test.questionOf": "Savol {{current}} / {{total}}",
   "test.next": "Keyingi savol",

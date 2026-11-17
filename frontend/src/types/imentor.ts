@@ -23,6 +23,8 @@ export interface ImentorSampleQuestion {
 }
 
 export interface ImentorSampleResponse {
+  /** the language the sample was drawn in (asked for with ?language=) */
+  language?: string;
   subject_code: string;
   department_code: string;
   available_languages: string[];
@@ -53,10 +55,13 @@ export interface ImentorSubjectStat {
   case_count?: number;
   questions_total: number;
   topics_distinct?: number;
+  /** how many questions (tests) or cases (keys) exist in each language: { uz, ru, en } */
+  languages?: Record<string, number>;
 }
 
 export interface ImentorStatsResponse {
-  totals: { test_count: number; case_count: number; questions_total: number };
+  /** `languages_unit`: what the per-language numbers count ("cases" / "questions"); absent in answers that predate it */
+  totals: { test_count: number; case_count: number; questions_total: number; languages_unit?: string };
   by_subject: ImentorSubjectStat[];
 }
 
@@ -81,6 +86,11 @@ export interface ImentorDocument {
   question_count: number;
   author_display_name?: string;
   created_at?: string;
+  /** the language the author wrote it in, and every language it exists in (original + translations) */
+  primary_language?: string;
+  available_languages?: string[];
+  /** the language actually returned by a detail request made with ?language= */
+  language?: string;
 }
 
 export interface ImentorDocumentListResponse {
@@ -112,12 +122,16 @@ export interface ImentorCaseItem {
   scenario: string;
   answer: string;
   focus?: string;
+  options?: string[];
+  explanation?: string;
 }
 
 export interface ImentorKeyDetail extends ImentorDocument {
   payload: {
     topic?: string;
+    primaryLanguage?: string;
     questions: ImentorCaseItem[];
+    translations?: Record<string, { topic?: string; questions: ImentorCaseItem[] }>;
   };
 }
 

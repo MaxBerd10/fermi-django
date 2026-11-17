@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageHeader from "@/components/shared/PageHeader";
 import CatalogBrowser from "@/components/imentor/CatalogBrowser";
@@ -7,6 +7,7 @@ import { parseSubjectName } from "@/lib/imentorCatalog";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { getImentorTestStats, getImentorSampleQuestions } from "@/api/imentor";
 import { downloadTestResultPdf } from "@/lib/testResultPdf";
+import { imentorLanguage, languageCount, subjectsInLanguage } from "@/lib/imentorLanguage";
 import type { ImentorSubjectStat, ImentorSampleQuestion, ImentorQuestionLang } from "@/types/imentor";
 
 // iMentor answers a random-sample request with 10 to 30 questions
@@ -22,7 +23,8 @@ type Stage = "picking" | "loading" | "study" | "quiz" | "result";
 export default function TestPage() {
   const { t, i18n } = useTranslation();
   usePageMeta(t("nav.test"));
-  const lang = i18n.language?.slice(0, 2) || "uz";
+  // the subjects, questions and counts come in the visitor's language (iMentor reports what exists in each language)
+  const lang = imentorLanguage(i18n.language);
 
   const [stage, setStage] = useState<Stage>("picking");
   const [subjects, setSubjects] = useState<ImentorSubjectStat[] | null>(null);
@@ -35,6 +37,21 @@ export default function TestPage() {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [pdfError, setPdfError] = useState<string | null>(null);
+  // a quiz request that was answered after the visitor changed the language must not start a quiz in the old language
+  const quizRun = useRef(0);
+
+  const visibleSubjects = useMemo(() => (subjects ? subjectsInLanguage(subjects, lang) : null), [subjects, lang]);
+
+  // a quiz drawn in one language is not carried over to another: the visitor lands on the study screen of the same
+  // subject (its list is fetched again in the new language) and starts a new quiz there
+  useEffect(() => {
+    quizRun.current += 1;
+    setStage((current) => (current === "quiz" || current === "result" || current === "loading" ? "study" : current));
+    setQuizQuestions([]);
+    setAnswers({});
+    setSelected(null);
+    setIndex(0);
+  }, [lang]);
 
   useEffect(() => {
     let cancelled = false;
@@ -61,8 +78,10 @@ export default function TestPage() {
     setStage("loading");
     setError(null);
     setPdfError(null);
-    getImentorSampleQuestions({ subjectCode: subject.subject_code, count: QUIZ_QUESTION_COUNT })
+    const run = quizRun.current;
+    getImentorSampleQuestions({ subjectCode: subject.subject_code, count: QUIZ_QUESTION_COUNT, language: lang })
       .then((data) => {
+        if (run !== quizRun.current) return;
         if (data.questions.length === 0) {
           setError(t("test.noContent"));
           setStage("study");
@@ -75,6 +94,7 @@ export default function TestPage() {
         setStage("quiz");
       })
       .catch(() => {
+        if (run !== quizRun.current) return;
         setError(t("test.loadError"));
         setStage("study");
       });
@@ -171,7 +191,7 @@ export default function TestPage() {
           {/* always shown, so the three cards do not appear one after another while the catalog loads */}
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
             <i className="ri-file-list-3-line text-lg text-secondary-300" />
-            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{subjects ? subjects.length : "…"}</strong>
+            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{visibleSubjects ? visibleSubjects.length : "…"}</strong>
             <span className="mt-1 block text-[10px] text-white/70">{t("test.bannerSubjectsLabel")}</span>
           </div>
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
@@ -207,11 +227,19 @@ export default function TestPage() {
             )}
 
             {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("test.noContent")}</p>}
+            {subjects && subjects.length > 0 && visibleSubjects?.length === 0 && <p className="text-sm text-foreground-500">{t("imentor.noContentInLanguage")}</p>}
 
-            {subjects && subjects.length > 0 && (
+            {visibleSubjects && visibleSubjects.length > 0 && (
+              <p className="mb-3 flex items-start gap-2 text-sm text-foreground-500">
+                <i className="ri-translate-2 mt-0.5 shrink-0" aria-hidden />
+                {t("imentor.languageHint")}
+              </p>
+            )}
+
+            {visibleSubjects && visibleSubjects.length > 0 && (
               <CatalogBrowser
-                subjects={subjects}
-                countOf={(s) => s.questions_total}
+                subjects={visibleSubjects}
+                countOf={(s) => languageCount(s, lang) ?? s.questions_total}
                 countLabel={(count) => t("test.questionsCount", { count })}
                 sortByCountLabel={t("test.sortByQuestions")}
                 searchPlaceholder={t("test.searchPlaceholder")}
@@ -247,7 +275,7 @@ export default function TestPage() {
                     <h2 className="font-heading text-2xl font-bold leading-tight text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
                     <p className="mt-2 text-sm text-foreground-500">
                       {subject.department_name ? `${subject.department_name} · ` : ""}
-                      {t("test.questionsCount", { count: subject.questions_total })}
+                      {t("test.questionsCount", { count: languageCount(subject, lang) ?? subject.questions_total })}
                     </p>
                     {/* a plain solid button, not .uni-btn: its backdrop blur and hover transform leave a stray bar when drawn inside this scrolling, sticky panel */}
                     <button

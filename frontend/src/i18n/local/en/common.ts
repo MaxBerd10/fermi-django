@@ -1600,6 +1600,8 @@ export default {
   "test.backToStudy": "Back to study",
   "test.loading": "Loading...",
   "test.noContent": "There are no test questions for this subject yet.",
+  "imentor.languageHint": "Showing materials in English. Change the site language to see the ones in another language.",
+  "imentor.noContentInLanguage": "There are no materials in this language yet. Try changing the site language.",
   "test.loadError": "Failed to load data. Please try again.",
   "test.questionOf": "Question {{current}} / {{total}}",
   "test.next": "Next question",

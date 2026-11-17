@@ -1,28 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageHeader from "@/components/shared/PageHeader";
 import CatalogBrowser from "@/components/imentor/CatalogBrowser";
 import TopicExplorer from "@/components/imentor/TopicExplorer";
 import { parseSubjectName } from "@/lib/imentorCatalog";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { imentorLanguage, languageCount, subjectsInLanguage, type ImentorLanguage } from "@/lib/imentorLanguage";
 import { getImentorKeyStats } from "@/api/imentor";
 import type { ImentorSubjectStat } from "@/types/imentor";
 
 type Stage = "picking" | "list";
 
 /** a key document holds several clinical cases; `questions_total` counts the cases, `case_count` the documents */
-const caseItems = (s: ImentorSubjectStat) => s.questions_total || s.case_count || 0;
+const caseItems = (s: ImentorSubjectStat, lang: ImentorLanguage) => languageCount(s, lang) ?? (s.questions_total || s.case_count || 0);
 
 export default function KeyslarPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   usePageMeta(t("nav.keyslar"));
+  // the subjects and cases come in the visitor's language (iMentor reports what exists in each language)
+  const lang = imentorLanguage(i18n.language);
 
   const [stage, setStage] = useState<Stage>("picking");
   const [subjects, setSubjects] = useState<ImentorSubjectStat[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [subject, setSubject] = useState<ImentorSubjectStat | null>(null);
 
-  const totalCases = subjects?.reduce((sum, s) => sum + caseItems(s), 0) ?? 0;
+  const visibleSubjects = useMemo(() => (subjects ? subjectsInLanguage(subjects, lang) : null), [subjects, lang]);
+  const totalCases = visibleSubjects?.reduce((sum, s) => sum + caseItems(s, lang), 0) ?? 0;
 
   useEffect(() => {
     let cancelled = false;
@@ -66,12 +70,12 @@ export default function KeyslarPage() {
           {/* always shown, so the cards do not appear one after another while the catalog loads */}
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
             <i className="ri-file-text-line text-lg text-secondary-300" />
-            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{subjects ? subjects.length : "…"}</strong>
+            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{visibleSubjects ? visibleSubjects.length : "…"}</strong>
             <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerSubjectsLabel")}</span>
           </div>
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
             <i className="ri-heart-pulse-line text-lg text-secondary-300" />
-            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{subjects ? totalCases : "…"}</strong>
+            <strong className={`mt-1 block text-xl leading-none ${subjects === null && !error ? "animate-pulse text-white/50" : ""}`}>{visibleSubjects ? totalCases : "…"}</strong>
             <span className="mt-1 block text-[10px] text-white/70">{t("keyslar.bannerCasesLabel")}</span>
           </div>
           <div className="min-w-24 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center">
@@ -102,11 +106,19 @@ export default function KeyslarPage() {
             )}
 
             {subjects && subjects.length === 0 && <p className="text-sm text-foreground-500">{t("keyslar.noContent")}</p>}
+            {subjects && subjects.length > 0 && visibleSubjects?.length === 0 && <p className="text-sm text-foreground-500">{t("imentor.noContentInLanguage")}</p>}
 
-            {subjects && subjects.length > 0 && (
+            {visibleSubjects && visibleSubjects.length > 0 && (
+              <p className="mb-3 flex items-start gap-2 text-sm text-foreground-500">
+                <i className="ri-translate-2 mt-0.5 shrink-0" aria-hidden />
+                {t("imentor.languageHint")}
+              </p>
+            )}
+
+            {visibleSubjects && visibleSubjects.length > 0 && (
               <CatalogBrowser
-                subjects={subjects}
-                countOf={caseItems}
+                subjects={visibleSubjects}
+                countOf={(s) => caseItems(s, lang)}
                 countLabel={(count) => t("keyslar.casesCount", { count })}
                 sortByCountLabel={t("keyslar.sortByCases")}
                 searchPlaceholder={t("keyslar.searchPlaceholder")}
@@ -131,7 +143,7 @@ export default function KeyslarPage() {
                   <h2 className="font-heading text-2xl font-bold leading-tight text-foreground-900">{parseSubjectName(subject.subject_name).title}</h2>
                   <p className="mt-2 text-sm text-foreground-500">
                     {subject.department_name ? `${subject.department_name} · ` : ""}
-                    {t("keyslar.casesCount", { count: caseItems(subject) })}
+                    {t("keyslar.casesCount", { count: caseItems(subject, lang) })}
                   </p>
                 </div>
               }

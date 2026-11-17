@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Paginator from "@/components/shared/Paginator";
 import { usePagination } from "@/hooks/usePagination";
 import { getImentorKey, getImentorSubjectDocuments, getImentorTest } from "@/api/imentor";
+import { imentorLanguage } from "@/lib/imentorLanguage";
 import type { ImentorCaseItem, ImentorDocument, ImentorDocumentKind, ImentorKeyDetail, ImentorTestDetail, ImentorTestQuestionContent } from "@/types/imentor";
 
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -189,7 +190,9 @@ interface Props {
  */
 export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
   const { t, i18n } = useTranslation();
-  const lang = (i18n.language || "uz").slice(0, 2);
+  // the questions / cases come in the visitor's language (iMentor returns only what exists in it); switching the site
+  // language fetches the list and the documents again
+  const lang = imentorLanguage(i18n.language);
   const isTests = kind === "tests";
 
   const [documents, setDocuments] = useState<ImentorDocument[] | null>(null);
@@ -208,13 +211,13 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
     setDetails({});
     setOpenRows({});
     requested.current = new Set();
-    getImentorSubjectDocuments(kind, subjectCode)
+    getImentorSubjectDocuments(kind, subjectCode, lang)
       .then((data) => !cancelled && setDocuments(data))
       .catch(() => !cancelled && setFailed(true));
     return () => {
       cancelled = true;
     };
-  }, [kind, subjectCode]);
+  }, [kind, subjectCode, lang]);
 
   const topics = useMemo(() => (documents ? groupByTopic(documents) : []), [documents]);
   const totalItems = topics.reduce((sum, topic) => sum + topic.items, 0);
@@ -231,12 +234,12 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
     return list;
   }, [topics, topicKey]);
 
-  const paging = usePagination(items, PER_PAGE, `${subjectCode}|${topicKey}`, listTopRef);
+  const paging = usePagination(items, PER_PAGE, `${subjectCode}|${topicKey}|${lang}`, listTopRef);
 
   const fetchDocument = useCallback(
     (document: ImentorDocument) => {
       requested.current.add(document.id);
-      const load = isTests ? getImentorTest(document.id) : getImentorKey(document.id);
+      const load = isTests ? getImentorTest(document.id, lang) : getImentorKey(document.id, lang);
       return load
         .then((detail) => setDetails((current) => ({ ...current, [document.id]: detail })))
         .catch(() => {
@@ -244,7 +247,7 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
           setDetails((current) => ({ ...current, [document.id]: "error" }));
         });
     },
-    [isTests],
+    [isTests, lang],
   );
 
   // fetch the documents the visible page needs (a few at a time: iMentor's server is small)
@@ -363,8 +366,10 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
             }
             if (isTests) {
               const test = detail as ImentorTestDetail;
-              const translated = test.payload.translations?.[lang]?.questions;
               const source = test.payload.questions;
+              // asked with ?language=, iMentor puts that language straight into `questions` (and names it in `language`);
+              // a translation stored beside the original is only the fallback for an answer that did not come that way
+              const translated = test.language === lang ? undefined : test.payload.translations?.[lang]?.questions;
               const question = (translated && translated.length === source.length ? translated : source)[index];
               if (!question) return null;
               return (
@@ -379,7 +384,10 @@ export default function TopicExplorer({ kind, subjectCode, aside }: Props) {
                 />
               );
             }
-            const item = (detail as ImentorKeyDetail).payload.questions[index];
+            const keyDetail = detail as ImentorKeyDetail;
+            const translatedCases = keyDetail.language === lang ? undefined : keyDetail.payload.translations?.[lang]?.questions;
+            const cases = translatedCases && translatedCases.length === keyDetail.payload.questions.length ? translatedCases : keyDetail.payload.questions;
+            const item = cases[index];
             if (!item) return null;
             return <CaseRow key={rowKey} number={number} code={topicKeyCode(topicKey, code)} item={item} open={!!openRows[rowKey]} onToggle={toggle} />;
           })}
