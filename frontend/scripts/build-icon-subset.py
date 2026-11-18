@@ -38,6 +38,18 @@ font.flavor = None
 subsetter = subset.Subsetter(options)
 subsetter.populate(unicodes=[int(codepoints[name], 16) for name in used])
 subsetter.subset(font)
+# The subsetter clears the head flag "left side bearing at x=0" that the full font has, while every glyph's left side
+# bearing in `hmtx` is 0: browsers then slide each glyph so that its outline starts at 0, and all icons sat to the left
+# of the centre of their box (the close X by a quarter of its size). The outlines are right: the flag is set back and
+# each bearing is set to where its outline really starts.
+glyf, hmtx = font["glyf"], font["hmtx"]
+for glyph_name in font.getGlyphOrder():
+    glyph = glyf[glyph_name]
+    if glyph.numberOfContours:
+        glyph.recalcBounds(glyf)
+        advance, _ = hmtx[glyph_name]
+        hmtx[glyph_name] = (advance, glyph.xMin)
+font["head"].flags |= 0b10
 font.save(VENDOR / "remixicon-used.ttf")
 
 rules = "".join(f'.{name}:before{{content:"\\{codepoints[name]}"}}' for name in sorted(used))
