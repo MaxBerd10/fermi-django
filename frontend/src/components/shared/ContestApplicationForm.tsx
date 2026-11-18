@@ -75,6 +75,9 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
     } catch (err) {
       setStatus("error");
       if (err instanceof ApiError && err.status === 413) setError(t("contest.fileTooLarge"));
+      // The whole campus reaches the site from one address, so a busy minute can hit the per-address limit: tell the
+      // visitor to simply press send again (what they typed is still in the form), not a bare technical message.
+      else if (err instanceof ApiError && err.status === 429) setError(t("contest.tooManyRequests"));
       else setError(err instanceof ApiError ? err.message : t("contest.submitError"));
     }
   };

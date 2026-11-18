@@ -1375,6 +1375,7 @@ export default {
   "contest.fileTooLarge": "The file is too large. Upload a file smaller than 20 MB.",
   "contest.noFileWarning": "No file is attached. A contest entry usually comes with a project document or a presentation. Choose a file or send without one.",
   "contest.sendWithoutFile": "Send without a file",
+  "contest.tooManyRequests": "Many applications are arriving right now. Press “Submit application” again in a minute; what you entered is still in the form.",
   "contest.submit": "Submit application",
   "contest.closedNotice": "Applications for this contest are closed. New contests are announced in the “Contests” section.",
   "yangiliklar.heading": "News and announcements",

@@ -1375,6 +1375,7 @@ export default {
   "contest.fileTooLarge": "Fayl hajmi juda katta. 20 MB dan kichik fayl yuklang.",
   "contest.noFileWarning": "Fayl biriktirilmadi. Tanlov ishtirokchisi odatda loyiha hujjati yoki taqdimotini yuboradi. Fayl tanlang yoki faylsiz yuboring.",
   "contest.sendWithoutFile": "Faylsiz yuborish",
+  "contest.tooManyRequests": "Hozir arizalar juda koʻp kelmoqda. Bir daqiqadan soʻng «Arizani yuborish» tugmasini qayta bosing, kiritgan maʼlumotlaringiz saqlanib turibdi.",
   "contest.submit": "Arizani yuborish",
   "contest.closedNotice": "Bu tanlov uchun ariza qabuli yakunlangan. Yangi tanlovlar “Tanlovlar” boʻlimida eʼlon qilinadi.",
   "yangiliklar.heading": "Yangiliklar va eʻlonlar",
