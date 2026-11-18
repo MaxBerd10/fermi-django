@@ -15,7 +15,7 @@ from apps.menu.models import MenuItem
 MODE = os.environ.get("MODE", "dry")
 URL = "/sox-modeli"
 PARENT_LABEL = "FJSTI Ilmiy jurnali"
-LABELS = {"uz": "So‘x modeli", "ru": "Модель «Сох»", "en": "So‘x model"}
+LABELS = {"uz": "Soʻx modeli", "ru": "Модель «Сох»", "en": "Soʻx model"}
 
 print("MODE:", MODE)
 candidates = list(MenuItem.objects.filter(label_uz__iexact=PARENT_LABEL, parent__isnull=False))
