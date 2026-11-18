@@ -8,6 +8,22 @@ def test_visitor_upload_accepts_a_pdf():
     validate_visitor_upload(SimpleUploadedFile("murojaat.pdf", b"%PDF-1.4"))
 
 
+def test_visitor_upload_accepts_powerpoint():
+    """A contest entry is normally a presentation; before this, .pptx was refused and applicants sent no file at all."""
+    validate_visitor_upload(SimpleUploadedFile("loyiha.pptx", b"PK\x03\x04 slides"))
+    validate_visitor_upload(SimpleUploadedFile("loyiha.ppt", b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1 slides"))
+
+
+def test_visitor_upload_still_refuses_archives_and_fake_powerpoint():
+    for name, body in (("loyiha.zip", b"PK\x03\x04"), ("loyiha.rar", b"Rar!"), ("loyiha.pptx", b"MZ this is a program")):
+        try:
+            validate_visitor_upload(SimpleUploadedFile(name, body))
+        except ValidationError as exc:
+            assert "file" in exc.detail
+        else:
+            raise AssertionError(f"{name} must be refused")
+
+
 def test_visitor_upload_rejects_browser_executable_files():
     upload = SimpleUploadedFile("xss.html", b"<script>alert(1)</script>")
 
@@ -19,7 +35,7 @@ def test_visitor_upload_rejects_browser_executable_files():
         raise AssertionError("An HTML upload must be rejected")
 
 
-def test_visitor_upload_rejects_files_over_ten_megabytes():
+def test_visitor_upload_rejects_files_over_the_limit():
     upload = SimpleUploadedFile("katta.pdf", b"0" * (MAX_VISITOR_UPLOAD_BYTES + 1))
 
     try:
@@ -153,3 +169,30 @@ def test_applications_are_numbered_within_their_own_contest(db):
     assert [apply(first), apply(first), apply(second), apply(first), apply(second)] == [1, 2, 1, 3, 2]
     # the global database id is unchanged and independent of the per-contest number
     assert ContestSubmission.objects.filter(contest=second).count() == 2
+
+
+def test_a_contest_application_with_a_presentation_is_accepted_and_kept_private(db):
+    """The InnoMix intake: a .pptx used to be refused, so applicants sent the form with no file at all."""
+    from rest_framework.test import APIClient
+
+    from apps.content.models import Page
+    from apps.forms.models import ContestSubmission
+    from apps.media_lib.private import is_private_path
+    from apps.news.models import NewsCategory, NewsPost
+    from django.utils import timezone
+
+    contest = NewsPost.objects.create(
+        category=NewsCategory.objects.create(slug="tanlovlar", name_uz="T", name_ru="T", name_en="T"),
+        slug="c2", title_uz="C", title_ru="C", title_en="C", excerpt_uz="x", excerpt_ru="x", excerpt_en="x",
+        page=Page.objects.create(slug="c2"), published_at=timezone.now(),
+    )
+    payload = {
+        "contestId": contest.id, "fullName": "Test Person", "phone": "+998901234567", "email": "a@b.uz",
+        "file": SimpleUploadedFile("loyiha.pptx", b"PK\x03\x04 slides", content_type="application/octet-stream"),
+    }
+    res = APIClient().post("/api/v1/forms/contest", payload, format="multipart")
+
+    assert res.status_code == 200, res.content
+    submission = ContestSubmission.objects.get(pk=res.json()["id"])
+    assert submission.file is not None and submission.file.filename == "loyiha.pptx"
+    assert is_private_path(submission.file.file.name)

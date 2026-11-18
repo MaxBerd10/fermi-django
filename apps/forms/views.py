@@ -25,19 +25,22 @@ from .serializers import (
 # do not accept browser-executable formats (HTML/SVG/JS), even if a client lies about
 # its MIME type.  This is intentionally limited to
 # the formats a visitor realistically attaches to a reception request.
-MAX_VISITOR_UPLOAD_BYTES = 10 * 1024 * 1024
-VISITOR_UPLOAD_EXTENSIONS = {".pdf", ".jpg", ".jpeg", ".png", ".doc", ".docx", ".xls", ".xlsx"}
+# PowerPoint is on the list because a contest entry (InnoMix) is normally a presentation: with .ppt/.pptx refused,
+# 10 of 18 applicants of the first InnoMix intake sent the form without any file. Archives (zip/rar) stay out: staff
+# would open a program from the admin panel without knowing it.
+MAX_VISITOR_UPLOAD_BYTES = 20 * 1024 * 1024
+VISITOR_UPLOAD_EXTENSIONS = {".pdf", ".jpg", ".jpeg", ".png", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx"}
 
 
 def validate_visitor_upload(upload):
     name = str(getattr(upload, "name", ""))
     suffix = name.rsplit(".", 1)[-1].lower() if "." in name else ""
     if f".{suffix}" not in VISITOR_UPLOAD_EXTENSIONS:
-        raise ValidationError({"file": "Faqat PDF, JPG, PNG, DOC/DOCX yoki XLS/XLSX fayl yuklash mumkin."})
+        raise ValidationError({"file": "Faqat PDF, rasm (JPG, PNG), Word (DOC/DOCX), Excel (XLS/XLSX) yoki PowerPoint (PPT/PPTX) fayl yuklash mumkin."})
     if upload.size > MAX_VISITOR_UPLOAD_BYTES:
-        raise ValidationError({"file": "Fayl hajmi 10 MB dan oshmasligi kerak."})
+        raise ValidationError({"file": "Fayl hajmi 20 MB dan oshmasligi kerak."})
     if not _looks_like(suffix, upload):
-        raise ValidationError({"file": "Fayl turi kengaytmasiga mos kelmaydi. PDF, rasm, Word yoki Excel faylni yuklang."})
+        raise ValidationError({"file": "Fayl turi kengaytmasiga mos kelmaydi. PDF, rasm, Word, Excel yoki PowerPoint faylni yuklang."})
 
 
 # What the first bytes of each allowed format look like. A file named "loyiha.pdf" that is really a program is
@@ -49,8 +52,10 @@ _SIGNATURES = {
     "png": (b"\x89PNG\r\n\x1a\n",),
     "doc": (_OLE,),
     "xls": (_OLE,),
+    "ppt": (_OLE,),
     "docx": (b"PK",),
     "xlsx": (b"PK",),
+    "pptx": (b"PK",),
 }
 
 

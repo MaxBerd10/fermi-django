@@ -1,5 +1,5 @@
 import { FORM_FIELD, FORM_LABEL, FORM_TEXTAREA } from "@/lib/formFields";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { submitContestApplication } from "@/api/forms";
 import { ApiError } from "@/types/api";
@@ -14,13 +14,19 @@ import { ApiError } from "@/types/api";
  */
 // Mirrors MAX_VISITOR_UPLOAD_BYTES in apps/forms/views.py -- checked here too so a big file fails
 // instantly with a clear message instead of after a slow upload the server then refuses.
-const MAX_FILE_BYTES = 10 * 1024 * 1024;
+const MAX_FILE_BYTES = 20 * 1024 * 1024;
 
 export default function ContestApplicationForm({ contestId }: { contestId: number }) {
   const { t } = useTranslation();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
   const [ticketId, setTicketId] = useState<number | null>(null);
+  // A contest entry normally comes with a document (a presentation, a project description). The file stays optional, but
+  // an application sent without one used to look just like a complete one -- so the first time the visitor presses
+  // "send" with no file, the form says so and asks (10 of 18 applicants of the first InnoMix intake sent no file).
+  const [askNoFile, setAskNoFile] = useState(false);
+  const sendWithoutFile = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,10 +41,18 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
       return;
     }
 
+    const file = formData.get("file") as File;
+
+    if ((!file || file.size === 0) && !sendWithoutFile.current) {
+      setAskNoFile(true);
+      setStatus("idle");
+      setError("");
+      return;
+    }
+    sendWithoutFile.current = false;
+    setAskNoFile(false);
     setStatus("loading");
     setError("");
-
-    const file = formData.get("file") as File;
 
     if (file && file.size > MAX_FILE_BYTES) {
       setStatus("error");
@@ -88,7 +102,7 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
       )}
 
       {status !== "success" && (
-        <form onSubmit={handleSubmit} className="space-y-3.5">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-3.5">
           <div className="absolute opacity-0 pointer-events-none">
             <input type="text" name="company_alt" tabIndex={-1} autoComplete="off" aria-hidden="true" readOnly className="sr-only" />
           </div>
@@ -149,9 +163,25 @@ export default function ContestApplicationForm({ contestId }: { contestId: numbe
             <input
               name="file"
               type="file"
-              accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx"
+              accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx,.ppt,.pptx"
+              onChange={() => setAskNoFile(false)}
               className="w-full text-sm text-foreground-600 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-primary-50 file:text-primary-700 file:text-sm"
             />
+            {askNoFile && (
+              <div role="alert" className="mt-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
+                <p>{t("contest.noFileWarning")}</p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    sendWithoutFile.current = true;
+                    formRef.current?.requestSubmit();
+                  }}
+                  className="mt-2 cursor-pointer font-semibold underline underline-offset-2 hover:text-amber-950"
+                >
+                  {t("contest.sendWithoutFile")}
+                </button>
+              </div>
+            )}
           </div>
 
           <button

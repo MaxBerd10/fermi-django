@@ -257,7 +257,7 @@ export default function VirtualQabulxonaPage() {
 
                 <div>
                   <label className={FORM_LABEL}>{t("vq.fileLabel")}</label>
-                  <input name="file" type="file" accept=".pdf,.docx,.png,.jpg,.xlsx,.svg,.pptx" className="w-full text-sm text-foreground-600 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-primary-50 file:text-primary-700 file:text-sm" />
+                  <input name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx,.ppt,.pptx" className="w-full text-sm text-foreground-600 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-primary-50 file:text-primary-700 file:text-sm" />
                 </div>
 
                 <button
