@@ -29,9 +29,16 @@ export default function SoxModeliPage() {
     <div className="text-foreground-950">
       <PageHeader title="So‘x modeli" compact />
 
-      <div className="section-container section-pad !pt-3">
-        <div className="page-card mx-auto max-w-4xl p-5 md:p-8">
-          <div className="space-y-4 text-base leading-relaxed text-[#333]">
+      <div className="section-container section-pad !pt-2 md:!pt-3">
+        <div className="page-card p-5 md:p-6">
+          <img
+            src="/images/sox/sox-modeli-banner.webp"
+            alt="Shifokor va keksa bemor, So‘x tumani manzarasi"
+            width={1411}
+            height={430}
+            className="h-48 w-full rounded-xl object-cover object-bottom sm:h-64 lg:h-80"
+          />
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-[#333]">
             <p>
               <strong>So‘x modeli</strong> — Farg‘ona jamoat salomatligi tibbiyot instituti tomonidan So‘x tumanida sun’iy intellekt, teletibbiyot va raqamli boshqaruv asosida joriy etilgan tibbiy xizmatning yangi modeli.
             </p>
