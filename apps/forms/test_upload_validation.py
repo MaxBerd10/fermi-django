@@ -196,3 +196,16 @@ def test_a_contest_application_with_a_presentation_is_accepted_and_kept_private(
     submission = ContestSubmission.objects.get(pk=res.json()["id"])
     assert submission.file is not None and submission.file.filename == "loyiha.pptx"
     assert is_private_path(submission.file.file.name)
+
+
+def test_an_overlong_name_is_a_clear_400_not_a_500(db):
+    from rest_framework.test import APIClient
+
+    res = APIClient().post(
+        "/api/v1/forms/contest",
+        {"fullName": "x" * 300, "phone": "+998901234567", "email": "a@b.uz"},
+        format="multipart",
+    )
+
+    assert res.status_code == 400
+    assert "fullName" in res.json()

@@ -34,7 +34,8 @@ class ContestSubmissionSerializer(serializers.ModelSerializer):
     contestId = serializers.PrimaryKeyRelatedField(
         source="contest", queryset=NewsPost.objects.all(), required=False, allow_null=True
     )
-    fullName = serializers.CharField(source="full_name")
+    # max_length matches the column (255): a longer value used to reach the database and end as a bare 500 error
+    fullName = serializers.CharField(source="full_name", max_length=255)
     # The model keeps email/message as loose text; without these a mistyped address (nobody can answer it) or a
     # 50 000-character paste would be stored as it came.
     email = serializers.EmailField(max_length=255)
