@@ -61,10 +61,15 @@ def fix_token(token, left):
         if mark == TARGET:
             continue
         is_last = i == len(parts) - 2
-        if is_last and after.lower() in ENGLISH_END and not caps:
+        # o and g before the mark are the Uzbek digraphs oʻ / gʻ: so'm (money), o'q ... are Uzbek words, not English endings.
+        # Only "Cushing's" (g + 's') is told apart from them.
+        prev = before[-1:].lower()
+        english_end = after.lower() in ENGLISH_END and prev != "o" and not (prev == "g" and after.lower() != "s")
+        if is_last and english_end and not caps:
             left.append((token, "English possessive or contraction"))
             continue
-        if not caps and before[-1:].isupper() and after[:1].isupper():
+        # a name like O'Brien / D'Artagnan (a capital, then lower-case letters), unlike an abbreviation O'TV / O'RQ
+        if not caps and before[-1:].isupper() and after[:1].isupper() and after[1:2].islower():
             left.append((token, "a mixed-case name"))
             continue
         parts[i] = TARGET
