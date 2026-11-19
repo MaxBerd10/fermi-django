@@ -143,9 +143,9 @@ PAGES = [
                 "295 nafar izlanuvchi ilmiy tadqiqot olib bordi (255 mustaqil izlanuvchi va 40 tayanch doktorant)",
                 "13 ta ixtisoslashtirilgan boʻlinma va korxona (spin-off) tashkil etildi",
             ),
-            h("Maʼnaviy-maʼrifiy ishlar"),
+            h("Maʻnaviy-maʻrifiy ishlar"),
             ul(
-                "113 ta muntazam tadbir: ekologik aksiyalar, qon donorligi, sahna sanʼati, kasbiy va shaxsiy rivojlanish treninglari",
+                "113 ta muntazam tadbir: ekologik aksiyalar, qon donorligi, sahna sanʻati, kasbiy va shaxsiy rivojlanish treninglari",
                 "Respublika va viloyat tanlovlarida 4 ta yutuq",
                 "Korrupsiyaga qarshi kurash: 26 ta davra suhbati, seminar va uchrashuv, 3 700+ ishtirokchi",
             ),
@@ -161,7 +161,7 @@ PAGES = [
         "slug": "reyting-va-akkreditatsiya",
         "title": {"uz": "Reyting va akkreditatsiya", "ru": "Рейтинги и аккредитация", "en": "Rankings and accreditation"},
         "blocks": [
-            p("Institutning milliy va xalqaro reytinglardagi oʻrni hamda xalqaro akkreditatsiyadan oʻtgan taʻlim yoʻnalishlari (Yillik hisobot 2026 maʼlumotlari)."),
+            p("Institutning milliy va xalqaro reytinglardagi oʻrni hamda xalqaro akkreditatsiyadan oʻtgan taʻlim yoʻnalishlari (Yillik hisobot 2026 maʻlumotlari)."),
             h("Milliy va xalqaro reytinglar"),
             table(
                 ["Reyting", "Natija", "Izoh"],
@@ -185,7 +185,7 @@ PAGES = [
             h("Rejalar"),
             ul(
                 "2027-yil aprel: Buyuk Britaniya QAA xalqaro institutsional akkreditatsiyasidan oʻtish",
-                "2027-yil: UI GreenMetric reytingida TOP 500, QS reytingiga maʼlumot topshirish",
+                "2027-yil: UI GreenMetric reytingida TOP 500, QS reytingiga maʻlumot topshirish",
                 "2028-yil: THE Impact Rankings reytingiga kirish",
                 "2029-yil: QS Asia reytingiga kirish",
                 "2030-yil: QS, THE va GreenMetric reytinglarining uchalasiga kirish",
@@ -196,7 +196,7 @@ PAGES = [
         "slug": "strategik-maqsadlar-2027",
         "title": {"uz": "Strategik maqsadlar — 2027", "ru": "Стратегические цели — 2027", "en": "Strategic goals — 2027"},
         "blocks": [
-            p("Institutning 2027-yil ustuvor vazifalari: xalqaro akkreditatsiya, reytinglar, yangi markazlar va ilmiy salohiyatni oshirish (Yillik hisobot 2026 maʼlumotlari)."),
+            p("Institutning 2027-yil ustuvor vazifalari: xalqaro akkreditatsiya, reytinglar, yangi markazlar va ilmiy salohiyatni oshirish (Yillik hisobot 2026 maʻlumotlari)."),
             h("2027-yil ustuvor vazifalari"),
             table(
                 ["№", "Vazifa", "Muddat"],
@@ -206,8 +206,8 @@ PAGES = [
                     ["3", "QS, THE va GreenMetric reytinglariga kirish", "2030-yil sentabr"],
                     ["4", "PhD va DSc himoya qilgan tadqiqotchilar sonini 200 taga yetkazib, ilmiy salohiyatni 70 foizga oshirish", "2030-yil aprel"],
                     ["5", "Erasmus+ doirasida «Sunʻiy intellekt hamjamiyati» xalqaro loyihasida ishtirok etish (Singidunum universiteti, Janubiy Qozogʻiston tibbiyot akademiyasi, Turkiya Transport va infratuzilma vazirligi bilan)", "2027-yil oktabr"],
-                    ["6", "10 ta bakalavriat va magistratura taʼlim dasturini QS va THE TOP-300 universitetlari dasturlariga moslashtirish", "2027-yil aprel"],
-                    ["7", "«Tibbiyotda sunʻiy intellekt» bakalavriat va magistratura taʼlim dasturlarini yaratish", "2027-yil aprel — 2030-yil aprel"],
+                    ["6", "10 ta bakalavriat va magistratura taʻlim dasturini QS va THE TOP-300 universitetlari dasturlariga moslashtirish", "2027-yil aprel"],
+                    ["7", "«Tibbiyotda sunʻiy intellekt» bakalavriat va magistratura taʻlim dasturlarini yaratish", "2027-yil aprel — 2030-yil aprel"],
                     ["8", "Institutning byudjetdan tashqari mablagʻlari hisobidan «Fargʻona salomatlik bogʻi»ni barpo etish", "2027-yil noyabr"],
                     ["9", "Fargʻona vodiysida yagona Nevrologiya, Altsgeymer va Parkinson kasalliklari ilmiy-amaliy markazini tashkil etish", "2028-yil aprel"],
                     ["10", "500 oʻrinli talabalar yotoqxonasi qurilishi", "2028-yil oktabr"],
