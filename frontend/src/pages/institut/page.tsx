@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
+import { getSettings } from "@/api/settings";
+import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import type { Page } from "@/types/content";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import { Reveal } from "@/components/Animation";
@@ -12,6 +14,18 @@ export default function InstitutPage() {
   const { t } = useTranslation();
   usePageMeta(t("footer.institutHaqida"));
   const [missionPage, setMissionPage] = useState<Page | null>(null);
+  // the headline figures are the site counter an administrator edits (Sayt sozlamalari), not numbers typed into this page
+  const [counter, setCounter] = useState(INSTITUTE_COUNTER);
+
+  useEffect(() => {
+    let cancelled = false;
+    getSettings().then((settings) => {
+      if (!cancelled && settings.counter?.students > 0) setCounter(settings.counter);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const features = [
     { icon: "ri-hospital-line", title: t("institut.feature1.title"), desc: t("institut.feature1.desc") },
@@ -33,9 +47,9 @@ export default function InstitutPage() {
 
   const stats = [
     { value: FOUNDED_YEAR, label: t("institut.statFounded") },
-    { value: "275+", label: t("institut.statProfessors") },
-    { value: "6,238", label: t("stats.students") },
-    { value: "40+", label: t("institut.statPartnerCountries") },
+    { value: counter.professor_teachers.toLocaleString("en-US"), label: t("institut.statProfessors") },
+    { value: `${counter.students.toLocaleString("en-US")}+`, label: t("stats.students") },
+    { value: "9", label: t("institut.statPartnerCountries") },
   ];
 
   useEffect(() => {

@@ -5,9 +5,9 @@ import { useHomeSections } from "@/api/homeSections";
 
 const ITEMS = [
   { key: "item1", metric: "100%", metricKey: "metric1" },
-  { key: "item2", metric: "275+", metricKey: "metric2" },
-  { key: "item3", metric: "20+", metricKey: "metric3" },
-  { key: "item4", metric: "15+", metricKey: "metric4" },
+  { key: "item2", metric: "494", metricKey: "metric2" },
+  { key: "item3", metric: "305+", metricKey: "metric3" },
+  { key: "item4", metric: "38", metricKey: "metric4" },
 ] as const;
 
 export default function WhyUs() {

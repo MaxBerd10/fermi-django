@@ -123,8 +123,8 @@ const RADAR_NODES: {
     id: "partners",
     icon: "ri-global-line",
     angle: 160,
-    value: 80,
-    suffix: "+",
+    value: 38,
+    suffix: "",
     labelKey: "hero.band.stat4",
     wordKey: "hero.radar.word.partners",
     hintKey: "hero.radar.hint.partners",
@@ -143,8 +143,8 @@ const RADAR_NODES: {
     id: "staff",
     icon: "ri-user-star-line",
     angle: 280,
-    value: 275,
-    suffix: "+",
+    value: 494,
+    suffix: "",
     labelKey: "hero.strip.stat.staff",
     wordKey: "hero.radar.word.staff",
     hintKey: "hero.radar.hint.staff",
@@ -233,7 +233,7 @@ export default function Hero() {
     { value: 50, suffix: "+", icon: "ri-heart-add-line", label: t("hero.band.stat1") },
     { value: 100, suffix: "%", icon: "ri-checkbox-circle-line", label: t("hero.band.stat2") },
     { value: students, suffix: "+", icon: "ri-group-line", label: t("hero.band.stat3") },
-    { value: 80, suffix: "+", icon: "ri-building-line", label: t("hero.band.stat4") },
+    { value: 38, suffix: "", icon: "ri-building-line", label: t("hero.band.stat4") },
   ];
 
   return (

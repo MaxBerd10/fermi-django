@@ -10,8 +10,8 @@ import type { Counter } from "@/types/content";
  * these per-deployment via VITE_STAT_* without a code change.
  */
 export const INSTITUTE_COUNTER: Counter = {
-  professor_teachers: Number(import.meta.env.VITE_STAT_PROFESSORS) || 275,
-  students: Number(import.meta.env.VITE_STAT_STUDENTS) || 6238,
+  professor_teachers: Number(import.meta.env.VITE_STAT_PROFESSORS) || 494,
+  students: Number(import.meta.env.VITE_STAT_STUDENTS) || 7950,
   graduaters: Number(import.meta.env.VITE_STAT_GRADUATES) || 0,
   book_fund: Number(import.meta.env.VITE_STAT_BOOK_FUND) || 0,
 };
