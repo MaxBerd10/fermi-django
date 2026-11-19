@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useHomeSections } from "@/api/homeSections";
 import { optimizedImageUrl } from "@/lib/imageProxy";
@@ -108,6 +109,15 @@ function ProjectCard({ p, liveLabel, soonLabel, soonHint }: {
 
   const cardCls =
     "group flex flex-col overflow-hidden rounded-2xl bg-white/95 border border-[#e5e5e5]/80 shadow-[0_6px_20px_rgba(10,17,88,0.05)] transition-all";
+
+  // a page of this site (the So'x model card): opens in the same tab like any internal link
+  if (p.href?.startsWith("/")) {
+    return (
+      <Link to={p.href} className={`${cardCls} hover:border-[#ffd600] hover:shadow-[0_10px_28px_rgba(10,17,88,0.1)] cursor-pointer`}>
+        {body}
+      </Link>
+    );
+  }
 
   if (p.href) {
     return (

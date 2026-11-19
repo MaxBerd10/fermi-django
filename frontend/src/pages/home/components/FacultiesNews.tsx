@@ -58,7 +58,10 @@ export default function FacultiesNews() {
   useEffect(() => {
     listFaculty().then(setFaculties).catch(() => {});
     listDepartments()
-      .then((departments) => {
+      .then((all) => {
+        // the list also holds the "Institut tarixi" page (a history page filed as a department, not a kafedra): the
+        // figure shown here counts the kafedras only (29, as in the annual report)
+        const departments = all.filter((d) => d.slug !== "institut-tarixi");
         setDepartmentCount(departments.length);
         setFirstDepartmentSlug(departments[0]?.slug ?? null);
       })
