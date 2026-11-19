@@ -55,9 +55,8 @@ def table(headers, rows):
 def photos(names, alt):
     parts = []
     for i, name in enumerate(names, start=1):
-        w, hh = IMAGES[name]
         label = alt if len(names) == 1 else "%s, %d" % (alt, i)
-        parts.append('<p><img src="%s%s.webp" alt="%s" width="%d" height="%d" loading="lazy"></p>' % (IMG_DIR, name, label, w, hh))
+        parts.append('<p><img src="%s%s.webp" alt="%s"></p>' % (IMG_DIR, name, label))
     return ("raw_html", {"html": "".join(parts)})
 
 
