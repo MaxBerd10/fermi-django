@@ -773,7 +773,7 @@ const HISTORY_DIRECTORS: HistoryDirectorMeta[] = [
   {
     match: /Sultanov/i,
     period: "2017–2021",
-    name: "Sultanov Gafurdjon Neʻmatbekovich",
+    name: "Sultanov Gʻafurjon Neʻmatbekovich",
     degree: "Tibbiyot fanlari nomzodi",
     role: "Toshkent tibbiyot akademiyasi Fargʻona filiali direktori",
   },
