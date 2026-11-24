@@ -43,6 +43,10 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
       return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2>{block.data.text}</h2>;
 
     case "paragraph":
+      // A paragraph whose text holds line breaks is a verse (poem stanza): keep its lines, see .cms-verse.
+      if (block.data.text.includes("\n")) {
+        return <p className="cms-verse"><LinkifiedText text={block.data.text} /></p>;
+      }
       return block.data.bold ? (
         <p>
           <strong><LinkifiedText text={block.data.text} /></strong>

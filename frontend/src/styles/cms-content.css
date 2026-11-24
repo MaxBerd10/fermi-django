@@ -12,6 +12,17 @@
   margin-bottom: 1rem;
 }
 
+/* Verse: a paragraph block whose text contains line breaks (a poem stanza) keeps its lines and is set off
+   from the surrounding prose. */
+.prose-content p.cms-verse,
+.cms-article p.cms-verse {
+  white-space: pre-line;
+  font-style: italic;
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  border-left: 3px solid #ffd600;
+}
+
 .prose-content h1,
 .prose-content h2,
 .prose-content h3,
