@@ -1,0 +1,443 @@
+[
+{
+"slug": "department-5",
+"order": 5,
+"lang": "ru",
+"sha_uz": "0857a31d77c24a2032f02ca63edf18e496fd6b6c5f5419bbc09dffc9a7ee5a6a",
+"sha_lang": "c973b31d39218bc6d232d8052876c97048e910443fbce65eb68060127f5a56ed"
+},
+{
+"slug": "department-5",
+"order": 54,
+"lang": "ru",
+"sha_uz": "4e6621cd507f0f81bb8ae3b067c623ade8abe2897365d0067da7fe23495da11f",
+"sha_lang": "fd49247282e7686137fc682bf33db12acce0391dd39d87a68e7573ea2fbfef96"
+},
+{
+"slug": "department-5",
+"order": 67,
+"lang": "ru",
+"sha_uz": "efbb5edab8b304b995d791981ed70fc3c85ca3e5c68c473047ce39a071039d02",
+"sha_lang": "28199c60e7bd0e8acffcfa895704f9e546b372684a78561b6efe896b3522f925"
+},
+{
+"slug": "department-5",
+"order": 69,
+"lang": "ru",
+"sha_uz": "f66c9b587ef4bcbc3c679d85798b72bd57c57cbeca437140bff20aa4ed7613a1",
+"sha_lang": "08693c7a308878f31cae5510a440449222e087a36bc4c7788a7aec8c5b8d08e1"
+},
+{
+"slug": "department-6",
+"order": 1,
+"lang": "ru",
+"sha_uz": "2f8dbc4225d29c90fe67156b4907d35db9e8741866edd11a6db0ee105be72fbb",
+"sha_lang": "fcd6d9599043007fcee842efdd3486a27f148ec152c5fdbc5993cef5bc3fa37b"
+},
+{
+"slug": "department-6",
+"order": 1,
+"lang": "en",
+"sha_uz": "2f8dbc4225d29c90fe67156b4907d35db9e8741866edd11a6db0ee105be72fbb",
+"sha_lang": "275513c9e52c50a527b9e238466e74a54fb3d123f8c46886608def4d993d4a77"
+},
+{
+"slug": "department-6",
+"order": 3,
+"lang": "ru",
+"sha_uz": "2b388231ee79c152baa6be5511b65af891d27b992192f7951d5bf556ccf794b9",
+"sha_lang": "ae8bda507afe52e09a61832eccdbbf80db6a4569b9c54f0519a0164c3c1fc8e9"
+},
+{
+"slug": "department-6",
+"order": 3,
+"lang": "en",
+"sha_uz": "2b388231ee79c152baa6be5511b65af891d27b992192f7951d5bf556ccf794b9",
+"sha_lang": "aba6ffd18b0f581ed08061baa6f2e6f3ecaf8d5eb28c9b0f38d9a4dee5db1ca6"
+},
+{
+"slug": "department-10",
+"order": 15,
+"lang": "en",
+"sha_uz": "88f246553036932b4f649aa44b1af29b4cd477238ecaf9da9791b7acda351b3c",
+"sha_lang": "404affcdf1b5da8dfca018b09f826202c52ea8afce699a84986fc3af501014bc"
+},
+{
+"slug": "department-10",
+"order": 35,
+"lang": "en",
+"sha_uz": "36b4b8a8998a2741505320dab73963a7ec3f3e3d9d8d85dd8fc28674233b7c31",
+"sha_lang": "2f25461c3fb5094172bae6b3b7892df82747beaebab1039f1a429ea6fc7b63ad"
+},
+{
+"slug": "department-10",
+"order": 36,
+"lang": "en",
+"sha_uz": "d1571fa8ee144b8fedfedafe9fcddda549906d808986044e1c52146227c83a1a",
+"sha_lang": "2a827505c147e0dccfe3563893d0522160d1c8eb03b881a81b6693d4de2e4122"
+},
+{
+"slug": "department-10",
+"order": 38,
+"lang": "en",
+"sha_uz": "e4f7077dd3bfbbb4c5911c6279ef59e83b940705749d0d1e86d55eee6344a549",
+"sha_lang": "e5482494fa955b9a56ef2f1b6f199919e5a0ef340e78212f30ae75f2d68f0fbe"
+},
+{
+"slug": "department-11",
+"order": 13,
+"lang": "ru",
+"sha_uz": "525595e6a9762fbfdbbcc09f78e82524847ea73fca7042b768aef11da50bcbdc",
+"sha_lang": "fc14804f3b1767341a590a7cfd3e786c1bbac6b12edba7bf421a6844bb83ae05"
+},
+{
+"slug": "department-11",
+"order": 13,
+"lang": "en",
+"sha_uz": "525595e6a9762fbfdbbcc09f78e82524847ea73fca7042b768aef11da50bcbdc",
+"sha_lang": "0d06e24deed2ee1bd52a8db1063602505b8af8a34b1f946177a0df4dbbfd98f1"
+},
+{
+"slug": "department-11",
+"order": 53,
+"lang": "en",
+"sha_uz": "67e0b1d38de6a4efe89abb7680135f8727a25c57dab45e31e0c55aa241c50236",
+"sha_lang": "74ba12cfe3131718c8423360420c3ecdd73054e87d88a771a9b8506816a08727"
+},
+{
+"slug": "department-12",
+"order": 18,
+"lang": "ru",
+"sha_uz": "9f87049049ef056b62a16845680302001c1ba03b373cf08d8e8152ce5b8cee11",
+"sha_lang": "f54b07e1ef9831a1f6aab8ce528a1dfd3caba0e06411c7befeab8ce96fc77aa5"
+},
+{
+"slug": "department-14",
+"order": 7,
+"lang": "en",
+"sha_uz": "162f659f8af768d7248bbc1566efa1b234cf5973101aaf300dac06d66b64a380",
+"sha_lang": "bb3d13fe43ba40de137e416b284011a0eeecb0cd601014727c5fc92720208d41"
+},
+{
+"slug": "department-14",
+"order": 8,
+"lang": "en",
+"sha_uz": "ad5f88f1967e4e61da8cfd98bc04436b5ab984b9140f93069e8ebc17871a33a6",
+"sha_lang": "54d111ab27b96618a761105d6b54c299880a7e57866d904524359d4766aeeb36"
+},
+{
+"slug": "department-14",
+"order": 9,
+"lang": "en",
+"sha_uz": "0fdf9d5d301d8a25e64f73dd00e83a1eba437c4f47528bc37c7c4953bfee53b6",
+"sha_lang": "3b72f610410de451d3b256953614475d0814f1cced228ff500fc71395e758046"
+},
+{
+"slug": "department-14",
+"order": 14,
+"lang": "en",
+"sha_uz": "3edf339e21e2b6f34c31ec9e03381ab04cd69f43b0d4cfc1f598c6006723d1dd",
+"sha_lang": "7ac77bb5275fffd2872ab6d8909186b024afb57ef2039432660b25bfcd87bba5"
+},
+{
+"slug": "department-14",
+"order": 15,
+"lang": "en",
+"sha_uz": "51a65240dbf361b5ea4243722dbbb43d369d0a767e2f87fac0bc87279eaf3be3",
+"sha_lang": "0d5cf473ebfa11e0a9fdfc62f22a9ad072b9a3797ab25a05982d0f71e2258503"
+},
+{
+"slug": "department-14",
+"order": 16,
+"lang": "ru",
+"sha_uz": "2f60eaf272563390df13d3bbf49ae6a44f3eafcb9f46b8a2f69c862171a0e60f",
+"sha_lang": "005a57af14bc0b90adcf5c5fa5f18acd61a8fa6510d92ec882af1c0a81286fbe"
+},
+{
+"slug": "department-16",
+"order": 2,
+"lang": "ru",
+"sha_uz": "8b3d8ec575d54038c65a8cbb3a90afc3aed55aef79ab1f5ce9e586dba5465a96",
+"sha_lang": "e022ea33b53b58dd054f4685718b3a25a26e70ba0589c4301aada2b4db5aadd0"
+},
+{
+"slug": "department-16",
+"order": 2,
+"lang": "en",
+"sha_uz": "8b3d8ec575d54038c65a8cbb3a90afc3aed55aef79ab1f5ce9e586dba5465a96",
+"sha_lang": "dcf9b9d1b1127c763195eac3f3587866891f4508e2a18724d39cbcf377c195c9"
+},
+{
+"slug": "department-17",
+"order": 14,
+"lang": "ru",
+"sha_uz": "2ad9089dc9f6c925059aeeb1c1ec11a0fade4b29abc1b12921d40eef1c2485af",
+"sha_lang": "e6af94f51ae57903913ae6a729a6a4647c54e3e3cd1ad79ff6db4302677f15b0"
+},
+{
+"slug": "department-17",
+"order": 14,
+"lang": "en",
+"sha_uz": "2ad9089dc9f6c925059aeeb1c1ec11a0fade4b29abc1b12921d40eef1c2485af",
+"sha_lang": "db14461e72972911a6d05487eaf1274eeb0e19dd07a25f7047b451309fdb4ee5"
+},
+{
+"slug": "department-17",
+"order": 23,
+"lang": "ru",
+"sha_uz": "a746badc918e0a004cd0a8b9476bbda65ee8e8dae3c44ac2e80860063621e5e6",
+"sha_lang": "2b09af0a751420577a38188c39318bd3ef06cd8093013af9e3c0acf7556d2d88"
+},
+{
+"slug": "department-20",
+"order": 33,
+"lang": "ru",
+"sha_uz": "e92e50c91ea1d1a781d27e0c5e31c5e023296a2f4947d62e672fbe9e1fe5eeb9",
+"sha_lang": "762969f34cb8be440a286f5488e62458edf580669ceb259ed7846c9e82881c32"
+},
+{
+"slug": "department-20",
+"order": 80,
+"lang": "en",
+"sha_uz": "f826414d621e7a4085856510511c7d0704095fb2a75d1103cf096aa52738ce7d",
+"sha_lang": "a07f11822bf3529f7dd151ea77f6446730a9facb77b5305dc18eda5cbcedb09a"
+},
+{
+"slug": "department-20",
+"order": 92,
+"lang": "en",
+"sha_uz": "74beed9001e9b71fda46d6cd424ab7c062352af4790333197154842c0d354ed4",
+"sha_lang": "9b02322696df0d8eb8aadcc7155ac2f14f377779d23d0b48b080aba1ce49fcfa"
+},
+{
+"slug": "department-22",
+"order": 10,
+"lang": "ru",
+"sha_uz": "b816500970f41fc42b8c45295c7774147eb7d8ab126774ab710778370ff1c372",
+"sha_lang": "46f6c4c8b4ec7244352e69f776e7ab1ec0de6a3940c35d6a3bf1500cf292dd89"
+},
+{
+"slug": "department-28",
+"order": 32,
+"lang": "en",
+"sha_uz": "b463252e2ec1c60cfced2eac31d203bc6ddeb1ead382753cd042de57e68492c6",
+"sha_lang": "6fcaddebb0ead916a1b3e3be52e435bfa531680f9e9bd2b2aeeebadab847be1d"
+},
+{
+"slug": "department-29",
+"order": 23,
+"lang": "ru",
+"sha_uz": "6acb414bb904027e8d1e252bb06a4b9d5f3854596c41aa0634892cc981c27ba8",
+"sha_lang": "295bed7c67ec03f07271e4a82594fcde319d2a2d6bb4e184af45a015236f93de"
+},
+{
+"slug": "department-29",
+"order": 59,
+"lang": "ru",
+"sha_uz": "57665d87665dc9e784dfe7f581e20741c556c0876f6b57c4b292e07f7035f275",
+"sha_lang": "1fd8aa31e4f15aa85a27da907e09e9936407f54d1acb25bc02f9a4db745dcaf8"
+},
+{
+"slug": "department-30",
+"order": 11,
+"lang": "ru",
+"sha_uz": "515746d27b7512a63e9ed0527b6ef5ec4862990495663cd4f447499f7bd310aa",
+"sha_lang": "5e7e57f14e291de7485986213b8b487fe5136891f1fa6bf20440f4ff1248b969"
+},
+{
+"slug": "department-30",
+"order": 11,
+"lang": "en",
+"sha_uz": "515746d27b7512a63e9ed0527b6ef5ec4862990495663cd4f447499f7bd310aa",
+"sha_lang": "cd37b22345e6ded23e9aef182a52bce9e7d525f9142a76ca4172f581b0fb84de"
+},
+{
+"slug": "department-30",
+"order": 12,
+"lang": "ru",
+"sha_uz": "78e12ef8fe98ed313b3bdfa848eb1ccdf1018e7d73efa59100b66499896d7b01",
+"sha_lang": "cc94c30a601d07320a87effd388a9ef46289210927ff073e906543fff3d8ce81"
+},
+{
+"slug": "department-30",
+"order": 12,
+"lang": "en",
+"sha_uz": "78e12ef8fe98ed313b3bdfa848eb1ccdf1018e7d73efa59100b66499896d7b01",
+"sha_lang": "f8aa97cf8e204c111ca5ea978a1c3f16e88d96955c0d511f4b3cbde64422de41"
+},
+{
+"slug": "department-30",
+"order": 13,
+"lang": "ru",
+"sha_uz": "228794cd640157f2dc69f741ee7c65f96eb4654e65006013315b20c6719c6b38",
+"sha_lang": "3e403428a9808834a50289bb196dea08a4015631a6051497d58f1d4e36b3d94c"
+},
+{
+"slug": "department-30",
+"order": 13,
+"lang": "en",
+"sha_uz": "228794cd640157f2dc69f741ee7c65f96eb4654e65006013315b20c6719c6b38",
+"sha_lang": "1c695f98f98875d6b73ea278df14a53a1e74fb8e2531865aee0ac917792b5034"
+},
+{
+"slug": "department-30",
+"order": 14,
+"lang": "ru",
+"sha_uz": "99f5ead927d1d1b7ce60619e654e2013570a57916b79401c00611caed077e16f",
+"sha_lang": "7d60edb8eba1b9544cc20c807fff2fecc74212567c46e721cc1ed653c0a66f57"
+},
+{
+"slug": "department-30",
+"order": 15,
+"lang": "en",
+"sha_uz": "6eca6b34c6e197d3eb73667b8c7e486534d6fdd41b068eca2d77ad38f11ee796",
+"sha_lang": "c1a804498790c97d66c344309ad92db3f6825e0ea126df947cdb290693b2a236"
+},
+{
+"slug": "department-30",
+"order": 16,
+"lang": "en",
+"sha_uz": "592afc0db9a57949dfd31e4771f08a203fedf87e1925543244be5ad4a318dbbf",
+"sha_lang": "818859953c8fa8ad2d49ac47dee6c45c104b711855700d5fb10b31dfd54b7d0d"
+},
+{
+"slug": "department-30",
+"order": 17,
+"lang": "ru",
+"sha_uz": "dc0dc4d41a1e43a339304b5d40615a30b035feb9362feb1829ef433b59d74d2f",
+"sha_lang": "dbdf42c70ad084ae6c2a3e8c7b99f62e18433e765eed179ab6718e3fba1d9f96"
+},
+{
+"slug": "department-30",
+"order": 19,
+"lang": "en",
+"sha_uz": "c76bc21266b8b108696fb487eb5ef0d593e27fc2ecbc2ea915394e237cd86100",
+"sha_lang": "7d98feb86c0668467a052b8d068bf0b211517cbb6f2b92066922e55a036eba63"
+},
+{
+"slug": "department-31",
+"order": 24,
+"lang": "ru",
+"sha_uz": "d95cac4bc81b7f803fa73800e7a58058ea9f84c17358247799b825901ea7f1f1",
+"sha_lang": "4c9bcf85d17ac2f3e925e40edf2315f637c73247fb7fa4e9e538d601796dc0eb"
+},
+{
+"slug": "department-31",
+"order": 24,
+"lang": "en",
+"sha_uz": "d95cac4bc81b7f803fa73800e7a58058ea9f84c17358247799b825901ea7f1f1",
+"sha_lang": "92ebc67ae932b7251c19188756bf5c11d58e7ab6e866998c11eefc32cd0fe166"
+},
+{
+"slug": "department-35",
+"order": 3,
+"lang": "ru",
+"sha_uz": "d6ed81bb3b7a03a16c8217974e34dd8a541920286cad5a5627089f9280ddcb2c",
+"sha_lang": "6c3d3825e637ef17141f071032bcd892cd1989943f9eee561d6b368e2cec85f3"
+},
+{
+"slug": "department-35",
+"order": 10,
+"lang": "ru",
+"sha_uz": "a220d68ff0317e9fdbc86f4aae4121bf43c9718eca958eb2f97f368127aa2274",
+"sha_lang": "f5d543977a7fa9890d6820b613320cb6773bdb4de167b5d92e7c85ba67b7afb9"
+},
+{
+"slug": "department-35",
+"order": 16,
+"lang": "ru",
+"sha_uz": "cc8c75d370a5ce647f5ce72795dc9ac5d45c4dd0604aef5d1a3a8e71e998d57d",
+"sha_lang": "b2bc66d66ab731d8f638c498e8d9c573b24c9f8c8a7565b52bc18f171a6c93d1"
+},
+{
+"slug": "department-35",
+"order": 28,
+"lang": "en",
+"sha_uz": "d20ed10802d8cf49df0b99a9068afa0779663208d8ece119a4b1c137b1ca0780",
+"sha_lang": "72cebb15333849cd328800d242601cb28928445106eb09a9b25f2996854d4d52"
+},
+{
+"slug": "department-35",
+"order": 30,
+"lang": "ru",
+"sha_uz": "b7f75003b8f2c68a903f89d4ef3aae4a93ac440556092c8eecb753427069382b",
+"sha_lang": "2ef4679ca2e2a700ad886b560b927ed1fc54d94fbe9ee6af1d046647641dd834"
+},
+{
+"slug": "department-40",
+"order": 20,
+"lang": "en",
+"sha_uz": "62ade34686805181543db92d0dbfd1b60470dc8fc72f475a7dedfd0415cc28e7",
+"sha_lang": "e5dcdbd1f68b59950706016c0a0df7e26568d858293d4b3c3dab31bdcb3192c1"
+},
+{
+"slug": "department-40",
+"order": 27,
+"lang": "ru",
+"sha_uz": "2102ec79237881af3714276fc485e7743a458a178d8451bd318f389424b1a24e",
+"sha_lang": "cc0cbc86a1d379259c667e66d673b020bc602bdcc25b7bb8da3bc06ca59e41ae"
+},
+{
+"slug": "department-41",
+"order": 2,
+"lang": "en",
+"sha_uz": "8126c3eb3e6db20afdac70178a18041f28e1aaff8594c005b89944f84c637a8d",
+"sha_lang": "16b14e9d357d5c5ba7c99570bda4304d87fa6384995bffbc97d2846ff7fec31f"
+},
+{
+"slug": "department-42",
+"order": 49,
+"lang": "en",
+"sha_uz": "73a6e17da6356d92935f010afca096f789cd8af1a87e15d6e5bfaf543fbc51c0",
+"sha_lang": "131571ea76a304b635021e02222ca3a0b8254a6db24a792d6917bd75501db356"
+},
+{
+"slug": "department-42",
+"order": 56,
+"lang": "en",
+"sha_uz": "192d4aacf8adaf4574bc5e4bdeb03acf6b6419644ab8145f72caa2a374b89c78",
+"sha_lang": "ce23546f672cc40e859009e970c1e1520e02fbf49027bd8e8df9f2c6902c914f"
+},
+{
+"slug": "department-43",
+"order": 5,
+"lang": "ru",
+"sha_uz": "0c191c4409757f717266be49ef156792aa2e3831919bbbda197459cf296888b0",
+"sha_lang": "11572c1694ebecde5b5e9311592ec30804c0abed648514fc4dbd5ea961785630"
+},
+{
+"slug": "department-43",
+"order": 16,
+"lang": "ru",
+"sha_uz": "b6c56a86a91ff6e9741bafb1d482a4c06e30a4c4d1a1cab93f319d247a08076f",
+"sha_lang": "9a3995690cd6fdfa25caa132ff43bfa32afe77c2749098eb7dbade7b7b920053"
+},
+{
+"slug": "department-43",
+"order": 16,
+"lang": "en",
+"sha_uz": "b6c56a86a91ff6e9741bafb1d482a4c06e30a4c4d1a1cab93f319d247a08076f",
+"sha_lang": "6d3919e032e3df817f7d9b6a189dba0d17f8ed2ed51d5f16735c02686909c600"
+},
+{
+"slug": "department-43",
+"order": 30,
+"lang": "ru",
+"sha_uz": "dc15217ea5df73fe555678350a9a53542794cf9d2bbc50f09fac35bf085911af",
+"sha_lang": "ed3faef4dd2fc3df0ddc47019c7b1a2598f2e89409c488bb3f7b14f7ee8bbb49"
+},
+{
+"slug": "department-43",
+"order": 36,
+"lang": "en",
+"sha_uz": "9410ae0d95bc0285f2116d763296cdcabac9f6ce81f9fee09f7b3ea9e2b41096",
+"sha_lang": "b369028385073f06dfcd1a0129bed361f858249acb988787f40231bd91123629"
+},
+{
+"slug": "department-43",
+"order": 44,
+"lang": "en",
+"sha_uz": "37a7e66e9e2a5f85426e5c4755402944ff5bb39d5c535afad134aee0327a602a",
+"sha_lang": "e42c9bfa344bd49f17bd8f6e29a6c96c1fe782169f7fcb5d169e89fbcf64a5e1"
+}
+]
