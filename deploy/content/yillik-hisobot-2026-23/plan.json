@@ -1,0 +1,350 @@
+[
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 1,
+"lang": "uz",
+"set": {
+"text": "Xorijiy davlat fuqarolar uchun Bakalavriat taʻlim yoʻnalishi 2025/2026 oʻquv yili uchun"
+},
+"sha_uz": "fe41cda38a2b010aa7d9ed90670d0460e0c950547d82fb2ede352f2c0eb1d61f",
+"sha_lang": "fe41cda38a2b010aa7d9ed90670d0460e0c950547d82fb2ede352f2c0eb1d61f"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 1,
+"lang": "ru",
+"set": {
+"text": "Для граждан иностранных государств — направление бакалавриата на 2025/2026 учебный год"
+},
+"sha_uz": "fe41cda38a2b010aa7d9ed90670d0460e0c950547d82fb2ede352f2c0eb1d61f",
+"sha_lang": "93ddd5dc2cb17401c29f8b9bb32a5cf621b23a461c1a6768f08dbe5162684c38"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 1,
+"lang": "en",
+"set": {
+"text": "For citizens of foreign countries — Bachelor's degree programs for the 2025/2026 academic year"
+},
+"sha_uz": "fe41cda38a2b010aa7d9ed90670d0460e0c950547d82fb2ede352f2c0eb1d61f",
+"sha_lang": "93ddd5dc2cb17401c29f8b9bb32a5cf621b23a461c1a6768f08dbe5162684c38"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 2,
+"lang": "en",
+"set": {
+"text": "PAYMENT CONTRACT AMOUNTS"
+},
+"sha_uz": "d6477180162612f475e2de3b940196487b7e948f6cd6b4a6058766434352a255",
+"sha_lang": "152ede40788c08b2176151ca67ab20fc75a7fed700df0deadfb43fecd5e8495a"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 3,
+"lang": "uz",
+"set": {
+"text": "(shartnoma puli toʻlov kunidagi kurs boʻyicha soʻmda amalga oshiriladi)"
+},
+"sha_uz": "3eb35d5068693066cf0c192f5a5f76ad590238f7d57e843a85f3192273e656ae",
+"sha_lang": "3eb35d5068693066cf0c192f5a5f76ad590238f7d57e843a85f3192273e656ae"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 3,
+"lang": "en",
+"set": {
+"text": "(contract fees are paid in soums at the exchange rate on the day of payment)"
+},
+"sha_uz": "3eb35d5068693066cf0c192f5a5f76ad590238f7d57e843a85f3192273e656ae",
+"sha_lang": "fbf2c7ea11b21dfdab01534b9e1dae040172b2c5e60066c0299888447beca865"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 4,
+"lang": "ru",
+"set": {
+"headers": [
+"№",
+"Название образовательного направления",
+"Для стран СНГ",
+"Для зарубежных стран"
+],
+"rows": [
+[
+"1",
+"Стоматология",
+"2200 $",
+"3500 $"
+],
+[
+"2",
+"Фармация",
+"2200 $",
+"3500 $"
+],
+[
+"3",
+"Педиатрическое дело",
+"2200 $",
+"3500 $"
+],
+[
+"4",
+"Лечебное дело",
+"2200 $",
+"3500 $"
+],
+[
+"5",
+"Медико-профилактическое дело",
+"2200 $",
+"3500 $"
+],
+[
+"6",
+"Высшее сестринское дело",
+"2200 $",
+"3500 $"
+],
+[
+"7",
+"Биомедицинская инженерия",
+"2200 $",
+"3500 $"
+],
+[
+"8",
+"Фундаментальная медицина",
+"2200 $",
+"3500 $"
+]
+]
+},
+"sha_uz": "bfd2de109886ad7bfdcc38aeba07411f107912b45c06bac0c9db69bed9d2259c",
+"sha_lang": "387a620a248c01feb78c9250bd71afc06f48210aab452c38f5a07f665f30e068"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 4,
+"lang": "en",
+"set": {
+"headers": [
+"№",
+"Educational direction name",
+"For CIS countries",
+"For foreign countries"
+],
+"rows": [
+[
+"1",
+"Dentistry",
+"2200 $",
+"3500 $"
+],
+[
+"2",
+"Pharmacy",
+"2200 $",
+"3500 $"
+],
+[
+"3",
+"Pediatrics",
+"2200 $",
+"3500 $"
+],
+[
+"4",
+"General Medicine",
+"2200 $",
+"3500 $"
+],
+[
+"5",
+"Medical Prevention",
+"2200 $",
+"3500 $"
+],
+[
+"6",
+"Higher Nursing",
+"2200 $",
+"3500 $"
+],
+[
+"7",
+"Biomedical Engineering",
+"2200 $",
+"3500 $"
+],
+[
+"8",
+"Fundamental Medicine",
+"2200 $",
+"3500 $"
+]
+]
+},
+"sha_uz": "bfd2de109886ad7bfdcc38aeba07411f107912b45c06bac0c9db69bed9d2259c",
+"sha_lang": "ab55845b30e47c3d5fb342051bced7dc22669359c82c478f5d857f8fc0ea2dcd"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 5,
+"lang": "ru",
+"set": {
+"text": "Для граждан иностранных государств — направление магистратуры на 2025/2026 учебный год"
+},
+"sha_uz": "c2b5d811f1e14af78e4976d7dfe1ca45a09361943c643e5bbc1967eb27f090ec",
+"sha_lang": "549d64d437863b99c219c2a0a652c705f2f5a1a0c6933246ef30cc1c6a5dcfad"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 5,
+"lang": "en",
+"set": {
+"text": "For citizens of foreign countries — Master's degree programs for the 2025/2026 academic year"
+},
+"sha_uz": "c2b5d811f1e14af78e4976d7dfe1ca45a09361943c643e5bbc1967eb27f090ec",
+"sha_lang": "549d64d437863b99c219c2a0a652c705f2f5a1a0c6933246ef30cc1c6a5dcfad"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 6,
+"lang": "en",
+"set": {
+"text": "PAYMENT CONTRACT AMOUNTS"
+},
+"sha_uz": "d6477180162612f475e2de3b940196487b7e948f6cd6b4a6058766434352a255",
+"sha_lang": "152ede40788c08b2176151ca67ab20fc75a7fed700df0deadfb43fecd5e8495a"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 7,
+"lang": "en",
+"set": {
+"text": "(contract fees are paid in soums at the exchange rate on the day of payment)"
+},
+"sha_uz": "3475347edec5210c0abbdce312a3de2269a7f69f1b20fcd8f0911ba5ae460bf2",
+"sha_lang": "897fe24c7487e525ac01233f374fbcc53be5ccc76a91ca31d463ebb22e0b8dbf"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 8,
+"lang": "ru",
+"set": {
+"headers": [
+"№",
+"Название образовательного направления",
+"Для стран СНГ",
+"Для зарубежных стран"
+],
+"rows": [
+[
+"1",
+"Эндокринология",
+"3000 $",
+"3000 $"
+],
+[
+"2",
+"Гигиена",
+"3000 $",
+"3000 $"
+],
+[
+"3",
+"Кардиология",
+"3000 $",
+"3000 $"
+],
+[
+"4",
+"Педиатрия",
+"3000 $",
+"3000 $"
+],
+[
+"5",
+"Патологическая анатомия",
+"3000 $",
+"3000 $"
+],
+[
+"6",
+"Терапия (по направлениям)",
+"3000 $",
+"3000 $"
+],
+[
+"7",
+"Доктор медицины",
+"3500 $",
+"3500 $"
+]
+]
+},
+"sha_uz": "2721e4118f439a23fcf3f55d4868ca934b106c27d0128daa342066559ed7625b",
+"sha_lang": "b120ec6c2616bf48fb3ba6859feb252c61fae98c58161c8d30680d3c33038671"
+},
+{
+"slug": "xorijiy-talabalar-uchun-tolov-kontrakatlar-miqdori",
+"order": 8,
+"lang": "en",
+"set": {
+"headers": [
+"№",
+"Educational direction name",
+"For CIS countries",
+"For foreign countries"
+],
+"rows": [
+[
+"1",
+"Endocrinology",
+"3000 $",
+"3000 $"
+],
+[
+"2",
+"Hygiene",
+"3000 $",
+"3000 $"
+],
+[
+"3",
+"Cardiology",
+"3000 $",
+"3000 $"
+],
+[
+"4",
+"Pediatrics",
+"3000 $",
+"3000 $"
+],
+[
+"5",
+"Pathological Anatomy",
+"3000 $",
+"3000 $"
+],
+[
+"6",
+"Therapy (by directions)",
+"3000 $",
+"3000 $"
+],
+[
+"7",
+"Doctor of Medicine",
+"3500 $",
+"3500 $"
+]
+]
+},
+"sha_uz": "2721e4118f439a23fcf3f55d4868ca934b106c27d0128daa342066559ed7625b",
+"sha_lang": "91dae08236c36925f6923a65c0c3abe067b22001e41693323ad6e54b210c6661"
+}
+]
