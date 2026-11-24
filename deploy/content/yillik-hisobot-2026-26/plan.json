@@ -1,0 +1,576 @@
+[
+{
+"slug": "hujjat-turlari",
+"order": 1,
+"lang": "ru",
+"set": {
+"text": "Для приёма в клиническую ординатуру (резидентуру) Ферганского института общественного здоровья на 2025–2026 учебный год"
+},
+"sha_uz": "531e0af429744c51851add3fdcb3ece1c7e2a30ad2fb76c9f9d4611e2d273882",
+"sha_lang": "92c9bd5faeb644022f8ffc8e7f1b69d6359ba1ccf95f185ba5126901384277d2"
+},
+{
+"slug": "hujjat-turlari",
+"order": 1,
+"lang": "en",
+"set": {
+"text": "For admission to clinical residency at the Fergana Institute of Public Health for the 2025–2026 academic year"
+},
+"sha_uz": "531e0af429744c51851add3fdcb3ece1c7e2a30ad2fb76c9f9d4611e2d273882",
+"sha_lang": "02478f4cbc8749531bb0f361ba7a3fb027365980c4604cff930be6b9c8bdb707"
+},
+{
+"slug": "hujjat-turlari",
+"order": 2,
+"lang": "ru",
+"set": {
+"text": "СПИСОК ДОКУМЕНТОВ"
+},
+"sha_uz": "f061f33e34a469a2fef16ce65a0aab726aaf9b671d9c4908f0416f8009947717",
+"sha_lang": "96e82ac4d67e412aae4d9ac019046ca6a9aca0cf105291e757e8a544da6085e1"
+},
+{
+"slug": "hujjat-turlari",
+"order": 2,
+"lang": "en",
+"set": {
+"text": "LIST OF DOCUMENTS"
+},
+"sha_uz": "f061f33e34a469a2fef16ce65a0aab726aaf9b671d9c4908f0416f8009947717",
+"sha_lang": "96e82ac4d67e412aae4d9ac019046ca6a9aca0cf105291e757e8a544da6085e1"
+},
+{
+"slug": "hujjat-turlari",
+"order": 3,
+"lang": "ru",
+"set": {
+"headers": [
+"ВИД ДОКУМЕНТА",
+"ПОЯСНЕНИЕ"
+],
+"rows": [
+[
+"1. На имя Ректора (по образцу);",
+"Заполните заявление по образцу, подпишите и отправьте в формате PDF, отсканировав обе стороны."
+],
+[
+"2. Документ о высшем образовании и приложение (для обучавшихся на государственном гранте — выписка из диплома);",
+"Отсканируйте диплом и все страницы приложения в цвете и отправьте единым PDF-файлом."
+],
+[
+"3. Паспорт (страницы с фотографией и пропиской);",
+"Отсканируйте нужные страницы в цвете и отправьте единым PDF-файлом."
+],
+[
+"4. Медицинская справка формы 086-У;",
+"Отсканируйте обе стороны справки в цвете и отправьте единым PDF-файлом."
+],
+[
+"5. Фотография — 1 шт., 3,5 x 4,5 см.",
+"Цветная фотография формата «для документов», в формате JPG, качество 300 DPI."
+],
+[
+"6. Документ, дающий льготу при поступлении в соответствии с законодательством.",
+"Отсканируйте документ в цвете и отправьте единым PDF-файлом."
+]
+]
+},
+"sha_uz": "cb9e7f01a0ebe30ca0f9a8d31aef8fd9fa00e8983d0f523d5059e9c21990d9b5",
+"sha_lang": "37e060f4541be43b2ca69fcd555c20dbaba957f1ea5bbcb31b8a72709bf9f382"
+},
+{
+"slug": "hujjat-turlari",
+"order": 3,
+"lang": "en",
+"set": {
+"headers": [
+"DOCUMENT TYPE",
+"NOTE"
+],
+"rows": [
+[
+"1. Addressed to the Rector (according to the sample);",
+"Fill in the application according to the sample, sign it, scan both sides and send it as a PDF."
+],
+[
+"2. Document on higher education and its supplement (for those who studied on a state grant, an extract from the diploma);",
+"Scan the diploma and all pages of the supplement in color and send them as a single PDF file."
+],
+[
+"3. Passport (pages with the photo and registration);",
+"Scan the required pages in color and send them as a single PDF file."
+],
+[
+"4. Medical certificate, form 086-U;",
+"Scan both sides of the certificate in color and send them as a single PDF file."
+],
+[
+"5. Photograph — 1 piece, 3.5 x 4.5 cm.",
+"Color photograph in the \"for documents\" format, JPG format, 300 DPI quality."
+],
+[
+"6. A document granting a privilege upon admission in accordance with legislation.",
+"Scan the document in color and send it as a single PDF file."
+]
+]
+},
+"sha_uz": "cb9e7f01a0ebe30ca0f9a8d31aef8fd9fa00e8983d0f523d5059e9c21990d9b5",
+"sha_lang": "37e060f4541be43b2ca69fcd555c20dbaba957f1ea5bbcb31b8a72709bf9f382"
+},
+{
+"slug": "hujjat-turlari",
+"order": 4,
+"lang": "ru",
+"set": {
+"text": "Назовите файлы, используя своё имя и фамилию + вид документа."
+},
+"sha_uz": "d1ec6641227221a67def6eaa3803021cbeb2999e4f93fa7423ca4efa5c84f785",
+"sha_lang": "51e440fc332fde8b1e64073d0f90df953eaa0f073d15ccd3580948592b3ead7e"
+},
+{
+"slug": "hujjat-turlari",
+"order": 4,
+"lang": "en",
+"set": {
+"text": "Name the files using your first and last name + the document type."
+},
+"sha_uz": "d1ec6641227221a67def6eaa3803021cbeb2999e4f93fa7423ca4efa5c84f785",
+"sha_lang": "ef7c00299241c0e4173f40f6abae4187c55fb2f31507eaabe3d81c4a71e4bc1c"
+},
+{
+"slug": "hujjat-turlari",
+"order": 7,
+"lang": "ru",
+"set": {
+"text": "Приём документов от кандидатов в ординатуру (резидентуру) Ферганского института общественного здоровья на 2025/2026 учебный год осуществляется на официальном веб-сайте института через платформу по указанному ниже адресу"
+},
+"sha_uz": "cdfe100f3ab7f566389b2ddec603af57c05248ec5c3e2d9f4fc44db6f7c0e44d",
+"sha_lang": "be3052c01d7c87c88a2c43c9710b2c83319f496a8b1f8ba0af49bce7ef4366d5"
+},
+{
+"slug": "hujjat-turlari",
+"order": 7,
+"lang": "en",
+"set": {
+"text": "Documents from candidates for residency at the Fergana Institute of Public Health for the 2025/2026 academic year are accepted on the institute's official website through the platform at the following address"
+},
+"sha_uz": "cdfe100f3ab7f566389b2ddec603af57c05248ec5c3e2d9f4fc44db6f7c0e44d",
+"sha_lang": "be3052c01d7c87c88a2c43c9710b2c83319f496a8b1f8ba0af49bce7ef4366d5"
+},
+{
+"slug": "hujjat-turlari",
+"order": 10,
+"lang": "ru",
+"set": {
+"text": "При правильной подаче документов на Вашу электронную почту будет направлено «Письмо подтверждения»."
+},
+"sha_uz": "c44e19a599c1d478334417c9404ed4e3a41b32b27424313390f9a1ed0e713e20",
+"sha_lang": "a98bb2d1ab873d34945eb401884b7d3ea9015b52dc028686b6bca9b02a3d395d"
+},
+{
+"slug": "hujjat-turlari",
+"order": 10,
+"lang": "en",
+"set": {
+"text": "If the documents are submitted correctly, a \"Confirmation letter\" will be sent to your e-mail."
+},
+"sha_uz": "c44e19a599c1d478334417c9404ed4e3a41b32b27424313390f9a1ed0e713e20",
+"sha_lang": "1c1791bcc17161a1e211a826adf409a27e0003c253bf942a6cda82ec75fc87e9"
+},
+{
+"slug": "hujjat-turlari",
+"order": 11,
+"lang": "en",
+"set": {
+"text": "The \"Confirmation letter\" will contain your personal registration number (ID), as well as the date, time and place of the entrance exams."
+},
+"sha_uz": "10383db9edebc18a78a0bf45c714b0068a4c5e7bf82d24334bccfa68b9d2d3be",
+"sha_lang": "4516a3bd01b2acf3b4bb38a83e5aa7118e67086aa90e7b4974a507ebd1ab62f0"
+},
+{
+"slug": "hujjat-turlari",
+"order": 12,
+"lang": "ru",
+"set": {
+"text": "Для получения дополнительной информации вы можете обратиться на официальный веб-сайт института fermi.uz или в CALL-центр приёмной комиссии."
+},
+"sha_uz": "996b90f8db80b99bf755dd63950d29fc7168fcb4a63f3a5d28de091e4ef7e18d",
+"sha_lang": "42fe714a6d6b7806445e7377dfe99099e61cec6c87e47dbb54711c2c7933fd28"
+},
+{
+"slug": "hujjat-turlari",
+"order": 12,
+"lang": "en",
+"set": {
+"text": "For additional information, you can visit the institute's official website fermi.uz or contact the admissions committee's CALL center."
+},
+"sha_uz": "996b90f8db80b99bf755dd63950d29fc7168fcb4a63f3a5d28de091e4ef7e18d",
+"sha_lang": "42fe714a6d6b7806445e7377dfe99099e61cec6c87e47dbb54711c2c7933fd28"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 1,
+"lang": "ru",
+"set": {
+"text": "Количество образовательных грантов, выделяемых по перераспределению на 2026/2027 учебный год, по направлениям бакалавриата 2-го курса Ферганского института общественного здоровья"
+},
+"sha_uz": "e18370f3b75c7ebae4dd65c471752f0e5ceb8c93e51fa763881560576b3d5357",
+"sha_lang": "44ea0053a111c82119db6c042c8e7bbc87c5380b4ca4de458f5973dc8e414838"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 1,
+"lang": "en",
+"set": {
+"text": "Number of educational grants allocated according to the redistribution for the 2026/2027 academic year in the 2nd-year bachelor's degree programs of the Fergana Institute of Public Health"
+},
+"sha_uz": "e18370f3b75c7ebae4dd65c471752f0e5ceb8c93e51fa763881560576b3d5357",
+"sha_lang": "44ea0053a111c82119db6c042c8e7bbc87c5380b4ca4de458f5973dc8e414838"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 3,
+"lang": "ru",
+"set": {
+"text": "Количество образовательных грантов, выделяемых по перераспределению на 2026/2027 учебный год, по направлениям бакалавриата 3-го курса Ферганского института общественного здоровья"
+},
+"sha_uz": "196b384ff363ad8145a1fea8207c661f3618eef469c33367f313c667112b7009",
+"sha_lang": "9a0d1da820821491f156bdc1205c68e3b6ba6f802f85a15fdbe659263f51c9bd"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 3,
+"lang": "en",
+"set": {
+"text": "Number of educational grants allocated according to the redistribution for the 2026/2027 academic year in the 3rd-year bachelor's degree programs of the Fergana Institute of Public Health"
+},
+"sha_uz": "196b384ff363ad8145a1fea8207c661f3618eef469c33367f313c667112b7009",
+"sha_lang": "9a0d1da820821491f156bdc1205c68e3b6ba6f802f85a15fdbe659263f51c9bd"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 6,
+"lang": "ru",
+"set": {
+"text": "* — образовательный грант, выделяемый на один учебный год, при котором расходы на обучение полностью покрываются из Государственного бюджета и предоставляется стипендия в общем порядке ** — образовательный грант, выделяемый на один учебный год, при котором 50 процентов суммы платы по контракту покрываются из Государственного бюджета и стипендия в общем порядке не предоставляется"
+},
+"sha_uz": "f537f32c113a1f4cbc70214428254f1ecf79c74883400038eff8ac726b057106",
+"sha_lang": "8bed2d98bb57d12056c2af561a69f277bff5a6b6c0d741f3084ad2eda1633998"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 6,
+"lang": "en",
+"set": {
+"text": "* — an educational grant awarded for one academic year, under which tuition costs are fully covered by the State budget and a scholarship is provided in the general order ** — an educational grant awarded for one academic year, under which 50 percent of the tuition-contract amount is covered by the State budget and a scholarship is not provided in the general order"
+},
+"sha_uz": "f537f32c113a1f4cbc70214428254f1ecf79c74883400038eff8ac726b057106",
+"sha_lang": "8bed2d98bb57d12056c2af561a69f277bff5a6b6c0d741f3084ad2eda1633998"
+},
+{
+"slug": "grant-taqsimoti",
+"order": 6,
+"lang": "ru",
+"set": {
+"text": "* — образовательный грант, выделяемый на один учебный год, при котором расходы на обучение полностью покрываются из Государственного бюджета и предоставляется стипендия в общем порядке ** — образовательный грант, выделяемый на один учебный год, при котором 50 процентов суммы платы по контракту покрываются из Государственного бюджета и стипендия в общем порядке не предоставляется"
+},
+"sha_uz": "f537f32c113a1f4cbc70214428254f1ecf79c74883400038eff8ac726b057106",
+"sha_lang": "8bed2d98bb57d12056c2af561a69f277bff5a6b6c0d741f3084ad2eda1633998"
+},
+{
+"slug": "grant-taqsimoti",
+"order": 6,
+"lang": "en",
+"set": {
+"text": "* — an educational grant awarded for one academic year, under which tuition costs are fully covered by the State budget and a scholarship is provided in the general order ** — an educational grant awarded for one academic year, under which 50 percent of the tuition-contract amount is covered by the State budget and a scholarship is not provided in the general order"
+},
+"sha_uz": "f537f32c113a1f4cbc70214428254f1ecf79c74883400038eff8ac726b057106",
+"sha_lang": "8bed2d98bb57d12056c2af561a69f277bff5a6b6c0d741f3084ad2eda1633998"
+},
+{
+"slug": "grant-taqsimoti",
+"order": 1,
+"lang": "ru",
+"set": {
+"text": "Количество образовательных грантов, выделяемых по перераспределению на 2026/2027 учебный год, по направлениям магистратуры Ферганского института общественного здоровья"
+},
+"sha_uz": "bf962383ed0d13d16e6cde6661976f5e4a73fbf347cd9be3ebde5eb3ce443ea4",
+"sha_lang": "5fe3a20e851912d9b1da8d5f9ee6e9b1e8aed54d480cd4253aeb1cd65aef2747"
+},
+{
+"slug": "grant-taqsimoti",
+"order": 3,
+"lang": "ru",
+"set": {
+"text": "Количество образовательных грантов, выделяемых по перераспределению на 2026/2027 учебный год, по направлениям магистратуры 3-го курса Ферганского института общественного здоровья"
+},
+"sha_uz": "1baf925bea68bf84fc9ecd4ba5d99f657e6a09ca01d6b96faf3e796792eeb741",
+"sha_lang": "c3d78758d2d1d2b6d12cc94da5a77a332e4c8507eb6a7a2dee40828cdbb6f0cd"
+},
+{
+"slug": "grant-taqsimoti",
+"order": 3,
+"lang": "en",
+"set": {
+"text": "Number of educational grants allocated according to the redistribution for the 2026/2027 academic year in the 3rd-year master's degree programs of the Fergana Institute of Public Health"
+},
+"sha_uz": "1baf925bea68bf84fc9ecd4ba5d99f657e6a09ca01d6b96faf3e796792eeb741",
+"sha_lang": "c3d78758d2d1d2b6d12cc94da5a77a332e4c8507eb6a7a2dee40828cdbb6f0cd"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 2,
+"lang": "en",
+"set": {
+"headers": [
+"№",
+"Educational direction name",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Total",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Uzbek",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Russian",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Total",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Uzbek",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Russian",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Total",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Uzbek",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Russian"
+],
+"rows": [
+[
+"1",
+"Dentistry",
+"16",
+"14",
+"2",
+"8",
+"7",
+"1",
+"16",
+"14",
+"2"
+],
+[
+"2",
+"Pharmacy",
+"16",
+"16",
+"0",
+"8",
+"8",
+"0",
+"16",
+"16",
+"0"
+],
+[
+"3",
+"Pediatrics",
+"5",
+"4",
+"1",
+"3",
+"2",
+"1",
+"4",
+"4",
+"0"
+],
+[
+"4",
+"General Medicine",
+"31",
+"26",
+"5",
+"15",
+"13",
+"2",
+"32",
+"26",
+"6"
+],
+[
+"5",
+"Medical Prevention",
+"19",
+"19",
+"0",
+"9",
+"9",
+"0",
+"20",
+"20",
+"0"
+],
+[
+"6",
+"Higher Nursing",
+"13",
+"13",
+"0",
+"6",
+"6",
+"0",
+"14",
+"14",
+"0"
+],
+[
+"7",
+"Biomedical Engineering",
+"10",
+"10",
+"0",
+"5",
+"5",
+"0",
+"10",
+"10",
+"0"
+],
+[
+"8",
+"Fundamental Medicine",
+"25",
+"25",
+"0",
+"12",
+"12",
+"0",
+"26",
+"26",
+"0"
+]
+]
+},
+"sha_uz": "1fb5005da2f0fb22f8da2bb5f420eb174e9fb1787f7cdfdf22327d8643290099",
+"sha_lang": "6e277a67beb8dd1b88f54bbc37993bed8b1da815c3c5b8fe85dcfb2d2c6d64ef"
+},
+{
+"slug": "grantlar-taqsimoti",
+"order": 4,
+"lang": "en",
+"set": {
+"headers": [
+"№",
+"Educational direction name",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Total",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Uzbek",
+"The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Russian",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Total",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Uzbek",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Russian",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Total",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Uzbek",
+"The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Russian"
+],
+"rows": [
+[
+"1",
+"Dentistry",
+"20",
+"18",
+"2",
+"10",
+"9",
+"1",
+"20",
+"18",
+"2"
+],
+[
+"2",
+"Pharmacy",
+"12",
+"12",
+"0",
+"6",
+"6",
+"0",
+"12",
+"12",
+"0"
+],
+[
+"3",
+"Pediatrics",
+"25",
+"25",
+"0",
+"13",
+"13",
+"0",
+"24",
+"24",
+"0"
+],
+[
+"4",
+"General Medicine",
+"53",
+"49",
+"4",
+"27",
+"25",
+"2",
+"52",
+"48",
+"4"
+],
+[
+"5",
+"Medical Prevention",
+"28",
+"27",
+"1",
+"15",
+"14",
+"1",
+"26",
+"26",
+"0"
+],
+[
+"6",
+"Higher Nursing",
+"14",
+"14",
+"0",
+"7",
+"7",
+"0",
+"14",
+"14",
+"0"
+],
+[
+"7",
+"Biomedical Engineering",
+"8",
+"8",
+"0",
+"4",
+"4",
+"0",
+"8",
+"8",
+"0"
+],
+[
+"8",
+"Fundamental Medicine",
+"11",
+"11",
+"0",
+"6",
+"6",
+"0",
+"10",
+"10",
+"0"
+]
+]
+},
+"sha_uz": "9ab1a31c342442b1a9b4604d267502d2adf660867b044f6c88d013dca6620f79",
+"sha_lang": "5f2ac2446e79a2020c3b74ecd0657ef27138573cc4153836b35566e18fd8303c"
+}
+]
