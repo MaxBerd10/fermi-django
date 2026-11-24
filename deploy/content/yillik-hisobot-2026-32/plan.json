@@ -1,0 +1,62 @@
+[
+ {
+  "slug": "institut-sertifikatlari",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "Сертификат официального документа о прохождении Ферганским медицинским институтом общественного здоровья государственной аккредитации"
+  },
+  "sha_uz": "0bef0fbe0c9beb51c25158ed44839fccc9035c9cb384cb0a5fabc182f5c6719c",
+  "sha_lang": "5c6a2f29c8d1a21fc0e104de21694d7ce41c1065d2a869e950d4dd781a76262d"
+ },
+ {
+  "slug": "institut-sertifikatlari",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "Certificate of the official document confirming that the Fergana Institute of Public Health has passed state accreditation"
+  },
+  "sha_uz": "0bef0fbe0c9beb51c25158ed44839fccc9035c9cb384cb0a5fabc182f5c6719c",
+  "sha_lang": "5c6a2f29c8d1a21fc0e104de21694d7ce41c1065d2a869e950d4dd781a76262d"
+ },
+ {
+  "slug": "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida",
+  "order": 1,
+  "lang": "ru",
+  "set": {
+   "text": "ПОСТАНОВЛЕНИЕ"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "f4f10aaa66c09eae8c3c040b93fcdc8bface80bff7cd0193550c64b354c6f569"
+ },
+ {
+  "slug": "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "ПРЕЗИДЕНТА РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida",
+  "order": 1,
+  "lang": "en",
+  "set": {
+   "text": "RESOLUTION"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "d52dcff32c6533158aaaa5e2908e732d0fab4fbad12112be043a19207600383c"
+ },
+ {
+  "slug": "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "OF THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ }
+]
