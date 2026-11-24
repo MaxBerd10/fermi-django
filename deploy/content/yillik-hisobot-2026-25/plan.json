@@ -1,0 +1,282 @@
+[
+{
+"slug": "news-215",
+"order": 4,
+"lang": "ru",
+"set": {
+"text": "очная форма обучения — 77 477 человек;"
+},
+"sha_uz": "db6e515970836c8df2b4b61b09d5332fb3c62da6f5aa0d148eac925fada33fa5",
+"sha_lang": "7f25ab2b25c4b73ce8a7a51b9a5f0d2ba21586028dc65d8b65262e40340cc58f"
+},
+{
+"slug": "news-215",
+"order": 5,
+"lang": "ru",
+"set": {
+"text": "заочная форма обучения — 26 095 человек;"
+},
+"sha_uz": "fe218c8b997cb79d15425e7e5c1ac14fb6290a3b029be982e68bbd493cf0072c",
+"sha_lang": "27f6655e7e7e06921560cbba0f57c24c547da500818923cccabbac7068ec9f37"
+},
+{
+"slug": "news-215",
+"order": 6,
+"lang": "ru",
+"set": {
+"text": "вечерняя форма обучения — 3 725 человек;"
+},
+"sha_uz": "fb06f3b91d6d77fb6b252b17a3204d8eb9e5f7b8e8ee4b1b2ac4591334f8935a",
+"sha_lang": "c76bfa166fd95dcecefd9b94c1c7b2d72c1cc6f61e630d9184f807b79784ecd7"
+},
+{
+"slug": "news-215",
+"order": 11,
+"lang": "ru",
+"set": {
+"text": "Согласно документу, с 2022/2023 учебного года в государственных высших учебных заведениях:"
+},
+"sha_uz": "245585321acc7523cae34c5e30f3c06940251f28d577dc4c6c8a86ef335f3207",
+"sha_lang": "073ad0f40caf672d994c7ff140ffc4a3589948010149f455328c3186a02037f5"
+},
+{
+"slug": "news-215",
+"order": 12,
+"lang": "ru",
+"set": {
+"text": "параметры государственного заказа на приём утверждаются указом Президента;"
+},
+"sha_uz": "35efe109aa80af6359da082cd87664c56293a55e9469ec1aa8a88f2b4886cc43",
+"sha_lang": "0761983b1589c94f0099b01828541904b59ef60c9ec217549c96e8cc77a3f97b"
+},
+{
+"slug": "news-215",
+"order": 13,
+"lang": "ru",
+"set": {
+"text": "вводится дистанционная форма обучения по направлениям бакалавриата;"
+},
+"sha_uz": "4edf5368d24b11162b1ab190ddb40065503fb93c2ec138c354c4c37909176533",
+"sha_lang": "7495a865a295125cf5428af61c46e51c18041a3a93c303c951be65a3461487b2"
+},
+{
+"slug": "news-215",
+"order": 15,
+"lang": "ru",
+"set": {
+"text": "При этом приём в магистратуру проводится два раза в год — в августе и январе."
+},
+"sha_uz": "bb7c59355e5c0546d6be1a949d8c3a0ef2d0800c7d9bb1bf29e23b38544844bb",
+"sha_lang": "45118086f74d2a9119ff3fb2f28970b0f6b0f4e515f5c2cbcd90139c5320aae2"
+},
+{
+"slug": "news-215",
+"order": 17,
+"lang": "ru",
+"set": {
+"text": "Вводится следующий порядок перевода обучающихся в государственные высшие учебные заведения:"
+},
+"sha_uz": "a2733d294ccff68992693bbb0dfc4e81c093ae797dadbfe96cf7ecbe33f93ec2",
+"sha_lang": "931f0b7a020ce729e336ca5cbbf802c742b6b6055d20cb548eef224da9c9f42c"
+},
+{
+"slug": "news-215",
+"order": 21,
+"lang": "ru",
+"set": {
+"text": "Справочно: перевод обучения из зарубежных стран, а также из филиалов иностранных вузов, действующих в нашей стране, и негосударственных высших образовательных организаций в государственные высшие образовательные учреждения осуществляется в соответствии с действующим порядком."
+},
+"sha_uz": "df939d69c3c74877c8b5a99c582c1fd13bf15addc0eb3371c4addfc640b28a9d",
+"sha_lang": "81ade0a9c2760d8b01551539234799da259f9f58ad2df007c34605d36c5b57a3"
+},
+{
+"slug": "news-215",
+"order": 6,
+"lang": "en",
+"set": {
+"text": "for the evening form of education — 3,725 people;"
+},
+"sha_uz": "fb06f3b91d6d77fb6b252b17a3204d8eb9e5f7b8e8ee4b1b2ac4591334f8935a",
+"sha_lang": "5e896eb887f6df716af5716711790336a0b9d81a1f925539b22801736b5526ce"
+},
+{
+"slug": "news-215",
+"order": 8,
+"lang": "en",
+"set": {
+"text": "MASTER'S DEGREE – 10,688 people."
+},
+"sha_uz": "24ff828eb701a80b329bf17e97a5eadb396a33f537a7457a8132a2abc9eeb9fe",
+"sha_lang": "58b32389c3261a8435446708932fdf124b299af79923e85e6122d977c5ba160e"
+},
+{
+"slug": "news-446",
+"order": 5,
+"lang": "ru",
+"set": {
+"text": "1. Справка-объективка"
+},
+"sha_uz": "46394ffb6f45a020d02cad33f4784e4f6e9502af4e1ee8f6408feb5ad67f498f",
+"sha_lang": "5363bfadc8865a02cae0c44c3977cbc50aaa7fca658f0e0d25e471bbe4dcc19a"
+},
+{
+"slug": "news-446",
+"order": 5,
+"lang": "en",
+"set": {
+"text": "1. Biographical data sheet (obyektivka)"
+},
+"sha_uz": "46394ffb6f45a020d02cad33f4784e4f6e9502af4e1ee8f6408feb5ad67f498f",
+"sha_lang": "63c6015e2eb99adcae2438d30346e1cc9f296db8cfa4bf8e7f48a8e7322a61dd"
+},
+{
+"slug": "news-446",
+"order": 9,
+"lang": "ru",
+"set": {
+"text": "5. Рекомендация руководителя кружка кафедры"
+},
+"sha_uz": "cf966f885f1bfdcd083bac09b143d5a8ae9861cc3ee0d1924769ae59409e325e",
+"sha_lang": "f975cce972e3381c226409fd2ee77ec40e3aae1987140b15a8992ae0b5ea521e"
+},
+{
+"slug": "news-446",
+"order": 8,
+"lang": "en",
+"set": {
+"text": "4. Recommendation of the faculty dean"
+},
+"sha_uz": "d0a05dbe37a03c97c45df10e49162ffdeb271287e80dc0cf575f5ff0ecef1fad",
+"sha_lang": "d4dd36f5a1a47d2a03b455351d6f3f52e455d2451dfc3787705f8f6f4cbad828"
+},
+{
+"slug": "news-446",
+"order": 9,
+"lang": "en",
+"set": {
+"text": "5. Recommendation of the head of the department's research club"
+},
+"sha_uz": "cf966f885f1bfdcd083bac09b143d5a8ae9861cc3ee0d1924769ae59409e325e",
+"sha_lang": "6a484a075493f7c279a425770a28a463f05a02a49947541b930b404370955719"
+},
+{
+"slug": "news-446",
+"order": 11,
+"lang": "en",
+"set": {
+"text": "7. List of scientific achievements (form 3.4)"
+},
+"sha_uz": "54c26b129d3a0123664adb97fe400ad3ec202699ad47ffaeb48ea6198e3fcc8f",
+"sha_lang": "9831106a9164ad988bde59b13ed2614b9f142d09294c80569f19ebec5bba7a64"
+},
+{
+"slug": "news-325",
+"order": 5,
+"lang": "ru",
+"set": {
+"text": "1. Справка-объективка"
+},
+"sha_uz": "46394ffb6f45a020d02cad33f4784e4f6e9502af4e1ee8f6408feb5ad67f498f",
+"sha_lang": "5363bfadc8865a02cae0c44c3977cbc50aaa7fca658f0e0d25e471bbe4dcc19a"
+},
+{
+"slug": "news-325",
+"order": 5,
+"lang": "en",
+"set": {
+"text": "1. Biographical data sheet (obyektivka)"
+},
+"sha_uz": "46394ffb6f45a020d02cad33f4784e4f6e9502af4e1ee8f6408feb5ad67f498f",
+"sha_lang": "63c6015e2eb99adcae2438d30346e1cc9f296db8cfa4bf8e7f48a8e7322a61dd"
+},
+{
+"slug": "news-325",
+"order": 9,
+"lang": "ru",
+"set": {
+"text": "5. Рекомендация руководителя кружка кафедры"
+},
+"sha_uz": "cf966f885f1bfdcd083bac09b143d5a8ae9861cc3ee0d1924769ae59409e325e",
+"sha_lang": "f975cce972e3381c226409fd2ee77ec40e3aae1987140b15a8992ae0b5ea521e"
+},
+{
+"slug": "news-325",
+"order": 8,
+"lang": "en",
+"set": {
+"text": "4. Recommendation of the faculty dean"
+},
+"sha_uz": "d0a05dbe37a03c97c45df10e49162ffdeb271287e80dc0cf575f5ff0ecef1fad",
+"sha_lang": "d4dd36f5a1a47d2a03b455351d6f3f52e455d2451dfc3787705f8f6f4cbad828"
+},
+{
+"slug": "news-325",
+"order": 9,
+"lang": "en",
+"set": {
+"text": "5. Recommendation of the head of the department's research club"
+},
+"sha_uz": "cf966f885f1bfdcd083bac09b143d5a8ae9861cc3ee0d1924769ae59409e325e",
+"sha_lang": "6a484a075493f7c279a425770a28a463f05a02a49947541b930b404370955719"
+},
+{
+"slug": "news-325",
+"order": 11,
+"lang": "en",
+"set": {
+"text": "7. List of scientific achievements (form 3.4)"
+},
+"sha_uz": "54c26b129d3a0123664adb97fe400ad3ec202699ad47ffaeb48ea6198e3fcc8f",
+"sha_lang": "9831106a9164ad988bde59b13ed2614b9f142d09294c80569f19ebec5bba7a64"
+},
+{
+"slug": "news-446",
+"order": 18,
+"lang": "en",
+"set": {
+"text": "\"Best Student\" \"Innovator Student\" \"Author of the Best Idea\" \"Strongest Athlete\" \"Most Creative Student\" \"Student with the Highest Scientific Achievements\" \"Polyglot Student\" \"Most Active Promoter Student\""
+},
+"sha_uz": "ef0b01522d65d2ef4a0f8334c6e5d0c4bfe1b77621f3aadcd80015fcd9f82ce2",
+"sha_lang": "805028818780c32aa894fab00cae45ee632fc5d1eafbc260ed23bf18c4724bcb"
+},
+{
+"slug": "news-330",
+"order": 4,
+"lang": "en",
+"set": {
+"text": "1. Application addressed to the Rector (sample); Application sample"
+},
+"sha_uz": "d86087508cebb0437bb9932a2cdaade4e25ac27f20ae7339c7c45edd1715ead3",
+"sha_lang": "757ea2f842b67145a5da94fba761a89a703dd8e530fa161f8016e2444ce918c7"
+},
+{
+"slug": "news-330",
+"order": 5,
+"lang": "en",
+"set": {
+"text": "2. Diploma (with supplement);"
+},
+"sha_uz": "f7fc483836fbdbdd935a72f0653769ce0731d49a6ddeb7e35f4226d84ed521d8",
+"sha_lang": "d713a0d436c1878a9470bdd67f637675b8b10f44b5034303897e6809e1a7ff44"
+},
+{
+"slug": "news-178",
+"order": 3,
+"lang": "ru",
+"set": {
+"text": "Согласно Указу, с 1 сентября 2022 года во всех юридических лицах, кроме бюджетных организаций, женщинам, имеющим непрерывный стаж работы за последние 6 месяцев, за каждый месяц из бюджета будет выплачиваться пособие по беременности и родам, исходя из размера минимальных потребительских расходов."
+},
+"sha_uz": "6b12c29f8217e849258d634cdfdcae5f32b81ac2748fbc073b9f688690488e13",
+"sha_lang": "3c22d09569b35141b0ec98814954a72397534cbf43ef552111f2fcab955d2a2f"
+},
+{
+"slug": "news-178",
+"order": 6,
+"lang": "en",
+"set": {
+"text": "- the contract fees of all women studying in master's programs at state higher education institutions will be covered, and at least 200 billion soums will be allocated for this annually;"
+},
+"sha_uz": "9aa6020e357baa62d19d6969961a1262ffd9bf14cd388009f2c3c06b4e74a60e",
+"sha_lang": "42def903ebae652081afb5997b824226b27bad5c6f1202acc0729f918190fce5"
+}
+]
