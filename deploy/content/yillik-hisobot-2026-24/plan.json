@@ -1,0 +1,272 @@
+[
+{
+"slug": "news-337",
+"order": 3,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело (рус), 1-я группа"
+},
+"sha_uz": "c8b7a37bdb8dfae92553633cb500e328d93082df3bc951285784b565d17fd429",
+"sha_lang": "a4321afb9edd719bae80631863528eb6110ad132bc68a1db8d7f552ad346547b"
+},
+{
+"slug": "news-337",
+"order": 3,
+"lang": "en",
+"set": {
+"text": "General Medicine (Rus), group 1"
+},
+"sha_uz": "c8b7a37bdb8dfae92553633cb500e328d93082df3bc951285784b565d17fd429",
+"sha_lang": "57ad47b9bf61c9f6da532ca44b98ca503ffa94065064941fe0e8160cf5a2854e"
+},
+{
+"slug": "news-337",
+"order": 4,
+"lang": "en",
+"set": {
+"text": "General Medicine, group 2"
+},
+"sha_uz": "6993e971c23aa85e94de48392a5261f282337798572e5ceae7c9ba085a38f03b",
+"sha_lang": "66cccc0d74522e79e5dd2f83625d3086c00ea54743bb21032d8a0d79df72d274"
+},
+{
+"slug": "news-337",
+"order": 5,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 3-я группа"
+},
+"sha_uz": "f895e571dac4e91b62daf73f963ab18c013448063754c177ea05621e6fd703c3",
+"sha_lang": "78711f949008abaf6577953144df17f0db454b31f76d878bd76b56c540ae07cf"
+},
+{
+"slug": "news-337",
+"order": 6,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 4-я группа"
+},
+"sha_uz": "5aae543e4563c5461ca2e74d7ba9d96ad088a4d53d8330370a8c91a8be68269e",
+"sha_lang": "0f27f237288c19e5cb98bbf24318c255f86f80d521896c927ee3d8d6a27f0003"
+},
+{
+"slug": "news-337",
+"order": 7,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 5-я группа"
+},
+"sha_uz": "36bef7a77c90fd3c7852b81ebb4798392658ffedff2e79ae6e33457597d59626",
+"sha_lang": "c5713dd86b5b0ae55c1d17067835f2b3d103805df583f63ba9f2c62de3a91626"
+},
+{
+"slug": "news-337",
+"order": 8,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 6-я группа"
+},
+"sha_uz": "8da282cc3c7f01a7d66c9150776702db1b49db95f733ecebe25a71586fb56a28",
+"sha_lang": "5c12a4f0e0d11a767f1e9a1e3cd793c7c70c6198a49d7bcc34ca6d8e7ad9604e"
+},
+{
+"slug": "news-337",
+"order": 9,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 7-я группа"
+},
+"sha_uz": "9af0b4c44743ffa72100da8a8ddf82519cacc627eb02b0bfd76444cf9ea7102c",
+"sha_lang": "191cafcec248f97d7c2337fa2556363be7c5821bda06c29c37b733c1d61864ee"
+},
+{
+"slug": "news-337",
+"order": 10,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, группа 7/1"
+},
+"sha_uz": "925569a52cfdab54c9ab3fab28fcd46c772c0792c53b20a6eebbf25b05c41d42",
+"sha_lang": "97d5efe07440722abdf25965c1b9e29307e2fa69e32858a9a50446d8998a551b"
+},
+{
+"slug": "news-337",
+"order": 11,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 8-я группа"
+},
+"sha_uz": "cf103c7577ac831cbd696926ae2d9854b3a1a8921e37fda8fef941eed334848e",
+"sha_lang": "5e952dfb5af7a3d278bfb6c48a4a1e5e9d0c87f98ca5c930b9bc4ff77e52c994"
+},
+{
+"slug": "news-337",
+"order": 12,
+"lang": "ru",
+"set": {
+"text": "Лечебное дело, 9-я группа"
+},
+"sha_uz": "dbcd6dd5ba658cff1e1199250f5db9ab8d4f1a7a3bf9310fbd7a07a6cff4cf55",
+"sha_lang": "10ff96f6b8c1c240f22937a901ca671e98c3168442eb8561f4f46d42f27a7e30"
+},
+{
+"slug": "news-337",
+"order": 25,
+"lang": "en",
+"set": {
+"text": "Pharmacy, group 5"
+},
+"sha_uz": "6574beda20bec488bdbe520d95aff76d21fb65b628a15e2338e57f669327e1b6",
+"sha_lang": "a2c236896f8edad6397da7fc2fef250834842d997d56b75cc33bf38a2982f686"
+},
+{
+"slug": "news-337",
+"order": 26,
+"lang": "en",
+"set": {
+"text": "Traditional medicine"
+},
+"sha_uz": "c26b8fcb3f8701f02480e7a8f9978dee45348592e899fa20ae25b33add971bc5",
+"sha_lang": "d8d1291577e3a9bc138ba0febaf966312096cd840db13375ce846fbe0d6e04dd"
+},
+{
+"slug": "news-337",
+"order": 27,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, group 1"
+},
+"sha_uz": "8968620d103ab267a6c49b5f57f3237d7e902d8392b286eccdf2621b5d772c3f",
+"sha_lang": "ace940ad7f05a5a4576aa7373612f88fbdb4bd0733081c3db6b571cd836142be"
+},
+{
+"slug": "news-337",
+"order": 28,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, group 2"
+},
+"sha_uz": "814ca00e1565b60d66381e08af96468d3c9612d6ed0a288015cc4a214db19e26",
+"sha_lang": "0cc1a00cda8b2a6284fc01554b74fbd7c2690efec86b01825972a57a8f6fba49"
+},
+{
+"slug": "news-337",
+"order": 29,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, group 3"
+},
+"sha_uz": "64fe19204cb35da207f3016a10cb3eaf4ce8f464cd71751ef81f58c70bac689b",
+"sha_lang": "b8d98b323b05cc399bfbf1a08d1bf796efc0564980ba404c9203239050709f83"
+},
+{
+"slug": "news-337",
+"order": 30,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, group 4"
+},
+"sha_uz": "a9fc2349b68a33e34ee63dd87d4d48011fbeeeaee5347415ccaaec3693971b2e",
+"sha_lang": "65bc4bbe982854f77be774442549a112bb0c36d763205ded5aa0c191f5ec8455"
+},
+{
+"slug": "news-337",
+"order": 31,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, group 5"
+},
+"sha_uz": "53dbadd31cc3224622ae21097f84a1be69928cd85f351dfad56e715318939146",
+"sha_lang": "24edf404a644dc388ceb56e21d603bfb342047eb5f0a85330b6519ed0b2f5244"
+},
+{
+"slug": "news-337",
+"order": 32,
+"lang": "en",
+"set": {
+"text": "Higher Nursing, Russian group"
+},
+"sha_uz": "80471f8112040941ee67fcc4bf430e1a22a843c2c65da099c07e49f9aa90966c",
+"sha_lang": "208a4ec4b991dd804448e26edb258084e1c2c5a9c4773ce8a38436811d2b2636"
+},
+{
+"slug": "news-337",
+"order": 33,
+"lang": "ru",
+"set": {
+"text": "Стоматология, 1-я группа"
+},
+"sha_uz": "d0746be688179a32559bf69a8abf881bfca739221ea3a74e1ef81e1e0296b761",
+"sha_lang": "ce1cfc7ef16d8bc2cdcf1a98dc23eb86c67e7389ae522186be85a11f011bd045"
+},
+{
+"slug": "news-337",
+"order": 33,
+"lang": "en",
+"set": {
+"text": "Dentistry, group 1"
+},
+"sha_uz": "d0746be688179a32559bf69a8abf881bfca739221ea3a74e1ef81e1e0296b761",
+"sha_lang": "e53143cbabfde93515dfd5ca1dc4a8ec2f74918a1313b4ed67178f021771f459"
+},
+{
+"slug": "news-337",
+"order": 34,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 1-я группа"
+},
+"sha_uz": "44c0af5f866f1a6969d88cf1cc6d4b4e1f8e8823c1a7bf05a78079ac4a29bfb5",
+"sha_lang": "cd84fd0cdcad256bf4b4b38cce43410b340ebedb595e6ff46e122f0547b6168f"
+},
+{
+"slug": "news-337",
+"order": 35,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 2-я группа"
+},
+"sha_uz": "d8022fad257c4d1d63e510afd29a5b4f3720673070a9d3fac4a9923638dc3324",
+"sha_lang": "5f4bc6d1e44d7dd94de1205140c923b07ea009bfca1ff04e9d09186dd9be2708"
+},
+{
+"slug": "news-337",
+"order": 36,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 3-я группа"
+},
+"sha_uz": "89263834d3c8558adb76abde54d740cadcab2983c955ec62ad684b5be72ecae8",
+"sha_lang": "c8628b681d470045b4880fd90295ad41f2a0d68be22f1d56523429fae67ff3f8"
+},
+{
+"slug": "news-337",
+"order": 37,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 4-я группа"
+},
+"sha_uz": "e59872679c6be15a722c81c158867f60ba5b1444a4c8564bbabd1be2f8f9fe75",
+"sha_lang": "fc90b8776637931a3bf3a29f19edc2b945afa7754b7050b31bd87881e28b43c9"
+},
+{
+"slug": "news-337",
+"order": 38,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 5-я группа"
+},
+"sha_uz": "c8b9c7c63bfc0122653d6d21575fcb4ad6d7e506b764fa9ebe26fac8531d4049",
+"sha_lang": "a2ba010876ee5dbd56c67b3dcc229170529ddd5d9783fabba67ffc6ef25f461f"
+},
+{
+"slug": "news-337",
+"order": 39,
+"lang": "ru",
+"set": {
+"text": "Медицинская профилактика, 6-я группа"
+},
+"sha_uz": "a5e7d713637434c0da0a1b0d409525cd984cbb1b76a138ae93e79ae9f60ae1f1",
+"sha_lang": "6054bd63308dce72b2d30d65c1fc1de9a15206a7dc788d55fd4e9e9725f49f81"
+}
+]
