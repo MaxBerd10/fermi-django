@@ -1,0 +1,1374 @@
+[
+{
+"slug": "department-10",
+"order": 10,
+"lang": "ru",
+"id_uz": 5374,
+"id_lang": 5375
+},
+{
+"slug": "department-10",
+"order": 10,
+"lang": "en",
+"id_uz": 5374,
+"id_lang": 5373
+},
+{
+"slug": "department-10",
+"order": 14,
+"lang": "en",
+"id_uz": 5376,
+"id_lang": 5375
+},
+{
+"slug": "department-10",
+"order": 49,
+"lang": "ru",
+"id_uz": 5381,
+"id_lang": 5382
+},
+{
+"slug": "department-10",
+"order": 49,
+"lang": "en",
+"id_uz": 5381,
+"id_lang": 5382
+},
+{
+"slug": "department-10",
+"order": 53,
+"lang": "ru",
+"id_uz": 5383,
+"id_lang": 5384
+},
+{
+"slug": "department-10",
+"order": 53,
+"lang": "en",
+"id_uz": 5383,
+"id_lang": 5384
+},
+{
+"slug": "department-10",
+"order": 55,
+"lang": "en",
+"id_uz": 5382,
+"id_lang": 5385
+},
+{
+"slug": "department-10",
+"order": 57,
+"lang": "en",
+"id_uz": 5384,
+"id_lang": 5386
+},
+{
+"slug": "department-10",
+"order": 62,
+"lang": "ru",
+"id_uz": 5387,
+"id_lang": 5386
+},
+{
+"slug": "department-11",
+"order": 2,
+"lang": "en",
+"id_uz": 5389,
+"id_lang": 5390
+},
+{
+"slug": "department-11",
+"order": 9,
+"lang": "ru",
+"id_uz": 5391,
+"id_lang": 5392
+},
+{
+"slug": "department-11",
+"order": 9,
+"lang": "en",
+"id_uz": 5391,
+"id_lang": 5393
+},
+{
+"slug": "department-11",
+"order": 12,
+"lang": "ru",
+"id_uz": 5394,
+"id_lang": 5395
+},
+{
+"slug": "department-11",
+"order": 12,
+"lang": "en",
+"id_uz": 5394,
+"id_lang": 5396
+},
+{
+"slug": "department-11",
+"order": 15,
+"lang": "ru",
+"id_uz": 5397,
+"id_lang": 5398
+},
+{
+"slug": "department-11",
+"order": 15,
+"lang": "en",
+"id_uz": 5397,
+"id_lang": 5399
+},
+{
+"slug": "department-11",
+"order": 19,
+"lang": "ru",
+"id_uz": 5400,
+"id_lang": 5401
+},
+{
+"slug": "department-11",
+"order": 19,
+"lang": "en",
+"id_uz": 5400,
+"id_lang": 5402
+},
+{
+"slug": "department-11",
+"order": 23,
+"lang": "en",
+"id_uz": 5403,
+"id_lang": 5404
+},
+{
+"slug": "department-11",
+"order": 27,
+"lang": "ru",
+"id_uz": 5405,
+"id_lang": 5406
+},
+{
+"slug": "department-11",
+"order": 27,
+"lang": "en",
+"id_uz": 5405,
+"id_lang": 5407
+},
+{
+"slug": "department-11",
+"order": 31,
+"lang": "ru",
+"id_uz": 5408,
+"id_lang": 5409
+},
+{
+"slug": "department-11",
+"order": 31,
+"lang": "en",
+"id_uz": 5408,
+"id_lang": 5410
+},
+{
+"slug": "department-12",
+"order": 10,
+"lang": "en",
+"id_uz": 5424,
+"id_lang": 5425
+},
+{
+"slug": "department-12",
+"order": 38,
+"lang": "ru",
+"id_uz": 5430,
+"id_lang": 5431
+},
+{
+"slug": "department-12",
+"order": 44,
+"lang": "ru",
+"id_uz": 5432,
+"id_lang": 5433
+},
+{
+"slug": "department-12",
+"order": 46,
+"lang": "ru",
+"id_uz": 5435,
+"id_lang": 5436
+},
+{
+"slug": "department-12",
+"order": 52,
+"lang": "ru",
+"id_uz": 5438,
+"id_lang": 5439
+},
+{
+"slug": "department-14",
+"order": 19,
+"lang": "ru",
+"id_uz": 5449,
+"id_lang": 5450
+},
+{
+"slug": "department-14",
+"order": 19,
+"lang": "en",
+"id_uz": 5449,
+"id_lang": 5451
+},
+{
+"slug": "department-14",
+"order": 23,
+"lang": "ru",
+"id_uz": 5450,
+"id_lang": 5452
+},
+{
+"slug": "department-14",
+"order": 23,
+"lang": "en",
+"id_uz": 5450,
+"id_lang": 5453
+},
+{
+"slug": "department-14",
+"order": 27,
+"lang": "ru",
+"id_uz": 5454,
+"id_lang": 5455
+},
+{
+"slug": "department-14",
+"order": 27,
+"lang": "en",
+"id_uz": 5454,
+"id_lang": 5456
+},
+{
+"slug": "department-14",
+"order": 31,
+"lang": "ru",
+"id_uz": 5457,
+"id_lang": 5458
+},
+{
+"slug": "department-14",
+"order": 35,
+"lang": "ru",
+"id_uz": 5452,
+"id_lang": 5451
+},
+{
+"slug": "department-14",
+"order": 39,
+"lang": "ru",
+"id_uz": 5455,
+"id_lang": 5453
+},
+{
+"slug": "department-14",
+"order": 43,
+"lang": "ru",
+"id_uz": 5459,
+"id_lang": 5456
+},
+{
+"slug": "department-19",
+"order": 2,
+"lang": "en",
+"id_uz": 5481,
+"id_lang": 5482
+},
+{
+"slug": "department-19",
+"order": 25,
+"lang": "en",
+"id_uz": 5482,
+"id_lang": 5483
+},
+{
+"slug": "department-19",
+"order": 28,
+"lang": "ru",
+"id_uz": 5484,
+"id_lang": 5483
+},
+{
+"slug": "department-19",
+"order": 28,
+"lang": "en",
+"id_uz": 5484,
+"id_lang": 5485
+},
+{
+"slug": "department-19",
+"order": 31,
+"lang": "ru",
+"id_uz": 5486,
+"id_lang": 5487
+},
+{
+"slug": "department-19",
+"order": 47,
+"lang": "ru",
+"id_uz": 5490,
+"id_lang": 5491
+},
+{
+"slug": "department-19",
+"order": 47,
+"lang": "en",
+"id_uz": 5490,
+"id_lang": 5492
+},
+{
+"slug": "department-19",
+"order": 58,
+"lang": "ru",
+"id_uz": 5493,
+"id_lang": 5494
+},
+{
+"slug": "department-19",
+"order": 58,
+"lang": "en",
+"id_uz": 5493,
+"id_lang": 5495
+},
+{
+"slug": "department-20",
+"order": 32,
+"lang": "ru",
+"id_uz": 5505,
+"id_lang": 5502
+},
+{
+"slug": "department-20",
+"order": 36,
+"lang": "ru",
+"id_uz": 5506,
+"id_lang": 5507
+},
+{
+"slug": "department-20",
+"order": 44,
+"lang": "ru",
+"id_uz": 5509,
+"id_lang": 5510
+},
+{
+"slug": "department-20",
+"order": 44,
+"lang": "en",
+"id_uz": 5509,
+"id_lang": 5502
+},
+{
+"slug": "department-20",
+"order": 48,
+"lang": "en",
+"id_uz": 5511,
+"id_lang": 5508
+},
+{
+"slug": "department-20",
+"order": 60,
+"lang": "ru",
+"id_uz": 5514,
+"id_lang": 5515
+},
+{
+"slug": "department-20",
+"order": 60,
+"lang": "en",
+"id_uz": 5514,
+"id_lang": 5509
+},
+{
+"slug": "department-20",
+"order": 67,
+"lang": "en",
+"id_uz": 5507,
+"id_lang": 5511
+},
+{
+"slug": "department-20",
+"order": 71,
+"lang": "en",
+"id_uz": 5517,
+"id_lang": 5512
+},
+{
+"slug": "department-20",
+"order": 79,
+"lang": "en",
+"id_uz": 5515,
+"id_lang": 5518
+},
+{
+"slug": "department-20",
+"order": 81,
+"lang": "en",
+"id_uz": 5518,
+"id_lang": 5519
+},
+{
+"slug": "department-26",
+"order": 27,
+"lang": "en",
+"id_uz": 5533,
+"id_lang": 5531
+},
+{
+"slug": "department-26",
+"order": 31,
+"lang": "en",
+"id_uz": 5534,
+"id_lang": 5532
+},
+{
+"slug": "department-26",
+"order": 35,
+"lang": "en",
+"id_uz": 5535,
+"id_lang": 5536
+},
+{
+"slug": "department-26",
+"order": 44,
+"lang": "ru",
+"id_uz": 5538,
+"id_lang": 5536
+},
+{
+"slug": "department-26",
+"order": 60,
+"lang": "ru",
+"id_uz": 5541,
+"id_lang": 5542
+},
+{
+"slug": "department-26",
+"order": 60,
+"lang": "en",
+"id_uz": 5541,
+"id_lang": 5543
+},
+{
+"slug": "department-26",
+"order": 65,
+"lang": "ru",
+"id_uz": 5543,
+"id_lang": 5544
+},
+{
+"slug": "department-28",
+"order": 8,
+"lang": "ru",
+"id_uz": 5549,
+"id_lang": 5550
+},
+{
+"slug": "department-28",
+"order": 8,
+"lang": "en",
+"id_uz": 5549,
+"id_lang": 5550
+},
+{
+"slug": "department-28",
+"order": 13,
+"lang": "ru",
+"id_uz": 5550,
+"id_lang": 5551
+},
+{
+"slug": "department-28",
+"order": 13,
+"lang": "en",
+"id_uz": 5550,
+"id_lang": 5552
+},
+{
+"slug": "department-28",
+"order": 16,
+"lang": "en",
+"id_uz": 5551,
+"id_lang": 5553
+},
+{
+"slug": "department-28",
+"order": 29,
+"lang": "en",
+"id_uz": 5555,
+"id_lang": 5557
+},
+{
+"slug": "department-28",
+"order": 31,
+"lang": "en",
+"id_uz": 5558,
+"id_lang": 5560
+},
+{
+"slug": "department-28",
+"order": 35,
+"lang": "ru",
+"id_uz": 5561,
+"id_lang": 5562
+},
+{
+"slug": "department-28",
+"order": 35,
+"lang": "en",
+"id_uz": 5561,
+"id_lang": 5563
+},
+{
+"slug": "department-29",
+"order": 5,
+"lang": "en",
+"id_uz": 5568,
+"id_lang": 5567
+},
+{
+"slug": "department-29",
+"order": 9,
+"lang": "en",
+"id_uz": 5569,
+"id_lang": 5568
+},
+{
+"slug": "department-29",
+"order": 13,
+"lang": "en",
+"id_uz": 5570,
+"id_lang": 5569
+},
+{
+"slug": "department-29",
+"order": 30,
+"lang": "ru",
+"id_uz": 5571,
+"id_lang": 5572
+},
+{
+"slug": "department-29",
+"order": 30,
+"lang": "en",
+"id_uz": 5571,
+"id_lang": 5573
+},
+{
+"slug": "department-29",
+"order": 34,
+"lang": "en",
+"id_uz": 5572,
+"id_lang": 5574
+},
+{
+"slug": "department-29",
+"order": 37,
+"lang": "en",
+"id_uz": 5574,
+"id_lang": 5575
+},
+{
+"slug": "department-29",
+"order": 41,
+"lang": "en",
+"id_uz": 5575,
+"id_lang": 5576
+},
+{
+"slug": "department-29",
+"order": 46,
+"lang": "en",
+"id_uz": 5576,
+"id_lang": 5577
+},
+{
+"slug": "department-29",
+"order": 48,
+"lang": "en",
+"id_uz": 5577,
+"id_lang": 5578
+},
+{
+"slug": "department-29",
+"order": 51,
+"lang": "en",
+"id_uz": 5578,
+"id_lang": 5579
+},
+{
+"slug": "department-29",
+"order": 57,
+"lang": "ru",
+"id_uz": 5580,
+"id_lang": 5574
+},
+{
+"slug": "department-29",
+"order": 57,
+"lang": "en",
+"id_uz": 5580,
+"id_lang": 5581
+},
+{
+"slug": "department-30",
+"order": 33,
+"lang": "ru",
+"id_uz": 5585,
+"id_lang": 5586
+},
+{
+"slug": "department-33",
+"order": 12,
+"lang": "ru",
+"id_uz": 5604,
+"id_lang": 5605
+},
+{
+"slug": "department-33",
+"order": 12,
+"lang": "en",
+"id_uz": 5604,
+"id_lang": 5605
+},
+{
+"slug": "department-33",
+"order": 15,
+"lang": "ru",
+"id_uz": 5606,
+"id_lang": 5607
+},
+{
+"slug": "department-33",
+"order": 15,
+"lang": "en",
+"id_uz": 5606,
+"id_lang": 5608
+},
+{
+"slug": "department-37",
+"order": 16,
+"lang": "ru",
+"id_uz": 5625,
+"id_lang": 5623
+},
+{
+"slug": "department-37",
+"order": 19,
+"lang": "ru",
+"id_uz": 5626,
+"id_lang": 5625
+},
+{
+"slug": "department-37",
+"order": 22,
+"lang": "ru",
+"id_uz": 5627,
+"id_lang": 5626
+},
+{
+"slug": "department-38",
+"order": 13,
+"lang": "ru",
+"id_uz": 5630,
+"id_lang": 5631
+},
+{
+"slug": "department-39",
+"order": 21,
+"lang": "en",
+"id_uz": 5645,
+"id_lang": 5646
+},
+{
+"slug": "department-39",
+"order": 24,
+"lang": "ru",
+"id_uz": 5647,
+"id_lang": 5643
+},
+{
+"slug": "department-39",
+"order": 24,
+"lang": "en",
+"id_uz": 5647,
+"id_lang": 5648
+},
+{
+"slug": "department-39",
+"order": 28,
+"lang": "ru",
+"id_uz": 5648,
+"id_lang": 5647
+},
+{
+"slug": "department-4",
+"order": 18,
+"lang": "ru",
+"id_uz": 5265,
+"id_lang": 5266
+},
+{
+"slug": "department-4",
+"order": 22,
+"lang": "ru",
+"id_uz": 5266,
+"id_lang": 5267
+},
+{
+"slug": "department-4",
+"order": 22,
+"lang": "en",
+"id_uz": 5266,
+"id_lang": 5268
+},
+{
+"slug": "department-4",
+"order": 26,
+"lang": "ru",
+"id_uz": 5268,
+"id_lang": 5269
+},
+{
+"slug": "department-4",
+"order": 26,
+"lang": "en",
+"id_uz": 5268,
+"id_lang": 5270
+},
+{
+"slug": "department-40",
+"order": 2,
+"lang": "en",
+"id_uz": 5651,
+"id_lang": 5652
+},
+{
+"slug": "department-40",
+"order": 19,
+"lang": "en",
+"id_uz": 5653,
+"id_lang": 5654
+},
+{
+"slug": "department-40",
+"order": 22,
+"lang": "ru",
+"id_uz": 5655,
+"id_lang": 5651
+},
+{
+"slug": "department-40",
+"order": 42,
+"lang": "en",
+"id_uz": 5663,
+"id_lang": 5664
+},
+{
+"slug": "department-40",
+"order": 50,
+"lang": "en",
+"id_uz": 5665,
+"id_lang": 5666
+},
+{
+"slug": "department-40",
+"order": 56,
+"lang": "ru",
+"id_uz": 5667,
+"id_lang": 5668
+},
+{
+"slug": "department-40",
+"order": 61,
+"lang": "ru",
+"id_uz": 5669,
+"id_lang": 5670
+},
+{
+"slug": "department-41",
+"order": 1,
+"lang": "en",
+"id_uz": 5676,
+"id_lang": 5677
+},
+{
+"slug": "department-41",
+"order": 8,
+"lang": "ru",
+"id_uz": 5678,
+"id_lang": 5679
+},
+{
+"slug": "department-42",
+"order": 8,
+"lang": "ru",
+"id_uz": 5568,
+"id_lang": 5682
+},
+{
+"slug": "department-42",
+"order": 31,
+"lang": "ru",
+"id_uz": 5686,
+"id_lang": 5687
+},
+{
+"slug": "department-42",
+"order": 31,
+"lang": "en",
+"id_uz": 5686,
+"id_lang": 5687
+},
+{
+"slug": "department-42",
+"order": 34,
+"lang": "ru",
+"id_uz": 5687,
+"id_lang": 5688
+},
+{
+"slug": "department-42",
+"order": 34,
+"lang": "en",
+"id_uz": 5687,
+"id_lang": 5688
+},
+{
+"slug": "department-42",
+"order": 37,
+"lang": "ru",
+"id_uz": 5688,
+"id_lang": 5689
+},
+{
+"slug": "department-42",
+"order": 37,
+"lang": "en",
+"id_uz": 5688,
+"id_lang": 5689
+},
+{
+"slug": "department-42",
+"order": 41,
+"lang": "ru",
+"id_uz": 5689,
+"id_lang": 5690
+},
+{
+"slug": "department-42",
+"order": 41,
+"lang": "en",
+"id_uz": 5689,
+"id_lang": 5691
+},
+{
+"slug": "department-42",
+"order": 44,
+"lang": "ru",
+"id_uz": 5690,
+"id_lang": 5691
+},
+{
+"slug": "department-42",
+"order": 48,
+"lang": "ru",
+"id_uz": 5691,
+"id_lang": 5692
+},
+{
+"slug": "department-43",
+"order": 11,
+"lang": "en",
+"id_uz": 5694,
+"id_lang": 5695
+},
+{
+"slug": "department-43",
+"order": 15,
+"lang": "ru",
+"id_uz": 5696,
+"id_lang": 5697
+},
+{
+"slug": "department-43",
+"order": 15,
+"lang": "en",
+"id_uz": 5696,
+"id_lang": 5697
+},
+{
+"slug": "department-43",
+"order": 18,
+"lang": "ru",
+"id_uz": 5698,
+"id_lang": 5699
+},
+{
+"slug": "department-43",
+"order": 21,
+"lang": "ru",
+"id_uz": 5700,
+"id_lang": 5701
+},
+{
+"slug": "department-43",
+"order": 24,
+"lang": "ru",
+"id_uz": 5702,
+"id_lang": 5703
+},
+{
+"slug": "department-43",
+"order": 31,
+"lang": "ru",
+"id_uz": 5705,
+"id_lang": 5706
+},
+{
+"slug": "department-43",
+"order": 31,
+"lang": "en",
+"id_uz": 5705,
+"id_lang": 5707
+},
+{
+"slug": "department-43",
+"order": 33,
+"lang": "en",
+"id_uz": 5708,
+"id_lang": 5699
+},
+{
+"slug": "department-43",
+"order": 35,
+"lang": "en",
+"id_uz": 5709,
+"id_lang": 5710
+},
+{
+"slug": "department-43",
+"order": 37,
+"lang": "en",
+"id_uz": 5697,
+"id_lang": 5711
+},
+{
+"slug": "department-43",
+"order": 41,
+"lang": "en",
+"id_uz": 5707,
+"id_lang": 5701
+},
+{
+"slug": "department-43",
+"order": 43,
+"lang": "en",
+"id_uz": 5699,
+"id_lang": 5703
+},
+{
+"slug": "department-43",
+"order": 45,
+"lang": "en",
+"id_uz": 5712,
+"id_lang": 5713
+},
+{
+"slug": "department-43",
+"order": 47,
+"lang": "en",
+"id_uz": 5710,
+"id_lang": 5706
+},
+{
+"slug": "department-5",
+"order": 4,
+"lang": "ru",
+"id_uz": 5277,
+"id_lang": 5278
+},
+{
+"slug": "department-5",
+"order": 4,
+"lang": "en",
+"id_uz": 5277,
+"id_lang": 5279
+},
+{
+"slug": "department-5",
+"order": 8,
+"lang": "ru",
+"id_uz": 5280,
+"id_lang": 5277
+},
+{
+"slug": "department-5",
+"order": 12,
+"lang": "ru",
+"id_uz": 5281,
+"id_lang": 5280
+},
+{
+"slug": "department-5",
+"order": 16,
+"lang": "ru",
+"id_uz": 5282,
+"id_lang": 5281
+},
+{
+"slug": "department-5",
+"order": 20,
+"lang": "ru",
+"id_uz": 5283,
+"id_lang": 5282
+},
+{
+"slug": "department-5",
+"order": 24,
+"lang": "ru",
+"id_uz": 5284,
+"id_lang": 5283
+},
+{
+"slug": "department-5",
+"order": 28,
+"lang": "ru",
+"id_uz": 5285,
+"id_lang": 5284
+},
+{
+"slug": "department-5",
+"order": 32,
+"lang": "ru",
+"id_uz": 5286,
+"id_lang": 5285
+},
+{
+"slug": "department-5",
+"order": 36,
+"lang": "ru",
+"id_uz": 5287,
+"id_lang": 5286
+},
+{
+"slug": "department-5",
+"order": 68,
+"lang": "ru",
+"id_uz": 5291,
+"id_lang": 5279
+},
+{
+"slug": "department-5",
+"order": 82,
+"lang": "en",
+"id_uz": 5292,
+"id_lang": 5293
+},
+{
+"slug": "department-6",
+"order": 15,
+"lang": "en",
+"id_uz": 5298,
+"id_lang": 5299
+},
+{
+"slug": "department-6",
+"order": 19,
+"lang": "en",
+"id_uz": 5300,
+"id_lang": 5301
+},
+{
+"slug": "department-6",
+"order": 22,
+"lang": "en",
+"id_uz": 5299,
+"id_lang": 5302
+},
+{
+"slug": "department-6",
+"order": 25,
+"lang": "en",
+"id_uz": 5301,
+"id_lang": 5303
+},
+{
+"slug": "department-6",
+"order": 31,
+"lang": "en",
+"id_uz": 5302,
+"id_lang": 5305
+},
+{
+"slug": "department-6",
+"order": 34,
+"lang": "en",
+"id_uz": 5303,
+"id_lang": 5306
+},
+{
+"slug": "department-6",
+"order": 37,
+"lang": "ru",
+"id_uz": 5305,
+"id_lang": 5302
+},
+{
+"slug": "department-6",
+"order": 37,
+"lang": "en",
+"id_uz": 5305,
+"id_lang": 5307
+},
+{
+"slug": "department-6",
+"order": 40,
+"lang": "ru",
+"id_uz": 5308,
+"id_lang": 5303
+},
+{
+"slug": "department-6",
+"order": 40,
+"lang": "en",
+"id_uz": 5308,
+"id_lang": 5309
+},
+{
+"slug": "department-6",
+"order": 43,
+"lang": "ru",
+"id_uz": 5306,
+"id_lang": 5305
+},
+{
+"slug": "department-7",
+"order": 15,
+"lang": "ru",
+"id_uz": 5312,
+"id_lang": 5313
+},
+{
+"slug": "department-7",
+"order": 17,
+"lang": "ru",
+"id_uz": 5314,
+"id_lang": 5312
+},
+{
+"slug": "department-7",
+"order": 21,
+"lang": "ru",
+"id_uz": 5315,
+"id_lang": 5316
+},
+{
+"slug": "department-7",
+"order": 21,
+"lang": "en",
+"id_uz": 5315,
+"id_lang": 5317
+},
+{
+"slug": "department-7",
+"order": 24,
+"lang": "ru",
+"id_uz": 5318,
+"id_lang": 5319
+},
+{
+"slug": "department-7",
+"order": 27,
+"lang": "ru",
+"id_uz": 5320,
+"id_lang": 5321
+},
+{
+"slug": "department-7",
+"order": 30,
+"lang": "ru",
+"id_uz": 5322,
+"id_lang": 5320
+},
+{
+"slug": "department-7",
+"order": 30,
+"lang": "en",
+"id_uz": 5322,
+"id_lang": 5323
+},
+{
+"slug": "department-7",
+"order": 33,
+"lang": "en",
+"id_uz": 5324,
+"id_lang": 5322
+},
+{
+"slug": "department-7",
+"order": 36,
+"lang": "ru",
+"id_uz": 5325,
+"id_lang": 5322
+},
+{
+"slug": "department-7",
+"order": 36,
+"lang": "en",
+"id_uz": 5325,
+"id_lang": 5326
+},
+{
+"slug": "department-7",
+"order": 40,
+"lang": "ru",
+"id_uz": 5327,
+"id_lang": 5324
+},
+{
+"slug": "department-7",
+"order": 40,
+"lang": "en",
+"id_uz": 5327,
+"id_lang": 5328
+},
+{
+"slug": "department-7",
+"order": 44,
+"lang": "ru",
+"id_uz": 5329,
+"id_lang": 5330
+},
+{
+"slug": "department-8",
+"order": 28,
+"lang": "ru",
+"id_uz": 5347,
+"id_lang": 5348
+},
+{
+"slug": "department-8",
+"order": 28,
+"lang": "en",
+"id_uz": 5347,
+"id_lang": 5349
+},
+{
+"slug": "department-8",
+"order": 31,
+"lang": "ru",
+"id_uz": 5350,
+"id_lang": 5351
+},
+{
+"slug": "department-8",
+"order": 31,
+"lang": "en",
+"id_uz": 5350,
+"id_lang": 5348
+},
+{
+"slug": "department-8",
+"order": 34,
+"lang": "ru",
+"id_uz": 5352,
+"id_lang": 5353
+},
+{
+"slug": "department-8",
+"order": 34,
+"lang": "en",
+"id_uz": 5352,
+"id_lang": 5348
+},
+{
+"slug": "department-8",
+"order": 37,
+"lang": "en",
+"id_uz": 5354,
+"id_lang": 5347
+},
+{
+"slug": "department-8",
+"order": 40,
+"lang": "ru",
+"id_uz": 5355,
+"id_lang": 5356
+},
+{
+"slug": "department-8",
+"order": 40,
+"lang": "en",
+"id_uz": 5355,
+"id_lang": 5350
+},
+{
+"slug": "department-8",
+"order": 43,
+"lang": "ru",
+"id_uz": 5357,
+"id_lang": 5358
+},
+{
+"slug": "department-8",
+"order": 43,
+"lang": "en",
+"id_uz": 5357,
+"id_lang": 5352
+},
+{
+"slug": "department-8",
+"order": 46,
+"lang": "ru",
+"id_uz": 5359,
+"id_lang": 5360
+},
+{
+"slug": "department-8",
+"order": 49,
+"lang": "ru",
+"id_uz": 5361,
+"id_lang": 5362
+},
+{
+"slug": "department-8",
+"order": 62,
+"lang": "ru",
+"id_uz": 5363,
+"id_lang": 5364
+},
+{
+"slug": "department-8",
+"order": 65,
+"lang": "en",
+"id_uz": 5360,
+"id_lang": 5366
+},
+{
+"slug": "department-8",
+"order": 72,
+"lang": "ru",
+"id_uz": 5362,
+"id_lang": 5367
+},
+{
+"slug": "department-8",
+"order": 72,
+"lang": "en",
+"id_uz": 5362,
+"id_lang": 5368
+},
+{
+"slug": "department-8",
+"order": 75,
+"lang": "ru",
+"id_uz": 5364,
+"id_lang": 5369
+}
+]
