@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { ContentBlock } from "@/types/blocks";
 import { optimizedImageUrl } from "@/lib/imageProxy";
@@ -14,6 +15,29 @@ function toAbsoluteUrl(path: string): string {
   if (!path || path.startsWith("http")) return path;
   const apiOrigin = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/api\/v1\/?$/, "") || "";
   return apiOrigin ? `${apiOrigin}${path}` : path;
+}
+
+/**
+ * One video. A portrait video (phone format, 9:16) would be ~1200px tall in the usual 672px column, taller than the
+ * screen, so once the browser knows the real size of the video a portrait one gets a narrower column (it then fits
+ * on a screen, and the player controls stay in view); a landscape video keeps the full width.
+ */
+function VideoBlock({ src, poster, caption }: { src: string; poster: string; caption?: string }) {
+  const [portrait, setPortrait] = useState(false);
+  return (
+    <figure className={`mx-auto ${portrait ? "max-w-sm" : "max-w-2xl"}`}>
+      <video
+        controls
+        preload="metadata"
+        poster={poster}
+        className="w-full rounded-xl"
+        onLoadedMetadata={(e) => setPortrait(e.currentTarget.videoHeight > e.currentTarget.videoWidth)}
+      >
+        <source src={src} />
+      </video>
+      {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
+    </figure>
+  );
 }
 
 /**
@@ -127,14 +151,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     case "video": {
       const { video, caption } = block.data;
       if (!video) return null;
-      return (
-        <figure className="mx-auto max-w-2xl">
-          <video controls preload="metadata" poster={toAbsoluteUrl(video.poster.file)} className="w-full rounded-xl">
-            <source src={toAbsoluteUrl(video.file)} />
-          </video>
-          {caption && <figcaption className="mt-2 text-sm text-foreground-600">{caption}</figcaption>}
-        </figure>
-      );
+      return <VideoBlock src={toAbsoluteUrl(video.file)} poster={toAbsoluteUrl(video.poster.file)} caption={caption} />;
     }
 
     case "table": {
