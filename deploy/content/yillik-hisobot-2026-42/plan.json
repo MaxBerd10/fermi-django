@@ -1,0 +1,124 @@
+[
+ {
+  "slug": "lavozim-yoriqnomasi",
+  "order": 1,
+  "fp": {
+   "uz": "ed180f4e16d9b8f45440c308b136ecf0c2a8d66ed0d3d2f6a4fcaf06c9c2bfc8",
+   "ru": "ed180f4e16d9b8f45440c308b136ecf0c2a8d66ed0d3d2f6a4fcaf06c9c2bfc8",
+   "en": "ed180f4e16d9b8f45440c308b136ecf0c2a8d66ed0d3d2f6a4fcaf06c9c2bfc8"
+  },
+  "images": [
+   {
+    "media": "migrated/img/yangilikar/O`quv bo`limi/Lavozim yoriqnomasi.jpg",
+    "alt": {
+     "uz": "Institut yoʻriqnomasi",
+     "ru": "Инструкции института",
+     "en": "Instructions of the institute"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "kredit-modul-nizomi",
+  "order": 1,
+  "fp": {
+   "uz": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
+   "ru": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
+   "en": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf"
+  },
+  "images": [
+   {
+    "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
+    "alt": {
+     "uz": "Institut kredit modul nizomi",
+     "ru": "Устав кредитного модуля института",
+     "en": "Institute credit module charter"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "institut-test-markazi-nizomi",
+  "order": 1,
+  "fp": {
+   "uz": "f881fb49c2ad85f311c8c9dfd3d82c72ed3748f7c5ac149d7ac51be1f0802a53",
+   "ru": "f881fb49c2ad85f311c8c9dfd3d82c72ed3748f7c5ac149d7ac51be1f0802a53",
+   "en": "f881fb49c2ad85f311c8c9dfd3d82c72ed3748f7c5ac149d7ac51be1f0802a53"
+  },
+  "images": [
+   {
+    "media": "migrated/img/yangilikar/TEST markazi/Test markazi.jpg",
+    "alt": {
+     "uz": "Institut test markazi nizomi",
+     "ru": "Устав тестированного центра института",
+     "en": "Institute test center charter"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "talabalar-kengashi-nizomi",
+  "order": 1,
+  "fp": {
+   "uz": "477934c6556ca14e867f5ece02cf252f06353efb1465e5b0910f65200e78a582",
+   "ru": "477934c6556ca14e867f5ece02cf252f06353efb1465e5b0910f65200e78a582",
+   "en": "477934c6556ca14e867f5ece02cf252f06353efb1465e5b0910f65200e78a582"
+  },
+  "images": [
+   {
+    "media": "migrated/img/yangilikar/O`quv bo`limi/Talabalar kengashi.jpg",
+    "alt": {
+     "uz": "Talabalar kengashi nizomi",
+     "ru": "Устав студенческого совета",
+     "en": "Position about the student council"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "institut-talim-yonalishlari-va-imkoniyatlari",
+  "order": 1,
+  "fp": {
+   "uz": "f146c1f36b07ae414079db318278346074e601aa77c628bc20bc0d2c1cff192f",
+   "ru": "cd91eaab8d424dd3cbf2c1877e4ba63897beaef667896b347f8a4b47ee2b3d7d",
+   "en": "f146c1f36b07ae414079db318278346074e601aa77c628bc20bc0d2c1cff192f"
+  },
+  "images": [
+   {
+    "media": "migrated/img/fotogallery/QABUL-2024/Buklet qabul/FJSTI Buklet-1.jpg",
+    "alt": {
+     "uz": "Institut taʻlim yoʻnalishlari va imkoniyatlari (1/2)",
+     "ru": "Образовательные направления и возможности Института (1/2)",
+     "en": "Educational directions and opportunities of the Institute (1/2)"
+    }
+   },
+   {
+    "media": "migrated/img/fotogallery/QABUL-2024/Buklet qabul/FJSTI Buklet-2.jpg",
+    "alt": {
+     "uz": "Institut taʻlim yoʻnalishlari va imkoniyatlari (2/2)",
+     "ru": "Образовательные направления и возможности Института (2/2)",
+     "en": "Educational directions and opportunities of the Institute (2/2)"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ecaqa-xalqaro-maxsus-akkreditatsiya",
+  "order": 1,
+  "fp": {
+   "uz": "bda5a59cc10a51100c84cfbd120e0f4ff3162d8be517db1d4cef7c90c5a80be0",
+   "ru": "cd4ea493c907f8209fa4057dfcfd8527f32b9ba4d9f2b4a3b6b7585c6e256daf",
+   "en": "bda5a59cc10a51100c84cfbd120e0f4ff3162d8be517db1d4cef7c90c5a80be0"
+  },
+  "images": [
+   {
+    "media": "migrated/img/tuzilma/Institut tuzilmasi/xalqaro akreditatsiya.jpg",
+    "alt": {
+     "uz": "Institut xalqaro akkreditatsiyasi",
+     "ru": "Международная аккредитация Института",
+     "en": "International accreditation of the Institute"
+    }
+   }
+  ]
+ }
+]
