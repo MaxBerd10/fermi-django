@@ -574,6 +574,7 @@
 }
 
 .article-body > figure.article-single:first-child img {
+  width: 100%;
   max-height: none;
 }
 
