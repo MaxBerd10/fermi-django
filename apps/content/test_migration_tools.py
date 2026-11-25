@@ -54,6 +54,26 @@ def test_replace_block_shifts_later_orders(page):
     assert [b.order for b in page.blocks.order_by("order")] == [1, 2, 3, 4, 5, 6]
 
 
+def test_replace_blocks_undoes_a_replacement_and_can_only_insert(page):
+    for order in (1, 2, 3):
+        _add(page, order, _paragraph(f"b{order}"))
+    old = {"block_type": "paragraph", "data": page.blocks.get(order=2).data}
+    tools.replace_block(page, 2, [_paragraph("x"), _paragraph("y"), _paragraph("z")])
+    tools.replace_blocks(page, 2, 3, [old])  # three blocks back to the one
+    assert [b.data["uz"]["text"] for b in page.blocks.order_by("order")] == ["b1 uz", "b2 uz", "b3 uz"]
+    tools.replace_blocks(page, 2, 0, [_paragraph("new")])  # count 0: only insert, later blocks move up
+    assert [b.data["uz"]["text"] for b in page.blocks.order_by("order")] == ["b1 uz", "new uz", "b2 uz", "b3 uz"]
+    assert [b.order for b in page.blocks.order_by("order")] == [1, 2, 3, 4]
+
+
+def test_make_document_keeps_the_file_and_title(db, tmp_path):
+    path = tmp_path / "Report.pdf"
+    path.write_bytes(b"%PDF-1.4 test")
+    document = tools.make_document(str(path), "Annual report")
+    assert document.title == "Annual report" and document.file.name.endswith(".pdf")
+    assert document.file.size == len(b"%PDF-1.4 test")
+
+
 def test_fingerprint_ok_detects_admin_edit(page):
     block = _add(page, 1, _paragraph("a"))
     expected = {lang: tools.sha(block.data[lang]) for lang in LANGS}

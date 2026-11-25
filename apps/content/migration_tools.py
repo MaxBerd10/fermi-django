@@ -20,7 +20,7 @@ from django.db import transaction
 from django.utils import timezone
 
 from apps.content.models import ContentBlock, Page
-from apps.media_lib.models import Image
+from apps.media_lib.models import Document, Image
 
 DEFAULT_BACKUP_DIR = "/var/backups/fermi-django"
 
@@ -60,13 +60,14 @@ def make_image(path: str, alt_text: str = "") -> Image:
     return image
 
 
-def replace_block(page: Page, order: int, new_blocks: list[dict]) -> list[int]:
-    """Deletes the block at `order` and puts `new_blocks` ({"block_type", "data"}) in its place; later blocks move to make room.
-    Returns the new primary keys. Every new block is validated (ContentBlock.clean) before it is saved."""
+def replace_blocks(page: Page, order: int, count: int, new_blocks: list[dict]) -> list[int]:
+    """Replaces the `count` consecutive blocks starting at `order` ({"block_type", "data"} for each new one; count 0 only inserts, an empty
+    list only deletes); later blocks move to make or close the room. Returns the new primary keys. Every new block is validated
+    (ContentBlock.clean) before it is saved, so a malformed block cannot be written."""
     with transaction.atomic():
-        ContentBlock.objects.get(page=page, order=order).delete()
-        shift = len(new_blocks) - 1
-        later = list(page.blocks.filter(order__gt=order).order_by("-order" if shift > 0 else "order"))
+        page.blocks.filter(order__gte=order, order__lt=order + count).delete()
+        shift = len(new_blocks) - count
+        later = list(page.blocks.filter(order__gte=order + count).order_by("-order" if shift > 0 else "order"))
         for block in later:
             block.order += shift
             block.save(update_fields=["order"])
@@ -78,6 +79,20 @@ def replace_block(page: Page, order: int, new_blocks: list[dict]) -> list[int]:
             pks.append(block.pk)
         Page.objects.filter(pk=page.pk).update(updated_at=timezone.now())
     return pks
+
+
+def replace_block(page: Page, order: int, new_blocks: list[dict]) -> list[int]:
+    """The one block at `order` is replaced by `new_blocks`."""
+    return replace_blocks(page, order, 1, new_blocks)
+
+
+def make_document(path: str, title: str = "") -> Document:
+    """A Document row (a downloadable file) from a local file."""
+    document = Document(title=title)
+    with open(path, "rb") as handle:
+        document.file.save(os.path.basename(path), File(handle), save=True)
+    _give_to_www_data(document.file.path)
+    return document
 
 
 class Backup:
