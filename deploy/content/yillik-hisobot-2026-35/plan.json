@@ -1,0 +1,382 @@
+[
+ {
+  "slug": "department-30",
+  "order": 21,
+  "lang": "uz",
+  "set": {
+   "text": "11. Vrachning profilaktik ishida sogʻliq va sogʻlom turmush tarzi (Qoʻshma)"
+  },
+  "sha_uz": "1628e8bbf99f3bd85cf09bca9043b4a15c2d14eff466a10b5335f6b08610cc43",
+  "sha_lang": "1628e8bbf99f3bd85cf09bca9043b4a15c2d14eff466a10b5335f6b08610cc43"
+ },
+ {
+  "slug": "department-30",
+  "order": 22,
+  "lang": "uz",
+  "set": {
+   "text": "12. Tibbiyotda ilmiy ish asoslari (Qoʻshma)"
+  },
+  "sha_uz": "8f88abdeff9b14ccbe6b1c045b2642c4e2ee4d9c1e633b9862bd120186e0cc63",
+  "sha_lang": "8f88abdeff9b14ccbe6b1c045b2642c4e2ee4d9c1e633b9862bd120186e0cc63"
+ },
+ {
+  "slug": "department-30",
+  "order": 23,
+  "lang": "uz",
+  "set": {
+   "text": "13. Jismoniy tarbiya va sport (Qoʻshma)"
+  },
+  "sha_uz": "5167d49c7dc442257523ed341f089b6512cf437a0265bccf5dd06bee8402313f",
+  "sha_lang": "5167d49c7dc442257523ed341f089b6512cf437a0265bccf5dd06bee8402313f"
+ },
+ {
+  "slug": "department-30",
+  "order": 24,
+  "lang": "uz",
+  "set": {
+   "text": "14. Tibbiyot tarixi (Qoʻshma)"
+  },
+  "sha_uz": "93bb8ab1f80a5d0efa195e77fee7e6bc98410b85557800b51203372ae54a52a3",
+  "sha_lang": "93bb8ab1f80a5d0efa195e77fee7e6bc98410b85557800b51203372ae54a52a3"
+ },
+ {
+  "slug": "department-30",
+  "order": 25,
+  "lang": "uz",
+  "set": {
+   "text": "15. Ijtimoiy va kasbiy sohalarda inklyuziv yondashuv (Qoʻshma)"
+  },
+  "sha_uz": "1b95a0703bec0ec9de96d1ace58fe7276e2eeae388f514abd0ab7b4de7a461d7",
+  "sha_lang": "1b95a0703bec0ec9de96d1ace58fe7276e2eeae388f514abd0ab7b4de7a461d7"
+ },
+ {
+  "slug": "department-30",
+  "order": 26,
+  "lang": "uz",
+  "set": {
+   "text": "16. Jismoniy tarbiya va sport boʻyicha tanlov fanlari (Qoʻshma)"
+  },
+  "sha_uz": "6a3e3dcdab5d0dabe25c41d35aa286f9490866203e6e3caa49706ae6776692f8",
+  "sha_lang": "6a3e3dcdab5d0dabe25c41d35aa286f9490866203e6e3caa49706ae6776692f8"
+ },
+ {
+  "slug": "department-30",
+  "order": 27,
+  "lang": "uz",
+  "set": {
+   "text": "17. Sogʻliqni saqlashda menejment (Qoʻshma)"
+  },
+  "sha_uz": "0d310c31d6721ce88e528ec3548a9ca5c41909c340c0b270890de0dc6fd50e35",
+  "sha_lang": "0d310c31d6721ce88e528ec3548a9ca5c41909c340c0b270890de0dc6fd50e35"
+ },
+ {
+  "slug": "department-30",
+  "order": 28,
+  "lang": "uz",
+  "set": {
+   "text": "18. Bioetika (Qoʻshma)"
+  },
+  "sha_uz": "830153d01a0d338436cf1d8b8c4d6c7ad86b56faa8bcf15a265447aa32dc5236",
+  "sha_lang": "830153d01a0d338436cf1d8b8c4d6c7ad86b56faa8bcf15a265447aa32dc5236"
+ },
+ {
+  "slug": "department-20",
+  "order": 15,
+  "lang": "uz",
+  "set": {
+   "text": "1. Kasbiy kommunikatsiya asoslari"
+  },
+  "sha_uz": "6205d68c1fa71b406a013b56b474d603d8fadebdf045dfc9e93de9c37a2ae633",
+  "sha_lang": "6205d68c1fa71b406a013b56b474d603d8fadebdf045dfc9e93de9c37a2ae633"
+ },
+ {
+  "slug": "department-20",
+  "order": 16,
+  "lang": "uz",
+  "set": {
+   "text": "2. Pedagogika va psixologiya"
+  },
+  "sha_uz": "ee7539877673e5b262b45af2d798f8b846cb2f79ae1b2c859cc4b5ca746ea06e",
+  "sha_lang": "ee7539877673e5b262b45af2d798f8b846cb2f79ae1b2c859cc4b5ca746ea06e"
+ },
+ {
+  "slug": "department-20",
+  "order": 17,
+  "lang": "uz",
+  "set": {
+   "text": "3. Psixologiya va pedagogika"
+  },
+  "sha_uz": "129892c93f71d15885c1b21f36dd031e0bd53a8b778ba496bc848db622b4fcc2",
+  "sha_lang": "129892c93f71d15885c1b21f36dd031e0bd53a8b778ba496bc848db622b4fcc2"
+ },
+ {
+  "slug": "news-405",
+  "order": 4,
+  "lang": "uz",
+  "set": {
+   "text": "Zoom konferensiya havolasi:"
+  },
+  "sha_uz": "5eb7d1d8dc543c5d2e43fea991495d1f51e2b37bf3b4ef6fd52b73c6e1e92fe2",
+  "sha_lang": "5eb7d1d8dc543c5d2e43fea991495d1f51e2b37bf3b4ef6fd52b73c6e1e92fe2"
+ },
+ {
+  "slug": "news-405",
+  "order": 6,
+  "lang": "uz",
+  "set": {
+   "text": "Konferensiya identifikatori: 371 107 8853"
+  },
+  "sha_uz": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2",
+  "sha_lang": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2"
+ },
+ {
+  "slug": "news-405",
+  "order": 7,
+  "lang": "uz",
+  "set": {
+   "text": "Kirish kodi: 172024"
+  },
+  "sha_uz": "67d4c7de9e66d05551e53527d2b9060d5bb71435f3f316bedc6f54041b9fc537",
+  "sha_lang": "67d4c7de9e66d05551e53527d2b9060d5bb71435f3f316bedc6f54041b9fc537"
+ },
+ {
+  "slug": "news-405",
+  "order": 8,
+  "lang": "uz",
+  "set": {
+   "text": "Vaqt: 2024-yil 17-fevral, soat 11:00 (Islomobod, Karachi, Toshkent)"
+  },
+  "sha_uz": "655141bf82fdd50c4896f8bc1da66e6005ed223bbca87924c4ca9af0eba835ab",
+  "sha_lang": "655141bf82fdd50c4896f8bc1da66e6005ed223bbca87924c4ca9af0eba835ab"
+ },
+ {
+  "slug": "news-527",
+  "order": 12,
+  "lang": "uz",
+  "set": {
+   "text": "Konferensiya identifikatori: 371 107 8853"
+  },
+  "sha_uz": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2",
+  "sha_lang": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2"
+ },
+ {
+  "slug": "news-527",
+  "order": 13,
+  "lang": "uz",
+  "set": {
+   "text": "Kirish kodi: 1124"
+  },
+  "sha_uz": "43f2db8795e7d731f3e7636d746cb1880714ad41cbbadde15b99749726b9c707",
+  "sha_lang": "43f2db8795e7d731f3e7636d746cb1880714ad41cbbadde15b99749726b9c707"
+ },
+ {
+  "slug": "news-527",
+  "order": 19,
+  "lang": "uz",
+  "set": {
+   "text": "Konferensiya identifikatori: 371 107 8853"
+  },
+  "sha_uz": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2",
+  "sha_lang": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2"
+ },
+ {
+  "slug": "news-527",
+  "order": 20,
+  "lang": "uz",
+  "set": {
+   "text": "Kirish kodi: 1124"
+  },
+  "sha_uz": "43f2db8795e7d731f3e7636d746cb1880714ad41cbbadde15b99749726b9c707",
+  "sha_lang": "43f2db8795e7d731f3e7636d746cb1880714ad41cbbadde15b99749726b9c707"
+ },
+ {
+  "slug": "news-356",
+  "order": 4,
+  "lang": "uz",
+  "set": {
+   "text": "Konferensiya platformasi: Zoom Konferensiya identifikatori: 371 107 8853 konferensiyaga ulanish: 2023"
+  },
+  "sha_uz": "20ff92e9ba7ef097284dad5315bc735fe16595d30af4512eb0e428ea42c5d4e9",
+  "sha_lang": "20ff92e9ba7ef097284dad5315bc735fe16595d30af4512eb0e428ea42c5d4e9"
+ },
+ {
+  "slug": "news-527",
+  "order": 18,
+  "lang": "ru",
+  "set": {
+   "text": "Ссылка ZOOM: https://zoom.us/j/3711078853?pwd=t5sqV94bXStO1XxXPRLwOmKLDckiLp.1&omn=98124984120"
+  },
+  "sha_uz": "ae8147b59ebffb504bf0cfdeaee74e2b26955f3c19edeb8b1cb52fbfed117d31",
+  "sha_lang": "8a68edb38ab5f5f8ac7447168f961afedbcd46bd8b47893f0593ef7ef8144f20"
+ },
+ {
+  "slug": "news-633",
+  "order": 3,
+  "lang": "uz",
+  "set": {
+   "text": "“Study in Uzbekistan” tugmasini bosing"
+  },
+  "sha_uz": "e26692ff45308630b7c943a2bf2ba6fee1bd8e4fd751fca199b6780caa4d444b",
+  "sha_lang": "e26692ff45308630b7c943a2bf2ba6fee1bd8e4fd751fca199b6780caa4d444b"
+ },
+ {
+  "slug": "news-618",
+  "order": 2,
+  "lang": "uz",
+  "set": {
+   "text": "Thumbay Group bilan hamkorlik: Birlashgan Arab Amirliklaridagi Gulf tibbiyot universiteti bilan akademik hamkorlikda Thumbay Fergana College of Medical Sciences tashkil etiladi."
+  },
+  "sha_uz": "84419b387a8fa9e8c38c6251ded63ffc6e23fb1389fcdc1e19db15b7017a34b5",
+  "sha_lang": "84419b387a8fa9e8c38c6251ded63ffc6e23fb1389fcdc1e19db15b7017a34b5"
+ },
+ {
+  "slug": "news-618",
+  "order": 3,
+  "lang": "uz",
+  "set": {
+   "text": "Birlashgan Arab Amirliklarida sogʻliqni saqlash va taʻlim sohasining yetakchisi boʻlgan Thumbay Group Oʻzbekistondagi nufuzli Fargʻona jamoat salomatligi tibbiyot instituti (FMIPH) bilan hamkorlik oʻrnatib, Thumbay Fergana College of Medical Sciences ni tashkil etmoqda. Ushbu strategik hamkorlik jahon tibbiy taʻlimida muhim bosqich boʻlib, ikki yetakchi muassasaning tajriba va resurslarini birlashtirib, kelajakdagi sogʻliqni saqlash mutaxassislari uchun oʻzgartiruvchi oʻquv muhitini yaratadi."
+  },
+  "sha_uz": "72662cec54391246af7e28c25b1bc83ef6af027d9b7a973838c3fcc2c100511a",
+  "sha_lang": "72662cec54391246af7e28c25b1bc83ef6af027d9b7a973838c3fcc2c100511a"
+ },
+ {
+  "slug": "news-618",
+  "order": 4,
+  "lang": "uz",
+  "set": {
+   "text": "90 yildan ortiq tarixga ega Fargʻona tibbiyot instituti akademik mukammalligi va malakali sogʻliqni saqlash yetakchilarini tayyorlashga sodiqligi bilan mashhur. 19 ta kafedra, 147 nafar tajribali oʻqituvchi hamda Hindiston, Qirgʻiziston va Nigeriya kabi mamlakatlardan kelgan turli talabalar jamoasiga ega FMIPH global qarashlarni kengaytiruvchi koʻp madaniyatli va inklyuziv muhitni taqdim etadi. Thumbay Group Gulf tibbiyot universiteti (GMU) orqali Birlashgan Arab Amirliklaridagi akademik sogʻliqni saqlash tizimi sifatidagi obroʻsini olib keladi: 102 millatga mansub 4000 dan ortiq bitiruvchi va dunyodagi 90 dan ortiq muassasa bilan hamkorlik."
+  },
+  "sha_uz": "22cf2e4b826e0e170cd96b9df02394d7a93d0bb0c41d0d74e449e6d615f122cc",
+  "sha_lang": "22cf2e4b826e0e170cd96b9df02394d7a93d0bb0c41d0d74e449e6d615f122cc"
+ },
+ {
+  "slug": "news-618",
+  "order": 6,
+  "lang": "uz",
+  "set": {
+   "text": "Hamkorlik doirasida Graduate Entry Doctor of Medicine (MD) dasturi taklif etiladi — xalqaro standartlarga mos, toʻliq akkreditatsiyadan oʻtgan oʻquv dasturi."
+  },
+  "sha_uz": "cd65a691c6145096eae512c83cae009d06d509dcb913ba273e917fbcdd4c72a8",
+  "sha_lang": "cd65a691c6145096eae512c83cae009d06d509dcb913ba273e917fbcdd4c72a8"
+ },
+ {
+  "slug": "news-618",
+  "order": 7,
+  "lang": "uz",
+  "set": {
+   "text": "Ushbu toʻrt yillik dastur ilgʻor tibbiy texnologiyalarni, faol oʻqitish usullarini hamda turli sogʻliqni saqlash muassasalarida amaliy klinik tayyorgarlikni birlashtiradi. Sifat nazorati GMU tomonidan amalga oshiriladi, bu esa jahon darajasidagi taʻlimni taʻminlaydi. Dastur muammoli va jamoaviy oʻqitishga, klinik amaliyot bilan erta tanishtirishga hamda talabalarni sogʻliqni saqlashdagi real muammolarga tayyorlaydigan zamonaviy simulyatsion tayyorgarlikka alohida eʻtibor beradi."
+  },
+  "sha_uz": "0f1c1040554d2625f9594793dbc0c567195ed6d6ba48a68e079d815e633c90b5",
+  "sha_lang": "0f1c1040554d2625f9594793dbc0c567195ed6d6ba48a68e079d815e633c90b5"
+ },
+ {
+  "slug": "news-618",
+  "order": 8,
+  "lang": "uz",
+  "set": {
+   "text": "Ariza topshirish"
+  },
+  "sha_uz": "5d7cc1c43d58fbc5a6821c2cf317d22d14a414ee18fd4e5592a2b3d7968fe090",
+  "sha_lang": "5d7cc1c43d58fbc5a6821c2cf317d22d14a414ee18fd4e5592a2b3d7968fe090"
+ },
+ {
+  "slug": "news-618",
+  "order": 9,
+  "lang": "uz",
+  "set": {
+   "text": "Gulf tibbiyot universitetida (Ajman, BAA) 3 yil va TFCOMS da (Fargʻona, Oʻzbekiston) 3 yil"
+  },
+  "sha_uz": "4252108bc09712630652de49e8182af1dcecee7f39d30d9f0c907ce9761f4588",
+  "sha_lang": "4252108bc09712630652de49e8182af1dcecee7f39d30d9f0c907ce9761f4588"
+ },
+ {
+  "slug": "news-618",
+  "order": 10,
+  "lang": "uz",
+  "set": {
+   "items": [
+    "90 yildan ortiq taʻlim tajribasi",
+    "Yuqori malakali oʻqituvchilar",
+    "Kampus hududida ovqatlanish joyi bilan turar joy",
+    "Hamkor shifoxonalarning yaxshi tarmogʻi",
+    "Kompetensiyaga asoslangan tibbiy oʻquv dasturi",
+    "Oʻqitish tili — ingliz tili",
+    "Hamyonbop tibbiy taʻlim",
+    "Hindiston, Fors koʻrfazi mamlakatlari va BAAdan toʻgʻridan-toʻgʻri aviareyslar",
+    "Xavfsiz muhit"
+   ]
+  },
+  "sha_uz": "5e3a671b82d8adf6d07c99f749d38714c59454b9942c4cd6613661990db70d14",
+  "sha_lang": "5e3a671b82d8adf6d07c99f749d38714c59454b9942c4cd6613661990db70d14"
+ },
+ {
+  "slug": "news-618",
+  "order": 11,
+  "lang": "uz",
+  "set": {
+   "text": "Ariza topshirish"
+  },
+  "sha_uz": "5d7cc1c43d58fbc5a6821c2cf317d22d14a414ee18fd4e5592a2b3d7968fe090",
+  "sha_lang": "5d7cc1c43d58fbc5a6821c2cf317d22d14a414ee18fd4e5592a2b3d7968fe090"
+ },
+ {
+  "slug": "news-618",
+  "order": 12,
+  "lang": "uz",
+  "set": {
+   "text": "1 million dollarlik investitsiya"
+  },
+  "sha_uz": "db67ab3edb5c50a3d33559376bdd04ee5d8bae43089210bea344d98f7783d5d8",
+  "sha_lang": "db67ab3edb5c50a3d33559376bdd04ee5d8bae43089210bea344d98f7783d5d8"
+ },
+ {
+  "slug": "news-618",
+  "order": 13,
+  "lang": "uz",
+  "set": {
+   "text": "Xalqaro hamkorlik"
+  },
+  "sha_uz": "b84fa9c49ed581030a3d00cb48399fe60624519472971fb6993b715d29d517e9",
+  "sha_lang": "b84fa9c49ed581030a3d00cb48399fe60624519472971fb6993b715d29d517e9"
+ },
+ {
+  "slug": "news-618",
+  "order": 14,
+  "lang": "uz",
+  "set": {
+   "text": "Fargʻona jamoat salomatligi tibbiyot instituti va Gulf tibbiyot universiteti oʻrtasidagi hamkorlik"
+  },
+  "sha_uz": "bf158fcbc4a313c2226e72883c6d1fc5d245d02ea2349169bccfa445cb63c60f",
+  "sha_lang": "bf158fcbc4a313c2226e72883c6d1fc5d245d02ea2349169bccfa445cb63c60f"
+ },
+ {
+  "slug": "news-571",
+  "order": 6,
+  "lang": "uz",
+  "set": {
+   "text": "1 million dollarlik investitsiya"
+  },
+  "sha_uz": "db67ab3edb5c50a3d33559376bdd04ee5d8bae43089210bea344d98f7783d5d8",
+  "sha_lang": "db67ab3edb5c50a3d33559376bdd04ee5d8bae43089210bea344d98f7783d5d8"
+ },
+ {
+  "slug": "news-571",
+  "order": 7,
+  "lang": "uz",
+  "set": {
+   "text": "Xalqaro hamkorlik"
+  },
+  "sha_uz": "b84fa9c49ed581030a3d00cb48399fe60624519472971fb6993b715d29d517e9",
+  "sha_lang": "b84fa9c49ed581030a3d00cb48399fe60624519472971fb6993b715d29d517e9"
+ },
+ {
+  "slug": "news-571",
+  "order": 9,
+  "lang": "uz",
+  "set": {
+   "text": "Fargʻona jamoat salomatligi tibbiyot instituti va Gulf tibbiyot universiteti oʻrtasidagi hamkorlik"
+  },
+  "sha_uz": "bf158fcbc4a313c2226e72883c6d1fc5d245d02ea2349169bccfa445cb63c60f",
+  "sha_lang": "bf158fcbc4a313c2226e72883c6d1fc5d245d02ea2349169bccfa445cb63c60f"
+ }
+]
