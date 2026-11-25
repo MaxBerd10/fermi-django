@@ -1,0 +1,62 @@
+[
+ {
+  "slug": "lavozim-yoriqnomasi",
+  "order": 2,
+  "document_id": 454,
+  "fp": {
+   "uz": "4c1c19c9bcfd84616e5dd85c794a345d37c69e2e32827bb251108e6a3fc106ce",
+   "ru": "4c1c19c9bcfd84616e5dd85c794a345d37c69e2e32827bb251108e6a3fc106ce",
+   "en": "4c1c19c9bcfd84616e5dd85c794a345d37c69e2e32827bb251108e6a3fc106ce"
+  },
+  "caption": {
+   "uz": "Institut yoʻriqnomasi",
+   "ru": "Должностная инструкция",
+   "en": "Job description"
+  }
+ },
+ {
+  "slug": "kredit-modul-nizomi",
+  "order": 2,
+  "document_id": 455,
+  "fp": {
+   "uz": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
+   "ru": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
+   "en": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0"
+  },
+  "caption": {
+   "uz": "Institut kredit modul nizomi",
+   "ru": "Положение о кредитно-модульной системе",
+   "en": "Regulations on the credit-module system"
+  }
+ },
+ {
+  "slug": "institut-test-markazi-nizomi",
+  "order": 2,
+  "document_id": 456,
+  "fp": {
+   "uz": "b56f8c4823b95ac783c771d5f6c95752810dbc5bf29f4c42b4aaa45ec8f7b038",
+   "ru": "b56f8c4823b95ac783c771d5f6c95752810dbc5bf29f4c42b4aaa45ec8f7b038",
+   "en": "b56f8c4823b95ac783c771d5f6c95752810dbc5bf29f4c42b4aaa45ec8f7b038"
+  },
+  "caption": {
+   "uz": "Institut test markazi nizomi",
+   "ru": "Положение о центре тестирования института",
+   "en": "Regulations on the institute’s testing center"
+  }
+ },
+ {
+  "slug": "institut-tuzilmasi",
+  "order": 2,
+  "document_id": 453,
+  "fp": {
+   "uz": "3d345c46dd9ee4b4eb63e2dc96294eb7fc401e7f65f7addeb160ed954e2a8fff",
+   "ru": "3d345c46dd9ee4b4eb63e2dc96294eb7fc401e7f65f7addeb160ed954e2a8fff",
+   "en": "3d345c46dd9ee4b4eb63e2dc96294eb7fc401e7f65f7addeb160ed954e2a8fff"
+  },
+  "caption": {
+   "uz": "Institut tuzilmasi",
+   "ru": "Структура института",
+   "en": "The structure of the institute"
+  }
+ }
+]
