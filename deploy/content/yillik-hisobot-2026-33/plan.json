@@ -1,0 +1,1162 @@
+[
+ {
+  "slug": "news-288",
+  "order": 9,
+  "lang": "ru",
+  "set": {
+   "text": "/detail/rektor-virtual-qabulxonasi?menu_id=71"
+  },
+  "sha_uz": "c34e0170825206bfec94eac218aa10fd0f591a5e531555bad69ed9f0e86212f1",
+  "sha_lang": "33d3ee559aec4f2a057eeb9cf0be49b63341d24efeaafd3bf08579250b9527a5"
+ },
+ {
+  "slug": "news-288",
+  "order": 9,
+  "lang": "en",
+  "set": {
+   "text": "/detail/rektor-virtual-qabulxonasi?menu_id=71"
+  },
+  "sha_uz": "c34e0170825206bfec94eac218aa10fd0f591a5e531555bad69ed9f0e86212f1",
+  "sha_lang": "33d3ee559aec4f2a057eeb9cf0be49b63341d24efeaafd3bf08579250b9527a5"
+ },
+ {
+  "slug": "news-288",
+  "order": 10,
+  "lang": "ru",
+  "set": {
+   "text": "Через официальный телеграм-канал института"
+  },
+  "sha_uz": "dca5cacaf4086b1ef0216af12930c351ff202b41c779e975e6692043056cd769",
+  "sha_lang": "01f568db371b6a48381fde34700f9df37295613efe8478be9c066b381d4112d5"
+ },
+ {
+  "slug": "news-288",
+  "order": 10,
+  "lang": "en",
+  "set": {
+   "text": "Through the institute's official Telegram channel"
+  },
+  "sha_uz": "dca5cacaf4086b1ef0216af12930c351ff202b41c779e975e6692043056cd769",
+  "sha_lang": "01f568db371b6a48381fde34700f9df37295613efe8478be9c066b381d4112d5"
+ },
+ {
+  "slug": "news-185",
+  "order": 6,
+  "lang": "ru",
+  "set": {
+   "text": "Анкета для профессоров и преподавателей (ФМИОЗ)"
+  },
+  "sha_uz": "2ad5bdc9aa6cb49a7736d7bbb0cd2d95b81e8abdcee79c2f931071bcdf89a5ea",
+  "sha_lang": "b0bd9fcca6b4d94f907cb51a490d942fefb040887487f2688673f67ec79680e1"
+ },
+ {
+  "slug": "news-579",
+  "order": 5,
+  "lang": "ru",
+  "set": {
+   "text": "Ссылка на конференцию Zoom:"
+  },
+  "sha_uz": "c00eb52be0806c6f4989beadc3b5c8ddc1896cdd6d7e87cb7d2265bd58517386",
+  "sha_lang": "7d368072babb52fd841f28e1ca1b199069e86303b252fe20191799c8a918ffd2"
+ },
+ {
+  "slug": "news-579",
+  "order": 5,
+  "lang": "en",
+  "set": {
+   "text": "Zoom conference link:"
+  },
+  "sha_uz": "c00eb52be0806c6f4989beadc3b5c8ddc1896cdd6d7e87cb7d2265bd58517386",
+  "sha_lang": "afa9f2163a8c85ceb7b1e4b8a8448c94ca683c5cbcdcf6f2e3ce5c02d38386f8"
+ },
+ {
+  "slug": "news-656",
+  "order": 14,
+  "lang": "ru",
+  "set": {
+   "text": "дерматовенерология,"
+  },
+  "sha_uz": "332d093bb09134cbc3960205626d52a32f44334987a0a79020ce8d200220310d",
+  "sha_lang": "6eac150cb1937615c5654665567a176991a6dc654462e91850d946b588c480bd"
+ },
+ {
+  "slug": "news-656",
+  "order": 14,
+  "lang": "en",
+  "set": {
+   "text": "dermatovenereology,"
+  },
+  "sha_uz": "332d093bb09134cbc3960205626d52a32f44334987a0a79020ce8d200220310d",
+  "sha_lang": "b8e42332babca1c172cd4d1885e83df86fc9992dec46526bd675b6c0259b3f77"
+ },
+ {
+  "slug": "news-652",
+  "order": 10,
+  "lang": "en",
+  "set": {
+   "text": "Cultural programs involving students"
+  },
+  "sha_uz": "f09b7d7d85952b29d802040cdbf6389dee014ef25a1e13801df1e11d0c3df0fa",
+  "sha_lang": "678169a392b599a14e59b7ebe3b51a37f72899df2bfcbd9a3956dba00f1c7045"
+ },
+ {
+  "slug": "news-652",
+  "order": 12,
+  "lang": "en",
+  "set": {
+   "text": "The festival featured stage performances by the institute's students about the cultures of different peoples. The students:"
+  },
+  "sha_uz": "903dd8b7821e364d4b461d802ad9cf32fee8ffbef4903e1d91e9e4c7555299bc",
+  "sha_lang": "8332a704824c00acfb9c6e5c81dfaff0afa9653dff90c07d4fd2c1c3d29a20e8"
+ },
+ {
+  "slug": "news-652",
+  "order": 13,
+  "lang": "ru",
+  "set": {
+   "text": "национальные песни народов,"
+  },
+  "sha_uz": "fc4f038a6569209d84f79f0c5b032d410096bec6b5d7994144d82f0a0c7b287b",
+  "sha_lang": "dc467d26ee7d18d530142f8d3fc6714b31e130b2f972fc51b281f01cba3d64b0"
+ },
+ {
+  "slug": "news-652",
+  "order": 13,
+  "lang": "en",
+  "set": {
+   "text": "national songs of various peoples,"
+  },
+  "sha_uz": "fc4f038a6569209d84f79f0c5b032d410096bec6b5d7994144d82f0a0c7b287b",
+  "sha_lang": "f049340d981c4a81304f593e17e0082142a481419492cf4fe2df392dbb3b61c1"
+ },
+ {
+  "slug": "news-652",
+  "order": 19,
+  "lang": "ru",
+  "set": {
+   "text": "национальные блюда, характерные для разных народов,"
+  },
+  "sha_uz": "b5eaa69a09bd600f15e618b5a3f3dd716c2a1e520323fa08e2edbdd3a024175e",
+  "sha_lang": "8366e780c69593fceb20f21c9b486a9d364a985e554b4fc5aaf1f7ed1acf13e9"
+ },
+ {
+  "slug": "news-637",
+  "order": 4,
+  "lang": "ru",
+  "set": {
+   "text": "Цель и содержание занятия"
+  },
+  "sha_uz": "3572bde96756a500ab0e5ad6ec0389fe37d225122bf5707d12ca36cfe28664ef",
+  "sha_lang": "28c43536784fb11b2846f7498773ae3cbdec945354336ba20817bfbd20d2e02b"
+ },
+ {
+  "slug": "news-637",
+  "order": 4,
+  "lang": "en",
+  "set": {
+   "text": "Purpose and content of the lesson"
+  },
+  "sha_uz": "3572bde96756a500ab0e5ad6ec0389fe37d225122bf5707d12ca36cfe28664ef",
+  "sha_lang": "43f4af157f47c4429c10f3de64b7339d9dccddadf63e632ef3e3d88df80e4567"
+ },
+ {
+  "slug": "news-450",
+  "order": 16,
+  "lang": "ru",
+  "set": {
+   "text": "Электронная почта: info@fjsti.uz , fmioz@mail.ru"
+  },
+  "sha_uz": "60492d96a36e6eab5bc56d01f9b95f287d121836142fe4bbd4d83a63388e4792",
+  "sha_lang": "7a7566c95ab8d09dcccdf5098ab2b6f7b375bbac6e47d22fe0f47a1255458c59"
+ },
+ {
+  "slug": "news-688",
+  "order": 6,
+  "lang": "en",
+  "set": {
+   "text": "What is glaucoma?"
+  },
+  "sha_uz": "c3c2c3179ba2c492e2e7784314f477506cb027e756e20057011405dcdd15eb81",
+  "sha_lang": "433ac6999f279d302ae20d07470b6fe09c3918bf496677dd6b25be1ea807cbea"
+ },
+ {
+  "slug": "news-673",
+  "order": 11,
+  "lang": "en",
+  "set": {
+   "text": "Population-related: 54"
+  },
+  "sha_uz": "cc0206b41f76d0e87684f8104e29384be6436d9d66b1217647309123f9bb5d00",
+  "sha_lang": "b519a93f063232210567bef326d3c24a5a5b46f71ac0c33ec824a47f023e08d9"
+ },
+ {
+  "slug": "news-673",
+  "order": 12,
+  "lang": "en",
+  "set": {
+   "text": "Agriculture-related: 17"
+  },
+  "sha_uz": "72aaf62963e9bb9e2fe041891c799d1a85dadd4ec9f475fc816e5cb5469d9f6f",
+  "sha_lang": "f00a91a6b211f34fb58fdaa2cdc43f3892a7ccd0a7af2d67dbee19383f6fd1ba"
+ },
+ {
+  "slug": "news-522",
+  "order": 8,
+  "lang": "en",
+  "set": {
+   "text": "Depiction of diseases and their treatment"
+  },
+  "sha_uz": "5a8004a253c0990d3cdf48c7015c39312e3223dd64f39a639df79f96a5630f07",
+  "sha_lang": "474f60a7afc8b5adaf1cc68a44d04fe2363bc66da1f2756266d31cdc279c797c"
+ },
+ {
+  "slug": "news-273",
+  "order": 4,
+  "lang": "ru",
+  "set": {
+   "text": "УВАЖАЕМЫЕ КОЛЛЕГИ!"
+  },
+  "sha_uz": "0d852313c8d04761b00391ff9fcdb9e248960b426ac8389e58795e5642cfdbd9",
+  "sha_lang": "f70d451be2427de6152bd7892f6c4ad0b1f0b02c48b1750be96970e678b7b1dc"
+ },
+ {
+  "slug": "news-316",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "Онлайн-ссылка для подачи документов в бакалавриат института для иностранных граждан:"
+  },
+  "sha_uz": "6af277774fae89bb815b5f1973e8ef4e9d8cdfdd1c609679a371d67d2acb7d3a",
+  "sha_lang": "a34f918afe6ac2e69437be986e489cf570457c24279abffed0f0af131ce6ecb0"
+ },
+ {
+  "slug": "news-316",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "Online link for submitting documents to the institute's bachelor's program for foreign citizens:"
+  },
+  "sha_uz": "6af277774fae89bb815b5f1973e8ef4e9d8cdfdd1c609679a371d67d2acb7d3a",
+  "sha_lang": "124de48c2a4a871f5589f99dce18734860304f8b47802ac651fab3f632e1a6ee"
+ },
+ {
+  "slug": "news-336",
+  "order": 3,
+  "lang": "en",
+  "set": {
+   "text": "Mandate"
+  },
+  "sha_uz": "b90dd712b13f565b42a210263d87023fcbae85357859a6dd42cb422347e84dfc",
+  "sha_lang": "b90dd712b13f565b42a210263d87023fcbae85357859a6dd42cb422347e84dfc"
+ },
+ {
+  "slug": "news-665",
+  "order": 6,
+  "lang": "en",
+  "set": {
+   "text": "Journal -"
+  },
+  "sha_uz": "87e8c03be681fe0614d1955531e163f005faafa58747ce0b040d8fd4e6753a84",
+  "sha_lang": "87e8c03be681fe0614d1955531e163f005faafa58747ce0b040d8fd4e6753a84"
+ },
+ {
+  "slug": "news-527",
+  "order": 5,
+  "lang": "en",
+  "set": {
+   "text": "On 25.11.2024"
+  },
+  "sha_uz": "577179b2a7787cad486ef2a2fb5ab521fd3fab55ad138c8f6d093a5fcd5f78a6",
+  "sha_lang": "577179b2a7787cad486ef2a2fb5ab521fd3fab55ad138c8f6d093a5fcd5f78a6"
+ },
+ {
+  "slug": "news-527",
+  "order": 14,
+  "lang": "ru",
+  "set": {
+   "text": "26.11.2024 г."
+  },
+  "sha_uz": "de6f436fe7a38e3c3055420e59e272d6b935dbea8f258159f68806343f34c527",
+  "sha_lang": "de6f436fe7a38e3c3055420e59e272d6b935dbea8f258159f68806343f34c527"
+ },
+ {
+  "slug": "news-527",
+  "order": 14,
+  "lang": "en",
+  "set": {
+   "text": "On 26.11.2024"
+  },
+  "sha_uz": "de6f436fe7a38e3c3055420e59e272d6b935dbea8f258159f68806343f34c527",
+  "sha_lang": "de6f436fe7a38e3c3055420e59e272d6b935dbea8f258159f68806343f34c527"
+ },
+ {
+  "slug": "news-161",
+  "order": 7,
+  "lang": "ru",
+  "set": {
+   "text": "перепись населения в Республике Узбекистан пройдёт 1–25 ноября 2023 года;"
+  },
+  "sha_uz": "636f81531291aff9ff06f380e59b2144e29f111e952f602fd7655761abd2313a",
+  "sha_lang": "b3da9e689938436cd4d9fa3518d0615800a7c7abf73edefd17cb4a0c4eb31237"
+ },
+ {
+  "slug": "news-161",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "ПОСТАНОВЛЕНИЕ"
+  },
+  "sha_uz": "710e33954d4525d8fa35657d0354b1701f9a2cfd056ef4ebbb1397bb4093db0e",
+  "sha_lang": "6cf6219fa93ae2b17a4c9cc102e02195d2be09a4be4e141a64a526d36604cb95"
+ },
+ {
+  "slug": "news-161",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "RESOLUTION"
+  },
+  "sha_uz": "710e33954d4525d8fa35657d0354b1701f9a2cfd056ef4ebbb1397bb4093db0e",
+  "sha_lang": "e2c72221bd8eb109a6bf8866d4944c4e3c02c8bf1ca5a55afe0caae675ed3a84"
+ },
+ {
+  "slug": "news-161",
+  "order": 3,
+  "lang": "ru",
+  "set": {
+   "text": "КАБИНЕТА МИНИСТРОВ РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-161",
+  "order": 3,
+  "lang": "en",
+  "set": {
+   "text": "OF THE CABINET OF MINISTERS OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-279",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "ПОСТАНОВЛЕНИЕ"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "cb4e31eb6fbe737a9057f8dce649e494ad69729cf8326fabc34f235f6884b8a2"
+ },
+ {
+  "slug": "news-279",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "RESOLUTION"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "0d1b6a7fcb31d3a60b0918a6aefb1f2711f6e9105545be3c95c982792f0d423f"
+ },
+ {
+  "slug": "news-279",
+  "order": 3,
+  "lang": "ru",
+  "set": {
+   "text": "ПРЕЗИДЕНТА РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-279",
+  "order": 3,
+  "lang": "en",
+  "set": {
+   "text": "OF THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-445",
+  "order": 25,
+  "lang": "ru",
+  "set": {
+   "text": "ПОСТАНОВЛЕНИЕ"
+  },
+  "sha_uz": "710e33954d4525d8fa35657d0354b1701f9a2cfd056ef4ebbb1397bb4093db0e",
+  "sha_lang": "21edc96b09c266ab765a8e0d4b77e3258c4f1ca7aef549a22b70b3da4da355bf"
+ },
+ {
+  "slug": "news-445",
+  "order": 25,
+  "lang": "en",
+  "set": {
+   "text": "RESOLUTION"
+  },
+  "sha_uz": "710e33954d4525d8fa35657d0354b1701f9a2cfd056ef4ebbb1397bb4093db0e",
+  "sha_lang": "4e9d3c8bb41cd3f669ed6936e5c2c288fe8976f259c72ce0d3d5f1f32af02f19"
+ },
+ {
+  "slug": "news-445",
+  "order": 26,
+  "lang": "ru",
+  "set": {
+   "text": "КАБИНЕТА МИНИСТРОВ РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-445",
+  "order": 26,
+  "lang": "en",
+  "set": {
+   "text": "OF THE CABINET OF MINISTERS OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-545",
+  "order": 6,
+  "lang": "ru",
+  "set": {
+   "text": "ПОСТАНОВЛЕНИЕ"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "71917a4de76f1dcc1aef8af96f968e144b2dbef016a3455c77a714dd7d600ed3"
+ },
+ {
+  "slug": "news-545",
+  "order": 6,
+  "lang": "en",
+  "set": {
+   "text": "RESOLUTION"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "aedd7661845ee6c66923d09994f20c2603224630b48dcd5057bd77e0e1a53a69"
+ },
+ {
+  "slug": "news-545",
+  "order": 7,
+  "lang": "ru",
+  "set": {
+   "text": "ПРЕЗИДЕНТА РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-545",
+  "order": 7,
+  "lang": "en",
+  "set": {
+   "text": "OF THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e",
+  "sha_lang": "2f065a348e4d66d2b82af78a382fc9d0a99ac30381941585b2883220d1ed602e"
+ },
+ {
+  "slug": "news-163",
+  "order": 2,
+  "lang": "ru",
+  "set": {
+   "text": "УКАЗ"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "71917a4de76f1dcc1aef8af96f968e144b2dbef016a3455c77a714dd7d600ed3"
+ },
+ {
+  "slug": "news-163",
+  "order": 2,
+  "lang": "en",
+  "set": {
+   "text": "DECREE"
+  },
+  "sha_uz": "56ab5436d574aeb8ccb5ba45abf4f10d41758580b8d8cb20d8052d1d3625c617",
+  "sha_lang": "aedd7661845ee6c66923d09994f20c2603224630b48dcd5057bd77e0e1a53a69"
+ },
+ {
+  "slug": "news-163",
+  "order": 3,
+  "lang": "ru",
+  "set": {
+   "text": "ПРЕЗИДЕНТА РЕСПУБЛИКИ УЗБЕКИСТАН"
+  },
+  "sha_uz": "07dff3b4e0338744e272aaf5194493deab08f3a1bbb8475ffc6137955b11738e",
+  "sha_lang": "6bf919ea6eefcd7416d56a3a26326b526ab5e16710e7baf99e52c06e2a94310e"
+ },
+ {
+  "slug": "news-163",
+  "order": 3,
+  "lang": "en",
+  "set": {
+   "text": "OF THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN"
+  },
+  "sha_uz": "07dff3b4e0338744e272aaf5194493deab08f3a1bbb8475ffc6137955b11738e",
+  "sha_lang": "c405cda5ca42e2dec94226545ea6592c59dd154547a727348063bf60114b7c1f"
+ },
+ {
+  "slug": "news-163",
+  "order": 4,
+  "lang": "ru",
+  "set": {
+   "text": "О СТРАТЕГИИ РАЗВИТИЯ НОВОГО УЗБЕКИСТАНА НА 2022–2026 ГОДЫ"
+  },
+  "sha_uz": "8e07bb5e6ce838416b505d92bfab52b85e158abb25a1b6b79ffdfa24cb344cd2",
+  "sha_lang": "c8aa6d41b31ab830fb702e39bead2716a4a9d3aa714807cb75b91e6e9f1c51b3"
+ },
+ {
+  "slug": "news-163",
+  "order": 4,
+  "lang": "en",
+  "set": {
+   "text": "ON THE DEVELOPMENT STRATEGY OF NEW UZBEKISTAN FOR 2022–2026"
+  },
+  "sha_uz": "8e07bb5e6ce838416b505d92bfab52b85e158abb25a1b6b79ffdfa24cb344cd2",
+  "sha_lang": "82eef67545a99c100f5e066c0d59ee982f06f75df8a21170c8c832c2c7238b18"
+ },
+ {
+  "slug": "department-11",
+  "order": 28,
+  "lang": "ru",
+  "set": {
+   "text": "старший преподаватель"
+  },
+  "sha_uz": "1f1805c2a0e288fe4794aec31660fb665ebc4e7b4285d3076e4731abccca87ec",
+  "sha_lang": "11855ea0370c29417efe7148bf2768ee9e0afb439e12f8a0eaea77a00cf2a3bd"
+ },
+ {
+  "slug": "department-11",
+  "order": 32,
+  "lang": "ru",
+  "set": {
+   "text": "преподаватель"
+  },
+  "sha_uz": "00e92720e8aacaf92fed3e7c225a31e1d0dbecc5504f9ebfe86fccd2c54e56da",
+  "sha_lang": "11855ea0370c29417efe7148bf2768ee9e0afb439e12f8a0eaea77a00cf2a3bd"
+ },
+ {
+  "slug": "department-7",
+  "order": 5,
+  "lang": "en",
+  "set": {
+   "text": "Medical Chemistry"
+  },
+  "sha_uz": "3e6eaf43cb9c1315f031bfc1ebb91eb57d752688a10087650ffccf7bdc27a53c",
+  "sha_lang": "8c340e8c5fc0507b1a31b3202216942973fbb39b1117416f6d9a4fa893d1492b"
+ },
+ {
+  "slug": "department-7",
+  "order": 12,
+  "lang": "ru",
+  "set": {
+   "text": "Дехканова Нигора Наманжановна."
+  },
+  "sha_uz": "2337adfb68bd85b7f9d8e1a0a07c042be088a04bfb3b52fb174df550c5d5e0c9",
+  "sha_lang": "e1e9c4bf6cb7ef6ead8b9adc488b582a0a625063fe0e95970c265f83bae2f51d"
+ },
+ {
+  "slug": "department-7",
+  "order": 20,
+  "lang": "ru",
+  "set": {
+   "text": "Ахаджонов Мавлонжон Махмуджон угли"
+  },
+  "sha_uz": "3ffe6fee655fbfc2c88134e097eafcdddcf1171b555b8e074df90f7f8b8e7e7a",
+  "sha_lang": "3ba51f26d845cdff19a71192b1d3ed6004ae6b0ea0ddf56d27d5b2807a9d4e89"
+ },
+ {
+  "slug": "department-7",
+  "order": 20,
+  "lang": "en",
+  "set": {
+   "text": "Axadjonov Mavlonjon Maxmudjon ugli"
+  },
+  "sha_uz": "3ffe6fee655fbfc2c88134e097eafcdddcf1171b555b8e074df90f7f8b8e7e7a",
+  "sha_lang": "6f9a627da228567024cf186a32fcaa06d40e976c7c566dd1107162710b7ed161"
+ },
+ {
+  "slug": "department-14",
+  "order": 28,
+  "lang": "ru",
+  "set": {
+   "text": "доктор философских наук"
+  },
+  "sha_uz": "ba51963168622bc324a731b70bd6f4f0adce3194c5c29f33755bcb81db2c611e",
+  "sha_lang": "d66a6eebdbb58d09dc15429cc801a6f669c178acc795f57ad529bfa85dce3d7c"
+ },
+ {
+  "slug": "department-39",
+  "order": 40,
+  "lang": "ru",
+  "set": {
+   "text": "Основные направления."
+  },
+  "sha_uz": "591985973be32d11e9b5c18baf426ddf4f3ca961c1d72e2d756cc70a0654e19f",
+  "sha_lang": "250dabe007e105067e98cb39c5aef7a2a709719280345efe4169599e3a103a9d"
+ },
+ {
+  "slug": "department-43",
+  "order": 12,
+  "lang": "ru",
+  "set": {
+   "text": "кандидат медицинских наук, доцент."
+  },
+  "sha_uz": "a983371cf22ad5a166325f050d272c45faf524219c65c412f03d867693f117d0",
+  "sha_lang": "b57f08c3fed8d80c1d9e8147159e93765815467819bb33a901cecbcb3e5fd181"
+ },
+ {
+  "slug": "department-43",
+  "order": 12,
+  "lang": "en",
+  "set": {
+   "text": "Candidate of Medical Sciences, Associate Professor."
+  },
+  "sha_uz": "a983371cf22ad5a166325f050d272c45faf524219c65c412f03d867693f117d0",
+  "sha_lang": "8921f1541e296f70265cadd3d55807d8b4a74a683038140f665bea9f6cb17815"
+ },
+ {
+  "slug": "department-30",
+  "order": 21,
+  "lang": "ru",
+  "set": {
+   "text": "11. Здоровье и здоровый образ жизни в профилактической работе врача (совместный)"
+  },
+  "sha_uz": "1628e8bbf99f3bd85cf09bca9043b4a15c2d14eff466a10b5335f6b08610cc43",
+  "sha_lang": "726287291ed7eafe3854ccda280498ba94caf4500541697f1f3e5c0a6f92c908"
+ },
+ {
+  "slug": "department-30",
+  "order": 22,
+  "lang": "ru",
+  "set": {
+   "text": "12. Основы научной работы в медицине (совместный)"
+  },
+  "sha_uz": "8f88abdeff9b14ccbe6b1c045b2642c4e2ee4d9c1e633b9862bd120186e0cc63",
+  "sha_lang": "225e621fa4761a0a440959ddd62cc3f865975fb3c3f692c31c19e24280e48538"
+ },
+ {
+  "slug": "department-30",
+  "order": 23,
+  "lang": "ru",
+  "set": {
+   "text": "13. Физическая культура и спорт (совместный)"
+  },
+  "sha_uz": "5167d49c7dc442257523ed341f089b6512cf437a0265bccf5dd06bee8402313f",
+  "sha_lang": "50321881a39b4fe772f09741cd98ce61a37ef472e464a6da8cf03a4026d51ec6"
+ },
+ {
+  "slug": "department-30",
+  "order": 25,
+  "lang": "ru",
+  "set": {
+   "text": "15. Инклюзивный подход в социальной и профессиональной сферах (совместный)"
+  },
+  "sha_uz": "1b95a0703bec0ec9de96d1ace58fe7276e2eeae388f514abd0ab7b4de7a461d7",
+  "sha_lang": "fe44d9c63e8075805d6d5971925856c45c62e990413f8a07b641736e254c180c"
+ },
+ {
+  "slug": "department-30",
+  "order": 26,
+  "lang": "ru",
+  "set": {
+   "text": "16. Элективные дисциплины по физической культуре и спорту (совместный)"
+  },
+  "sha_uz": "6a3e3dcdab5d0dabe25c41d35aa286f9490866203e6e3caa49706ae6776692f8",
+  "sha_lang": "adffcb311c056628b17591629f3826d076bcc0b8c1b3250ca027feccae331cba"
+ },
+ {
+  "slug": "department-30",
+  "order": 27,
+  "lang": "ru",
+  "set": {
+   "text": "17. Менеджмент в здравоохранении (совместный)"
+  },
+  "sha_uz": "0d310c31d6721ce88e528ec3548a9ca5c41909c340c0b270890de0dc6fd50e35",
+  "sha_lang": "bf2e32124ce869a626b98de34ce17ad2376448b16581116d48a6826bee16f6a5"
+ },
+ {
+  "slug": "news-655",
+  "order": 8,
+  "lang": "en",
+  "set": {
+   "text": "HIV (virus)"
+  },
+  "sha_uz": "c337704e6d8b0e59a8e4d09e35a0cfa8ef26a7a7fd00d8bb96a9160c8d228d27",
+  "sha_lang": "49820f9cc9c41cc2ed954eba714acb2d42229917f9fd2814d8319738d176f60d"
+ },
+ {
+  "slug": "news-655",
+  "order": 9,
+  "lang": "en",
+  "set": {
+   "text": "AIDS (disease stage)"
+  },
+  "sha_uz": "c85b494d8365cb3c42987a5cc5eb2dd2b0fd4c2ded25e15f50b59a2963e6c690",
+  "sha_lang": "b5651d2bd656192dc020e60dbf9cf8e368a6ed2328fbb72288d00495ef942b07"
+ },
+ {
+  "slug": "news-655",
+  "order": 10,
+  "lang": "en",
+  "set": {
+   "text": "A virus that attacks the immune system"
+  },
+  "sha_uz": "0ef28e2fd095913fbc742e45cf1a8afe75b6cb2e9d7cde6c6b651df270eae97b",
+  "sha_lang": "4179376138f91758e28fe6b187e51fb3a0ee388e5407f8fafdade4a7c68d3898"
+ },
+ {
+  "slug": "news-655",
+  "order": 11,
+  "lang": "en",
+  "set": {
+   "text": "The final stage of HIV infection"
+  },
+  "sha_uz": "3e4473a5c37e12133ed6243e71f4f20925ad81b697c5e9fa0d828c46dd9630ab",
+  "sha_lang": "75efb5bea928a5ec27bb243c3985fdc97497523dc5f188ec6b9262d8c212b0c5"
+ },
+ {
+  "slug": "news-655",
+  "order": 12,
+  "lang": "en",
+  "set": {
+   "text": "Can last for years"
+  },
+  "sha_uz": "9318498a931d9248afdf1752dbcda4d1875d5898bf600c4cb44ce0915b1acdab",
+  "sha_lang": "d12eac276e7f5067b993779b2229f96362a4c3dbbe9e46802929b7366304df6f"
+ },
+ {
+  "slug": "news-655",
+  "order": 13,
+  "lang": "ru",
+  "set": {
+   "text": "Появляется, когда иммунитет сильно снижен"
+  },
+  "sha_uz": "f6a43e46e6fa6f3b24f873d0c283e7b2ff38d38c131bdd4a9bda9cf4a623d0da",
+  "sha_lang": "82bf58c85b0648754f1a722f0dfa2beae45f9aecd6faec80e8bbc018a3e88995"
+ },
+ {
+  "slug": "news-655",
+  "order": 13,
+  "lang": "en",
+  "set": {
+   "text": "Appears when immunity is severely weakened"
+  },
+  "sha_uz": "f6a43e46e6fa6f3b24f873d0c283e7b2ff38d38c131bdd4a9bda9cf4a623d0da",
+  "sha_lang": "7c523037944dd1ff2c50ab51b6b858b85cc4056a4b80d815f7c414850fe3a048"
+ },
+ {
+  "slug": "news-655",
+  "order": 14,
+  "lang": "ru",
+  "set": {
+   "text": "Контролируется лекарствами"
+  },
+  "sha_uz": "65fc94cf3a41e16579c24231bd22a581ae49cc709b43b35d969349be363b17c1",
+  "sha_lang": "986605dc6ea592eb7a958fc805230156700411ef46ce14fbe5993ae7be966254"
+ },
+ {
+  "slug": "news-655",
+  "order": 14,
+  "lang": "en",
+  "set": {
+   "text": "Controlled with medication"
+  },
+  "sha_uz": "65fc94cf3a41e16579c24231bd22a581ae49cc709b43b35d969349be363b17c1",
+  "sha_lang": "8080fefc2a0c5383ebd1787292bb85a71d8a38af55b391a000ff7cedb0429d4e"
+ },
+ {
+  "slug": "news-655",
+  "order": 15,
+  "lang": "ru",
+  "set": {
+   "text": "Без лечения может привести к смерти"
+  },
+  "sha_uz": "cbef0f35260fa5160845149321fe139fc82d8474646a4284f27862b42d33c69e",
+  "sha_lang": "9f3a708ad31c3cfb82f4a473cbb33db8dcbc0f91d4aa3e9c9c4d2f2604ad0787"
+ },
+ {
+  "slug": "news-655",
+  "order": 15,
+  "lang": "en",
+  "set": {
+   "text": "Without treatment, can lead to death"
+  },
+  "sha_uz": "cbef0f35260fa5160845149321fe139fc82d8474646a4284f27862b42d33c69e",
+  "sha_lang": "fc2d62c668bce755cc7cda229135255cf90786888bbb25d938b6132ea2ca2d97"
+ },
+ {
+  "slug": "news-655",
+  "order": 24,
+  "lang": "en",
+  "set": {
+   "text": "using shared needles and syringes"
+  },
+  "sha_uz": "30b1cd64e7ab499b6f28ced987598813027d6fd3d30eec1343782e7f460a89be",
+  "sha_lang": "3c5a722af7e45a7d8d65efb1228a985619153e83732cc3ca8e0b69b97f772a5f"
+ },
+ {
+  "slug": "news-655",
+  "order": 25,
+  "lang": "ru",
+  "set": {
+   "text": "переливание непроверенной крови без контроля"
+  },
+  "sha_uz": "b5e2d90dde489e5894675dd07f708ecfbab9a9f462dd3156b85412667898900d",
+  "sha_lang": "07a9d2f5c784dc17ffaf5f84d13b2ac1872acfab6fd8c1379eeda7f88f4b9122"
+ },
+ {
+  "slug": "news-655",
+  "order": 25,
+  "lang": "en",
+  "set": {
+   "text": "uncontrolled, untested blood in transfusions"
+  },
+  "sha_uz": "b5e2d90dde489e5894675dd07f708ecfbab9a9f462dd3156b85412667898900d",
+  "sha_lang": "a51585e5f44d641f4feed60f19f924b5e520ff8d1041bb5149db236a58cdf2db"
+ },
+ {
+  "slug": "news-655",
+  "order": 28,
+  "lang": "en",
+  "set": {
+   "text": "unprotected sex (without a condom)"
+  },
+  "sha_uz": "3d96779882fbdd76c2ca8bbb5e60428e119f46c36ba18ba5e7831a7bb63f2422",
+  "sha_lang": "824c80497be6b489433351dfc4b11bf64b7e3c4c0edb1139305f97850eda8071"
+ },
+ {
+  "slug": "news-655",
+  "order": 32,
+  "lang": "ru",
+  "set": {
+   "text": "при грудном вскармливании"
+  },
+  "sha_uz": "1aa9ed65c8e1016ba79235fe0ca4690cbbd6abce6ea8e878a74b43994aa4f402",
+  "sha_lang": "6768d75a7855febaff3927a34f30de3c0d3d2c8c70ecba02cb5fc81ec787e3f1"
+ },
+ {
+  "slug": "news-655",
+  "order": 33,
+  "lang": "ru",
+  "set": {
+   "text": "Как ВИЧ НЕ передаётся?"
+  },
+  "sha_uz": "0bb7975fcadc38d8bc4efec71ae846c70498ddbe331606461eaa3c7d728c0b0a",
+  "sha_lang": "81b7dbbe76c359881bfaaf8584583f4884a9a1c716fb7df3a7bc8a8430c978cc"
+ },
+ {
+  "slug": "news-655",
+  "order": 33,
+  "lang": "en",
+  "set": {
+   "text": "How is HIV NOT transmitted?"
+  },
+  "sha_uz": "0bb7975fcadc38d8bc4efec71ae846c70498ddbe331606461eaa3c7d728c0b0a",
+  "sha_lang": "bb26cd8d151be864f0b62eb0ae7c902a73ac3dc8045c9de89855c24725beba68"
+ },
+ {
+  "slug": "news-655",
+  "order": 34,
+  "lang": "ru",
+  "set": {
+   "text": "рукопожатия и объятия"
+  },
+  "sha_uz": "b4826e5bbf490f2f684cdc50da01bab80f2f1b5099effd3a19b8f58058097579",
+  "sha_lang": "68887c50fb6510e7eda76918123c92960e45024968212a717acec2029cc26031"
+ },
+ {
+  "slug": "news-655",
+  "order": 34,
+  "lang": "en",
+  "set": {
+   "text": "handshakes and hugs"
+  },
+  "sha_uz": "b4826e5bbf490f2f684cdc50da01bab80f2f1b5099effd3a19b8f58058097579",
+  "sha_lang": "b3da2c8fcd1f8769074fa0d512801073d55d95153e3271db320af990020f5130"
+ },
+ {
+  "slug": "news-655",
+  "order": 35,
+  "lang": "en",
+  "set": {
+   "text": "shared dishes and cutlery"
+  },
+  "sha_uz": "de1ca0dabb8747a525b71009d55421ed12e553c47406527b3a1005759c178d3e",
+  "sha_lang": "7336a925ac0571d6bbebb07794b2c4192d1ea80cf1a7888d89b2fb818a4269fb"
+ },
+ {
+  "slug": "news-655",
+  "order": 36,
+  "lang": "en",
+  "set": {
+   "text": "baths and toilets"
+  },
+  "sha_uz": "bc60be8441bc68b5a8334b59bd75fde6dd372e504adefbdb7abe3309880187e1",
+  "sha_lang": "4f2ccc6ddc4bde300415f12bb3d6c799ee166c540b76200aecfb47156f40e703"
+ },
+ {
+  "slug": "news-655",
+  "order": 37,
+  "lang": "en",
+  "set": {
+   "text": "mosquito or other insect bites"
+  },
+  "sha_uz": "8d058bb0b30b31b33b680bbd16b2fe35481d1fc6e3a6238cf188deab02c43773",
+  "sha_lang": "fda38ccbe432c630cd8663f5ec02bf8577c12e90750724a9f72c27f4d40ed97e"
+ },
+ {
+  "slug": "news-655",
+  "order": 41,
+  "lang": "en",
+  "set": {
+   "text": "Often there are no symptoms at the initial stage. But there may be:"
+  },
+  "sha_uz": "2c78a17a6d6af96d42edd27cab611c7cd9f18d2dae442c3f92f27c9954112925",
+  "sha_lang": "a6d6e7704230fe2461ff74e3e9b31408220c7afdff71efeb49f5070795508999"
+ },
+ {
+  "slug": "news-655",
+  "order": 42,
+  "lang": "ru",
+  "set": {
+   "text": "длительная слабость"
+  },
+  "sha_uz": "e8aa61061eced906cd1d318c06bf407e3e54480541e9efea6fdf4e533535e641",
+  "sha_lang": "a068463eea4c3eef1fcbd0caf892c58a11566a3496917e65e12fec3a03857bc3"
+ },
+ {
+  "slug": "news-655",
+  "order": 42,
+  "lang": "en",
+  "set": {
+   "text": "prolonged weakness"
+  },
+  "sha_uz": "e8aa61061eced906cd1d318c06bf407e3e54480541e9efea6fdf4e533535e641",
+  "sha_lang": "da33f1ecc78e948754db6d4ec7b6c0e2f0947de58b83cfec239bb21c86186796"
+ },
+ {
+  "slug": "news-655",
+  "order": 43,
+  "lang": "ru",
+  "set": {
+   "text": "увеличение лимфатических узлов"
+  },
+  "sha_uz": "562136a9ca24cc4c805c4e8ed7c4df7da8e5d5491848d11fad7aa6e3ec7203bd",
+  "sha_lang": "c5d8906cf167c29ab1cf577afcadd249a4927c9bec67cf7630de541deac85eff"
+ },
+ {
+  "slug": "news-655",
+  "order": 43,
+  "lang": "en",
+  "set": {
+   "text": "enlarged lymph nodes"
+  },
+  "sha_uz": "562136a9ca24cc4c805c4e8ed7c4df7da8e5d5491848d11fad7aa6e3ec7203bd",
+  "sha_lang": "fc8be4c972b4dc213e222ea82ca78277f6b4bd2d76adcef20abca772ce79072f"
+ },
+ {
+  "slug": "news-655",
+  "order": 44,
+  "lang": "ru",
+  "set": {
+   "text": "потеря веса"
+  },
+  "sha_uz": "374353df070300a234d862a92192e40deabeb3418ce6f44ee3c5ec554dceeba7",
+  "sha_lang": "e17c91fbfe3909ec7ff52f0bc11fbe918a6ba65cad6a5e27996c6b7bd1e614a5"
+ },
+ {
+  "slug": "news-655",
+  "order": 44,
+  "lang": "en",
+  "set": {
+   "text": "weight loss"
+  },
+  "sha_uz": "374353df070300a234d862a92192e40deabeb3418ce6f44ee3c5ec554dceeba7",
+  "sha_lang": "d9a3929b07f6c39651a613ae49f6152559d6a1aa700fc2284c00298edb29c511"
+ },
+ {
+  "slug": "news-655",
+  "order": 45,
+  "lang": "ru",
+  "set": {
+   "text": "ночная потливость"
+  },
+  "sha_uz": "c65a5320aa1c88dc2740c3e0b8f85ae528f97a98f997ca843900a2d38f994810",
+  "sha_lang": "06c3d337b351815ea7ed198c8fe7b38c79471139672a73b86c6e98d5d11ae3b2"
+ },
+ {
+  "slug": "news-655",
+  "order": 45,
+  "lang": "en",
+  "set": {
+   "text": "night sweats"
+  },
+  "sha_uz": "c65a5320aa1c88dc2740c3e0b8f85ae528f97a98f997ca843900a2d38f994810",
+  "sha_lang": "29c41873f67f0612df87ebbb81b996c2354bda9c7b8a8080217baa26445473f7"
+ },
+ {
+  "slug": "news-655",
+  "order": 46,
+  "lang": "ru",
+  "set": {
+   "text": "повышенная температура"
+  },
+  "sha_uz": "13b9b614f7ee4689110ec7597d81ccb77c52b5b2442ebe1e7026b555edf9d99a",
+  "sha_lang": "e376902c78dc66a99da1817c4b5566aafc35c3cc5f7d5e75b802e02e5dc75d14"
+ },
+ {
+  "slug": "news-655",
+  "order": 46,
+  "lang": "en",
+  "set": {
+   "text": "fever"
+  },
+  "sha_uz": "13b9b614f7ee4689110ec7597d81ccb77c52b5b2442ebe1e7026b555edf9d99a",
+  "sha_lang": "616f2d9d8ad304ae636c003ec8199ab13fb2dd88e464bbf1d01c4314e8d0f4b4"
+ },
+ {
+  "slug": "news-655",
+  "order": 47,
+  "lang": "ru",
+  "set": {
+   "text": "повторяющиеся инфекции"
+  },
+  "sha_uz": "7bcc58bbc69430d1e626ebb438929c012341a8a907ddf57b51d7d5f280a78ba2",
+  "sha_lang": "da4c88b828614facdc4b9f4aed702a5e89910ce9c1c487ebf7e915a8b6a63d52"
+ },
+ {
+  "slug": "news-655",
+  "order": 47,
+  "lang": "en",
+  "set": {
+   "text": "recurring infections"
+  },
+  "sha_uz": "7bcc58bbc69430d1e626ebb438929c012341a8a907ddf57b51d7d5f280a78ba2",
+  "sha_lang": "d058a473f894e21b538e93ba13f95f45628878c2341008bbe86f7f76dccdd441"
+ },
+ {
+  "slug": "news-655",
+  "order": 51,
+  "lang": "en",
+  "set": {
+   "text": "tuberculosis"
+  },
+  "sha_uz": "f6bedc751aafdb2904690ca791743873b6a030b1e37c44a77d4fac95f23f8a66",
+  "sha_lang": "0c250e7b0fe5ceb2702cf1f2b1ce1ee706c72565010a1411f81e409127d7eb85"
+ },
+ {
+  "slug": "news-655",
+  "order": 52,
+  "lang": "ru",
+  "set": {
+   "text": "некоторые виды рака (саркома Капоши)"
+  },
+  "sha_uz": "9653ab7f9d2e35c833cd5033c6f5be15eace439337cbefda14a9bd216321c60d",
+  "sha_lang": "c8873eac1585eb33a9f756c25b7792927d7b58cd7b64b49870a1d7d9b0ca4790"
+ },
+ {
+  "slug": "news-655",
+  "order": 52,
+  "lang": "en",
+  "set": {
+   "text": "certain types of cancer (Kaposi's sarcoma)"
+  },
+  "sha_uz": "9653ab7f9d2e35c833cd5033c6f5be15eace439337cbefda14a9bd216321c60d",
+  "sha_lang": "b31d0c2c07a480a8945111b53e60a018313a031ce07ef4854a8516d10a11c28a"
+ },
+ {
+  "slug": "news-655",
+  "order": 53,
+  "lang": "ru",
+  "set": {
+   "text": "Выявление ВИЧ"
+  },
+  "sha_uz": "07da4d89f6d1ea925924a7ae091eb6c639fcd3c10a177c1541eae6ceb006700a",
+  "sha_lang": "3922d552b2dccc986731ac3d4a5ee1571aeff6f16a7d05f5319bf834b43bcf18"
+ },
+ {
+  "slug": "news-655",
+  "order": 58,
+  "lang": "en",
+  "set": {
+   "text": "Uzbekistan has AIDS centers in all cities and districts, and testing is free and confidential."
+  },
+  "sha_uz": "a012ced8cc4e84991c60a9a0df06ad2667348f02f4bb3cc26e8d5144194c8976",
+  "sha_lang": "984acfeb46ae79695205e76f533b5cfbe30ae3aab451e8d6cc94b63465cb5d95"
+ },
+ {
+  "slug": "news-655",
+  "order": 64,
+  "lang": "ru",
+  "set": {
+   "text": "пациент может прожить долгую здоровую жизнь"
+  },
+  "sha_uz": "e08996eb6495ee976953c74f8999ca0ed726d90190d132c56f4721949e465ff4",
+  "sha_lang": "29ce3165b279229576810a5f051a9dde550e9c0591ab24f2b41ec78a8271d17e"
+ },
+ {
+  "slug": "news-655",
+  "order": 65,
+  "lang": "ru",
+  "set": {
+   "text": "предотвращает развитие СПИДа"
+  },
+  "sha_uz": "b4fe0b5df443de81f59bbce6a4b8caea2e5247cbed1db80c8960fbf6f18969c8",
+  "sha_lang": "b1a7d2be1b1a5b6f2814fa4383bf762a55a1edcf73329e28db133fd72f055947"
+ },
+ {
+  "slug": "news-655",
+  "order": 66,
+  "lang": "ru",
+  "set": {
+   "text": "снижает риск передачи вируса другим до 96–99%"
+  },
+  "sha_uz": "a122ecc9ff700fae91ab50e583bb670269f08a06dbf16de2819b2d137bd223e4",
+  "sha_lang": "00aa18909371624308c3a940f169380d878d3aec6892fe0a28e327787dde5f41"
+ },
+ {
+  "slug": "news-655",
+  "order": 75,
+  "lang": "ru",
+  "set": {
+   "text": "повышение осведомлённости населения"
+  },
+  "sha_uz": "b5f50aba776e233c014ca34aca116d03179bb2014a1c716061a5ff08506042af",
+  "sha_lang": "78a31ba9e4c2e6e9f651393d660c4670e8c009f2f1800ad960245cf0411ad9d7"
+ },
+ {
+  "slug": "news-655",
+  "order": 76,
+  "lang": "ru",
+  "set": {
+   "text": "расширение центров анонимного тестирования"
+  },
+  "sha_uz": "68ee62e215e2bdc56518e106143ab68d5ea3c67a1f0372a89670b2fd323a4dce",
+  "sha_lang": "cff69ce953e4d02e68f194985c5b1d3ad142c0a8db9954a48da132e1ef061d05"
+ },
+ {
+  "slug": "news-655",
+  "order": 77,
+  "lang": "ru",
+  "set": {
+   "text": "работа с группами риска"
+  },
+  "sha_uz": "0c8d63fd5d202cdb4f0490000df6c737a7dab96af836bfd59c53583c8396cf50",
+  "sha_lang": "7bab9eafd37b203957eda5fdf747a31ccecf423012ec7ca79e0336c520087ee6"
+ },
+ {
+  "slug": "news-655",
+  "order": 78,
+  "lang": "ru",
+  "set": {
+   "text": "обследование беременных женщин (профилактика передачи от матери к ребёнку)"
+  },
+  "sha_uz": "1aa6a6f80b91d030ddaf0ad7ff8abe4219698823c49f8de0c8fe95a5db09366e",
+  "sha_lang": "f5b8c0ab172411ef2e896061f4955c415250bb212eb61ed7938615d8c2c47ba6"
+ }
+]
