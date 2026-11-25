@@ -286,7 +286,7 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
               <ToolbarButton title="Sarlavha 3" icon="ri-h-3" active={editor.isActive("heading", { level: 3 })} onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} />
               <ToolbarButton
                 title="Karta: shu sarlavhadan keyingi sarlavhagacha bo'lim rangli kartaga o'raladi (Sarlavha 2 uchun)"
-                icon="ri-layout-top-2-line"
+                icon="ri-layout-masonry-line"
                 active={Boolean(editor.isActive("heading", { level: 2 }) && editor.getAttributes("heading").panel)}
                 disabled={!editor.isActive("heading", { level: 2 })}
                 onClick={() => editor.chain().focus().updateAttributes("heading", { panel: !editor.getAttributes("heading").panel }).run()}
