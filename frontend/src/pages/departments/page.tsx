@@ -18,7 +18,7 @@ import { stripHtml } from "@/lib/html";
 import { normalizeYearLabels } from "@/lib/siteConstants";
 import { DEPARTMENT_MENU_ID } from "@/lib/departmentSection";
 import { useMenu } from "@/context/MenuContext";
-import { resolveMenuSection } from "@/lib/menuSection";
+import { INSTITUTE_ABOUT_MENU_ID, resolveMenuSection } from "@/lib/menuSection";
 
 export default function DepartmentPage() {
   const { t } = useTranslation();
@@ -104,27 +104,29 @@ export default function DepartmentPage() {
   if (notFound) return <NotFound />;
   if (error || !dept) return <ErrorState message={error ?? undefined} />;
 
-  const isHistory = slug === "institut-tarixi";
-  // "Institut tarixi" belongs to the "Institut haqida" section, so its list is that section's, not the kafedra list.
-  const sidebarMenuId = (isHistory && resolveMenuSection(menuTree, resolvedMenuId, slug)?.sectionId) || DEPARTMENT_MENU_ID;
+  // A department record opened from the "Institut haqida" menu ("Institut tarixi") is a page of that section, not a kafedra:
+  // its list is the section's, and it gets no kafedra banner.
+  const inInstituteSection = resolvedMenuId === INSTITUTE_ABOUT_MENU_ID
+    || resolveMenuSection(menuTree, resolvedMenuId, slug)?.sectionId === INSTITUTE_ABOUT_MENU_ID;
+  const sidebarMenuId = inInstituteSection ? INSTITUTE_ABOUT_MENU_ID : DEPARTMENT_MENU_ID;
   const displayTitle = normalizeYearLabels(dept.title.trim());
 
   return (
     <InnerPageLayout
-      className={isHistory ? undefined : "academic-layout"}
+      className={inInstituteSection ? undefined : "academic-layout"}
       title={displayTitle}
-      header={isHistory ? undefined : (
+      header={inInstituteSection ? undefined : (
         <AcademicPageHero title={displayTitle} logoUrl={dept.img} theme="department"
           breadcrumb={t("nav.section.kafedralar")} description={t("department.intro")} />
       )}
-      breadcrumb={isHistory ? t("footer.institutHaqida") : t("nav.section.kafedralar")}
+      breadcrumb={inInstituteSection ? t("footer.institutHaqida") : t("nav.section.kafedralar")}
       contentRef={contentRef}
       sidebar={<MenuSectionNav menuId={sidebarMenuId} currentSlug={slug} />}
     >
       <Reveal>
         <DepartmentPageContent
           department={dept}
-          slug={slug ?? ""}
+          inInstituteSection={inInstituteSection}
           head={head}
           isFallback={isFallback}
         />

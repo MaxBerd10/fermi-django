@@ -105,10 +105,7 @@ export default function BlogPage() {
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
     && sortedBlocks.length > 0
-    && sortedBlocks.every((block) =>
-      block.block_type === "document" || block.block_type === "image" ||
-      (block.block_type === "raw_html" && /<img\b/i.test(block.data.html)),
-    );
+    && sortedBlocks.every((block) => block.block_type === "document" || block.block_type === "image");
 
   return (
     <InnerPageLayout

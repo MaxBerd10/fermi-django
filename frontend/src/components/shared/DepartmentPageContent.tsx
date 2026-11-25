@@ -8,12 +8,13 @@ import DepartmentArticle from "./DepartmentArticle";
 
 export default function DepartmentPageContent({
   department,
-  slug,
+  inInstituteSection,
   head,
   isFallback,
 }: {
   department: DepartmentDetail;
-  slug: string;
+  /** A department record shown as a page of the "Institut haqida" section (Institut tarixi): no "Kafedralar" banner, no "Kafedra haqida" heading. */
+  inInstituteSection: boolean;
   head: Leader | null;
   isFallback?: boolean;
 }) {
@@ -21,12 +22,9 @@ export default function DepartmentPageContent({
   const [headOpen, setHeadOpen] = useState(false);
 
   const hasContent = department.blocks.length > 0;
-  // "Institut tarixi" is stored as a department record but is a page of the "Institut haqida" section: it
-  // gets no "Kafedralar" banner and no "Kafedra haqida" heading.
-  const isHistory = slug === "institut-tarixi";
 
   const ordered = [...department.blocks].sort((a, b) => a.order - b.order);
-  const article = isHistory ? (
+  const article = inInstituteSection ? (
     <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body">
       <ArticleBody blocks={ordered} />
     </article>
@@ -38,7 +36,7 @@ export default function DepartmentPageContent({
 
   return (
     <div className="academic-page">
-      {isFallback && !isHistory && (
+      {isFallback && !inInstituteSection && (
         <p className="academic-intro__note">
           <i className="ri-information-line" aria-hidden="true" /> {t("department.fallbackNote")}
         </p>
@@ -61,7 +59,7 @@ export default function DepartmentPageContent({
 
       {hasContent ? (
         <section className="department-page__about" aria-labelledby="department-about-heading">
-          {isHistory ? (
+          {inInstituteSection ? (
             <h2 id="department-about-heading" className="sr-only">
               {department.title}
             </h2>

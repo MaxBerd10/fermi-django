@@ -11,8 +11,6 @@ export type CmsEnhanceOptions = {
 };
 
 export function getCmsArticleModifier(slug?: string): string {
-  if (slug === "tibbiyotdagi-islohotlar-inson-qadri-uchun") return "cms-article--reforms";
-  if (slug === "ecaqa-xalqaro-maxsus-akkreditatsiya") return "cms-article--accreditation";
   if (slug === "institut-ilmiy-kengashi") return "cms-article--council";
   if (slug === "ilmiy-kengash-nizomi" || slug === "ilmiy-kengash-tarkibi" || slug === "kengash-kun-tartibi") {
     return "cms-article--council-pdf";
@@ -30,7 +28,6 @@ export function getCmsArticleModifier(slug?: string): string {
   }
   if (
     slug === "talim-togrisia" ||
-    slug === "kredit-modul-nizomi" ||
     slug === "prezident-farmon-va-qarorlari" ||
     slug === "taraqqiyot-strategiyasi" ||
     slug === "davlat-dasturlari" ||

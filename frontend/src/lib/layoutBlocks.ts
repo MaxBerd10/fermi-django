@@ -19,9 +19,6 @@ export type Section =
 /** A picture in the side column is about 160px (5.7 lines of text) high plus the gap. */
 export const LINES_PER_SIDE_PICTURE = 5.5;
 
-/** Until the report photos are in the media library (Task 4), a raw_html block that holds only these pictures is read as pictures. Any other old HTML stays a plain block. */
-const LEGACY_PICTURE_PREFIX = "/images/hisobot/";
-
 const datedEntry = /^((?:(?:с|since|from)\s+)?\d{4}(?:\s*[–—-]\s*\d{4})?(?:\s+(?:yildan|года?|гг?\.?|onwards))?)\s*[–—-]\s*(.+)$/iu;
 
 function datedEntries(items: string[]) {
@@ -34,7 +31,7 @@ function toPicture(src: string, alt: string, width: number | null, height: numbe
   return { src, alt, width, height, tall: width !== null && height !== null && height >= width };
 }
 
-/** The pictures a block stands for: an image block, an unstyled gallery, or (legacy) a raw_html block that holds nothing but pictures. */
+/** The pictures a block stands for: an image block or an unstyled gallery. */
 export function picturesOf(block: ContentBlock): Picture[] {
   if (block.block_type === "image") {
     const { image, alt, style } = block.data;
@@ -45,21 +42,12 @@ export function picturesOf(block: ContentBlock): Picture[] {
     if (block.data.style) return [];
     return block.data.items.flatMap((item) => (item.image ? [toPicture(item.image.file, item.alt ?? item.image.alt_text ?? "", item.image.width, item.image.height)] : []));
   }
-  if (block.block_type === "raw_html") {
-    const html = block.data.html;
-    if (!/<img\b/i.test(html) || html.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim()) return [];
-    return (html.match(/<img\b[^>]*>/gi) ?? []).flatMap((tag) => {
-      const attr = (name: string) => tag.match(new RegExp(`\\b${name}="([^"]*)"`, "i"))?.[1] ?? "";
-      const src = attr("src");
-      return src.startsWith(LEGACY_PICTURE_PREFIX) ? [toPicture(src, attr("alt"), Number(attr("width")) || null, Number(attr("height")) || null)] : [];
-    });
-  }
   return [];
 }
 
 /** A block the engine draws on its own (a document card, old HTML, a video, a styled picture group...). */
 function isStandalone(block: ContentBlock): boolean {
-  if (block.block_type === "raw_html") return picturesOf(block).length === 0;
+  if (block.block_type === "raw_html") return true;
   if (block.block_type === "image") return block.data.style === "diagram";
   if (block.block_type === "gallery") return Boolean(block.data.style);
   return block.block_type === "document" || block.block_type === "video" || block.block_type === "staff_card";

@@ -196,19 +196,6 @@
   content: none;
 }
 
-.inner-page-pdf {
-  border: 1px solid #dbe2f0;
-  border-radius: .75rem;
-  overflow: hidden;
-}
-
-.inner-page-pdf summary {
-  cursor: pointer;
-  padding: .75rem 1rem;
-  color: #0a1158;
-  font-weight: 650;
-}
-
 .academic-page {
   display: grid;
   gap: clamp(1.25rem, 3vw, 2rem);
