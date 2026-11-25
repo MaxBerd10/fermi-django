@@ -38,6 +38,8 @@ Sinov natijasi (2026-11-25, sinov bazasi, 39–44 tartib bilan qoʻllangandan ke
 
 Har bir skript: `dry` hech narsa yozmaydi; reja (`plan.json`) tuzilgan paytdagi blok oʻzgarmagan boʻlsa ishlaydi; adminʻda tahrirlangan blok `SKIPPED` boʻlib roʻyxatga tushadi; `apply` bitta tranzaksiya va backup bilan bajariladi; ikkinchi `apply` rad etiladi; `undo` faqat yangi bloklar oʻzgarmagan joyda eskisini qaytaradi.
 
+Diqqat: agar `apply` barcha bloklarni `SKIPPED` qilib oʻtkazsa ham skript “DONE” deb yozadi va backup qoldiradi; rejani qayta tuzgach `apply` “bu avval qoʻllangan” deb rad etadi. Bunday holda avval `MODE=undo` (hech narsani oʻzgartirmaydi), soʻng qayta `apply` qiling.
+
 Reja eskirsa (sahifa adminʻda oʻzgargan boʻlsa), skriptni qayta tuzing: `python deploy/content/yillik-hisobot-2026-40/make_plan.py` (40–43 uchun shu nomdagi fayl), 39 uchun `python deploy/content/_report_images.py deploy/content/yillik-hisobot-2026-39/plan.json`.
 
 ## 3. Serverga chiqarish
@@ -45,7 +47,7 @@ Reja eskirsa (sahifa adminʻda oʻzgargan boʻlsa), skriptni qayta tuzing: `pyth
 Serverda faqat alohida ruxsatdan keyin ishlang. Skriptlar serverda `/home/fermi-django` ichida, `set -a && . /etc/fermi-django.env && set +a` dan keyin ishlaydi.
 
 1. Baza (`pg_dump`) va `media/` ning backupini oling.
-2. Yangi frontendʻni chiqaring. U hali eski bloklarni (`raw_html`) oddiy `block` boʻlimlari sifatida chizadi, shuning uchun skriptlarsiz ham sayt ishlaydi (hisobot rasmlari skript 39 gacha oddiy HTML boʻlib koʻrinadi).
+2. Yangi frontendʻni chiqaring va DARHOL (bir xizmat oynasida) 40-skriptni qoʻllang. Sabab: yangi frontend eski `raw_html` bloklarini oddiy `block` sifatida chizadi. “Institut xaqida” sahifasida esa eski kod bu blokning katta matnini (har tilda taxminan 9–10 ming belgi, hech qachon tekshirilmagan tarixiy matn) yashirib, faqat rasmni koʻrsatardi: 40 qoʻllanmaguncha bu matn ommaga ochiq boʻlib qoladi. 40 `SKIPPED` desa (blok adminʻda oʻzgartirilgan), toʻxtang: frontendʻni oldingi versiyaga qaytaring yoki rejani qayta tuzib, 40ʻni qayta ishga tushiring. Boshqa sahifalar skriptlarsiz ham ishlaydi (hisobot rasmlari 39 gacha oddiy HTML boʻlib koʻrinadi, USMLE sahifasi 41 gacha sarlavhasiz turadi).
 3. Serverdagi repozitoriy nusxasini yangilang (skriptlar rasm va PDFʻni shu nusxadan oʻqiydi).
 4. 39, 40, 41, 42, 43, 44 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
 5. Tekshiruv: `chown` — yangi fayllar `www-data` egaligida boʻlishi kerak (`find /home/fermi-django/media -user root` boʻsh chiqsin). Skriptlar root nomidan ishlaganda oʻzi `chown` qiladi, baribir tekshiring. Keyin `scripts/audit_section.py` va 25 sahifani uch tilda brauzerda oching (sarlavha, ketma-ketlik, telefon koʻrinishi, rasm va hujjat kartalari, konsol).

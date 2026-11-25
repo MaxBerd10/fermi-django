@@ -85,7 +85,7 @@ def build(apply):
     new = resolve_images(PLAN["blocks"], rows["image_pks"])
     pks = replace_blocks(page, 1, len(old), new)
     created = list(ContentBlock.objects.filter(pk__in=pks).order_by("order"))
-    rows["entries"].append({"slug": PLAN["slug"], "old": old, "new": [{"pk": b.pk, "fp": sha(b.data["uz"])} for b in created]})
+    rows["entries"].append({"slug": PLAN["slug"], "old": old, "new": [{"pk": b.pk, "fp": sha(b.data)} for b in created]})
     return rows
 
 
@@ -95,7 +95,7 @@ def undo(rows):
         page = Page.objects.get(slug=entry["slug"])
         current = list(ContentBlock.objects.filter(pk__in=[n["pk"] for n in entry["new"]]).order_by("order"))
         wrote = {n["pk"]: n["fp"] for n in entry["new"]}
-        if len(current) != len(wrote) or any(sha(b.data["uz"]) != wrote.get(b.pk) for b in current) or page.blocks.count() != len(current):
+        if len(current) != len(wrote) or any(sha(b.data) != wrote.get(b.pk) for b in current) or page.blocks.count() != len(current):
             left += 1
             print("left %s: the page was edited since" % entry["slug"])
             continue

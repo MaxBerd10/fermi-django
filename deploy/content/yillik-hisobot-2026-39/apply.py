@@ -84,7 +84,7 @@ def build(apply):
                 pks = replace_blocks(page, last, 0, [{"block_type": "document", "data": data}])
             created = list(ContentBlock.objects.filter(pk__in=pks).order_by("order"))
             rows["entries"].append({"slug": slug, "order": entry["order"], "kind": entry["kind"], "old": old,
-                                    "new": [{"pk": b.pk, "fp": sha(b.data["uz"])} for b in created]})
+                                    "new": [{"pk": b.pk, "fp": sha(b.data)} for b in created]})
     print("\n%d pictures in %d blocks; %d skipped." % (pictures, blocks, len(skipped)))
     for slug, order, why in skipped:
         print("SKIPPED %s #%s: %s" % (slug, order, why))
@@ -97,7 +97,7 @@ def undo(rows):
         page = Page.objects.get(slug=entry["slug"])
         current = list(ContentBlock.objects.filter(pk__in=[n["pk"] for n in entry["new"]]).order_by("order"))
         wrote = {n["pk"]: n["fp"] for n in entry["new"]}
-        untouched = len(current) == len(wrote) and all(sha(b.data["uz"]) == wrote.get(b.pk) for b in current)
+        untouched = len(current) == len(wrote) and all(sha(b.data) == wrote.get(b.pk) for b in current)
         if not untouched:
             left += 1
             print("left %s #%s: the new blocks were edited or removed since" % (entry["slug"], entry["order"]))

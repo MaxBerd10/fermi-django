@@ -49,7 +49,7 @@ def build(apply):
             pks = replace_blocks(page, entry["order"], 1, new)
             created = list(ContentBlock.objects.filter(pk__in=pks).order_by("order"))
             rows["entries"].append({"kind": "about", "slug": entry["slug"], "old": old,
-                                    "new": [{"pk": b.pk, "fp": sha(b.data["uz"])} for b in created]})
+                                    "new": [{"pk": b.pk, "fp": sha(b.data)} for b in created]})
         else:  # caption
             block = None
             if page:
@@ -66,7 +66,7 @@ def build(apply):
                 block.data[lang]["caption"] = entry["caption"][lang]
             block.full_clean()
             block.save()
-            rows["entries"].append({"kind": "caption", "pk": block.pk, "old": old, "fp": sha(block.data["uz"])})
+            rows["entries"].append({"kind": "caption", "pk": block.pk, "old": old, "fp": sha(block.data)})
     for slug, why in skipped:
         print("SKIPPED %s: %s" % (slug, why))
     print("\n%d change(s), %d skipped." % (len(PLAN) - len(skipped), len(skipped)))
@@ -79,7 +79,7 @@ def undo(rows):
         for entry in reversed(rows["entries"]):
             if entry["kind"] == "caption":
                 block = ContentBlock.objects.filter(pk=entry["pk"]).first()
-                if block is None or sha(block.data["uz"]) != entry["fp"]:
+                if block is None or sha(block.data) != entry["fp"]:
                     left += 1
                     print("left the caption: edited or removed since")
                     continue
@@ -89,7 +89,7 @@ def undo(rows):
                 page = Page.objects.get(slug=entry["slug"])
                 current = list(ContentBlock.objects.filter(pk__in=[n["pk"] for n in entry["new"]]).order_by("order"))
                 wrote = {n["pk"]: n["fp"] for n in entry["new"]}
-                if len(current) != len(wrote) or any(sha(b.data["uz"]) != wrote.get(b.pk) for b in current):
+                if len(current) != len(wrote) or any(sha(b.data) != wrote.get(b.pk) for b in current):
                     left += 1
                     print("left %s: the new blocks were edited or removed since" % entry["slug"])
                     continue
