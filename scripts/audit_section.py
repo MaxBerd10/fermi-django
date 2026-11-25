@@ -1,4 +1,5 @@
-"""Read-only Institut haqida audit: python manage.py shell < scripts/audit_section.py."""
+"""Read-only audit of menu sections (default: Institut haqida): python manage.py shell < scripts/audit_section.py
+Several sections: SECTION_IDS=1827,1857,1864 python manage.py shell < scripts/audit_section.py"""
 import json
 import os
 import re
@@ -15,7 +16,7 @@ from apps.media_lib.models import Document, Image, Video
 from apps.menu.models import MenuItem
 
 LANGS = ("uz", "ru", "en")
-SECTION_ID = 1827
+SECTION_IDS = [int(part) for part in os.environ.get("SECTION_IDS", "1827").split(",")]
 MEDIA = {"image": (Image, "image_id"), "document": (Document, "document_id"), "video": (Video, "video_id")}
 PROSE = {
     "heading": ("text",), "paragraph": ("text",), "staff_card": ("full_name", "title"),
@@ -162,9 +163,8 @@ def audit_page(page):
 
 seen = set()
 export_path = os.environ.get("AUDIT_EXPORT")
-export = {"section_id": SECTION_ID, "menu": [], "pages": []}
-section = MenuItem.objects.get(pk=SECTION_ID)
-pending = list(section.children.all())
+export = {"section_ids": SECTION_IDS, "menu": [], "pages": []}
+pending = [child for section_id in SECTION_IDS for child in MenuItem.objects.get(pk=section_id).children.all()]
 while pending:
     item = pending.pop(0)
     pending.extend(item.children.all())

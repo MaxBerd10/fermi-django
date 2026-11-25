@@ -206,8 +206,12 @@ councils = {}
 for _, council, _, _ in defences:
     code = re.search(r"122\.0(\d)", council).group(1)
     councils.setdefault(code, council)
-HEAD = {"1": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
-        "2": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"}
+HEAD = {"1": {"uz": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
+              "ru": "Разовый научный совет, созданный на базе научного совета PhD.04/30.09.2020.Tib.122.01 по присуждению учёных степеней при Ферганском медицинском институте общественного здоровья",
+              "en": "One-time scientific council formed on the basis of the scientific council PhD.04/30.09.2020.Tib.122.01 awarding academic degrees at the Fergana Medical Institute of Public Health"},
+        "2": {"uz": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
+              "ru": "Научный совет PhD.04/02.07.2024.Tib.122.02 по присуждению учёных степеней при Ферганском медицинском институте общественного здоровья",
+              "en": "Scientific council PhD.04/02.07.2024.Tib.122.02 awarding academic degrees at the Fergana Medical Institute of Public Health"}}
 assert set(HEAD) == set(councils)
 PROPER = {"FARGʻONA": "Fargʻona", "BUXORO": "Buxoro"}  # the capitals of proper names in the thesis titles
 
@@ -233,7 +237,7 @@ CAPTION = {"uz": "Avtoreferat", "ru": "Автореферат", "en": "Abstract 
 blocks = []  # per defence: the council line (small grey), the author, the thesis title, the PDF card
 for path, council, name, title in defences:
     code = re.search(r"122\.0(\d)", council).group(1)
-    blocks.append(block("paragraph", {lang: {"text": HEAD[code]} for lang in LANGS}))
+    blocks.append(block("paragraph", {lang: {"text": HEAD[code][lang]} for lang in LANGS}))
     blocks.append(block("heading", {lang: {"text": name_case(name), "level": 3} for lang in LANGS}))
     blocks.append(block("paragraph", {lang: {"text": title_case(title)} for lang in LANGS}))
     blocks.append(block("document", {lang: {"media": path, "caption": CAPTION[lang]} for lang in LANGS}))

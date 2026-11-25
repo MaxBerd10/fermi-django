@@ -1,4 +1,4 @@
-"""Builds plan.json of script 50 (Meʻyoriy hujjatlar, eight pages) from the live pages.
+"""Builds plan.json of script 50 (Meʻyoriy hujjatlar, seven pages) from the live pages.
 Every page becomes typed blocks; the text of the Uzbek page is the base and the Russian/English text is aligned to it line by line. Where a language had no text
 (or only a copy of the Uzbek text) the line is translated here (listed in tarjima-kerak.md). A link inside a line is kept as [label](address).
     python deploy/content/yillik-hisobot-2026-50/make_plan.py"""
@@ -50,13 +50,7 @@ plan.append(entry(slug, raw, [para({lang: facts[lang][i] for lang in LANGS}) for
     "ru": "Закон Республики Узбекистан «Об образовании» ЗРУ-637 от 23.09.2020",
     "en": "The Law of the Republic of Uzbekistan “On Education” ZRU-637 of 23.09.2020"}])))
 
-# ---- Kredit modul nizomi: a scan --------------------------------------------------------------------------------------------------------------------------------
-slug = "kredit-modul-nizomi"
-raw, documents, lines = get(slug)
-pictures = {lang: images_of(raw["data"][lang]["html"]) for lang in LANGS}
-assert len(pictures["uz"]) == 1 and pictures["uz"] == pictures["ru"] == pictures["en"]
-plan.append(entry(slug, raw, [image_block(pictures["uz"][0], {lang: MENU[slug][lang] for lang in LANGS})],
-                  captions_of_cards(documents, [{lang: MENU[slug][lang] for lang in LANGS}])))
+# ---- (Kredit modul nizomi is also a page of Institut haqida: script 42 turns its scan into an image block and script 45 captions its card)
 
 # ---- Taraqqiyot strategiyasi -----------------------------------------------------------------------------------------------------------------------------------
 slug = "taraqqiyot-strategiyasi"

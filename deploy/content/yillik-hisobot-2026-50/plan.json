@@ -139,50 +139,6 @@
   ]
  },
  {
-  "slug": "kredit-modul-nizomi",
-  "order": 1,
-  "fp": {
-   "uz": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
-   "ru": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
-   "en": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf"
-  },
-  "blocks": [
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
-      "alt": "Institut kredit modul nizomi"
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
-      "alt": "Устав кредитного модуля института"
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
-      "alt": "Institute credit module regulations"
-     }
-    }
-   }
-  ],
-  "existing_documents": [
-   {
-    "order": 2,
-    "document_id": 455,
-    "caption": {
-     "uz": "Institut kredit modul nizomi",
-     "ru": "Устав кредитного модуля института",
-     "en": "Institute credit module regulations"
-    },
-    "fp": {
-     "uz": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
-     "ru": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
-     "en": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0"
-    }
-   }
-  ]
- },
- {
   "slug": "taraqqiyot-strategiyasi",
   "order": 1,
   "fp": {

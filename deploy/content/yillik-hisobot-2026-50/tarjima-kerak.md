@@ -21,4 +21,4 @@ The act is published in Uzbek only: the ru and en pages show their note ("Тек
 Number: ru "ЗРУ-637" (was "ORQ-637"), en "ZRU-637"; the en label "Body" became "Issuing body"; the PDF card is captioned with the title of the law.
 
 ## Cards that got a caption (they showed a file name)
-Davlat dasturlari (PF-37, 21.02.2024), SSV buyruqlari (Ministry of Health Order No. 236 — read from the first page of the PDF), the two state-standard pages, Taʻlim toʻgʻrisida, Prezident farmon va qarorlari, Kredit modul nizomi.
+Davlat dasturlari (PF-37, 21.02.2024), SSV buyruqlari (Ministry of Health Order No. 236 — read from the first page of the PDF), the two state-standard pages, Taʻlim toʻgʻrisida, Prezident farmon va qarorlari. (Kredit modul nizomi is the same page as in Institut haqida: scripts 42 and 45 handle it.)

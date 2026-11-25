@@ -1,0 +1,15 @@
+[
+ {
+  "slug": "institut-sertifikatlari",
+  "order": 1,
+  "block_type": "gallery",
+  "items": [
+   {"index": 1, "old": "Stomatologiya", "new": {"ru": "Стоматология", "en": "Dentistry"}},
+   {"index": 2, "old": "Pediatriya", "new": {"ru": "Педиатрия", "en": "Pediatrics"}},
+   {"index": 3, "old": "Farmatsiya", "new": {"ru": "Фармация", "en": "Pharmacy"}},
+   {"index": 4, "old": "Fargʻona jamoat salomatligi tibbiyot institutining davlat akkreditatsiyadan oʻtganligi toʻgʻrisida rasmiy hujjat sertifikati",
+    "new": {"ru": "Сертификат официального документа о прохождении Ферганским медицинским институтом общественного здоровья государственной аккредитации",
+            "en": "Certificate of the official document on the state accreditation of the Fergana Medical Institute of Public Health"}}
+  ]
+ }
+]

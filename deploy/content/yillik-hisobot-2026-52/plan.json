@@ -133,23 +133,6 @@
     }
    },
    {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
-      "alt": "Thumbay Fergana College of Medical Sciences"
-     },
-     "ru": {
-      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
-      "alt": "Thumbay Fergana College of Medical Sciences"
-     },
-     "en": {
-      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
-      "alt": "Thumbay Fergana College of Medical Sciences"
-     }
-    }
-   },
-   {
     "block_type": "heading",
     "data": {
      "uz": {
@@ -177,6 +160,23 @@
      },
      "en": {
       "text": "(For any Health & Biological Sciences Graduates)"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
+      "alt": "Thumbay Fergana College of Medical Sciences"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
+      "alt": "Thumbay Fergana College of Medical Sciences"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/2025/Thumbay College/Thumbay Fergana.jpg",
+      "alt": "Thumbay Fergana College of Medical Sciences"
      }
     }
    },

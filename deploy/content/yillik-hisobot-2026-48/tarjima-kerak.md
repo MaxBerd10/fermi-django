@@ -12,6 +12,9 @@
 "Qarorlar" page: 13 lines without a file ("Протокол Совета от 30.08.2022", "Council minutes of 30.08.2022", "Внеочередное решение Совета от 07.11.2022", ...) and five PDF
 cards ("Решение Совета от 30.08.2024", "Council decision of 30.08.2024", ...). The institute name "FJSTI" is left out in ru/en.
 
+## Avtoreferatlar: council lines translated
+The line above every defence (the scientific council that awards the degree) was Uzbek in all three languages; now ru: "Разовый научный совет ... / Научный совет PhD.04/02.07.2024.Tib.122.02 по присуждению учёных степеней при Ферганском медицинском институте общественного здоровья", en: "One-time scientific council ... / Scientific council PhD.04/02.07.2024.Tib.122.02 awarding academic degrees at the Fergana Medical Institute of Public Health". The authors and the thesis titles stay in Uzbek in all languages (names of people and official titles of dissertations).
+
 ## Left as in the old text (decide if you want them changed)
 - "Ushbu sahifani ko‘rish faqat ro‘yxatdan o‘tgan foydalanuvchilarga ruxsat etilgan" stays on Kun tartibi and Qarorlar (your decision, 2026-11-26).
 - Uz duty 1: "uning davomiyligini va davomiyligini" (a word repeated, en: "its continuity and continuity") — a machine-translation slip of the old text.

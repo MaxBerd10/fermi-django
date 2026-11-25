@@ -1,6 +1,6 @@
-# "Meʻyoriy hujjatlar" (8 pages) from raw HTML to typed blocks, the Uzbek text is the base and ru/en are aligned to it line by line:
+# "Meʻyoriy hujjatlar" (7 pages; the 8th, Kredit modul nizomi, is also a page of Institut haqida: scripts 42 and 45) from raw HTML to typed blocks, the Uzbek text is the base and ru/en are aligned to it line by line:
 #   talim-togrisia  the facts of the law as eight "Label: value" paragraphs (the PDF card the page already has gets the title of the law);
-#   kredit-modul-nizomi  the scan becomes an `image` block; taraqqiyot-strategiyasi  three heading lines and the PDF as a `document` card;
+#   taraqqiyot-strategiyasi  three heading lines and the PDF as a `document` card;
 #   prezident-farmon-va-qarorlari, davlat-dasturlari, ozbeksiton-respublikasi-ssv-buyruqlari  one paragraph per act/year, the link kept as [title](address) (ru/en titles
 #   translated where they were copies of the Uzbek text or Russian in the English page);
 #   the two orders about the state standard  the lines of the order as paragraphs (the act is published in Uzbek only: ru/en get the note and the Uzbek clauses).
