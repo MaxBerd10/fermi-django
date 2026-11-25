@@ -1,11 +1,9 @@
 import ArticleBody from "./ArticleBody";
-import { hasStructuredProfiles } from "@/lib/layoutBlocks";
 import { useState } from "react";
 import "@/styles/department-content.css";
 import { useTranslation } from "react-i18next";
 import type { DepartmentDetail, Leader } from "@/types/content";
 import LeaderProfileCard from "@/components/shared/LeaderProfileCard";
-import InstituteHistoryArticle from "./InstituteHistoryArticle";
 import DepartmentArticle from "./DepartmentArticle";
 
 export default function DepartmentPageContent({
@@ -29,11 +27,9 @@ export default function DepartmentPageContent({
 
   const ordered = [...department.blocks].sort((a, b) => a.order - b.order);
   const article = isHistory ? (
-    hasStructuredProfiles(ordered) ? (
-      <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body">
-        <ArticleBody blocks={ordered} />
-      </article>
-    ) : <InstituteHistoryArticle blocks={ordered} />
+    <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body">
+      <ArticleBody blocks={ordered} />
+    </article>
   ) : (
     <div className="academic-page__article department-page__article cms-article cms-article--rich cms-article--menu-section cms-article--kafedra space-y-4">
       <DepartmentArticle key={department.id} blocks={ordered} />

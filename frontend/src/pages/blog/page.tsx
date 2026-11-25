@@ -1,6 +1,4 @@
-import { hasStructuredProfiles } from "@/lib/layoutBlocks";
 import { useEffect, useMemo, useState } from "react";
-import InstituteHistoryArticle from "@/components/shared/InstituteHistoryArticle";
 import ArticleBody from "@/components/shared/ArticleBody";
 import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -98,7 +96,6 @@ export default function BlogPage() {
 
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
-  const isHistoryPage = slug === "institut-tarixi";
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
@@ -122,9 +119,7 @@ export default function BlogPage() {
     >
       {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
       <Reveal>
-        {isHistoryPage && sortedBlocks.length > 0 && !hasStructuredProfiles(sortedBlocks) ? (
-          <InstituteHistoryArticle blocks={sortedBlocks} />
-        ) : sortedBlocks.length > 0 ? (
+        {sortedBlocks.length > 0 ? (
           <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isInstituteDocument ? " article-document" : ""} article-body`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>

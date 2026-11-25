@@ -30,13 +30,6 @@ function datedEntries(items: string[]) {
   return entries.flatMap((entry) => entry ? [{ period: entry[1], text: entry[2] }] : []);
 }
 
-export function hasStructuredProfiles(blocks: ContentBlock[]) {
-  return blocks.some((block) => block.block_type === "list" && datedEntries(block.data.items) !== null)
-    && blocks.some((block, index) =>
-    block.block_type === "heading" && block.data.level === 3 && blocks[index + 1]?.block_type === "image",
-    );
-}
-
 function toPicture(src: string, alt: string, width: number | null, height: number | null): Picture {
   return { src, alt, width, height, tall: width !== null && height !== null && height >= width };
 }

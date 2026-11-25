@@ -12,7 +12,7 @@
 #
 # SAFE BY DESIGN: dry (default) writes nothing; a page is changed only if its raw_html block still has the fingerprints of plan.json (edited in the admin since -> SKIPPED
 # and listed); apply is one transaction with a backup (a second apply is refused); undo puts the old HTML block back, only where the new blocks are still exactly what this
-# script wrote, and then removes the Image rows this script made (never the files).
+# script wrote, and then removes the Image rows this script made (the files of the media folder stay; the copy of the repository picture is removed with its row).
 #
 #   cd /home/fermi-django && set -a && . /etc/fermi-django.env && set +a
 #   MODE=dry   .venv/bin/python manage.py shell < deploy/content/yillik-hisobot-2026-41/apply.py
@@ -46,13 +46,13 @@ def resolve_images(blocks, made):
         else:  # a file already in the media folder
             image = image_from_media(spec["image_media"], spec["alt"])
         if image.pk not in before:
-            made.append(image.pk)
+            made["copied" if "repo_image" in spec else "rows"].append(image.pk)
         resolved.append({"block_type": "image", "data": {lang: {"image_id": image.pk, "alt": block["data"][lang]["alt"]} for lang in LANGS}})
     return resolved
 
 
 def build(apply):
-    rows = {"entries": [], "image_pks": []}
+    rows = {"entries": [], "image_pks": [], "copied_pks": []}
     skipped = []
     for entry in PLAN:
         page = Page.objects.filter(slug=entry["slug"]).first()
@@ -64,7 +64,7 @@ def build(apply):
         print("%s: the HTML block -> %d blocks (%s)" % (entry["slug"], len(entry["blocks"]), ", ".join("%s %d" % item for item in sorted(kinds.items()))))
         if not apply:
             continue
-        new = resolve_images(entry["blocks"], rows["image_pks"])
+        new = resolve_images(entry["blocks"], {"rows": rows["image_pks"], "copied": rows["copied_pks"]})
         old = {"block_type": "raw_html", "data": block.data}
         pks = replace_blocks(page, entry["order"], 1, new)
         created = list(ContentBlock.objects.filter(pk__in=pks).order_by("order"))
@@ -91,6 +91,10 @@ def undo(rows):
     for image in Image.objects.filter(pk__in=rows["image_pks"]):
         if image.pk not in used:
             image.delete()  # the row only: the file belongs to the media folder and may be used elsewhere
+    for image in Image.objects.filter(pk__in=rows.get("copied_pks", [])):
+        if image.pk not in used:
+            image.file.delete(save=False)  # the copy of the repository picture this script made
+            image.delete()
     print("restored %d, left %d." % (restored, left))
 
 

@@ -1,0 +1,1336 @@
+{
+ "slug": "department-42",
+ "fp": {
+  "1": {
+   "uz": "bb2448defd83f822af3d2abeea018bac934200e36ad0ad84eaa1ee4bd2d01ab1",
+   "ru": "d2a4ce32094960b4a9461947bf78a5bc88da8ac60ff46f28dc04315b8a593dbd",
+   "en": "c43219a080dbc9dc3985f83fc3ec3c32040c9856d519cab8bf1a90e09a7e84e5"
+  },
+  "2": {
+   "uz": "361280ba6b1a4330d5c7c4ad7201bace7e4e68129fbf9a4e8c69e79e7d6ec9ce",
+   "ru": "316740c5a00ecfb37eefdc3463218ce84cdd353d2efdfb9c19adeba384603b80",
+   "en": "580981998eec7472dd81446b48263174e92be918749b0f71eb3c94418aa65304"
+  },
+  "3": {
+   "uz": "8f8fb573e81fa432fbc118bc639777e53e1471e44d23a3c31d6c1c29d85eba11",
+   "ru": "ee22e2c1d01d361735adabc41e2a2682100a8c8706d036b877b1de97372ef0d1",
+   "en": "7b8aeb3f274281a3391cb19da0343cba0db7f5021d6bbcb58a4ca57f3dd29f87"
+  },
+  "4": {
+   "uz": "fa6d4ce1c876c4a31e2d84496ad01e0f116eaea427adb6176647c184d595ae44",
+   "ru": "fa6d4ce1c876c4a31e2d84496ad01e0f116eaea427adb6176647c184d595ae44",
+   "en": "fa6d4ce1c876c4a31e2d84496ad01e0f116eaea427adb6176647c184d595ae44"
+  },
+  "5": {
+   "uz": "f59e6fac57b412a2c39b5a029e0ad59f931a5c17edff6f0722522809c190ae8a",
+   "ru": "957ba1ee7125ddba7d6c8bd5fff1341074237bf584e5cf5523a452925651b22c",
+   "en": "0f84a6636f194a30707da8e4f15b8b64ea47758265d931b3f95f0ba4f731eb4d"
+  },
+  "6": {
+   "uz": "c06514f7752d243f08960efa5bba637a4bbf88ffec8a55c49a86a8a98c15aa51",
+   "ru": "c878e48050f8a15b62d6ee4997921d8dfebc74e77f0d3b70ef5300e09cd3c8d9",
+   "en": "f392534be12aaec07ae70986818946ecef392517293b07ddbf0d080e5d80e5ea"
+  },
+  "7": {
+   "uz": "77bdee9d5dcf11597599dc88460ffef625fd9837df3cbf8c8bf9ef394b57c077",
+   "ru": "78ae4868955dd9bbebf412524bbe359edec62932d3a922a16f53e3b810b87d63",
+   "en": "77bdee9d5dcf11597599dc88460ffef625fd9837df3cbf8c8bf9ef394b57c077"
+  },
+  "8": {
+   "uz": "ba94d1612486eefece4c57ec56a8f26ae09a02743574b9b26e0cbdcae4517c20",
+   "ru": "ba94d1612486eefece4c57ec56a8f26ae09a02743574b9b26e0cbdcae4517c20",
+   "en": "ba94d1612486eefece4c57ec56a8f26ae09a02743574b9b26e0cbdcae4517c20"
+  },
+  "9": {
+   "uz": "e361210000380fbaa5b5d8b421508f69c72d17f992f92f796efa9f92b3461b7f",
+   "ru": "9cb3b82c24f2621f732d9a5d564bb70eadbac94eb0713266aa73a5b47353396a",
+   "en": "a2f4250392d088e05acc1e951a1463f77e27383ea883157cb9b48198a2e3ae24"
+  },
+  "10": {
+   "uz": "dd5b275cfb161612b0fc69d85f7e4bb91a44af6aa030583b43392f9f48736b5f",
+   "ru": "dd5b275cfb161612b0fc69d85f7e4bb91a44af6aa030583b43392f9f48736b5f",
+   "en": "dd5b275cfb161612b0fc69d85f7e4bb91a44af6aa030583b43392f9f48736b5f"
+  },
+  "11": {
+   "uz": "27a0bf827e15b006ef704c78ac14329f3c164c6d06fccf8f342e7939056ca88d",
+   "ru": "a3661ca7de57b05b0c2d5c2370774d22342917e55c77da257cfb2592b11ebbb1",
+   "en": "27a0bf827e15b006ef704c78ac14329f3c164c6d06fccf8f342e7939056ca88d"
+  },
+  "12": {
+   "uz": "ddb04af521932a3049411cdd8fc332885f3392f0cef5e1d3afc6604774e46e18",
+   "ru": "ddb04af521932a3049411cdd8fc332885f3392f0cef5e1d3afc6604774e46e18",
+   "en": "ddb04af521932a3049411cdd8fc332885f3392f0cef5e1d3afc6604774e46e18"
+  },
+  "13": {
+   "uz": "98dd08dd90917f2d59e1905c962f0439118d10f69fa923a0803d7895b67c2e47",
+   "ru": "b0baa3a3553805de6fbbf3e2999e197ce005de0156651ecaa73e828d4602468e",
+   "en": "79c6ce9e55d64749122bc79bb1f269cf124bb06c7177708454da28a011bf426a"
+  },
+  "14": {
+   "uz": "388271fa1178777890ee2ecad14faa4b13a9691ff9d03f991d7d64ff28aa35a9",
+   "ru": "d0d5c38aee958f66671bb2e9e0c9ef1b97cb270be3aeb34020bc8023b3fd7d15",
+   "en": "388271fa1178777890ee2ecad14faa4b13a9691ff9d03f991d7d64ff28aa35a9"
+  },
+  "15": {
+   "uz": "a313b327134abe5691798780789214c25a0f8d425a876b04bc4f73870321469e",
+   "ru": "2e959942c371f44f96d81751276b24be75bf9c4f331b17a1bca1b84cd73b67b7",
+   "en": "a313b327134abe5691798780789214c25a0f8d425a876b04bc4f73870321469e"
+  },
+  "16": {
+   "uz": "47b139ccbc1e4006d606f966c65a1bbb1da059f90d2c968ae6b33d34fd524a60",
+   "ru": "47b139ccbc1e4006d606f966c65a1bbb1da059f90d2c968ae6b33d34fd524a60",
+   "en": "47b139ccbc1e4006d606f966c65a1bbb1da059f90d2c968ae6b33d34fd524a60"
+  },
+  "17": {
+   "uz": "3b0ee9d892413d28633873976f3f86594ead06fe5cf08289873b600acef93fe4",
+   "ru": "995eb62bd7f1572783c5373e35a30971d93a5f61afabc0a0f8d8f5903714cbcf",
+   "en": "1d27e7d0dcd1b25bb753fd9b6532577461254bd2e91149059207ed73859008d7"
+  },
+  "18": {
+   "uz": "3c0de752f02cf7bd7c91473d4da059334c12b31df0a7651d886c8624395a4fae",
+   "ru": "b15573d5439d81ca4889564fbfa67299d9cccb3e5a547a1a33eda10a19f3b1ed",
+   "en": "ee0a2269d8878575861aef1ef75c39de985425399cc26212fb4fc219d8d63497"
+  },
+  "19": {
+   "uz": "22088efab3e4c9a90de5a6280cc8e76de1fabd2660cd7da4483bdf3e41c3999d",
+   "ru": "3abb08d2dfc48b57fa31b956dc70023afaf0b5ed1f21c1b19a1dc843555689f5",
+   "en": "3aab4ffcf309e0438e605360d3c00b179e3de254e059453951ef1b11502cecbe"
+  },
+  "20": {
+   "uz": "d62ec99c86aced2288e13a1b9d3c4ec436e87298f0260b2af3b42abe7b7e001c",
+   "ru": "7380169788c48627317091427829d81e815baf7f6c1b9444e74775595a78a7e5",
+   "en": "d62ec99c86aced2288e13a1b9d3c4ec436e87298f0260b2af3b42abe7b7e001c"
+  },
+  "21": {
+   "uz": "a43fe7ff30a7c12d2841272449ba6071ab98bac1f512e8c00b4fe6ae8920c378",
+   "ru": "8555d6d15a1b4d064ee01902fb8139cefc7eb7f7b22452fd80a806908c1bfb45",
+   "en": "ec428014f77e6612578decddba01eb645a4e6b9c75f32182da144d35b5b82f1a"
+  },
+  "22": {
+   "uz": "bd532c512cf7ccec681c202a15f623268d3bf6ae50c4be942eabdef8bce44a67",
+   "ru": "bd532c512cf7ccec681c202a15f623268d3bf6ae50c4be942eabdef8bce44a67",
+   "en": "bd532c512cf7ccec681c202a15f623268d3bf6ae50c4be942eabdef8bce44a67"
+  },
+  "23": {
+   "uz": "f2b3596364a06ab7f470f936f143f8ec2f2e844853b24d2b3832850dd6a97218",
+   "ru": "25b206f349bdf0fc44cc8018a941f73885ba4560036de3d4e34d20488ff7b628",
+   "en": "96e4b192f362d1944e8cba4ea5cbd519f9a10f05a1cffe1f68b4164fea3be77b"
+  },
+  "24": {
+   "uz": "6326f26ec90a49e40ef72a2ce1a9c86f6c7002178806f26f02a3133b54f38429",
+   "ru": "cd17ce2879fa68fe7fe057bb91c7d862fc22ee7b571760b84ba94b4f08823f7b",
+   "en": "e19b6fd0f85e12c2e901c713d40f6a690d1b786ca209d45026c0f5dc007520c3"
+  },
+  "25": {
+   "uz": "eb31afa1defb1664c330146ab809116e20ba23406ffa681b46a794bac570cd8c",
+   "ru": "0f6e931c8c87c0076809eeacc2786d562473a8090b22050ebf308b3b8ee78343",
+   "en": "50e42ded437b0c4d5bad51438f66620271bbe9ff71b5113378b8adde13f54a17"
+  },
+  "26": {
+   "uz": "0dbce59bb5ad2b7c823b90194bdd99af3e20df973a92ff6e484b5270da373770",
+   "ru": "0dbce59bb5ad2b7c823b90194bdd99af3e20df973a92ff6e484b5270da373770",
+   "en": "c1e950ffde923bbb56e3215ceaa72023b796d5d11ddc6472644ae5ad33111ccd"
+  },
+  "27": {
+   "uz": "ae26b51efe623e173a386e9b476a7aea7894c1e2c12dd229f769059dcdd2cc4d",
+   "ru": "25ca458efe8e7ef51a99942eb9d855a63c54714a62c7c8031d949c51e117d61a",
+   "en": "3891b6a6d6df75a6faca057fca15bc736af1d28d552c2df49b19fad87380304a"
+  },
+  "28": {
+   "uz": "1cf3603123501e84e15fae9b069bb673a89b89656bdc5744e173ca3cbf03f06b",
+   "ru": "1cf3603123501e84e15fae9b069bb673a89b89656bdc5744e173ca3cbf03f06b",
+   "en": "1cf3603123501e84e15fae9b069bb673a89b89656bdc5744e173ca3cbf03f06b"
+  },
+  "29": {
+   "uz": "d4a03fc1cd0f2293c3987fdaffd3fc21574440f57bf08be7aa25e3511cb4a533",
+   "ru": "4679acdeb5c9c4560103c45479a15e02d959ab2fb473a3222ff8697b75b02b75",
+   "en": "645e242a00dceff7d86f15a85863eb7723d33f13cb2696ad0aaabfa20fe633f8"
+  },
+  "30": {
+   "uz": "94b78bf6ba4ae1fb8f02df9e0e2f6ebe45619802b910f150ce414d5aeb38cd3f",
+   "ru": "94b78bf6ba4ae1fb8f02df9e0e2f6ebe45619802b910f150ce414d5aeb38cd3f",
+   "en": "94b78bf6ba4ae1fb8f02df9e0e2f6ebe45619802b910f150ce414d5aeb38cd3f"
+  },
+  "31": {
+   "uz": "63b39a1140d00865e3d02eaa044e3d1bb565b9a61122a33c90e6a679376d89aa",
+   "ru": "63b39a1140d00865e3d02eaa044e3d1bb565b9a61122a33c90e6a679376d89aa",
+   "en": "63b39a1140d00865e3d02eaa044e3d1bb565b9a61122a33c90e6a679376d89aa"
+  },
+  "32": {
+   "uz": "bde41661c7d9a89ba2604788aecd543ee98f20671ae603180b59b94973811b80",
+   "ru": "05e046027ef71a5e662a061cdaaccc67215aedbb6cf903a4535164e00749f832",
+   "en": "1b1b56c8eee511fcda53d6b0618d90867a5cc5a4c11928013aab2221e7b15c6a"
+  },
+  "33": {
+   "uz": "f524b93f0f92f20c5d99fbe1af38656ebba5e2e0d519d45c87128802b7da95c3",
+   "ru": "ecb0deb0ba2e453ef893ab553ae463c7bcc2603957692b563c13eebc8341c289",
+   "en": "3e2e5c4f7f4d9a53bb72c029cd876b51153af27778a45637c88c7f6acc0bbd6e"
+  },
+  "34": {
+   "uz": "fe023a125204738ea458820ec09fd48d1bcb0eb363bb6dd8a7ac6bbaa9a6aac8",
+   "ru": "fe023a125204738ea458820ec09fd48d1bcb0eb363bb6dd8a7ac6bbaa9a6aac8",
+   "en": "fe023a125204738ea458820ec09fd48d1bcb0eb363bb6dd8a7ac6bbaa9a6aac8"
+  },
+  "35": {
+   "uz": "1ec0f3d72883b1dc922a9406d3538d814f6c3d8b29be8df226867aef42371601",
+   "ru": "ac300e4c2bf2e0db86d03506b796da69742047c8c4ac11ecaf4cf7c956a1c152",
+   "en": "d621d6bfd60e4b3e59aa038ae91355864f8f6976af70ec6dfdc01af010866ea9"
+  },
+  "36": {
+   "uz": "27cf802a33e37b095f4b2adc81e7ac79ac843b3af797c9a7704cd1760d622c08",
+   "ru": "9b64dc4970eda7d26922584502c9bfe8822dc06fb903917f56316d6c0345dded",
+   "en": "27cf802a33e37b095f4b2adc81e7ac79ac843b3af797c9a7704cd1760d622c08"
+  },
+  "37": {
+   "uz": "4cc7fbf710096960017b5902535af2313ba6460663483f6e217e07958712915c",
+   "ru": "4cc7fbf710096960017b5902535af2313ba6460663483f6e217e07958712915c",
+   "en": "4cc7fbf710096960017b5902535af2313ba6460663483f6e217e07958712915c"
+  },
+  "38": {
+   "uz": "c8165f3cf90556133a58b78f308885ddd5560c8df2218196e07679cd533a41bc",
+   "ru": "e9408ed2d5218ecdec2d5a131d303faa21af710972f73ee84931e3585a7b9745",
+   "en": "cb33e1ceaaaeb9e7a8434fb6fc786da9c1d3bb29743f8c84f15fd5d1c000180e"
+  },
+  "39": {
+   "uz": "b003dd3a204d2142b38e4c27b1d7219d95e00942f41c8592d085efff052760a7",
+   "ru": "d21067f5b014b20308adad74601c8d5f3c5da332618b8257834095ac1c4378e1",
+   "en": "b003dd3a204d2142b38e4c27b1d7219d95e00942f41c8592d085efff052760a7"
+  },
+  "40": {
+   "uz": "fc9732af8dab4cc005b542f0551e59e51796ae2a8ca0115f42e28c46c6393ea4",
+   "ru": "a539980b8fccc83ba767f3d6a8d4683373e23edbec54568b3e3b9ba27b4e5ef4",
+   "en": "8a1f062849d64af979e0337af31550f7c63f93e81436bcd70c6e4bc09cb78222"
+  },
+  "41": {
+   "uz": "dc6b35ace21899c0cd71a3e2aa5dbc0a069f9eb5cc527346021f84394e7d5613",
+   "ru": "dc6b35ace21899c0cd71a3e2aa5dbc0a069f9eb5cc527346021f84394e7d5613",
+   "en": "dc6b35ace21899c0cd71a3e2aa5dbc0a069f9eb5cc527346021f84394e7d5613"
+  },
+  "42": {
+   "uz": "d0024bb39bf6bd36749edc6e2926dcb79661f48ae0d287ccd6cfc9667391de49",
+   "ru": "ae2ffc1ca95a656c9b818819ed4174e226534013b40c8ecdae6d11d3a21a61d7",
+   "en": "171b76c43f8bf3f7cafbc3d933becb4112fcff2c417305dfb4d3b07da4c8ddb1"
+  },
+  "43": {
+   "uz": "f767569f03e1fa2294f377b82eeb3007f02b2a23edf5f57e2046b2de844cc4ca",
+   "ru": "f177ddac0557f0f74b70aa4c41bf77b1b096e22b464d5c3b1c2456791b5ef191",
+   "en": "1d294ef3c3f24cc182e37e773ae29b0bd9b1984ac0c4cefd34c5939786e98fed"
+  },
+  "44": {
+   "uz": "da8869e326bf9eb49dce5280dbe669f84a7b15bf9c6db4402058d3c5805a1225",
+   "ru": "da8869e326bf9eb49dce5280dbe669f84a7b15bf9c6db4402058d3c5805a1225",
+   "en": "da8869e326bf9eb49dce5280dbe669f84a7b15bf9c6db4402058d3c5805a1225"
+  },
+  "45": {
+   "uz": "11e8a11722e857d609c2422f5b5c8c390092b3b9ac812891d9596c31e1d4b2ee",
+   "ru": "3dc518abd0cbd80d34d5f89b1e22df4ef5a59365e2f5ee4c1c31ac782062ccec",
+   "en": "4f00fa8372c6148ad35c4000a972763baecab411f7901c2af3a52fec22ae8e2d"
+  },
+  "46": {
+   "uz": "706ffb76ff43a0903b51203da94aeaa410206310408973294d1032ca8a1ddf17",
+   "ru": "fdfbc792aa31e547aa8d32f9bee3199a06c1e769e1e14bf5995057621e786899",
+   "en": "f613723c00517c5a87a7834e96d5a3a094f6f7ad9ba5ed1da7ced0dde0e97d7e"
+  },
+  "47": {
+   "uz": "58feaac825d773a0e16eda63b9ce0535107427dae4d8bd1f7997df40e3f2408b",
+   "ru": "6b82ed0634b90363729e789fb1067e75162dc6805e0676902b6eea9a096ead74",
+   "en": "7154eda012e52e1ac65d26dc0ca9402fb03f7b5837daa78add390b116271e288"
+  },
+  "48": {
+   "uz": "c8c0fefaa4333bf3bc7aca50450c45a6fef063f362bd0d5fad1699799db3aa6b",
+   "ru": "c8c0fefaa4333bf3bc7aca50450c45a6fef063f362bd0d5fad1699799db3aa6b",
+   "en": "c8c0fefaa4333bf3bc7aca50450c45a6fef063f362bd0d5fad1699799db3aa6b"
+  },
+  "49": {
+   "uz": "73a6e17da6356d92935f010afca096f789cd8af1a87e15d6e5bfaf543fbc51c0",
+   "ru": "996ed07fcbe873ba91d8859910587325e79e3b7ed60f00ace1f0c346f65a7fc0",
+   "en": "9dbab36e5106fd57d4093b3bd8f775b753db6a21faefa4b2b87d721160274616"
+  },
+  "50": {
+   "uz": "fe2ddb9f67605e2c349af6daf73e12a30aabcbe3b8481dd592ac22af59b045c5",
+   "ru": "82de8ea85ac892a07de495984fbd2d7730f6589aaecefbcdf29072d8a5afdaba",
+   "en": "fd59806db897578d30e9b30fbd8e4a5d1c21f8dc3a258615482379b49eb1e376"
+  },
+  "51": {
+   "uz": "db135610544d299317286bd51836212e3f8049ee8b073fd4932c7301deb088da",
+   "ru": "93abf98fb26d0a28d303c6be2a8c35a6de5c712e6d085c5beb2a5f2ca97026b9",
+   "en": "492b3556bba6c350a7d43bb0d8c5168382040b3cddbd84503ec2facad5d580f7"
+  },
+  "52": {
+   "uz": "c733d82a50e9b03f1fc95e05a8edec8226c94d9d436f8ffd41dbd0e525ec2b9d",
+   "ru": "57aa38fc428c49666e063352b408f60790fbe99c84cdd554cdbb0dfd28863f77",
+   "en": "ea184cf3efacc9e6de92537159deebd6f382c5d945421d242c8a06eca9b19bf8"
+  },
+  "53": {
+   "uz": "85183d6a8fb8a89f361ead66e7e664246a48dc0ff6137d1521dc272c78b464f0",
+   "ru": "0be1b3dae3d452ff49be5200cdd8ae689ecc9dbf9a23bc2c52a5a9a7f2b4d12b",
+   "en": "13944d6757b810bf27a4edaff70ea1c5378cc71cf7d1961c76942cf2bb7488d6"
+  },
+  "54": {
+   "uz": "785c6c2660458d4aa33d43c2b760b93073ca5d508bd2c0d31f089d1695657fa1",
+   "ru": "3286055391809385f9c7cef7dedbbbd497f35bc63674c9f0244e936ec52a750e",
+   "en": "7e0e7dc3efab2169a92a11f32860a1887e8216254af24a1a62bda2151d344f11"
+  },
+  "55": {
+   "uz": "483400f8a67dcb12b06e887944ce5e35f9ef23c902f7a29ac23dacf9f286cfdc",
+   "ru": "4c8edfae0339c95772313088cee196b2b9ba2759d958c8bd4076b405035cf045",
+   "en": "f92574c476f36757491695ce86ca6e0428c3964a0c70539739f7032df2767f0b"
+  },
+  "56": {
+   "uz": "192d4aacf8adaf4574bc5e4bdeb03acf6b6419644ab8145f72caa2a374b89c78",
+   "ru": "a5bfc35fd7faa417eff3d0ee3d60cb97f251c62bc67df35fcd3cac6c6643dc0f",
+   "en": "f1f5954821ec54f6a8d6a3b24a91450fcfd5200f04e2eaf987a766b9b21fb916"
+  },
+  "57": {
+   "uz": "f2764f3eecf422ae17a1125ee78236fb335f33c4b38e164e72e759769a8c411f",
+   "ru": "2aa1d3084a7551e12126714beada95a927a560d0769fadff96b3ad2d5573b2f3",
+   "en": "23ad0518a78e028b5ac519e691678032d38619497fb2bb596d97559f60bcaafe"
+  },
+  "58": {
+   "uz": "bc3348653a042b8940a69a0ad058aadb317fc1dbd3caf843b8bae1c6b3251a7b",
+   "ru": "1c8c8be8651cbbae6c6d77e399f8a25a6a01349411e642043b3fdec672cb9a07",
+   "en": "1cea1172ccd9bb06acc3d9e104505050de577eaa6a44786cd233ca4fd156a443"
+  },
+  "59": {
+   "uz": "c1eef69aa9cfbbb4e043f739c2b05254c03b97481239af0fd5adc59d6e873aff",
+   "ru": "c1eef69aa9cfbbb4e043f739c2b05254c03b97481239af0fd5adc59d6e873aff",
+   "en": "c1eef69aa9cfbbb4e043f739c2b05254c03b97481239af0fd5adc59d6e873aff"
+  }
+ },
+ "blocks": [
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Rivojlanish bosqichlari",
+     "level": 2
+    },
+    "ru": {
+     "text": "Этапы развития",
+     "level": 2
+    },
+    "en": {
+     "text": "Stages of Development",
+     "level": 2
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Institut taraqqiyoti davomida bir necha muhim tashkiliy bosqichlarni bosib oʻtgan:"
+    },
+    "ru": {
+     "text": "На протяжении своего развития институт прошёл через несколько важных организационных этапов:"
+    },
+    "en": {
+     "text": "Over the course of its development, the institute has gone through several important organizational stages:"
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 1998 yil 3 iyundagi 239-sonli qaroriga muvofiq muassasa Toshkent davlat ikkinchi tibbiyot institutining Fargʻona filialiga aylantirildi.",
+      "Vazirlar Mahkamasining 2005 yil 29 iyuldagi 780-sonli qarori bilan Toshkent tibbiyot akademiyasining Fargʻona filiali maqomini oldi.",
+      "Oʻzbekiston Respublikasi Prezidentining 2020 yil 3 dekabrdagi PQ–4911-sonli “Fargʻona jamoat salomatligi tibbiyot institutini tashkil etish toʻgʻrisida”gi qarori asosida Toshkent tibbiyot akademiyasi Fargʻona filiali negizida Fargʻona jamoat salomatligi tibbiyot instituti mustaqil oliy taʻlim muassasasi sifatida qayta tashkil etildi. Institutga turli yillarda quyidagi rahbarlar direktor va rektorlik qilgan:"
+     ]
+    },
+    "ru": {
+     "items": [
+      "В соответствии с Постановлением №239 Кабинета Министров Республики Узбекистан от 3 июня 1998 года учреждение было преобразовано в Ферганский филиал 2-го Ташкентского государственного медицинского института.",
+      "Постановлением Кабинета Министров №780 от 29 июля 2005 года получил статус Ферганского филиала Ташкентской медицинской академии.",
+      "На основании Постановления Президента Республики Узбекистан №ПП-4911 от 3 декабря 2020 года «О создании Ферганского института общественного здоровья» на базе Ферганского филиала Ташкентской медицинской академии был реорганизован Ферганский институт общественного здоровья как самостоятельное высшее учебное заведение. Институтом в разные годы руководили следующие директора и ректоры:"
+     ]
+    },
+    "en": {
+     "items": [
+      "In accordance with Resolution No. 239 of the Cabinet of Ministers of the Republic of Uzbekistan, dated June 3, 1998, the institution was transformed into the Fergana branch of the 2nd Tashkent State Medical Institute.",
+      "By Resolution No. 780 of the Cabinet of Ministers, dated July 29, 2005, it received the status of the Fergana branch of the Tashkent Medical Academy.",
+      "On the basis of Resolution No. PP-4911 of the President of the Republic of Uzbekistan, dated December 3, 2020, \"On Establishing the Fergana Institute of Public Health\", the Fergana Institute of Public Health was reorganized as an independent higher education institution on the basis of the Fergana branch of the Tashkent Medical Academy. The institute was headed in various years by the following directors and rectors:"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "1992–1997 — Professor K.M. Mirzayev",
+      "1998–2005 — tibbiyot fanlari doktori Yu.N. Nishonov",
+      "2005–2012 — tibbiyot fanlari doktori M.A. Abduraxmonov",
+      "2012–2015 — t.f.d., professor R.J. Usmanov",
+      "2015–2017 — t.f.d. X.A. Mamatqulov",
+      "2017–2021 — t.f.n. G.N. Sultanov",
+      "2021 yildan — t.f.d. A.A. Sidikov"
+     ]
+    },
+    "ru": {
+     "items": [
+      "1992-1997 — профессор К.М. Мирзаев",
+      "1998-2005 — доктор медицинских наук Ю.Н. Нишонов",
+      "2005-2012 — доктор медицинских наук М.А. Абдурахмонов",
+      "2012-2015 — доктор медицинских наук, профессор Р.Дж. Усманов",
+      "2015-2017 — доктор медицинских наук Х.А. Маматкулов",
+      "2017-2021 — кандидат медицинских наук Г.Н. Султанов",
+      "с 2021 года — доктор медицинских наук А.А. Сидиков"
+     ]
+    },
+    "en": {
+     "items": [
+      "1992-1997 — Professor K.M. Mirzayev",
+      "1998-2005 — Doctor of Medical Sciences Yu.N. Nishonov",
+      "2005-2012 — Doctor of Medical Sciences M.A. Abduraxmonov",
+      "2012-2015 — Doctor of Medical Sciences, Professor R.J. Usmanov",
+      "2015-2017 — Doctor of Medical Sciences X.A. Mamatqulov",
+      "2017-2021 — Candidate of Medical Sciences G.N. Sultanov",
+      "since 2021 — Doctor of Medical Sciences A.A. Sidiqov"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "MIRZAEV KOMILJON MIRZAEVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "МИРЗАЕВ КОМИЛЖОН МИРЗАЕВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "MIRZAEV KOMILJON MIRZAEVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "mirzayev.webp",
+     "alt": "MIRZAEV KOMILJON MIRZAEVICH"
+    },
+    "ru": {
+     "repo_image": "mirzayev.webp",
+     "alt": "МИРЗАЕВ КОМИЛЖОН МИРЗАЕВИЧ"
+    },
+    "en": {
+     "repo_image": "mirzayev.webp",
+     "alt": "MIRZAEV KOMILJON MIRZAEVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori, professor. 1992-1997 yillarda Tibbiyot Markazi direktori va"
+    },
+    "ru": {
+     "text": "Доктор медицинских наук, профессор. В 1992-1997 годах — директор Медицинского центра и"
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences, professor. Director of the Medical Center in 1992-1997 and"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Fargʻona davlat universiteti Maʻnaviy va maʻrifiy ishlar boʻyicha prorektori"
+    },
+    "ru": {
+     "text": "проректор по духовно-просветительской работе Ферганского государственного университета"
+    },
+    "en": {
+     "text": "vice-rector for spiritual-educational work of Fergana State University"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "NISHONOV YUSUF NISHONOVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "НИШОНОВ ЮСУФ НИШОНОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "NISHONOV YUSUF NISHONOVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "nishonov.webp",
+     "alt": "NISHONOV YUSUF NISHONOVICH"
+    },
+    "ru": {
+     "repo_image": "nishonov.webp",
+     "alt": "НИШОНОВ ЮСУФ НИШОНОВИЧ"
+    },
+    "en": {
+     "repo_image": "nishonov.webp",
+     "alt": "NISHONOV YUSUF NISHONOVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori, professor. 1998-2005 yillarda Toshkent davlat 2-tibbiyot instituti Fargʻona filiali direktori"
+    },
+    "ru": {
+     "text": "Доктор медицинских наук, профессор. В 1998-2005 годах — директор Ферганского филиала 2-го Ташкентского государственного медицинского института"
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences, professor. Director of the Fergana branch of the 2nd Tashkent State Medical Institute in 1998-2005"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1946-2025"
+    },
+    "ru": {
+     "text": "1946-2025"
+    },
+    "en": {
+     "text": "1946-2025"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "ABDURAXMONOV MUHAMMADJON",
+     "level": 3
+    },
+    "ru": {
+     "text": "АБДУРАХМОНОВ МУХАММАДЖОН",
+     "level": 3
+    },
+    "en": {
+     "text": "ABDURAXMONOV MUHAMMADJON",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "abduraxmonov.webp",
+     "alt": "ABDURAXMONOV MUHAMMADJON"
+    },
+    "ru": {
+     "repo_image": "abduraxmonov.webp",
+     "alt": "АБДУРАХМОНОВ МУХАММАДЖОН"
+    },
+    "en": {
+     "repo_image": "abduraxmonov.webp",
+     "alt": "ABDURAXMONOV MUHAMMADJON"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori, professor. 2005-2012 yillarda Toshkent tibbiyot akademiyasi Fargʻona filiali direktori"
+    },
+    "ru": {
+     "text": "Доктор медицинских наук, профессор. В 2005-2012 годах — директор Ферганского филиала Ташкентской медицинской академии"
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences, professor. Director of the Fergana branch of the Tashkent Medical Academy in 2005-2012"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "USMANOV RAVSHAN DJAXANGIROVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "УСМАНОВ РАВШАН ДЖАХАНГИРОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "USMANOV RAVSHAN DJAXANGIROVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "usmanov.webp",
+     "alt": "USMANOV RAVSHAN DJAXANGIROVICH"
+    },
+    "ru": {
+     "repo_image": "usmanov.webp",
+     "alt": "УСМАНОВ РАВШАН ДЖАХАНГИРОВИЧ"
+    },
+    "en": {
+     "repo_image": "usmanov.webp",
+     "alt": "USMANOV RAVSHAN DJAXANGIROVICH"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "MAMATQULOV XASAN ADUSAMATOVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "МАМАТКУЛОВ ХАСАН АДУСАМАТОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "MAMATQULOV XASAN ADUSAMATOVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "mamatqulov.webp",
+     "alt": "MAMATQULOV XASAN ADUSAMATOVICH"
+    },
+    "ru": {
+     "repo_image": "mamatqulov.webp",
+     "alt": "МАМАТКУЛОВ ХАСАН АДУСАМАТОВИЧ"
+    },
+    "en": {
+     "repo_image": "mamatqulov.webp",
+     "alt": "MAMATQULOV XASAN ADUSAMATOVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori, professor. 2015 - 2017 yillarda Toshkent tibbiyot akademiyasi Fargʻona filiali direktori."
+    },
+    "ru": {
+     "text": "Доктор медицинских наук, профессор. В 2015-2017 годах — директор Ферганского филиала Ташкентской медицинской академии."
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences, professor. Director of the Fergana branch of the Tashkent Medical Academy in 2015-2017."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "SULTANOV GAFURDJON NEʻMATBEKOVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "СУЛТАНОВ ГАФУРДЖОН НЕЪМАТБЕКОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "SULTANOV GAFURDJON NE’MATBEKOVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "sultanov.webp",
+     "alt": "SULTANOV GAFURDJON NEʻMATBEKOVICH"
+    },
+    "ru": {
+     "repo_image": "sultanov.webp",
+     "alt": "СУЛТАНОВ ГАФУРДЖОН НЕЪМАТБЕКОВИЧ"
+    },
+    "en": {
+     "repo_image": "sultanov.webp",
+     "alt": "SULTANOV GAFURDJON NE’MATBEKOVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari nomzodi"
+    },
+    "ru": {
+     "text": "Кандидат медицинских наук"
+    },
+    "en": {
+     "text": "Candidate of Medical Sciences"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "SIDIKOV AKMAL ABDIKAXAROVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "СИДИКОВ АКМАЛ АБДИКАХАРОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "SIDIKOV AKMAL ABDIKAXAROVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "sidikov.webp",
+     "alt": "SIDIKOV AKMAL ABDIKAXAROVICH"
+    },
+    "ru": {
+     "repo_image": "sidikov.webp",
+     "alt": "СИДИКОВ АКМАЛ АБДИКАХАРОВИЧ"
+    },
+    "en": {
+     "repo_image": "sidikov.webp",
+     "alt": "SIDIKOV AKMAL ABDIKAXAROVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori, professor"
+    },
+    "ru": {
+     "text": "Доктор медицинских наук, профессор"
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences, professor"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "2021 yildan xozirga qadar Fargʻona jamoat salomatligi tibbiyot instituti rektori."
+    },
+    "ru": {
+     "text": "С 2021 года по настоящее время — ректор Ферганского института общественного здоровья."
+    },
+    "en": {
+     "text": "Since 2021 to the present — rector of the Fergana Institute of Public Health."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Oʻquv va ilmiy yoʻnalishlar rahbarlari",
+     "level": 2
+    },
+    "ru": {
+     "text": "Руководители учебного и научного направлений",
+     "level": 2
+    },
+    "en": {
+     "text": "Heads of the Academic and Scientific Directions",
+     "level": 2
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Institutda oʻquv va ilmiy faoliyatni tashkil etish hamda muvofiqlashtirish turli yillarda quyidagi rahbarlar tomonidan amalga oshirilgan:"
+    },
+    "ru": {
+     "text": "Организацию и координацию учебной и научной деятельности в институте в разные годы осуществляли следующие руководители:"
+    },
+    "en": {
+     "text": "The organization and coordination of academic and scientific activity at the institute was carried out in various years by the following leaders:"
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "2006–2012 — professor Sh.Sh. Baxritdinov."
+     ]
+    },
+    "ru": {
+     "items": [
+      "2006-2012 гг. - профессор Ш.Ш. Бахритдинов."
+     ]
+    },
+    "en": {
+     "items": [
+      "2006-2012 - Professor Sh.Sh. Bakhritdinov."
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "RASULOV FOZILJON XASANOVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "РАСУЛОВ ФОЗИЛЖОН ХАСАНОВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "RASULOV FOZILJON XASANOVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "rasulov.webp",
+     "alt": "RASULOV FOZILJON XASANOVICH"
+    },
+    "ru": {
+     "repo_image": "rasulov.webp",
+     "alt": "РАСУЛОВ ФОЗИЛЖОН ХАСАНОВИЧ"
+    },
+    "en": {
+     "repo_image": "rasulov.webp",
+     "alt": "RASULOV FOZILJON XASANOVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari nomzodi, dotsent. 2007-2012 yillarda fakultet dekani, 2012-2013 yillarda Oʻquv va ilmiy ishlar boʻyicha direktor oʻrinbosari, 2017 yildan“Mikrobiologiya, virusologiya va yuqumli kasalliklar” kafedrasi mudiri"
+    },
+    "ru": {
+     "text": "Кандидат медицинских наук, доцент. декан факультета в 2007-2012 гг., заместитель директора по учебной и научной работе в 2012-2013 гг., заведующий кафедрой микробиологии, вирусологии и инфекционных болезней с 2017 г"
+    },
+    "en": {
+     "text": "Candidate of Medical Sciences, associate professor. Faculty dean in 2007-2012, deputy director for academic and scientific work in 2012-2013, head of the Department of \"Microbiology, Virology and Infectious Diseases\" since 2017"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1954-2021"
+    },
+    "ru": {
+     "text": "1954-2021"
+    },
+    "en": {
+     "text": "1954-2021"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "ISOQOV ERKINJON ZIYOYEVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "ИСАКОВ ЭРКИНЖОН ЗИЁЕВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "ISOQOV ERKINJON ZIYOYEVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "isakov.webp",
+     "alt": "ISOQOV ERKINJON ZIYOYEVICH"
+    },
+    "ru": {
+     "repo_image": "isakov.webp",
+     "alt": "ИСАКОВ ЭРКИНЖОН ЗИЁЕВИЧ"
+    },
+    "en": {
+     "repo_image": "isakov.webp",
+     "alt": "ISOQOV ERKINJON ZIYOYEVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Tibbiyot fanlari doktori. 2000-2006 va 2012 yillarda kafedra mudiri, 2013-2015 yillarda filial direktorining Oʻquv va ilmiy ishlari boʻyicha oʻrinbosari."
+    },
+    "ru": {
+     "text": "Доктор медицинских наук. Заведующий кафедрой в 2000-2006 и 2012 годах, заместитель директора филиала по учебной и научной работе в 2013-2015 годах."
+    },
+    "en": {
+     "text": "Doctor of Medical Sciences. Head of the department in 2000–2006 and in 2012; in 2013–2015 deputy director of the branch for academic and scientific affairs."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "BOTIROV MURODJON TURGʻUNBOYEVICH",
+     "level": 3
+    },
+    "ru": {
+     "text": "БОТИРОВ МУРОДЖОН ТУРГУНБОЕВИЧ",
+     "level": 3
+    },
+    "en": {
+     "text": "BOTIROV MURODJON TURG‘UNBOYEVICH",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "botirov.webp",
+     "alt": "BOTIROV MURODJON TURGʻUNBOYEVICH"
+    },
+    "ru": {
+     "repo_image": "botirov.webp",
+     "alt": "БОТИРОВ МУРОДЖОН ТУРГУНБОЕВИЧ"
+    },
+    "en": {
+     "repo_image": "botirov.webp",
+     "alt": "BOTIROV MURODJON TURG‘UNBOYEVICH"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "tibbiyot fanlari nomzodi, dotsent. 2013-2015 yillarda fakultet dekani, 2016 -2023 Oʻquv va ilmiy ishlar boʻyicha direktor oʻrinbosari."
+    },
+    "ru": {
+     "text": "кандидат медицинских наук, доцент. В 2013–2015 годах декан факультета, в 2016–2023 годах заместитель директора по учебной и научной работе."
+    },
+    "en": {
+     "text": "Candidate of Medical Sciences, Associate Professor. In 2013–2015 dean of the faculty, in 2016–2023 deputy director for academic and scientific affairs."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "NORMATOVA SHAXNOZA ANVAROVNA",
+     "level": 3
+    },
+    "ru": {
+     "text": "НОРМАТОВА ШАХНОЗА АНВАРОВНА",
+     "level": 3
+    },
+    "en": {
+     "text": "NORMATOVA SHAXNOZA ANVAROVNA",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "normatova.webp",
+     "alt": "NORMATOVA SHAXNOZA ANVAROVNA"
+    },
+    "ru": {
+     "repo_image": "normatova.webp",
+     "alt": "НОРМАТОВА ШАХНОЗА АНВАРОВНА"
+    },
+    "en": {
+     "repo_image": "normatova.webp",
+     "alt": "NORMATOVA SHAXNOZA ANVAROVNA"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "tibbiyot fanlari nomzodi, dotsent. 2016-2022 yillarda Ilmiy ishlar va innovatsiyalar boʻyicha prorektor"
+    },
+    "ru": {
+     "text": "кандидат медицинских наук, доцент. В 2016–2022 годах проректор по научной работе и инновациям"
+    },
+    "en": {
+     "text": "Candidate of Medical Sciences, Associate Professor. In 2016–2022 vice-rector for research and innovation"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "QODIROVA MUNIRA RASULOVNA",
+     "level": 3
+    },
+    "ru": {
+     "text": "КОДИРОВА МУНИРА РАСУЛОВНА",
+     "level": 3
+    },
+    "en": {
+     "text": "QODIROVA MUNIRA RASULOVNA",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "qodirova.webp",
+     "alt": "QODIROVA MUNIRA RASULOVNA"
+    },
+    "ru": {
+     "repo_image": "qodirova.webp",
+     "alt": "КОДИРОВА МУНИРА РАСУЛОВНА"
+    },
+    "en": {
+     "repo_image": "qodirova.webp",
+     "alt": "QODIROVA MUNIRA RASULOVNA"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "p.f.d., professor"
+    },
+    "ru": {
+     "text": "доктор педагогических наук, профессор"
+    },
+    "en": {
+     "text": "Doctor of Pedagogical Sciences, professor"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "2023 yildan xozirga qadar Ilmiy ishlar va innovatsiyalar boʻyicha prorektor"
+    },
+    "ru": {
+     "text": "С 2023 года по настоящее время — проректор по научной работе и инновациям"
+    },
+    "en": {
+     "text": "Since 2023 to the present — vice-rector for scientific work and innovations"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Boltaboyev Ulugʻbek Abdusalimovich",
+     "level": 3
+    },
+    "ru": {
+     "text": "Болтабоев Улугбек Абдусалимович",
+     "level": 3
+    },
+    "en": {
+     "text": "Boltaboyev Ulug‘bek Abdusalimovich",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "boltaboyev.webp",
+     "alt": "Boltaboyev Ulugʻbek Abdusalimovich"
+    },
+    "ru": {
+     "repo_image": "boltaboyev.webp",
+     "alt": "Болтабоев Улугбек Абдусалимович"
+    },
+    "en": {
+     "repo_image": "boltaboyev.webp",
+     "alt": "Boltaboyev Ulug‘bek Abdusalimovich"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "tibbiyot fanlari boʻyicha falsafa doktori (PhD), dotsent."
+    },
+    "ru": {
+     "text": "доктор философии (PhD) по медицинским наукам, доцент."
+    },
+    "en": {
+     "text": "Doctor of Philosophy (PhD) in medical sciences, associate professor."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "2022 yildan xozirga qadar Oʻquv ishlar boʻyicha prorektor."
+    },
+    "ru": {
+     "text": "С 2022 года по настоящее время — проректор по учебной работе."
+    },
+    "en": {
+     "text": "Since 2022 to the present — vice-rector for academic work."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Tarix sahifasi",
+     "level": 2
+    },
+    "ru": {
+     "text": "Страница истории",
+     "level": 2
+    },
+    "en": {
+     "text": "A Page of History",
+     "level": 2
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "repo_image": "archive.webp",
+     "alt": "Tarix sahifasi"
+    },
+    "ru": {
+     "repo_image": "archive.webp",
+     "alt": "Страница истории"
+    },
+    "en": {
+     "repo_image": "archive.webp",
+     "alt": "A Page of History"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1990-yillar boshida sobiq Ittifoq miqyosidagi “qayta qurish” jarayonlari oqibatida siyosiy, iqtisodiy va ijtimoiy hayotda murakkab vaziyat yuzaga keldi. Shu sharoitda Oʻzbekistonda davlat boshqaruvini barqarorlashtirish va mustaqil taraqqiyot yoʻlini belgilashga qaratilgan tarixiy qarorlar qabul qilindi: 1990 yil 24 martda Prezidentlik boshqaruvi joriy etildi, 1991 yil 31 avgustda davlat mustaqilligi toʻgʻrisidagi bayonot va tegishli qaror qabul qilindi. 1991 yil 29 dekabrda oʻtkazilgan umumxalq referendumi va Prezident saylovlari esa mustaqil davlat taraqqiyotining siyosiy-huquqiy asoslarini mustahkamladi."
+    },
+    "ru": {
+     "text": "В начале 1990-х годов в результате процессов «перестройки» в масштабах бывшего Союза сложилась сложная ситуация в политической, экономической и социальной жизни. В этих условиях в Узбекистане были приняты исторические решения, направленные на стабилизацию государственного управления и определение пути независимого развития: 24 марта 1990 года было введено президентское правление, 31 августа 1991 года было принято заявление и соответствующее постановление о государственной независимости. Всенародный референдум и президентские выборы, проведённые 29 декабря 1991 года, укрепили политико-правовые основы независимого государственного развития."
+    },
+    "en": {
+     "text": "In the early 1990s, as a result of the processes of \"perestroika\" on the scale of the former Union, a difficult situation arose in political, economic and social life. In these conditions, historic decisions were adopted in Uzbekistan aimed at stabilizing state administration and determining the path of independent development: on March 24, 1990 a presidential system of government was introduced, and on August 31, 1991 the declaration of state independence and the corresponding resolution were adopted. The nationwide referendum and presidential elections held on December 29, 1991 strengthened the political and legal foundations of the development of the independent state."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Mazkur davrda Fargʻona vodiysining ijtimoiy-iqtisodiy rivojlanishida oliy malakali kadrlar tayyorlash masalasi dolzarb vazifaga aylandi. Vodiyning respublika hayotidagi sanoat, qishloq xoʻjaligi va ijtimoiy xizmatlar tizimidagi ulushi yuqori boʻlgani, aholi zichligi ham katta ekanligi oʻquv-ilmiy salohiyatni kuchaytirishni, yangi yoʻnalishlar ochishni taqozo etardi. Mavjud oliy taʻlim muassasalari va filiallarda tayyorlanayotgan mutaxassislar tarkibi hudud ehtiyojlarini toʻliq qoplash uchun yetarli emasligi tobora yaqqol sezila boshladi."
+    },
+    "ru": {
+     "text": "В этот период в социально-экономическом развитии Ферганской долины актуальной задачей стала подготовка высококвалифицированных кадров. Высокая доля долины в промышленности, сельском хозяйстве и системе социальных услуг республики, а также высокая плотность населения требовали усиления учебно-научного потенциала и открытия новых направлений. Всё более отчётливо ощущалось, что состав специалистов, готовящихся в существующих высших учебных заведениях и филиалах, недостаточен для полного удовлетворения потребностей региона."
+    },
+    "en": {
+     "text": "During this period, training highly qualified personnel became an urgent task in the socio-economic development of the Fergana Valley. The valley's high share in the republic's industry, agriculture, and social services system, as well as its high population density, required strengthening the educational-scientific potential and opening new tracks. It was increasingly clearly felt that the composition of specialists being trained at existing higher education institutions and branches was insufficient to fully meet the region's needs."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Shu obyektiv ehtiyojlardan kelib chiqib, 1991 yil 14 fevraldagi qaror asosida Fargʻona davlat pedagogika instituti negizida 1991 yil 1 martdan Fargʻona davlat universiteti (FarDU) tashkil etildi. Universitet rektori lavozimiga fizika-matematika fanlari doktori, professor M.Q. Qoraboev tayinlandi. Mazkur qaror hududda oliy taʻlimning yangi bosqichini boshlab berdi: universitet mavjud ilmiy-pedagogik anʻanalarni davom ettirgan holda taʻlim yoʻnalishlarini kengaytirish, kadrlar salohiyatini mustahkamlash va moddiy-texnik bazani rivojlantirishga kirishdi."
+    },
+    "ru": {
+     "text": "Исходя из этих объективных потребностей, на основании постановления от 14 февраля 1991 года с 1 марта 1991 года на базе Ферганского государственного педагогического института был создан Ферганский государственный университет (ФерГУ). На должность ректора университета был назначен доктор физико-математических наук, профессор М.К. Корабаев. Данное постановление положило начало новому этапу высшего образования в регионе: университет, продолжая существующие научно-педагогические традиции, приступил к расширению образовательных направлений, укреплению кадрового потенциала и развитию материально-технической базы."
+    },
+    "en": {
+     "text": "Proceeding from these objective needs, on the basis of a resolution of February 14, 1991, Fergana State University (FerSU) was established from March 1, 1991, on the basis of the Fergana State Pedagogical Institute. Doctor of Physical-Mathematical Sciences, Professor M.Q. Qorabayev was appointed to the position of university rector. This resolution began a new stage of higher education in the region: continuing the existing scientific-pedagogical traditions, the university set about expanding educational tracks, strengthening its personnel potential, and developing its material-technical base."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1991–1992 oʻquv yili oldidan universitet jamoasi oldida strategik vazifalar turardi: anʻanaviy yoʻnalishlarni universitet tizimiga moslashtirish, istiqboldagi ehtiyojlarni tahlil qilish, yangi mutaxassisliklar boʻyicha qabul parametrlarini belgilash hamda professor-oʻqituvchilar tarkibini shakllantirish. Natijada 1991 yil avgust oyida anʻanaviy pedagogik yoʻnalishlar bilan bir qatorda 14 ta yangi yoʻnalish boʻyicha talabalar qabuli amalga oshirildi."
+    },
+    "ru": {
+     "text": "В преддверии 1991-1992 учебного года перед коллективом университета стояли стратегические задачи: адаптация традиционных направлений к университетской системе, анализ перспективных потребностей, определение параметров приёма по новым специальностям и формирование состава профессоров-преподавателей. В результате, в августе 1991 года, наряду с традиционными педагогическими направлениями, был осуществлён приём студентов по 14 новым направлениям."
+    },
+    "en": {
+     "text": "Ahead of the 1991–1992 academic year, the University faced a set of strategic tasks: integrating existing educational programs into a new university structure, analyzing long-term workforce needs, defining admission parameters for newly introduced specialties, and building a qualified academic staff. As a result, in August 1991, alongside traditional teacher-training fields, the University launched student admissions in 14 new programs."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Shu davrda tibbiyot sohasi bilan bevosita bogʻliq yangi mutaxassisliklar ham bosqichma-bosqich rivojlantirildi. Xususan, 1991 yilda “Biomeditsina apparatlari va tizimlari” yoʻnalishi boʻyicha ilk bor talabalar qabuli yoʻlga qoʻyildi. Bu yoʻnalish tibbiyot muassasalarida zamonaviy diagnostika va davolash texnologiyalari kengayib borayotgan sharoitda yuqori texnologiyali tibbiy uskunalardan samarali foydalanish, ularni joriy etish va xizmat koʻrsatish jarayonlarini tashkil etish uchun zarur kadrlar tayyorlashga xizmat qildi. Yoʻnalish boʻyicha oʻquv reja va dasturlar sohaga oid mutaxassislar hamkorligida ishlab chiqildi; 1991 yilda dastlabki 25 nafar talaba qabul qilindi."
+    },
+    "ru": {
+     "text": "В этот период поэтапно развивались и новые специальности, непосредственно связанные со сферой медицины. В частности, в 1991 году впервые был осуществлён приём студентов по направлению «Биомедицинские аппараты и системы». Данное направление служило подготовке кадров, необходимых для эффективного использования высокотехнологичного медицинского оборудования, его внедрения и организации процессов обслуживания в условиях расширения современных диагностических и лечебных технологий в медицинских учреждениях. Учебные планы и программы по данному направлению разрабатывались в сотрудничестве со специалистами отрасли; в 1991 году были приняты первые 25 студентов."
+    },
+    "en": {
+     "text": "During this period, new specialties directly related to the field of medicine were also developed step by step. In particular, in 1991, the first intake of students in the \"Biomedical Apparatus and Systems\" track was carried out. This track served to train the personnel needed to effectively use high-technology medical equipment, introduce it, and organize service processes, given the expansion of modern diagnostic and treatment technologies at medical institutions. The curricula and programs for this track were developed in cooperation with industry specialists; the first 25 students were admitted in 1991."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1992 yilda FarDUda tashkil etilgan Tibbiyot markazi tarkibida oʻquv rejalari takomillashtirilib, mutaxassislar tayyorlash “Tibbiy-muhandislik ishi” nomi bilan tasdiqlangan dasturlar asosida tizimlashtirildi. Bu jarayon tibbiyot amaliyotidagi texnologik yangilanishlar bilan uygʻunlashgan taʻlim modelini shakllantirishda muhim qadam boʻldi."
+    },
+    "ru": {
+     "text": "В 1992 году, в рамках созданного при ФерГУ Медицинского центра, учебные планы были усовершенствованы, и подготовка специалистов была систематизирована на основе программ, утверждённых под названием «Медико-инженерное дело». Этот процесс стал важным шагом в формировании образовательной модели, гармонично сочетающейся с технологическими обновлениями в медицинской практике."
+    },
+    "en": {
+     "text": "In 1992, within the framework of the Medical Center created at FerSU, the curricula were improved, and the training of specialists was systematized on the basis of programs approved under the name \"Medical-Engineering Work\". This process became an important step in forming an educational model harmoniously combined with technological updates in medical practice."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Shuningdek, 1992 yilda ikki vazirlik ruxsati bilan FarDU qoshida tibbiyot fakulteti tashkil etildi. Aholi salomatligi jamiyat rivojlanishining asosiy mezoni sifatida eʻtirof etilgani, profilaktika yoʻnalishida chuqur bilim va koʻnikmaga ega kadrlar tayyorlash zarurati bu tashabbusning ilmiy-amaliy ahamiyatini belgilab berdi. Fakultetni joylashtirish, rahbariyat va professor-oʻqituvchilar tarkibini shakllantirish, oʻquv jarayonini yoʻlga qoʻyish boʻyicha tashkiliy ishlar bosqichma-bosqich amalga oshirildi. 1992 yil 1 sentyabrdan taʻlim jarayoni boshlandi: birinchi kursga 105 nafar, ikkinchi kursga 46 nafar talaba qabul qilindi."
+    },
+    "ru": {
+     "text": "Кроме того, в 1992 году, с разрешения двух министерств, при ФерГУ был создан медицинский факультет. Признание здоровья населения основным критерием развития общества и необходимость подготовки кадров с глубокими знаниями и навыками в профилактическом направлении определили научно-практическую значимость данной инициативы. Организационные работы по размещению факультета, формированию руководства и состава профессоров-преподавателей, налаживанию учебного процесса осуществлялись поэтапно. С 1 сентября 1992 года начался образовательный процесс: на первый курс было принято 105 студентов, на второй курс — 46 студентов."
+    },
+    "en": {
+     "text": "Also, in 1992, with the permission of two ministries, a Faculty of Medicine was established at FerSU. The recognition of public health as the main criterion of society's development and the need to train personnel with deep knowledge and skills in prevention determined the scientific and practical importance of this initiative. Organizational work on accommodating the faculty, forming its leadership and teaching staff, and setting up the educational process was carried out step by step. The educational process began on September 1, 1992: 105 students were admitted to the first year and 46 to the second year."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "1992–1994 yillarda taʻlim sifati va ilmiy-uslubiy taʻminotni kuchaytirish maqsadida hamkorlik aloqalari rivojlantirildi. Xususan, 1994 yil oktyabr oyida 2-Toshkent davlat tibbiyot instituti bilan hamkorlik shartnomasi rasman tasdiqlanib, professor-oʻqituvchilar almashinuvi va oʻquv-uslubiy yordam mexanizmlari yoʻlga qoʻyildi."
+    },
+    "ru": {
+     "text": "В 1992-1994 годах, с целью повышения качества образования и научно-методического обеспечения, развивались связи сотрудничества. В частности, в октябре 1994 года был официально утверждён договор о сотрудничестве со 2-м Ташкентским государственным медицинским институтом, налажены механизмы обмена профессорами-преподавателями и учебно-методической помощи."
+    },
+    "en": {
+     "text": "In 1992–1994, cooperation ties were developed in order to strengthen the quality of education and scientific-methodological support. In particular, in October 1994 a cooperation agreement with the 2nd Tashkent State Medical Institute was officially approved, and mechanisms for the exchange of professors and lecturers and for educational-methodological assistance were put in place."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Xalqaro hamkorlik",
+     "level": 2
+    },
+    "ru": {
+     "text": "Международное сотрудничество",
+     "level": 2
+    },
+    "en": {
+     "text": "International Cooperation",
+     "level": 2
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Fargʻona jamoat salomatligi tibbiyot instituti dunyoning 30 dan ortiq oliy taʻlim muassasalari bilan hamkorlik shartnomalarini imzolagan boʻlib, oʻquv, ilmiy va maʻrifiy yoʻnalishlarda doimiy hamkorlik aloqalarini yoʻlga qoʻygan va izchil rivojlantirib bormoqda."
+    },
+    "ru": {
+     "text": "Ферганский институт общественного здоровья подписал договоры о сотрудничестве с более чем 30 высшими учебными заведениями мира, наладив и последовательно развивая постоянные связи сотрудничества в учебном, научном и просветительском направлениях."
+    },
+    "en": {
+     "text": "The Fergana Institute of Public Health has signed cooperation agreements with more than 30 higher education institutions around the world, having established and consistently developed permanent cooperative ties in the academic, scientific, and educational directions."
+    }
+   }
+  },
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "image_id": 5692,
+     "alt": "Xalqaro hamkorlik"
+    },
+    "ru": {
+     "image_id": 5692,
+     "alt": "Международное сотрудничество"
+    },
+    "en": {
+     "image_id": 5692,
+     "alt": "International Cooperation"
+    }
+   }
+  }
+ ]
+}
