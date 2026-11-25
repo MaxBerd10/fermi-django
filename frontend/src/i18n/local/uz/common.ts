@@ -1315,7 +1315,6 @@ export default {
   "institut.heroDescription": "Fargʻona jamoat salomatligi tibbiyot instituti — zamonaviy, xalqaro standartlarga javob beruvchi tibbiyot oliy oʻquv yurti",
   "institut.admission2026": "Qabul-2026",
   "institut.contactUs": "Bogʻlanish",
-  "institut.ecaqaDocument": "ECAQA — Davolash ishi yo‘nalishi akkreditatsiyasi",
   "institut.fullName": "Fargʻona jamoat salomatligi tibbiyot instituti",
   "institut.aboutParagraph1": "Fargʻona jamoat salomatligi tibbiyot instituti 1992-yildan beri tibbiyot sohasida malakali kadrlar tayyorlab kelmoqda va hududda sogʻliqni saqlash tizimini mustahkamlashga hissa qoʻshmoqda.",
   "institut.aboutParagraph2": "Sogʻliqni saqlash, sanitariya-epidemiologik osoyishtalik va jamoat salomatligi sohasida yuqori malakaga ega oliy maʻlumotli kadrlarni tayyorlash, xodimlarni kasbiy qayta tayyorlash va ularning malakasini oshirish — bizning asosiy maqsadimiz.",

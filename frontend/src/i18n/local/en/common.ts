@@ -1315,7 +1315,6 @@ export default {
   "institut.heroDescription": "Fergana Medical Institute of Public Health — a modern higher-education medical institution meeting international standards",
   "institut.admission2026": "Admissions 2026",
   "institut.contactUs": "Contact us",
-  "institut.ecaqaDocument": "ECAQA — General Medicine Programme Accreditation",
   "institut.fullName": "Fergana Medical Institute of Public Health",
   "institut.aboutParagraph1": "Fergana Medical Institute of Public Health has been training medical specialists since 1992, contributing to the development of the regional healthcare system.",
   "institut.aboutParagraph2": "Our main goal is training highly qualified specialists with higher education in healthcare, sanitary-epidemiological welfare, and public health, along with professional retraining and advanced qualification of staff.",

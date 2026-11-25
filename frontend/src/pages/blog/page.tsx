@@ -106,12 +106,8 @@ export default function BlogPage() {
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
   const isMissionPage = slug === "institut-missiyasi-va-kelajak-tasavvuri";
-  const hasLegacyInstituteAbout = slug === "institut-xaqida" && sortedBlocks.some(
-    (block) => block.block_type === "raw_html" && block.data.slug === slug,
-  );
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
-    && !hasLegacyInstituteAbout
     && sortedBlocks.length > 0
     && sortedBlocks.every((block) =>
       block.block_type === "document" || block.block_type === "image" ||
@@ -133,24 +129,7 @@ export default function BlogPage() {
           <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""}${isInstituteDocument ? " article-document" : ""} article-body`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-              {!hasLegacyInstituteAbout ? <ArticleBody blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
-                block.block_type === "raw_html" && block.data.slug === slug ? (
-                  <div key={block.id} className="grid items-center gap-5 md:grid-cols-2 lg:gap-8">
-                    <div className="min-w-0">
-                      <h2>{t("institut.fullName")}</h2>
-                      <p>{t("institut.aboutParagraph1")}</p>
-                      <p>{t("institut.aboutParagraph2")}</p>
-                    </div>
-                    <BlockRenderer block={block} />
-                  </div>
-                ) : (
-                  <BlockRenderer
-                    key={block.id}
-                    block={block}
-                    documentTitle={t("institut.ecaqaDocument")}
-                  />
-                ),
-              )}
+              <ArticleBody blocks={sortedBlocks} />
             </MenuSectionOriginContext.Provider>
           </article>
         ) : (

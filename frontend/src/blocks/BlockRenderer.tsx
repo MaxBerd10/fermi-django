@@ -60,7 +60,7 @@ function VideoBlock({ src, poster, caption }: { src: string; poster: string; cap
  * surrounding layout, and a malformed block can't reach this component at all
  * (the backend rejects invalid block data before it's ever saved).
  */
-export function BlockRenderer({ block, documentTitle }: { block: ContentBlock; documentTitle?: string }) {
+export function BlockRenderer({ block }: { block: ContentBlock }) {
   const { t } = useTranslation();
   switch (block.block_type) {
     case "heading":
@@ -262,8 +262,7 @@ export function BlockRenderer({ block, documentTitle }: { block: ContentBlock; d
       if (!document) return null;
       const documentUrl = toAbsoluteUrl(document.file);
 
-      const originalTitle = caption || document.title || humanizeFilename(document.filename);
-      const title = documentTitle && /^ecaqa$/i.test(originalTitle.trim()) ? documentTitle : originalTitle;
+      const title = caption || document.title || humanizeFilename(document.filename);
 
       if (style === "roadmap") {
         return (

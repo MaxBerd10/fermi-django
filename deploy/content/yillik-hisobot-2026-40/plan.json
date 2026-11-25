@@ -1,0 +1,47 @@
+[
+ {
+  "slug": "institut-xaqida",
+  "kind": "about",
+  "order": 1,
+  "fp": {
+   "uz": "78a71d75f9f8ab928405d457741b3faf8591068c26850e6a6551a00fe727fda5",
+   "ru": "79430ea655ee4cb1151c54400284c9f6834ed254972351bb15fde0475252aea8",
+   "en": "4ae2038d3b74ad3735570970a0d5ac8a09b3ffb395641d2bd98524b4c5b0283e"
+  },
+  "heading": {
+   "uz": "Fargʻona jamoat salomatligi tibbiyot instituti",
+   "ru": "Ферганский медицинский институт общественного здоровья",
+   "en": "Fergana Medical Institute of Public Health"
+  },
+  "paragraphs": [
+   {
+    "uz": "Fargʻona jamoat salomatligi tibbiyot instituti 1992-yildan beri tibbiyot sohasida malakali kadrlar tayyorlab kelmoqda va hududda sogʻliqni saqlash tizimini mustahkamlashga hissa qoʻshmoqda.",
+    "ru": "Ферганский медицинский институт общественного здоровья готовит медицинские кадры с 1992 года, внося вклад в развитие системы здравоохранения региона.",
+    "en": "Fergana Medical Institute of Public Health has been training medical specialists since 1992, contributing to the development of the regional healthcare system."
+   },
+   {
+    "uz": "Sogʻliqni saqlash, sanitariya-epidemiologik osoyishtalik va jamoat salomatligi sohasida yuqori malakaga ega oliy maʻlumotli kadrlarni tayyorlash, xodimlarni kasbiy qayta tayyorlash va ularning malakasini oshirish — bizning asosiy maqsadimiz.",
+    "ru": "Наша главная цель — подготовка высококвалифицированных кадров с высшим образованием в сфере здравоохранения, санитарно-эпидемиологического благополучия и общественного здоровья, а также профессиональная переподготовка и повышение квалификации сотрудников.",
+    "en": "Our main goal is training highly qualified specialists with higher education in healthcare, sanitary-epidemiological welfare, and public health, along with professional retraining and advanced qualification of staff."
+   }
+  ],
+  "image": {
+   "file": "institut-about.jpg",
+   "alt": {
+    "uz": "Fargʻona jamoat salomatligi tibbiyot instituti",
+    "ru": "Ферганский медицинский институт общественного здоровья",
+    "en": "Fergana Medical Institute of Public Health"
+   }
+  }
+ },
+ {
+  "slug": "institut-xaqida",
+  "kind": "caption",
+  "document_id": 451,
+  "caption": {
+   "uz": "ECAQA — Davolash ishi yoʻnalishi akkreditatsiyasi",
+   "ru": "ECAQA — аккредитация программы «Лечебное дело»",
+   "en": "ECAQA — General Medicine Programme Accreditation"
+  }
+ }
+]
