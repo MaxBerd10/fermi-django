@@ -7,15 +7,12 @@ import { isDeadHref, repairLegacyHref } from "@/lib/legacyLinks";
 
 export type CmsEnhanceOptions = {
   slug?: string;
-  usmleTitle?: string;
   /** The menu's label for the /blog page with this slug, or null when the menu has none. */
   pageTitle?: (slug: string) => string | null;
 };
 
 export function getCmsArticleModifier(slug?: string): string {
   if (slug === "institut-tarixi") return "cms-article--history";
-  if (slug === "usmle-dasturi") return "cms-article--usmle";
-  if (slug === "ichki-tartib-qoidalar" || slug === "institut-odob-axloq-kodeksi") return "cms-article--regulations";
   if (slug === "tibbiyotdagi-islohotlar-inson-qadri-uchun") return "cms-article--reforms";
   if (slug === "ecaqa-xalqaro-maxsus-akkreditatsiya") return "cms-article--accreditation";
   if (slug === "institut-ilmiy-kengashi") return "cms-article--council";
@@ -216,35 +213,6 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   const doc = parser.parseFromString(html, "text/html");
   const body = doc.body;
 
-  if (slug === "institut-missiyasi-va-kelajak-tasavvuri") {
-    // The legacy Uzbek article leaves a list item open across multiple section
-    // dividers. Parse each section independently so the browser closes the list
-    // at its boundary, before the generic heading and list transformations.
-    const sections = html.split(/<hr\b[^>]*>/i);
-    if (sections.length > 1) {
-      const fragment = doc.createDocumentFragment();
-      sections.forEach((section, index) => {
-        const sectionBody = parser.parseFromString(section, "text/html").body;
-        if (!sectionBody.textContent?.trim() && !sectionBody.querySelector("img, video, iframe, table")) return;
-        if (index > 0 && fragment.childNodes.length > 0) fragment.append(doc.createElement("hr"));
-        let list: HTMLUListElement | undefined;
-        for (const node of Array.from(sectionBody.childNodes)) {
-          if (node instanceof HTMLLIElement) {
-            if (!list) {
-              list = doc.createElement("ul");
-              fragment.append(list);
-            }
-            list.append(node);
-          } else if (node.nodeType !== Node.TEXT_NODE || node.textContent?.trim()) {
-            list = undefined;
-            fragment.append(node);
-          }
-        }
-      });
-      body.replaceChildren(fragment);
-    }
-  }
-
   stripLegacyStyles(body);
   unwrapBlankLinks(body);
   repairLinks(body);
@@ -255,21 +223,6 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   if (slug === "institut-tarixi") {
     buildHistoryLayout(body);
-    return body.innerHTML;
-  }
-
-  if (slug === "usmle-dasturi") {
-    buildUsmleLayout(body, options?.usmleTitle);
-    return body.innerHTML;
-  }
-
-  if (slug === "ichki-tartib-qoidalar") {
-    buildRegulationsLayout(body);
-    return body.innerHTML;
-  }
-
-  if (slug === "institut-odob-axloq-kodeksi") {
-    buildEthicsCodeLayout(body);
     return body.innerHTML;
   }
 
@@ -323,41 +276,8 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
     }
   });
   if (FACULTY_ACTIVITY_SLUGS.has(slug)) unifyHeadingStyle(body);
-  if (slug === "institut-missiyasi-va-kelajak-tasavvuri") styleInstituteMission(body);
 
   return body.innerHTML;
-}
-
-function styleInstituteMission(body: HTMLElement) {
-  const dividers = Array.from(body.querySelectorAll(":scope > .cms-section-divider"));
-  if (dividers.length < 2) return;
-
-  const doc = body.ownerDocument;
-  const intro = doc.createElement("section");
-  intro.className = "mission-intro";
-  const copy = doc.createElement("div");
-  copy.className = "mission-intro__copy";
-  const visual = doc.createElement("img");
-  visual.className = "mission-intro__photo";
-  visual.src = "/images/institut-about.jpg";
-  visual.alt = "";
-  visual.decoding = "async";
-
-  while (body.firstChild && body.firstChild !== dividers[0]) {
-    const node = body.firstChild;
-    if (node instanceof HTMLElement && node.matches("ul, ol")) intro.append(node);
-    else copy.append(node);
-  }
-  intro.prepend(copy, visual);
-  dividers[0].before(intro);
-
-  const vision = doc.createElement("section");
-  vision.className = "mission-vision";
-  while (dividers[0].nextSibling && dividers[0].nextSibling !== dividers[1]) {
-    vision.append(dividers[0].nextSibling);
-  }
-  if (vision.querySelector("h2")) dividers[0].replaceWith(vision);
-  else dividers[0].after(...Array.from(vision.childNodes));
 }
 
 /**
@@ -1380,200 +1300,6 @@ function markHistoryIntro(body: HTMLElement) {
 const CODE_CHAPTER_RE = /^(?:\d+-bob\b|Глава\s+\d+|Chapter\s+\d+)/i;
 const CODE_ARTICLE_RE = /^(?:\d+-modda\b|Статья\s+\d+|Article\s+\d+)/i;
 
-/**
- * The code of ethics is long running text. In Uzbek a whole run of articles sits in ONE paragraph with <br> between the lines;
- * in Russian and English the headings are separate paragraphs. Every line becomes its own element, and the chapter and article
- * lines become headings, so all three languages get the same structure as the internal regulations.
- */
-function buildEthicsCodeLayout(body: HTMLElement) {
-  const doc = body.ownerDocument;
-  body.querySelectorAll(":scope > p").forEach((p) => {
-    if (p.querySelector("img")) return;
-    const parts = p.innerHTML.split(/<br\s*\/?>/i);
-    const pieces: HTMLElement[] = [];
-    parts.forEach((part) => {
-      const tmp = doc.createElement("div");
-      tmp.innerHTML = part; // the parser closes the <span>s that the cut left open
-      tmp.querySelectorAll("[style]").forEach((el) => el.removeAttribute("style"));
-      const text = tmp.textContent?.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim() ?? "";
-      if (!text) return;
-      let piece: HTMLElement;
-      if (CODE_CHAPTER_RE.test(text)) {
-        piece = doc.createElement("h3");
-        piece.className = "cms-reg-chapter";
-        piece.textContent = text;
-      } else if (CODE_ARTICLE_RE.test(text)) {
-        piece = doc.createElement("h4");
-        piece.className = "cms-reg-article";
-        piece.textContent = text;
-      } else {
-        piece = doc.createElement("p");
-        piece.className = "cms-reg-text";
-        piece.innerHTML = tmp.innerHTML.trim();
-      }
-      pieces.push(piece);
-    });
-    if (pieces.length) p.replaceWith(...pieces);
-    else p.remove();
-  });
-}
-
-function buildRegulationsLayout(body: HTMLElement) {
-  body.querySelectorAll("div, p").forEach((el) => {
-    const style = el.getAttribute("style") ?? "";
-    const isCenter = /text-align\s*:\s*center/i.test(style);
-    const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (!text) return;
-
-    // a coloured title has one more <span> around its <strong> (ru, en), so look at every depth
-    const strong = el.querySelector("strong");
-    // the same document in uz, ru and en: the titles, chapters and articles are found by their words in every language
-    if (isCenter && strong && /ichki tartib qoidalari|ODOB-AXLOQ KODEKSI|правила внутреннего распорядка|КОДЕКС ЭТИКИ|internal regulations|CODE OF ETHICS/i.test(text)) {
-      const h2 = el.ownerDocument.createElement("h2");
-      h2.className = /ODOB-AXLOQ|КОДЕКС ЭТИКИ|CODE OF ETHICS/i.test(text)
-        ? "cms-reg-title cms-reg-title--split"
-        : "cms-reg-title";
-      h2.innerHTML = strong.innerHTML.trim();
-      el.replaceWith(h2);
-      return;
-    }
-
-    if (isCenter && !strong && text.length > 80 && /Qoidalar|Mehnat kodeksi/i.test(text)) {
-      el.className = "cms-reg-intro";
-      el.removeAttribute("style");
-      return;
-    }
-
-    if (isCenter && /\d+-BOB|\d+-bob\.|^(?:ГЛАВА|CHAPTER)\s+\d+/i.test(text)) {
-      const h3 = el.ownerDocument.createElement("h3");
-      h3.className = "cms-reg-chapter";
-      h3.textContent = text;
-      el.replaceWith(h3);
-    }
-  });
-
-  if (!body.querySelector(".cms-reg-intro")) {
-    const next = body.querySelector(".cms-reg-title:not(.cms-reg-title--split)")?.nextElementSibling;
-    if (next?.tagName === "P" && (next.textContent?.trim().length ?? 0) > 80) {
-      next.classList.add("cms-reg-intro");
-      next.removeAttribute("style");
-    }
-  }
-
-  body.querySelectorAll("p").forEach((p) => {
-    const text = p.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (!/\d+-modda\.|^(?:Статья|Article)\s+\d+/i.test(text)) return;
-
-    const h4 = p.ownerDocument.createElement("h4");
-    h4.className = "cms-reg-article";
-    h4.textContent = text.replace(/^\s+/, "");
-    p.replaceWith(h4);
-  });
-
-  body.querySelectorAll("div[style*='justify'], p[style*='justify']").forEach((el) => {
-    const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (!text || text.length > 900) return;
-
-    if (el.querySelector('[style*="0000CD"], [style*="#0000CD"]') || /^[12]\./.test(text)) {
-      el.classList.add(/0000CD|#0000CD/i.test(el.innerHTML) ? "cms-reg-def" : "cms-reg-clause");
-      el.removeAttribute("style");
-    }
-  });
-
-  // the buttons of a file card (convertFileLinkParagraphs) are already styled -- only bare links get this look
-  body.querySelectorAll("a[href*='.pdf']:not(.cms-download-btn)").forEach((a) => {
-    if (a.closest("[data-file-card]")) return;
-    a.classList.add("cms-reg-pdf-link");
-    const row = a.closest("p, div");
-    row?.classList.add("cms-reg-pdf-wrap");
-  });
-
-  const split = body.querySelector(".cms-reg-title--split");
-  if (split) {
-    const divider = body.ownerDocument.createElement("div");
-    divider.className = "cms-section-divider cms-reg-split";
-    split.before(divider);
-  }
-
-  body.querySelectorAll(".cms-reg-article").forEach((h4) => {
-    let next = h4.nextElementSibling;
-    while (next && next.tagName === "P") {
-      next.classList.add("cms-reg-text");
-      next = next.nextElementSibling;
-    }
-  });
-}
-
-function buildUsmleLayout(body: HTMLElement, title?: string) {
-  body.querySelectorAll(".hatnote, [class*='navigation-not-searchable']").forEach((el) => el.remove());
-  // Wikipedia's "Step 3[edit]" heading: drop the edit link and its brackets, then the now-bare "Step 3" line
-  // (the step card below carries that title itself)
-  body.querySelectorAll('a[title^="Edit section"], a[href*="action=edit"]').forEach((el) => el.remove());
-  // what is left of that heading is "Step 3[]" (the brackets sit in separate spans, so match on the whole line)
-  body.querySelectorAll("p").forEach((p) => {
-    if (/^Step\s*\d\s*(\[\s*\])?$/i.test(p.textContent?.replace(/\u00a0/g, " ").trim() ?? "")) p.remove();
-  });
-
-  const steps: Element[] = [];
-  body.querySelectorAll("p").forEach((p) => {
-    const text = p.textContent ?? "";
-    if (!/USMLE Step [123]/i.test(text)) return;
-    steps.push(p);
-  });
-
-  steps.forEach((p, i) => {
-    const card = body.ownerDocument.createElement("article");
-    card.className = "cms-usmle-step";
-    const num = (p.textContent?.match(/Step (\d)/i)?.[1] ?? String(i + 1)).charAt(0);
-    card.innerHTML = `<div class="cms-usmle-step__head"><span class="cms-usmle-step__num">${num}</span><span class="cms-usmle-step__label">USMLE Step ${num}</span></div>`;
-    const bodyEl = body.ownerDocument.createElement("div");
-    bodyEl.className = "cms-usmle-step__body";
-    bodyEl.innerHTML = p.innerHTML.replace(/<strong[^>]*>USMLE Step \d[^<]*<\/strong>/i, "").trim();
-    card.appendChild(bodyEl);
-    p.replaceWith(card);
-  });
-
-  body.querySelectorAll('a[href*=".pptx"]:not(.cms-download-btn), a[href*=".pdf"]:not(.cms-download-btn)').forEach((a) => {
-    if (a.closest("[data-file-card]")) return; // a file card's own buttons are already styled
-    a.classList.add("cms-usmle-download");
-    if (a.parentElement?.tagName === "P" && a.parentElement.textContent?.trim() === a.textContent?.trim()) {
-      const wrap = body.ownerDocument.createElement("div");
-      wrap.className = "cms-usmle-downloads";
-      a.parentElement.replaceWith(wrap);
-      wrap.appendChild(a);
-    }
-  });
-
-  body.querySelectorAll("p").forEach((p) => {
-    if (p.closest(".cms-usmle-step")) return;
-    if (p.textContent && p.textContent.length > 120) p.classList.add("cms-usmle-intro");
-  });
-
-  // the text used to open with two long paragraphs and nothing to say what they are about
-  if (title) {
-    const heading = body.ownerDocument.createElement("h2");
-    heading.className = "cms-section-title";
-    heading.textContent = title;
-    body.insertBefore(heading, body.firstChild);
-  }
-
-  // a photo of the institute's own USMLE Step 1 classes (from the news item about the course) beside the opening text:
-  // the page was only text. The photo has no words on it, so it reads the same in every language.
-  const firstIntro = body.querySelector("p.cms-usmle-intro");
-  if (firstIntro) {
-    const figure = body.ownerDocument.createElement("figure");
-    figure.className = "cms-usmle-figure";
-    const img = body.ownerDocument.createElement("img");
-    img.src = USMLE_PHOTO;
-    img.alt = "USMLE";
-    img.loading = "lazy";
-    img.decoding = "async";
-    figure.appendChild(img);
-    firstIntro.before(figure);
-  }
-}
-
-const USMLE_PHOTO = "https://fermi.uz/media/uploads/2026/09/USMLE_targibot_Ch1ZeuJ.jpg";
 
 const RESTRICTED_TEXT_RE =
   /ushbu sahifani ko[''`’]?rish faqat ro[''`’]?yxatdan o[''`’]?tgan/i;

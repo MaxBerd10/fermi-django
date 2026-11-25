@@ -1374,7 +1374,6 @@ export default {
 
   "contest.formTitle": "Ariza topshirish",
   "document.open": "Brauzerda ochish",
-  "usmle.introTitle": "USMLE haqida",
   "document.download": "Yuklab olish",
   "common.pagination": "Sahifalar",
   "common.prevPage": "Oldingi sahifa",

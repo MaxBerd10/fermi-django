@@ -140,3 +140,53 @@ def test_typed_structure_survives_the_admin_editor(page, tmp_path):
     write_blocks_from_html(page, {lang: blocks_to_html(page, lang) for lang in LANGS})
     after = [(b.block_type, b.data) for b in page.blocks.order_by("order")]
     assert after == before
+
+
+def test_image_from_media_uses_the_file_already_in_the_media_folder(db, tmp_path, settings):
+    settings.MEDIA_ROOT = str(tmp_path)
+    (tmp_path / "migrated").mkdir()
+    _png(tmp_path / "migrated" / "cover.png", (50, 20))
+    image = tools.image_from_media("migrated/cover.png", "alt")
+    assert (image.file.name, image.width, image.height, image.alt_text) == ("migrated/cover.png", 50, 20, "alt")
+    assert tools.image_from_media("migrated/cover.png", "other alt").pk == image.pk  # the same file is one Image row
+    assert Image.objects.count() == 1
+    with pytest.raises(FileNotFoundError):
+        tools.image_from_media("migrated/missing.png", "x")
+
+
+def _html_to_blocks():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_html_to_blocks", os.path.join(os.path.dirname(__file__), "..", "..", "deploy", "content", "_html_to_blocks.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _html(lang, extra=""):
+    return (f'<p style="text-align:center"><img alt="" src="https://fermi.uz/media/migrated/a.jpg"></p>'
+            f'<h2>Mission {lang}</h2><p>Text {lang}</p><ul><li>one {lang}</li><li>two {lang}</li></ul>'
+            f'<p><strong>1-bob. Chapter {lang}</strong></p><h3>1-modda. Article {lang}</h3><p>More {lang}</p>{extra}')
+
+
+def test_html_to_blocks_same_structure_in_three_languages():
+    blocks = _html_to_blocks().build({lang: _html(lang) for lang in LANGS}, resolve_image=lambda src: 7)
+    assert [b["block_type"] for b in blocks] == ["image", "heading", "paragraph", "list", "heading", "heading", "paragraph"]
+    assert [b["data"]["ru"].get("level") for b in blocks if b["block_type"] == "heading"] == [2, 2, 3]
+    assert all(b["data"][lang]["image_id"] == 7 for b in blocks[:1] for lang in LANGS)
+    assert blocks[3]["data"]["en"]["items"] == ["one en", "two en"]
+    assert blocks[1]["data"]["uz"]["text"] == "Mission uz"
+
+
+def test_html_to_blocks_refuses_languages_that_differ():
+    other = {"uz": _html("uz"), "ru": _html("ru", "<p>one more paragraph</p>"), "en": _html("en")}
+    with pytest.raises(ValueError, match="ru: expected"):
+        _html_to_blocks().build(other, resolve_image=lambda src: 7)
+
+
+def test_reuse_or_make_image_does_not_duplicate_a_file_already_in_the_library(db, tmp_path):
+    source = _png(tmp_path / "photo.png", (40, 30))
+    first = tools.make_image(source, "first")
+    again = tools.reuse_or_make_image(source, "second")
+    assert again.pk == first.pk and Image.objects.count() == 1
+    other = tools.reuse_or_make_image(_png(tmp_path / "other.png", (10, 10)), "third")
+    assert other.pk != first.pk and Image.objects.count() == 2

@@ -77,16 +77,15 @@ export default function RichContent({
   const { t } = useTranslation();
   const navigate = useNavigate();
   const originSection = useContext(MenuSectionOriginContext);
-  const usmleTitle = t("usmle.introTitle");
   const { menu } = useMenu();
   const processed = useMemo(() => {
     const pageTitle = (target: string) => {
       const title = findMenuTitleBySlug(menu, target);
       return title && normalizeYearLabels(title);
     };
-    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, usmleTitle, pageTitle }) : html;
+    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, pageTitle }) : html;
     return sanitizeHtml(withLayout);
-  }, [html, enhanced, slug, usmleTitle, menu]);
+  }, [html, enhanced, slug, menu]);
 
   if (!processed) return null;
 

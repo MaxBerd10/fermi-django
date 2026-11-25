@@ -105,7 +105,6 @@ export default function BlogPage() {
   // without a real h2, PageHeader's h1 is followed straight by the footer's
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
-  const isMissionPage = slug === "institut-missiyasi-va-kelajak-tasavvuri";
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
     && sortedBlocks.length > 0
@@ -126,7 +125,7 @@ export default function BlogPage() {
         {isHistoryPage && sortedBlocks.length > 0 && !hasStructuredProfiles(sortedBlocks) ? (
           <InstituteHistoryArticle blocks={sortedBlocks} />
         ) : sortedBlocks.length > 0 ? (
-          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""}${isInstituteDocument ? " article-document" : ""} article-body`}
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isInstituteDocument ? " article-document" : ""} article-body`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
               <ArticleBody blocks={sortedBlocks} />

@@ -134,70 +134,6 @@
   overflow-wrap: anywhere;
 }
 
-.inner-page-body .cms-article--usmle .cms-section-title {
-  display: block;
-  margin: 0 0 .875rem;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  color: #111c4a;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  font-weight: 750;
-  line-height: 1.3;
-}
-
-/* USMLE photo: beside the opening text on a wide screen, above it on a phone */
-.inner-page-body .cms-article--usmle .cms-usmle-figure {
-  margin: 0 0 1.25rem;
-  overflow: hidden;
-  border-radius: .75rem;
-}
-
-.inner-page-body .cms-article--usmle .cms-usmle-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  .inner-page-body .cms-article--usmle .cms-usmle-figure {
-    float: right;
-    width: min(42%, 22rem);
-    margin: .25rem 0 1rem 1.5rem;
-  }
-}
-
-/* USMLE steps: same light card as the other pages (thin border, no heavy navy header, no shadow) */
-.inner-page-body .cms-article--usmle .cms-usmle-step {
-  clear: both;
-  border: 1px solid #dbe2f0;
-  border-radius: .75rem;
-  background: #fff;
-  box-shadow: none;
-}
-
-.inner-page-body .cms-article--usmle .cms-usmle-step__head {
-  background: #f5f7fc;
-  border-bottom: 1px solid #dbe2f0;
-  color: #0a1158;
-}
-
-.inner-page-body .cms-article--usmle .cms-usmle-step__body {
-  color: #273552;
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.inner-page-body .cms-article--usmle .cms-usmle-intro {
-  background: transparent;
-  border: 0;
-  padding-inline: 0;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #273552;
-}
-
 @media (min-width: 1024px) {
   .inner-page-grid[data-sidebar] {
     grid-template-columns: minmax(0, 1fr) clamp(16rem, 23vw, 19rem);
@@ -230,6 +166,34 @@
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 750;
   line-height: 1.3;
+}
+
+/* Sub-headings (an article of a code, a step, a value): bold navy with a small yellow mark. Not in a person's section (it has its own look). */
+.inner-page-body .article-body h3:not([class]) {
+  display: flex;
+  align-items: baseline;
+  gap: .625rem;
+  margin: 1.5rem 0 .5rem;
+  padding: 0;
+  border: 0;
+  color: #0a1158;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.inner-page-body .article-body h3:not([class])::before {
+  content: "";
+  flex: none;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 2px;
+  background: #ebc100;
+  transform: translateY(-.1em);
+}
+
+.inner-page-body .article-body .article-person h3:not([class])::before {
+  content: none;
 }
 
 .inner-page-pdf {
@@ -300,204 +264,6 @@
   background: #fff;
   border: 1px solid #dce3ef;
   border-radius: .875rem;
-}
-
-.inner-page-body .institute-mission :is(h2, h3):not(.sr-only) {
-  color: #111c4a;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  line-height: 1.3;
-  font-weight: 750;
-}
-
-.inner-page-body .institute-mission h2:not(.sr-only) {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  margin-block: 1.5rem .75rem;
-}
-
-/* body text like every other page: 16px, line height 1.75, colour #273552 */
-.inner-page-body .institute-mission :is(h2, h3) + p,
-.inner-page-body .institute-mission :is(p, li, li p),
-.inner-page-body .institute-mission .mission-intro__copy p {
-  font-size: 1rem;
-  color: #273552;
-  line-height: 1.75;
-}
-
-.inner-page-body .institute-mission :is(ul, ol):not(.cms-cert-gallery) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
-  gap: .625rem;
-  padding: 0;
-}
-
-.inner-page-body .institute-mission :is(ul, ol):not(.cms-cert-gallery) > li {
-  padding: .85rem 1rem;
-  border: 1px solid #e0e6f0;
-  border-radius: .625rem;
-  background: #f5f7fc;
-  line-height: 1.75;
-}
-
-.inner-page-body .institute-mission :is(ul, ol):not(.cms-cert-gallery) > li::before {
-  content: none;
-}
-
-.inner-page-body .institute-mission hr {
-  border: 0;
-  height: 1px;
-  background: #e0e6f0;
-  margin-block: 1.25rem;
-}
-
-.inner-page-body .institute-mission .cms-subsection-title::before {
-  content: none;
-}
-
-.inner-page-body .institute-mission .mission-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1rem;
-  align-items: center;
-}
-
-.inner-page-body .institute-mission .mission-intro__copy h2,
-.inner-page-body .institute-mission .mission-vision h2 {
-  margin-top: 0;
-}
-
-.inner-page-body .institute-mission .mission-intro__copy p:last-child {
-  margin-bottom: 0;
-}
-
-.inner-page-body .institute-mission img.mission-intro__photo {
-  display: block;
-  width: 100% !important;
-  height: auto;
-  aspect-ratio: 16 / 8;
-  object-fit: cover;
-  border-radius: .875rem;
-  margin: 0;
-}
-
-.inner-page-body .institute-mission .mission-intro > :is(ul, ol) {
-  grid-column: 1 / -1;
-  margin: 0;
-}
-
-.inner-page-body .institute-mission .mission-vision {
-  margin-top: 1.5rem;
-  padding: clamp(1rem, 2.5vw, 1.75rem);
-  background: linear-gradient(130deg, #e9eefb, #f5f7fc);
-  border: 1px solid #dbe4f6;
-  border-radius: .875rem;
-}
-
-.inner-page-body .institute-mission .mission-vision :is(ul, ol) {
-  margin-bottom: 0;
-}
-
-.inner-page-body .institute-mission .mission-vision :is(ul, ol) > li {
-  background: #fff;
-}
-
-@media (min-width: 768px) {
-  .inner-page-body .institute-mission .mission-intro {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    gap: 1.25rem;
-  }
-}
-
-/* Regulations (ichki tartib qoidalari): same plain look as the other pages -- plain bold headings, no boxes, 16px text */
-.inner-page-body .cms-article--regulations :is(.cms-reg-title, .cms-reg-chapter, .cms-reg-article) {
-  padding: 0;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  text-align: left;
-  font-family: var(--font-heading, Manrope, sans-serif);
-  color: #111c4a;
-  line-height: 1.3;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-title {
-  margin: 0 0 .875rem;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  font-weight: 750;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-title--split {
-  margin-top: 0;
-}
-
-/* three clear levels: title (25px) > chapter (light band) > article (small yellow mark) > text (16px) */
-.inner-page-body .cms-article--regulations .cms-reg-chapter {
-  margin: 2rem 0 1rem;
-  padding: .75rem 1rem;
-  background: #f5f7fc;
-  border-radius: .625rem;
-  color: #0a1158;
-  font-size: 1.2rem;
-  font-weight: 750;
-  text-transform: uppercase;
-  letter-spacing: .01em;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-title + .cms-reg-intro + .cms-reg-chapter {
-  margin-top: 1.5rem;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-article {
-  display: flex;
-  align-items: baseline;
-  gap: .625rem;
-  margin: 1.5rem 0 .5rem;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #0a1158;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-article::before {
-  content: "";
-  flex: none;
-  width: .5rem;
-  height: .5rem;
-  border-radius: 2px;
-  background: #ebc100;
-  transform: translateY(-.1em);
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-intro {
-  margin: 0 0 1rem;
-  padding: 0;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  text-align: left;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-def {
-  margin: .75rem 0;
-  padding: 0;
-  background: none;
-  border: 0;
-  border-radius: 0;
-}
-
-.inner-page-body .cms-article--regulations p:not([class]),
-.inner-page-body .cms-article--regulations :is(.cms-reg-intro, .cms-reg-def, .cms-reg-clause, .cms-reg-text) {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #273552;
-  text-align: left;
-}
-
-.inner-page-body .cms-article--regulations .cms-reg-pdf-wrap {
-  border: 1px solid #dbe2f0;
-  border-radius: .75rem;
-  background: #f5f7fc;
 }
 
 /* Plain lists on every inner page look like the cards of "Institut Missiyasi": light card, thin border, no left bar and no dot.

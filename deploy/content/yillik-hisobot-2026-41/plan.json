@@ -1,0 +1,3212 @@
+[
+ {
+  "slug": "institut-missiyasi-va-kelajak-tasavvuri",
+  "order": 1,
+  "fp": {
+   "uz": "265119a12e1e53b085292e9cec96ad3aafaaabfb6559f724eb415fbdd26a92ab",
+   "ru": "30e7dbad6b5e6a234176d999b4c756f074b1f31a43d4f33d8eb89025adcc335f",
+   "en": "21601a8974e3505d6674d2c2e28278147da39ba363e518a73fa8972d0ec17b78"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutining missiyasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Миссия Ферганского медицинского института общественного здоровья",
+      "level": 2
+     },
+     "en": {
+      "text": "Ferghana Medical Institute of Public Health Mission",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutining missiyasi — aholi salomatligini muhofaza qilish va mustahkamlash tizimi uchun raqobatbardosh, klinik va jamoat salomatligi kompetensiyalariga ega mutaxassislarni tayyorlash, ilgʻor taʻlim, fan va tibbiy texnologiyalar integratsiyasi asosida hudud va mamlakat sogʻliqni saqlash tizimining samaradorligini oshirishga xizmat qilishdir."
+     },
+     "ru": {
+      "text": "Миссия Ферганского медицинского института общественного здоровья - подготовка конкурентоспособных специалистов для системы охраны и укрепления здоровья населения с компетенциями клинического и общественного здоровья, содействие повышению эффективности системы здравоохранения региона и страны на основе интеграции передовых образовательных, научных и медицинских технологий."
+     },
+     "en": {
+      "text": "The mission of the Ferghana Medical Institute of Public Health is to train competitive specialists for the system of protecting and promoting public health with clinical and public health competencies, to help improve the efficiency of the health care system in the region and the country through the integration of advanced educational, scientific, and medical technologies."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut oʻz missiyasini quyidagi ilmiy-amaliy tamoyillar asosida amalga oshiradi:"
+     },
+     "ru": {
+      "text": "Институт осуществляет свою миссию на основе следующих научно-практических принципов:"
+     },
+     "en": {
+      "text": "The Institute carries out its mission based on the following scientific and practical principles:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "dalillarga asoslangan tibbiyot va dalillarga asoslangan jamoat salomatligi (evidence-based medicine / public health);",
+       "profilaktika va erta aniqlashga yoʻnaltirilgan yondashuv;",
+       "klinik qaror qabul qilishda biostatistika, epidemiologiya va sogʻliqni saqlash maʻlumotlaridan foydalanish;",
+       "sifat va xavfsizlik (patient safety, quality improvement) madaniyatini shakllantirish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "доказательная медицина и доказательное общественное здоровье (evidence-based medicine/public health);",
+       "подход, направленный на профилактику и раннее выявление;",
+       "использование данных биостатистики, эпидемиологии и здравоохранения при принятии клинических решений;",
+       "формирование культуры качества и безопасности (patient safety, quality improvement)."
+      ]
+     },
+     "en": {
+      "items": [
+       "evidence-based medicine and evidence-based public health;",
+       "an approach focused on prevention and early detection;",
+       "using biostatistics, epidemiology, and health care data in clinical decision-making;",
+       "formation of a culture of quality and safety (patient safety, quality improvement)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "repo_image": "institut-about.jpg",
+      "alt": "Fargʻona jamoat salomatligi tibbiyot institutining missiyasi"
+     },
+     "ru": {
+      "repo_image": "institut-about.jpg",
+      "alt": "Миссия Ферганского медицинского института общественного здоровья"
+     },
+     "en": {
+      "repo_image": "institut-about.jpg",
+      "alt": "Ferghana Medical Institute of Public Health Mission"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Kelajak haqidagi tasavvur",
+      "level": 2
+     },
+     "ru": {
+      "text": "Видение будущего",
+      "level": 2
+     },
+     "en": {
+      "text": "Vision of the future",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti — sogʻliqni saqlash va ilm-fanning akademik tizimi tamoyillari asosida doimiy rivojlanib boradigan, umumiy missiyadan ilhomlangan va umumiy qadriyatlarni baham koʻradigan, bilimlarni ishlab chiqarish–uzatish–amaliyotga joriy etish zanjirini birlashtirgan innovatsion jamoat salomatligi va klinik tibbiyot markazi boʻlishni maqsad qiladi."
+     },
+     "ru": {
+      "text": "Ферганский медицинский институт общественного здоровья - инновационный центр общественного здоровья и клинической медицины, постоянно развивающийся на основе принципов академической системы здравоохранения и науки, вдохновленный общей миссией и разделяющий общие ценности, объединяющий цепочку производственно-передаточного внедрения знаний в практику."
+     },
+     "en": {
+      "text": "Ferghana Medical Institute of Public Health is an innovative center of public health and clinical medicine, constantly developing based on the principles of the academic health care system and science, inspired by a common mission and sharing common values, uniting the chain of production and transfer of knowledge into practice."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kelajakda institut:"
+     },
+     "ru": {
+      "text": "В дальнейшем институт:"
+     },
+     "en": {
+      "text": "In the future, the institute:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "hudud (Fargʻona vodiysi) uchun kadrlar, ilmiy yechimlar va klinik-amaliy standartlarni ishlab chiqadigan tayanch akademik platforma;",
+       "profilaktika, sogʻlom turmush tarzi, skrining, epidemiologik nazorat va sogʻliqni saqlash boshqaruvi boʻyicha metodik hamda ilmiy markaz;",
+       "raqamli sogʻliqni saqlash (telemeditsina, tibbiy maʻlumotlar tahlili, klinik qarorlarni qoʻllab-quvvatlash) yoʻnalishlarida zamonaviy innovatsiyalarni tatbiq etuvchi universitet sifatida shakllanadi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "базовую академическую платформу для разработки кадров, научных решений и клинико-практических стандартов для региона (Ферганской долины);",
+       "методический и научный центр по профилактике, здоровому образу жизни, скринингу, эпидемиологическому контролю и управлению здравоохранением;",
+       "цифровое здравоохранение (телемедицина, анализ медицинских данных, поддержка клинических решений)."
+      ]
+     },
+     "en": {
+      "items": [
+       "A basic academic platform for the development of personnel, scientific solutions, and clinical and practical standards for the region (Ferghana Valley);",
+       "Methodological and Scientific Center for Prevention, Healthy Lifestyle, Screening, Epidemiological Control, and Health Management;",
+       "digital healthcare (telemedicine, medical data analysis, clinical decision support)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Strategik ustuvor yoʻnalishlar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Стратегические приоритеты",
+      "level": 2
+     },
+     "en": {
+      "text": "Strategic priorities",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1) Taʻlim va kompetensiya modeli"
+     },
+     "ru": {
+      "text": "1) Модель образования и компетенции"
+     },
+     "en": {
+      "text": "1) Model of education and competence"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Kompetensiyaga asoslangan oʻquv dasturlari: klinik fikrlash, jamoat salomatligi, kommunikatsiya, etika, menejment, raqamli koʻnikmalar.",
+       "Simulyatsion taʻlim: shoshilinch holatlar, klinik manipulyatsiyalar, jamoada ishlash (team-based care).",
+       "Interdisiplinar integratsiya: klinik fanlar + epidemiologiya + sogʻliqni saqlash boshqaruvi + biostatistika.",
+       "Talabalar uchun ilmiy-tadqiqot metodologiyasi, akademik yozuv va maʻlumotlar tahlilini bosqichma-bosqich oʻqitish. Ilmiy-tadqiqot va innovatsiya"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Учебные программы, основанные на компетенциях: клиническое мышление, общественное здоровье, коммуникация, этика, менеджмент, цифровые навыки.",
+       "Симуляционное образование: экстренные случаи, клинические манипуляции, работа в команде (team-based care).",
+       "Междисциплинарная интеграция: клинические дисциплины + эпидемиология + управление здравоохранением + биостатистика.",
+       "Поэтапное обучение студентов методологии научно-исследовательских исследований, академической письменности и анализа данных. Научно-исследовательский и инновационный"
+      ]
+     },
+     "en": {
+      "items": [
+       "Competency-based curricula: clinical thinking, public health, communication, ethics, management, digital skills.",
+       "Simulation education: emergency cases, clinical manipulations, team-based care.",
+       "Interdisciplinary integration: clinical disciplines + epidemiology + health care management + biostatistics.",
+       "Step-by-step training of students in research methodology, academic writing, and data analysis. Research and Innovation"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut ilmiy faoliyati quyidagi yoʻnalishlarni qamrab oladi:"
+     },
+     "ru": {
+      "text": "Научная деятельность Института включает в себя следующие направления:"
+     },
+     "en": {
+      "text": "The scientific activities of the Institute include the following areas:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Epidemiologiya va biostatistika: kasallanish tuzilmasi, xavf omillari, kohort va kesim tadqiqotlari, meta-tahlil.",
+       "Yuqumli va yuqumsiz kasalliklar: profilaktika, skrining strategiyalari, aholiga yoʻnaltirilgan intervensiyalar samaradorligi.",
+       "Ona va bola salomatligi, reproduktiv salomatlik, bolalar rivojlanishi.",
+       "Atrof-muhit va salomatlik: ekologik xavflar, ichimlik suvi, havo sifati, kasbiy omillar.",
+       "Sogʻliqni saqlash tizimi tadqiqotlari: xizmatlar sifati, resurslar samaradorligi, klinik protokollar ijrosi, iqtisodiy baholash.",
+       "Raqamli tibbiyot: sogʻliq maʻlumotlari, telekonsultatsiya, klinik qarorlarni qoʻllab-quvvatlash, tibbiy analitika."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Эпидемиология и биостатистика: структура заболеваемости, факторы риска, исследования риска и сегментации, метаанализ.",
+       "Инфекционные и неинфекционные заболевания: профилактика, стратегии скрининга, эффективность интервенций, ориентированных на население.",
+       "Здоровье матери и ребенка, репродуктивное здоровье, развитие детей.",
+       "Окружающая среда и здоровье: экологические риски, питьевая вода, качество воздуха, профессиональные факторы.",
+       "Исследования системы здравоохранения: качество услуг, эффективность ресурсов, исполнение клинических протоколов, экономическая оценка.",
+       "Цифровая медицина: данные о здоровье, телекоммуникации, поддержка клинических решений, медицинская аналитика."
+      ]
+     },
+     "en": {
+      "items": [
+       "Epidemiology and biostatistics: incidence patterns, risk factors, risk and segmentation studies, meta-analysis.",
+       "Communicable and non-communicable diseases: prevention, screening strategies, effectiveness of population-focused interventions.",
+       "Maternal and child health, reproductive health, and child development.",
+       "Environment and health: environmental risks, drinking water, air quality, occupational factors.",
+       "Health system research: quality of services, resource efficiency, implementation of clinical protocols, and economic assessment.",
+       "Digital medicine: health data, telecommunications, clinical decision support, medical analytics."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Natijalar boʻyicha maqsad: amaliyotga tatbiq etiladigan tavsiyalar, metodikalar, klinik yoʻriqnomalar, patent va startap tashabbuslari."
+     },
+     "ru": {
+      "text": "Цель результатов: рекомендации, методики, клинические рекомендации, патенты и стартап-инициативы, которые будут внедрены в практику."
+     },
+     "en": {
+      "text": "The purpose of the results: recommendations, methods, clinical recommendations, patents, and startup initiatives that will be introduced into practice."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Klinik-amaliyot va xizmatlar sifati",
+      "level": 2
+     },
+     "ru": {
+      "text": "Качество клинической практики и услуг",
+      "level": 2
+     },
+     "en": {
+      "text": "Quality of clinical practice and services",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Klinik bazalar bilan hamkorlikda taʻlim–amaliyot–ilm integratsiyasi.",
+       "Klinik xavfsizlik: infektsion nazorat, antibiotiklar oqilona qoʻllanishi, xatolarni tahlil qilish.",
+       "Sifat koʻrsatkichlari va klinik audit: protokollarga rioya, bemor qoniqishi, qayta yotqizishlar, asoratlar monitoringi.",
+       "Birlamchi boʻgʻin bilan uzviy ishlash: oilaviy shifokorlik, profilaktika va dispanser kuzatuv. Jamoat salomatligi va profilaktika",
+       "Aholi salomatligini baholash: demografik, epidemiologik va ijtimoiy determinantlar tahlili.",
+       "Sogʻlom turmush tarzini targʻib qilish: ovqatlanish, jismoniy faollik, zararli odatlarning oldini olish.",
+       "Skrining va erta aniqlash dasturlari boʻyicha ilmiy-uslubiy yondashuv.",
+       "Favqulodda vaziyatlarda sogʻliqni saqlash tayyorgarligi: epidemiyaga tayyorgarlik, risk kommunikatsiyasi. Raqamli transformatsiya va maʻlumotlar madaniyati",
+       "Oʻquv jarayonida raqamli platformalar, masofaviy taʻlim va gibrid formatlar.",
+       "Klinika va amaliyot bilan integratsiyada: telemeditsina, tibbiy maʻlumotlar bazalari, analitik panel (dashboard) madaniyati.",
+       "Maʻlumotlar bilan ishlash etikasi: maxfiylik, kiberxavfsizlik, akademik halollik. Kadrlar siyosati va akademik muhit",
+       "Xodimlar uchun uzluksiz kasbiy rivojlanish: pedagogika, ilmiy metodologiya, klinik protokollar.",
+       "Mentorlik va ilmiy rahbarlik tizimi: talaba–magistr–doktorant uzviyligi.",
+       "Ilmiy halollik va plagiatga nisbatan murosasiz pozitsiya. Xalqaro hamkorlik va akademik mobillik",
+       "Qoʻshma taʻlim dasturlari, qisqa muddatli stajirovkalar, qoʻshma tadqiqotlar.",
+       "Xalqaro standartlar asosida oʻquv dasturlarini uygʻunlashtirish, malaka oshirish va tajriba almashish. Hududiy hamkorlik va ijtimoiy masʻuliyat",
+       "Fargʻona vodiysi sogʻliqni saqlash tashkilotlari bilan kadrlar buyurtmasi asosida ishlash.",
+       "Aholi uchun maʻrifiy aksiyalar, skrining tadbirlari, profilaktik koʻriklar.",
+       "Mahalliy hamjamiyat bilan ochiq muloqot va sogʻliq savodxonligini oshirish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Интеграция образования и практики в сотрудничестве с клиническими базами.",
+       "Клиническая безопасность: инфекционный контроль, рациональное применение антибиотиков, анализ ошибок.",
+       "Показатели качества и клинический аудит: соблюдение протоколов, удовлетворенность пациентов, повторные госпитализации, мониторинг осложнений.",
+       "Работа с первичным звеном: семейное врачебное, профилактическое и диспансерное наблюдение. Общественное здоровье и профилактика",
+       "Оценка здоровья населения: анализ демографических, эпидемиологических и социальных детерминантов.",
+       "Пропаганда здорового образа жизни: питание, физическая активность, профилактика вредных привычек.",
+       "Научно-методический подход к программам скрининга и раннего выявления.",
+       "Подготовка здравоохранения к чрезвычайным ситуациям: эпидемическая подготовка, коммуникация риска. Цифровая трансформация и культура данных",
+       "Цифровые платформы, дистанционные образовательные и гибридные форматы.",
+       "В интеграции с клиникой и практикой: телемедицина, медицинские базы данных, культура аналитической панели (dashboard).",
+       "Этика работы с данными: конфиденциальность, кибербезопасность, академическая честность. Кадровая политика и академическая среда",
+       "Непрерывное профессиональное развитие работников: педагогика, научная методология, клинические протоколы.",
+       "Система наставничества и научного руководства: последовательность студентов-магистров-докторантов.",
+       "Непримиримая позиция по отношению к научной честности и плагиату. Международное сотрудничество и академическая мобильность",
+       "Совместные образовательные программы, краткосрочные стажировки, совместные исследования.",
+       "Гармонизация учебных программ, повышение квалификации и обмен опытом на основе международных стандартов. Региональное сотрудничество и социальная ответственность",
+       "Работа с организациями здравоохранения Ферганской долины по заказу кадров.",
+       "Просветительские акции, скрининговые мероприятия, профилактические осмотры для населения.",
+       "Открытый диалог с местным сообществом и повышение грамотности здоровья."
+      ]
+     },
+     "en": {
+      "items": [
+       "Integrating education and practice in collaboration with clinical bases.",
+       "Clinical safety: infection control, rational use of antibiotics, error analysis.",
+       "Quality indicators and clinical audit: compliance with protocols, patient satisfaction, re-hospitalization, and monitoring of complications.",
+       "Work with the primary link: family medical, preventive, and dispensary observation. Public health and prevention",
+       "Population health assessment: analysis of demographic, epidemiological, and social determinants.",
+       "Promotion of a healthy lifestyle: nutrition, physical activity, and prevention of bad habits.",
+       "Scientific and methodological approach to screening and early detection programs.",
+       "Preparing health care for emergencies: epidemic preparation, risk communication. Digital transformation and data culture",
+       "Digital platforms, distance education, and hybrid formats.",
+       "In integration with the clinic and practice: telemedicine, medical databases, and culture of the analytical panel (dashboard).",
+       "Data ethics: privacy, cybersecurity, academic integrity. Human resources policy and academic environment",
+       "Continuous professional development of employees: pedagogy, scientific methodology, clinical protocols.",
+       "Mentoring and scientific guidance system: a succession of postdoctoral master's students.",
+       "Irreconcilable attitude towards scientific honesty and plagiarism. International cooperation and academic mobility",
+       "Joint educational programs, short-term internships, and joint research.",
+       "Harmonization of curricula, advanced training, and exchange of experience based on international standards. Regional cooperation and social responsibility",
+       "Work with Ferghana Valley health organizations on behalf of personnel.",
+       "Educational actions, screening events, and preventive examinations for the population.",
+       "Open dialogue with the local community and health literacy."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Institut qadriyatlari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Ценности института",
+      "level": 2
+     },
+     "en": {
+      "text": "Institute values",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Inson (jamiyat, bemor, talaba, xodim)",
+      "level": 3
+     },
+     "ru": {
+      "text": "Человек (общество, пациент, студент, сотрудник)",
+      "level": 3
+     },
+     "en": {
+      "text": "Person (society, patient, student, employee)",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Inson qadr-qimmati, tibbiy etika, empatiya, bemor markaziy yondashuv."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Человеческое достоинство, медицинская этика, эмпатия, больной центральный подход."
+      ]
+     },
+     "en": {
+      "items": [
+       "Human dignity, medical ethics, empathy, and sick care approach."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Professionallik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Профессионализм",
+      "level": 3
+     },
+     "en": {
+      "text": "Professionalism",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Fan, taʻlim, davolash va boshqaruvda standartlarga rioya, masʻuliyat va natijadorlik."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Соблюдение стандартов в науке, образовании, лечении и управлении, ответственность и результативность."
+      ]
+     },
+     "en": {
+      "items": [
+       "Adherence to standards in science, education, treatment, management, responsibility, and performance."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Ochiqlik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Открытость",
+      "level": 3
+     },
+     "en": {
+      "text": "Openness",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Jamiyat uchun ochiqlik, ilmiy natijalar shaffofligi, qarorlar qabul qilish jarayonining aniqligi, yangilikka ochiqlik."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Открытость для общества, прозрачность научных результатов, четкость процесса принятия решений, открытость к нововведениям."
+      ]
+     },
+     "en": {
+      "items": [
+       "Openness to society, transparency of scientific results, clarity of the decision-making process, and openness to innovations."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Anʻana va innovatsiya uygʻunligi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Сочетание традиций и инноваций",
+      "level": 3
+     },
+     "en": {
+      "text": "Combining tradition and innovation",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Ilgʻor anʻanalarni saqlagan holda, taʻlim va amaliyotga innovatsion yechimlarni joriy etish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Внедрение инновационных решений в образование и практику с сохранением передовых традиций."
+      ]
+     },
+     "en": {
+      "items": [
+       "Introduction of innovative solutions in education and practice with preservation of advanced traditions."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Jamoaviy yondashuv",
+      "level": 3
+     },
+     "ru": {
+      "text": "Коллективный подход",
+      "level": 3
+     },
+     "en": {
+      "text": "Collective approach",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Talaba, magistrant, doktorant, rezident va hamkor tashkilotlarni oʻquv va boshqaruv jarayonlariga jalb qilish; multidisiplinar hamkorlik."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Привлечение студентов, магистрантов, докторантов, резидентов и организаций-партнеров к учебным и управленческим процессам; многопрофильное сотрудничество."
+      ]
+     },
+     "en": {
+      "items": [
+       "Involvement of students, undergraduates, doctoral students, residents, and partner organizations in educational and management processes; multidisciplinary collaboration."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Ilmiy halollik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Научная честность",
+      "level": 3
+     },
+     "en": {
+      "text": "Scientific integrity",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Tadqiqot etikasi, maʻlumotlarning ishonchliligi, akademik masʻuliyat."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Этика исследования, достоверность информации, академическая ответственность."
+      ]
+     },
+     "en": {
+      "items": [
+       "Research ethics, information validity, and academic responsibility."
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "usmle-dasturi",
+  "order": 1,
+  "fp": {
+   "uz": "60e83c0c04d8a6237464fe202ffacc72c0ceb4917c86338da4579ed3a4fbe0a7",
+   "ru": "d0a8e79ae44c7ace11f6862e0d22c10ca5e38c90cc43394099704833c7e28db6",
+   "en": "d0a8e79ae44c7ace11f6862e0d22c10ca5e38c90cc43394099704833c7e28db6"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "USMLE haqida",
+      "level": 2
+     },
+     "ru": {
+      "text": "Об экзамене USMLE",
+      "level": 2
+     },
+     "en": {
+      "text": "About the USMLE",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Amerika Qoʻshma Shtatlari tibbiy litsenziyalash imtihoni ( United States Medical Licensing Examination , USMLE ) — AQShda tibbiy faoliyat bilan shugʻullanish uchun litsenziya olishga moʻljallangan uch bosqichli imtihon dasturi. Uni Davlat tibbiyot kengashlari federatsiyasi (FSMB) va Milliy tibbiy ekspertlar kengashi (NBME) homiyligida oʻtkaziladi. Tibbiyot doktori (MD) darajasiga ega shifokorlar litsenziya olish uchun USMLE imtihonidan oʻtishlari shart. Osteopatik tibbiyot doktori (DO) darajasiga ega shifokorlar esa COMLEX-USA (COMLEX) imtihonlarini topshiradi."
+     },
+     "ru": {
+      "text": "Лицензионный экзамен на право медицинской практики в США ( United States Medical Licensing Examination , USMLE ) — трёхэтапная экзаменационная программа для получения медицинской лицензии в США. Она проводится под эгидой Федерации медицинских советов штатов (FSMB) и Национального совета медицинских экзаменаторов (NBME). Врачи со степенью доктора медицины (MD) обязаны сдать USMLE для получения лицензии. Врачи со степенью доктора остеопатической медицины (DO) сдают экзамены COMLEX-USA (COMLEX)."
+     },
+     "en": {
+      "text": "The United States Medical Licensing Examination ( USMLE ) is a three-step examination program for medical licensure in the United States sponsored by the Federation of State Medical Boards (FSMB) and the National Board of Medical Examiners (NBME). Physicians with a Doctor of Medicine (MD) degree are required to pass the USMLE for medical licensure. However, those with a Doctor of Osteopathic Medicine degree (DO) are required to take the COMLEX-USA (COMLEX) exams."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "USMLE shifokorning bilim, tushuncha va tamoyillarni qoʻllash qobiliyatini, shuningdek salomatlik va kasallik holatida muhim boʻlgan hamda xavfsiz va samarali bemor parvarishining asosini tashkil etuvchi, bemorga yoʻnaltirilgan asosiy koʻnikmalarni baholaydi. Imtihon materiallarini har yili AQSh va uning hududlaridagi tibbiyot oʻqituvchilari hamda amaliyotchi shifokorlardan iborat imtihon qoʻmitalari tayyorlaydi. Har bir test topshirigʻi yoki klinik holatni kamida ikki qoʻmita tanqidiy koʻrib chiqadi, shubhali materiallarni qayta ishlaydi yoki chiqarib tashlaydi. Dastur AQShdagi shtat tibbiyot kengashlariga litsenziya olishni istovchilarning barchasi uchun yagona imtihon taqdim etishni maqsad qilgan. MD darajasiga ega shifokorlar USMLE ni topshiradi, DO darajasiga ega shifokorlar esa shtat litsenziyasini olish uchun COMLEX ni topshiradi."
+     },
+     "ru": {
+      "text": "USMLE оценивает способность врача применять знания, понятия и принципы, а также основные ориентированные на пациента навыки, важные при здоровье и болезни и составляющие основу безопасной и эффективной помощи пациенту. Экзаменационные материалы ежегодно готовят комитеты из преподавателей медицины и практикующих врачей со всех штатов США и её территорий. Каждое тестовое задание или клинический случай критически оценивают не менее двух комитетов; сомнительные материалы пересматриваются или исключаются. Программа призвана предоставить медицинским советам штатов США единый экзамен для всех претендентов на лицензию. Врачи со степенью MD сдают USMLE, а врачи со степенью DO для получения лицензии штата сдают COMLEX ."
+     },
+     "en": {
+      "text": "The USMLE assesses a physician's ability to apply knowledge, concepts, and principles, and to determine fundamental patient-centered skills that are important in health and disease and that constitute the basis of safe and effective patient care. Examination committees composed of medical educators and clinicians from across the United States and its territories create the examination materials each year. At least two committees critically appraise each test item or case, revising or discarding any materials that are in doubt. The program intends to provide state medical boards in the United States with a common examination for all licensure applicants. Physicians with an M.D. degree are required to take the USMLE, but those with a D.O. degree take the COMLEX to qualify for state licensure."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "image_media": "uploads/2026/09/USMLE_targibot_Ch1ZeuJ.jpg",
+      "alt": "USMLE"
+     },
+     "ru": {
+      "image_media": "uploads/2026/09/USMLE_targibot_Ch1ZeuJ.jpg",
+      "alt": "USMLE"
+     },
+     "en": {
+      "image_media": "uploads/2026/09/USMLE_targibot_Ch1ZeuJ.jpg",
+      "alt": "USMLE"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "USMLE Step 1",
+      "level": 3
+     },
+     "ru": {
+      "text": "USMLE Step 1",
+      "level": 3
+     },
+     "en": {
+      "text": "USMLE Step 1",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bu bosqich tibbiyot oliy oʻquv yurti talabalari yoki bitiruvchilari asosiy fanlarning muhim tushunchalarini tushunishini va ularni tibbiy amaliyotda qoʻllay olishini baholaydi. Step 1 nafaqat hozirgi paytda xavfsiz va malakali tibbiy amaliyotga asos boʻlgan fanlarni oʻzlashtirishni, balki umr boʻyi oʻqish orqali malakani saqlab turish uchun zarur ilmiy tamoyillarni ham tekshiradi. Imtihon ikki yoʻnalish — tizim va jarayon — boʻyicha asosiy fanlar materialini tartiblaydigan yagona mazmun rejasi asosida tuzilgan. U quyidagi fanlarni oʻz ichiga oladi: anatomiya, xulq-atvor fanlari, biokimyo, mikrobiologiya, patologiya, farmakologiya, fiziologiya hamda oziqlanish, genetika va qarish kabi fanlararo mavzular."
+     },
+     "ru": {
+      "text": "Этот этап оценивает, понимают ли студенты и выпускники медицинских вузов важнейшие понятия фундаментальных наук и умеют ли применять их в медицинской практике. Step 1 проверяет не только владение науками, на которых строится безопасная и компетентная медицинская практика сегодня, но и научные принципы, необходимые для поддержания компетентности в процессе обучения на протяжении всей жизни. Экзамен построен по единому содержательному плану, который организует материал фундаментальных наук по двум направлениям: система и процесс. Он включает следующие дисциплины: анатомия, поведенческие науки, биохимия, микробиология, патология, фармакология, физиология, а также междисциплинарные темы, такие как питание, генетика и старение."
+     },
+     "en": {
+      "text": "USMLE Step 1 assesses whether medical school students or graduates understand and can apply important concepts of the basic sciences to the practice of medicine. Step 1 ensures mastery of not only the sciences that provide a foundation for the safe and competent practice of medicine in the present, but also the scientific principles required for maintenance of competence through lifelong learning. Step 1 is constructed according to an integrated content outline that organizes basic science material along two dimensions: system and process. It includes the following subjects: Anatomy, Behavioral Sciences, Biochemistry, Microbiology https://en.wikipedia.org/wiki/Microbiology , Pathology https://en.wikipedia.org/wiki/Pathology , Pharmacology https://en.wikipedia.org/wiki/Pharmacology , Physiology https://en.wikipedia.org/wiki/Physiology , and interdisciplinary https://en.wikipedia.org/wiki/Interdisciplinary topics such as nutrition https://en.wikipedia.org/wiki/Nutrition , genetics https://en.wikipedia.org/wiki/Medical_genetics , and aging https://en.wikipedia.org/wiki/Senescence ."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "USMLE Step 2",
+      "level": 3
+     },
+     "ru": {
+      "text": "USMLE Step 2",
+      "level": 3
+     },
+     "en": {
+      "text": "USMLE Step 2",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Klinik bilim (Clinical Knowledge) bosqichi — nomzodning bemorni nazorat ostida davolash uchun zarur boʻlgan tibbiy bilim, koʻnikma va klinik fanlarni tushunishni qoʻllay olish qobiliyatini baholaydigan standartlashtirilgan test. U turli tibbiyot yoʻnalishlarini qamrab oladi: ichki kasalliklar, akusherlik va ginekologiya, pediatriya, psixiatriya va jarrohlik."
+     },
+     "ru": {
+      "text": "Этап Clinical Knowledge (клинические знания) — стандартизированный тест, оценивающий способность кандидата применять медицинские знания, навыки и понимание клинических наук, необходимые для оказания помощи пациентам под наблюдением. Он охватывает различные медицинские дисциплины: внутренние болезни, акушерство и гинекологию, педиатрию, психиатрию и хирургию."
+     },
+     "en": {
+      "text": "USMLE Step 2 Clinical Knowledge is a standardized test that assesses a candidate's ability to apply medical knowledge, skills, and understanding of clinical science essential for the provision of patient care under supervision covering topics in various medical disciplines: internal medicine, obstetrics and gynecology, pediatrics, psychiatry and surgery."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "USMLE Step 3",
+      "level": 3
+     },
+     "ru": {
+      "text": "USMLE Step 3",
+      "level": 3
+     },
+     "en": {
+      "text": "USMLE Step 3",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bu USMLE ketma-ketligidagi yakuniy imtihon: u tibbiyot oliy oʻquv yurti talabalari yoki bitiruvchilari mustaqil (nazoratsiz) tibbiy amaliyot uchun zarur boʻlgan biotibbiy va klinik fanlar boʻyicha tibbiy bilim va tushunchalarni qoʻllay olishini baholaydi, bunda ambulator sharoitda bemorni olib borishga alohida eʻtibor beriladi. AQSh tibbiyot oliy oʻquv yurtlari bitiruvchilari odatda bu imtihonni rezidenturaning birinchi yili oxirida topshiradi. Imtihon qatnashchilari quyidagi mavzular boʻyicha sinaladi: markaziy asab tizimi; koʻz, quloq, burun, ogʻiz va tomoq; nafas tizimi; qon aylanish tizimi; ovqat hazm qilish tizimi; xulq-atvor va hissiy buzilishlar; tayanch-harakat tizimi; teri va teri osti toʻqimasi; endokrin tizim, oziqlanish va modda almashinuvi buzilishlari; buyraklar va siydik yoʻlari; reproduktiv tizim; homiladorlik va tugʻruq; yangi tugʻilgan chaqaloq va bolalik davri kasalliklari; qon va qon yaratuvchi aʻzolar; yuqumli va parazitar kasalliklar; jarohatlar, yaralar, zaharli taʻsirlar va kuyishlar; salomatlikni saqlash masalalari."
+     },
+     "ru": {
+      "text": "Это заключительный экзамен в последовательности USMLE: он оценивает, способны ли студенты и выпускники медицинских вузов применять медицинские знания и понимание биомедицинских и клинических наук, необходимые для самостоятельной (без наблюдения) медицинской практики, с акцентом на ведение пациентов в амбулаторных условиях. Выпускники медицинских вузов США обычно сдают этот экзамен в конце первого года резидентуры. Экзаменуемых проверяют по следующим темам: центральная нервная система; глаза, уши, нос, рот и горло; дыхательная система; кровеносная система; пищеварительная система; поведенческие и эмоциональные расстройства; опорно-двигательная система; кожа и подкожная клетчатка; эндокринные, пищевые и обменные нарушения; почки и мочевыводящие пути; репродуктивная система; беременность и роды; болезни новорождённых и детского возраста; кровь и кроветворные органы; инфекционные и паразитарные болезни; травмы, раны, токсические эффекты и ожоги; вопросы поддержания здоровья."
+     },
+     "en": {
+      "text": "USMLE Step 3 is the final exam in the USMLE sequence and assesses whether medical school students or graduates can apply medical knowledge and understanding of biomedical and clinical science essential for the unsupervised practice of medicine, with emphasis on patient management in ambulatory settings. Graduates of US medical schools typically take this exam at the end of the first year of residency. Examinees are tested on the following subjects: central nervous system, eye/ear/nose/mouth/throat, respiratory system, circulatory system, digestive system, behavioral/emotional disorders, musculoskeletal system, skin/subcutaneous tissue, endocrine/nutrition/metabolic disorders, kidneys/urinary tract, reproductive system, pregnancy/childbirth, neonate/childhood illnesses, blood and blood-forming organs, infectious/parasitic diseases, injuries/wounds/toxic effects/burns, and health maintenance issues."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "USMLE taqdimoti https://fermi.uz/media/migrated/img/USMLE/USMLE.pptx"
+     },
+     "ru": {
+      "text": "Презентация USMLE https://fermi.uz/media/migrated/img/USMLE/USMLE.pptx"
+     },
+     "en": {
+      "text": "USMLE https://fermi.uz/media/migrated/img/USMLE/USMLE.pptx"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ichki-tartib-qoidalar",
+  "order": 1,
+  "fp": {
+   "uz": "6fb677f4e488fe487dcca4af7398cf848edad34c6b5b358b4729edbb216c85a8",
+   "ru": "fed6b321262474c22cd0c065ff052cd4e86d148981ccd369f7328118c52d7b3c",
+   "en": "5ff39c54fb210d7561306bab330f6bb42dcecfa62cc282265671a8dff6ce4a03"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutining ichki tartib qoidalari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Правила внутреннего распорядка Ферганского медицинского института общественного здоровья",
+      "level": 2
+     },
+     "en": {
+      "text": "Internal regulations of the Fergana Medical Institute of Public Health",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur Ichki mehnat tartibi Namunaviy qoidalari (keyingi oʻrinlarda - Qoidalar) Oʻzbekiston Respublikasining Mehnat kodeksi, “Taʻlim toʻgʻrisida”gi Qonuni, oliy taʻlimga oid boshqa qonun va qonunosti hujjatlarini inobatga olgan holda ishlab chiqilgan hamda institutdagi mehnat, oʻquv, ilmiy faoliyat va taʻlim-tarbiya jarayoniga oid boʻlgan munosabatlami tartibga soluvchi lokal normativ hujjat hisoblanadi."
+     },
+     "ru": {
+      "text": "Настоящие Типовые правила внутреннего трудового распорядка (далее — Правила) разработаны с учетом Трудового кодекса Республики Узбекистан, Закона Республики Узбекистан «Об образовании», а также иных законов и подзаконных нормативно-правовых актов в сфере высшего образования и являются локальным нормативным документом, регулирующим трудовые, учебные, научные отношения, а также образовательный и воспитательный процесс в институте."
+     },
+     "en": {
+      "text": "ThThese Model Internal Labor Regulations (hereinafter referred to as the “Regulations”) have been developed in accordance with the Labor Code of the Republic of Uzbekistan, the Law of the Republic of Uzbekistan “On Education,” as well as other laws and subordinate regulatory legal acts related to higher education, and constitute a local normative document regulating labor, educational, scientific activities, and the educational and upbringing process at the institute."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1-BOB UMUMIY QOIDALAR",
+      "level": 2
+     },
+     "ru": {
+      "text": "ГЛАВА 1 ОБЩИЕ ПОЛОЖЕНИЯ",
+      "level": 2
+     },
+     "en": {
+      "text": "CHAPTER 1 GENERAL PROVISIONS",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1.Mazkur Qoidalarda quyidagi asosiy tushunchalardan foydalaniladi: xodim - belgilangan yoshga yetgan hamda institut bilan mehnat shartnomasini tuzgan Oʻzbekiston Respublikasi fuqarolari, shuningdek, chet el fuqarolari va fuqaroligi boʻlmagan shaxslar; mehnat shartnomasi - xodim bilan institut oʻrtasida muayyan mutaxassislik, malaka, lavozim boʻyicha ishni ichki mehnat tartibiga buysungan holda taraflar kelishuvi, shuningdek, mehnat toʻgʻrisidagi qonunlar va boshqa normativ hujjatlar bilan belgilangan shartlar asosida haq evaziga bajarish haqidagi kelishuv;"
+     },
+     "ru": {
+      "text": "1. В настоящих правилах используются следующие основные понятия: работник - граждане Республики Узбекистан, достигшие определенного возраста и заключившие с институтом трудовой договор, а также иностранные граждане и лица без гражданства; договор на выполнение работ по квалификацию, должность за вознаграждение в соответствии с правилами внутреннего трудового распорядка, а также на условиях, установленных трудовым законодательством и иными нормативными правовыми актами; профессора и преподаватели - сотрудники кафедры, профессора, доценты, доценты, преподаватели;"
+     },
+     "en": {
+      "text": "1. These rules use the following basic concepts: employee - citizens of the Republic of Uzbekistan who have reached a certain age and have concluded an employment contract with the institute, as well as foreign citizens and stateless persons; agreement on the performance of work on the qualification, position for a fee in accordance with the internal labor regulations, as well as on the terms established by labor laws and other regulations; professors and teachers - employees of the department, professors, associate professors, senior lecturers, teachers;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "professor -oʻqituvchilar - kafedra mudiri, professor, dotsent, katta oʻqituvchi, oʻqituvchi lavozimiga ishga qabul qilingan xodimlar;"
+     },
+     "ru": {
+      "text": "профессорско-преподавательский состав — работники, принятые на должности заведующего кафедрой, профессора, доцента, старшего преподавателя, преподавателя;"
+     },
+     "en": {
+      "text": "teaching staff — employees admitted to the positions of head of department, professor, associate professor, senior lecturer, lecturer;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "doktoran t - institutga tayanch doktorantura yoki doktoranturaga belgilangan tartibda qabul qilingan shaxs;"
+     },
+     "ru": {
+      "text": "докторант - лицо, принятое в институт в установленном порядке для обучения в основной докторантуре или докторантуре;"
+     },
+     "en": {
+      "text": "doctoral student - a person admitted to the institute in the prescribed manner for basic doctoral or doctoral studies;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mustaqil izlanuvch i - institutga mustaqil izlanuvchilikka belgilangan tartibda qabul qilingan shaxs;"
+     },
+     "ru": {
+      "text": "Независимый соискатель - лицо, допущенное в институт для проведения независимых исследований в установленном порядке;"
+     },
+     "en": {
+      "text": "Independent applicant - a person admitted to the institute for independent research in the prescribed manner;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talaba - tegishli mutaxassislik boʻyicha taʻlim olish uchun institutga belgilangan tartibda qabul qilingan hamda taʻlim va tarbiyani qabul qiluvchi shaxs."
+     },
+     "ru": {
+      "text": "студент - лицо, принятое в институт в установленном порядке для обучения по соответствующей специальности и получающее образование и воспитание."
+     },
+     "en": {
+      "text": "student - a person admitted to the institute in the prescribed manner to study in the relevant specialty and receiving education and upbringing."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2. Ushbu Qoidalar institutning ichki mehnat tartibi, institut, rahbariyat, xodim, talaba, doktorant, mustaqil izlanuvchilaming burchlari, shuningdek, ishga qabul qilish, mehnat shartnomasini oʻzgartirish va mehnat shartnomasini bekor qilish, taʻlim va tarbiya jarayonini tashkil etish tartibi, mehnat va oʻquv intizomi, ish vaqti, dam olish vaqti va undan foydalanish, shu bilan birga ish va oʻqishdagi yutuqlar uchun ragʻbatlantirish, mehnat va oʻquv intizomini buzganlik uchun javobgarlik, instituthududi va binolar ichidagi tartib hamda ish beruvchi bilan xodim, doktorant, mustaqil izlanuvchi va talabalar oʻrtasida yuzaga keladigan boshqa huquqiy munosabatlarga oid masalalami tartibga soladigan asosiy ichki normativ hujjat."
+     },
+     "ru": {
+      "text": "2. Настоящие правила являются внутренним трудовым распорядком института, обязанностями института, руководства, работника, студента, докторанта, независимого научного сотрудника, а также порядок приема на работу, изменения и расторжения трудового договора, организации образовательный процесс трудовая и учебная дисциплина, рабочее время, время отдыха и его использование, а также поощрения за трудовые и учебные достижения, ответственность за нарушения трудовой и учебной дисциплины, дисциплины в учреждении и помещениях, а с работодателем основные внутренние нормативный документ, регулирующий вопрос об иных правоотношениях, возникающих между работником, докторантом, независимым исследователем и обучающимися."
+     },
+     "en": {
+      "text": "2. These rules are the internal labor order of the institute, the duties of the institute, management, employee, student, doctoral student, independent researcher, as well as the procedure for hiring, amending and terminating the employment contract, the organization of the educational process. work and study discipline, working hours, rest time and its use, as well as incentives for work and study achievements, liability for violations of labor and academic discipline, discipline in the institution and premises, and with the employer the main internal normative document regulating the issue of other legal relations arising between the employee, doctoral student, independent researcher and students."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTINING ODOB-AXLOQ KODEKSI",
+      "level": 2
+     },
+     "ru": {
+      "text": "КОДЕКС ЭТИКИ ФЕРГАНСКОГО МЕДИЦИНСКОГО ИНСТИТУТА ОБЩЕСТВЕННОГО ЗДОРОВЬЯ",
+      "level": 2
+     },
+     "en": {
+      "text": "CODE OF ETHICS OF FERGANA MEDICAL INSTITUTE OF PUBLIC HEALTH",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1-bob. Umumiy qoidalar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 1 Основные правила",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 1 General rules",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1-modda. Ushbu kodeks bilan tartibga solinadigan munosabatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 1 Отношения, регулируемые настоящим Кодексом",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 1 Relationships regulated by this Code",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu Kodeks Oʻzbekiston Respublikasi “Taʻlim toʻgʻrisida”gi Qonuni, boshqa qonun va qonunosti hujjatlarga muvofiq ishlab chiqilgan boʻlib, institut pedagog va boshqa xodimlari, talabalari, doktorantlari (keyingi oʻrinlarda - xodim, talaba va doktorant) kasbiy odob-axloqining tamoyillari, normalari, taʻlim jarayoni va xizmatdagi xulq-atvorining asosiy qoidalari bilan bogʻliq munosabatlarni tartibga soladi."
+     },
+     "ru": {
+      "text": "Настоящий Кодекс разработан в соответствии с Законом Республики Узбекистан «Об образовании», другими нормативными правовыми актами и предусматривает, что для преподавателей и других сотрудников, студентов, докторантов (далее – сотрудников, студентов и докторантов) регулируются отношения, связанные к принципам, нормам профессиональной этики, образовательного процесса и основным правилам поведения на службе."
+     },
+     "en": {
+      "text": "This Code is developed in accordance with the Law of the Republic of Uzbekistan \"On Education\", other laws and regulations, and provides for teachers and other staff, students, doctoral students (hereinafter - staff, students and doctoral student) regulates the relations related to the principles, norms of professional ethics, the educational process and the basic rules of conduct in the service."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2-modda. Odob-axloq kodeksining maqsad va vazifalari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 2 Цели и задачи Кодекса этики",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 2 Goals and objectives of the Code of Ethics",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksining maqsadlari: xodim, talaba va doktorantlarda umumiy madaniyatni rivoj lantirish; institut xodim, talaba va doktorantlarining zamonaviy imijini shakllantirish; xodim, talaba va doktorantlami institut va uning qadriyatlariga hurmat ruhida tarbiyalash; taʻlim muassasasi odob-axloqi tushunchasini takomillashtirish va oliy taʻlim muassasasida tashqi koʻrinish va xulq-atvorga boʻlgan talablarga oid yagona yondashuvni ishlab chiqishdan iboratdir."
+     },
+     "ru": {
+      "text": "Задачи Кодекса этики: формирование общей культуры у сотрудников, студентов и докторантов; формирование современного имиджа сотрудников, студентов и докторантов института; воспитание сотрудников, студентов и докторантов в духе уважения к институту и ​​его ценностям; улучшить понимание этики образовательного учреждения и выработать единый подход к требованиям к внешнему виду и поведению в высшем учебном заведении."
+     },
+     "en": {
+      "text": "Objectives of the Code of Ethics: to develop a common culture in employees, students and doctoral students; formation of a modern image of the staff, students and doctoral students of the institute; educating employees, students and doctoral students in the spirit of respect for the institute and its values; to improve the understanding of the ethics of the educational institution and to develop a unified approach to the requirements for appearance and behavior in the higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksining vazifalari quyidagilardan iborat: huquqbuzarlik va jinoyatchilikning oldini olish, xodim talaba va doktorantlar orasida odob-axloq qoidalarini buzish bilan bogʻliq boʻlgan nomaqbul hatti-harakat, jumladan, zoʻravonlik, shafqatsizlik va hayosizlikni targʻib va tashviq qilish, shuningdek, turli salbiy illatlar va milliy mentalitetimizga yot boʻlgan gʻoya va qarashlar, ekstremizm, separatizm, fundamentalizm va \"ommaviy madaniyat\"ning taʻsir hamda xurujlaridan ximoya qilish."
+     },
+     "ru": {
+      "text": "К задачам Кодекса этики относятся: предотвращение правонарушений и преступлений, пропаганда и поощрение неэтичного поведения, в том числе насилия, жестокости и безнравственности, среди сотрудников, студентов и докторантов, а также защита от различных негативных чуждые нашему национальному менталитету пороки и идеи и взгляды, экстремизм, сепаратизм, фундаментализм, влияние и нападки «массовой культуры»."
+     },
+     "en": {
+      "text": "The objectives of the Code of Ethics include: the prevention of delinquency and crime, and the promotion and encouragement of unethical conduct, including violence, cruelty, and immorality, among employees, students, and doctoral students. as well as to protect against various negative vices and ideas and views alien to our national mentality, extremism, separatism, fundamentalism and the influence and attacks of \"mass culture\"."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti axloq - odob kodeksi https://fermi.uz/media/migrated/img/yangilikar/Institut%20odob-axloq%20kodeksi/%D0%9E%D0%B4%D0%BE%D0%B1-%D0%B0%D1%85%D0%BB%D0%BE%D2%9B%20%D1%83%D0%B7%D0%B1.pdf"
+     },
+     "ru": {
+      "text": "Норма этики и поведений https://fermi.uz/media/migrated/img/yangilikar/Institut%20odob-axloq%20kodeksi/%D0%BE%D0%B4%D0%BE%D0%B1%20%D0%B0%D1%85%D0%BB%D0%BE%D0%BA%20%D1%80%D1%83%D1%81.pdf"
+     },
+     "en": {
+      "text": "Norms of Ethics and Behavior https://fermi.uz/media/migrated/img/yangilikar/Institut%20odob-axloq%20kodeksi/%D0%BE%D0%B4%D0%BE%D0%B1%20%D0%B0%D1%85%D0%BB%D0%BE%D0%BA%20%D0%B8%D0%BD%D0%B3%D0%BB%D0%B8%D0%B7.pdf"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "institut-odob-axloq-kodeksi",
+  "order": 1,
+  "fp": {
+   "uz": "a81b630ac327facb68f32b10585966a376850bf66a3c4646dd8f5dd9608aa8f7",
+   "ru": "992fc0445b623252c2c43022e8c18f97f223a1654260d7d864b0c9a10d1429d4",
+   "en": "6c20db39c892d9232f0ab0405e0c7c921de56e367afded7e00f42662cbefcb8b"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "alt": "Odob-axloq kodeksi",
+      "image_media": "migrated/img/yangilikar/O`quv bo`limi/Odob axloq kodeksi.jpg"
+     },
+     "ru": {
+      "alt": "Кодекс этики",
+      "image_media": "migrated/img/yangilikar/O`quv bo`limi/Odob axloq kodeksi.jpg"
+     },
+     "en": {
+      "alt": "Code of Ethics",
+      "image_media": "migrated/img/yangilikar/O`quv bo`limi/Odob axloq kodeksi.jpg"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1-bob. Umumiy qoidalar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 1. Общие положения",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 1. General Provisions",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1-modda. Ushbu kodeks bilan tartibga solinadigan munosabatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 1. Отношения, регулируемые настоящим Кодексом",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 1. Relations Regulated by This Code",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu Kodeks Oʻzbekiston Respublikasi “Taʻlim toʻgʻrisida”gi Qonuni, boshqa qonun va qonunosti hujjatlarga muvofiq ishlab chiqilgan boʻlib, institut pedagog va boshqa xodimlari, talabalari, doktorantlari (keyingi oʻrinlarda - xodim, talaba va doktorant) kasbiy odob-axloqining tamoyillari, normalari, taʻlim jarayoni va xizmatdagi xulq-atvorining asosiy qoidalari bilan bogʻliq munosabatlarni tartibga soladi."
+     },
+     "ru": {
+      "text": "Настоящий Кодекс разработан в соответствии с Законом Республики Узбекистан «Об образовании», иными законами и подзаконными актами и регулирует отношения, связанные с принципами и нормами профессиональной этики, образовательного процесса и основными правилами служебного поведения педагогических и иных работников института, студентов и докторантов (далее — работники, студенты и докторанты)."
+     },
+     "en": {
+      "text": "This Code has been developed in accordance with the Law of the Republic of Uzbekistan \"On Education\" and other laws and subordinate legal acts, and regulates relations connected with the principles and norms of professional ethics, the educational process, and the basic rules of official conduct of the teaching staff and other employees, students, and doctoral candidates of the institute (hereinafter referred to as employees, students, and doctoral candidates)."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2-modda. Odob-axloq kodeksining maqsad va vazifalari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 2. Цели и задачи Кодекса этики",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 2. Purpose and Objectives of the Code of Ethics",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksining maqsadlari: xodim, talaba va doktorantlarda umumiy madaniyatni rivoj lantirish; institut xodim, talaba va doktorantlarining zamonaviy imijini shakllantirish; xodim, talaba va doktorantlami institut va uning qadriyatlariga hurmat ruhida tarbiyalash; taʻlim muassasasi odob-axloqi tushunchasini takomillashtirish va oliy taʻlim muassasasida tashqi koʻrinish va xulq-atvorga boʻlgan talablarga oid yagona yondashuvni ishlab chiqishdan iboratdir."
+     },
+     "ru": {
+      "text": "Целями Кодекса этики являются: развитие общей культуры работников, студентов и докторантов; формирование современного имиджа работников, студентов и докторантов института; воспитание работников, студентов и докторантов в духе уважения к институту и его ценностям; совершенствование понятия этики образовательного учреждения и выработка единого подхода к требованиям, предъявляемым к внешнему виду и поведению в высшем образовательном учреждении."
+     },
+     "en": {
+      "text": "The purposes of the Code of Ethics are: to develop a general culture among employees, students, and doctoral candidates; to form a modern image of the institute's employees, students, and doctoral candidates; to educate employees, students, and doctoral candidates in the spirit of respect for the institute and its values; to improve the concept of ethics in an educational institution and to develop a unified approach to requirements for appearance and conduct in a higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksining vazifalari quyidagilardan iborat: huquqbuzarlik va jinoyatchilikning oldini olish, xodim talaba va doktorantlar orasida odob-axloq qoidalarini buzish bilan bogʻliq boʻlgan nomaqbul hatti-harakat, jumladan, zoʻravonlik, shafqatsizlik va hayosizlikni targʻib va tashviq qilish, shuningdek, turli salbiy illatlar va milliy mentalitetimizga yot boʻlgan gʻoya va qarashlar, ekstremizm, separatizm, fundamentalizm va \"ommaviy madaniyat\"ning taʻsir hamda xurujlaridan himoya qilish;"
+     },
+     "ru": {
+      "text": "Задачами Кодекса этики являются: предупреждение правонарушений и преступлений, недопущение среди работников, студентов и докторантов недопустимых поступков, связанных с нарушением норм этики, в том числе пропаганды насилия, жестокости и безнравственности, а также защита от различных негативных пороков и чуждых нашему национальному менталитету идей и взглядов, экстремизма, сепаратизма, фундаментализма, влияния и натиска «массовой культуры»;"
+     },
+     "en": {
+      "text": "The objectives of the Code of Ethics are: to prevent offenses and crimes and unacceptable conduct among employees, students, and doctoral candidates connected with violations of ethical norms, including the promotion of violence, cruelty, and indecency, as well as to protect against various negative vices and ideas and views alien to our national mentality, extremism, separatism, fundamentalism, and the influence and onslaught of \"mass culture\";"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mazkur nomaqbul xatti-harakatlar sodir etilishining sabab va shart-sharoitlarini aniqlash va ulami bartaraf etish; xodim, talaba va doktorantlarni yuksak huquqiy ong, Oʻzbekiston Respublikasining Konstitutsiyasi, qonunlari va boshqa normativ-huquqiy hujjatlariga qatʻiy rioya qilish ruhida tarbiyalash; xodim, talaba ya doktorantlarda fuqarolarning huquqlari, erkinliklari va manfaatlarini doimo hurmat qilish va himoya qilish koʻnikmasini shakllantirish va yuksaltirish; xodim, talaba va doktorantlarda vatanparvarlik, yuksak maʻnaviy-axloqiy fazilatlarni shakllantirish va ularni milliy qadriyatlarimizga hurmat qilish, xotin-qizlar shaʻni va qadr-qimmatini hurmat qilish, ularga nisbatan nomaqbul xatti-harakatlarga yoʻl qoʻymaslik ruhida tarbiyalash; institutda sogʻlom ijtimoiy-psixologik muhitni shakllantirish va rivojlantirish; institut xodim, talaba va doktorantlarida tashqi koʻrinishga oid madaniyatni shakllantirish uchun sharoitlar yaratish; institutning davlat va jamiyat hayotidagi hamda taʻlim tizimidagi nufuzi, obro' -eʻtiborini asrab-avaylash va yanada o shirish."
+     },
+     "ru": {
+      "text": "выявление причин и условий совершения таких недопустимых поступков и их устранение; воспитание работников, студентов и докторантов в духе высокого правосознания, неукоснительного соблюдения Конституции, законов и иных нормативно-правовых актов Республики Узбекистан; формирование и развитие у работников, студентов и докторантов навыка постоянно уважать и защищать права, свободы и интересы граждан; формирование у работников, студентов и докторантов патриотизма, высоких духовно-нравственных качеств, воспитание в них уважения к нашим национальным ценностям, чести и достоинству женщин, недопустимости неподобающих поступков в отношении них; формирование и развитие в институте здоровой социально-психологической обстановки; создание условий для формирования у работников, студентов и докторантов института культуры внешнего вида; сохранение и дальнейшее повышение авторитета и престижа института в жизни государства и общества и в системе образования."
+     },
+     "en": {
+      "text": "to identify the causes and conditions of such unacceptable conduct and to eliminate them; to educate employees, students, and doctoral candidates in the spirit of a high legal consciousness and strict compliance with the Constitution, laws, and other regulatory legal acts of the Republic of Uzbekistan; to form and strengthen in employees, students, and doctoral candidates the habit of always respecting and protecting the rights, freedoms, and interests of citizens; to form patriotism and high spiritual and moral qualities in employees, students, and doctoral candidates and to educate them in respect for our national values and for the honor and dignity of women, and in the unacceptability of improper conduct toward them; to form and develop a healthy social and psychological atmosphere at the institute; to create conditions for developing a culture of appearance among the institute's employees, students, and doctoral candidates; and to preserve and further enhance the institute's standing and prestige in the life of the state and society and in the education system."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "3-modda. Kodeksning amal qilish doirasi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 3. Сфера действия Кодекса",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 3. Scope of Application of the Code",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu Kodeks institutning barcha xodim, talaba va doktorantlariga nisbatan tatbiq etiladi."
+     },
+     "ru": {
+      "text": "Настоящий Кодекс распространяется на всех работников, студентов и докторантов института."
+     },
+     "en": {
+      "text": "This Code applies to all employees, students, and doctoral candidates of the institute."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2-bob. Kodeksning prinsiplari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 2. Принципы Кодекса",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 2. Principles of the Code",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "4-modda . Institut xodim, talaba va doktorantlari xulqatvorining asosiy prinsiplari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 4. Основные принципы поведения работников, студентов и докторантов института",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 4. Basic Principles of Conduct of Employees, Students, and Doctoral Candidates of the Institute",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur Kodeks qonuniylik, fuqarolarning huquqlari, erkinliklari ya qonuniy manfaatlarining ustuvorligi, vatanparvarlik, xizmat va oʻqish burchiga sodiqlik, adolat, halollik va xolislik, samaradorlik va tejamkorlik prinsiplariga asoslanadi."
+     },
+     "ru": {
+      "text": "Настоящий Кодекс основывается на принципах законности, приоритета прав, свобод и законных интересов граждан, патриотизма, верности служебному и учебному долгу, справедливости, честности и беспристрастности, эффективности и бережливости."
+     },
+     "en": {
+      "text": "This Code is based on the principles of legality, the priority of the rights, freedoms, and legitimate interests of citizens, patriotism, loyalty to official and study duty, justice, honesty and impartiality, efficiency, and thrift."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "5-modda . Qonuniylik prinsipi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 5. Принцип законности",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 5. Principle of Legality",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari Oʻzbekiston Respublikasi qonunchiligiga soʻzsiz rioya qiladilar hamda oʻz xizmat va oʻqish majburiyatlarini lavozim yoʻriqnomalari, mehnat shartnomalari, ushbu Kodeks qoidalari, institut Ichki tartib qoidalari hamda taʻlimga oid boshqa meʻyoriy hujjatlarga muvofiq bajaradilar."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института безусловно соблюдают законодательство Республики Узбекистан и выполняют свои служебные и учебные обязанности в соответствии с должностными инструкциями, трудовыми договорами, правилами настоящего Кодекса, Правилами внутреннего трудового распорядка института и иными нормативными документами в сфере образования."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute unconditionally comply with the legislation of the Republic of Uzbekistan and perform their official and study duties in accordance with job descriptions, employment contracts, the provisions of this Code, the institute's Internal Regulations, and other regulatory documents in the field of education."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "6-modda . Fuqarolarning huquqlari, erkinliklari va qonuniy manfaatlarining ustuvorligi prinsipi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 6. Принцип приоритета прав, свобод и законных интересов граждан",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 6. Principle of the Priority of the Rights, Freedoms, and Legitimate Interests of Citizens",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fuqarolarning huquqlari, erkinliklari va qonuniy manfaatlari oliy taʻlim muassasasining oliy qadriyati boʻlib hisoblanadi. Institut xodim, talaba va doktorantlari fuqarolarning huquqlari, erkinliklariva qonuniy manfaatlari buzilishiga yoʻl qoʻymaydilar va bunday buzilishlar roʻy bergan hollarda ularni tiklashga koʻmaklashadilar."
+     },
+     "ru": {
+      "text": "Права, свободы и законные интересы граждан являются высшей ценностью высшего образовательного учреждения. Работники, студенты и докторанты института не допускают нарушения прав, свобод и законных интересов граждан, а в случае таких нарушений содействуют их восстановлению."
+     },
+     "en": {
+      "text": "The rights, freedoms, and legitimate interests of citizens are the highest value of a higher education institution. Employees, students, and doctoral candidates of the institute do not allow violations of the rights, freedoms, and legitimate interests of citizens and, where such violations occur, assist in restoring them."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "7-modda . Vatanparvarlik, xizmat va oʻqish burchiga sodiqlik prinsipi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 7. Принцип патриотизма, верности служебному и учебному долгу",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 7. Principle of Patriotism and Loyalty to Official and Study Duty",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari oʻz oʻqish va xizmat faoliyatlarini maʻnaviy-axloqiy qadriyatlar,Yatanga sadoqat, xizmat va oʻqish burchiga sodiqlik asosida jamiyatning institutga boʻlgan talabi va ishonchini ifodalagan holda amalga oshiradilar. Xodim,talaba va doktorantlar oʻz oʻqish va xizmat burchlarini oʻzaro xayrixohlTk, oʻz manfaatlari va mafkuraviy qarashlaridan qatʻiy nazar lozim darajada bajaradilar."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института осуществляют свою учебную и служебную деятельность на основе духовно-нравственных ценностей, преданности Родине, верности служебному и учебному долгу, оправдывая требования и доверие общества к институту. Работники, студенты и докторанты должным образом исполняют свои учебные и служебные обязанности, доброжелательно относясь друг к другу, независимо от своих интересов и идеологических взглядов."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute carry out their study and official activities on the basis of spiritual and moral values, devotion to the Motherland, and loyalty to official and study duty, expressing the demands and trust that society places in the institute. Employees, students, and doctoral candidates properly perform their study and official duties, treating one another with goodwill regardless of their own interests and ideological views."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "8-modda. Adolat, halollik va xolislik prinsipi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 8. Принцип справедливости, честности и беспристрастности",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 8. Principle of Justice, Honesty, and Impartiality",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, tal,aba va doktorantlari oʻz xizmat va oʻqish faoliyatlarini amalga oshirishda adolatli, halol va xolis boʻlishlari hamda oliy taʻlim muassasasiga, unga tegishli boʻlgan saytlar va ijtimoiy tarmoqlarga murojaat qilgan barcha yuridik va jismoniy shaxslarga nisbatan ushbu prinsip talablari asosida munosabatda boʻlishlari shart."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института при осуществлении своей служебной и учебной деятельности обязаны быть справедливыми, честными и беспристрастными, а также на основе требований данного принципа относиться ко всем юридическим и физическим лицам, обратившимся в высшее образовательное учреждение, на принадлежащие ему сайты и в социальные сети."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute must be fair, honest, and impartial in carrying out their official and study activities, and must treat all legal entities and individuals who contact the higher education institution, its websites, and its social networks in accordance with the requirements of this principle."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "9-modda. Samaradorlik va tejamkorlik prinsipi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 9. Принцип эффективности и бережливости",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 9. Principle of Efficiency and Thrift",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari oʻz faoliyati samaradorligini innovatsion texnologiyalarni tatbiq etish va boshqa yoʻllar bilan doimiy ravishda oshirib boradilar. Institut xodim, talaba va doktorantlari, oʻz navbatida institutning mulkiga, oʻzining va boshqa shaxslarning vaqtiga masʻuliyat va ehtiyotkorlik bilan yondashadilar."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института постоянно повышают эффективность своей деятельности путём внедрения инновационных технологий и иными способами. В свою очередь, они ответственно и бережно относятся к имуществу института, а также к своему времени и времени других лиц."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute continually increase the efficiency of their work by introducing innovative technologies and by other means. For their part, they treat the institute's property, as well as their own time and the time of others, with responsibility and care."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "3-bob.Korrupsiyaga qarshi kurashish",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 3. Борьба с коррупцией",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 3. Combating Corruption",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "10-modda. Korrupsiyaning har qanday shakl va koʻrinishini qabul qilmaslik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 10. Неприятие коррупции в любых её формах и проявлениях",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 10. Zero Tolerance for Corruption in Any Form or Manifestation",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari komrpsiyaning har qanday shakli va koʻrinishini qabul qilmaydilar va uning biror-bir tarzda namoyon boʻlishiga qarshi hamjihatlikda qonuniy choralami koʻradilar. Xodim, talaba va doktorantlar komrpsiyaga qarshi kurashishlari va uning profilaktikasiga faol koʻmaklashishlari, shuningdek, institut korrupsiyaga qarshi kurashish Dasturi va institut xodim, talaba, oʻquvchi va doktorantlari tomonidan korrupsiyaviy huquqbuzarliklar sodir etishga ogʻdirish maqsadida murojaat qilish holatlari haqida xabardor qilish toʻgʻrisida Nizom talablarini soʻzsiz bajarishlari, oʻz faoliyatlarini oshkora va adolatli amalga oshirishlari, yuqori axloqiy qadriyatlar va prinsiplarga sodiq qolgan holda qonun ustuvorligiga qatʻty rioya etishlari shart."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института не приемлют коррупцию в любых её формах и проявлениях и совместно принимают законные меры против любых её проявлений. Работники, студенты и докторанты обязаны бороться с коррупцией и активно содействовать её профилактике, безусловно выполнять требования Программы противодействия коррупции в институте и Положения об информировании о случаях обращения к работникам, студентам, учащимся и докторантам института с целью склонения к совершению коррупционных правонарушений, осуществлять свою деятельность открыто и справедливо, оставаясь верными высоким нравственным ценностям и принципам, неукоснительно соблюдать верховенство закона."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute do not tolerate corruption in any form or manifestation and jointly take lawful measures against any of its manifestations. Employees, students, and doctoral candidates must fight corruption and actively contribute to its prevention, unconditionally comply with the requirements of the institute's Anti-Corruption Program and the Regulation on reporting cases of approaches made to the institute's employees, students, pupils, and doctoral candidates with the aim of inducing them to commit corruption-related offenses, carry out their activities openly and fairly, and, remaining faithful to high moral values and principles, strictly observe the rule of law."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "4-bob. Xodim, talaba va doktorantlar yurish-turish va rasmiy muloqotiga oid talablar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 4. Требования к поведению и официальному общению работников, студентов и докторантов",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 4. Requirements for Conduct and Official Communication of Employees, Students, and Doctoral Candidates",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "11-modda. Institutda kiyinish va tashqi koʻrinishga oid qoidalar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 11. Правила одежды и внешнего вида в институте",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 11. Rules on Dress and Appearance at the Institute",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari oʻz oʻqish va kasbiga mos boʻlgan zamonaviy kiyimda boʻlishlari lozim. Institut xodimi, talabasi va doktoranti boʻlgan xotin-qizlari diqqatni tortadigan, xususan, tanani shaffof koʻrsatib turadigan, yelka, koʻkrak va qorin, tizzadan yuqori qismlari ochiq qoladigan hamda haddan ziyod tor kiyimda, shuningdek, quloqchinlar, quloq va barmoqlardan tashqari tananing turli qismlariga turli zirak yoki metall buyumlar bilan, tanasining koʻrinib turadigan qismida pirsing yoki tatuirovkada institutga kelishlari mumkin emas. Shuningdek, talabalarning institutga kelishi ruxsat etilgan formasiga turli din va konfessiyalar hamda submadaniyatlarga mansublikni aks ettiruvchi elementlarni (hijob, kipa, kashaya, xoch va boshqalar) qoʻshishga yoʻl qoʻyilmaydi. Talaba-qizlar institutga och rangli va yorqin rangda boʻlmagan bluzkalarda, tizzani yopib turadigan yubka yoki odmi kostyum va toʻq rangdagi poyabzalda kelishlari lozim, shuningdek, oʻzlari bilan zaruriy oʻquv vositalarini olib kelishlari sharl."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института должны носить современную одежду, соответствующую их учёбе и профессии. Женщинам — работникам, студенткам и докторанткам института нельзя приходить в институт в привлекающей внимание одежде, в частности, просвечивающей, с открытыми плечами, грудью, животом и коленями, а также в чрезмерно облегающей одежде, с различными блестящими или металлическими предметами на разных частях тела (кроме серёг в ушах и колец на пальцах), с пирсингом или татуировками на видимых частях тела. Кроме того, не допускается добавление в разрешённую для посещения института форму студентов элементов, отражающих принадлежность к различным религиям, конфессиям и субкультурам (хиджаб, кипа, кашая, крест и др.). Студентки должны приходить в институт в блузках неярких и нешироких светлых тонов, в юбках, закрывающих колени, или в скромных костюмах и в обуви тёмного цвета, а также приносить с собой необходимые учебные принадлежности."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates of the institute must wear modern clothing appropriate to their studies and profession. Women who are employees, students, or doctoral candidates of the institute may not come to the institute in attention-drawing clothing, in particular clothing that is transparent, leaves the shoulders, chest, abdomen, or the area above the knees uncovered, or is excessively tight, nor with various shiny or metal objects on parts of the body other than earrings and finger rings, nor with visible piercings or tattoos. In addition, elements reflecting affiliation with various religions, confessions, and subcultures (hijab, kippah, kasaya, cross, and others) may not be added to the uniform permitted for students attending the institute. Female students must come to the institute in blouses of light, non-bright colors, in skirts covering the knees or modest suits, and in dark-colored footwear, and must bring the necessary study materials with them."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodimi, talabasi va doktoranti boʻlgan erkaklar oq, havorang, och jigar rang yoki och kulrang koʻylakda, klassik uslubdagi shim yoki odmi kostyum, galstukda va toʻq rangdagi poyabzalda kelishlari lozim. Bunda, talabalar oʻzlari bilan zaruriy oʻquv vositalarini olib kelishlari shart. Xodim, talaba va doktorantlarning auditoriya va xizmat xonalarida ustki kiyim (plash, palto, kurtka kabilar)da yurishlari taqiqlanadi. Xodimlar, talabalar va doktorantlarning tashqi qiyofasi va kiyimlari ozoda, pokrza boʻlishi lozim."
+     },
+     "ru": {
+      "text": "Мужчины — работники, студенты и докторанты института должны приходить в белых, голубых, светло-коричневых или светло-серых рубашках, в брюках классического стиля или скромных костюмах, в галстуках и обуви тёмного цвета. При этом студенты обязаны приносить с собой необходимые учебные принадлежности. Работникам, студентам и докторантам запрещается находиться в аудиториях и служебных помещениях в верхней одежде (плащ, пальто, куртка и т. п.). Внешний вид и одежда работников, студентов и докторантов должны быть опрятными и чистыми."
+     },
+     "en": {
+      "text": "Men who are employees, students, or doctoral candidates of the institute must come in white, light-blue, light-brown, or light-gray shirts, in classic-style trousers or a modest suit, in a tie, and in dark-colored footwear. Students must bring the necessary study materials with them. Employees, students, and doctoral candidates are prohibited from wearing outerwear (raincoats, overcoats, jackets, and the like) in lecture rooms and offices. The appearance and clothing of employees, students, and doctoral candidates must be tidy and clean."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "12-modda . Majlis va yigʻinlarda ishtirok etish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 12. Участие в собраниях и заседаниях",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 12. Participation in Meetings and Gatherings",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim talaba va doktorantlari turli tadbirlar (majlislar, tantanali yigʻilishlar, uchrashuvlar, bayramlar)dagi ishtiroki jarayonida soʻzga chiquvchilarganisbatan hurmat bilan munosabatda boʻlishlari, tadbir davomida tinchlik va osoyishtalikni saqlashlari shart boʻlib, raislik qiluvchi va moderatorning ruxsatisiz luqma tashlash va soʻzga chiqish mumkin emas. Zarurat tugʻilganda nutqlar oʻrtasida majlislar zalidan kirish va chiqishga ruxsat beriladi."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты института при участии в различных мероприятиях (собраниях, торжественных заседаниях, встречах, праздниках) обязаны с уважением относиться к выступающим, соблюдать тишину и порядок; без разрешения председательствующего и модератора нельзя вставлять реплики и выступать. При необходимости между выступлениями разрешается входить в зал заседаний и выходить из него."
+     },
+     "en": {
+      "text": "When taking part in various events (meetings, ceremonial gatherings, receptions, celebrations), employees, students, and doctoral candidates of the institute must treat speakers with respect and keep calm and order; interjecting or speaking without the permission of the chair and the moderator is not allowed. When necessary, entering and leaving the hall between speeches is permitted."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "13-modda. Binolarda yurish-turish qoidalariga amal qilish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 13. Соблюдение правил поведения в зданиях",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 13. Observance of the Rules of Conduct in Buildings",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Binolarga kirish va chiqish joylarida, shuningdek, yoʻlaklarda talabalar xodimlarni, erkaklar ayollarni, yoshlar esa kattalarrri oʻzlaridan oldin oʻtkazrb yuborishlari lozim."
+     },
+     "ru": {
+      "text": "У входов и выходов зданий, а также в коридорах студенты должны пропускать вперёд работников, мужчины — женщин, молодые — старших."
+     },
+     "en": {
+      "text": "At entrances and exits of buildings, and also in corridors, students must let employees go first, men must let women go first, and younger people must let older people go first."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Binoga kirayotgan har bir shaxs binolarga kirib-chiqishni nazorat qilish uchun tayinlangan masʻul shaxs yoki navbatchiga oʻz shaxsini tasdiqlovchi hujjatni (xizmat yoki talabalik guvohnomasi, pasport va h.k.) ochiq holda koʻrsatishlari yoki maxsus berilgan ID-karta orqali turniketlardan oʻtishlari shart. Xodim, talaba va doktorantlar institut hududida yoʻlning oʻng tomonidan yurishlari, shuningdek, yoʻlak va xollarda mobil aloqa vositalari orqali baland ovozda gaplashmasliklari kerak. Bir-birlariga duch kelganda salomlashishlari, bunda: talabalar xodimlarga, yoshlar kattalarga birinchi boʻlib salom berishlari tavsiya etiladi."
+     },
+     "ru": {
+      "text": "Каждое лицо, входящее в здание, обязано открыто предъявить документ, удостоверяющий личность (служебное или студенческое удостоверение, паспорт и т. п.), назначенному ответственному лицу или дежурному, контролирующему вход и выход, либо пройти через турникеты по специально выданной ID-карте. Работникам, студентам и докторантам следует ходить по правой стороне дороги на территории института, а также не разговаривать громко по мобильным средствам связи в коридорах и холлах. При встрече рекомендуется здороваться: студентам — первыми приветствовать работников, молодым — старших."
+     },
+     "en": {
+      "text": "Every person entering a building must openly present a document confirming their identity (a service or student card, a passport, etc.) to the responsible person or the person on duty appointed to control entry and exit, or pass through the turnstiles using a specially issued ID card. Employees, students, and doctoral candidates should walk on the right-hand side of the road on the institute's territory, and should not talk loudly on mobile devices in corridors and halls. When meeting, they should greet one another; students are recommended to greet employees first, and younger people to greet older people first."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "14-modda. Xodim, talaba va doktorantlarning rasmiy muloqot meʻyorlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 14. Нормы официального общения работников, студентов и докторантов",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 14. Standards of Official Communication of Employees, Students, and Doctoral Candidates",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktorantlari tashkilot va muassasalar, ommaviy axborot vositalari hamda fuqarolar bilan oʻzaro munosabatga kirishganda quyidagi rasmiy muloqot meʻyor va qoidalariga amal qilishlari kerak: oʻzharakatlarini institut manfaatlarini koʻzlab amalga oshirish, uning imijini saqlash va oshirish, institut, uning xodimlari, talabalari va doktorantlari nomi va manfaatlariga ziyon yetkazadigan harakatlarni amalga oshirmaslik, shuningdek, ular bilan muloqot qilganda hamda ijtimoiy tarmoqlardagi yozishmalarida oʻzlarining namunali xulq-atvori bilan institut haqida yuksak ijobiy taassurot uygʻotish; xotin-qizlar bilan munosabatlar amaldagi qonunchilik hujjatlari talablari, milliy anʻanalar va oʻzaro hurmat tamoyillariga asoslanishi shart; Institut, uning xodim, talaba va doktorantlari haqida haqiqatga toʻgʻri kelmaydigan yoki notoʻgʻri talqin qilingan, notoʻgʻri talqin qilish uchun imkon beradigan maʻlumotlarni tarqatmaslik, bunday maʻlumotlar tarqalishiga yo'1 qoʻymaslik, shuningdek, jamoat oldida va ijtimoiy tarmoqlarda bu mavzuda chiqishlar qilmaslik; xodim, talaba va doktorantlarning roziligisiz ularning shaxsiy hayotiga oid maʻlumotlarni oshkor qilmaslik; xodim, talaba va doktorantlar haqida ularning kasbiy va oʻquv faoliyatiga oid bo' lmagan ma' lumotlarni aniqlashtirmaslik; xizmat axborotlarini taqdim etish qoidalariga amal qilish; soʻralgan axborotni yetarlilik (haddan tashqari qisqa shu bilan birga oʻta keragidan ortiq) va ishonchlilik (qayta tekshirishni talab qilmaydigan) talablariga muvofiq holda taqdim etish; oʻz xizmat vazifalarini bajarish jarayonida olingan maʻlumotlardan maqsadga muvofiq boʻlmagan tarzda foydalanmaslik, shuningdek, ularni Institut rahbariyati ruxsatisiz tarqatmasIik; xodim, talaba va doktorantlarning taʻlim jarayonidagi faoliyati va kasbiy harakatlarini asossiz tanqid qilmaslik, jamoat oldida chiqishlar, shunindek, ommaviy axborot vositalari va turli xil ijtimoiy tarmoqlarda davlat hokimiyati va boshqaruvi organlari va institut faoliyati, uning xodimlari harakatlarini haqiqatga toʻgʻri kelmaydigan, asossiz va aniq dalillarga asoslanmagan holda muhokama qilmaslik va ular haqida baho berib, fikr-mulohazalar bildirmaslik."
+     },
+     "ru": {
+      "text": "При взаимодействии с организациями и учреждениями, средствами массовой информации и гражданами работники, студенты и докторанты института должны соблюдать следующие нормы и правила официального общения: осуществлять свои действия в интересах института, сохранять и повышать его имидж, не совершать действий, наносящих ущерб имени и интересам института, его работников, студентов и докторантов, а также при общении с ними и в переписке в социальных сетях образцовым поведением создавать у окружающих высокое положительное впечатление об институте; отношения с женщинами должны строиться на требованиях действующего законодательства, национальных традициях и принципах взаимного уважения; не распространять недостоверные или искажённые сведения об институте, его работниках, студентах и докторантах, а также сведения, допускающие их ложное толкование, не допускать их распространения, а также не выступать на эту тему публично и в социальных сетях; не разглашать без согласия работников, студентов и докторантов сведения об их личной жизни; не выяснять сведения о работниках, студентах и докторантах, не относящиеся к их профессиональной и учебной деятельности; соблюдать правила предоставления служебной информации; предоставлять запрошенную информацию в соответствии с требованиями достаточности (не слишком краткой и в то же время не чрезмерной) и достоверности (не требующей перепроверки); не использовать нецелевым образом сведения, полученные при исполнении служебных обязанностей, а также не распространять их без разрешения руководства института; не подвергать необоснованной критике деятельность работников, студентов и докторантов в образовательном процессе и их профессиональные действия, не обсуждать публично, в средствах массовой информации и в различных социальных сетях деятельность органов государственной власти и управления и института, действия его работников недостоверно, необоснованно и без опоры на точные факты, не давать им оценок и не высказывать суждений о них."
+     },
+     "en": {
+      "text": "In dealings with organizations and institutions, the mass media, and citizens, employees, students, and doctoral candidates of the institute must follow these standards and rules of official communication: act in the interests of the institute, preserve and enhance its image, refrain from actions that harm the name and interests of the institute, its employees, students, and doctoral candidates, and, in communicating with them and in correspondence on social networks, create a highly positive impression of the institute through exemplary conduct; relations with women must be based on the requirements of current legislation, national traditions, and the principles of mutual respect; not spread information about the institute, its employees, students, and doctoral candidates that is untrue or misrepresented or that allows misrepresentation, not allow such information to spread, and not speak on this subject in public or on social networks; not disclose information about the private life of employees, students, and doctoral candidates without their consent; not seek information about employees, students, and doctoral candidates that does not relate to their professional and study activities; follow the rules for providing official information; provide requested information in accordance with the requirements of sufficiency (neither too brief nor excessive) and reliability (not requiring re-verification); not use information received in the course of performing official duties for improper purposes and not disseminate it without the permission of the institute's leadership; not unreasonably criticize the activities and professional actions of employees, students, and doctoral candidates in the educational process, and, in public speeches, in the mass media, and on various social networks, not discuss the activities of state authorities and administration bodies and of the institute, or the actions of its employees, in an untrue, unfounded manner or without reliance on clear facts, and not assess them or express opinions about them."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "15-modda . Ish va oʻqish vaqtiga rioya qilish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 15. Соблюдение рабочего и учебного времени",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 15. Observance of Working and Study Hours",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantlar dars mashgʻulotlari va ishga oʻz vaqtida kelishlari, mehnat hamda oʻqish intizomiga rioya qilishlari shart."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты обязаны приходить на занятия и на работу вовремя, соблюдать трудовую и учебную дисциплину."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates must arrive on time for classes and work and observe labor and study discipline."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "16-modda. Institutda gʻayriaxloqiy va nojoʻya xattiharakatlarni sodir etishga yoʻl qoʻyilmasligi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 16. Недопустимость совершения в институте аморальных и неподобающих поступков",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 16. Prohibition of Immoral and Improper Conduct at the Institute",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talaba va doktorantning oʻqishiga, xodimning esa institutda mehnat faoliyatini yuritishiga toʻsqinlik qiladigan quyidagi gʻayriaxloqiy va nojoʻya xatti-harakatlarni sodir etishi qatʻiyan taqiqlanadi: har qanday huquqbuzarlik yoki jinoyat sodir etish, jumladan, tuhmat qilish, haqoratlash; giyohvand moddalar, psixotrop vositalar va ulaming analoglari, alkogol va tamaki mahsulotlarini isteʻmol qilish va tarqatish; tinchlik yoki osoyishtalikka qarshi tajovuz qilish, janjallashish, qimor va tavakkalchilikka asoslangan boshqa oʻyinlar oʻynash; institutga moddiy va uning ishchanlik obroʻsiga salbiy taʻsir etuvchi maʻnaviy zarar yetkazish; xodim, talaba va doktorantlarga jismoniy, maʻnaviy yoki moddiy zarar yetkazish; institut atrof-muhitini har qanday koʻrinishda ifloslantirish; institut binolari va hovlisida, shuningdek, institut binolariga tutashgan hududda spirtli ichimliklar ichish va tamaki yoxud boshqa turdagi mahsulotlarni chekish hamda mast holda boʻlish, tashqi koʻrinishga va ushbu Kodeksda belgilangan qoidalarga zid ravishda soch-soqoli oʻsgan, toʻzgʻigan va kiyinish talablariga rioya qilmagan holda kelish; institutga tegishli kompyuterlarda institutga tegishli boʻlmagan maʻlumotlarni, shuningdek, turli kinofilmlar, noqonuniy maʻlumotlar, behayo surat va filmlar, milliy, irqiy, etnik, diniy adovatni targʻib qiluvchi, ekstremistik, separatistik va fundamentalistik kayfiyatdagi har qanday materiallarni tayyorlash, koʻrish, saqlash, tarqatish va ularga daʻvat etish; oʻquv mashgʻulotlari va ishga hamda xodim va talabalarning osoyishtaligiga xalaqit beradigan xatti-harakatlar sodir etish (radiouzatgich, televizor, multimedia va ovoz chiqaruvchi moslamalardan maqsadsiz foydalanish); umumbashariy va milliy qadriyatlarga xos boʻlmagan yoki institut, uning xodimlari nufuziga putur yetkazadigan materiallarni Internet tarmogʻi va boshqa ijtimoiy tarmoqlarga joylashtirish yoki ulardan turli nomuvofiq maqsadlarda foydalanish. Xodimlar, talabalar va doktorantlar tomonidan institutning ishchanlik obroʻsi, qadr-qimmati va nufuzini tushiradigan, taʻlim jarayonining maʻnaviy buzilishiga olib keladigan agressiya, odamlarning shaʻni va qadr-qimmatini kamsitadigan, zoʻrlash va vahshiylik, vandalizm, millatlararo nizo qoʻzgʻatadigan, diniy yoʻnalishdagi, terrorizm, ekstremizm, va fundamentahzm, shuningdek, behayo va ishqiy sahnalarni namoyon qiladigan fotosuratlar, video va audioyozuvlardan foydalanish va ularning tarqatilishiga yoʻl qoʻyilmaydi."
+     },
+     "ru": {
+      "text": "Категорически запрещается совершать следующие аморальные и неподобающие поступки, препятствующие учёбе студента и докторанта и трудовой деятельности работника в институте: совершение любого правонарушения или преступления, в том числе клевета, оскорбление; употребление и распространение наркотических веществ, психотропных средств и их аналогов, алкогольной и табачной продукции; посягательство на мир и спокойствие, драки, участие в азартных играх и других играх, основанных на риске; причинение институту материального и морального ущерба, негативно влияющего на его деловую репутацию; причинение работникам, студентам и докторантам физического, морального или материального ущерба; любое загрязнение окружающей среды института; распитие спиртных напитков, курение табака или иных видов продукции, а также нахождение в состоянии опьянения в зданиях и дворе института, а также на прилегающей к зданиям института территории; приход с отросшими, растрёпанными волосами и бородой, не соблюдая требований к внешнему виду и правил, установленных настоящим Кодексом, и без соблюдения требований к одежде; подготовка, просмотр, хранение, распространение и призывы к использованию на компьютерах института не относящейся к институту информации, а также различных кинофильмов, незаконной информации, непристойных фотографий и фильмов, любых материалов, пропагандирующих национальную, расовую, этническую, религиозную вражду, материалов экстремистского, сепаратистского и фундаменталистского характера; совершение действий, мешающих учебным занятиям и работе, а также спокойствию работников и студентов (бесцельное использование радиопередатчиков, телевизоров, мультимедийных и звуковоспроизводящих устройств); размещение в сети Интернет и других социальных сетях материалов, не свойственных общечеловеческим и национальным ценностям или наносящих ущерб авторитету института и его работников, либо использование их в различных несоответствующих целях. Не допускается использование и распространение работниками, студентами и докторантами фотографий, видео- и аудиозаписей, подрывающих деловую репутацию, достоинство и авторитет института, ведущих к моральному нарушению образовательного процесса, содержащих агрессию, унижение чести и достоинства людей, насилие и жестокость, вандализм, разжигание межнациональной розни, религиозной направленности, терроризм, экстремизм и фундаментализм, а также демонстрирующих непристойные и любовные сцены."
+     },
+     "en": {
+      "text": "The following immoral and improper acts that hinder a student's or doctoral candidate's studies or an employee's work at the institute are strictly prohibited: committing any offense or crime, including slander and insult; consuming and distributing narcotic drugs, psychotropic substances and their analogues, and alcohol and tobacco products; attacks on peace and public order, fighting, gambling and playing other games based on chance; causing the institute material harm and moral harm that negatively affects its business reputation; causing physical, moral, or material harm to employees, students, and doctoral candidates; polluting the institute's environment in any way; drinking alcoholic beverages, smoking tobacco or other products, and being intoxicated in the institute's buildings and yard and on the territory adjoining the institute's buildings; coming with overgrown or unkempt hair and beard, in violation of the appearance requirements and the rules established by this Code, and without observing the dress requirements; preparing, viewing, storing, distributing, and encouraging the use, on the institute's computers, of information that does not belong to the institute, as well as various films, illegal information, indecent pictures and films, and any materials promoting national, racial, ethnic, or religious hostility or of an extremist, separatist, or fundamentalist nature; committing acts that interfere with classes and work or with the peace of employees and students (purposeless use of radio transmitters, televisions, multimedia and sound devices); posting on the Internet and other social networks materials that are alien to universal and national values or that damage the standing of the institute and its employees, or using them for various inappropriate purposes. The use and dissemination by employees, students, and doctoral candidates of photographs, video and audio recordings that undermine the institute's business reputation, dignity, and standing, lead to the moral disruption of the educational process, contain aggression, demean the honor and dignity of people, show rape and brutality, vandalism, incitement of interethnic conflict, religious orientation, terrorism, extremism, and fundamentalism, or display indecent and romantic scenes, are not permitted."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Shuningdek, davlat hokimiyativa boshqaruvi organlari va Institut faoliyati, uning xodimlari hamda talabalari shaʻni va qadr qimmati hamda ishchanlik obroʻsiga salbiy taʻsir qiluvchi haqiqatga toʻgʻri kelmaydigan, asossiz va tekshirilgan dalillarga asoslanmagan turli xil koʻrinishdagi maʻlumot, fik, mulohaza va munosabatlarni Intemet, ijtimoiy tarmoqlar, shuningdek, boshqa ommaviy axborot manbalarida, tarqatuvchilarda, tashuvchilarda paydo boʻlishi (oshkor etilishi) hamda shunday maʻlumotlarga ijobiy munosabat bildirish (\"layk\" bosish, repost qilish) mazkur talaba va doktorantning oʻqishiga, xodimning esa institutda mehnat faoliyatini yuritishiga toʻsqinlik qiladigan gʻayriaxloqiy va nojoʻya xatti-harakat hisoblanadi."
+     },
+     "ru": {
+      "text": "Также распространение (разглашение) в сети Интернет, социальных сетях, а также в других источниках массовой информации, у распространителей и носителей недостоверных, необоснованных и не подтверждённых проверенными фактами сведений, мнений, суждений и отношений в любых формах, негативно влияющих на деятельность органов государственной власти и управления и института, честь и достоинство его работников и студентов, а также на деловую репутацию, и положительное отношение к таким сведениям (нажатие «лайка», репост) является аморальным и неподобающим поступком, препятствующим учёбе данного студента и докторанта и трудовой деятельности работника в институте."
+     },
+     "en": {
+      "text": "Likewise, the appearance (disclosure) on the Internet, on social networks, and in other mass media sources, among distributors and carriers, of untrue, unfounded information, opinions, judgments, and attitudes in any form, not based on verified facts, that negatively affect the activities of state authorities and administration bodies and of the institute, the honor and dignity of its employees and students, and its business reputation, as well as a positive reaction to such information (clicking \"like,\" reposting), constitutes immoral and improper conduct that hinders the studies of the student or doctoral candidate concerned, or the work of the employee at the institute."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "5-bob. Institut rahbariyatining odob-axloqqa oid majburiyatlari va kasbiy faoliyatda manfaatlar toʻqnashuviga yoʻl qoʻymaslikka oid tartiblari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 5. Этические обязанности руководства института и порядок недопущения конфликта интересов в профессиональной деятельности",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 5. Ethical Obligations of the Institute's Leadership and Procedures for Preventing Conflicts of Interest in Professional Activity",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "17-modda . Rahbarning majburiyatlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 17. Обязанности руководителя",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 17. Obligations of a Manager",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Rahbariyat hamda tarkibiy boʻlinma rahbarlari (keyingi oʻrinlarda - rahbar) oʻziga boʻysunuvchi xodimlarga nisbatan yuqori professionallik, xolislik, soflik va adolatda oʻrnak boʻlishi, oliy taʻIim muassasasi yoxud uning tarkibiy boʻlinmasida ijobiy, maʻnaviy-psixologik muhit shakllanishiga koʻmaklashishi lozim. Rahbar boʻysunuvchi xodimlardan ularning xizmat vazifalari doirasidan chiquvchi topshiriqlarni bajarishini talab qilmasligi, shuningdek, qonunga xilof xatti-harakatlarni sodir etishga undamasligi kerak. Rahbar oʻz faoliyatida: kadrlarni qarindoshlik, hamshaharlik yoki shaxsiy sadoqat belgilari boʻyicha tanlash va joy-joyiga qoʻyish va mehnat munosabatlarida kamsitish holatlariga yo'1 qoʻymasligi; guruhbozlik, mahalliychilik, favoritizmga, shuningdek, oʻz xizmat vazifalarini bajarish jarayonida boshqa salbiy omillarning kelib chiqishiga yoʻl qoʻymasligi; qoʻpollik qilmasligi, odamlarning shaʻni va qadr-qimmatini kamsitmasligi, ularga psixologik va jismoniy taʻsir koʻrsatmasligi; manfaatlar toʻqnashuvining oldini olish va ularni tartibga solish yuzasidan oʻz vaqtida chora-tadbirlar koʻrishi; korrupsiyaning oldini olish choralarini koʻrishi; xodimlaming kasbiy va intellektual jihatdan rivojlanishlari uchun qulay ish joyi, zamonaviy kompyuterlar, intemet tarmogʻi, kutubxona fondi va axborot resurslaridan erkin foydalanishlari, hordiq chiqarishlari, dam olishlari, jismonan chiniqishlari uchun barcha sharoitlarni ichki imkoniyatlardan kelib chiqib yaratib berishi; xodimlar faoliyatini samarali tashkil etib, oʻziga ishonib topshirilgan mulkka va moliyaviy mablagʻlarga ehtiyotkorlik va tejamkorlik bilan munosabatda boʻlishi shart. Rahbar qoʻl ostidagi xodimlarning mehnat intizomiga rioya qilishlarini talab qilishi va uni taʻminlashga masʻuldir."
+     },
+     "ru": {
+      "text": "Руководство и руководители структурных подразделений (далее — руководитель) должны быть примером высокого профессионализма, беспристрастности, чистоты и справедливости по отношению к подчинённым работникам, содействовать формированию позитивной духовно-психологической атмосферы в высшем образовательном учреждении или его структурном подразделении. Руководитель не должен требовать от подчинённых работников выполнения поручений, выходящих за рамки их служебных обязанностей, а также побуждать их к совершению противоправных действий. Руководитель в своей деятельности обязан: не допускать подбора и расстановки кадров по признакам родства, землячества или личной преданности, а также случаев дискриминации в трудовых отношениях; не допускать групповщины, местничества, фаворитизма, а также возникновения других негативных факторов при исполнении своих служебных обязанностей; не допускать грубости, унижения чести и достоинства людей, оказания на них психологического и физического воздействия; своевременно принимать меры по предупреждению конфликта интересов и их урегулированию; принимать меры по предупреждению коррупции; создавать, исходя из внутренних возможностей, все условия для профессионального и интеллектуального развития работников: удобное рабочее место, современные компьютеры, свободный доступ к сети Интернет, библиотечному фонду и информационным ресурсам, возможности для отдыха и физического закаливания; эффективно организовывать деятельность работников, бережно и экономно относиться к вверенному ему имуществу и финансовым средствам. Руководитель требует от подчинённых ему работников соблюдения трудовой дисциплины и несёт ответственность за её обеспечение."
+     },
+     "en": {
+      "text": "The leadership and the heads of structural subdivisions (hereinafter referred to as a manager) must set an example of high professionalism, impartiality, integrity, and fairness toward subordinate employees and contribute to the formation of a positive spiritual and psychological atmosphere in the higher education institution or its structural subdivision. A manager must not require subordinate employees to carry out tasks outside the scope of their official duties or urge them to commit unlawful acts. In their work, a manager must: not allow the selection and placement of personnel on the basis of kinship, regional origin, or personal loyalty, or discrimination in labor relations; not allow factionalism, localism, or favoritism, or the emergence of other negative factors in performing their official duties; not be rude, demean the honor and dignity of people, or exert psychological or physical pressure on them; take timely measures to prevent and resolve conflicts of interest; take measures to prevent corruption; create, within internal capabilities, all conditions for employees' professional and intellectual development: a comfortable workplace, modern computers, free access to the Internet, the library collection, and information resources, and opportunities for rest and physical fitness; and organize employees' work effectively and treat the property and financial funds entrusted to them with care and thrift. A manager must require subordinate employees to observe labor discipline and is responsible for ensuring it."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "6-bob. Xodim, talaba va doktorantlarning oʻzaro munosabatlariga oid talablar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 6. Требования к взаимоотношениям работников, студентов и докторантов",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 6. Requirements for the Mutual Relations of Employees, Students, and Doctoral Candidates",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "18-modda. Xodim, talaba va doktorantlarning oʻzaro munosabatlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 18. Взаимоотношения работников, студентов и докторантов",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 18. Mutual Relations of Employees, Students, and Doctoral Candidates",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantlarning oʻzaro munosabatlari milliy qadriyat va anʻanalar, yagona jamoaviy muhit, oʻzaro hurmat va eʻtibor, doʻstlik, hamjihatlik, halollik va adolat tamoyillariga asoslanishi lozim. Xodim, talaba va doktorantlarning oʻzaro munosabatlarida inson qadr-qimmatga hurmatsizlik, shaxsiyatni kamsitish, oʻzganing intellektual mulkini oʻzlashtirib olish, qoʻpollik, behayo soʻzlar ishlatish, mushtlashish qatʻiyan man etiladi. Pedagog xodimlar tomonidan talabalarga nisbatan oʻquv va tarbiya jarayonidagi yuqori talabchanlik ularning shaxsini hurmat qilish bilan birgalikda amalga oshirilishi kerak."
+     },
+     "ru": {
+      "text": "Взаимоотношения работников, студентов и докторантов должны основываться на национальных ценностях и традициях, единой коллективной атмосфере, взаимном уважении и внимании, дружбе, сплочённости, честности и справедливости. Во взаимоотношениях работников, студентов и докторантов категорически запрещаются неуважение к человеческому достоинству, унижение личности, присвоение чужой интеллектуальной собственности, грубость, использование непристойных слов, драки. Высокая требовательность педагогических работников к студентам в учебно-воспитательном процессе должна сочетаться с уважением к их личности."
+     },
+     "en": {
+      "text": "The mutual relations of employees, students, and doctoral candidates must be based on national values and traditions, a united collective atmosphere, mutual respect and attention, friendship, solidarity, honesty, and justice. In the mutual relations of employees, students, and doctoral candidates, disrespect for human dignity, demeaning of the individual, appropriation of another person's intellectual property, rudeness, the use of indecent words, and fighting are strictly prohibited. The high standards that teaching staff set for students in the educational process must be combined with respect for their personality."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "19-modda. Pedagog xodim va talabalarning auditoriyadagi va undan tashqaridagi oʻzaro munosabatlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 19. Взаимоотношения педагогических работников и студентов в аудитории и вне её",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 19. Relations Between Teaching Staff and Students in and Outside the Classroom",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Pedagog xodim auditoriyaga kirganida, barcha talabalar oʻrinlaridan turib hurmatlarini bildirgan holda kutib olishlari, soʻngra pedagog xodim salomlashib, oʻtirishga ruxsat bergach, oʻz joylarini egallashlari kerak. Pedagog xodim darsini tugatib, auditoriyadan chiqib ketayotganda ham talabalar oʻrinlaridan turib, kuzatib qoʻyishlari lozim."
+     },
+     "ru": {
+      "text": "Когда педагогический работник входит в аудиторию, все студенты должны встать со своих мест и поприветствовать его, а затем, после того как педагог поздоровается и разрешит сесть, занять свои места. Когда педагогический работник заканчивает занятие и выходит из аудитории, студенты также должны встать со своих мест и проводить его."
+     },
+     "en": {
+      "text": "When a member of the teaching staff enters the lecture room, all students must stand and greet them with respect, and then take their seats after the teacher has greeted them and given permission to sit. When the teacher finishes the class and leaves the room, students must likewise stand and see them off."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Pedagog xodimlar oʻquv jarayoni va boshqa holatlarda ham talabalarning shaxsini hurmat qilishi, ular bilan munosabatda ochiqlik va xayrixohlik tamoyillariga amal qilish, talabalarga taʻlim berish jarayonida oʻz vazifalarini begʻaraz amalga oshirishi, talabaga munosabatda ulami kamsitish, qoʻpol soʻz ishlatish, oʻzini yuqori tutish va tanishbilishchilik kabi yondashuv shakllarini mutlaqo qoʻllamaslik, ularga nisbatan doimo haqqoniy munosabatda va xolis boʻlishlari shart. Pedagog xodimlar talabalarga ularni qiziqtirgan fan yoki oʻquv kursiga oid masalalar yuzasidan dars jarayonidan tashqari vaqtlarda bergan savollariga ham axloq meʻyorlariga amal qilgan holda javob qaytarishlari va ularni fanga boʻlgan qiziqish va ishtiyoqlarini oshirish choralarini koʻrishlari zarur."
+     },
+     "ru": {
+      "text": "Педагогические работники обязаны и в учебном процессе, и в иных ситуациях уважать личность студентов, придерживаться принципов открытости и доброжелательности в отношениях с ними, бескорыстно исполнять свои обязанности при обучении студентов, ни в коем случае не применять в отношении студентов такие формы подхода, как унижение, грубые слова, высокомерие и протекционизм, всегда быть правдивыми и беспристрастными по отношению к ним. Педагогические работники должны отвечать на вопросы студентов, касающиеся интересующей их дисциплины или учебного курса, заданные вне занятий, также с соблюдением норм этики и принимать меры к повышению их интереса и тяги к науке."
+     },
+     "en": {
+      "text": "Teaching staff must respect the personality of students in the educational process and in other situations, follow the principles of openness and goodwill in their dealings with them, carry out their duties in teaching students impartially, never use such forms of approach toward students as demeaning them, rude words, arrogance, or favoritism, and always be truthful and fair toward them. Teaching staff must also answer, in compliance with ethical norms, students' questions about the subject or course that interests them asked outside class time, and take measures to increase their interest in and enthusiasm for the subject."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "20-modda . Akademik taʻqib va tazyiqqa yoʻl qoʻyilmasligi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 20. Недопустимость академического преследования и давления",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 20. Prohibition of Academic Harassment and Pressure",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut hayotida rahbariyat yoki pedagog xodim tomonidan talabalarni ulaming roziligisiz muayyan ishlarga jalb etganlik, haq toʻlamasdan ularning mehnat kuchidan foydalanish (institut va unga biriktirilgan boshqa hududda Oʻzbekiston Respublikasi Prezidenti yoki Yazirlar Mahkamasining tegishli qarori bilan xavfsizlik standartlariga qatʻiy rioya qilingan holda ixtiyoriy shanbalik va boshqa turdagi tadbirlar tashkil etilgan hollar bundan mustasno) maqsadida ularga murojaat etilganida, talabalar tomonidan bunday soʻrovga rad javobining berilishi pedagog xodim tomonidan kelgusida ularga dars mashgʻulotida past baho qoʻyish yoki boshqa turdagitazyiqva taʻqib (academic harassment) qilish bilan bogʻliq munosabat koʻrsatilishiga imkon bermaydi va bunday taʻqib qattiq qoralanadi."
+     },
+     "ru": {
+      "text": "Если руководство или педагогический работник обращается к студентам с целью привлечения их без их согласия к определённым работам или использования их труда без оплаты (за исключением случаев, когда в институте и на закреплённой за ним территории организуются добровольные субботники и иные мероприятия на основании соответствующего решения Президента или Кабинета Министров Республики Узбекистан при строгом соблюдении стандартов безопасности), отказ студентов от такого требования не даёт педагогическому работнику права в дальнейшем выставлять им низкие оценки на занятиях либо проявлять иное отношение, связанное с давлением и преследованием (academic harassment), и такое преследование строго осуждается."
+     },
+     "en": {
+      "text": "If the leadership or a member of the teaching staff approaches students with the aim of involving them in certain work without their consent or of using their labor without pay (except where voluntary clean-up days and other events are organized at the institute and the territory assigned to it under a relevant decision of the President or the Cabinet of Ministers of the Republic of Uzbekistan, with strict observance of safety standards), the students' refusal of such a request does not allow the teacher to give them low grades in class or show any other attitude connected with pressure and harassment (academic harassment) in the future, and such harassment is strongly condemned."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "21-modda . Uyali aloqa vositalaridan foydalanish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 21. Использование средств мобильной связи",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 21. Use of Mobile Communication Devices",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Dars mashgʻulotlari vaqtida uyali aloqa vositalaridan foydalanish barcha uchun qatʻiyan taqiqlanadi. Uyali aloqa vositalaridan foydalanishga zarur va uzrli holatlarda pedagog xodimning ruxsati bilangina ruxsat etilishi mumkin."
+     },
+     "ru": {
+      "text": "Использование средств мобильной связи во время занятий категорически запрещается для всех. Использование средств мобильной связи может быть разрешено только с позволения педагогического работника в необходимых и уважительных случаях."
+     },
+     "en": {
+      "text": "The use of mobile communication devices during classes is strictly prohibited for everyone. The use of mobile communication devices may be permitted only with the permission of the teacher in necessary and valid cases."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "22-modda . Dars mashgʻulotida ishtirok etish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 22. Участие в занятиях",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 22. Attendance at Classes",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talabalarning darsga kech qolib kelishlariga yoʻl qoʻyilmaydi. Lekin uzrli sababga koʻra darsga kech qolgan talabauzr soʻrab, pedagog xodimning ijozati bilan auditoriyaga kirib oʻz joyini egallashi mumkin. Pedagog xodim dars mashgʻulotlariga oʻzining nojoʻya harakatlari bilan xalaqit berayotgan talabani yuzaga kelgan vaziyat haqida fakultet dekanini (u oʻz oʻrnida boʻlmaganda dekan oʻrinbosari yoki tyutorni) xabardor qilgan holda darsdan chetlatishi mumkin."
+     },
+     "ru": {
+      "text": "Опоздания студентов на занятия не допускаются. Однако студент, опоздавший на занятие по уважительной причине, может, извинившись и получив разрешение педагогического работника, войти в аудиторию и занять своё место. Педагогический работник вправе удалить с занятия студента, мешающего проведению занятий своими неподобающими действиями, известив о сложившейся ситуации декана факультета (а при его отсутствии — заместителя декана или тьютора)."
+     },
+     "en": {
+      "text": "Students may not be late for class. However, a student who is late for a valid reason may, after apologizing and with the teacher's permission, enter the room and take their seat. A teacher may remove from class a student who interferes with classes through improper behavior, informing the dean of the faculty (or, in the dean's absence, the deputy dean or the tutor) of the situation."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "23-modda. Dars mashgʻulotidan tashqari vaqtda muloqot qilish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 23. Общение вне учебных занятий",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 23. Communication Outside Class Time",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talaba uchun pedagog xodim bilan dars mashgʻulotlaridan tashqari vaqtda muloqot qilish zarurali boʻlsa, u holda muloqot: maslahat soatlari, mustaqil ish yoki oʻzaro kelishuv boʻyicha belgilangan vaqtda amalga oshirilishi mumkin; talaba oʻzi muloqot qilmoqchi boʻlgan pedagog xodimning lavozimi, ismi, otasining ismi va familiyasini bilishi maqsadga muvofiq. Asoslangan jiddiy sabablar (qoʻpollik, tamagirlik, dars sifatining pastligi, pedagog xodimning aybi bilan mashgʻulotlar oʻtkazilishidagi muntazam uzilish hollarini isbotlovchi dalillar va b.) hamda guruh (kurs)ning yakdil fikri mavjud boʻlgan holatlarda talabalar pedagog xodimni almashtirish haqida iltimos bilan fakultet dekaniga murojaat qilishlari mumkin."
+     },
+     "ru": {
+      "text": "Если студенту необходимо пообщаться с педагогическим работником вне учебных занятий, общение может проходить: в часы консультаций, самостоятельной работы либо в согласованное время; студенту целесообразно знать должность, имя, отчество и фамилию педагогического работника, с которым он хочет пообщаться. При наличии обоснованных серьёзных причин (грубость, вымогательство, низкое качество занятий, доказательства систематических срывов занятий по вине педагогического работника и др.) и единодушного мнения группы (курса) студенты могут обратиться к декану факультета с просьбой о замене педагогического работника."
+     },
+     "en": {
+      "text": "If a student needs to communicate with a teacher outside class time, the communication may take place during consultation hours, independent study time, or at a time agreed on by both sides; it is advisable that the student know the position, first name, patronymic, and surname of the teacher they wish to contact. Where there are well-founded serious grounds (rudeness, extortion, poor quality of teaching, evidence of systematic interruption of classes through the teacher's fault, etc.) and the group (course) is unanimous, students may apply to the dean of the faculty with a request to replace the teacher."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "24-modda. Subordinatsiya",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 24. Субординация",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 24. Subordination",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Rahbar xodimlarga xodim, talaba va doktorantlar tomonidan biron-bir masala yuzasidan vujudga kelgan holatlar boʻyicha murojaat qilinishi muayyan tartib (subordinatsiya tamoyili), yaʻni munosabat bildirishdagi rahbariyat boʻgʻinlariga bosqichma-bosqich chiqish asosida tashkil etiladi. Institut rektoriga talabalarning toʻgʻridan-toʻgʻri murojaat qilish holatlari bundan mustasno."
+     },
+     "ru": {
+      "text": "Обращение работников, студентов и докторантов к руководящим работникам по какому-либо вопросу осуществляется в определённом порядке (принцип субординации), то есть путём поэтапного продвижения по звеньям руководства при выражении своего отношения. Случаи прямого обращения студентов к ректору института являются исключением."
+     },
+     "en": {
+      "text": "Appeals by employees, students, and doctoral candidates to managers on any matter that has arisen are made in a set order (the principle of subordination), that is, by moving up through the levels of management step by step in expressing their position. Cases of students applying directly to the rector of the institute are an exception."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "25-modda. Tashabbus va faollik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 25. Инициатива и активность",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 25. Initiative and Activity",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantlaming institutda maʻnaviy-axloqiy muhitni yanada yaxshilash, taʻlim sifatini oshirish, innovatsion gʻoyalardan samarali foydalanish, turli xil manfaatli tadbirlar uyushtirish boʻyicha tashabbus va gʻoyalari ragʻbatlantiriladi."
+     },
+     "ru": {
+      "text": "Поощряются инициативы и идеи работников, студентов и докторантов по дальнейшему улучшению духовно-нравственной атмосферы в институте, повышению качества образования, эффективному использованию инновационных идей, организации различных полезных мероприятий."
+     },
+     "en": {
+      "text": "Initiatives and ideas of employees, students, and doctoral candidates aimed at further improving the spiritual and moral atmosphere at the institute, raising the quality of education, making effective use of innovative ideas, and organizing various useful events are encouraged."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "7-bob. Xodim, talaba va doktorantlarning odob-axloqqa oid majburiyatlari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 7. Этические обязанности работников, студентов и докторантов",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 7. Ethical Obligations of Employees, Students, and Doctoral Candidates",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "26-modda. Odob-axloqqa oid majburiyatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 26. Этические обязанности",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 26. Ethical Obligations",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institutga oʻqishga, ishga kirayotgan shaxslar mazkur Kodeks bilan yozma ravishda (imzo chektirib) tanishtiriladilar. Xodim, talaba va doktorantlar: qonun hujjatlari va mazkur Kodeks talablariga rioya etishga; doimo yuksaklikka intilish, halollik va adolat bilan hayot kechirish kabi olijanob fazilatlarni chuqur anglashga;"
+     },
+     "ru": {
+      "text": "Лица, поступающие в институт на учёбу или на работу, знакомятся с настоящим Кодексом в письменной форме (под роспись). Работники, студенты и докторанты обязаны: соблюдать требования законодательства и настоящего Кодекса; глубоко осознавать такие благородные качества, как постоянное стремление к высоте, жизнь в честности и справедливости;"
+     },
+     "en": {
+      "text": "Persons entering the institute to study or work are made familiar with this Code in writing (against signature). Employees, students, and doctoral candidates are obliged to: comply with the requirements of legislation and this Code; deeply appreciate such noble qualities as constant striving for excellence and living with honesty and justice;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloqqa oid milliy anʻanalarimiz, urf-odat va qadriyatlarimizni hurmat qilishga;"
+     },
+     "ru": {
+      "text": "уважать наши национальные традиции, обычаи и ценности в сфере этики;"
+     },
+     "en": {
+      "text": "respect our national traditions, customs, and values in the field of ethics;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻz ustilarida doimiy ravishda ishlash va qabul qilinayotgan qonun hujjatlarini muntazam ravishda oʻrganib borishga; oʻz vazifalarini vijdonan, professional darajada amalga oshirishga; institut obro'-eʻtibori va nufuziga dog' tushiradigan har qanday harakatlarni sodir etishdan oʻzini tiyishga;"
+     },
+     "ru": {
+      "text": "постоянно работать над собой и регулярно изучать принимаемые законодательные акты; выполнять свои обязанности добросовестно, на профессиональном уровне; воздерживаться от любых действий, порочащих авторитет и престиж института;"
+     },
+     "en": {
+      "text": "work constantly on themselves and regularly study newly adopted legislation; perform their duties conscientiously and professionally; refrain from any actions that stain the standing and prestige of the institute;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut toʻgʻrisidagi axborotlardan uning manfaatlari va ishchanlik obroʻsiga ziyon yetkazish maqsadida foydalanmaslikka;"
+     },
+     "ru": {
+      "text": "не использовать сведения об институте с целью нанесения ущерба его интересам и деловой репутации;"
+     },
+     "en": {
+      "text": "not use information about the institute to harm its interests and business reputation;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut mulkiga ehtiyotkorlik bilan munosabatda boʻlish (koʻchar va koʻchmas mulk, oʻsimlik va hayvonot dunyosiga va b.), shu jumladan, xizmat vazifasini bajarish uchun berilgan moddiy texnika vositalaridan toʻgʻri va tejamkorona foydalanishga;"
+     },
+     "ru": {
+      "text": "бережно относиться к имуществу института (движимому и недвижимому имуществу, растительному и животному миру и др.), в том числе правильно и экономно использовать материально-технические средства, выданные для исполнения служебных обязанностей;"
+     },
+     "en": {
+      "text": "treat the institute's property with care (movable and immovable property, flora and fauna, etc.), including using properly and economically the material and technical means issued for performing official duties;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Elektr energiyasi va suvni tejamkorona ishlatishga;"
+     },
+     "ru": {
+      "text": "экономно расходовать электроэнергию и воду;"
+     },
+     "en": {
+      "text": "use electricity and water economically;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Biron-bir noxush voqea yoki hodisa roʻy bersa, u haqda zudlik bilan Institut rahbariyatiga xabar berishga;"
+     },
+     "ru": {
+      "text": "в случае какого-либо неприятного происшествия или события немедленно сообщать о нём руководству института;"
+     },
+     "en": {
+      "text": "in the event of any unpleasant incident or occurrence, report it immediately to the institute's leadership;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Belgilangan cheklovlar va taqiqlarga rioya qilish, oʻz vazifalarini ogʻishmay bajarishga, xodim, talaba va doktorantlarning shaxsiy va oilaviy muammolarini muhokama qilmaslikka, hech bir shaxs haqida jinsi, irqi, millati, tili, diniy eʻtiqodi, ijtimoiy kelib chiqishi va lavozimi haqida hamda boshqa xususiyatlaridan qatʻy nazar notoʻgʻri fikr yuritmaslikka va uni kamsitmaslikka;"
+     },
+     "ru": {
+      "text": "соблюдать установленные ограничения и запреты, неукоснительно выполнять свои обязанности, не обсуждать личные и семейные проблемы работников, студентов и докторантов, не высказывать превратных суждений ни о ком и не унижать никого по признаку пола, расы, национальности, языка, религиозных убеждений, социального происхождения и должности, а также независимо от других особенностей;"
+     },
+     "en": {
+      "text": "observe the established restrictions and prohibitions, perform their duties without deviation, not discuss the personal and family problems of employees, students, and doctoral candidates, and not form a wrong opinion of or discriminate against any person on grounds of sex, race, nationality, language, religious belief, social origin, or position, or any other characteristics;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantlar, shuningdek, boshqa shaxslar haqida turli igʻvo, fitna, gʻiybat va boʻhtonlar uyushtirmaslikka va tarqatmaslikka; institut ishchanlik obroʻsi yoki nufuziga putur yetkazadigan nizoli vaziyatlarga yoʻl qoʻymaslikka;"
+     },
+     "ru": {
+      "text": "не устраивать и не распространять в отношении работников, студентов и докторантов, а также других лиц различные интриги, заговоры, сплетни и клевету; не допускать конфликтных ситуаций, наносящих ущерб деловой репутации или авторитету института;"
+     },
+     "en": {
+      "text": "not stir up or spread various intrigues, plots, gossip, and slander about employees, students, and doctoral candidates or other persons; not allow conflict situations that damage the institute's business reputation or standing;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantning mehnat va oʻquv jarayonidagi saʻy-harakatlariga qasddan ziyon yetkazmasIikka;"
+     },
+     "ru": {
+      "text": "не наносить умышленного ущерба усилиям работника, студента и докторанта в трудовом и учебном процессе;"
+     },
+     "en": {
+      "text": "not deliberately undermine the efforts of an employee, student, or doctoral candidate in the work and study process;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xotin-qizlarning shaʻni va qadr-qimmatini kamsitadigan harakatlar sodir etmaslikka, shilqimlik qilmaslikka, oʻzaro munosabatlarda umumeʻtirof etilgan axloq qoidalarini mensimaslikda ifodalanuvchi behayo soʻzlardan foydalanmaslikka;"
+     },
+     "ru": {
+      "text": "не совершать действий, унижающих честь и достоинство женщин, не приставать, не использовать в отношениях непристойные слова, выражающие пренебрежение общепризнанными правилами этики;"
+     },
+     "en": {
+      "text": "not commit acts that demean the honor and dignity of women, not harass them, and not use in relations indecent words expressing disregard for generally recognized rules of ethics;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Davlat organlari va mansabdor shaxslarning, shuningdek, Institut rahbariyatining oʻzvakolatlari doirasida qabul qilgan (bergan) qarorlarini (topshiriqlarini) oʻz vaqtida va sifatli bajarishga; shaxsiy foydasi hamda oʻzgalar manfaatini koʻzlab oʻz mavqeini suiisteʻmol qilmaslikka;"
+     },
+     "ru": {
+      "text": "своевременно и качественно исполнять решения (поручения), принятые (данные) органами государственной власти и должностными лицами, а также руководством института в пределах их полномочий; не злоупотреблять своим положением в личных целях и в интересах других лиц;"
+     },
+     "en": {
+      "text": "carry out in a timely and high-quality manner the decisions (instructions) adopted (given) by state bodies and officials, as well as by the institute's leadership within their powers; not abuse their position for personal gain or in the interests of others;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Haqiqatni gapirishga, rahbarl ar y a boshqa xodimlarni chalg' itmaslikka;"
+     },
+     "ru": {
+      "text": "говорить правду, не вводить в заблуждение руководителей или других работников;"
+     },
+     "en": {
+      "text": "tell the truth and not mislead managers or other employees;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mutasaddi xodimlarning ruxsatisiz turli reklama vositalarini oʻrnatmaslikka;"
+     },
+     "ru": {
+      "text": "не устанавливать различные средства рекламы без разрешения ответственных работников;"
+     },
+     "en": {
+      "text": "not install various advertising media without the permission of the responsible employees;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "kasbiy faoliyati davomida oʻzlariga maʻlum boʻlgan, ularning oshkor etilganligi uchun qonun hujjatlarida belgilangan tartibda javob beriladigan axborotning saqlanishi va maxfiyligini taʻminlash yuzasidan barcha choralarni koʻrishga; sogʻlom turmush tarzini yuritish va atrofdagilaming sogʻligʻini saqlashga gʻamxoʻrlik qilish, estetik va ekologik madaniyatning oshishiga koʻmaklashishga; tanqidiy mulohazalarni bildirishga va obʻektiv qaror qabul qilishga, oʻz xato va kamchiliklarini anglash va bartaraf etishga;"
+     },
+     "ru": {
+      "text": "принимать все меры по обеспечению сохранности и конфиденциальности информации, ставшей им известной в ходе профессиональной деятельности, за разглашение которой предусмотрена ответственность в порядке, установленном законодательством; вести здоровый образ жизни и заботиться о здоровье окружающих, содействовать повышению эстетической и экологической культуры; высказывать критические суждения и принимать объективные решения, осознавать и устранять свои ошибки и недостатки;"
+     },
+     "en": {
+      "text": "take all measures to ensure the safekeeping and confidentiality of information that has become known to them in the course of their professional activity and for whose disclosure responsibility is provided under the procedure established by law; lead a healthy lifestyle and care for the health of those around them, and contribute to raising aesthetic and ecological culture; express critical opinions and make objective decisions, and recognize and correct their own mistakes and shortcomings;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Moddiy jihatdan yaxshi taʻminlanganligini turli yoʻllar bilan ataylab koʻz-koʻz qilmaslikka; Axborot-resurs markazi xodimlari bilan xushmuomala boʻlishga, kitoblar va jihozlarga ehtiyotkorona munosabatda boʻlishga, u yerda uyali aloqa vositalarini oʻchirib qoʻyish yoki ovozsiz rejimga qoʻyishga, baland ovozda soʻzlashmaslik va atrofdagilarga xalaqit bermaslikka, oziq-ovqat isteʻmol qilmaslik, qogʻoz, saqich va boshqa chiqindilarni qoldirib ketmaslikka, kitoblarni olish va topshirish tartib-qoidalariga rioya qilishga;"
+     },
+     "ru": {
+      "text": "не выставлять напоказ различными способами свою материальную обеспеченность; быть вежливыми с работниками информационно-ресурсного центра, бережно относиться к книгам и оборудованию, отключать там средства мобильной связи или переводить их в беззвучный режим, не разговаривать громко и не мешать окружающим, не принимать пищу, не оставлять бумагу, жевательную резинку и иной мусор, соблюдать порядок получения и сдачи книг;"
+     },
+     "en": {
+      "text": "not deliberately flaunt their material prosperity in various ways; be courteous to the staff of the information and resource center, treat books and equipment with care, switch mobile devices off or to silent mode there, not talk loudly or disturb those around them, not eat, not leave paper, chewing gum, or other waste behind, and follow the rules for borrowing and returning books;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Sport majmuasiga sport kiyimi va poyabzalida kirishga;"
+     },
+     "ru": {
+      "text": "входить в спортивный комплекс в спортивной одежде и обуви;"
+     },
+     "en": {
+      "text": "enter the sports complex in sportswear and sports footwear;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Sport inventarlariga nisbatan ehtiyotkorona munosabatda boʻlishga;"
+     },
+     "ru": {
+      "text": "бережно относиться к спортивному инвентарю;"
+     },
+     "en": {
+      "text": "treat sports equipment with care;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mashgʻulotlardan keyin sport inventarlarini belgilangan joylarga qaytatopshirishga;"
+     },
+     "ru": {
+      "text": "после занятий возвращать спортивный инвентарь на установленные места;"
+     },
+     "en": {
+      "text": "return sports equipment to the designated places after sessions;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Sport majmuasining belgilangan tartib-qoidalariga rioya qilishga;"
+     },
+     "ru": {
+      "text": "соблюдать установленные правила спортивного комплекса;"
+     },
+     "en": {
+      "text": "observe the established rules of the sports complex;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut auditoriyalari, binolari va binolarga tutashgan hududda tozalikni saqlashga;"
+     },
+     "ru": {
+      "text": "поддерживать чистоту в аудиториях, зданиях института и на прилегающей к зданиям территории;"
+     },
+     "en": {
+      "text": "keep the lecture rooms and buildings of the institute and the territory adjoining the buildings clean;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hududni ifloslantirmaslik, chiqindilarni joylarda qoʻyilgan maxsus qutilarga tashlashga;"
+     },
+     "ru": {
+      "text": "не загрязнять территорию, выбрасывать отходы в специальные урны, установленные на местах;"
+     },
+     "en": {
+      "text": "not pollute the territory and put waste into the special bins provided;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "shaxsiy avtomobilni taqiqlangan joyda qoldirmaslik, yoʻl harakati qoidalarini buzmaslik va mensimaslikka (beparvo boʻlish), shuningdek, transport vositalaridan foydalanishda xavf- xatar yaratmaslikka; ish (oʻqish)dan tashqari vaqtda umumiy qabul qilingan odob-axloq normalariga rioya etishlari, gʻayri ijtimoiy xatti-harakatlarga yo'1 qoʻymaslikka majbur."
+     },
+     "ru": {
+      "text": "не оставлять личный автомобиль в запрещённом месте, не нарушать и не пренебрегать (проявлять беспечность) правилами дорожного движения, а также не создавать опасность при использовании транспортных средств; вне работы (учёбы) соблюдать общепринятые нормы этики, не допускать антиобщественных поступков."
+     },
+     "en": {
+      "text": "not leave a personal car in a prohibited place, not violate or disregard (be careless about) traffic rules, and not create danger when using vehicles; outside work (study), observe generally accepted norms of ethics and not allow antisocial conduct."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "27-modda. Odob-axloqqa oid qoʻshimcha talablar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 27. Дополнительные этические требования",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 27. Additional Ethical Requirements",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "A) talabalar:"
+     },
+     "ru": {
+      "text": "А) студенты:"
+     },
+     "en": {
+      "text": "A) Students:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "nutq madaniyatini doimiy takomillashtirib borishga;"
+     },
+     "ru": {
+      "text": "постоянно совершенствовать культуру речи;"
+     },
+     "en": {
+      "text": "constantly improve their speech culture;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabalarning oʻz-oʻzini boshqarish tizimini faol qoʻllab-quwatlash va mustahkamlash, ijodiy faoliyatni rivojlantirish va jamoaviy madaniyatni oʻstirishga;"
+     },
+     "ru": {
+      "text": "активно поддерживать и укреплять систему студенческого самоуправления, развивать творческую деятельность и повышать коллективную культуру;"
+     },
+     "en": {
+      "text": "actively support and strengthen the student self-government system, develop creative activity, and raise collective culture;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "pedagog xodim bilan boshqa talabalarning bahosini muhokama qilmaslikka;"
+     },
+     "ru": {
+      "text": "не обсуждать с педагогическим работником оценки других студентов;"
+     },
+     "en": {
+      "text": "not discuss other students' grades with a teacher;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "yozma ishlarni himoya qilish va reyting nazorutiga doir tartib-qoidani bajarish vaqtida chetdan yordam olmaslik, o' zgalar ga yordam ko' rsatmaslikka;"
+     },
+     "ru": {
+      "text": "при защите письменных работ и выполнении порядка рейтингового контроля не получать посторонней помощи и не оказывать помощь другим;"
+     },
+     "en": {
+      "text": "not receive outside help when defending written work or complying with the procedure for rating control, and not give help to others;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "boshqa shaxslar tomonidan tayyorlangan topshiriqlar yoki yozma ishlarni oʻz nomidan topshirmaslikka;"
+     },
+     "ru": {
+      "text": "не сдавать от своего имени задания или письменные работы, подготовленные другими лицами;"
+     },
+     "en": {
+      "text": "not submit in their own name assignments or written work prepared by other persons;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mashgʻulotlami sababsiz oʻtkazib yubormaslikka va darslarga sababsiz kechikib kelmaslikka;"
+     },
+     "ru": {
+      "text": "не пропускать занятия без причины и не опаздывать на занятия без причины;"
+     },
+     "en": {
+      "text": "not skip classes without reason and not be late for classes without reason;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻquv mashgʻulotlari vaqtida institut hududida behuda yurmaslikka;"
+     },
+     "ru": {
+      "text": "не ходить без дела по территории института во время учебных занятий;"
+     },
+     "en": {
+      "text": "not wander aimlessly around the institute's territory during classes;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "dars mashgʻulotlari oʻtilayotgan vaqtda fakultet dekanlari, magistratura boʻlimi boshligʻining ruxsatisiz Institut hududidan ketib qolmaslikka;"
+     },
+     "ru": {
+      "text": "не покидать территорию института во время занятий без разрешения деканов факультетов и начальника отдела магистратуры;"
+     },
+     "en": {
+      "text": "not leave the institute's territory during classes without the permission of the deans of faculties or the head of the master's department;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "xodim, talaba yoki doktorant bi lan nizoli v aziy at yuzaga kel ganda oʻz hissiyotlarini jilovlashga va mazkur vaziyatni koʻrib chiqish boʻyicha tegishli boʻlinma va xodimlarga (tyutor, dekan, Oʻzbekiston yoshlar ittifoqi boshlangʻich tashkiloti, Maʻnaviyat va maʻrifat markazi) murojaat qiIishga;"
+     },
+     "ru": {
+      "text": "при возникновении конфликтной ситуации с работником, студентом или докторантом сдерживать свои эмоции и обращаться по рассмотрению этой ситуации в соответствующие подразделения и к соответствующим работникам (тьютор, декан, первичная организация Союза молодёжи Узбекистана, Центр духовности и просветительства);"
+     },
+     "en": {
+      "text": "when a conflict situation arises with an employee, student, or doctoral candidate, restrain their emotions and apply to the relevant subdivisions and employees (tutor, dean, the primary organization of the Youth Union of Uzbekistan, the Center for Spirituality and Enlightenment) to have the situation considered;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻquv jarayonida faol, eʻtiborli boʻlishga va pedagog xodimning koʻrsatmalariga qatʻiy rioya qilishga;"
+     },
+     "ru": {
+      "text": "быть активными и внимательными в учебном процессе и неукоснительно выполнять указания педагогического работника;"
+     },
+     "en": {
+      "text": "be active and attentive in the educational process and strictly follow the teacher's instructions;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "dars vaqtida gaplashmaslik hamda dars mashgʻulotiga taalluqli boʻlmagan ishlar bilan shug' ullanmaslikka;"
+     },
+     "ru": {
+      "text": "не разговаривать во время занятия и не заниматься делами, не относящимися к занятию;"
+     },
+     "en": {
+      "text": "not talk during class and not do things unrelated to the class;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "jihozlarga ehtiyotkorona munosabatda boʻlish, stol va stullarga yozmaslikka;"
+     },
+     "ru": {
+      "text": "бережно относиться к оборудованию, не писать на столах и стульях;"
+     },
+     "en": {
+      "text": "treat equipment with care and not write on desks and chairs;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "qogʻoz, saqich va boshqa keraksiz narsalarni auditoriyada qoldirib ketmaslikka;"
+     },
+     "ru": {
+      "text": "не оставлять в аудитории бумагу, жевательную резинку и другие ненужные предметы;"
+     },
+     "en": {
+      "text": "not leave paper, chewing gum, or other unneeded items in the lecture room;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mashgʻulotlar davomida ovqatlanmaslik, saqich chaynamaslikka, shuningdek, shaxsiy kompyuter va boshqa kommunikatsiya vositalaridan faqat pedagog xodim ruxsati bilan foydalanishga;"
+     },
+     "ru": {
+      "text": "не принимать пищу и не жевать жевательную резинку во время занятий, а также пользоваться личным компьютером и другими средствами коммуникации только с разрешения педагогического работника;"
+     },
+     "en": {
+      "text": "not eat or chew gum during classes, and use personal computers and other means of communication only with the teacher's permission;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "pedagog xodimga mashgʻulotlar vaqtida savol yoki iltimos bilan qoʻl koʻtargan holda va ruxsat berilganidan soʻng murojaat qilishga; umumiy ovqatlanish joylarida taomlarga buyurtma berish va olishda navbat tartibiga hamda belgilangan qoidalarga rioya qilishga;"
+     },
+     "ru": {
+      "text": "обращаться к педагогическому работнику во время занятий с вопросом или просьбой, подняв руку и после получения разрешения; соблюдать очерёдность и установленные правила при заказе и получении блюд в местах общественного питания;"
+     },
+     "en": {
+      "text": "address the teacher during classes with a question or request by raising a hand and after permission has been given; observe the order of the queue and the established rules when ordering and receiving food in public catering places;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talabalar turar joyi Ichki tartib qoidasiga qatʻiy rioya qilishga;"
+     },
+     "ru": {
+      "text": "строго соблюдать Правила внутреннего распорядка студенческого общежития;"
+     },
+     "en": {
+      "text": "strictly follow the Internal Regulations of the student residence;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "jamoat xavfsizlik manfaatlaridan kelib chiqib, imkon darajasida oliy taʻlim muassasasiga jamoat transportida kelishga;"
+     },
+     "ru": {
+      "text": "исходя из интересов общественной безопасности, по возможности добираться до высшего образовательного учреждения общественным транспортом;"
+     },
+     "en": {
+      "text": "for the sake of public safety, travel to the higher education institution by public transport where possible;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "B) xodimlar:"
+     },
+     "ru": {
+      "text": "Б) работники:"
+     },
+     "en": {
+      "text": "B) Employees:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻz xizmat joyidagi tartib-intizomga va Institut ichki tartib qoidalariga rioya qilishga;"
+     },
+     "ru": {
+      "text": "соблюдать порядок и дисциплину на своём рабочем месте и Правила внутреннего трудового распорядка института;"
+     },
+     "en": {
+      "text": "observe order and discipline at their workplace and the institute's Internal Regulations;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "taʻtildan oldin yoki mehnat shartnomasi bekor qilinganda oʻz xizmat joyini talabga javob beradigan holatda qoldirishga, oʻz zimmasidagi orgtexnika vositalari va boshqa materiallarni, oʻziga topshirilgan, lekin hali yakunlanmagan vazifalarni boshqa shaxsga topshirmaslikka;"
+     },
+     "ru": {
+      "text": "перед отпуском или при расторжении трудового договора оставлять своё рабочее место в надлежащем состоянии, не передавать другому лицу закреплённую за ним оргтехнику и другие материалы, а также порученные ему, но ещё не завершённые задачи;"
+     },
+     "en": {
+      "text": "before leave or on termination of the employment contract, leave their workplace in a proper condition, and not hand over to another person the office equipment and other materials in their charge or tasks entrusted to them but not yet completed;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "telefon orqali muloqot qilishda muomala madaniyati va axborot taqdim etish qoidasiga rioya qilishga fiumladan, suhbatni eng avval rasmiy tarzda salomlashishdan boshlab, soʻng oʻz xizmat muassasasi, lavozimi hamda familiyasi, ismi, sharifini aytib, maqsadga oʻtish lozim,taqdim etilayotgan axborot maksimal qisqa, loʻnda va aniq boʻlishi kerak, soʻralayotgan maʻlumot suhbat jarayonida izlanishi tufayli telefon tarmogʻini band qilishga yo'1 qoʻyilmaydi, zarurat boʻlsa, qayta qoʻngʻiroqni amalga oshirish mumkin); yo shlarni vatanparvarl ik ruhida tarbiyalashga;"
+     },
+     "ru": {
+      "text": "соблюдать культуру общения и правила предоставления информации при телефонных разговорах (в том числе: разговор следует начинать с официального приветствия, затем назвать своё учреждение, должность, фамилию, имя, отчество и перейти к цели; предоставляемая информация должна быть максимально краткой, лаконичной и точной; не допускается занимать телефонную линию поиском запрошенной информации во время разговора, при необходимости можно перезвонить); воспитывать молодёжь в духе патриотизма;"
+     },
+     "en": {
+      "text": "observe communication etiquette and the rules for providing information in telephone conversations (including: the conversation should begin with an official greeting, followed by stating the institution, position, surname, first name, and patronymic, and then the purpose; the information provided must be as brief, concise, and precise as possible; tying up the telephone line while searching for requested information during the conversation is not allowed, and if necessary a call back can be made); educate young people in the spirit of patriotism;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "yoshlar orasida sogʻlom turmush tarzini qaror toptirish, ularni ichkilikbozlik va giyohvandlik illatlaridan, boshqa turli halokatli tahdidlar hamda biz uchun yot boʻlgan ekstremistik taʻsirlardan, \"ommaviy madaniyat\" xurujlaridan ogoh etib borishga;"
+     },
+     "ru": {
+      "text": "укреплять среди молодёжи здоровый образ жизни, предостерегать её от пьянства и наркомании, других губительных угроз, а также чуждых нам экстремистских влияний и натиска «массовой культуры»;"
+     },
+     "en": {
+      "text": "establish a healthy lifestyle among young people and warn them against drunkenness and drug addiction, other destructive threats, extremist influences alien to us, and the onslaught of \"mass culture\";"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "taʻlim oluvchilarni ma' naviy-axloqiy tarbiyalashda va ma' rifiy ishlarning samarali shakl hamda uslublarini ishlab chiqishga koʻmaklashishga;"
+     },
+     "ru": {
+      "text": "содействовать духовно-нравственному воспитанию обучающихся и выработке эффективных форм и методов просветительской работы;"
+     },
+     "en": {
+      "text": "contribute to the spiritual and moral education of learners and to the development of effective forms and methods of educational work;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻz xizmat vazifalarrni vijdonan bajarishga shubha tugʻdiradigan xatti-harakatlarni qilmaslikka, talabalar bilan oʻz hamkasblarini kasbiy ya shaxsiy kamchiliklarini muhokama qilmaslikka;"
+     },
+     "ru": {
+      "text": "не совершать действий, вызывающих сомнение в добросовестном исполнении своих служебных обязанностей, не обсуждать со студентами профессиональные и личные недостатки своих коллег;"
+     },
+     "en": {
+      "text": "not commit acts that cast doubt on the conscientious performance of their official duties, and not discuss the professional and personal shortcomings of their colleagues with students;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabalarni asossiz oʻquv mashgʻulotlaridan chiqarib yubormaslikka, shuningdek, talabaga institut talabalar safidan chetlashtirish (kursdan kursga qoldirish) yoki talabaning majburan oʻqishdan voz kechishiga undash bilan qoʻrqitmaslikka, uning asossiz talabalar safidan chetlashtirilishiga (kursdan-kursga qoldirilishiga) olib kelmaslikka;"
+     },
+     "ru": {
+      "text": "не исключать студентов с занятий без оснований, а также не запугивать студента отчислением из числа студентов института (оставлением на второй год) или принуждением студента к отказу от учёбы, не допускать его необоснованного отчисления из числа студентов (оставления на второй год);"
+     },
+     "en": {
+      "text": "not remove students from classes without grounds, not threaten a student with expulsion from the institute's student body (repeating a year) or with being pushed into giving up their studies, and not cause a student to be expelled (made to repeat a year) without grounds;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "akademik guruhda (kursda) talabalar xulqining umumiy madaniy holati haqida fakultet dekanlariga kerak boʻlgan hollarda taʻsir choralari koʻrish lozimligi yuzasidan yozma maʻlumot taqdim etish kabi talablarni bajaradilar."
+     },
+     "ru": {
+      "text": "а также выполнять такие требования, как представление деканам факультетов при необходимости письменной информации об общем культурном состоянии поведения студентов в академической группе (на курсе) и о необходимости принятия мер воздействия."
+     },
+     "en": {
+      "text": "and meet such requirements as providing the deans of faculties, where necessary, with written information on the general cultural state of students' conduct in the academic group (course) and on the need to take measures of influence."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "8-bob. Ragʻbatlantirish va chora koʻrish tartibi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 8. Порядок поощрения и принятия мер",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 8. Procedure for Encouragement and Taking Measures",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "28-modda. Xodim va talabalarni ragʻbatlantirish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 28. Поощрение работников и студентов",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 28. Encouragement of Employees and Students",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻquv yili davomida mazkur Kodeksga toʻla rioya qilgan, Institutda yuksak maʻnaviy-axloqiy muhitning yanada qaror topishi va mustahkamlanishiga oʻz hissasini qoʻshgan xodim va talabalar rahbariyat, fakultet dekanlari, kafedra mudirlari va boshqa tarkibiy boʻlinma rahbarlari tavsiyasiga binoan belgilangan tartibda moddiy yoki maʻnaviy ragʻbatlantirilishlari mumkin."
+     },
+     "ru": {
+      "text": "Работники и студенты, в течение учебного года полностью соблюдавшие настоящий Кодекс и внёсшие свой вклад в дальнейшее утверждение и укрепление в институте высокой духовно-нравственной атмосферы, могут быть материально или морально поощрены в установленном порядке по рекомендации руководства, деканов факультетов, заведующих кафедрами и руководителей других структурных подразделений."
+     },
+     "en": {
+      "text": "Employees and students who have fully complied with this Code during the academic year and contributed to further establishing and strengthening a high spiritual and moral atmosphere at the institute may be given material or moral encouragement in the established manner on the recommendation of the leadership, faculty deans, heads of departments, and heads of other structural subdivisions."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "29-modda . Kodeksga rioya",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 29. Соблюдение Кодекса",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 29. Compliance with the Code",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Jarayonlar uchun ahamiyati qilishning attestatsiya va boshqa Xodimlar tomonidan mazkur kodeksga ioya etilishi attestatsiyalar oʻtkazishda, yuqori va boshqa lavozimlarga tayinlash (kareraviy oʻsish) uchun kadrlar zaxirasini shakllantirishda hisobga olinadi."
+     },
+     "ru": {
+      "text": "Соблюдение работниками настоящего Кодекса учитывается при проведении аттестаций, а также при формировании кадрового резерва для назначения на вышестоящие и иные должности (карьерного роста)."
+     },
+     "en": {
+      "text": "Employees' compliance with this Code is taken into account when conducting attestations and when forming the personnel reserve for appointment to senior and other positions (career advancement)."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "30-modda. Kodeks qoidalarini buzganlik uchun javobgarlik",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 30. Ответственность за нарушение положений Кодекса",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 30. Liability for Violation of the Provisions of the Code",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut xodim, talaba va doktoranti tomonidan mazkur Kodeks qoidalarining buzilishi uni belgilangan tartibda javobgarlikka tortishga asos boʻlib xizmat qiladi."
+     },
+     "ru": {
+      "text": "Нарушение работником, студентом и докторантом института положений настоящего Кодекса служит основанием для привлечения его к ответственности в установленном порядке."
+     },
+     "en": {
+      "text": "A violation of the provisions of this Code by an employee, student, or doctoral candidate of the institute serves as grounds for holding them liable in the established manner."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "31-modda . Kodeks va ichki tartib-qoidalarnin g oʻzaro munosabati",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 31. Соотношение Кодекса и правил внутреннего распорядка",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 31. Relationship Between the Code and the Internal Regulations",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba va doktorantlar mazkur Kodeks qoidalarini buzganida, ularga nisbatan institut Ichki tartib qoidalarining VII bobida (Mehnat va oʻqish intizomini buzganlik uchun javobgarlik) qayd etilgan choralar qoʻllaniladi."
+     },
+     "ru": {
+      "text": "При нарушении работниками, студентами и докторантами положений настоящего Кодекса к ним применяются меры, указанные в главе VII Правил внутреннего трудового распорядка института (Ответственность за нарушение трудовой и учебной дисциплины)."
+     },
+     "en": {
+      "text": "When employees, students, and doctoral candidates violate the provisions of this Code, the measures set out in Chapter VII of the institute's Internal Regulations (Liability for violation of labor and study discipline) are applied to them."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "9-bob. Odob-axloq komissiyasi faoliyatini tashkil etish",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 9. Организация деятельности Комиссии по этике",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 9. Organization of the Activities of the Ethics Commission",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "32-modda. Odob-axloq komissiyasi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 32. Комиссия по этике",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 32. Ethics Commission",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur Kodeks normalarining xodim, talabava doktorantlar tomonidan buzilishiga oid masalalar, qoida tariqasida, Odob-axloq komissiyasi tomonidan koʻrib chiqilishi mumkin."
+     },
+     "ru": {
+      "text": "Вопросы, связанные с нарушением норм настоящего Кодекса работниками, студентами и докторантами, как правило, могут рассматриваться Комиссией по этике."
+     },
+     "en": {
+      "text": "Matters concerning violations of the norms of this Code by employees, students, and doctoral candidates may, as a rule, be considered by the Ethics Commission."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Shuningdek, Odob-axloq komissiyasi, qoida tariqasida, institut rektorining koʻrsatmasi boʻyicha;"
+     },
+     "ru": {
+      "text": "Кроме того, Комиссия по этике, как правило, может рассматривать такие вопросы также по поручению ректора института;"
+     },
+     "en": {
+      "text": "In addition, the Ethics Commission may, as a rule, consider such matters on the instruction of the rector of the institute;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "xizmat tekshiruvi natijalariga koʻra;"
+     },
+     "ru": {
+      "text": "по результатам служебной проверки;"
+     },
+     "en": {
+      "text": "following the results of an official inspection;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻz tashabbusi bilan;"
+     },
+     "ru": {
+      "text": "по собственной инициативе;"
+     },
+     "en": {
+      "text": "on its own initiative;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "institut xodim, talaba va doktorantlaridan, shuningdek, institutga aloqa kanallari orqali kelib tushgan axborot asosida ham ushbu turdagi masalalarni koʻrib chiqishi mumkin."
+     },
+     "ru": {
+      "text": "на основании информации, поступившей от работников, студентов и докторантов института, а также по каналам связи в институт."
+     },
+     "en": {
+      "text": "on the basis of information received from employees, students, and doctoral candidates of the institute, and through communication channels to the institute."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq komissiyasi kamida 5 kishidan iborat tarkibda tuziladi. Odob-axloq komissiyasining maqsadi, vazifalari, funksiyalari, huquqlari va uning faoliyatini tashkil etish bilan bogʻliq boshqa masalalar institut rektori tomonidan tasdiqlangan Odob-axloq komissiyasi to' gʻrisidagi nizomda belgilanadi."
+     },
+     "ru": {
+      "text": "Комиссия по этике создаётся в составе не менее 5 человек. Цели, задачи, функции, права Комиссии по этике и другие вопросы, связанные с организацией её деятельности, определяются в Положении о Комиссии по этике, утверждённом ректором института."
+     },
+     "en": {
+      "text": "The Ethics Commission is formed with at least 5 members. The purpose, tasks, functions, and rights of the Ethics Commission and other matters connected with organizing its activities are determined in the Regulation on the Ethics Commission approved by the rector of the institute."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "33-modda . Odob-axloq komissiyasi xulosasi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 33. Заключение Комиссии по этике",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 33. Conclusion of the Ethics Commission",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksining buzilishi holatlarini Odob-axloq komissiyasi tomonidan koʻrib chiqish natijalari boʻyicha intizomiy yoki boshqa tarzdagi qoida buzilishlarining mavjudligi (mavjud emasligi) toʻgʻrisida xulosa chiqariladi. Ayni vaqtda institut rektoriga koʻrib chiqishi uchun qoidabuzar xodim, talaba va doktorantni javobgarlikka tortish toʻgʻrisida taklif kiritiladi. Yoʻl qoʻyilgan qoida buzilishining xususiyatini hisobga olgan holda Odob-axloq komissiyasi xodim, talaba va doktorantga nisbatan Odob-axloq kodeksining buzilishiga yoʻl qoʻymaslik toʻgʻrisidagi ogohlantirish bilan cheklanishi mumkin."
+     },
+     "ru": {
+      "text": "По результатам рассмотрения Комиссией по этике случаев нарушения Кодекса этики выносится заключение о наличии (отсутствии) дисциплинарных или иных нарушений правил. Одновременно ректору института для рассмотрения вносится предложение о привлечении нарушившего правила работника, студента или докторанта к ответственности. С учётом характера допущенного нарушения Комиссия по этике может ограничиться предупреждением работнику, студенту или докторанту о недопустимости нарушения Кодекса этики."
+     },
+     "en": {
+      "text": "Following the Ethics Commission's consideration of cases of violation of the Code of Ethics, a conclusion is issued on the presence (absence) of disciplinary or other violations of the rules. At the same time, a proposal to hold the offending employee, student, or doctoral candidate liable is submitted to the rector of the institute for consideration. Taking into account the nature of the violation committed, the Ethics Commission may limit itself to warning the employee, student, or doctoral candidate against violating the Code of Ethics."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Odob-axloq kodeksiga rioya etmagan xodim, talaba va doktorantni intizomiy javobgarlikka tortish boʻyicha buyruq loyihasi fakultet dekanlari va magistratura boʻlimi (talabalarga nisbatan), kadrlar boʻlimi (xodimlar va doktorantlarga nisbatan) tomonidan tayyorlanadi."
+     },
+     "ru": {
+      "text": "Проект приказа о привлечении к дисциплинарной ответственности работника, студента или докторанта, не соблюдавшего Кодекс этики, готовится деканами факультетов и отделом магистратуры (в отношении студентов), отделом кадров (в отношении работников и докторантов)."
+     },
+     "en": {
+      "text": "The draft order on holding an employee, student, or doctoral candidate who has not complied with the Code of Ethics to disciplinary liability is prepared by the deans of faculties and the master's department (for students) and the personnel department (for employees and doctoral candidates)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba ya doktorantlar oʻzlari yoʻl qoʻygan qoida buzilishi, qoida buzilishining koʻrib chiqilishi jarayoni haqida axborotni olish va oʻzini himoya qilish uchun dalillarni taqdim etish, shuningdek, institut qarorlari yuzasidan belgilangan tartibda shikoyat qilish huquqiga egadirlar."
+     },
+     "ru": {
+      "text": "Работники, студенты и докторанты имеют право получать информацию о допущенном ими нарушении правил и о процессе рассмотрения нарушения, представлять доказательства для своей защиты, а также обжаловать решения института в установленном порядке."
+     },
+     "en": {
+      "text": "Employees, students, and doctoral candidates have the right to receive information about the violation they committed and about the process of considering it, to present evidence in their own defense, and to appeal the institute's decisions in the established manner."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "34-modda. Jamoatchilik nazorati",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 34. Общественный контроль",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 34. Public Oversight",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodim, talaba yoki doktorantning xulq-atvori ustidan jamoatchilik nazoratini taʻminlash maqsadida, mazkur Kodeksga rioya etmaganlik holatlari Kasaba uyushmasi qoʻmitasi, Xotin-qizlar masalalari boʻyicha maslahat kengashlari va Oʻzbekiston yoshlar ittifoqi boshlangʻich tashkilotida ham muhokama qilinishi amaliyoti joriy etilishi mumkin."
+     },
+     "ru": {
+      "text": "В целях обеспечения общественного контроля за поведением работника, студента или докторанта может быть введена практика обсуждения случаев несоблюдения настоящего Кодекса также в комитете профсоюза, консультативных советах по вопросам женщин и в первичной организации Союза молодёжи Узбекистана."
+     },
+     "en": {
+      "text": "In order to ensure public oversight of the conduct of an employee, student, or doctoral candidate, the practice may be introduced of also discussing cases of non-compliance with this Code in the trade union committee, the advisory councils on women's issues, and the primary organization of the Youth Union of Uzbekistan."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "10-bob. Yakuniy qoida",
+      "level": 2
+     },
+     "ru": {
+      "text": "Глава 10. Заключительное положение",
+      "level": 2
+     },
+     "en": {
+      "text": "Chapter 10. Final Provision",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "35-modda. Kodeksning kuchga kirishi hamda unga oʻzgartish va qoʻsh imchalar kiritish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Статья 35. Вступление Кодекса в силу, внесение в него изменений и дополнений",
+      "level": 3
+     },
+     "en": {
+      "text": "Article 35. Entry into Force of the Code and Introduction of Amendments and Additions",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur kodeks institut Ilmiy Kengashi tomonidan tasdiqlanganidan soʻng kuchga kiradi va unga oʻzgartish hamda qoʻshimchalar kiritish institut Ilmiy Kengashi qaroriga binoan amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Настоящий Кодекс вступает в силу после утверждения Научным советом института, а внесение в него изменений и дополнений осуществляется на основании решения Научного совета института."
+     },
+     "en": {
+      "text": "This Code enters into force after it is approved by the institute's Scientific Council, and amendments and additions to it are made on the basis of a decision of the institute's Scientific Council."
+     }
+    }
+   }
+  ]
+ }
+]

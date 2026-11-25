@@ -60,6 +60,32 @@ def make_image(path: str, alt_text: str = "") -> Image:
     return image
 
 
+def reuse_or_make_image(path: str, alt_text: str = "") -> Image:
+    """make_image(), unless the library already holds this very file (same name stem, same size): then that row (a picture used on two pages is one row)."""
+    stem, extension = os.path.splitext(os.path.basename(path))
+    size = os.path.getsize(path)
+    for image in Image.objects.filter(file__contains=stem, file__endswith=extension):
+        try:
+            if image.file.size == size:
+                return image
+        except (OSError, ValueError):
+            continue
+    return make_image(path, alt_text)
+
+
+def image_from_media(media_path: str, alt_text: str = "") -> Image:
+    """The Image row of a file that already lies in the media folder (`media_path` relative to MEDIA_ROOT, e.g. "migrated/img/x.jpg"):
+    the existing row of that file, or a new row pointing at the file (it is not copied). Raises FileNotFoundError if the file is not there."""
+    existing = Image.objects.filter(file=media_path).first()
+    if existing:
+        return existing
+    if not os.path.isfile(os.path.join(str(settings.MEDIA_ROOT), media_path)):
+        raise FileNotFoundError(f"{media_path} is not in {settings.MEDIA_ROOT}")
+    image = Image(file=media_path, alt_text=alt_text)
+    image.save()
+    return image
+
+
 def replace_blocks(page: Page, order: int, count: int, new_blocks: list[dict]) -> list[int]:
     """Replaces the `count` consecutive blocks starting at `order` ({"block_type", "data"} for each new one; count 0 only inserts, an empty
     list only deletes); later blocks move to make or close the room. Returns the new primary keys. Every new block is validated
