@@ -1,0 +1,122 @@
+"""The toolkit every content script (deploy/content/*/apply.py) is built on: fingerprints, block replacement, backups, the dry/apply/undo
+skeleton, pictures from files -- and the guarantee that the typed block structures the layout engine reads survive the admin editor."""
+import os
+
+import pytest
+from PIL import Image as PILImage
+
+from apps.content import migration_tools as tools
+from apps.content.admin_content import blocks_to_html, write_blocks_from_html
+from apps.content.models import ContentBlock, Page
+from apps.media_lib.models import Image
+
+LANGS = ("uz", "ru", "en")
+
+
+def _typed(block_type, make):
+    return {"block_type": block_type, "data": {lang: make(lang) for lang in LANGS}}
+
+
+def _paragraph(text):
+    return _typed("paragraph", lambda lang: {"text": f"{text} {lang}"})
+
+
+def _add(page, order, spec):
+    block = ContentBlock(page=page, order=order, block_type=spec["block_type"], data=spec["data"])
+    block.full_clean()
+    block.save()
+    return block
+
+
+@pytest.fixture
+def page(db):
+    return Page.objects.create(slug="t")
+
+
+@pytest.fixture
+def backup_dir(tmp_path, monkeypatch):
+    monkeypatch.setenv("BACKUP_DIR", str(tmp_path))
+    return tmp_path
+
+
+def _png(path, size=(40, 30)):
+    PILImage.new("RGB", size, (200, 30, 30)).save(path)
+    return str(path)
+
+
+def test_replace_block_shifts_later_orders(page):
+    for order in (1, 2, 3, 4):
+        _add(page, order, _paragraph(f"b{order}"))
+    pks = tools.replace_block(page, 2, [_paragraph("x"), _paragraph("y"), _paragraph("z")])
+    assert len(pks) == 3
+    texts = [b.data["uz"]["text"] for b in page.blocks.order_by("order")]
+    assert texts == ["b1 uz", "x uz", "y uz", "z uz", "b3 uz", "b4 uz"]
+    assert [b.order for b in page.blocks.order_by("order")] == [1, 2, 3, 4, 5, 6]
+
+
+def test_fingerprint_ok_detects_admin_edit(page):
+    block = _add(page, 1, _paragraph("a"))
+    expected = {lang: tools.sha(block.data[lang]) for lang in LANGS}
+    assert tools.fingerprint_ok(block, expected)
+    block.data["ru"]["text"] = "edited in the admin"
+    assert not tools.fingerprint_ok(block, expected)
+
+
+def test_backup_second_apply_is_refused(backup_dir):
+    backup = tools.Backup("unit-test")
+    assert not backup.exists()
+    backup.save(rows=[1, 2])
+    assert backup.exists() and backup.load()["rows"] == [1, 2]
+    backup.retire()
+    assert not backup.exists()
+
+
+def test_run_modes_dry_writes_nothing_apply_once_undo_restores(db, backup_dir, monkeypatch):
+    calls = []
+
+    def build(apply):
+        calls.append(("build", apply))
+        return {"made": [7]} if apply else {}
+
+    def undo(rows):
+        calls.append(("undo", rows["made"]))
+
+    monkeypatch.setenv("MODE", "dry")
+    tools.run_modes("unit-test", build, undo)
+    assert calls == [("build", False)] and not tools.Backup("unit-test").exists()
+
+    monkeypatch.setenv("MODE", "apply")
+    tools.run_modes("unit-test", build, undo)
+    assert tools.Backup("unit-test").exists()
+    with pytest.raises(SystemExit):
+        tools.run_modes("unit-test", build, undo)  # the second apply is refused
+    assert calls.count(("build", True)) == 1
+
+    monkeypatch.setenv("MODE", "undo")
+    tools.run_modes("unit-test", build, undo)
+    assert ("undo", [7]) in calls and not tools.Backup("unit-test").exists()
+
+
+def test_make_image_reads_the_real_size(db, tmp_path):
+    image = tools.make_image(_png(tmp_path / "a.png", (40, 30)), "alt")
+    assert (image.width, image.height, image.alt_text) == (40, 30, "alt")
+    assert Image.objects.filter(pk=image.pk).exists()
+
+
+def test_typed_structure_survives_the_admin_editor(page, tmp_path):
+    one = tools.make_image(_png(tmp_path / "1.png"), "one")
+    two = tools.make_image(_png(tmp_path / "2.png"), "two")
+    specs = [
+        _typed("heading", lambda lang: {"text": f"Section {lang}", "level": 2}),
+        _paragraph("intro"),
+        _typed("heading", lambda lang: {"text": f"Article {lang}", "level": 3}),
+        _typed("list", lambda lang: {"items": [f"a {lang}", f"b {lang}"]}),
+        _typed("image", lambda lang: {"image_id": one.pk, "alt": f"one {lang}"}),
+        _typed("image", lambda lang: {"image_id": two.pk, "alt": f"two {lang}"}),
+    ]
+    for order, spec in enumerate(specs, start=1):
+        _add(page, order, spec)
+    before = [(b.block_type, b.data) for b in page.blocks.order_by("order")]
+    write_blocks_from_html(page, {lang: blocks_to_html(page, lang) for lang in LANGS})
+    after = [(b.block_type, b.data) for b in page.blocks.order_by("order")]
+    assert after == before
