@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import DocumentCard from "./DocumentCard";
 
 // The browser's own PDF viewer builds its toolbar after the frame has loaded, which pushes the page it shows
 // down by the toolbar's height. That happens inside the frame, but Lighthouse adds it to the page's layout shift
@@ -9,7 +10,7 @@ const VIEWER_SETTLE_MS = 1500;
 // if the frame's load event never comes (blocked, offline), show whatever is there rather than a blank box
 const GIVE_UP_MS = 10000;
 
-export default function RoadmapPdfFrame({ src, title }: { src: string; title: string }) {
+function PdfViewer({ src, title }: { src: string; title: string }) {
   const { t } = useTranslation();
   const [ready, setReady] = useState(false);
   const timers = useRef<number[]>([]);
@@ -22,7 +23,7 @@ export default function RoadmapPdfFrame({ src, title }: { src: string; title: st
   }, []);
 
   return (
-    <div className="cms-roadmap-pdf__frame cms-roadmap-pdf__frame--viewer">
+    <div className="cms-roadmap-pdf__frame">
       {!ready && (
         <div className="cms-roadmap-pdf__loading" role="status">
           <i className="ri-loader-4-line animate-spin" aria-hidden="true" />
@@ -37,5 +38,16 @@ export default function RoadmapPdfFrame({ src, title }: { src: string; title: st
         onLoad={() => timers.current.push(window.setTimeout(() => setReady(true), VIEWER_SETTLE_MS))}
       />
     </div>
+  );
+}
+
+export default function RoadmapPdfFrame({
+  src, title, filename, fileSize,
+}: { src: string; title: string; filename: string; fileSize: number }) {
+  return (
+    <section className="space-y-4" aria-label={title}>
+      <PdfViewer src={src} title={title} />
+      <DocumentCard url={src} title={title} filename={filename} fileSize={fileSize} />
+    </section>
   );
 }

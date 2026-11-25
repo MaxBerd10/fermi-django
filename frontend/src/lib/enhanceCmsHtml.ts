@@ -2,6 +2,7 @@
  * Legacy CKEditor HTML → clean semantic markup for `.cms-article` styling.
  * Runs in the browser (DOMParser); safe no-op during SSR/build.
  */
+import { localInstituteHistoryImage } from "@/lib/instituteHistoryImages";
 import { isDeadHref, repairLegacyHref } from "@/lib/legacyLinks";
 
 export type CmsEnhanceOptions = {
@@ -15,7 +16,7 @@ export function getCmsArticleModifier(slug?: string): string {
   if (slug === "institut-xaqida") return "cms-article--about";
   if (slug === "institut-tarixi") return "cms-article--history";
   if (slug === "usmle-dasturi") return "cms-article--usmle";
-  if (slug === "ichki-tartib-qoidalar") return "cms-article--regulations";
+  if (slug === "ichki-tartib-qoidalar" || slug === "institut-odob-axloq-kodeksi") return "cms-article--regulations";
   if (slug === "tibbiyotdagi-islohotlar-inson-qadri-uchun") return "cms-article--reforms";
   if (slug === "ecaqa-xalqaro-maxsus-akkreditatsiya") return "cms-article--accreditation";
   if (slug === "institut-ilmiy-kengashi") return "cms-article--council";
@@ -212,8 +213,38 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
   if (typeof DOMParser === "undefined") return html;
 
   const slug = options?.slug ?? "";
-  const doc = new DOMParser().parseFromString(html, "text/html");
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
   const body = doc.body;
+
+  if (slug === "institut-missiyasi-va-kelajak-tasavvuri") {
+    // The legacy Uzbek article leaves a list item open across multiple section
+    // dividers. Parse each section independently so the browser closes the list
+    // at its boundary, before the generic heading and list transformations.
+    const sections = html.split(/<hr\b[^>]*>/i);
+    if (sections.length > 1) {
+      const fragment = doc.createDocumentFragment();
+      sections.forEach((section, index) => {
+        const sectionBody = parser.parseFromString(section, "text/html").body;
+        if (!sectionBody.textContent?.trim() && !sectionBody.querySelector("img, video, iframe, table")) return;
+        if (index > 0 && fragment.childNodes.length > 0) fragment.append(doc.createElement("hr"));
+        let list: HTMLUListElement | undefined;
+        for (const node of Array.from(sectionBody.childNodes)) {
+          if (node instanceof HTMLLIElement) {
+            if (!list) {
+              list = doc.createElement("ul");
+              fragment.append(list);
+            }
+            list.append(node);
+          } else if (node.nodeType !== Node.TEXT_NODE || node.textContent?.trim()) {
+            list = undefined;
+            fragment.append(node);
+          }
+        }
+      });
+      body.replaceChildren(fragment);
+    }
+  }
 
   stripLegacyStyles(body);
   unwrapBlankLinks(body);
@@ -240,6 +271,11 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
 
   if (slug === "ichki-tartib-qoidalar") {
     buildRegulationsLayout(body);
+    return body.innerHTML;
+  }
+
+  if (slug === "institut-odob-axloq-kodeksi") {
+    buildEthicsCodeLayout(body);
     return body.innerHTML;
   }
 
@@ -293,8 +329,41 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
     }
   });
   if (FACULTY_ACTIVITY_SLUGS.has(slug)) unifyHeadingStyle(body);
+  if (slug === "institut-missiyasi-va-kelajak-tasavvuri") styleInstituteMission(body);
 
   return body.innerHTML;
+}
+
+function styleInstituteMission(body: HTMLElement) {
+  const dividers = Array.from(body.querySelectorAll(":scope > .cms-section-divider"));
+  if (dividers.length < 2) return;
+
+  const doc = body.ownerDocument;
+  const intro = doc.createElement("section");
+  intro.className = "mission-intro";
+  const copy = doc.createElement("div");
+  copy.className = "mission-intro__copy";
+  const visual = doc.createElement("img");
+  visual.className = "mission-intro__photo";
+  visual.src = "/images/institut-about.jpg";
+  visual.alt = "";
+  visual.decoding = "async";
+
+  while (body.firstChild && body.firstChild !== dividers[0]) {
+    const node = body.firstChild;
+    if (node instanceof HTMLElement && node.matches("ul, ol")) intro.append(node);
+    else copy.append(node);
+  }
+  intro.prepend(copy, visual);
+  dividers[0].before(intro);
+
+  const vision = doc.createElement("section");
+  vision.className = "mission-vision";
+  while (dividers[0].nextSibling && dividers[0].nextSibling !== dividers[1]) {
+    vision.append(dividers[0].nextSibling);
+  }
+  if (vision.querySelector("h2")) dividers[0].replaceWith(vision);
+  else dividers[0].after(...Array.from(vision.childNodes));
 }
 
 /**
@@ -410,9 +479,14 @@ function buildAboutHeroLayout(root: HTMLElement) {
   const image = root.querySelector("img");
   if (!image) return;
 
+  // The migrated cover URL no longer resolves. Serve the institute photo with the frontend.
+  image.src = "/images/institut-about.jpg";
+  image.alt = "";
+  image.removeAttribute("srcset");
+  image.removeAttribute("sizes");
   image.removeAttribute("style");
-  image.removeAttribute("height");
-  image.removeAttribute("width");
+  image.width = 1280;
+  image.height = 852;
   image.className = "cms-about-hero__image";
 
   const figure = root.ownerDocument.createElement("figure");
@@ -788,8 +862,15 @@ const HISTORY_DIRECTORS: HistoryDirectorMeta[] = [
 ];
 
 function buildHistoryLayout(body: HTMLElement) {
-  stripLegacyStyles(body);
-  normalizeHistoryLogo(body);
+  body.querySelectorAll("[style], [align]").forEach((element) => {
+    element.removeAttribute("style");
+    element.removeAttribute("align");
+  });
+  body.querySelectorAll("img").forEach((image) => {
+    image.removeAttribute("srcset");
+    image.removeAttribute("sizes");
+  });
+  removeHistoryLogo(body);
   markAcademicSplit(body);
   promoteHistoryHeadings(body);
   fixHorizontalRulesInLists(body);
@@ -803,6 +884,10 @@ function buildHistoryLayout(body: HTMLElement) {
   buildHistoryPhotoGallery(body);
   cleanupHistoryEmptyNodes(body);
   markHistoryIntro(body);
+  body.querySelectorAll("img").forEach((image) => {
+    const local = localInstituteHistoryImage(image.getAttribute("src") ?? "");
+    if (local) image.src = local;
+  });
 }
 
 function isDirectorImageSrc(src: string): boolean {
@@ -836,28 +921,15 @@ function isHistoryGalleryImg(img: HTMLImageElement): boolean {
   return (img.getAttribute("src") ?? "").includes("fotogallery");
 }
 
-function normalizeHistoryLogo(body: HTMLElement) {
+function removeHistoryLogo(body: HTMLElement) {
   const logo = body.querySelector('img[src*="/logo/"]');
   if (!logo) return;
 
-  const originalContainer = logo.closest("div, p");
-
-  logo.classList.add("cms-history-logo");
-  logo.removeAttribute("style");
-  logo.removeAttribute("width");
-  logo.removeAttribute("height");
-
-  const hero = body.ownerDocument.createElement("header");
-  hero.className = "cms-history-hero";
-  const wrap = body.ownerDocument.createElement("div");
-  wrap.className = "cms-history-logo-wrap";
-  wrap.appendChild(logo);
-  hero.appendChild(wrap);
-
-  if (originalContainer?.parentNode) {
-    originalContainer.replaceWith(hero);
+  const container = logo.closest("div, p");
+  if (container && !container.textContent?.trim() && container.querySelectorAll("img, video, iframe").length === 1) {
+    container.remove();
   } else {
-    body.insertBefore(hero, body.firstChild);
+    logo.remove();
   }
 }
 
@@ -1334,6 +1406,48 @@ function markHistoryIntro(body: HTMLElement) {
   if (intro && !intro.querySelector("img, ul")) intro.classList.add("cms-intro");
 }
 
+// "1-bob." / "Глава 1." / "Chapter 1." and "1-modda." / "Статья 1." / "Article 1.": the same code in uz, ru and en
+const CODE_CHAPTER_RE = /^(?:\d+-bob\b|Глава\s+\d+|Chapter\s+\d+)/i;
+const CODE_ARTICLE_RE = /^(?:\d+-modda\b|Статья\s+\d+|Article\s+\d+)/i;
+
+/**
+ * The code of ethics is long running text. In Uzbek a whole run of articles sits in ONE paragraph with <br> between the lines;
+ * in Russian and English the headings are separate paragraphs. Every line becomes its own element, and the chapter and article
+ * lines become headings, so all three languages get the same structure as the internal regulations.
+ */
+function buildEthicsCodeLayout(body: HTMLElement) {
+  const doc = body.ownerDocument;
+  body.querySelectorAll(":scope > p").forEach((p) => {
+    if (p.querySelector("img")) return;
+    const parts = p.innerHTML.split(/<br\s*\/?>/i);
+    const pieces: HTMLElement[] = [];
+    parts.forEach((part) => {
+      const tmp = doc.createElement("div");
+      tmp.innerHTML = part; // the parser closes the <span>s that the cut left open
+      tmp.querySelectorAll("[style]").forEach((el) => el.removeAttribute("style"));
+      const text = tmp.textContent?.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim() ?? "";
+      if (!text) return;
+      let piece: HTMLElement;
+      if (CODE_CHAPTER_RE.test(text)) {
+        piece = doc.createElement("h3");
+        piece.className = "cms-reg-chapter";
+        piece.textContent = text;
+      } else if (CODE_ARTICLE_RE.test(text)) {
+        piece = doc.createElement("h4");
+        piece.className = "cms-reg-article";
+        piece.textContent = text;
+      } else {
+        piece = doc.createElement("p");
+        piece.className = "cms-reg-text";
+        piece.innerHTML = tmp.innerHTML.trim();
+      }
+      pieces.push(piece);
+    });
+    if (pieces.length) p.replaceWith(...pieces);
+    else p.remove();
+  });
+}
+
 function buildRegulationsLayout(body: HTMLElement) {
   body.querySelectorAll("div, p").forEach((el) => {
     const style = el.getAttribute("style") ?? "";
@@ -1341,10 +1455,12 @@ function buildRegulationsLayout(body: HTMLElement) {
     const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
     if (!text) return;
 
-    const strong = el.querySelector(":scope > strong, :scope > span > strong");
-    if (isCenter && strong && /ichki tartib qoidalari|ODOB-AXLOQ KODEKSI/i.test(text)) {
+    // a coloured title has one more <span> around its <strong> (ru, en), so look at every depth
+    const strong = el.querySelector("strong");
+    // the same document in uz, ru and en: the titles, chapters and articles are found by their words in every language
+    if (isCenter && strong && /ichki tartib qoidalari|ODOB-AXLOQ KODEKSI|правила внутреннего распорядка|КОДЕКС ЭТИКИ|internal regulations|CODE OF ETHICS/i.test(text)) {
       const h2 = el.ownerDocument.createElement("h2");
-      h2.className = /ODOB-AXLOQ/i.test(text)
+      h2.className = /ODOB-AXLOQ|КОДЕКС ЭТИКИ|CODE OF ETHICS/i.test(text)
         ? "cms-reg-title cms-reg-title--split"
         : "cms-reg-title";
       h2.innerHTML = strong.innerHTML.trim();
@@ -1358,7 +1474,7 @@ function buildRegulationsLayout(body: HTMLElement) {
       return;
     }
 
-    if (isCenter && /\d+-BOB|\d+-bob\./i.test(text)) {
+    if (isCenter && /\d+-BOB|\d+-bob\.|^(?:ГЛАВА|CHAPTER)\s+\d+/i.test(text)) {
       const h3 = el.ownerDocument.createElement("h3");
       h3.className = "cms-reg-chapter";
       h3.textContent = text;
@@ -1366,9 +1482,17 @@ function buildRegulationsLayout(body: HTMLElement) {
     }
   });
 
+  if (!body.querySelector(".cms-reg-intro")) {
+    const next = body.querySelector(".cms-reg-title:not(.cms-reg-title--split)")?.nextElementSibling;
+    if (next?.tagName === "P" && (next.textContent?.trim().length ?? 0) > 80) {
+      next.classList.add("cms-reg-intro");
+      next.removeAttribute("style");
+    }
+  }
+
   body.querySelectorAll("p").forEach((p) => {
     const text = p.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (!/\d+-modda\./i.test(text)) return;
+    if (!/\d+-modda\.|^(?:Статья|Article)\s+\d+/i.test(text)) return;
 
     const h4 = p.ownerDocument.createElement("h4");
     h4.className = "cms-reg-article";
@@ -1462,7 +1586,24 @@ function buildUsmleLayout(body: HTMLElement, title?: string) {
     heading.textContent = title;
     body.insertBefore(heading, body.firstChild);
   }
+
+  // a photo of the institute's own USMLE Step 1 classes (from the news item about the course) beside the opening text:
+  // the page was only text. The photo has no words on it, so it reads the same in every language.
+  const firstIntro = body.querySelector("p.cms-usmle-intro");
+  if (firstIntro) {
+    const figure = body.ownerDocument.createElement("figure");
+    figure.className = "cms-usmle-figure";
+    const img = body.ownerDocument.createElement("img");
+    img.src = USMLE_PHOTO;
+    img.alt = "USMLE";
+    img.loading = "lazy";
+    img.decoding = "async";
+    figure.appendChild(img);
+    firstIntro.before(figure);
+  }
 }
+
+const USMLE_PHOTO = "https://fermi.uz/media/uploads/2026/09/USMLE_targibot_Ch1ZeuJ.jpg";
 
 const RESTRICTED_TEXT_RE =
   /ushbu sahifani ko[''`’]?rish faqat ro[''`’]?yxatdan o[''`’]?tgan/i;

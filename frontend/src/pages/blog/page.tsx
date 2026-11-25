@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import InstituteHistoryArticle from "@/components/shared/InstituteHistoryArticle";
+import AnnualReportArticle from "@/components/shared/AnnualReportArticle";
 import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
@@ -7,7 +9,7 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
-import PageHeader from "@/components/shared/PageHeader";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -25,6 +27,19 @@ import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib
  * data (see BlockRenderer) plus the app's own menu tree for title/sidebar.
  * No per-slug special-casing.
  */
+// the pages of the annual report 2026 (the menu section "Yillik hisobot 2026"): photos, tables and lists in a set order
+const ANNUAL_REPORT_SLUGS = new Set([
+  "yillik-hisobot-2026",
+  "reyting-va-akkreditatsiya",
+  "strategik-maqsadlar-2027",
+  "xalqaro-hamkorlik-va-investitsiyalar",
+  "ilmiy-va-innovatsion-faoliyat",
+  "suniy-intellekt-tizimlari",
+  "2027-yil-vazifalari-batafsil",
+  "manaviy-marifiy-ishlar-va-olimpiadalar",
+  "moliya-oquv-uslubiy-ishlar-va-raqamlashtirish",
+]);
+
 export default function BlogPage() {
   const { t } = useTranslation();
   const { menuId, slug } = useParams<{ menuId: string; slug: string }>();
@@ -95,56 +110,60 @@ export default function BlogPage() {
 
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
-  const hasSidebar = Boolean(sidebarSection);
+  const isHistoryPage = slug === "institut-tarixi";
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
   // without a real h2, PageHeader's h1 is followed straight by the footer's
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
+  const isMissionPage = slug === "institut-missiyasi-va-kelajak-tasavvuri";
+  const isInstituteAboutPage = slug === "institut-xaqida";
+  const isAnnualReportPage = ANNUAL_REPORT_SLUGS.has(slug ?? "");
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
 
   return (
-    <div className="text-foreground-950" ref={contentRef}>
-      <PageHeader
-        title={title}
-        breadcrumb={sidebarSection ? t(sidebarSection.breadcrumbKey) : t("footer.institutHaqida")}
-        compact
-      />
-
-      <section className="section-pad !pt-3 md:!pt-4 bg-transparent pb-16 md:pb-20">
-        <div
-          className={`section-container grid gap-5 lg:gap-6 items-start ${hasSidebar ? "lg:grid-cols-12" : ""}`}
-        >
-          <div className={hasSidebar ? "lg:col-span-8 min-w-0" : "min-w-0"}>
-            {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
-            <Reveal>
-              {sortedBlocks.length > 0 ? (
-                <article className="page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4">
-                  <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-                    {sortedBlocks.map((block) => (
-                      <BlockRenderer key={block.id} block={block} />
-                    ))}
-                  </MenuSectionOriginContext.Provider>
-                </article>
-              ) : (
-                <div className="page-card px-5 py-8 text-center">
-                  <i className="ri-file-list-3-line text-3xl text-slate-300" aria-hidden />
-                  <p className="mt-3 text-sm text-slate-500">{t("department.emptyContent")}</p>
-                </div>
+    <InnerPageLayout
+      title={title}
+      breadcrumb={sidebarSection ? t(sidebarSection.breadcrumbKey) : t("footer.institutHaqida")}
+      contentRef={contentRef}
+      sidebar={sidebarSection && <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />}
+    >
+      {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
+      <Reveal>
+        {isHistoryPage && sortedBlocks.length > 0 ? (
+          <InstituteHistoryArticle blocks={sortedBlocks} />
+        ) : sortedBlocks.length > 0 ? (
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""}${isAnnualReportPage ? " annual-report" : ""}`}
+          >
+            <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
+              {isAnnualReportPage ? <AnnualReportArticle blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
+                isInstituteAboutPage && block.block_type === "raw_html" && block.data.slug === slug ? (
+                  <div key={block.id} className="grid items-center gap-5 md:grid-cols-2 lg:gap-8">
+                    <div className="min-w-0">
+                      <h2>{t("institut.fullName")}</h2>
+                      <p>{t("institut.aboutParagraph1")}</p>
+                      <p>{t("institut.aboutParagraph2")}</p>
+                    </div>
+                    <BlockRenderer block={block} />
+                  </div>
+                ) : (
+                  <BlockRenderer
+                    key={block.id}
+                    block={block}
+                    documentTitle={isInstituteAboutPage ? t("institut.ecaqaDocument") : undefined}
+                  />
+                ),
               )}
-            </Reveal>
+            </MenuSectionOriginContext.Provider>
+          </article>
+        ) : (
+          <div className="page-card px-5 py-8 text-center">
+            <i className="ri-file-list-3-line text-3xl text-slate-300" aria-hidden />
+            <p className="mt-3 text-sm text-slate-500">{t("department.emptyContent")}</p>
           </div>
-
-          {hasSidebar && (
-            <aside className="lg:col-span-4 min-w-0">
-              <Reveal delay={100}>
-                <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />
-              </Reveal>
-            </aside>
-          )}
-        </div>
-      </section>
-    </div>
+        )}
+      </Reveal>
+    </InnerPageLayout>
   );
 }

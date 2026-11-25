@@ -445,19 +445,21 @@
   background: transparent;
 }
 
+/* a news item without its own picture: the institute logo, small and quiet on the light card colour */
 .news-card__media:has(.news-logo-fallback) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: #f5f7fc;
 }
 
 .news-card__media .news-logo-fallback {
   width: auto;
-  height: 82%;
-  max-width: 82%;
-  max-height: 15rem;
+  height: 58%;
+  max-width: 58%;
+  max-height: 11rem;
   aspect-ratio: 1 / 1;
+  opacity: .9;
 }
 
 .news-article__hero--logo {

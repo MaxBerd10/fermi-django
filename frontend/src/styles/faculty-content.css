@@ -17,20 +17,16 @@
 
 /* Hero */
 .faculty-hero {
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 20px 50px -24px rgba(10, 17, 88, 0.28);
+  border-bottom: 3px solid #ffd600;
 }
 
 .faculty-hero__inner {
-  padding: 1.5rem;
-  color: #ffffff;
+  padding-block: clamp(1rem, 2vw, 1.5rem);
+  color: #fff;
 }
 
-@media (min-width: 768px) {
-  .faculty-hero__inner {
-    padding: 2rem;
-  }
+.faculty-hero--department .faculty-hero__inner {
+  background: linear-gradient(115deg, #0b123c, #19276c);
 }
 
 .faculty-hero--clinical .faculty-hero__inner {
@@ -71,7 +67,7 @@
   width: auto;
   min-width: 5.5rem;
   max-width: min(13rem, 42vw);
-  height: 5.5rem;
+  height: 3.75rem;
   padding: 0.5rem;
   border-radius: 1rem;
   background: #fff;
@@ -85,7 +81,7 @@
   .faculty-hero__logo-wrap {
     min-width: 6.5rem;
     max-width: 15rem;
-    height: 6.5rem;
+    height: 4.5rem;
   }
 }
 
@@ -96,48 +92,39 @@
   object-fit: contain;
 }
 
-.faculty-hero__eyebrow {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
+.faculty-hero__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .75rem;
+  color: #e3e9ff;
+  font-size: .75rem;
+}
+
+.faculty-hero__breadcrumb a:hover {
+  color: #ffd600;
 }
 
 .faculty-hero__title {
-  margin: 0.35rem 0 0;
+  margin-bottom: .25rem;
   font-family: var(--font-heading, Manrope, system-ui, sans-serif);
-  font-size: clamp(1.375rem, 2.8vw, 2rem);
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .faculty-hero__intro {
-  margin: 1.25rem 0 0;
+  margin: 0;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.82);
-  max-width: 62ch;
-}
-
-.faculty-hero__mission {
-  margin: 1rem 0 0;
-  padding: 0.875rem 0 0.875rem 1rem;
-  border-left: 3px solid #ffd600;
-  font-family: var(--font-heading, Manrope, system-ui, sans-serif);
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
-  font-style: normal;
 }
 
 .faculty-hero__stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.625rem;
-  margin: 1.25rem 0 0;
+  margin: .75rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -152,7 +139,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  padding: 0.75rem 0.875rem;
+  padding: .5rem .75rem;
   border-radius: 0.75rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -596,4 +583,97 @@ a.faculty-pill:hover {
 .menu-sidebar--fakultet .cms-sidebar__link--active {
   border-left: 3px solid #8b5cf6;
   padding-left: calc(1.25rem - 3px);
+}
+
+.faculty-overview {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.faculty-overview > .academic-page__title {
+  margin-bottom: 0;
+}
+
+.faculty-overview__lead {
+  color: #273552;
+  line-height: 1.65;
+}
+
+.faculty-overview h3 {
+  margin-bottom: .75rem;
+  color: #0a1158;
+  font-size: 1.125rem;
+  font-weight: 750;
+}
+
+.faculty-overview__programs,
+.faculty-overview__links {
+  display: grid;
+  gap: .625rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.faculty-overview__links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faculty-overview__programs li,
+.faculty-overview__links li {
+  padding: .875rem 1rem;
+  background: #f7f8fc;
+  border: 1px solid #e1e6ef;
+  border-radius: .75rem;
+}
+
+.faculty-overview__links li {
+  display: flex;
+  align-items: flex-start;
+  gap: .625rem;
+}
+
+.faculty-overview__links i,
+.faculty-overview__programs h4 {
+  color: #0a1158;
+}
+
+.faculty-overview__programs h4 {
+  margin: .5rem 0;
+  font-weight: 750;
+}
+
+.faculty-overview__programs p {
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.faculty-overview__code {
+  display: inline-block;
+  padding: .2rem .5rem;
+  background: #fff5c6;
+  border-radius: .375rem;
+  color: #0a1158;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.faculty-overview__details {
+  border: 1px solid #dce3ef;
+  border-radius: .75rem;
+}
+
+.faculty-overview__details summary {
+  padding: .875rem 1rem;
+  color: #0a1158;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.academic-page .faculty-overview__details .academic-page__article {
+  padding: 0 1rem 1rem;
+}
+
+@media (max-width: 639px) {
+  .faculty-overview__links {
+    grid-template-columns: 1fr;
+  }
 }

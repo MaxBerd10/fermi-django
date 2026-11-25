@@ -60,7 +60,7 @@ function VideoBlock({ src, poster, caption }: { src: string; poster: string; cap
  * surrounding layout, and a malformed block can't reach this component at all
  * (the backend rejects invalid block data before it's ever saved).
  */
-export function BlockRenderer({ block }: { block: ContentBlock }) {
+export function BlockRenderer({ block, documentTitle }: { block: ContentBlock; documentTitle?: string }) {
   const { t } = useTranslation();
   switch (block.block_type) {
     case "heading":
@@ -104,33 +104,32 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
 
       if (style === "diagram") {
         return (
-          <div className="cms-diagram-page">
-            <div className="cms-diagram-frame">
-              <a
-                href={optimizedImageUrl(image.file, 2400) || image.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cms-diagram-frame__btn"
-                aria-label={`${alt ?? image.alt_text} — Kattalashtirish`}
-              >
-                <img
-                  src={optimizedImageUrl(image.file, 1600) || image.file}
-                  alt={alt ?? image.alt_text}
-                  loading="eager"
-                  decoding="async"
-                  className="cms-diagram-frame__img"
-                />
-                <span className="cms-diagram-frame__overlay">
-                  <i className="ri-zoom-in-line text-3xl" aria-hidden="true" />
-                  <span>Kattalashtirish</span>
-                </span>
-              </a>
-            </div>
-            <p className="cms-diagram-hint">
-              <i className="ri-information-line" aria-hidden="true" />
-              Sxemani kattaroq ko'rish uchun rasm ustiga bosing yoki gorizontal scroll qiling.
-            </p>
-          </div>
+          <figure className="cms-diagram-page">
+            <a
+              href={image.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cms-diagram-frame cms-diagram-frame__btn"
+              aria-label={`${alt ?? image.alt_text} — ${t("structure.enlarge")}`}
+            >
+              <img
+                src={optimizedImageUrl(image.file, 1600) || image.file}
+                alt={alt ?? image.alt_text}
+                width={image.width ?? undefined}
+                height={image.height ?? undefined}
+                decoding="async"
+                className="cms-diagram-frame__img"
+                onError={(event) => {
+                  const preview = event.currentTarget;
+                  if (preview.getAttribute("src") !== image.file) preview.src = image.file;
+                }}
+              />
+              <span className="cms-diagram-action">
+                <i className="ri-zoom-in-line" aria-hidden="true" />
+                {t("structure.enlarge")}
+              </span>
+            </a>
+          </figure>
         );
       }
 
@@ -204,37 +203,39 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
         return (
           <div className="cms-cert-page">
             <ul className="cms-cert-gallery" role="list">
-              {visible.map((item, i) => (
-                <li key={item.image_id ?? i}>
-                  <figure className="cms-cert-card">
+              {visible.map(({ image, image_id, alt }, index) => {
+                if (!image) return null;
+                const title = alt?.trim() || image.alt_text?.trim();
+                return (
+                  <li key={image_id ?? index}>
                     <a
-                      href={optimizedImageUrl(item.image!.file, 1600) || item.image!.file}
+                      href={image.file}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="cms-cert-card__preview"
-                      aria-label={`${item.alt ?? item.image!.alt_text} — Kattalashtirish`}
+                      className="cms-cert-card cms-cert-card--link"
+                      aria-label={title ? `${title} — ${t("document.open")}` : t("document.open")}
                     >
-                      <img
-                        src={optimizedImageUrl(item.image!.file, 480) || item.image!.file}
-                        alt={item.alt ?? item.image!.alt_text}
-                        loading="lazy"
-                        className="cms-cert-card__img"
-                      />
-                      <span className="cms-cert-card__overlay" aria-hidden="true">
-                        <i className="ri-zoom-in-line text-2xl" />
-                        <span className="text-xs font-semibold mt-1">Kattalashtirish</span>
+                      <div className="cms-cert-card__preview">
+                        <img
+                          src={optimizedImageUrl(image.file, 640) || image.file}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                          className="cms-cert-card__img"
+                          onError={(event) => {
+                            const preview = event.currentTarget;
+                            if (preview.getAttribute("src") !== image.file) preview.src = image.file;
+                          }}
+                        />
+                      </div>
+                      <span className="cms-cert-card__caption">
+                        <span className="cms-cert-card__title">{title || t("document.open")}</span>
+                        <i className="ri-arrow-right-up-line" aria-hidden="true" />
                       </span>
                     </a>
-                    <figcaption className="cms-cert-card__caption">
-                      <span className="cms-cert-card__index">{String(i + 1).padStart(2, "0")}</span>
-                      <span className="cms-cert-card__title">{item.alt ?? item.image!.alt_text}</span>
-                    </figcaption>
-                    <span className="cms-cert-card__badge" aria-hidden="true">
-                      <i className="ri-award-line" />
-                    </span>
-                  </figure>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         );
@@ -261,30 +262,25 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
       if (!document) return null;
       const documentUrl = toAbsoluteUrl(document.file);
 
+      const originalTitle = caption || document.title || humanizeFilename(document.filename);
+      const title = documentTitle && /^ecaqa$/i.test(originalTitle.trim()) ? documentTitle : originalTitle;
+
       if (style === "roadmap") {
         return (
-          <section className="cms-roadmap-pdf" aria-label={caption || document.title || document.filename}>
-            <div className="cms-roadmap-pdf__toolbar">
-              <span className="cms-roadmap-pdf__label">
-                <i className="ri-file-pdf-2-line" aria-hidden="true" />
-                {caption || document.title || document.filename}
-              </span>
-              <a href={documentUrl} target="_blank" rel="noopener noreferrer" className="cms-roadmap-pdf__download cms-download-btn">
-                <i className="ri-download-2-line" aria-hidden="true" />
-                {t("common.download")}
-              </a>
-            </div>
-            <RoadmapPdfFrame src={documentUrl} title={caption || document.title || document.filename} />
-          </section>
+          <RoadmapPdfFrame
+            key={documentUrl}
+            src={documentUrl}
+            title={title}
+            filename={document.filename}
+            fileSize={document.file_size}
+          />
         );
       }
 
-      // Every other document -- the old "button" style, the unstyled default, and "card" -- is one
-      // card (name, type, size, open + download); only "roadmap" above embeds a viewer.
       return (
         <DocumentCard
           url={documentUrl}
-          title={caption || document.title || humanizeFilename(document.filename)}
+          title={title}
           filename={document.filename}
           fileSize={document.file_size}
         />

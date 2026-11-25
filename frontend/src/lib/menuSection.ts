@@ -33,7 +33,10 @@ export const NAV_ROOT_THEMES: Record<number, { theme: string; breadcrumbKey: str
  * collectLinks()/findRootTheme(), independent of this table). Re-deriving
  * the rest is a bigger, separate pass -- each entry needs its real DB id
  * looked up individually, not a one-off during a single bug's fix. */
+export const INSTITUTE_ABOUT_MENU_ID = 1827;
+
 export const MENU_SECTION_THEMES: Record<number, { theme: string; breadcrumbKey: string; introKey?: string }> = {
+  [INSTITUTE_ABOUT_MENU_ID]: { theme: "institut", breadcrumbKey: "nav.section.institutAbout" },
   33: { theme: "institut", breadcrumbKey: "nav.section.institutAbout", introKey: "section.intro.institutAbout" },
   35: { theme: "rahbariyat", breadcrumbKey: "leader.breadcrumb" },
   37: { theme: "fakultet", breadcrumbKey: "nav.section.fakultetlar", introKey: "section.intro.fakultetlar" },

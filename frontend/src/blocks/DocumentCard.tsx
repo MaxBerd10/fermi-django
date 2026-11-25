@@ -10,6 +10,7 @@ import {
   PRIMARY_BUTTON_CLASS,
   SECONDARY_BUTTON_CLASS,
 } from "./documentCardClasses";
+import { officeViewerUrl } from "@/lib/officeViewer";
 
 interface DocumentCardProps {
   url: string;
@@ -48,6 +49,7 @@ export default function DocumentCard({ url, title, filename, fileSize }: Documen
   const { t } = useTranslation();
   const extension = (filename.split(".").pop() || "file").toUpperCase();
   const opensInBrowser = /^(PDF|PNG|JPE?G|GIF|WEBP|SVG|TXT)$/.test(extension);
+  const viewerUrl = officeViewerUrl(url, extension.toLowerCase());
   const meta = [extension, fileSize > 0 ? formatFileSize(fileSize) : ""].filter(Boolean).join(" · ");
 
   return (
@@ -73,8 +75,20 @@ export default function DocumentCard({ url, title, filename, fileSize }: Documen
               {t("document.download")}
             </a>
           </>
+        ) : viewerUrl ? (
+          // a .pptx/.docx/.xlsx has no browser viewer of its own: Microsoft's public viewer opens it by address
+          <>
+            <a href={viewerUrl} target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
+              <i className="ri-external-link-line" aria-hidden="true" />
+              {t("document.open")}
+            </a>
+            <a href={url} download target="_blank" rel="noopener noreferrer" className={SECONDARY_BUTTON_CLASS}>
+              <i className="ri-download-2-line" aria-hidden="true" />
+              {t("document.download")}
+            </a>
+          </>
         ) : (
-          // a .pptx/.docx/.xlsx/.zip never shows in a browser tab, so "open in the browser" would just download too
+          // a .zip (or a file the viewer cannot reach) never shows in a browser tab, so "open in the browser" would just download too
           <a href={url} download target="_blank" rel="noopener noreferrer" className={PRIMARY_BUTTON_CLASS}>
             <i className="ri-download-2-line" aria-hidden="true" />
             {t("document.download")}

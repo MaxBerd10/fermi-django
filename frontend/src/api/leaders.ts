@@ -1,3 +1,4 @@
+import i18n from "@/i18n";
 import { apiClient } from "./client";
 import type { Leader, LeadersResponse } from "../types/content";
 
@@ -31,18 +32,23 @@ interface DjangoLeadersResponse {
 }
 
 function mapLeader(staff: DjangoStaffMember): Leader {
+  // The legacy import assigned a department event photo and report text to
+  // Karimova's record. Keep CMS edits authoritative once that asset is replaced.
+  const hasKarimovaImport = staff.id === 460 && staff.photo?.id === 5650;
   return {
     id: staff.id,
     name: staff.full_name,
     position: staff.title,
     isHead: staff.is_head,
     activity: staff.activity,
-    biography: staff.bio,
+    biography: hasKarimovaImport ? i18n.t("leader.bio.karimova") : staff.bio,
     receptionDays: staff.reception_days,
     phone: staff.phone,
     faks: null, // Django's StaffMember has no fax field — the old CMS's was unused everywhere it mattered.
     email: staff.email,
-    photo: staff.photo?.file ?? "",
+    photo: hasKarimovaImport
+      ? "https://fjsti.uz/uploads/img/kafedra/Endokrinologiya/image_1_1769238169986.jpg"
+      : staff.photo?.file ?? "",
   };
 }
 

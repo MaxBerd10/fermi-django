@@ -5,7 +5,7 @@ import { getPage } from "@/api/pages";
 import type { Page } from "@/types/content";
 import { ApiError } from "@/types/api";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
-import PageHeader from "@/components/shared/PageHeader";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import { Reveal } from "@/components/Animation";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -55,23 +55,21 @@ export default function AboutPage() {
   const hasBodyHeading = page.blocks.some((b) => b.block_type === "heading");
 
   return (
-    <div className="text-foreground-950" ref={contentRef}>
-      <PageHeader title={displayTitle} breadcrumb={t("footer.institutHaqida")} />
-      <section className="section-pad bg-transparent">
-        <div className="section-container max-w-4xl">
-          {!hasBodyHeading && <h2 className="sr-only">{displayTitle}</h2>}
-          <Reveal>
-            <article className="page-card p-5 md:p-7 lg:p-8 cms-article space-y-4">
-              {page.blocks
-                .slice()
-                .sort((a, b) => a.order - b.order)
-                .map((block) => (
-                  <BlockRenderer key={block.id} block={block} />
-                ))}
-            </article>
-          </Reveal>
-        </div>
-      </section>
-    </div>
+    <InnerPageLayout
+      title={displayTitle} breadcrumb={t("footer.institutHaqida")}
+      contentRef={contentRef}
+    >
+      {!hasBodyHeading && <h2 className="sr-only">{displayTitle}</h2>}
+      <Reveal>
+        <article className="page-card p-5 md:p-7 lg:p-8 cms-article space-y-4">
+          {page.blocks
+            .slice()
+            .sort((a, b) => a.order - b.order)
+            .map((block) => (
+              <BlockRenderer key={block.id} block={block} />
+            ))}
+        </article>
+      </Reveal>
+    </InnerPageLayout>
   );
 }

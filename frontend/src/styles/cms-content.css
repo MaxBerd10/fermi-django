@@ -420,7 +420,6 @@
 /* Institut xaqida */
 .cms-article--about .cms-about-hero {
   width: 100%;
-  aspect-ratio: 1122 / 490;
   margin: 0;
   overflow: hidden;
   border-radius: 0.75rem;
@@ -429,9 +428,8 @@
 .cms-article--about .cms-about-hero__image {
   display: block;
   width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
+  height: auto !important;
+  margin: 0;
 }
 
 .cms-article--about .cms-hero-figure {
@@ -698,6 +696,39 @@
   border-color: rgba(10, 17, 88, 0.15);
 }
 
+.cms-cert-page .cms-cert-card--link {
+  border-color: #dbe2f0;
+  border-radius: .75rem;
+  box-shadow: none;
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.cms-cert-page .cms-cert-card--link:hover {
+  border-color: #9daed6;
+  transform: none;
+}
+
+.cms-cert-card--link:focus-visible {
+  outline: 2px solid #334b91;
+  outline-offset: 3px;
+}
+
+.cms-cert-page .cms-cert-card--link .cms-cert-card__preview {
+  background: #edf1f8;
+  cursor: inherit;
+}
+
+.cms-cert-page .cms-cert-card--link .cms-cert-card__caption {
+  align-items: center;
+  justify-content: space-between;
+  color: #16275e;
+}
+
+.cms-cert-card--link .cms-cert-card__caption i {
+  flex-shrink: 0;
+}
+
 .cms-cert-card__preview {
   position: relative;
   display: block;
@@ -955,6 +986,60 @@
   object-fit: contain;
 }
 
+.cms-diagram-page {
+  margin: 0;
+}
+
+.cms-diagram-page .cms-diagram-frame__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .625rem;
+  min-width: 0;
+  max-height: none;
+  overflow: visible;
+  border: 0;
+  border-radius: .75rem;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.cms-diagram-page .cms-diagram-frame__btn:focus-visible {
+  outline: 2px solid #334b91;
+  outline-offset: 3px;
+}
+
+.cms-diagram-page .cms-diagram-frame__img {
+  width: 100%;
+  min-width: 0;
+  max-height: min(44rem, 75vh);
+  margin: 0;
+  padding: clamp(.5rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.cms-diagram-page .cms-diagram-action {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 2.75rem;
+  padding: .4rem .8rem;
+  border: 1px solid #dbe2f0;
+  border-radius: .5rem;
+  background: #fff;
+  color: #16275e;
+  font-size: .875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.cms-diagram-frame__btn:hover .cms-diagram-action {
+  background: #edf1f8;
+}
+
 .cms-diagram-frame__overlay {
   position: absolute;
   inset: 0;
@@ -1032,24 +1117,180 @@
   --cms-gold: #ffd600;
 }
 
-.cms-article--history .cms-history-hero {
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 0 1rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #e2e8f0;
+.cms-article--history > p,
+.cms-article--history .cms-history-block p {
+  color: #273552;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
-.cms-article--history .cms-history-logo-wrap {
-  text-align: center;
+.cms-article--history .cms-history-person__info p {
+  font-size: .875rem;
+  line-height: 1.5;
 }
 
-.cms-article--history .cms-history-logo {
+.cms-article--history :is(
+  img[data-history-image-unavailable],
+  .cms-history-person__photo:has(img[data-history-image-unavailable]),
+  figure:has(> img[data-history-image-unavailable]):not(:has(figcaption))
+) {
+  display: none !important;
+}
+
+.cms-article--history .cms-history-profile {
+  display: grid;
+  grid-template-columns: clamp(4.5rem, 14vw, 8rem) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(.75rem, 2vw, 1.5rem);
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.cms-history-profile > img {
   display: block;
-  max-width: 96px !important;
-  height: auto !important;
-  margin: 0 auto;
-  filter: drop-shadow(0 2px 8px rgba(10, 17, 88, 0.1));
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: .5rem;
+}
+
+.cms-article--history .cms-history-profile__content h3 {
+  margin: 0 0 .5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #16275e;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.cms-article--history .cms-history-profile__content p {
+  margin: 0 0 .4rem;
+  color: #273552;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.cms-article--history .cms-history-profile__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* thin yellow line between sections, as on "Institut Missiyasi" */
+.cms-article--history > .cms-section-title:not(:first-child) {
+  margin-top: clamp(1.5rem, 4vw, 2.75rem);
+  padding-top: clamp(1.5rem, 4vw, 2.25rem);
+  background: linear-gradient(90deg, transparent, rgba(10, 17, 88, 0.15) 20%, rgba(255, 214, 0, 0.5) 50%, rgba(10, 17, 88, 0.15) 80%, transparent) top / 100% 1px no-repeat;
+}
+
+.cms-article--history > .cms-photo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.cms-article--history .cms-history-timeline :is(ul, ol) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cms-article--history .cms-history-timeline :is(ul, ol) > li {
+  margin: 0;
+  padding: .625rem 0;
+  border: 0;
+  border-bottom: 1px solid #dbe2f0;
+  border-radius: 0;
+  background: none;
+  color: #273552;
+}
+
+.cms-article--history .cms-history-timeline :is(ul, ol) > li::before {
+  content: none;
+}
+
+.cms-history-timeline {
+  display: grid;
+  align-items: start;
+  gap: 1rem clamp(1.25rem, 3vw, 2.75rem);
+}
+
+.cms-history-timeline__events:empty {
+  display: none;
+}
+
+.cms-article--history .cms-history-timeline ol.cms-history-timeline__terms {
+  padding: .375rem clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #f5f7fc;
+}
+
+.cms-article--history .cms-history-timeline__terms > li:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .cms-history-timeline:has(.cms-history-timeline__events:not(:empty)) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+.cms-history-timeline__terms > li {
+  display: grid;
+  grid-template-columns: minmax(6rem, max-content) minmax(0, 1fr);
+  align-items: baseline;
+  gap: .25rem .625rem;
+}
+
+.cms-history-timeline__terms strong {
+  color: #16275e;
+  font-variant-numeric: tabular-nums;
+}
+
+.cms-article--history :is(.cms-history-timeline, .cms-history-story) {
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.cms-history-feature {
+  display: grid;
+  align-items: start;
+  gap: 1rem clamp(1.25rem, 3vw, 2.75rem);
+}
+
+.cms-history-story__body {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dbe2f0;
+  color: #273552;
+  line-height: 1.75;
+}
+
+.cms-history-story__body p:last-child {
+  margin-bottom: 0;
+}
+
+.cms-history-feature p {
+  margin: 0;
+  color: #273552;
+  line-height: 1.75;
+}
+
+.cms-history-feature > figure {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .cms-history-feature {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
 }
 
 .cms-article--history .cms-history-block {
@@ -1062,7 +1303,15 @@
 }
 
 .cms-article--history .cms-section-title {
-  margin: 0 0 1rem;
+  margin-block: 0 .875rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #111c4a;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.3;
+  font-weight: 750;
 }
 
 .cms-article--history .cms-history-subhead {
@@ -1127,11 +1376,9 @@
   padding: 0.85rem 1rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-left: 3px solid var(--cms-accent);
   border-radius: 0.65rem;
   line-height: 1.65;
   font-size: 0.9375rem;
-  box-shadow: 0 1px 6px rgba(10, 17, 88, 0.04);
 }
 
 .cms-article--history .cms-timeline__year {
@@ -1142,7 +1389,7 @@
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--cms-accent);
-  background: rgba(255, 214, 0, 0.35);
+  background: #edf1f8;
   border-radius: 999px;
   font-family: var(--font-heading, Manrope, sans-serif);
 }
@@ -1379,14 +1626,6 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: #64748b;
-}
-
-.cms-article--history .cms-history-block--story p {
-  font-size: 0.9375rem;
-  line-height: 1.85;
-  color: #334155;
-  text-align: justify;
-  margin-bottom: 0.85rem;
 }
 
 .cms-article--history .cms-history-archive {
@@ -2102,64 +2341,16 @@
   padding: 0.625rem 1rem;
 }
 
-/* Institut yo‘l xaritasi: old public page's full-width embedded PDF panel. */
-.cms-roadmap-pdf {
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(10, 17, 88, 0.12);
-  border-radius: 0.875rem;
-  background: #fff;
-  box-shadow: 0 12px 40px -20px rgba(10, 17, 88, 0.2);
-}
-
-.cms-roadmap-pdf__toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 3.75rem;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(10, 17, 88, 0.1);
-  background: #f8fafc;
-}
-
-.cms-roadmap-pdf__label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-  color: #0a1158;
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-
-.cms-roadmap-pdf__label i { color: #d92d20; font-size: 1.2rem; }
-
-.cms-roadmap-pdf__download {
-  display: inline-flex;
-  flex: none;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.55rem 0.8rem;
-  border-radius: 0.5rem;
-  background: #0a1158;
-  color: #fff;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.cms-roadmap-pdf__download:hover { background: #060a3d; color: #fff; }
-
+/* Institut yo‘l xaritasi */
 .cms-roadmap-pdf__frame {
+  position: relative;
   width: 100%;
   min-height: 620px;
+  overflow: hidden;
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
   background: #f1f5f9;
 }
-
-.cms-roadmap-pdf__frame--viewer { position: relative; }
 
 .cms-roadmap-pdf__loading {
   position: absolute;
@@ -2182,7 +2373,6 @@
 }
 
 @media (max-width: 640px) {
-  .cms-roadmap-pdf__toolbar { align-items: flex-start; flex-direction: column; }
   .cms-roadmap-pdf__frame, .cms-roadmap-pdf__iframe { min-height: 420px; height: 60vh; }
 }
 

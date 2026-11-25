@@ -7,7 +7,8 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
-import PageHeader from "@/components/shared/PageHeader";
+import AcademicPageHero from "@/components/shared/AcademicPageHero";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import DepartmentPageContent from "@/components/shared/DepartmentPageContent";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
@@ -109,33 +110,25 @@ export default function DepartmentPage() {
   const displayTitle = normalizeYearLabels(dept.title.trim());
 
   return (
-    <div className="text-foreground-950" ref={contentRef}>
-      <PageHeader
-        title={displayTitle}
-        breadcrumb={isHistory ? t("footer.institutHaqida") : t("nav.section.kafedralar")}
-        compact
-      />
-
-      <section className="section-pad !pt-3 md:!pt-4 bg-transparent pb-16 md:pb-20">
-        <div className="section-container grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          <div className="lg:col-span-8 min-w-0">
-            <Reveal>
-              <DepartmentPageContent
-                department={dept}
-                slug={slug ?? ""}
-                head={head}
-                isFallback={isFallback}
-              />
-            </Reveal>
-          </div>
-
-          <aside className="lg:col-span-4 min-w-0">
-            <Reveal delay={100}>
-              <MenuSectionNav menuId={sidebarMenuId} currentSlug={slug} />
-            </Reveal>
-          </aside>
-        </div>
-      </section>
-    </div>
+    <InnerPageLayout
+      className={isHistory ? undefined : "academic-layout"}
+      title={displayTitle}
+      header={isHistory ? undefined : (
+        <AcademicPageHero title={displayTitle} logoUrl={dept.img} theme="department"
+          breadcrumb={t("nav.section.kafedralar")} description={t("department.intro")} />
+      )}
+      breadcrumb={isHistory ? t("footer.institutHaqida") : t("nav.section.kafedralar")}
+      contentRef={contentRef}
+      sidebar={<MenuSectionNav menuId={sidebarMenuId} currentSlug={slug} />}
+    >
+      <Reveal>
+        <DepartmentPageContent
+          department={dept}
+          slug={slug ?? ""}
+          head={head}
+          isFallback={isFallback}
+        />
+      </Reveal>
+    </InnerPageLayout>
   );
 }

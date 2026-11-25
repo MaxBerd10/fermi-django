@@ -1118,3 +1118,31 @@ a.leader-card__meta-item:hover {
     max-height: 480px;
   }
 }
+
+.leader-profile-reception {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .875rem;
+  color: #0a1158;
+  font-weight: 650;
+}
+
+.leader-profile-highlights {
+  margin: 0 1.25rem 1.25rem;
+  padding: 1rem;
+  background: #f4f6fa;
+  border-inline-start: 3px solid #ebc100;
+  color: #273552;
+}
+
+.leader-profile-highlights ul {
+  list-style: disc;
+  padding-inline-start: 1.25rem;
+  margin-top: .75rem;
+}
+
+.leader-prorector .leader-panel {
+  height: auto;
+  max-height: none;
+}

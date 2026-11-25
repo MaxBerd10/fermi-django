@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useMatch } from "react-router-dom";
+import "@/styles/inner-page.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MedicalAtmosphere from "./MedicalAtmosphere";
@@ -25,6 +26,7 @@ function useAfterPageSettled() {
 }
 
 export default function Layout() {
+  const isHome = useMatch("/") !== null;
   const widgetReady = useAfterPageSettled();
   const [hasToken] = useState(() => Boolean(getAccessToken()));
   return (
@@ -42,7 +44,7 @@ export default function Layout() {
               than its own overflow-x-auto wrapper intends) could grow this
               whole column instead of being clipped/scrolled within its own
               container, leaking a horizontal scrollbar onto the entire page. */}
-          <main className="flex-1 min-w-0">
+          <main className={isHome ? "flex-1 min-w-0" : "inner-page flex-1 min-w-0"}>
             <Outlet />
           </main>
           <Footer />

@@ -7,14 +7,15 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
-import PageHeader from "@/components/shared/PageHeader";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
+import AcademicPageHero from "@/components/shared/AcademicPageHero";
 import FacultyPageContent from "@/components/shared/FacultyPageContent";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
-import { FACULTY_MENU_ID } from "@/lib/facultySection";
+import { FACULTY_MENU_ID, getFacultyPageConfig } from "@/lib/facultySection";
 
 export default function FacultyPage() {
   const { t } = useTranslation();
@@ -48,25 +49,22 @@ export default function FacultyPage() {
   if (notFound) return <NotFound />;
   if (error || !faculty) return <ErrorState message={error ?? undefined} />;
 
+  const config = getFacultyPageConfig(slug ?? "");
+
   return (
-    <div className="text-foreground-950" ref={contentRef}>
-      <PageHeader title={faculty.title} breadcrumb={t("nav.section.fakultetlar")} compact />
-
-      <section className="section-container section-pad pb-16 md:pb-20">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          <div className="lg:col-span-8 min-w-0">
-            <Reveal>
-              <FacultyPageContent faculty={faculty} slug={slug ?? ""} />
-            </Reveal>
-          </div>
-
-          <aside className="lg:col-span-4 min-w-0">
-            <Reveal delay={80}>
-              <MenuSectionNav menuId={FACULTY_MENU_ID} currentSlug={slug} />
-            </Reveal>
-          </aside>
-        </div>
-      </section>
-    </div>
+    <InnerPageLayout
+      className="faculty-layout"
+      title={faculty.title}
+      header={
+        <AcademicPageHero title={faculty.title} logoUrl={faculty.img} theme={config.theme}
+          breadcrumb={t("nav.section.fakultetlar")} description={t(config.introKey)} stats={config.stats} />
+      }
+      contentRef={contentRef}
+      sidebar={<MenuSectionNav menuId={FACULTY_MENU_ID} currentSlug={slug} />}
+    >
+      <Reveal>
+        <FacultyPageContent faculty={faculty} slug={slug ?? ""} />
+      </Reveal>
+    </InnerPageLayout>
   );
 }

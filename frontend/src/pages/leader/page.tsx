@@ -7,11 +7,9 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
-import PageHeader from "@/components/shared/PageHeader";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import LeaderSectionNav from "@/components/shared/LeaderSectionNav";
-import LeaderFeaturedProfile from "@/components/shared/LeaderFeaturedProfile";
-import LeaderProrectorCard from "@/components/shared/LeaderProrectorCard";
-import LeaderDepartmentCard from "@/components/shared/LeaderDepartmentCard";
+import LeaderProfileCard from "@/components/shared/LeaderProfileCard";
 import LeaderListToolbar from "@/components/shared/LeaderListToolbar";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -32,7 +30,7 @@ export default function LeaderPage() {
   const [error, setError] = useState<string | null>(null);
   const [notFound, setNotFound] = useState(false);
   const [query, setQuery] = useState("");
-  const [openId, setOpenId] = useState<number | null>(null);
+  const [openId, setOpenId] = useState<number | null | undefined>();
 
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
   const isLeaderSection =
@@ -52,7 +50,7 @@ export default function LeaderPage() {
     setError(null);
     setNotFound(false);
     setQuery("");
-    setOpenId(null);
+    setOpenId(undefined);
     getLeaders(slug, resolvedMenuId)
       .then(setData)
       .catch((e) => {
@@ -79,7 +77,12 @@ export default function LeaderPage() {
     );
   }, [leaders, query]);
 
-  usePageMeta(data?.category.title);
+  const title = slug === "rektor" ? t("leadership.rectorLabel")
+    : isProrectorPage ? t("leader.title.prorectors")
+      : isDepartmentPage ? t("leader.title.departmentHeads")
+        : data?.category.title;
+
+  usePageMeta(title);
 
   if (loading) return <LoadingState minHeightPx={remembered ?? coldStartMinHeight} />;
   if (notFound) return <NotFound />;
@@ -89,98 +92,56 @@ export default function LeaderPage() {
   const featured = isLeaderFeaturedPage(slug, leaders.length);
   const showToolbar = isProrectorPage || isDepartmentPage;
 
-  const toggleOpen = (id: number) => {
-    setOpenId((current) => (current === id ? null : id));
-  };
+  const expandedId = openId === undefined && featured ? leaders[0]?.id : openId;
 
   return (
-    <div className="text-foreground-950" ref={contentRef}>
-      <PageHeader
-        title={data.category.title}
-        breadcrumb={isLeaderSection ? t("leader.breadcrumb") : data.category.title}
-        compact
-      />
+    <InnerPageLayout
+      title={title ?? data.category.title}
+      breadcrumb={isLeaderSection ? t("leader.breadcrumb") : title}
+      contentRef={contentRef}
+      sidebar={isLeaderSection && <LeaderSectionNav currentSlug={slug} />}
+    >
+      {introKey && (
+        <Reveal>
+          <p className="leader-section__intro">{t(introKey)}</p>
+        </Reveal>
+      )}
 
-      <section className="section-container section-pad pb-16 md:pb-20">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10">
-          <div className="lg:col-span-8 min-w-0">
-            {introKey && (
-              <Reveal>
-                <p className="leader-section__intro">{t(introKey)}</p>
-              </Reveal>
-            )}
-
-            {leaders.length === 0 && (
-              <Reveal>
-                <div className="page-card px-5 py-8 text-center">
-                  <p className="text-foreground-500">{t("leader.empty")}</p>
-                </div>
-              </Reveal>
-            )}
-
-            {featured && leaders[0] && (
-              <Reveal>
-                <LeaderFeaturedProfile leader={leaders[0]} slug={slug!} />
-              </Reveal>
-            )}
-
-            {!featured && leaders.length > 0 && (
-              <>
-                {showToolbar && (
-                  <Reveal>
-                    <LeaderListToolbar
-                      query={query}
-                      onQueryChange={setQuery}
-                      total={leaders.length}
-                      filtered={filteredLeaders.length}
-                      showSearch={isDepartmentPage || leaders.length > 4}
-                    />
-                  </Reveal>
-                )}
-
-                {filteredLeaders.length === 0 ? (
-                  <Reveal>
-                    <p className="leader-empty-search">{t("leader.noSearchResults")}</p>
-                  </Reveal>
-                ) : isProrectorPage ? (
-                  <div className="leader-prorector-list">
-                    {filteredLeaders.map((leader, index) => (
-                      <Reveal key={leader.id} delay={Math.min(index * 50, 250)}>
-                        <LeaderProrectorCard
-                          leader={leader}
-                          open={openId === leader.id}
-                          onToggle={() => toggleOpen(leader.id)}
-                        />
-                      </Reveal>
-                    ))}
-                  </div>
-                ) : isDepartmentPage ? (
-                  <div className="leader-dept-list">
-                    {filteredLeaders.map((leader, index) => (
-                      <Reveal key={leader.id} delay={Math.min(index * 30, 300)}>
-                        <LeaderDepartmentCard
-                          leader={leader}
-                          index={index}
-                          open={openId === leader.id}
-                          onToggle={() => toggleOpen(leader.id)}
-                        />
-                      </Reveal>
-                    ))}
-                  </div>
-                ) : null}
-              </>
-            )}
+      {leaders.length === 0 && (
+        <Reveal>
+          <div className="page-card px-5 py-8 text-center">
+            <p className="text-foreground-500">{t("leader.empty")}</p>
           </div>
+        </Reveal>
+      )}
 
-          {isLeaderSection && (
-            <aside className="lg:col-span-4 min-w-0">
-              <Reveal delay={100}>
-                <LeaderSectionNav currentSlug={slug} />
-              </Reveal>
-            </aside>
-          )}
-        </div>
-      </section>
-    </div>
+      {showToolbar && leaders.length > 0 && (
+        <LeaderListToolbar
+          query={query}
+          onQueryChange={setQuery}
+          total={leaders.length}
+          filtered={filteredLeaders.length}
+          showSearch={isDepartmentPage || leaders.length > 4}
+        />
+      )}
+
+      {leaders.length > 0 && filteredLeaders.length === 0 && (
+        <p className="leader-empty-search">{t("leader.noSearchResults")}</p>
+      )}
+
+      <div className="leader-prorector-list">
+        {filteredLeaders.map((leader) => (
+          <LeaderProfileCard
+            key={`${leader.id}:${leader.photo ?? ""}`}
+            leader={leader}
+            roleLabel={slug === "rektor" ? t("leadership.rectorLabel") : isDepartmentPage
+              ? t("leader.role.departmentHead") : isProrectorPage ? t("leader.role.prorector") : undefined}
+            rector={featured}
+            open={expandedId === leader.id}
+            onToggle={() => setOpenId(expandedId === leader.id ? null : leader.id)}
+          />
+        ))}
+      </div>
+    </InnerPageLayout>
   );
 }

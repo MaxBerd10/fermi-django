@@ -113,6 +113,7 @@ function MenuLinkItem({ link, active, sectionId }: { link: MenuSectionLink; acti
       <Link
         to={link.href}
         state={{ menuSection: sectionId }}
+        aria-current={active ? "page" : undefined}
         className={`cms-sidebar__link menu-sidebar__link ${active ? "cms-sidebar__link--active" : ""}`}
         style={{ paddingLeft: `calc(1.25rem + ${link.depth * 0.65}rem)` }}
       >

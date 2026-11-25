@@ -6,12 +6,18 @@ import { getSettings } from "@/api/settings";
 import { INSTITUTE_COUNTER } from "@/lib/instituteStats";
 import type { Page } from "@/types/content";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
+import InnerPageLayout from "@/components/shared/InnerPageLayout";
+import MenuSectionNav from "@/components/shared/MenuSectionNav";
+import { useMenu } from "@/context/MenuContext";
+import { INSTITUTE_ABOUT_MENU_ID, resolveMenuSection } from "@/lib/menuSection";
 import { Reveal } from "@/components/Animation";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function InstitutPage() {
   const { t } = useTranslation();
+  const { menu } = useMenu();
+  const section = resolveMenuSection(menu, INSTITUTE_ABOUT_MENU_ID);
   usePageMeta(t("footer.institutHaqida"));
   const [missionPage, setMissionPage] = useState<Page | null>(null);
   // the headline figures are the site counter an administrator edits (Sayt sozlamalari), not numbers typed into this page
@@ -57,115 +63,62 @@ export default function InstitutPage() {
   }, []);
 
   return (
-    <div className="text-foreground-950">
-      {/* Hero with background image */}
-      <section className="relative min-h-[320px] md:min-h-[380px] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
+    <InnerPageLayout
+      title={t("footer.institutHaqida")}
+      breadcrumb={t("footer.institut")}
+      description={t("institut.heroDescription")}
+      sidebar={section && <MenuSectionNav menuId={section.sectionId} />}
+    >
+      <div className="space-y-8 md:space-y-10">
+        <div className="page-card overflow-hidden">
           <img
             src="/images/institut-about.jpg"
             alt={t("institut.heroImageAlt")}
-            className="w-full h-full object-cover"
+            width={1280}
+            height={852}
+            className="block aspect-video w-full object-cover sm:aspect-[5/2]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-950/95 via-primary-950/60 to-primary-950/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-950/80 via-primary-950/30 to-transparent" />
+          <dl className="grid grid-cols-2 gap-px bg-background-200/80 border-t border-background-200/80 md:grid-cols-4">
+            {stats.map(({ label, value }) => (
+              <div key={label} className="flex flex-col-reverse gap-1 bg-white px-3 py-4 text-center">
+                <dt className="text-xs text-foreground-600">{label}</dt>
+                <dd className="text-xl font-heading font-bold tabular-nums text-primary-600 md:text-2xl">{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        <div className="relative z-10 section-container w-full pb-8 md:pb-10 pt-24 md:pt-28">
-          <nav className="text-xs text-background-50/55 mb-3 flex items-center gap-2 flex-wrap" aria-label="Breadcrumb">
-            <Link to="/" className="hover:text-accent-400 transition-colors">{t("common.homePage")}</Link>
-            <i className="ri-arrow-right-s-line w-3.5 h-3.5 flex items-center justify-center opacity-60" aria-hidden />
-            <span className="text-background-50/90">{t("footer.institut")}</span>
-          </nav>
-
-          <div className="max-w-2xl">
-            <h1 className="font-heading text-2xl md:text-4xl font-semibold text-background-50 leading-tight tracking-tight">
-              {t("footer.institutHaqida")}
-            </h1>
-            <p className="mt-2.5 text-sm text-background-50/70 max-w-xl leading-relaxed line-clamp-3">
-              {t("institut.heroDescription")}
+        {/* About */}
+        <section className="page-card p-5 md:p-7">
+          <Reveal>
+            <h2 className="section-title text-xl md:text-2xl mb-3">
+              {t("institut.fullName")}
+            </h2>
+            <p className="text-sm text-foreground-700 leading-relaxed mb-3">
+              {t("institut.aboutParagraph1")}
             </p>
-            <div className="mt-4 w-12 h-px bg-accent-400 animate-rise-line" aria-hidden />
-            <div className="flex flex-wrap gap-2.5 mt-5">
+            <p className="text-sm text-foreground-700 leading-relaxed mb-4">
+              {t("institut.aboutParagraph2")}
+            </p>
+            <div className="bg-[#0a1158]/[0.06] border-l-4 border-[#ffd600] p-3 rounded-r-xl mb-4">
+              <p className="text-[#0a1158] text-sm font-medium leading-relaxed">
+                <i className="ri-calendar-check-line inline mr-1" />
+                {t("institut.foundedNote")}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
               <Link
                 to="/qabul"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#ffd600] hover:bg-[#e6c200] text-[#0a1158] text-sm font-bold cursor-pointer whitespace-nowrap transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer transition-colors"
               >
                 {t("institut.admission2026")} <i className="ri-arrow-right-line" />
               </Link>
               <Link
                 to="/aloqa"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-background-50/30 hover:bg-background-50/10 text-background-50 text-sm font-semibold cursor-pointer whitespace-nowrap transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-primary-200 text-primary-700 hover:bg-primary-50 text-sm font-semibold cursor-pointer transition-colors"
               >
                 {t("institut.contactUs")}
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Floating stats strip */}
-      <div className="relative -mt-8 z-20 section-container">
-        <Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 page-card !bg-white overflow-hidden shadow-sm">
-            {stats.map((s, i) => (
-              <div
-                key={s.label}
-                className={`p-3.5 md:p-4 text-center ${i < stats.length - 1 ? "md:border-r border-background-200/80" : ""}`}
-              >
-                <div className="text-xl md:text-2xl font-heading font-bold text-primary-600">{s.value}</div>
-                <div className="text-[11px] md:text-xs text-foreground-600 mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-
-      <main className="section-container space-y-8 md:space-y-10">
-        {/* About */}
-        <section className="section-pad pt-8 md:pt-10 pb-0">
-          <Reveal>
-            <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
-              <div>
-                <span className="section-eyebrow">{t("institut.badgeHistory")}</span>
-                <h2 className="section-title text-xl md:text-2xl mt-2 mb-3">
-                  {t("institut.fullName")}
-                </h2>
-                <p className="text-sm text-foreground-700 leading-relaxed mb-3">
-                  {t("institut.aboutParagraph1")}
-                </p>
-                <p className="text-sm text-foreground-700 leading-relaxed mb-4">
-                  {t("institut.aboutParagraph2")}
-                </p>
-                <div className="bg-[#0a1158]/[0.06] border-l-4 border-[#ffd600] p-3 rounded-r-xl mb-4">
-                  <p className="text-[#0a1158] text-sm font-medium leading-relaxed">
-                    <i className="ri-calendar-check-line inline mr-1" />
-                    {t("institut.foundedNote")}
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2.5">
-                  <Link
-                    to="/qabul"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-500 hover:bg-primary-600 text-background-50 text-sm font-semibold cursor-pointer whitespace-nowrap transition-colors"
-                  >
-                    {t("institut.admission2026")} <i className="ri-arrow-right-line" />
-                  </Link>
-                  <Link
-                    to="/aloqa"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-primary-200 text-primary-700 hover:bg-primary-50 text-sm font-semibold cursor-pointer whitespace-nowrap transition-colors"
-                  >
-                    {t("institut.contactUs")}
-                  </Link>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden border border-background-200/80 shadow-sm">
-                  <img
-                    src="/images/institut-mission.jpg"
-                    alt={t("institut.heroImageAlt")}
-                    className="w-full h-52 md:h-72 object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </Reveal>
         </section>
@@ -176,9 +129,9 @@ export default function InstitutPage() {
             <div className="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3">
               <i className="ri-flag-line text-xl" />
             </div>
-            <h3 className="font-heading text-lg font-semibold text-foreground-900 mb-2">
+            <h2 className="font-heading text-lg font-semibold text-foreground-900 mb-2">
               {t("institut.missionHeading")}
-            </h3>
+            </h2>
             <div className="cms-article cms-article--rich space-y-4">
               {missionPage.blocks
                 .slice()
@@ -191,12 +144,10 @@ export default function InstitutPage() {
         )}
 
         {/* Features */}
-        <section className="section-pad pt-0">
+        <section className="space-y-4">
           <Reveal>
-            <div className="text-center mb-5 md:mb-6">
-              <span className="section-eyebrow">{t("institut.featuresEyebrow")}</span>
-              <h2 className="section-title text-xl md:text-2xl mt-2">{t("institut.featuresHeading")}</h2>
-              <div className="w-12 h-px bg-accent-400 mx-auto mt-3" aria-hidden />
+            <div className="mb-4">
+              <h2 className="section-title text-xl md:text-2xl">{t("institut.featuresHeading")}</h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
@@ -206,7 +157,7 @@ export default function InstitutPage() {
                   <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                     <i className={`${f.icon} text-lg`} />
                   </div>
-                  <h4 className="font-heading text-base font-semibold text-foreground-900 mb-1">{f.title}</h4>
+                  <h3 className="font-heading text-base font-semibold text-foreground-900 mb-1">{f.title}</h3>
                   <p className="text-sm text-foreground-600 leading-relaxed">{f.desc}</p>
                 </div>
               </Reveal>
@@ -215,12 +166,10 @@ export default function InstitutPage() {
         </section>
 
         {/* Timeline */}
-        <section className="section-pad pt-0 pb-6 md:pb-8">
+        <section className="space-y-4">
           <Reveal>
-            <div className="text-center mb-5 md:mb-6">
-              <span className="section-eyebrow">{t("institut.historyEyebrow")}</span>
-              <h2 className="section-title text-xl md:text-2xl mt-2">{t("institut.historyHeading")}</h2>
-              <div className="w-12 h-px bg-accent-400 mx-auto mt-3" aria-hidden />
+            <div className="mb-4">
+              <h2 className="section-title text-xl md:text-2xl">{t("institut.historyHeading")}</h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -230,14 +179,14 @@ export default function InstitutPage() {
                   <span className="inline-block text-xs font-bold text-primary-600 bg-primary-50 px-2.5 py-0.5 rounded-full mb-2">
                     {item.year}
                   </span>
-                  <h4 className="font-heading font-semibold text-foreground-900 text-sm">{item.title}</h4>
-                  <p className="text-xs text-foreground-600 mt-1 leading-relaxed">{item.desc}</p>
+                  <h3 className="font-heading font-semibold text-foreground-900 text-sm">{item.title}</h3>
+                  <p className="text-sm text-foreground-600 mt-1 leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </InnerPageLayout>
   );
 }

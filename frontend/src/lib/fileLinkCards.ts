@@ -8,7 +8,9 @@ import {
   CARD_TITLE_CLASS,
   fileIconClass,
   PRIMARY_BUTTON_CLASS,
+  SECONDARY_BUTTON_CLASS,
 } from "@/blocks/documentCardClasses";
+import { officeViewerUrl } from "@/lib/officeViewer";
 
 const LEGAL_PORTAL_RE = /^https?:\/\/(?:www\.)?(lex\.uz|dd\.gov\.uz)\//i;
 const FILE_PATH_RE = /\.(pdf|docx?|xlsx?|pptx?|zip|rar)$/i;
@@ -111,12 +113,26 @@ function buildCard(
   link.href = href;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  const download = Boolean(downloadLabel) && !opensInBrowser(extension);
+  const viewerUrl = officeViewerUrl(href, extension);
+  const download = Boolean(downloadLabel) && !opensInBrowser(extension) && !viewerUrl;
+  if (viewerUrl) link.href = viewerUrl;
   if (download) link.setAttribute("download", "");
   const linkIcon = el("i", download ? "ri-download-2-line" : "ri-external-link-line");
   linkIcon.setAttribute("aria-hidden", "true");
   link.append(linkIcon, doc.createTextNode(download ? (downloadLabel as string) : openLabel));
   actions.appendChild(link);
+  if ((viewerUrl || extension === "pdf") && downloadLabel) {
+    // opened in the browser (a PDF) or through the viewer (Word/Excel/PowerPoint): the file itself stays one click away
+    const save = el("a", SECONDARY_BUTTON_CLASS) as HTMLAnchorElement;
+    save.href = href;
+    save.target = "_blank";
+    save.rel = "noopener noreferrer";
+    save.setAttribute("download", "");
+    const saveIcon = el("i", "ri-download-2-line");
+    saveIcon.setAttribute("aria-hidden", "true");
+    save.append(saveIcon, doc.createTextNode(downloadLabel));
+    actions.appendChild(save);
+  }
 
   card.append(main, actions);
   return card;
