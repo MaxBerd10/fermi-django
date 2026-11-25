@@ -556,9 +556,68 @@
   margin-top: 2rem;
 }
 
-.article-chronology {
+/* the introduction of a page: the picture is big (two fifths), centred beside the text ("Institut haqida", Missiya, USMLE) */
+@media (min-width: 768px) {
+  .article-split--lead {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: center;
+  }
+}
+
+.article-split--lead .article-aside img {
+  aspect-ratio: 3 / 2;
+}
+
+/* the cover picture at the very top of a page (the Code of Ethics) fills the width */
+.article-body > figure.article-single:first-child {
+  max-width: none;
+}
+
+.article-body > figure.article-single:first-child img {
+  max-height: none;
+}
+
+/* the history as a timeline: a card with the prose items on the left and the dated lines in a light panel on the right (the design of "Institut tarixi") */
+.article-timeline {
+  display: grid;
+  align-items: start;
+  gap: 1rem clamp(1.25rem, 3vw, 2.75rem);
   margin-block: 1rem;
-  padding-inline: 1rem;
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  .article-timeline:has(.article-timeline__events) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+.article-timeline__events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-body .article-timeline .article-timeline__events > li {
+  margin: 0;
+  padding: .625rem 0;
+  border: 0;
+  border-bottom: 1px solid #dbe2f0;
+  border-radius: 0;
+  background: none;
+  color: #273552;
+}
+
+.article-body .article-timeline .article-timeline__events > li::before {
+  content: none;
+}
+
+.article-chronology {
+  margin: 0;
+  padding: .375rem clamp(.75rem, 2vw, 1.25rem);
   border: 1px solid #dbe2f0;
   border-radius: .75rem;
   background: #f5f7fc;
@@ -567,20 +626,174 @@
 .article-chronology > div {
   display: grid;
   grid-template-columns: minmax(6rem, max-content) minmax(0, 1fr);
-  gap: .75rem;
-  padding-block: .625rem;
+  align-items: baseline;
+  gap: .25rem .625rem;
+  padding: .625rem 0;
+  border-bottom: 1px solid #dbe2f0;
 }
 
-.article-chronology > div + div {
-  border-top: 1px solid #dbe2f0;
+.article-chronology > div:last-child {
+  border-bottom: 0;
 }
 
 .article-chronology dt {
   color: #16275e;
-  font-weight: 750;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
 .article-chronology dd {
   margin: 0;
+}
+
+/* people one after another: a card each, a small portrait, the name and the lines under it */
+.article-body .article-person--card {
+  grid-template-columns: clamp(4.5rem, 14vw, 8rem) minmax(0, 1fr);
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.article-body .article-person--card img {
+  aspect-ratio: 4 / 5;
+  object-position: center top;
+  border-radius: .5rem;
+}
+
+.inner-page-body .article-body .article-person--card > div h3:not([class]) {
+  margin: 0 0 .5rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.article-body .article-person--card > div p {
+  margin: 0 0 .4rem;
+  line-height: 1.75;
+}
+
+/* a numbered step (USMLE Step 1, 2, 3): a card with a header, the number in a gold square, the text under it */
+.article-step {
+  margin-block: 1rem;
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.article-step__head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .85rem 1.15rem;
+  background: #f5f7fc;
+  border-bottom: 1px solid #dbe2f0;
+  color: #0a1158;
+}
+
+.inner-page-body .article-body .article-step__head h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.inner-page-body .article-body .article-step__head h3::before {
+  content: none;
+}
+
+.article-step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: .65rem;
+  background: #ffd600;
+  color: #0a1158;
+  font-family: var(--font-heading, Manrope, sans-serif);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.article-step__body {
+  padding: 1rem 1.15rem 1.15rem;
+  color: #273552;
+  line-height: 1.75;
+}
+
+.article-step__body p {
+  margin: 0 0 .75rem;
+}
+
+.article-step__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* a story (a heading, a picture and a run of paragraphs): one card, the first paragraph beside the picture, the rest under a thin line */
+.article-story {
+  margin-block: 1rem;
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid #dbe2f0;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.article-body .article-story > h2 {
+  margin-top: 0;
+  border-bottom: 0;
+}
+
+.article-story__feature {
+  display: grid;
+  align-items: start;
+  gap: 1rem clamp(1.25rem, 3vw, 2.75rem);
+}
+
+@media (min-width: 1024px) {
+  .article-story__feature {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+.article-story__feature p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.article-story__feature figure {
+  width: 100%;
+  margin: 0;
+}
+
+.article-story__feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .625rem;
+}
+
+.article-story__body {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dbe2f0;
+  line-height: 1.75;
+}
+
+.article-story__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* the heading of a numbered chapter of a code (1-bob, Глава 1, Chapter 1): a light band, capitals */
+.inner-page-body .cms-article--rich h2[data-chapter] {
+  margin: 2rem 0 1rem;
+  padding: .75rem 1rem;
+  border: 0;
+  border-radius: .625rem;
+  background: #f5f7fc;
+  color: #0a1158;
+  font-size: 1.2rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .01em;
 }

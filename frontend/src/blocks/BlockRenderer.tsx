@@ -5,6 +5,7 @@ import { optimizedImageUrl } from "@/lib/imageProxy";
 import RawHtmlBlock from "./RawHtmlBlock";
 import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import LinkifiedText from "./LinkifiedText";
+import { isChapterHeading } from "@/lib/layoutBlocks";
 import RoadmapPdfFrame from "./RoadmapPdfFrame";
 import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
@@ -64,7 +65,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
   const { t } = useTranslation();
   switch (block.block_type) {
     case "heading":
-      return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2>{block.data.text}</h2>;
+      return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2 data-chapter={isChapterHeading(block.data.text) || undefined}>{block.data.text}</h2>;
 
     case "paragraph":
       // A paragraph whose text holds line breaks is a verse (poem stanza): keep its lines, see .cms-verse.

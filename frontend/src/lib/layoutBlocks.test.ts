@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import type { ContentBlock } from "@/types/blocks";
-import { layoutBlocks, picturesOf } from "./layoutBlocks";
+import { isChapterHeading, layoutBlocks, picturesOf } from "./layoutBlocks";
 import { resolveLocale } from "../api/client";
 
 vi.mock("../i18n", () => ({ default: {} }));
@@ -124,5 +124,49 @@ describe("layoutBlocks", () => {
       en: { items: ["1992-1997 — A", "since 2021 — B"] },
     });
     for (const lang of ["uz", "ru", "en"] as const) expect(kinds([resolveLocale<ContentBlock>(block, lang)])).toEqual(["dated"]);
+  });
+  it("a run of people is a list of profile cards; one person alone (the rector) is not", () => {
+    const run = layoutBlocks([h("History"), h("A", 3), img("a.webp"), p("born"), h("B", 3), img("b.webp"), p("lived")]);
+    expect(run.filter((s) => s.kind === "person").map((s) => s.kind === "person" && s.card)).toEqual([true, true]);
+    const alone = layoutBlocks([h("Rector"), h("A", 3), img("a.webp"), p("address"), h("Next"), p("text")]);
+    expect(alone.filter((s) => s.kind === "person").map((s) => s.kind === "person" && s.card)).toEqual([false]);
+  });
+
+  it("a prose list directly followed by a dated list is one timeline", () => {
+    const sections = layoutBlocks([h("Stages"), list(3), base("list", { items: ["1992–1997 — A", "1998–2005 — B"] }), p("after")]);
+    const dated = sections.find((s) => s.kind === "dated");
+    expect(dated?.kind === "dated" && dated.before?.block_type).toBe("list");
+    expect(dated?.kind === "dated" && dated.entries).toHaveLength(2);
+    expect(sections.filter((s) => s.kind === "section").flatMap((s) => (s.kind === "section" ? s.blocks.map((b) => b.block_type) : []))).not.toContain("list");
+  });
+
+  it("a short heading that ends with a number is a step card; an article heading is not", () => {
+    const step = layoutBlocks([h("About"), h("USMLE Step 1", 3), p("text one"), h("USMLE Step 2", 3), p("text two")]);
+    expect(step.filter((s) => s.kind === "step").map((s) => s.kind === "step" && s.number)).toEqual(["1", "2"]);
+    expect(kinds([h("A"), h("1-modda. Ushbu kodeks bilan tartibga solinadigan munosabatlar", 3), p("text")])).not.toContain("step");
+  });
+  it("a heading, paragraphs only and one landscape picture (first or last) is a story: the first paragraph beside the picture, the rest below", () => {
+    const first = layoutBlocks([h("Top"), p("t"), h("Page of history"), img("a.webp"), p("one"), p("two"), p("three"), h("Next"), p("x")]).find((s) => s.kind === "story");
+    expect(first?.kind === "story" && first.body).toHaveLength(2);
+    const last = layoutBlocks([h("Top"), p("t"), h("Cooperation"), p("one"), img("a.webp")]).find((s) => s.kind === "story");
+    expect(last?.kind === "story" && last.body).toHaveLength(0);
+  });
+
+  it("a portrait picture, a list, or a picture between paragraphs is not a story", () => {
+    expect(kinds([h("Top"), p("t"), h("Rector"), img("r.webp", 540, 690), p("one"), p("two"), p("three")])).not.toContain("story");
+    expect(kinds([h("Top"), p("t"), h("Rector"), img("r.webp", 960, 883), p("one"), p("two"), p("three")])).not.toContain("story");
+    expect(kinds([h("Top"), p("t"), h("A"), p("one"), list(2), img("a.webp")])).not.toContain("story");
+    expect(kinds([h("Top"), p("t"), h("A"), p("one"), img("a.webp"), p("two"), p("three"), p("four")])).not.toContain("story");
+  });
+  it("a heading that numbers a chapter (1-bob, Глава 1, Chapter 1) is a chapter band; other headings are not", () => {
+    for (const text of ["1-BOB UMUMIY QOIDALAR", "1-bob. Umumiy qoidalar", "Глава 1. Общие положения", "ГЛАВА 1 ОБЩИЕ ПОЛОЖЕНИЯ", "Chapter 1 General rules"]) expect(isChapterHeading(text)).toBe(true);
+    for (const text of ["1. Stomatologiya markazi", "Kelajak haqidagi tasavvur", "1-modda. Ushbu kodeks", "2027-yil vazifalari"]) expect(isChapterHeading(text)).toBe(false);
+  });
+  it("the first section of a page with one picture is the lead: a big picture beside its introduction; later sections are not", () => {
+    const sections = layoutBlocks([h("About"), p("one"), p("two"), img("a.webp"), h("Later"), list(4), p("x"), img("b.webp")]);
+    const flags = sections.filter((s) => s.kind === "section" && s.side).map((s) => s.kind === "section" && s.lead);
+    expect(flags).toEqual([true, false]);
+    const two = layoutBlocks([h("About"), p("one"), p("two"), img("a.webp"), img("b.webp")]).find((s) => s.kind === "section" && s.pictures.length > 0);
+    expect(two?.kind === "section" && two.lead).toBe(false);
   });
 });

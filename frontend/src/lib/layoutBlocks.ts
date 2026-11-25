@@ -10,10 +10,12 @@ export type Picture = { src: string; alt: string; width: number | null; height: 
 export type Section =
   | { kind: "opening"; text: ContentBlock; picture: Picture }
   | { kind: "quote"; text: ContentBlock; picture: Picture }
-  | { kind: "person"; heading: ContentBlock; picture: Picture; text: ContentBlock[] }
-  | { kind: "section"; blocks: ContentBlock[]; pictures: Picture[]; side: boolean }
+  | { kind: "person"; heading: ContentBlock; picture: Picture; text: ContentBlock[]; card: boolean }
+  | { kind: "story"; heading: ContentBlock; picture: Picture; lead: ContentBlock; body: ContentBlock[] }
+  | { kind: "step"; heading: ContentBlock; number: string; text: ContentBlock[] }
+  | { kind: "section"; blocks: ContentBlock[]; pictures: Picture[]; side: boolean; lead: boolean }
   | { kind: "footer"; source: ContentBlock; slogan: ContentBlock; contact: ContentBlock }
-  | { kind: "dated"; entries: { period: string; text: string }[] }
+  | { kind: "dated"; entries: { period: string; text: string }[]; before?: ContentBlock }
   | { kind: "block"; block: ContentBlock };
 
 /** A picture in the side column is about 160px (5.7 lines of text) high plus the gap. */
@@ -65,6 +67,24 @@ function isEmptyPicture(block: ContentBlock): boolean {
   return (block.block_type === "image" && !block.data.image) || (block.block_type === "gallery" && !block.data.style && picturesOf(block).length === 0);
 }
 
+/** A clearly landscape picture (at least 5:4): a nearly square portrait, like the rector's, is not. */
+function isWide(picture: Picture): boolean {
+  return picture.width !== null && picture.height !== null && picture.width >= picture.height * 1.25;
+}
+
+/** "1-bob. ...", "Глава 1", "Chapter 1": the heading of a numbered chapter of a code (drawn as a band). */
+export function isChapterHeading(text: string): boolean {
+  return /^\s*(?:\d+\s*[-–.]?\s*bob\b|глава\s+\d+|chapter\s+\d+)/iu.test(text);
+}
+
+function isSectionHeading(block: ContentBlock): boolean {
+  return block.block_type === "heading" && block.data.level !== 3;
+}
+
+function isDated(block: ContentBlock): boolean {
+  return block.block_type === "list" && (block.data.dated ?? isDatedList(block.data.items));
+}
+
 function weight(block: ContentBlock): number {
   if (block.block_type === "heading") return 2;
   if (block.block_type === "paragraph") return 3;
@@ -83,11 +103,14 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
   const flush = () => {
     if (open && (open.blocks.length > 0 || open.pictures.length > 0)) {
       const lines = open.blocks.reduce((sum, block) => sum + weight(block), 0);
+      const side = open.hasHeading && open.pictures.length > 0 && lines >= open.pictures.length * LINES_PER_SIDE_PICTURE;
       sections.push({
         kind: "section",
         blocks: open.blocks,
         pictures: open.pictures,
-        side: open.hasHeading && open.pictures.length > 0 && lines >= open.pictures.length * LINES_PER_SIDE_PICTURE,
+        side,
+        // the first section of the page with one picture beside its text: the introduction of the page, the picture is big
+        lead: side && open.pictures.length === 1 && sections.length === 0,
       });
     }
     open = null;
@@ -127,10 +150,17 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       continue;
     }
     if (block.block_type === "list") {
-      if (block.data.dated ?? isDatedList(block.data.items)) {
+      if (isDated(block)) {
         flush();
         sections.push({ kind: "dated", entries: datedEntries(block.data.items) });
         i++;
+        continue;
+      }
+      const next = items[i + 1];
+      if (next && next.block_type === "list" && isDated(next)) {
+        flush();
+        sections.push({ kind: "dated", entries: datedEntries(next.data.items), before: block });
+        i += 2;
         continue;
       }
     }
@@ -164,12 +194,36 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
         const text: ContentBlock[] = [];
         let j = i + 2;
         while (j < items.length && items[j].block_type === "paragraph" && j !== footerAt) text.push(items[j++]);
-        sections.push({ kind: "person", heading: block, picture, text });
+        sections.push({ kind: "person", heading: block, picture, text, card: false });
+        i = j;
+        continue;
+      }
+      const number = block.data.text.trim().length <= 30 ? block.data.text.trim().match(/\s(\d{1,2})$/)?.[1] : undefined;
+      if (number) {
+        flush();
+        const text: ContentBlock[] = [];
+        let j = i + 1;
+        while (j < items.length && items[j].block_type === "paragraph" && j !== footerAt) text.push(items[j++]);
+        sections.push({ kind: "step", heading: block, number, text });
         i = j;
         continue;
       }
     }
     if (block.block_type === "heading" && block.data.level !== 3) {
+      // heading, paragraphs only and exactly one clearly landscape picture (first or last): a story, the first paragraph beside the picture
+      let end = i + 1;
+      while (end < items.length && !isSectionHeading(items[end]) && end !== footerAt) end++;
+      const body = items.slice(i + 1, end);
+      const pictureBlocks = body.filter((b) => picturesOf(b).length > 0);
+      const paragraphs = body.filter((b) => b.block_type === "paragraph");
+      const picture = pictureBlocks.length === 1 ? picturesOf(pictureBlocks[0]) : [];
+      const atEdge = body[0] === pictureBlocks[0] || body[body.length - 1] === pictureBlocks[0];
+      if ((sections.length > 0 || open !== null) && picture.length === 1 && isWide(picture[0]) && atEdge && paragraphs.length >= 1 && paragraphs.length + 1 === body.length && !paragraphs.some((b) => b.block_type === "paragraph" && b.data.quote === true)) {
+        flush();
+        sections.push({ kind: "story", heading: block, picture: picture[0], lead: paragraphs[0], body: paragraphs.slice(1) });
+        i = end;
+        continue;
+      }
       flush();
       start(true).blocks.push(block);
       i++;
@@ -185,5 +239,10 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
     i++;
   }
   flush();
+  // two or more people one after another (a history of rectors) are profile cards; one person alone (the rector's address) is not
+  sections.forEach((section, index) => {
+    if (section.kind !== "person") return;
+    section.card = sections[index - 1]?.kind === "person" || sections[index + 1]?.kind === "person";
+  });
   return sections;
 }

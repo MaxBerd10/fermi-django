@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
+import LinkifiedText from "@/blocks/LinkifiedText";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { layoutBlocks, type Picture, type Section } from "@/lib/layoutBlocks";
 import type { ContentBlock } from "@/types/blocks";
@@ -64,7 +65,7 @@ function SectionView({ section }: { section: Section }) {
       );
     case "person":
       return (
-        <section className="article-person">
+        <section className={section.card ? "article-person article-person--card" : "article-person"}>
           <figure><PictureImg picture={section.picture} /></figure>
           <div>
             <BlockRenderer block={section.heading} />
@@ -82,27 +83,62 @@ function SectionView({ section }: { section: Section }) {
       );
     case "dated":
       return (
-        <dl className="article-chronology">
-          {section.entries.map(({ period, text }, index) => (
-            <div key={index}>
-              <dt>{period}</dt>
-              <dd>{text}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="article-timeline">
+          {section.before && section.before.block_type === "list" && (
+            <ul className="article-timeline__events">
+              {section.before.data.items.map((item, index) => <li key={index}><LinkifiedText text={item} /></li>)}
+            </ul>
+          )}
+          <dl className="article-chronology">
+            {section.entries.map(({ period, text }, index) => (
+              <div key={index}>
+                <dt>{period}</dt>
+                <dd>{text}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      );
+    case "story":
+      return (
+        <section className="article-story">
+          <BlockRenderer block={section.heading} />
+          <div className="article-story__feature">
+            <div><BlockRenderer block={section.lead} /></div>
+            <figure><PictureImg picture={section.picture} /></figure>
+          </div>
+          <div className="article-story__body">{drawBlocks(section.body)}</div>
+        </section>
+      );
+    case "step":
+      return (
+        <article className="article-step">
+          <div className="article-step__head">
+            <span className="article-step__num">{section.number}</span>
+            <BlockRenderer block={section.heading} />
+          </div>
+          <div className="article-step__body">{drawBlocks(section.text)}</div>
+        </article>
       );
     case "block":
       return <BlockRenderer block={section.block} />;
     case "section":
       if (section.pictures.length === 0) return <>{drawBlocks(section.blocks)}</>;
       if (section.side) {
+        // the lead: the text up to the first list or table sits beside the big picture, the rest (the lists) runs under both
+        const cut = section.lead ? section.blocks.findIndex((block) => block.block_type === "list" || block.block_type === "table") : -1;
+        const beside = cut > 0 ? section.blocks.slice(0, cut) : section.blocks;
+        const below = cut > 0 ? section.blocks.slice(cut) : [];
         return (
-          <section className="article-split">
-            <div>{drawBlocks(section.blocks)}</div>
-            <div className="article-aside">
-              {section.pictures.map((picture) => <Figure key={picture.src} picture={picture} />)}
-            </div>
-          </section>
+          <>
+            <section className={section.lead ? "article-split article-split--lead" : "article-split"}>
+              <div>{drawBlocks(beside)}</div>
+              <div className="article-aside">
+                {section.pictures.map((picture) => <Figure key={picture.src} picture={picture} />)}
+              </div>
+            </section>
+            {drawBlocks(below)}
+          </>
         );
       }
       return (
