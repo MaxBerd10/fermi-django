@@ -1,0 +1,587 @@
+[
+ {
+  "slug": "institut-ijtimoy-tibbiy-gazetasi",
+  "order": 1,
+  "fp": {
+   "uz": "127daf3d869de87785ea03d058ff608bbee8e06cb75f273e3819efee4ee127f6",
+   "ru": "84f91c700f375fefd9e9ee1b1b1b6883c8d6b24ba0a1d12202a6d143947be316",
+   "en": "d829cd86c89bad3eceb961daf8f3f686f3bef454f0c0a86e39cc6fa8e81cbcb7"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "\"Jamoat salomatligi\" gazetasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "\"Газета общественного\" здравоохранения"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "\"Public Health\" Newspaper"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 469,
+    "caption": {
+     "uz": "\"Jamoat salomatligi\" gazetasi",
+     "ru": "\"Газета общественного\" здравоохранения",
+     "en": "\"Public Health\" Newspaper"
+    },
+    "fp": {
+     "uz": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810",
+     "ru": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810",
+     "en": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810"
+    }
+   }
+  ],
+  "notes": [
+   "ru listed the issues of the archives (not kept: the archives are in the menu)",
+   "en listed the issues of the archives (not kept: the archives are in the menu)"
+  ]
+ },
+ {
+  "slug": "institut-gazetasi-arxivi-2021",
+  "order": 1,
+  "fp": {
+   "uz": "6274af40907b4ebc81a9afba65dbe8b623f110de1688d854de3de02391d6b51b",
+   "ru": "ffc2a69b5781defaa699c1e57a17fd37a3d68f7b641657a75caedc5fd1b83a5c",
+   "en": "12dbe0bb3fbb73df7754136c798fd32f5b73b5cefcabf279340edc087712048f"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/gazeta.jpg",
+      "alt": "Institut gazetasi arxivi-2021"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/gazeta.jpg",
+      "alt": "Архив газеты Института-2021"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/gazeta.jpg",
+      "alt": "Archive of the newspaper Institute-2021"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№1.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 28.09.2021"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№1.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 28.09.2021"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№1.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 28.09.2021"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№2.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 29.10.2021"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№2.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 29.10.2021"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2021/№2.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 29.10.2021"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 470,
+    "caption": {
+     "uz": "Institut gazetasi arxivi-2021",
+     "ru": "Архив газеты Института-2021",
+     "en": "Archive of the newspaper Institute-2021"
+    },
+    "fp": {
+     "uz": "be6c99745e45b291b85ca6e5a681d70bed7f4df7a42e6435d180f37790f3a4e8",
+     "ru": "be6c99745e45b291b85ca6e5a681d70bed7f4df7a42e6435d180f37790f3a4e8",
+     "en": "be6c99745e45b291b85ca6e5a681d70bed7f4df7a42e6435d180f37790f3a4e8"
+    }
+   }
+  ],
+  "notes": []
+ },
+ {
+  "slug": "institut-gazetasi-arxivi-2022",
+  "order": 1,
+  "fp": {
+   "uz": "7760a150144c0095a1cbcbc012144df33befcbdbd38762f270492b355ceee5d8",
+   "ru": "f5955582ffc9840ba6a9db1f909a249bc603f7e40796c41ecea9f2f77c8d6793",
+   "en": "f6b5397ca69e10da448200acd3be34326118a612754a9c3510255e6ef37dbb95"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/GAZETA.jpg",
+      "alt": "Institut gazetasi arxivi-2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/GAZETA.jpg",
+      "alt": "Архив газеты Института-2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/GAZETA.jpg",
+      "alt": "Archive of the newspaper Institute-2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№1.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 28.02.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№1.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 28.02.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№1.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 28.02.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№(3)7 .pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 28.03.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№(3)7 .pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 28.03.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№(3)7 .pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 28.03.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№4(8).pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 20.04.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№4(8).pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 20.04.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№4(8).pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 20.04.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№5.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 30.05.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№5.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 30.05.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№5.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 30.05.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№6.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 29.06.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№6.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 29.06.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№6.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 29.06.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№7.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 30.07.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№7.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 30.07.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№7.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 30.07.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№8.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 10.09.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№8.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 10.09.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№8.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 10.09.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№9.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 30.09.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№9.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 30.09.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№9.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 30.09.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№11.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 30.11.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№11.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 30.11.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№11.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 30.11.2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№12.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 26.12.2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№12.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 26.12.2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2022/№12.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 26.12.2022"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 471,
+    "caption": {
+     "uz": "Institut gazetasi arxivi-2022",
+     "ru": "Архив газеты Института-2022",
+     "en": "Archive of the newspaper Institute-2022"
+    },
+    "fp": {
+     "uz": "dbbfe059814c7b22709c3b7801a980bf4ab265a3972af448b7724d442222c94b",
+     "ru": "dbbfe059814c7b22709c3b7801a980bf4ab265a3972af448b7724d442222c94b",
+     "en": "dbbfe059814c7b22709c3b7801a980bf4ab265a3972af448b7724d442222c94b"
+    }
+   }
+  ],
+  "notes": [
+   "ru listed other issues: only in ru: []; only in uz: ['migrated/img/yangilikar/FJSTI gazetasi/2022/№1.pdf']",
+   "en listed other issues: only in en: []; only in uz: ['migrated/img/yangilikar/FJSTI gazetasi/2022/№1.pdf']"
+  ]
+ },
+ {
+  "slug": "institut-gazetasi-arxivi-2023",
+  "order": 1,
+  "fp": {
+   "uz": "b5ea34e137332ebb82ad270de5786bcd532a8aefcfb6616eaecbd47eb65bfb0e",
+   "ru": "9325e9c934261f73186449c68cb79bb394701a87b216490df3f8c08e86a57349",
+   "en": "9325e9c934261f73186449c68cb79bb394701a87b216490df3f8c08e86a57349"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "Institut gazetasi arxivi-2023"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "Архив газеты Института-2023"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/GAZETA-1-min.jpg",
+      "alt": "Archive of the newspaper Institute-2023"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№2.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 28.02.2023"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№2.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 28.02.2023"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№2.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 28.02.2023"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№3.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 15.04.2023"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№3.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 15.04.2023"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№3.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 15.04.2023"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№7.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 21.11.2023"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№7.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 21.11.2023"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№7.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 21.11.2023"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№9.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 25.12.2023"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№9.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 25.12.2023"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/№9.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 25.12.2023"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 472,
+    "caption": {
+     "uz": "Institut gazetasi arxivi-2023",
+     "ru": "Архив газеты Института-2023",
+     "en": "Archive of the newspaper Institute-2023"
+    },
+    "fp": {
+     "uz": "930a1c16e5368075b7d0d0000fce738917b063727d9e977583db2ec95351a15d",
+     "ru": "930a1c16e5368075b7d0d0000fce738917b063727d9e977583db2ec95351a15d",
+     "en": "930a1c16e5368075b7d0d0000fce738917b063727d9e977583db2ec95351a15d"
+    }
+   }
+  ],
+  "notes": []
+ },
+ {
+  "slug": "institut-gazetasi-arxivi-2024",
+  "order": 1,
+  "fp": {
+   "uz": "24357330ffc823791dc71c45edc12382110f9cefc39639fccef66e8203acb60a",
+   "ru": "60372b04f0c0a0b8c1d9841e7189959f75ea56a89323d2ca7ecee180d6917b8c",
+   "en": "60372b04f0c0a0b8c1d9841e7189959f75ea56a89323d2ca7ecee180d6917b8c"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/Gazeta-2024.12.jpg",
+      "alt": "Institut gazetasi arxivi-2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/Gazeta-2024.12.jpg",
+      "alt": "Архив газеты Института-2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/Gazeta-2024.12.jpg",
+      "alt": "Archive of the newspaper Institute-2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№1.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 16.01.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№1.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 16.01.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№1.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 16.01.2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№4.pdf",
+      "caption": "Fargʻona jamoat salomatligi tibbiyot institutining ijtimoiy-tibbiy gazetasi 30.09.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№4.pdf",
+      "caption": "Социально-медицинская газета Ферганского медицинского института общественного здоровья от 30.09.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/2024 yil gazeta/№4.pdf",
+      "caption": "Social and medical newspaper of the Fergana Medical Institute of Public Health, 30.09.2024"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 473,
+    "caption": {
+     "uz": "Institut gazetasi arxivi-2024",
+     "ru": "Архив газеты Института-2024",
+     "en": "Archive of the newspaper Institute-2024"
+    },
+    "fp": {
+     "uz": "f07d5b1ce35abb8cc7787671e7634e813d57df4875f6401c5893bd0ca0da1dc6",
+     "ru": "f07d5b1ce35abb8cc7787671e7634e813d57df4875f6401c5893bd0ca0da1dc6",
+     "en": "f07d5b1ce35abb8cc7787671e7634e813d57df4875f6401c5893bd0ca0da1dc6"
+    }
+   }
+  ],
+  "notes": [
+   "ru showed another picture (migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/SMM gazeta копия.jpg) -> now the uz picture",
+   "en showed another picture (migrated/img/yangilikar/FJSTI gazetasi/2023 yil sonlari/SMM gazeta копия.jpg) -> now the uz picture"
+  ]
+ },
+ {
+  "slug": "institut-gazetasi-2025",
+  "order": 1,
+  "fp": {
+   "uz": "06e618415d03aec52791629cd6b805c825551a174e2fb851a22262be8280f54a",
+   "ru": "06e618415d03aec52791629cd6b805c825551a174e2fb851a22262be8280f54a",
+   "en": "06e618415d03aec52791629cd6b805c825551a174e2fb851a22262be8280f54a"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/desgn-1.jpg",
+      "alt": "Institut gazetasi-2025"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/desgn-1.jpg",
+      "alt": "Газета Института-2025"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/FJSTI gazetasi/desgn-1.jpg",
+      "alt": "Institut gazetasi-2025"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 469,
+    "caption": {
+     "uz": "Institut gazetasi-2025",
+     "ru": "Газета Института-2025",
+     "en": "Institut gazetasi-2025"
+    },
+    "fp": {
+     "uz": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810",
+     "ru": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810",
+     "en": "2c59cca9ff196b278a2a991b3d68074397e34acfbfc4a75e70d81319abb29810"
+    }
+   }
+  ],
+  "notes": []
+ }
+]
