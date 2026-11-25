@@ -10,6 +10,9 @@ from apps.menu.models import MenuItem
 NAME = "yillik-hisobot-2026-44"
 SECTION_ID = 1827
 FIELDS = ("label_uz", "label_ru", "label_en")
+# The same page is also listed under "Meʼyoriy hujjatlar" (menu item 1881, /blog/1879/kredit-modul-nizomi): it gets the same corrected labels.
+# Other entries with this slug (e.g. "Kredit modul tizimi" under 2023) are a different menu name and stay.
+EXTRA_ITEMS = {1881: "kredit-modul-nizomi"}
 
 
 def snapshot(item):
@@ -29,6 +32,13 @@ def build(apply):
             if slug in targets:
                 raise SystemExit(f"STOP: duplicate in the Institut haqida menu: {slug}.")
             targets[slug] = item
+
+    for pk, slug in EXTRA_ITEMS.items():
+        extra = query.filter(pk=pk).first()
+        if extra is None or urlsplit(extra.url).path.rstrip("/").rsplit("/", 1)[-1] != slug:
+            raise SystemExit(f"STOP: menu item {pk} is not the page {slug} any more.")
+        targets[f"{slug}@{pk}"] = extra
+        plan[f"{slug}@{pk}"] = plan[slug]
 
     if missing := set(plan) - set(targets):
         raise SystemExit(f"STOP: missing from the Institut haqida menu: {', '.join(sorted(missing))}.")
