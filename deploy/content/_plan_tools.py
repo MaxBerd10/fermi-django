@@ -94,3 +94,25 @@ def entry(slug, raw, blocks, cards=None):
     if cards:
         result["existing_documents"] = cards
     return result
+
+
+def md_text(fragment):
+    """Plain text of an HTML fragment with every link kept as [label](address) (the form LinkifiedText turns back into a link)."""
+    def link(match):
+        label = plain(match.group(2))
+        href = match.group(1).replace(" ", "%20").replace("(", "%28").replace(")", "%29")
+        return "[%s](%s)" % (label, href) if label else ""
+
+    return plain(re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>', link, fragment, flags=re.S))
+
+
+def lines_of(fragment):
+    """The visible lines of an HTML fragment (a line ends at </p>, </div>, </h1..6>, </li>, <br>, <hr>): [{'text', 'md', 'links', 'images'}]."""
+    cut = re.sub(r"<hr\s*/?>|<br\s*/?>", "\n", fragment)
+    cut = re.sub(r"</(p|div|h\d|li|tr)>", "\n", cut)
+    out = []
+    for line in cut.split("\n"):
+        text = plain(line)
+        if text:
+            out.append({"text": text, "md": md_text(line), "links": links_of(line), "images": images_of(line)})
+    return out

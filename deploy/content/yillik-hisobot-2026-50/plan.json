@@ -1,0 +1,1384 @@
+[
+ {
+  "slug": "talim-togrisia",
+  "order": 1,
+  "fp": {
+   "uz": "3fcfe6a8bada25cadf5b786009673c1a44c4f1428f29ee34885ff6f6b39767d5",
+   "ru": "256784a2eea39928f564fd663350179d4099eb93d7457e199538ae7a6a67b90e",
+   "en": "9d7b9f5a8b1e4d7a0922d88c16f01a5d76724f50654b4f8740562d82dd6aa2e7"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Manba: lex.uz"
+     },
+     "ru": {
+      "text": "Источник: lex.uz"
+     },
+     "en": {
+      "text": "Source: lex.uz"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hujjat nomi: Taʻlim toʻgʻrisida"
+     },
+     "ru": {
+      "text": "Название документа: Об образовании"
+     },
+     "en": {
+      "text": "Document title: On Education"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Shakl: Qonun"
+     },
+     "ru": {
+      "text": "Форма: Закон"
+     },
+     "en": {
+      "text": "Form: Law"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Organ: Oʻzbekiston Respublikasi Oliy Majlisi"
+     },
+     "ru": {
+      "text": "Орган: Олий Мажлис Республики Узбекистан"
+     },
+     "en": {
+      "text": "Issuing body: Oliy Majlis of the Republic of Uzbekistan"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Raqam: OʻRQ-637"
+     },
+     "ru": {
+      "text": "Номер: ЗРУ-637"
+     },
+     "en": {
+      "text": "Number: ZRU-637"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qabul qilingan sanasi: 23.09.2020"
+     },
+     "ru": {
+      "text": "Дата приема: 23.09.2020"
+     },
+     "en": {
+      "text": "Date of acceptance: 23.09.2020"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Eʻlon qilingan sana: 24.09.2020"
+     },
+     "ru": {
+      "text": "Дата публикации: 24.09.2020"
+     },
+     "en": {
+      "text": "Date of publication: 24.09.2020"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kuchga kirish sanasi: 24.09.2020"
+     },
+     "ru": {
+      "text": "Дата вступления в силу: 24.09.2020"
+     },
+     "en": {
+      "text": "Date of entry into force: 24.09.2020"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 474,
+    "caption": {
+     "uz": "Oʻzbekiston Respublikasining Qonuni «Taʻlim toʻgʻrisida» OʻRQ-637 23.09.2020",
+     "ru": "Закон Республики Узбекистан «Об образовании» ЗРУ-637 от 23.09.2020",
+     "en": "The Law of the Republic of Uzbekistan “On Education” ZRU-637 of 23.09.2020"
+    },
+    "fp": {
+     "uz": "408f7a4a0b497bf49b0967c9b3adc7d34dcb952fbd5da2be8f1b4773109de34d",
+     "ru": "408f7a4a0b497bf49b0967c9b3adc7d34dcb952fbd5da2be8f1b4773109de34d",
+     "en": "408f7a4a0b497bf49b0967c9b3adc7d34dcb952fbd5da2be8f1b4773109de34d"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "kredit-modul-nizomi",
+  "order": 1,
+  "fp": {
+   "uz": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
+   "ru": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf",
+   "en": "501d6d59431046193370de5e52566fc364fbb58d87f1b51f4d11705e79be0ecf"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
+      "alt": "Institut kredit modul nizomi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
+      "alt": "Устав кредитного модуля института"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/O`quv bo`limi/Kredit Modul.jpg",
+      "alt": "Institute credit module regulations"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 455,
+    "caption": {
+     "uz": "Institut kredit modul nizomi",
+     "ru": "Устав кредитного модуля института",
+     "en": "Institute credit module regulations"
+    },
+    "fp": {
+     "uz": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
+     "ru": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0",
+     "en": "3bd0ea83da7032b4375f729b053dcbc71d44f63057673db16bdd9264d60654f0"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "taraqqiyot-strategiyasi",
+  "order": 1,
+  "fp": {
+   "uz": "9e89752280dbd04b38ac0c789c9339745e544da8ed7dc6d12179902e631b88e1",
+   "ru": "a82e382f1028d0728b4b749a92bc3877d6efabcf5fda7b1ad68fcaf24215b2ab",
+   "en": "74187888685b51730c63c02a9cd28c7f5084676194993a802d67ab05ea8c1e33"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "OʻZBEKISTON RESPUBLIKASI PREZIDENTINING"
+     },
+     "ru": {
+      "text": "УКАЗ"
+     },
+     "en": {
+      "text": "DECREE"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARMONI"
+     },
+     "ru": {
+      "text": "ПРЕЗИДЕНТА РЕСПУБЛИКИ УЗБЕКИСТАН"
+     },
+     "en": {
+      "text": "OF THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2022 — 2026-YILLARGA MOʻLJALLANGAN YANGI OʻZBEKISTONNING TARAQQIYOT STRATEGIYASI TOʻGʻRISIDA"
+     },
+     "ru": {
+      "text": "О СТРАТЕГИИ РАЗВИТИЯ НОВОГО УЗБЕКИСТАНА НА 2022–2026 ГОДЫ"
+     },
+     "en": {
+      "text": "ON THE DEVELOPMENT STRATEGY OF NEW UZBEKISTAN FOR 2022–2026"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Prezident Farmonlari/PF-60.pdf",
+      "caption": "Oʻzbekiston Respublikasi Prezidentining Farmoni, 28.01.2022 yildagi PF-60-son"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Prezident Farmonlari/PF-60.pdf",
+      "caption": "Указ Президента Республики Узбекистан от 28.01.2022 г. № УП-60 (PDF, на узбекском языке)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Prezident Farmonlari/PF-60.pdf",
+      "caption": "Decree of the President of the Republic of Uzbekistan No. PF-60 of 28.01.2022 (PDF, in Uzbek)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "prezident-farmon-va-qarorlari",
+  "order": 1,
+  "fp": {
+   "uz": "a7b24468a16d4abb7b764419f0bf41e1f374b87f2efa0fe6677acc6f7023c2b9",
+   "ru": "19c99365cc4800d040243b9142fdb1e98f9ff43dba70e8dd8e4ef060dfc223ec",
+   "en": "6eb6836efcd4cbac9bbd926c3c870c119b8b34edb40e9165147e69060e7f42f9"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Aholiga Gematologiya va Onkologiya xizmatlarini koʻrsatish tizimini yanada takomillashtirish toʻgʻrisida](https://lex.uz/uz/docs/-5436849)"
+     },
+     "ru": {
+      "text": "[О дальнейшем совершенствовании системы оказания гематологических и онкологических услуг населению](https://lex.uz/uz/docs/-5436849)"
+     },
+     "en": {
+      "text": "[On further improving the system of hematology and oncology services for the population](https://lex.uz/uz/docs/-5436849)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasi Prezidentining Farmoni, 05.05.2021 yildagi PF-6221-son](https://lex.uz/uz/docs/-5411129)"
+     },
+     "ru": {
+      "text": "[Указ Президента Республики Узбекистан, от 05.05.2021 г. № УП-6221](https://lex.uz/uz/docs/-5411129)"
+     },
+     "en": {
+      "text": "[Decree of the President of the Republic of Uzbekistan No. UP-6221 of 05.05.2021](https://lex.uz/uz/docs/-5411129)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasi Prezidentining Farmoni, 12.11.2020 yildagi PF-6110-son](https://lex.uz/docs/-5100677)"
+     },
+     "ru": {
+      "text": "[Указ Президента Республики Узбекистан, от 12.11.2020 г. № УП-6110](https://lex.uz/docs/-5100677)"
+     },
+     "en": {
+      "text": "[Decree of the President of the Republic of Uzbekistan No. UP-6110 of 12.11.2020](https://lex.uz/docs/-5100677)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi aholisiga 2017 — 2021 yillarda ixtisoslashtirilgan tibbiy yordam koʻrsatishni yanada rivojlantirish chora-tadbirlari toʻgʻrisida"
+     },
+     "ru": {
+      "text": "О мерах по дальнейшему развитию специализированной медицинской помощи населению Республики Узбекистан в 2017–2021 годах"
+     },
+     "en": {
+      "text": "On measures to further develop specialized medical care for the population of the Republic of Uzbekistan in 2017–2021"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasida xalq tabobatini rivojlantirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida](https://lex.uz/docs/-4785739)"
+     },
+     "ru": {
+      "text": "[О дополнительных мерах по развитию народной медицины в Республике Узбекистан](https://lex.uz/docs/-4785739)"
+     },
+     "en": {
+      "text": "[On additional measures for the development of traditional medicine in the Republic of Uzbekistan](https://lex.uz/docs/-4785739)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Tibbiyot muassasalarini farmatsevtika mahsulotlari va tibbiy jihozlar bilan taʻminlash tizimini takomillashtirish chora-tadbirlari toʻgʻrisida](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-408-%D1%81%D0%BE%D0%BD%2029.11.2024.%C2%A0Tibbiyot%20muassasalarini%20farmatsevtika%20mahsulotlari%20va%20tibbiy%20jihozlar%20bilan%20ta%E2%80%99minlash%20tizimini%20takomillashtirish%20chora-tadbirlari%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "ru": {
+      "text": "[О мерах по совершенствованию системы обеспечения медицинских учреждений фармацевтической продукцией и медицинским оборудованием.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-408-%D1%81%D0%BE%D0%BD%2029.11.2024.%C2%A0Tibbiyot%20muassasalarini%20farmatsevtika%20mahsulotlari%20va%20tibbiy%20jihozlar%20bilan%20ta%E2%80%99minlash%20tizimini%20takomillashtirish%20chora-tadbirlari%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "en": {
+      "text": "[On measures to improve the system of providing medical institutions with pharmaceutical products and medical equipment](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-408-%D1%81%D0%BE%D0%BD%2029.11.2024.%C2%A0Tibbiyot%20muassasalarini%20farmatsevtika%20mahsulotlari%20va%20tibbiy%20jihozlar%20bilan%20ta%E2%80%99minlash%20tizimini%20takomillashtirish%20chora-tadbirlari%20to%E2%80%98g%E2%80%98risida.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Sogʻliqni saqlash sohasida ixtisoslashtirilgan tibbiy yordam koʻrsatish tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-5199-%D1%81%D0%BE%D0%BD%2028.07.2021.%C2%A0Sog%E2%80%98liqni%20saqlash%20sohasida%20ixtisoslashtirilgan%20tibbiy%20yordam%20ko%E2%80%98rsatish%20tizimini%20yanada%20takomillashtirish%20chora-tadbirlari%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "ru": {
+      "text": "[О мерах по дальнейшему совершенствованию системы оказания специализированной медицинской помощи в сфере здравоохранения](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-5199-.pdf)"
+     },
+     "en": {
+      "text": "[On measures to further improve the system of specialized medical care in the healthcare sector](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-5199-.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Sogʻliqni saqlash sohasini kompleks rivojlantirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-5124-Sog%E2%80%98liqni%20saqlash%20sohasini%20kompleks%20rivojlantirishga%20doir%20qo%E2%80%98shimcha%20chora-tadbirlar%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "ru": {
+      "text": "[О дополнительных мерах по комплексному развитию сферы здравоохранения](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-5124.pdf)"
+     },
+     "en": {
+      "text": "[On additional measures for the comprehensive development of the healthcare sector](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-5124.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Tibbiy profilaktika ishlari samaradorligini yanada oshirish orqali jamoat salomatligini taʻminlashga oid qoʻshimcha chora-tadbirlar toʻgʻrisida](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PQ-4891-Tibbiy%20profilaktika%20ishlari%20samaradorligini%20yanada%20oshirish%20orqali%20jamoat%20salomatligini%20ta%E2%80%99minlashga%20oid%20qo%E2%80%98shimcha%20chora-tadbirlar%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "ru": {
+      "text": "[О дополнительных мерах по обеспечению общественного здоровья путем дальнейшего повышения эффективности работ по медицинской профилактике](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-408.pdf)"
+     },
+     "en": {
+      "text": "[On additional measures to ensure public health by further increasing the effectiveness of medical prevention work](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-408.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Sogʻlom turmush tarzini keng tatbiq etish va ommaviy sportni yanada rivojlantirish chora-tadbirlari toʻgʻrisida](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/PF-6099%20Sog%E2%80%98lom%20turmush%20tarzini%20keng%20tatbiq%20etish%20va%20ommaviy%20sportni%20yanada%20rivojlantirish%20chora-tadbirlari%20to%E2%80%98g%E2%80%98risida.pdf)"
+     },
+     "ru": {
+      "text": "[О мерах по широкому внедрению здорового образа жизни и дальнейшему развитию массового спорта](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%A3%D0%9F-6099-%D0%9E%20%D0%BC%D0%B5%D1%80%D0%B0%D1%85%20%D0%BF%D0%BE%20%D1%88%D0%B8%D1%80%D0%BE%D0%BA%D0%BE%D0%BC%D1%83%20%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%B0%20%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8%20%D0%B8%20%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%BC%D1%83%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8E%20%D0%BC%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0.pdf)"
+     },
+     "en": {
+      "text": "[On measures to widely introduce a healthy lifestyle and further develop mass sports](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%A3%D0%9F-6099-%D0%9E%20%D0%BC%D0%B5%D1%80%D0%B0%D1%85%20%D0%BF%D0%BE%20%D1%88%D0%B8%D1%80%D0%BE%D0%BA%D0%BE%D0%BC%D1%83%20%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%B0%20%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8%20%D0%B8%20%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%BC%D1%83%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8E%20%D0%BC%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Aholini sogʻlom ovqatlanishini taʻminlash toʻgʻrisida](https://lex.uz/docs/-5090241)"
+     },
+     "ru": {
+      "text": "[О дополнительных мерах по обеспечению здорового питания населения](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-4887-%D0%9E%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%BC%D0%B5%D1%80%D0%B0%D1%85%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BD%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.pdf)"
+     },
+     "en": {
+      "text": "[On additional measures to ensure healthy nutrition of the population](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/%D0%9F%D0%9F-4887-%D0%9E%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%BC%D0%B5%D1%80%D0%B0%D1%85%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BD%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.pdf)"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 475,
+    "caption": {
+     "uz": "Oʻzbekiston Respublikasi Prezidentining 2020-yil 3-dekabrdagi PQ-4911-son qarori «Fargʻona jamoat salomatligi tibbiyot institutini tashkil etish toʻgʻrisida»",
+     "ru": "Постановление Президента Республики Узбекистан от 03.12.2020 г. № ПП-4911 «О создании Ферганского медицинского института общественного здоровья»",
+     "en": "Resolution of the President of the Republic of Uzbekistan No. PP-4911 of 03.12.2020 “On the establishment of the Fergana Medical Institute of Public Health”"
+    },
+    "fp": {
+     "uz": "5d20adedd443968f7b175eeef35309aa59788e1b0bd908132efec5da50bd886d",
+     "ru": "5d20adedd443968f7b175eeef35309aa59788e1b0bd908132efec5da50bd886d",
+     "en": "5d20adedd443968f7b175eeef35309aa59788e1b0bd908132efec5da50bd886d"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "davlat-dasturlari",
+  "order": 1,
+  "fp": {
+   "uz": "c4333f2531652dd70d4b0b28b573ad53d45b52518ef16a7af521b23434e9a49d",
+   "ru": "acc4c310372b9aeb4e5018f6c6e5a748a91e463f8f05e0c67987a78898441401",
+   "en": "bedb8311526edf2c2b54f75b169abda6dc616497e04d638765445eb12bd6c8de"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2025-yil Atrof-muhitni asrash va “yashil iqtisodiyot” yili"
+     },
+     "ru": {
+      "text": "[2025 год -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-16-%D1%81%D0%BE%D0%BD%2030.01.2025.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)Год охраны окружающей среды и «зеленой экономики»"
+     },
+     "en": {
+      "text": "2025 - The Year of environmental protection and green economy"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2024-yil Yoshlar va biznesni qoʻllab-quvvatlash yili](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)"
+     },
+     "ru": {
+      "text": "[2024 год -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)[Год поддержки молодежи и бизнеса](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)"
+     },
+     "en": {
+      "text": "[2024](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)[- The](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)[Year of Support for Youth and Business](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-37-%D1%81%D0%BE%D0%BD%2021.02.2024.%C2%A0%E2%80%9CO%CA%BBzbekiston-2030%E2%80%9D%20strategiyasini.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2023-yil “2022–2026-yillarga moʻljallangan Yangi Oʻzbekistonning taraqqiyot strategiyasini ‘Insonga eʻtibor va sifatli taʻlim yiliʻda amalga oshirishga oid davlat dasturi toʻgʻrisida”](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/2023-yil.pdf)"
+     },
+     "ru": {
+      "text": "[2023 год -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)Год заботы о человеке и качественного образования"
+     },
+     "en": {
+      "text": "[2023 -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)The Year of caring for people and quality education"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2022 — 2026-YILLARGA MOʻLJALLANGAN YANGI OʻZBEKISTONNING TARAQQIYOT STRATEGIYASINI “INSONGA EʻTIBOR VA SIFATLI TAʻLIM YILI”DA AMALGA OSHIRISHGA OID DAVLAT DASTURI TOʻGʻRISIDA](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/PF-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A02022-2026.pdf)"
+     },
+     "ru": {
+      "text": "[О ГОСУДАРСТВЕННОЙ ПРОГРАММЕ ПО РЕАЛИЗАЦИИ СТРАТЕГИИ РАЗВИТИЯ НОВОГО УЗБЕКИСТАНА НА 2022 — 2026 ГОДЫ В «ГОД ЗАБОТЫ О ЧЕЛОВЕКЕ И КАЧЕСТВЕННОГО ОБРАЗОВАНИЯ»](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.pdf)"
+     },
+     "en": {
+      "text": "[ABOUT THE STATE PROGRAM FOR THE IMPLEMENTATION OF THE DEVELOPMENT STRATEGY OF THE NEW UZBEKISTAN FOR 2022 - 2026 IN THE “YEAR OF CARE FOR PEOPLE AND QUALITY EDUCATION”](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2022- yil Inson qadrini ulugʻlash va faol mahalla yili](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/SQ-464~1.PDF)"
+     },
+     "ru": {
+      "text": "[2022 год объявлен Годом обеспечения интересов человека и укрепления махалли](https://lex.uz/docs/-5872456)"
+     },
+     "en": {
+      "text": "2022- [The Year of ensuring human Interests and strengthening the mahalla](https://lex.uz/docs/-5872456)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2021- yil - Yoshlarni qoʻllab-quvvatlash va aholi salomatligini mustahkamlash yili](https://lex.uz/docs/-5260791)"
+     },
+     "ru": {
+      "text": "[2021 - Год поддержки молодежи и защиты здоровья населения](https://lex.uz/docs/-5260791)"
+     },
+     "en": {
+      "text": "[2021 -The Year of youth support and Public Health](https://lex.uz/docs/-5260791)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2020-yil-\"Ilm-maʻrifat va raqamli iqtisodiyotni rivojlantirish yili\"](https://lex.uz/docs/4751561)"
+     },
+     "ru": {
+      "text": "[2020 - Год развития науки, просвещения и цифровой экономики](https://lex.uz/docs/4751561)"
+     },
+     "en": {
+      "text": "[2020 - The Year of development of Science, Education and the Digital Economy](https://lex.uz/docs/4751561)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2019-yil - “Faol investitsiyalar va ijtimoiy rivojlanish yili”](http://www.lex.uz/docs/4168749)"
+     },
+     "ru": {
+      "text": "[2019 год — Год активных инвестиций и социального развития](http://www.lex.uz/docs/4168749)"
+     },
+     "en": {
+      "text": "[2019 - The Year of Active Investment and Social Development](http://www.lex.uz/docs/4168749)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2018 yil - Faol tadbirkorlik, innovatsion gʻoyalar va texnologiyalarni qoʻllab-quvvatlash yili](https://lex.uz/docs/3516847)"
+     },
+     "ru": {
+      "text": "[2018 год — Год поддержки активного предпринимательства, инновационных идей и технологий](http://lex.uz/docs/3516847)"
+     },
+     "en": {
+      "text": "[2018 - The Year of Support for Active Entrepreneurship, Innovative Ideas and Technology](http://lex.uz/docs/3516847)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2017 yil – Xalq bilan muloqot va inson manfaatlari yili](https://lex.uz/docs/-3121798)"
+     },
+     "ru": {
+      "text": "[2017 год — Год диалога с народом и интересов человека](http://www.lex.uz/pages/getpage.aspx?lact_id=3121798)"
+     },
+     "en": {
+      "text": "[2017 - The Year of Dialogue with the People and People’s Interests](http://www.lex.uz/pages/getpage.aspx?lact_id=3121798)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2016 yil- Sogʻlom ona va bola yili](http://dd.gov.uz/uz/pages/2016)"
+     },
+     "ru": {
+      "text": "[2016 год — Год здоровой матери и ребенка](http://www.lex.uz/pages/getpage.aspx?lact_id=2903502)"
+     },
+     "en": {
+      "text": "[2016 - The Year of the Healthy Mother and Child](http://www.lex.uz/pages/getpage.aspx?lact_id=2903502)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2015 yil-Keksalarni eʻzozlash yili](http://dd.gov.uz/uz/pages/2015)"
+     },
+     "ru": {
+      "text": "[2015 год — Год внимания и заботы о старшем поколении](http://www.lex.uz/pages/getpage.aspx?lact_id=2575143)"
+     },
+     "en": {
+      "text": "[2015 - The Year of Attention and Care for the Elderly](http://www.lex.uz/pages/getpage.aspx?lact_id=2575143)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2014 yil- Sogʻlom bola yili](http://dd.gov.uz/uz/pages/2014)"
+     },
+     "ru": {
+      "text": "[2014 год — Год здорового ребенка](http://www.lex.uz/pages/getpage.aspx?lact_id=2347400)"
+     },
+     "en": {
+      "text": "[2014 - The Year of the Healthy Child](http://www.lex.uz/pages/getpage.aspx?lact_id=2347400)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2013 yil - Obod turmush yili](http://dd.gov.uz/uz/pages/2013)"
+     },
+     "ru": {
+      "text": "[2013 год — Год благополучия и процветания](http://www.lex.uz/Pages/GetAct.aspx?lact_id=2135768)"
+     },
+     "en": {
+      "text": "[2013 - The Year of Welfare and Prosperity](http://www.lex.uz/Pages/GetAct.aspx?lact_id=2135768)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2012 yil - Mustahkam oila yili](http://dd.gov.uz/uz/pages/2012)"
+     },
+     "ru": {
+      "text": "[2012 год — Год семьи](http://www.lex.uz/Pages/GetAct.aspx?lact_id=1967131)"
+     },
+     "en": {
+      "text": "[2012 - The Year of the Family](http://www.lex.uz/Pages/GetAct.aspx?lact_id=1967131)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2011 yil - Kichik biznes va xususiy tadbirkorlik yili](http://dd.gov.uz/uz/pages/2011)"
+     },
+     "ru": {
+      "text": "[2011 год — Год малого бизнеса и частного предпринимательства](http://www.lex.uz/pages/GetAct.aspx?lact_id=1745082)"
+     },
+     "en": {
+      "text": "[2011 - The Year of Small Business and Private Entrepreneurship](http://www.lex.uz/pages/GetAct.aspx?lact_id=1745082)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2010 yil - Barkamol avlod yili](https://lex.uz/docs/-1586072?ONDATE=27.01.2010)"
+     },
+     "ru": {
+      "text": "[2010 год — Год гармонично развитого поколения](http://www.lex.uz/pages/GetAct.aspx?lact_id=1586072)"
+     },
+     "en": {
+      "text": "[2010 - The Year of the Harmoniously Developed Generation](http://www.lex.uz/pages/GetAct.aspx?lact_id=1586072)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2009 yil - Qishloq taraqqiyoti va faravonligi yili](http://dd.gov.uz/uz/pages/2009)"
+     },
+     "ru": {
+      "text": "[2009 год — Год развития и благоустройства села](http://lex.uz/pages/getpage.aspx?lact_id=1437232)"
+     },
+     "en": {
+      "text": "[2009 - The Year of Rural Development and Improvement](http://lex.uz/pages/getpage.aspx?lact_id=1437232)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2008 yil - Yoshlar yili](http://dd.gov.uz/uz/pages/2008)"
+     },
+     "ru": {
+      "text": "[2008 год — Год молодежи](http://www.lex.uz/pages/getpage.aspx?lact_id=1323062)"
+     },
+     "en": {
+      "text": "[2008 - The Year of Youth](http://www.lex.uz/pages/getpage.aspx?lact_id=1323062)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2007 yil - Ijtimoiy himoya yili](https://lex.uz/docs/-1112866)"
+     },
+     "ru": {
+      "text": "[2007 год — Год социальной защиты](http://www.lex.uz/pages/GetAct.aspx?lact_id=1112866)"
+     },
+     "en": {
+      "text": "[2007 - The Year of Social Welfare](http://www.lex.uz/pages/GetAct.aspx?lact_id=1112866)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2006 yil - Homiylar va shifokorlar yili](http://dd.gov.uz/uz/pages/2006)"
+     },
+     "ru": {
+      "text": "[2006 год — Год благотворительности и медицинских работников](http://www.lex.uz/pages/GetAct.aspx?lact_id=973445)"
+     },
+     "en": {
+      "text": "[2006 - The Year of Charity and Health Workers](http://www.lex.uz/pages/GetAct.aspx?lact_id=973445)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2005 yil - Sihat-salomatlik yili](http://dd.gov.uz/uz/pages/2005)"
+     },
+     "ru": {
+      "text": "[2005 год — Год здоровья](http://lex.uz/pages/getpage.aspx?lact_id=436991)"
+     },
+     "en": {
+      "text": "[2005 - The Year of Health](http://lex.uz/pages/getpage.aspx?lact_id=436991)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2004 yil - Mehr-muruvvat yili](https://lex.uz/docs/1148007)"
+     },
+     "ru": {
+      "text": "[2004 год — Год доброты и милосердия](http://lex.uz/pages/getpage.aspx?lact_id=1148007)"
+     },
+     "en": {
+      "text": "[2004 - The Year of Kindness and Mercy](http://lex.uz/pages/getpage.aspx?lact_id=1148007)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2003 yil - Obod mahalla yili](https://lex.uz/acts/243231)"
+     },
+     "ru": {
+      "text": "[2003 год — Год махалли](http://lex.uz/pages/GetAct.aspx?lact_id=243231)"
+     },
+     "en": {
+      "text": "[2003 - The Year of the Makhalla](http://lex.uz/pages/GetAct.aspx?lact_id=243231)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2002 yil - Qariyalarni qadrlash yili](http://dd.gov.uz/uz/pages/2002)"
+     },
+     "ru": {
+      "text": "[2002 год — Год защиты интересов старшего поколения](http://www.lex.uz/pages/GetAct.aspx?lact_id=1743746)"
+     },
+     "en": {
+      "text": "[2002 - The Year of protecting the interests of the Elderly](http://www.lex.uz/pages/GetAct.aspx?lact_id=1743746)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2001 yil - Ona va bola yili](http://dd.gov.uz/uz/pages/2001)"
+     },
+     "ru": {
+      "text": "[2001 год — Год матери и ребенка](http://www.lex.uz/pages/GetAct.aspx?lact_id=388442)"
+     },
+     "en": {
+      "text": "[2001 - The Year of the Mother and Child](http://www.lex.uz/pages/GetAct.aspx?lact_id=388442)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2000 yil - Sogʻlom avlod yili](http://dd.gov.uz/uz/pages/2000)"
+     },
+     "ru": {
+      "text": "[2000 год — Год здорового поколения](http://www.lex.uz/pages/GetAct.aspx?lact_id=261518)"
+     },
+     "en": {
+      "text": "[2000 - The Year of the Healthy Generation](http://www.lex.uz/pages/GetAct.aspx?lact_id=261518)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[1999 yil - Ayollar yili](http://dd.gov.uz/uz/pages/1999)"
+     },
+     "ru": {
+      "text": "[1999 год — Год женщин](http://lex.uz/pages/getpage.aspx?lact_id=2291986)"
+     },
+     "en": {
+      "text": "[1999 - The Year of Women](http://lex.uz/pages/getpage.aspx?lact_id=2291986)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[1998 yil - Oila yili](http://dd.gov.uz/uz/pages/1998)"
+     },
+     "ru": {
+      "text": "[1998 год — Год семьи](http://lex.uz/pages/getpage.aspx?lact_id=692590)"
+     },
+     "en": {
+      "text": "[1998 - The Year of the Family](http://lex.uz/pages/getpage.aspx?lact_id=692590)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[1997 yil - Inson manfaatlari yili](http://dd.gov.uz/uz/pages/1997)"
+     },
+     "ru": {
+      "text": "[1997 год - Год интересов человека](http://lex.uz/)"
+     },
+     "en": {
+      "text": "[1997 - The Year of human interest](http://lex.uz/)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[1996 yil - Amir Temur yili](https://lex.uz/)"
+     },
+     "ru": {
+      "text": "[1996 - Год Амира Тимура](http://www.lex.uz/pages/getpage.aspx?lact_id=276338)"
+     },
+     "en": {
+      "text": "[1996 - The Year of Amir Timur](http://www.lex.uz/pages/getpage.aspx?lact_id=276338)"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 477,
+    "caption": {
+     "uz": "Prezident Farmoni PF-37, 21.02.2024: «Oʻzbekiston — 2030» strategiyasini 2024-yilda amalga oshirishga oid davlat dasturi",
+     "ru": "Указ Президента PF-37 от 21.02.2024: Государственная программа по реализации стратегии «Узбекистан — 2030» в 2024 году",
+     "en": "Presidential Decree PF-37 of 21.02.2024: the State Programme for the implementation of the “Uzbekistan — 2030” strategy in 2024"
+    },
+    "fp": {
+     "uz": "9c00e4b04df7c6226c2d0289e9b6a9f385c5f1708ef8ba115c201744f09bd200",
+     "ru": "9c00e4b04df7c6226c2d0289e9b6a9f385c5f1708ef8ba115c201744f09bd200",
+     "en": "9c00e4b04df7c6226c2d0289e9b6a9f385c5f1708ef8ba115c201744f09bd200"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 1,
+  "fp": {
+   "uz": "f5491a505f2c59b10f0aaab797d9c7997706acacd6f5c57843df0103b61c56ac",
+   "ru": "4c26600ce902a074d2a1cf832b63b186c1fc8edd2c6ea51c4ba772117e5be180",
+   "en": "3ffab6b6cd6f0f5f972129aadf698e3524f25e9405f72b40ffe6e2e0119b2c4f"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "OʻZBEKISTON RESPUBLIKASI OLIY VA OʻRTA MAXSUS TAʻLIM VAZIRINING"
+     },
+     "ru": {
+      "text": "ПРИКАЗ"
+     },
+     "en": {
+      "text": "ORDER"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "BUYRUGʻI"
+     },
+     "ru": {
+      "text": "МИНИСТРА ВЫСШЕГО И СРЕДНЕГО СПЕЦИАЛЬНОГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН"
+     },
+     "en": {
+      "text": "MINISTER OF HIGHER AND SECONDARY SPECIAL EDUCATION OF THE REPUBLIC OF UZBEKISTAN"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "“OLIY TAʻLIMNING DAVLAT TAʻLIM STANDARTI. ASOSIY QOIDALAR” OʻZBEKISTON RESPUBLIKASINING DAVLAT STANDARTINI TASDIQLASH TOʻGʻRISIDA"
+     },
+     "ru": {
+      "text": "ОБ УТВЕРЖДЕНИИ ГОСУДАРСТВЕННОГО СТАНДАРТА РЕСПУБЛИКИ УЗБЕКИСТАН «ГОСУДАРСТВЕННЫЙ СТАНДАРТ ВЫСШЕГО ОБРАЗОВАНИЯ. ОСНОВНЫЕ ПРАВИЛА»"
+     },
+     "en": {
+      "text": "ON APPROVAL OF THE STATE STANDARD OF THE REPUBLIC OF UZBEKISTAN “STATE STANDARD OF HIGHER EDUCATION. BASIC RULES”"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasi Adliya vazirligi tomonidan 2021-yil 27-oktabrda hisobga olindi, hisob raqami 43]"
+     },
+     "ru": {
+      "text": "[Взят на учет Министерством юстиции Республики Узбекистан 20 октября 2021 г. Номер учета 43]"
+     },
+     "en": {
+      "text": "[Registered by the Ministry of Justice of the Republic of Uzbekistan on October 20, 2021. Registration number 43]"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(Oʻz DSt 3556:2021)"
+     },
+     "ru": {
+      "text": "(O’z DSt 3556:2021)"
+     },
+     "en": {
+      "text": "(O’z DSt 3556:2021)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasining “Taʻlim toʻgʻrisida”gi [Qonuni](https://lex.uz/docs/-5013007), Oʻzbekiston Respublikasi Prezidentining 2020-yil 3-avgustdagi PQ-4796-son “Oʻzbekiston Respublikasining milliy statistika tizimini yanada takomillashtirish va rivojlantirish chora-tadbirlari toʻgʻrisida”gi [qaroriga](https://lex.uz/docs/-4926736)muvofiq buyuraman:"
+     },
+     "ru": {
+      "text": "Текст акта приводится на [узбекском языке](https://lex.uz/docs/5705038)."
+     },
+     "en": {
+      "text": "The text of the act is given in [Uzbek](https://lex.uz/docs/5705038)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1. “Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     },
+     "ru": {
+      "text": "1. “Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     },
+     "en": {
+      "text": "1. “Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     },
+     "ru": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     },
+     "en": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Vazir A. TOShKULOV"
+     },
+     "ru": {
+      "text": "Министр А. ТОШКУЛОВ"
+     },
+     "en": {
+      "text": "Minister A. TOSHKULOV"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Toshkent sh.,"
+     },
+     "ru": {
+      "text": "г. Ташкент,"
+     },
+     "en": {
+      "text": "Tashkent,"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2021-yil 19-oktabr,"
+     },
+     "ru": {
+      "text": "19 октября 2021 г.,"
+     },
+     "en": {
+      "text": "October 19, 2021"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "35-2021-son"
+     },
+     "ru": {
+      "text": "№ 35-2021"
+     },
+     "en": {
+      "text": "No. 35-2021"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 478,
+    "caption": {
+     "uz": "Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar (Oʻz DSt 3556:2021)",
+     "ru": "Государственный стандарт высшего образования. Основные положения (O’z DSt 3556:2021)",
+     "en": "State standard of higher education. Basic rules (O’z DSt 3556:2021)"
+    },
+    "fp": {
+     "uz": "238db715b4be55f673d98925f206db27b17975e17b362789e6899af237b5c52a",
+     "ru": "238db715b4be55f673d98925f206db27b17975e17b362789e6899af237b5c52a",
+     "en": "238db715b4be55f673d98925f206db27b17975e17b362789e6899af237b5c52a"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "order": 1,
+  "fp": {
+   "uz": "ddf05e522ab7b967a59b0ebd3a9fa8f9f8d9639704db657f6801a26ef3671c96",
+   "ru": "d7f693505ffef8dbe67810da87fcf3ad1c4a48884eed87433ec52d779754c456",
+   "en": "979edcbb3c01d8ff8953ae93ba88bdf13988906aeb9d99548e972806067994c1"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "OʻZBEKISTON RESPUBLIKASI OLIY VA OʻRTA MAXSUS TAʻLIM VAZIRINING"
+     },
+     "ru": {
+      "text": "ПРИКАЗ"
+     },
+     "en": {
+      "text": "ORDER"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "BUYRUGʻI"
+     },
+     "ru": {
+      "text": "МИНИСТР ВЫСШЕГО И СРЕДНЕГО СПЕЦИАЛЬНОГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН"
+     },
+     "en": {
+      "text": "OF THE MINISTER OF HIGHER AND SECONDARY SPECIAL EDUCATION OF THE REPUBLIC OF UZBEKISTAN"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "“OLIY TAʻLIMNING DAVLAT TAʻLIM STANDARTI. OLIY TAʻLIM YOʻNALISHLARI VA MUTAXASSISLIKLARI KLASSIFIKATORI” OʻZBEKISTON RESPUBLIKASINING DAVLAT STANDARTINI TASDIQLASH TOʻGʻRISIDA"
+     },
+     "ru": {
+      "text": "ОБ УТВЕРЖДЕНИИ ГОСУДАРСТВЕННОГО СТАНДАРТА РЕСПУБЛИКИ УЗБЕКИСТАН «ГОСУДАРСТВЕННЫЙ СТАНДАРТ ВЫСШЕГО ОБРАЗОВАНИЯ. КЛАССИФИКАТОР НАПРАВЛЕНИЙ И СПЕЦИАЛЬНОСТЕЙ ВЫСШЕГО ОБРАЗОВАНИЯ»"
+     },
+     "en": {
+      "text": "ON APPROVAL OF THE STATE STANDARD OF THE REPUBLIC OF UZBEKISTAN “STATE STANDARD OF HIGHER EDUCATION. CLASSIFIER OF FIELDS OF STUDY AND SPECIALITIES OF HIGHER EDUCATION”"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(Texnik xujjatlar)"
+     },
+     "ru": {
+      "text": "Технические условия"
+     },
+     "en": {
+      "text": "Technical specifications"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(Oʻz DSt 3557.2021)"
+     },
+     "ru": {
+      "text": "(O’z DSt 3557.2021)"
+     },
+     "en": {
+      "text": "(O’z DSt 3557.2021)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasi Adliya vazirligi tomonidan 2021-yil 27-oktabrda hisobga olindi, hisob raqami 42]"
+     },
+     "ru": {
+      "text": "[Взят на учет Министерством юстиции Республики Узбекистан 27 октября 2021 г. Номер учета 42]"
+     },
+     "en": {
+      "text": "[Registered by the Ministry of Justice of the Republic of Uzbekistan on October 27, 2021. Registration number 42]"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasining “Taʻlim toʻgʻrisida”gi [Qonuni](https://lex.uz/docs/-5013007), Oʻzbekiston Respublikasi Prezidentining 2020-yil 3-avgustdagi PQ-4796-son “Oʻzbekiston Respublikasining milliy statistika tizimini yanada takomillashtirish va rivojlantirish chora-tadbirlari toʻgʻrisida”gi [qaroriga](https://lex.uz/docs/-4926736) muvofiq buyuraman:"
+     },
+     "ru": {
+      "text": "Текст акта приводится на [узбекском языке](https://lex.uz/docs/5701176)."
+     },
+     "en": {
+      "text": "The text of the act is given in [Uzbek](https://lex.uz/docs/5701176)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1. “Oliy taʻlimning Davlat taʻlim standarti. Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     },
+     "ru": {
+      "text": "1. “Oliy taʻlimning Davlat taʻlim standarti. Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     },
+     "en": {
+      "text": "1. “Oliy taʻlimning Davlat taʻlim standarti. Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     },
+     "ru": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     },
+     "en": {
+      "text": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Vazir A. TOShKULOV"
+     },
+     "ru": {
+      "text": "Министр А. ТОШКУЛОВ"
+     },
+     "en": {
+      "text": "Minister A. TOSHKULOV"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Toshkent sh.,"
+     },
+     "ru": {
+      "text": "г. Ташкент,"
+     },
+     "en": {
+      "text": "Tashkent,"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2021-yil 19-oktabr,"
+     },
+     "ru": {
+      "text": "19 октября 2021 г.,"
+     },
+     "en": {
+      "text": "October 19, 2021"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "11-son"
+     },
+     "ru": {
+      "text": "№ 11"
+     },
+     "en": {
+      "text": "No. 11"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 479,
+    "caption": {
+     "uz": "Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori (Oʻz DSt 3557:2021)",
+     "ru": "Классификатор направлений образования и специальностей высшего образования (O’z DSt 3557:2021)",
+     "en": "Classifier of the fields of study and specialities of higher education (O’z DSt 3557:2021)"
+    },
+    "fp": {
+     "uz": "af5366d852909aa5c836d2ba3784c462ab872eb67fc6661278483ea1ac60d857",
+     "ru": "af5366d852909aa5c836d2ba3784c462ab872eb67fc6661278483ea1ac60d857",
+     "en": "af5366d852909aa5c836d2ba3784c462ab872eb67fc6661278483ea1ac60d857"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ozbeksiton-respublikasi-ssv-buyruqlari",
+  "order": 1,
+  "fp": {
+   "uz": "e4e4e78f3ee28ea9efb4ec54956aa7e912402bc7c767b4282419a932d9501f92",
+   "ru": "e88da32b4bbca2266f30f96b843076fccf90b5197e1f6a3921665d7f6816cd13",
+   "en": "01ab8a4554246ee96c81856af41dbc57b94af973e46fcf391cda4579977fbc40"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[2024/2025 oʻquv yilida klinik ordinatura (rezidentura)ga qabul qilish toʻgʻrisida.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/Ordinatura%202024-2025.pdf)"
+     },
+     "ru": {
+      "text": "[О приеме в клиническую ординатуру (ординатуру) в 2024/2025 учебном году](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/Ordinatura%202024-2025.pdf)"
+     },
+     "en": {
+      "text": "[On admission to clinical residency (residency) for the 2024/2025 academic year](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/Ordinatura%202024-2025.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Oʻzbekiston Respublikasi Prezidentining 2022 yil 30 dekabrdagi \"Oʻzbekiston Respublikasining \"2023 yil uchun Oʻzbekiston Respublikasining Davlat byudjeti toʻgʻrisidaʻgi Qonuni ijrosini taʻminlash chora-tadbirlari toʻgʻrisidaʻgi PQ-471-son qarori ijrosini taʻminlash toʻgʻrisida.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/471.pdf)"
+     },
+     "ru": {
+      "text": "[Об обеспечении исполнения постановления Президента Республики Узбекистан от 30 декабря 2022 года № ПП-471 «О мерах по обеспечению исполнения Закона Республики Узбекистан «О Государственном бюджете Республики Узбекистан на 2023 год»».](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/471.pdf)"
+     },
+     "en": {
+      "text": "[On ensuring the implementation of the Resolution of the President of the Republic of Uzbekistan No. PQ-471 of 30 December 2022 “On measures to ensure the implementation of the Law of the Republic of Uzbekistan “On the State Budget of the Republic of Uzbekistan for 2023””.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/471.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Sogʻliqni saqlash vazirligi tasarrufidagi tibbiyot oliy taʻlim muassasalari, respublika ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazlari hamda ilmiy-tekshirish institutlari qoshida faoliyat yurituvchi muvofiqlashtiruvchi Ekspert kengashi raislarini tayinlash toʻgʻrisida.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ssv%20institutlari.pdf)"
+     },
+     "ru": {
+      "text": "[О назначении председателей координирующих экспертных советов, действующих при медицинских высших образовательных учреждениях, республиканских специализированных научно-практических медицинских центрах и научно-исследовательских институтах, находящихся в ведении Министерства здравоохранения.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ssv%20institutlari.pdf)"
+     },
+     "en": {
+      "text": "[On the appointment of chairpersons of the coordinating Expert Councils operating at the medical higher education institutions, the republican specialized scientific and practical medical centres and the research institutes under the Ministry of Health.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ssv%20institutlari.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Ilm-fan va texnologiyalarni rivojlantirishning ustuvor yoʻnalishlari boʻyicha ilmiy, amaliy va fundamental ishlanmalar va ularning natijasini amaliyotga joriy qilish haqida.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ilm-fan.pdf)"
+     },
+     "ru": {
+      "text": "[О внедрении в практику научных, прикладных и фундаментальных разработок по приоритетным направлениям развития науки и технологий и их результатов.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ilm-fan.pdf)"
+     },
+     "en": {
+      "text": "[On the introduction into practice of scientific, applied and fundamental developments in the priority areas of science and technology development and of their results.](https://fermi.uz/media/migrated/img/yangilikar/Prezident%20Farmonlari/ilm-fan.pdf)"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 480,
+    "caption": {
+     "uz": "Sogʻliqni saqlash vazirligining 236-son buyrugʻi: kredit-modul oʻqitish tizimini joriy etish",
+     "ru": "Приказ Министерства здравоохранения № 236: внедрение кредитно-модульной системы обучения",
+     "en": "Ministry of Health Order No. 236: introduction of the credit-module system of teaching"
+    },
+    "fp": {
+     "uz": "4ea20576325d77c4db70f32fb41cca727fc8318cee1632cf344acf4678e5fde6",
+     "ru": "4ea20576325d77c4db70f32fb41cca727fc8318cee1632cf344acf4678e5fde6",
+     "en": "4ea20576325d77c4db70f32fb41cca727fc8318cee1632cf344acf4678e5fde6"
+    }
+   }
+  ]
+ }
+]
