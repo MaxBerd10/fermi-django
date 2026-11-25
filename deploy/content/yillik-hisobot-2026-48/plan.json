@@ -1,0 +1,704 @@
+[
+ {
+  "slug": "institut-ilmiy-kengashi",
+  "order": 1,
+  "fp": {
+   "uz": "cb19b6f8ce1409c8c66cf7e150909541ef59cd162430e809d7b6d195429c9827",
+   "ru": "b54dbf17488c3930c12fa5475f374dbc87339e535480b5b4a58228e748b910e3",
+   "en": "88b0304244593bf193d1f4ac37570dbfc21f634555163be238744920528b711c"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut Kengashi institut rektori huzurida tashkil etiladi, qoʻshimcha kasb-hunar taʻlimi samaradorligi va sifatini oshirishga va uni ilmiy-uslubiy jihatdan qoʻllab-quvvatlashga qaratilgan institutning shtatdan tashqari ilmiy-maslahat maslahat organi hisoblanadi. Kengashning asosiy maqsadi institutda turli yoʻnalishlarda qoʻshimcha va oliy oʻquv yurtidan keyingi taʻlim sifatini oshirishdir. Kengash institut ilmiy-pedagogik faoliyatini takomillashtirishga, institutning ilmiy-pedagogik jamoatchilik bilan aloqalarini mustahkamlash va kengaytirishga hissa qoʻshishga chaqiriladi."
+     },
+     "ru": {
+      "text": "Совет Института создается при Ректоре Института, является нештатным коллегиальным научно-консультационным совещательным органом Института, направленным на повышение эффективности и качества дополнительного профессионального образования и его научно-методического обеспечения. Главной целью Совета является повышение качества дополнительного и постдипломного образования в Институте, по разным направлениям. Совет призван способствовать совершенствованию научной и педагогической деятельности Института, укреплению и расширению связей Института с научной и педагогической общественностью."
+     },
+     "en": {
+      "text": "The Council of the Institute is created under the Rector of the Institute, is a non-staff collegial scientific and consultative advisory body of the Institute, aimed at improving the efficiency and quality of additional professional education and its scientific and methodological support. The main goal of the Council is to improve the quality of additional and postgraduate education at the Institute in various areas. The Council is called upon to contribute to the improvement of the scientific and pedagogical activities of the Institute, to strengthen and expand the relations of the Institute with the scientific and pedagogical community."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Kengash faoliyati quyidagi vazifalarni hal qilishga qaratilgan",
+      "level": 3
+     },
+     "ru": {
+      "text": "Деятельность Совета направлена на решение следующих задач",
+      "level": 3
+     },
+     "en": {
+      "text": "The Council’s activities are aimed at solving the following tasks",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Tibbiyot boʻyicha qoʻshimcha kasb-hunar taʻlimi dasturlarining mazmunini va uning davomiyligini va davomiyligini hisobga olgan holda institutda oʻquv jarayonini tashkil etish shakllarini takomillashtirish.",
+       "Institutning koʻp bosqichli taʻlim tizimida tibbiyotning turli sohalarida oʻqitishning mazmuni, shakllari va vositalarining uslubiy birligini taʻminlash.",
+       "Oʻquv-uslubiy adabiyotlarning holatini tahlil qilish va adabiyotlarni yaratish va amalga oshirish boʻyicha tavsiyalar tayyorlash.",
+       "Ilmiy tadqiqotlarni rejalashtirish va tashkil etish boʻyicha institut kafedralari va ilmiy boʻlimlari faoliyatini muvofiqlashtirish.",
+       "Institut ilmiy, ilmiy va uslubiy faoliyatini tahlil qilish, uni takomillashtirish va rivojlantirish boʻyicha takliflarni tahlil qilish asosida ishlab chiqish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Совершенствование содержания программ дополнительного профессионального образования по медицине и форм организации учебного процесса в Институте с учетом его непрерывности и преемственности.",
+       "Обеспечение методического единства содержания, форм и средств преподавания по разным направлениям медицины в системе многоуровневого образования Института.",
+       "Анализ состояния учебно-методической литературы и подготовка рекомендаций по созданию и внедрению литературы.",
+       "Координация деятельности кафедр и научных подразделений Института по планированию и организации научных исследований.",
+       "Анализ научной, научно-методической деятельности Института, выработка на основе анализа предложений по её совершенствованию и развитию."
+      ]
+     },
+     "en": {
+      "items": [
+       "Improving the content of additional professional education programs in medicine and forms of organizing the educational process at the Institute, taking into account its continuity and continuity.",
+       "Ensuring the methodological unity of the content, forms and means of teaching in different areas of medicine in the multilevel education system of the Institute.",
+       "Analysis of the state of educational and methodological literature and preparation of recommendations for the creation and implementation of literature.",
+       "Coordination of the activities of the departments and scientific departments of the Institute for the planning and organization of scientific research.",
+       "Analysis of the scientific, scientific and methodological activities of the Institute, development on the basis of the analysis of proposals for its improvement and development."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilmiy kengash institut ilmiy-tashkiliy faoliyatining asosiy yoʻnalishlarini muhokama qiladi:"
+     },
+     "ru": {
+      "text": "Ученый совет обсуждает основные направления научной и организационной деятельности Института:"
+     },
+     "en": {
+      "text": "The Scientific Council discusses the main directions of the scientific and organizational activities of the Institute:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Loyihalar va tematik tadqiqot rejalarini amalga oshirishni koʻrib chiqadi;",
+       "Institut xodimlari tomonidan bajarilgan dissertatsiyalar mavzusini tasdiqlaydi;",
+       "Nomzodlik va doktorlik ilmiy darajalari uchun dissertatsiyalarga javoblarni koʻrib chiqadi va tasdiqlaydi, shu jumladan. etakchi tashkilot sifatida;",
+       "Uchrashuvlarni, konferentsiyalarni, ilmiy-amaliy seminarlarni tayyorlash va oʻtkazishda, xodimlarning ilmiy ishlarini nashr etishda tekshiradi va ishtirok etadi;",
+       "Institut aspirantlarining oʻquv dasturlari boʻyicha, bir yil uchun attestatsiyadan oʻtkazish toʻgʻrisidagi maʻruzalarini tinglaydi, aspirantlarning dissertatsiyalarni himoya qilish bilan bogʻliq ilmiy ishlar boʻyicha hisobotlarini tinglaydi, aspirantlar uchun ilmiy seminarlar tashkil qiladi;",
+       "Ilmiy kadrlarni tayyorlash va malakasini oshirish va sertifikatlashtirish bilan bogʻliq masalalarni muhokama qiladi;",
+       "Boshqa ilmiy muassasalar bilan muvofiqlashtirish va ijodiy hamkorlik masalalarini muhokama qiladi va Hamkorlik shartnomalari boʻyicha ilmiy-tadqiqot ishlarining bajarilishi va ularning natijalarining amalda bajarilishini nazorat qiladi;",
+       "Institut kafedralari yilidagi ilmiy-texnik faoliyati toʻgʻrisidagi hisobotlarni eshitadi;",
+       "Ilmiy kengashning joriy ishiga tashkiliy rahbarlik lavozim vazifalariga muvofiq Ilmiy kotib tomonidan amalga oshiriladi.",
+       "Chet el oliy oʻquv yurtlarida stajirovka oʻtkazish uchun professor-oʻqituvchilar nomzodini rejalarga muvofiq tavsiya qiladi",
+       "Fakultet (institut) oʻquv va ilmiy boʻlimlari xodimlariga ilmiy unvonlarni berish boʻyicha takliflar kiritadi;",
+       "Fakultet (institut) dekanlari, kafedra mudirlari va fakultet (institut) tarkibiy boʻlinmalari rahbarlari hisobotlarini koʻrib chiqadi;"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Рассматривает проекты и выполнение тематических планов научно-исследовательских работ;",
+       "Утверждает темы диссертационных работ, выполняемых сотрудниками Института;",
+       "Рассматривает и утверждает отзывы на диссертации на соискание кандидатских и докторских ученых званий, в т.ч. как ведущая организация;",
+       "Рассматривает и участвует в работе по подготовке и проведению совещаний, конференций, научно-практических семинаров, по изданию научных трудов сотрудниками;",
+       "Заслушивает отчеты аспирантов института по учебным планам, по аттестации за год, заслушивает доклады аспирантов по научным работам, связанных с защитой диссертаций, организует научные семинары аспирантов;",
+       "Обсуждает вопросы, связанные с подготовкой и повышением квалификации и аттестации научных кадров;",
+       "Обсуждает вопросы координации и творческого сотрудничества с другими научными учреждениями и контролирует выполнение научно-исследовательских работ в рамках Договоров о сотрудничестве и внедрение их результатов в практику;",
+       "Заслушивает отчёты по научно-технической деятельности за год подразделений института;",
+       "Организационное руководство текущей работой Ученого Совета осуществляется Ученым секретарем в соответствии с должностными обязанностями.",
+       "Рекомендует кандидатуры профессорско-преподавательского состава на стажировки в зарубежные вузы по планам",
+       "Вносит предложения по присвоению ученых званий сотрудникам учебных и научных подразделений факультета (института);",
+       "Рассматривает отчеты деканов факультета (института), заведующих кафедрами и руководителей структурных подразделений факультета (института);"
+      ]
+     },
+     "en": {
+      "items": [
+       "Considers projects and implementation of thematic research plans;",
+       "Approves the themes of dissertations performed by the staff of the Institute;",
+       "Examines and approves responses to dissertations for candidate and doctoral degrees, incl. as a lead organization;",
+       "Examines and participates in the preparation and holding of meetings, conferences, scientific and practical seminars, the publication of scientific papers by employees;",
+       "He listens to reports of graduate students of the institute on curricula, on attestation for the year, hears reports of graduate students on scientific work related to the defense of dissertations, organizes scientific seminars for graduate students;",
+       "Discusses issues related to training and professional development and certification of scientific personnel;",
+       "Discusses the issues of coordination and creative cooperation with other scientific institutions and monitors the implementation of research work within the framework of Cooperation Agreements and the implementation of their results into practice;",
+       "Hears the annual reports of the Institute’s departments on their scientific and technical activities;",
+       "The Scientific Secretary, in accordance with their job duties, is in charge of the organizational management of the Scientific Council’s day-to-day work.",
+       "Recommends candidates from among the teaching staff for internships at foreign universities in accordance with the plans;",
+       "Submits proposals on awarding academic titles to the staff of the educational and scientific departments of the faculty (institute);",
+       "Reviews the reports of the deans of the faculty (institute), heads of departments and heads of the structural divisions of the faculty (institute);"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ilmiy-kengash-tarkibi",
+  "order": 1,
+  "fp": {
+   "uz": "edd06e43351b6e92238a095f122ddc603fb627d26dc0fbfe9e4556e6ea239964",
+   "ru": "d2877e12626ab8f9eb0411e4bfb0627a17f6d67f314e3bf4f7c7873d70dfdb62",
+   "en": "d2877e12626ab8f9eb0411e4bfb0627a17f6d67f314e3bf4f7c7873d70dfdb62"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/2025/Ilmiy Kengash.jpg",
+      "alt": "Ilmiy kengash tarkibi"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/2025/Ilmiy Kengash.jpg",
+      "alt": "Состав Ученого совета"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/2025/Ilmiy Kengash.jpg",
+      "alt": "Composition of the Scientific Council"
+     }
+    }
+   }
+  ],
+  "existing_document": {
+   "order": 2,
+   "document_id": 462,
+   "caption": {
+    "uz": "Ilmiy kengash tarkibi",
+    "ru": "Состав Ученого совета",
+    "en": "Composition of the Scientific Council"
+   },
+   "fp": {
+    "uz": "6b7f691bf8a50d685ce3fba878b8eeefe916c03149077c3d6a3b8f23718fdf6d",
+    "ru": "6b7f691bf8a50d685ce3fba878b8eeefe916c03149077c3d6a3b8f23718fdf6d",
+    "en": "6b7f691bf8a50d685ce3fba878b8eeefe916c03149077c3d6a3b8f23718fdf6d"
+   }
+  }
+ },
+ {
+  "slug": "kengash-kun-tartibi",
+  "order": 1,
+  "fp": {
+   "uz": "1bae779f0955f5d9a7de935d38cdf46426a4137ad5822e25bebad4bde1f4ba9c",
+   "ru": "c2eabd34d3e7f5bd87c5e614f24c5ab15e4091f53cdb7419c3659139f265b764",
+   "en": "2bdeee99da67b5ccb433af5d1b5bd271b0b43117769057dcedd1d90495b89be1"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ik kun tartibi.jpg",
+      "alt": "Ilmiy kengash kun tartibi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ik kun tartibi.jpg",
+      "alt": "Повестка дня Ученого совета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ik kun tartibi.jpg",
+      "alt": "Agenda of the Scientific Council"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu sahifani koʻrish faqat roʻyxatdan oʻtgan foydalanuvchilarga ruxsat etilgan."
+     },
+     "ru": {
+      "text": "Просмотр этой страницы разрешен только зарегистрированным пользователям"
+     },
+     "en": {
+      "text": "Only registered users are allowed to view this page"
+     }
+    }
+   }
+  ],
+  "existing_document": {
+   "order": 2,
+   "document_id": 463,
+   "caption": {
+    "uz": "FJSTI Kengash qarori 28.12.2024",
+    "ru": "Решение Совета от 28.12.2024",
+    "en": "Council decision of 28.12.2024"
+   },
+   "fp": {
+    "uz": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d",
+    "ru": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d",
+    "en": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d"
+   }
+  }
+ },
+ {
+  "slug": "ilmiy-kengash",
+  "order": 1,
+  "fp": {
+   "uz": "224dd69575cb60653f3cde1fd02032590dea9d0e4dce002e08959b7d8f9263fe",
+   "ru": "d4089353a2c64a97d03df888624bb98e2b91455d4ae1a974de134d71011540ea",
+   "en": "2d6ad7b4860d5071b4034dee08eb23a4d2db30be5da38ffe6fcd0bc7b100b473"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ilmiy kengash fon.jpg",
+      "alt": "Ilmiy kengash qarorlari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ilmiy kengash fon.jpg",
+      "alt": "Решения Ученого совета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/Ilmiy kengash fon.jpg",
+      "alt": "Decisions of the Academic Council"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu sahifani koʻrish faqat roʻyxatdan oʻtgan foydalanuvchilarga ruxsat etilgan FJSTI kengash bayoni 30.08.22 FJSTI Kengash qarori 10.10.22 FJSTI Kengash qarori 25.10.22 FJSTI Kengash qarori 07.11.2022 navbatdan tashqari FJSTI Kengash qaror 25.11.2022 FJSTI Kengash qarori 26.12.2022 FJSTI Kengash qaror 07.02.2023 FJSTI Kengash qarori 27.02.23 FJSTI Kengash qarori 05.04.2023 FJSTI Kengash qarori 29.04.2023 FJSTI Kengash qarori 29.05.2023 FJSTI Navbatdan tash. Kengash qarori 17.06.2023 FJSTI Kengash qarori 05.07.2023 FJSTI Kengash qarori 30.08.2024 FJSTI Kengash qarori 02.10.2024 FJSTI Kengash qarori 31.10.2024 FJSTI Kengash qarori 29.11.2024 FJSTI Kengash qarori 05.12.2024 FJSTI Kengash qarori 28.12.2024"
+     },
+     "ru": {
+      "text": "Просмотр этой страницы разрешен только зарегистрированным пользователям"
+     },
+     "en": {
+      "text": "Only registered users are allowed to view this page"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "FJSTI Kengash bayoni 30.08.2022",
+       "FJSTI Kengash qarori 10.10.2022",
+       "FJSTI Kengash qarori 25.10.2022",
+       "FJSTI Kengash qarori 07.11.2022 (navbatdan tashqari)",
+       "FJSTI Kengash qarori 25.11.2022",
+       "FJSTI Kengash qarori 26.12.2022",
+       "FJSTI Kengash qarori 07.02.2023",
+       "FJSTI Kengash qarori 27.02.2023",
+       "FJSTI Kengash qarori 05.04.2023",
+       "FJSTI Kengash qarori 29.04.2023",
+       "FJSTI Kengash qarori 29.05.2023",
+       "FJSTI Kengash qarori 17.06.2023 (navbatdan tashqari)",
+       "FJSTI Kengash qarori 05.07.2023"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Протокол Совета от 30.08.2022",
+       "Решение Совета от 10.10.2022",
+       "Решение Совета от 25.10.2022",
+       "Внеочередное решение Совета от 07.11.2022",
+       "Решение Совета от 25.11.2022",
+       "Решение Совета от 26.12.2022",
+       "Решение Совета от 07.02.2023",
+       "Решение Совета от 27.02.2023",
+       "Решение Совета от 05.04.2023",
+       "Решение Совета от 29.04.2023",
+       "Решение Совета от 29.05.2023",
+       "Внеочередное решение Совета от 17.06.2023",
+       "Решение Совета от 05.07.2023"
+      ]
+     },
+     "en": {
+      "items": [
+       "Council minutes of 30.08.2022",
+       "Council decision of 10.10.2022",
+       "Council decision of 25.10.2022",
+       "Extraordinary Council decision of 07.11.2022",
+       "Council decision of 25.11.2022",
+       "Council decision of 26.12.2022",
+       "Council decision of 07.02.2023",
+       "Council decision of 27.02.2023",
+       "Council decision of 05.04.2023",
+       "Council decision of 29.04.2023",
+       "Council decision of 29.05.2023",
+       "Extraordinary Council decision of 17.06.2023",
+       "Council decision of 05.07.2023"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/1. Kengash Qarori 30.08.2024.pdf",
+      "caption": "FJSTI Kengash qarori 30.08.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/1. Kengash Qarori 30.08.2024.pdf",
+      "caption": "Решение Совета от 30.08.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/1. Kengash Qarori 30.08.2024.pdf",
+      "caption": "Council decision of 30.08.2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/2. Kengash Qarori 02.10.2024.pdf",
+      "caption": "FJSTI Kengash qarori 02.10.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/2. Kengash Qarori 02.10.2024.pdf",
+      "caption": "Решение Совета от 02.10.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/2. Kengash Qarori 02.10.2024.pdf",
+      "caption": "Council decision of 02.10.2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.  Kengash qarori 31.10.24 № 3.pdf",
+      "caption": "FJSTI Kengash qarori 31.10.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.  Kengash qarori 31.10.24 № 3.pdf",
+      "caption": "Решение Совета от 31.10.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.  Kengash qarori 31.10.24 № 3.pdf",
+      "caption": "Council decision of 31.10.2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.1 FJSTI Navbat tash. NOYABR (1).pdf",
+      "caption": "FJSTI Kengash qarori 29.11.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.1 FJSTI Navbat tash. NOYABR (1).pdf",
+      "caption": "Решение Совета от 29.11.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/3.1 FJSTI Navbat tash. NOYABR (1).pdf",
+      "caption": "Council decision of 29.11.2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/4.  Kengash qarori 05.12.24 № 4.pdf",
+      "caption": "FJSTI Kengash qarori 05.12.2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/4.  Kengash qarori 05.12.24 № 4.pdf",
+      "caption": "Решение Совета от 05.12.2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy Kengash/2025 IK/4.  Kengash qarori 05.12.24 № 4.pdf",
+      "caption": "Council decision of 05.12.2024"
+     }
+    }
+   }
+  ],
+  "existing_document": {
+   "order": 2,
+   "document_id": 463,
+   "caption": {
+    "uz": "FJSTI Kengash qarori 28.12.2024",
+    "ru": "Решение Совета от 28.12.2024",
+    "en": "Council decision of 28.12.2024"
+   },
+   "fp": {
+    "uz": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d",
+    "ru": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d",
+    "en": "2aab9daa8e00eb541786a952d7ca71b9c36801c4a119a3cbe164a04ca642bb6d"
+   }
+  }
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 1,
+  "fp": {
+   "uz": "3db229e8534c27d258ff696500593389f0f742a539d8aa9866a26cb3464e2022",
+   "ru": "67d4b794f75d8cf7b6603bf44f49c2aeb3a48398cba3280fdca47fb3ac1dcf5b",
+   "en": "67d4b794f75d8cf7b6603bf44f49c2aeb3a48398cba3280fdca47fb3ac1dcf5b"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
+      "level": 2
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
+      "level": 2
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
+      "level": 2
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
+      "level": 2
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
+      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
+      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
+      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
+      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
+      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
+      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
+      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
+      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
+      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
+      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
+      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
+      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
+      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
+      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
+      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
+      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
+      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
+      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
+      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
+      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
+      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
+      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
+      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
+      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
+      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
+      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
+      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
+      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
+      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
+      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+     }
+    }
+   }
+  ]
+ }
+]
