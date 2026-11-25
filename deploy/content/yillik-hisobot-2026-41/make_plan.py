@@ -105,6 +105,8 @@ def usmle():
         text = node.get_text(" ", strip=True)
         if node.parent is not None and (re.match(r"^Step\s*\d\s*\[", text) or re.match(r"^\W*Main article", text)):
             node.decompose()
+    for link in soup.find_all("a", href=re.compile(r"wikipedia\.org")):  # the words stay, the Wikipedia address does not (it would be printed after every word)
+        link.unwrap()
     html = {"uz": step_headings(uz_ru["uz"], True), "ru": step_headings(uz_ru["ru"], True), "en": step_headings(str(soup), False)}
     blocks = build(html)
     intro = {"uz": "USMLE haqida", "ru": "Об экзамене USMLE", "en": "About the USMLE"}  # the old key usmle.introTitle of common.ts, which leaves with this script
