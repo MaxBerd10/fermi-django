@@ -1,6 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { ContentBlock } from "@/types/blocks";
 import { layoutBlocks, picturesOf } from "./layoutBlocks";
+import { resolveLocale } from "../api/client";
+
+vi.mock("../i18n", () => ({ default: {} }));
 
 let nextId = 1;
 const base = <T extends ContentBlock["block_type"]>(block_type: T, data: unknown) =>
@@ -22,20 +25,31 @@ describe("layoutBlocks", () => {
     expect(layoutBlocks([p("a"), img("x.webp"), h("H")])[0].kind).toBe("opening");
   });
 
-  it("quote needs « » or \" \"", () => {
-    const quote = layoutBlocks([p("intro"), img("hero.webp"), h("H"), p("«Words» — Name"), img("person.webp")]);
-    expect(quote.map((s) => s.kind)).toContain("quote");
-    const plain = layoutBlocks([p("intro"), img("hero.webp"), h("H"), p("plain words"), img("chart.webp")]);
-    expect(plain.map((s) => s.kind)).not.toContain("quote");
+  it.each([false, true])("uses one quotation layout across translations (quote=%s)", (quote) => {
+    const block = base("paragraph", {
+      uz: { text: quote ? "«Soʻzlar». — Muallif" : "Institut «FerMI» nomi bilan tanilgan." },
+      ru: { text: "Текст без кавычек." },
+      en: { text: '"Quoted words" — Author' },
+    });
+    for (const lang of ["uz", "ru", "en"] as const) {
+      const paragraph = resolveLocale<ContentBlock>(block, lang);
+      expect(kinds([h("A"), paragraph, img("portrait.webp")]).includes("quote")).toBe(quote);
+    }
   });
 
   it("a quotation followed by a run of pictures is not a quote card", () => {
-    const kinds = layoutBlocks([h("A"), p("«Words» about certificates"), img("1.webp"), img("2.webp"), img("3.webp")]).map((s) => s.kind);
-    expect(kinds).not.toContain("quote");
+    const quote = base("paragraph", { text: "Words", quote: true });
+    expect(kinds([h("A"), quote, img("1.webp"), img("2.webp"), img("3.webp")])).not.toContain("quote");
   });
 
   it("opening needs exactly one picture after the text", () => {
     expect(layoutBlocks([p("a"), img("1.webp"), img("2.webp")])[0].kind).not.toBe("opening");
+  });
+
+  it("renders a date-only list as a chronology across languages", () => {
+    const entries = ["1992–1997 — A", "2021 yildan — B", "с 2021 года — C", "since 2021 — D"];
+    expect(kinds([base("list", { items: entries })])).toEqual(["dated"]);
+    expect(kinds([base("list", { items: [...entries, "General information"] })])).toEqual(["section"]);
   });
 
   it("person: level-3 heading, image, paragraphs", () => {

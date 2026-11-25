@@ -37,7 +37,7 @@ function asMenuNodes(items: FallbackMenuItem[]): MenuNode[] {
 const FALLBACK_MENU = asMenuNodes(navItems as FallbackMenuItem[]);
 
 function menuCacheKey(lang: string) {
-  return `fjsti_menu_cache_${lang}`;
+  return `fjsti_menu_cache_v2_${lang}`;
 }
 
 function currentLang() {

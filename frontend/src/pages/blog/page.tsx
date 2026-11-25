@@ -1,3 +1,4 @@
+import { hasStructuredProfiles } from "@/lib/layoutBlocks";
 import { useEffect, useMemo, useState } from "react";
 import InstituteHistoryArticle from "@/components/shared/InstituteHistoryArticle";
 import ArticleBody from "@/components/shared/ArticleBody";
@@ -16,7 +17,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
-import { findMenuTitleBySlug, resolveMenuSection } from "@/lib/menuSection";
+import { findMenuTitleBySlug, INSTITUTE_ABOUT_MENU_ID, resolveMenuSection } from "@/lib/menuSection";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
@@ -105,8 +106,17 @@ export default function BlogPage() {
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
   const isMissionPage = slug === "institut-missiyasi-va-kelajak-tasavvuri";
-  const isInstituteAboutPage = slug === "institut-xaqida";
+  const hasLegacyInstituteAbout = slug === "institut-xaqida" && sortedBlocks.some(
+    (block) => block.block_type === "raw_html" && block.data.slug === slug,
+  );
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
+  const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
+    && !hasLegacyInstituteAbout
+    && sortedBlocks.length > 0
+    && sortedBlocks.every((block) =>
+      block.block_type === "document" || block.block_type === "image" ||
+      (block.block_type === "raw_html" && /<img\b/i.test(block.data.html)),
+    );
 
   return (
     <InnerPageLayout
@@ -117,14 +127,14 @@ export default function BlogPage() {
     >
       {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
       <Reveal>
-        {isHistoryPage && sortedBlocks.length > 0 ? (
+        {isHistoryPage && sortedBlocks.length > 0 && !hasStructuredProfiles(sortedBlocks) ? (
           <InstituteHistoryArticle blocks={sortedBlocks} />
         ) : sortedBlocks.length > 0 ? (
-          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""} article-body`}
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""}${isInstituteDocument ? " article-document" : ""} article-body`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-              {!isInstituteAboutPage ? <ArticleBody blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
-                isInstituteAboutPage && block.block_type === "raw_html" && block.data.slug === slug ? (
+              {!hasLegacyInstituteAbout ? <ArticleBody blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
+                block.block_type === "raw_html" && block.data.slug === slug ? (
                   <div key={block.id} className="grid items-center gap-5 md:grid-cols-2 lg:gap-8">
                     <div className="min-w-0">
                       <h2>{t("institut.fullName")}</h2>
@@ -137,7 +147,7 @@ export default function BlogPage() {
                   <BlockRenderer
                     key={block.id}
                     block={block}
-                    documentTitle={isInstituteAboutPage ? t("institut.ecaqaDocument") : undefined}
+                    documentTitle={t("institut.ecaqaDocument")}
                   />
                 ),
               )}

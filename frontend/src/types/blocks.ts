@@ -36,6 +36,8 @@ export interface HeadingBlockData {
 }
 export interface ParagraphBlockData {
   text: string;
+  /** Quote classification shared by all translations of a block. */
+  quote?: boolean;
   /** Old-CMS "kafedra"/faculty content authored its pseudo-headings as a bold
    * paragraph (<p><strong>) rather than a real <h2..6> — the legacy import's
    * bold-text heuristic over-promoted these to heading blocks. `bold: true`

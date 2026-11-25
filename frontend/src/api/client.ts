@@ -127,6 +127,9 @@ const LOCALE_KEYS = ["uz", "ru", "en"] as const;
 // from the Node feed, never through Django's API), so it needs this same
 // fix applied at that separate, later chokepoint instead.
 
+// Legacy report quotes have an attribution after a closing quotation mark.
+const attributedQuote = /(?:«[^»]+»|“[^”]+”|"[^"]+")[.!?]?\s+[—–]\s+\S/u;
+
 export function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
   if (Array.isArray(value)) {
     return value.map((item) => resolveLocale(item, lang)) as T;
@@ -139,6 +142,13 @@ export function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
     }
     const out: Record<string, unknown> = {};
     for (const key of keys) out[key] = resolveLocale(obj[key], lang);
+    if (obj.block_type === "paragraph") {
+      const translations = obj.data as { uz?: { text?: string; quote?: boolean } } | undefined;
+      const source = translations?.uz;
+      if (typeof source?.text === "string" && out.data && typeof out.data === "object") {
+        out.data = { ...out.data, quote: source.quote ?? attributedQuote.test(source.text) };
+      }
+    }
     return out as T;
   }
   if (typeof value === "string" && lang === "uz") {
@@ -165,7 +175,9 @@ const inFlightGets = new Map<string, Promise<unknown>>();
  * envelope. Errors come back as DRF's defaults too: {"detail": "..."} for
  * 401/403/404, or a {field: ["msg", ...]} dict for 400 validation errors.
  */
-async function readDrfResponse<T>(response: Response, path: string, raw = false): Promise<ApiResult<T>> {
+async function readDrfResponse<T>(
+  response: Response, path: string, raw: boolean, lang: "uz" | "ru" | "en",
+): Promise<ApiResult<T>> {
   let body: unknown = null;
   try {
     body = await response.json();
@@ -190,7 +202,7 @@ async function readDrfResponse<T>(response: Response, path: string, raw = false)
     throw new ApiError(message, String(response.status), response.status, fields);
   }
 
-  const resolved = raw ? body : resolveLocale<unknown>(body, activeLang());
+  const resolved = raw ? body : resolveLocale<unknown>(body, lang);
 
   if (
     resolved &&
@@ -207,6 +219,8 @@ async function readDrfResponse<T>(response: Response, path: string, raw = false)
 
 async function request<T>(path: string, options: RequestOptions = {}): Promise<ApiResult<T>> {
   const url = buildUrl(path, options.params);
+  const requestedLang = options.params?.lang;
+  const lang = requestedLang === "uz" || requestedLang === "ru" || requestedLang === "en" ? requestedLang : activeLang();
   const method = options.method || "GET";
   const dedupeKey = method === "GET" ? url : null;
 
@@ -248,7 +262,7 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
       // Uzbek apostrophe normalization would otherwise rewrite the Russian and
       // English text too ("Let's" -> "Letʻs") and save that on the next submit.
       const raw = options.raw ?? path.startsWith("admin/");
-      return await readDrfResponse<T>(response, path, raw);
+      return await readDrfResponse<T>(response, path, raw, lang);
     } catch (err) {
       if (
         err instanceof ApiError &&

@@ -80,6 +80,17 @@ function SectionView({ section }: { section: Section }) {
           <div className="article-contact"><BlockRenderer block={section.contact} /></div>
         </>
       );
+    case "dated":
+      return (
+        <dl className="article-chronology">
+          {section.entries.map(({ period, text }, index) => (
+            <div key={index}>
+              <dt>{period}</dt>
+              <dd>{text}</dd>
+            </div>
+          ))}
+        </dl>
+      );
     case "block":
       return <BlockRenderer block={section.block} />;
     case "section":

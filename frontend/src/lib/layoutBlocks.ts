@@ -13,6 +13,7 @@ export type Section =
   | { kind: "person"; heading: ContentBlock; picture: Picture; text: ContentBlock[] }
   | { kind: "section"; blocks: ContentBlock[]; pictures: Picture[]; side: boolean }
   | { kind: "footer"; source: ContentBlock; slogan: ContentBlock; contact: ContentBlock }
+  | { kind: "dated"; entries: { period: string; text: string }[] }
   | { kind: "block"; block: ContentBlock };
 
 /** A picture in the side column is about 160px (5.7 lines of text) high plus the gap. */
@@ -21,7 +22,20 @@ export const LINES_PER_SIDE_PICTURE = 5.5;
 /** Until the report photos are in the media library (Task 4), a raw_html block that holds only these pictures is read as pictures. Any other old HTML stays a plain block. */
 const LEGACY_PICTURE_PREFIX = "/images/hisobot/";
 
-const QUOTE_RE = /[«»“”"]/;
+const datedEntry = /^((?:(?:с|since|from)\s+)?\d{4}(?:\s*[–—-]\s*\d{4})?(?:\s+(?:yildan|года?|гг?\.?|onwards))?)\s*[–—-]\s*(.+)$/iu;
+
+function datedEntries(items: string[]) {
+  const entries = items.map((item) => item.trim().match(datedEntry));
+  if (!entries.length || entries.some((entry) => !entry)) return null;
+  return entries.flatMap((entry) => entry ? [{ period: entry[1], text: entry[2] }] : []);
+}
+
+export function hasStructuredProfiles(blocks: ContentBlock[]) {
+  return blocks.some((block) => block.block_type === "list" && datedEntries(block.data.items) !== null)
+    && blocks.some((block, index) =>
+    block.block_type === "heading" && block.data.level === 3 && blocks[index + 1]?.block_type === "image",
+    );
+}
 
 function toPicture(src: string, alt: string, width: number | null, height: number | null): Picture {
   return { src, alt, width, height, tall: width !== null && height !== null && height >= width };
@@ -124,6 +138,15 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       i += 3;
       continue;
     }
+    if (block.block_type === "list") {
+      const entries = datedEntries(block.data.items);
+      if (entries) {
+        flush();
+        sections.push({ kind: "dated", entries });
+        i++;
+        continue;
+      }
+    }
     if (isStandalone(block)) {
       flush();
       sections.push({ kind: "block", block });
@@ -138,7 +161,7 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
         continue;
       }
     }
-    if (block.block_type === "paragraph" && QUOTE_RE.test(block.data.text) && block.data.text.length < 600) {
+    if (block.block_type === "paragraph" && block.data.quote === true) {
       const picture = singlePictureAfter(i);
       if (picture) {
         flush();
