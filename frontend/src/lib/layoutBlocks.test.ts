@@ -29,6 +29,15 @@ describe("layoutBlocks", () => {
     expect(plain.map((s) => s.kind)).not.toContain("quote");
   });
 
+  it("a quotation followed by a run of pictures is not a quote card", () => {
+    const kinds = layoutBlocks([h("A"), p("«Words» about certificates"), img("1.webp"), img("2.webp"), img("3.webp")]).map((s) => s.kind);
+    expect(kinds).not.toContain("quote");
+  });
+
+  it("opening needs exactly one picture after the text", () => {
+    expect(layoutBlocks([p("a"), img("1.webp"), img("2.webp")])[0].kind).not.toBe("opening");
+  });
+
   it("person: level-3 heading, image, paragraphs", () => {
     const sections = layoutBlocks([h("History"), h("MIRZAEV", 3), img("m.webp"), p("born"), p("worked"), h("NISHONOV", 3), img("n.webp"), p("lived")]);
     const people = sections.filter((s) => s.kind === "person");

@@ -103,15 +103,20 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
     if (!after || after.block_type !== "paragraph") footerAt = lastData + 1;
   }
 
-  const singlePicture = (block: ContentBlock | undefined) => {
-    const pictures = block ? picturesOf(block) : [];
+  /** The one picture that follows block `from` when the picture blocks right after it add up to exactly one; a run of several is a gallery. */
+  const singlePictureAfter = (from: number) => {
+    const pictures: Picture[] = [];
+    for (let j = from + 1; j < items.length && !isStandalone(items[j]); j++) {
+      const found = picturesOf(items[j]);
+      if (found.length === 0) break;
+      pictures.push(...found);
+    }
     return pictures.length === 1 ? pictures[0] : null;
   };
 
   let i = 0;
   while (i < items.length) {
     const block = items[i];
-    const next = items[i + 1];
 
     if (i === footerAt) {
       flush();
@@ -126,7 +131,7 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       continue;
     }
     if (block.block_type === "paragraph" && sections.length === 0 && open === null) {
-      const picture = singlePicture(next);
+      const picture = singlePictureAfter(i);
       if (picture) {
         sections.push({ kind: "opening", text: block, picture });
         i += 2;
@@ -134,7 +139,7 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       }
     }
     if (block.block_type === "paragraph" && QUOTE_RE.test(block.data.text) && block.data.text.length < 600) {
-      const picture = singlePicture(next);
+      const picture = singlePictureAfter(i);
       if (picture) {
         flush();
         sections.push({ kind: "quote", text: block, picture });
@@ -143,7 +148,7 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       }
     }
     if (block.block_type === "heading" && block.data.level === 3) {
-      const picture = singlePicture(next);
+      const picture = singlePictureAfter(i);
       if (picture) {
         flush();
         const text: ContentBlock[] = [];
