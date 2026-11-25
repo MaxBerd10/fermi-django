@@ -74,6 +74,14 @@ def test_make_document_keeps_the_file_and_title(db, tmp_path):
     assert document.file.size == len(b"%PDF-1.4 test")
 
 
+def test_make_document_shortens_a_very_long_file_name(db, tmp_path):
+    path = tmp_path / ("A.Gofur-Oxunov_A.B.Yigitaliyev_O.M.Karimov_D.A.Sulaymanov_D.K.Egamberdiyev_and_many_more_authors_of_one_article_" * 2 + ".pdf")
+    path.write_bytes(b"%PDF-1.4 long")
+    document = tools.make_document(str(path), "Long")
+    assert len(document.file.name) <= 100 and document.file.name.endswith(".pdf")
+    assert document.file.size == len(b"%PDF-1.4 long")
+
+
 def test_fingerprint_ok_detects_admin_edit(page):
     block = _add(page, 1, _paragraph("a"))
     expected = {lang: tools.sha(block.data[lang]) for lang in LANGS}

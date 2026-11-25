@@ -115,8 +115,10 @@ def replace_block(page: Page, order: int, new_blocks: list[dict]) -> list[int]:
 def make_document(path: str, title: str = "") -> Document:
     """A Document row (a downloadable file) from a local file."""
     document = Document(title=title)
+    stem, extension = os.path.splitext(os.path.basename(path))
+    name = stem[:50].rstrip(" .-_") + extension  # a Document file name may have 100 characters, the folder and Django's random suffix take part of them
     with open(path, "rb") as handle:
-        document.file.save(os.path.basename(path), File(handle), save=True)
+        document.file.save(name, File(handle), save=True)
     _give_to_www_data(document.file.path)
     return document
 

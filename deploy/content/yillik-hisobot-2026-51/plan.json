@@ -1,0 +1,3965 @@
+[
+ {
+  "slug": "klinik-va-profilaktik-tibbiyot-jurnali",
+  "order": 1,
+  "fp": {
+   "uz": "1bb0a029f5a246c3fcafc6d2cc19c3aa3611bf74a522bfe2ba860d37aa6290e2",
+   "ru": "e3f9deab93a00a4352eedf507edfe32eae5bf69462a7bbbff21ea6012029e407",
+   "en": "e3f9deab93a00a4352eedf507edfe32eae5bf69462a7bbbff21ea6012029e407"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Klinik va profilaktik tibbiyot jurnali"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Журнал клинической и профилактической медицины"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Journal of Clinical and Preventive Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM number №1.pdf",
+      "caption": "Klinik va profilaktik tibbiyot jurnali, 1-son"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM number №1.pdf",
+      "caption": "Журнал клинической и профилактической медицины, № 1"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM number №1.pdf",
+      "caption": "Journal of Clinical and Preventive Medicine, No. 1"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 465,
+    "caption": {
+     "uz": "OAK xati: jurnal dissertatsiya natijalarini chop etish uchun tavsiya etilgan milliy ilmiy nashrlar roʻyxatida",
+     "ru": "Письмо ВАК: журнал включён в перечень национальных научных изданий, рекомендованных для публикации результатов диссертаций",
+     "en": "Letter of the Supreme Attestation Commission: the journal is on the list of national scientific publications recommended for publishing dissertation results"
+    },
+    "fp": {
+     "uz": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be",
+     "ru": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be",
+     "en": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "tahrir-hayati-kengashi",
+  "order": 1,
+  "fp": {
+   "uz": "073a5b3fea41ab3789242f29e4ce32911af00ff582f16ef2984cae220ada4193",
+   "ru": "ed42b77eee125582ed20d75e7c9ae89ddbd270ae931fbf22c4dcf7f29415d86f",
+   "en": "3fb454338ef8b8e538a4c8d9db0286210a9c84858b363a5e599e10016ec79c4d"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Ilmiy jurnal tahrir hayʻati",
+      "level": 2
+     },
+     "ru": {
+      "text": "Научный журнал. Редакционная коллегия",
+      "level": 2
+     },
+     "en": {
+      "text": "Scientific journal. Editorial board",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Tahrir Hayʻati kengashi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Редакционная коллегия"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Board of the Editorial Board"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bosh muharrir: Sidikov Akmal Abdukaxxarovich — t.f.d., professor."
+     },
+     "ru": {
+      "text": "Главный редактор: Сидиков Акмал Абдукахарович — д.м.н., профессор."
+     },
+     "en": {
+      "text": "Editor-in-Chief: Sidikov Akmal Abdukakharovich — Doctor of Medical Sciences, Professor."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bosh muharrir yordamchisi: Kadirova Munira Rasulovna — p.f.d., professor."
+     },
+     "ru": {
+      "text": "Заместитель главного редактора: Кадырова Мунира Расуловна — д.п.н., профессор."
+     },
+     "en": {
+      "text": "Deputy Editor-in-Chief: Kadirova Munira Rasulovna — Doctor of Pedagogical Sciences, Professor."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Masʻul kotib: Valitov Elyor Akimovich."
+     },
+     "ru": {
+      "text": "Ответственный секретарь: Валитов Эльёр Акимович."
+     },
+     "en": {
+      "text": "Executive Secretary: Valitov Elyor Akimovich."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tahrir hayʻati aʼzolari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Члены редакционной коллегии",
+      "level": 2
+     },
+     "en": {
+      "text": "Members of the editorial board",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM kengash.jpg",
+      "alt": "Tahrir hayʻati aʼzolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM kengash.jpg",
+      "alt": "Члены редакционной коллегии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM kengash.jpg",
+      "alt": "Members of the editorial board"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 466,
+    "caption": {
+     "uz": "Tahrir Hayʻati kengashi",
+     "ru": "Редакционная коллегия",
+     "en": "Board of the Editorial Board"
+    },
+    "fp": {
+     "uz": "4f2a394d882938687b664ba5177dcdd43aaf9189f87b13616526c067a7b2d64e",
+     "ru": "4f2a394d882938687b664ba5177dcdd43aaf9189f87b13616526c067a7b2d64e",
+     "en": "4f2a394d882938687b664ba5177dcdd43aaf9189f87b13616526c067a7b2d64e"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "jurnal-xaqida",
+  "order": 1,
+  "fp": {
+   "uz": "996222ae29409bae9f0268ec9d7ad5d86a4a821b27a28505da26d57cd623445f",
+   "ru": "996222ae29409bae9f0268ec9d7ad5d86a4a821b27a28505da26d57cd623445f",
+   "en": "996222ae29409bae9f0268ec9d7ad5d86a4a821b27a28505da26d57cd623445f"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Jurnal xaqida"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "Про журнал"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/журнал РЕКЛАМА.jpg",
+      "alt": "About the magazine"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 465,
+    "caption": {
+     "uz": "OAK xati: jurnal dissertatsiya natijalarini chop etish uchun tavsiya etilgan milliy ilmiy nashrlar roʻyxatida",
+     "ru": "Письмо ВАК: журнал включён в перечень национальных научных изданий, рекомендованных для публикации результатов диссертаций",
+     "en": "Letter of the Supreme Attestation Commission: the journal is on the list of national scientific publications recommended for publishing dissertation results"
+    },
+    "fp": {
+     "uz": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be",
+     "ru": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be",
+     "en": "2c7dacae4eb92e602d16a0c09c1fb3eef8bc1997571a16e6be3b633f3ec042be"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 1,
+  "fp": {
+   "uz": "468f965e63ea8b49148a3d87c02b92fbb30f7bba1962c4e2bae04c091fdfc52e",
+   "ru": "c529782a02e76cdf87366f2ee3550a59368d3a5b094109585239a167f2712a41",
+   "en": "c529782a02e76cdf87366f2ee3550a59368d3a5b094109585239a167f2712a41"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.К.Аzimova.pdf",
+      "caption": "Неблагоприятное влияние атмосферных и водных загрязнений на здоровье населения"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.К.Аzimova.pdf",
+      "caption": "Неблагоприятное влияние атмосферных и водных загрязнений на здоровье населения"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.К.Аzimova.pdf",
+      "caption": "Неблагоприятное влияние атмосферных и водных загрязнений на здоровье населения"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.М.Аhmedova., R.М.Shermatov.pdf",
+      "caption": "Комплексная аллергенспецифическая иммунотерапия полиоксидонием у больных детей, бронхиальной астмой, сочетанная с аллергическими риносинуситами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.М.Аhmedova., R.М.Shermatov.pdf",
+      "caption": "Комплексная аллергенспецифическая иммунотерапия полиоксидонием у больных детей, бронхиальной астмой, сочетанная с аллергическими риносинуситами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/М.М.Аhmedova., R.М.Shermatov.pdf",
+      "caption": "Комплексная аллергенспецифическая иммунотерапия полиоксидонием у больных детей, бронхиальной астмой, сочетанная с аллергическими риносинуситами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/О.А.Аhunbaev.pdf",
+      "caption": "Влияние анемии на течение сердечно-сосудистых заболеваний"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/О.А.Аhunbaev.pdf",
+      "caption": "Влияние анемии на течение сердечно-сосудистых заболеваний"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/О.А.Аhunbaev.pdf",
+      "caption": "Влияние анемии на течение сердечно-сосудистых заболеваний"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аbdullaeva L.М.pdf",
+      "caption": "On the course of the postpartum period in women infected with HIV"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аbdullaeva L.М.pdf",
+      "caption": "On the course of the postpartum period in women infected with HIV"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аbdullaeva L.М.pdf",
+      "caption": "On the course of the postpartum period in women infected with HIV"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аhmadaliev R. .pdf",
+      "caption": "Hygienic assessment of cases of food poisoning of the environment population of Fergana region"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аhmadaliev R. .pdf",
+      "caption": "Hygienic assessment of cases of food poisoning of the environment population of Fergana region"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аhmadaliev R. .pdf",
+      "caption": "Hygienic assessment of cases of food poisoning of the environment population of Fergana region"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Imamov O.pdf",
+      "caption": "Принципы дифференцированной терапии зооантропонозной трихофитии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Imamov O.pdf",
+      "caption": "Принципы дифференцированной терапии зооантропонозной трихофитии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Imamov O.pdf",
+      "caption": "Принципы дифференцированной терапии зооантропонозной трихофитии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каrabaev M.pdf",
+      "caption": "Логико-математические модели количественной оценки интегрального уровня индивидуального физического здоровья на основе адаптационного потенциала организма"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каrabaev M.pdf",
+      "caption": "Логико-математические модели количественной оценки интегрального уровня индивидуального физического здоровья на основе адаптационного потенциала организма"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каrabaev M.pdf",
+      "caption": "Логико-математические модели количественной оценки интегрального уровня индивидуального физического здоровья на основе адаптационного потенциала организма"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каttahodjaeva M.pdf",
+      "caption": "The impact of alimentary-constitutional obesity on the course of pregnancy and childbirth"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каttahodjaeva M.pdf",
+      "caption": "The impact of alimentary-constitutional obesity on the course of pregnancy and childbirth"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Каttahodjaeva M.pdf",
+      "caption": "The impact of alimentary-constitutional obesity on the course of pregnancy and childbirth"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kuziev O.pdf",
+      "caption": "Применения модифицированный гало аппарат для внешней коррекции и фиксации шейного отдела позвоночника при переломах зубовидного отростка С2 позвонка"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kuziev O.pdf",
+      "caption": "Применения модифицированный гало аппарат для внешней коррекции и фиксации шейного отдела позвоночника при переломах зубовидного отростка С2 позвонка"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kuziev O.pdf",
+      "caption": "Применения модифицированный гало аппарат для внешней коррекции и фиксации шейного отдела позвоночника при переломах зубовидного отростка С2 позвонка"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Маhаmатоv U.pdf",
+      "caption": "Определение и оценка состояния здоровья и подростков в городах коканд и маргилан"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Маhаmатоv U.pdf",
+      "caption": "Определение и оценка состояния здоровья и подростков в городах коканд и маргилан"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Маhаmатоv U.pdf",
+      "caption": "Определение и оценка состояния здоровья и подростков в городах коканд и маргилан"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Pyagayi G.pdf",
+      "caption": "Иммуногистохимическая характеристика биоптатов кожи с различными формами актинического кератоза"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Pyagayi G.pdf",
+      "caption": "Иммуногистохимическая характеристика биоптатов кожи с различными формами актинического кератоза"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Pyagayi G.pdf",
+      "caption": "Иммуногистохимическая характеристика биоптатов кожи с различными формами актинического кератоза"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov U.pdf",
+      "caption": "Иммуномодулирующие свойства растительного препарата имбира на первичный иммунный ответ и гемопоэз с фенотипом ацетилирования"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov U.pdf",
+      "caption": "Иммуномодулирующие свойства растительного препарата имбира на первичный иммунный ответ и гемопоэз с фенотипом ацетилирования"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov U.pdf",
+      "caption": "Иммуномодулирующие свойства растительного препарата имбира на первичный иммунный ответ и гемопоэз с фенотипом ацетилирования"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov. F .pdf",
+      "caption": "Ацетиляторный статус : применение лекарственных растений с иммуно-модулирующими свойствами при иммунодефицитных состоянях"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov. F .pdf",
+      "caption": "Ацетиляторный статус : применение лекарственных растений с иммуно-модулирующими свойствами при иммунодефицитных состоянях"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rasulov. F .pdf",
+      "caption": "Ацетиляторный статус : применение лекарственных растений с иммуно-модулирующими свойствами при иммунодефицитных состоянях"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sabirov U.pdf",
+      "caption": "Методы лечения контактного дерматита в эксперименте"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sabirov U.pdf",
+      "caption": "Методы лечения контактного дерматита в эксперименте"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sabirov U.pdf",
+      "caption": "Методы лечения контактного дерматита в эксперименте"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Тeshaboev. A.pdf",
+      "caption": "Изучение иммуногенеза и гемопоэза у животных с типом ацетилирования и пути их коррекции с очищенным комплексом детоксиомы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Тeshaboev. A.pdf",
+      "caption": "Изучение иммуногенеза и гемопоэза у животных с типом ацетилирования и пути их коррекции с очищенным комплексом детоксиомы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Тeshaboev. A.pdf",
+      "caption": "Изучение иммуногенеза и гемопоэза у животных с типом ацетилирования и пути их коррекции с очищенным комплексом детоксиомы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.D.pdf",
+      "caption": "Эндотоксикоз и дисфункция печени при остром калькулёзном холецистите"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.D.pdf",
+      "caption": "Эндотоксикоз и дисфункция печени при остром калькулёзном холецистите"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.D.pdf",
+      "caption": "Эндотоксикоз и дисфункция печени при остром калькулёзном холецистите"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarov O.pdf",
+      "caption": "Вопросы оценки и прогнозирование билиарных осложнений после резекции печени"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarov O.pdf",
+      "caption": "Вопросы оценки и прогнозирование билиарных осложнений после резекции печени"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarov O.pdf",
+      "caption": "Вопросы оценки и прогнозирование билиарных осложнений после резекции печени"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.pdf",
+      "caption": "Дифференцированная активно-индивидуализированная хирургическая тактика при остром калькулезном холецистите коморбидностью с ишемической болезни сердца"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.pdf",
+      "caption": "Дифференцированная активно-индивидуализированная хирургическая тактика при остром калькулезном холецистите коморбидностью с ишемической болезни сердца"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov. U.pdf",
+      "caption": "Дифференцированная активно-индивидуализированная хирургическая тактика при остром калькулезном холецистите коморбидностью с ишемической болезни сердца"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov. H.pdf",
+      "caption": "Forensic biological significance of the impact on the sweat production of dacto powders used by forensic experts of the internal affairs bodies"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov. H.pdf",
+      "caption": "Forensic biological significance of the impact on the sweat production of dacto powders used by forensic experts of the internal affairs bodies"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov. H.pdf",
+      "caption": "Forensic biological significance of the impact on the sweat production of dacto powders used by forensic experts of the internal affairs bodies"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov.H.pdf",
+      "caption": "Problems on the way to maintaining womenʻs reproductive health-care alcoholism among women"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov.H.pdf",
+      "caption": "Problems on the way to maintaining womenʻs reproductive health-care alcoholism among women"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Haydarov.H.pdf",
+      "caption": "Problems on the way to maintaining womenʻs reproductive health-care alcoholism among women"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Egamberdiev. D.pdf",
+      "caption": "Заболеваемость мочекаменной болезнью в Ферганской долине с 1991 по 2022"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Egamberdiev. D.pdf",
+      "caption": "Заболеваемость мочекаменной болезнью в Ферганской долине с 1991 по 2022"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Egamberdiev. D.pdf",
+      "caption": "Заболеваемость мочекаменной болезнью в Ферганской долине с 1991 по 2022"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аshurova.M.pdf",
+      "caption": "Междисциплинарная интеграция в учебном процессе медицинского вуза"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аshurova.M.pdf",
+      "caption": "Междисциплинарная интеграция в учебном процессе медицинского вуза"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Аshurova.M.pdf",
+      "caption": "Междисциплинарная интеграция в учебном процессе медицинского вуза"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ermatov.N.pdf",
+      "caption": "The SF-36 questionnaire in assessing the health of women with premary birth"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ermatov.N.pdf",
+      "caption": "The SF-36 questionnaire in assessing the health of women with premary birth"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ermatov.N.pdf",
+      "caption": "The SF-36 questionnaire in assessing the health of women with premary birth"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Gulmirzaeva Z.pdf",
+      "caption": "Комбинированное лечение местнораспространенного рака шейки матки"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Gulmirzaeva Z.pdf",
+      "caption": "Комбинированное лечение местнораспространенного рака шейки матки"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Gulmirzaeva Z.pdf",
+      "caption": "Комбинированное лечение местнораспространенного рака шейки матки"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Iskandarova G.pdf",
+      "caption": "Гигиеническая оценка микроклимата на рабочих местах в цехах по производству инъекционных препаратов фармацевтического предприятия"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Iskandarova G.pdf",
+      "caption": "Гигиеническая оценка микроклимата на рабочих местах в цехах по производству инъекционных препаратов фармацевтического предприятия"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Iskandarova G.pdf",
+      "caption": "Гигиеническая оценка микроклимата на рабочих местах в цехах по производству инъекционных препаратов фармацевтического предприятия"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Yigitaliev A.pdf",
+      "caption": "Профилактика и ранняя диагностика рака предстательной железы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Yigitaliev A.pdf",
+      "caption": "Профилактика и ранняя диагностика рака предстательной железы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Yigitaliev A.pdf",
+      "caption": "Профилактика и ранняя диагностика рака предстательной железы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kutliev J.pdf",
+      "caption": "Определение класса условий труда по ведущему фактору на предприятиях по производству полиэтиленовой пленки"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kutliev J.pdf",
+      "caption": "Определение класса условий труда по ведущему фактору на предприятиях по производству полиэтиленовой пленки"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Kutliev J.pdf",
+      "caption": "Определение класса условий труда по ведущему фактору на предприятиях по производству полиэтиленовой пленки"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Mamasaidov J.pdf",
+      "caption": "Применение метрических параметров ушной раковины в определении соматического пола человека"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Mamasaidov J.pdf",
+      "caption": "Применение метрических параметров ушной раковины в определении соматического пола человека"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Mamasaidov J.pdf",
+      "caption": "Применение метрических параметров ушной раковины в определении соматического пола человека"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Nurmuhamedova N.pdf",
+      "caption": "Течение внекишечных проявлений у больных неспецифическим язвенным колитом"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Nurmuhamedova N.pdf",
+      "caption": "Течение внекишечных проявлений у больных неспецифическим язвенным колитом"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Nurmuhamedova N.pdf",
+      "caption": "Течение внекишечных проявлений у больных неспецифическим язвенным колитом"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rahmonov T.pdf",
+      "caption": "Методика изучения врожденных аномалий у детей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rahmonov T.pdf",
+      "caption": "Методика изучения врожденных аномалий у детей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Rahmonov T.pdf",
+      "caption": "Методика изучения врожденных аномалий у детей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ruzibaeva Y.pdf",
+      "caption": "Statistical analysis of factors for the development of cervical cancer for the period 2017-2021 in Fergana region"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ruzibaeva Y.pdf",
+      "caption": "Statistical analysis of factors for the development of cervical cancer for the period 2017-2021 in Fergana region"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Ruzibaeva Y.pdf",
+      "caption": "Statistical analysis of factors for the development of cervical cancer for the period 2017-2021 in Fergana region"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Suyarkulova. M.pdf",
+      "caption": "Использование современных методов контрацепции, применяемые в 174-179 республике Узбекистан"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Suyarkulova. M.pdf",
+      "caption": "Использование современных методов контрацепции, применяемые в 174-179 республике Узбекистан"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Suyarkulova. M.pdf",
+      "caption": "Использование современных методов контрацепции, применяемые в 174-179 республике Узбекистан"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Salamova F.pdf",
+      "caption": "COTsIALHIY poptpet, UCLOBIYa I obpaz жизни BPAChEY IHFEKTsIOHICTOB"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Salamova F.pdf",
+      "caption": "COTsIALHIY poptpet, UCLOBIYa I obpaz жизни BPAChEY IHFEKTsIOHICTOB"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Salamova F.pdf",
+      "caption": "COTsIALHIY poptpet, UCLOBIYa I obpaz жизни BPAChEY IHFEKTsIOHICTOB"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Talipova Yu.pdf",
+      "caption": "Некоторые аспекты сердечно-сосудистой патологии у лиц пожилого и старческого возраста"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Talipova Yu.pdf",
+      "caption": "Некоторые аспекты сердечно-сосудистой патологии у лиц пожилого и старческого возраста"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Talipova Yu.pdf",
+      "caption": "Некоторые аспекты сердечно-сосудистой патологии у лиц пожилого и старческого возраста"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarova D.pdf",
+      "caption": "Клинико–эхографические и морфологические особенности злокачественных новообразований яичников"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarova D.pdf",
+      "caption": "Клинико–эхографические и морфологические особенности злокачественных новообразований яичников"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Umarova D.pdf",
+      "caption": "Клинико–эхографические и морфологические особенности злокачественных новообразований яичников"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov U.pdf",
+      "caption": "Возможности применения лапароскопических оперативных вмешательств при желчнокаменной болезни и патологии органов малого таза в ургентной хирургии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov U.pdf",
+      "caption": "Возможности применения лапароскопических оперативных вмешательств при желчнокаменной болезни и патологии органов малого таза в ургентной хирургии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Usmonov U.pdf",
+      "caption": "Возможности применения лапароскопических оперативных вмешательств при желчнокаменной болезни и патологии органов малого таза в ургентной хирургии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fataxov N..pdf",
+      "caption": "Изучение аспектов синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fataxov N..pdf",
+      "caption": "Изучение аспектов синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fataxov N..pdf",
+      "caption": "Изучение аспектов синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattahov N.pdf",
+      "caption": "Взаимосвязь пищевого статуса и гирудотерапии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattahov N.pdf",
+      "caption": "Взаимосвязь пищевого статуса и гирудотерапии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattahov N.pdf",
+      "caption": "Взаимосвязь пищевого статуса и гирудотерапии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattohov N.R.pdf",
+      "caption": "Аспекты синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattohov N.R.pdf",
+      "caption": "Аспекты синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Fattohov N.R.pdf",
+      "caption": "Аспекты синергизма пищевого статуса и гирудотерапии при гипертонической болезни"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sherquziev G.pdf",
+      "caption": "Quality problems of drinking water and the importance of its monitoring"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sherquziev G.pdf",
+      "caption": "Quality problems of drinking water and the importance of its monitoring"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Sherquziev G.pdf",
+      "caption": "Quality problems of drinking water and the importance of its monitoring"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Xamrakulov T.pdf",
+      "caption": "Изменения гемореологии в патогенезе микроциркуляторных расстройств при течение гипоксической гипоксии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Xamrakulov T.pdf",
+      "caption": "Изменения гемореологии в патогенезе микроциркуляторных расстройств при течение гипоксической гипоксии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2023/Xamrakulov T.pdf",
+      "caption": "Изменения гемореологии в патогенезе микроциркуляторных расстройств при течение гипоксической гипоксии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/M L Agranovskiy..pdf",
+      "caption": "Особенности психофармакотерапевтического вмешательства для коррекции невротических расстройств у больных с различными формами псориаза"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/M L Agranovskiy..pdf",
+      "caption": "Особенности психофармакотерапевтического вмешательства для коррекции невротических расстройств у больных с различными формами псориаза"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/M L Agranovskiy..pdf",
+      "caption": "Особенности психофармакотерапевтического вмешательства для коррекции невротических расстройств у больных с различными формами псориаза"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Alibekov O.pdf",
+      "caption": "Дисгормональные процессы при развитии миомы матки"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Alibekov O.pdf",
+      "caption": "Дисгормональные процессы при развитии миомы матки"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Alibekov O.pdf",
+      "caption": "Дисгормональные процессы при развитии миомы матки"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Gasanov N.pdf",
+      "caption": "Показатели морфологии микрокристаллов дегидратированой слюны как критерий оценки вегетативного статуса и донозологического уровня здоровья"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Gasanov N.pdf",
+      "caption": "Показатели морфологии микрокристаллов дегидратированой слюны как критерий оценки вегетативного статуса и донозологического уровня здоровья"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Gasanov N.pdf",
+      "caption": "Показатели морфологии микрокристаллов дегидратированой слюны как критерий оценки вегетативного статуса и донозологического уровня здоровья"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Giyasov Z.pdf",
+      "caption": "Судебно-медицинская оценка медицинской помощи, оказанной врачами акушерами-гинекологами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Giyasov Z.pdf",
+      "caption": "Судебно-медицинская оценка медицинской помощи, оказанной врачами акушерами-гинекологами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Giyasov Z.pdf",
+      "caption": "Судебно-медицинская оценка медицинской помощи, оказанной врачами акушерами-гинекологами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Israilov R.pdf",
+      "caption": "Патоморфологические изменения, развивающиеся в интерстиции почки под влиянием COVID-19"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Israilov R.pdf",
+      "caption": "Патоморфологические изменения, развивающиеся в интерстиции почки под влиянием COVID-19"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Israilov R.pdf",
+      "caption": "Патоморфологические изменения, развивающиеся в интерстиции почки под влиянием COVID-19"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Kaxxarova A.pdf",
+      "caption": "Показатели биохимического состава крови при токсическом поражении печени"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Kaxxarova A.pdf",
+      "caption": "Показатели биохимического состава крови при токсическом поражении печени"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Kaxxarova A.pdf",
+      "caption": "Показатели биохимического состава крови при токсическом поражении печени"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mamataliyev A.pdf",
+      "caption": "Патоморфологические особенности миомы матки у женщин в зависимости от возраста и количества беременностей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mamataliyev A.pdf",
+      "caption": "Патоморфологические особенности миомы матки у женщин в зависимости от возраста и количества беременностей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mamataliyev A.pdf",
+      "caption": "Патоморфологические особенности миомы матки у женщин в зависимости от возраста и количества беременностей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahmudov N.pdf",
+      "caption": "Роль санационная бронхоскопия в диагностике и лечение стационарной пневмоний у больных с тяжелой черепно-мозговой травмой"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahmudov N.pdf",
+      "caption": "Роль санационная бронхоскопия в диагностике и лечение стационарной пневмоний у больных с тяжелой черепно-мозговой травмой"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahmudov N.pdf",
+      "caption": "Роль санационная бронхоскопия в диагностике и лечение стационарной пневмоний у больных с тяжелой черепно-мозговой травмой"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Moydinov J.pdf",
+      "caption": "Гистотопография стенки межжелудочковой перегородки сердца"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Moydinov J.pdf",
+      "caption": "Гистотопография стенки межжелудочковой перегородки сердца"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Moydinov J.pdf",
+      "caption": "Гистотопография стенки межжелудочковой перегородки сердца"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Norchayev J.pdf",
+      "caption": "Лечение диабетической нейроостеоартропатии природными средствами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Norchayev J.pdf",
+      "caption": "Лечение диабетической нейроостеоартропатии природными средствами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Norchayev J.pdf",
+      "caption": "Лечение диабетической нейроостеоартропатии природными средствами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sidikov A.pdf",
+      "caption": "Клинико-морфологическая корреляция в диагностике различных форм актинического кератоза"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sidikov A.pdf",
+      "caption": "Клинико-морфологическая корреляция в диагностике различных форм актинического кератоза"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sidikov A.pdf",
+      "caption": "Клинико-морфологическая корреляция в диагностике различных форм актинического кератоза"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Turdiyev Sh.pdf",
+      "caption": "Влияние загрязнения окружающей среды на здоровье населения"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Turdiyev Sh.pdf",
+      "caption": "Влияние загрязнения окружающей среды на здоровье населения"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Turdiyev Sh.pdf",
+      "caption": "Влияние загрязнения окружающей среды на здоровье населения"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Usmonova G.pdf",
+      "caption": "Результаты сравнительного анализа морфологических изменений печени на 90-Й день эксперимента на крысах"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Usmonova G.pdf",
+      "caption": "Результаты сравнительного анализа морфологических изменений печени на 90-Й день эксперимента на крысах"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Usmonova G.pdf",
+      "caption": "Результаты сравнительного анализа морфологических изменений печени на 90-Й день эксперимента на крысах"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Haydarov A.pdf",
+      "caption": "Новое в лечении переломов пястных костей кисти и их последствий"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Haydarov A.pdf",
+      "caption": "Новое в лечении переломов пястных костей кисти и их последствий"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Haydarov A.pdf",
+      "caption": "Новое в лечении переломов пястных костей кисти и их последствий"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Shokirov A.pdf",
+      "caption": "Патоморфологические изменения извитых канальцев почек при заболевании COVID-19"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Shokirov A.pdf",
+      "caption": "Патоморфологические изменения извитых канальцев почек при заболевании COVID-19"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Shokirov A.pdf",
+      "caption": "Патоморфологические изменения извитых канальцев почек при заболевании COVID-19"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sharapov I.pdf",
+      "caption": "Гигиеническая характеристика условий труда с соответствием фосалон и батонес пестицидам садоводов"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sharapov I.pdf",
+      "caption": "Гигиеническая характеристика условий труда с соответствием фосалон и батонес пестицидам садоводов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Sharapov I.pdf",
+      "caption": "Гигиеническая характеристика условий труда с соответствием фосалон и батонес пестицидам садоводов"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Egamberdiyeva G.pdf",
+      "caption": "Гепатопротекторное свойство биологически активных веществ и его морфологические особенности на 60-е сутки у крыс"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Egamberdiyeva G.pdf",
+      "caption": "Гепатопротекторное свойство биологически активных веществ и его морфологические особенности на 60-е сутки у крыс"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Egamberdiyeva G.pdf",
+      "caption": "Гепатопротекторное свойство биологически активных веществ и его морфологические особенности на 60-е сутки у крыс"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Yakubova O.pdf",
+      "caption": "Перинатальные показатели у женщин с эндемическим зобом"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Yakubova O.pdf",
+      "caption": "Перинатальные показатели у женщин с эндемическим зобом"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Yakubova O.pdf",
+      "caption": "Перинатальные показатели у женщин с эндемическим зобом"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Abdullayev I.pdf",
+      "caption": "Экстрокорпоральная терапия: место в мировой медицине,развитие и рекомендации по применению и современные подходы к инструкциям"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Abdullayev I.pdf",
+      "caption": "Экстрокорпоральная терапия: место в мировой медицине,развитие и рекомендации по применению и современные подходы к инструкциям"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Abdullayev I.pdf",
+      "caption": "Экстрокорпоральная терапия: место в мировой медицине,развитие и рекомендации по применению и современные подходы к инструкциям"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmadaliyeva N.pdf",
+      "caption": "Изучение обеспеченности начальных классов общеобразовательных школ основной ученической мебелью и её гигиеническая оценка"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmadaliyeva N.pdf",
+      "caption": "Изучение обеспеченности начальных классов общеобразовательных школ основной ученической мебелью и её гигиеническая оценка"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmadaliyeva N.pdf",
+      "caption": "Изучение обеспеченности начальных классов общеобразовательных школ основной ученической мебелью и её гигиеническая оценка"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmedova D.pdf",
+      "caption": "Связь между женской репродуктивной и эндокринной системами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmedova D.pdf",
+      "caption": "Связь между женской репродуктивной и эндокринной системами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Ahmedova D.pdf",
+      "caption": "Связь между женской репродуктивной и эндокринной системами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Vorobyov A.pdf",
+      "caption": "Развитие процессов интернационализации в Ферганском медицинском институте общественного здоровья"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Vorobyov A.pdf",
+      "caption": "Развитие процессов интернационализации в Ферганском медицинском институте общественного здоровья"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Vorobyov A.pdf",
+      "caption": "Развитие процессов интернационализации в Ферганском медицинском институте общественного здоровья"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Karimova M.pdf",
+      "caption": "The thyroid and COVID-19: worldwide prevalence"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Karimova M.pdf",
+      "caption": "The thyroid and COVID-19: worldwide prevalence"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Karimova M.pdf",
+      "caption": "The thyroid and COVID-19: worldwide prevalence"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahkamova M.pdf",
+      "caption": "A contemporary view of reproductive function in women with insulin-dependent diabetes mellitus"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahkamova M.pdf",
+      "caption": "A contemporary view of reproductive function in women with insulin-dependent diabetes mellitus"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Mahkamova M.pdf",
+      "caption": "A contemporary view of reproductive function in women with insulin-dependent diabetes mellitus"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Nasirova H.pdf",
+      "caption": "Состояние вопроса о гиперпролактинемическом бесплодии и исходах беременностей у матерей, получавших агонисты дофаминовых рецепторов"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Nasirova H.pdf",
+      "caption": "Состояние вопроса о гиперпролактинемическом бесплодии и исходах беременностей у матерей, получавших агонисты дофаминовых рецепторов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Nasirova H.pdf",
+      "caption": "Состояние вопроса о гиперпролактинемическом бесплодии и исходах беременностей у матерей, получавших агонисты дофаминовых рецепторов"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Palvanova M.pdf",
+      "caption": "Острый жировой гепатоз беременных determination of the degree of satisfaction with the working conditions of primary school teachers of secondary schools"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Palvanova M.pdf",
+      "caption": "Острый жировой гепатоз беременных determination of the degree of satisfaction with the working conditions of primary school teachers of secondary schools"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Palvanova M.pdf",
+      "caption": "Острый жировой гепатоз беременных determination of the degree of satisfaction with the working conditions of primary school teachers of secondary schools"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Suyarqulova M.pdf",
+      "caption": "Резервы для снижения кесарева сечения в республике Узбекистан"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Suyarqulova M.pdf",
+      "caption": "Резервы для снижения кесарева сечения в республике Узбекистан"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/Suyarqulova M.pdf",
+      "caption": "Резервы для снижения кесарева сечения в республике Узбекистан"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/EARLY DETECTION OF ONCOLOGICAL DISEASES USING ARTIFICIAL INTELLIGENCE IN MEDICINE.pdf",
+      "caption": "Early detection of oncological diseases using artificial intelligence in medicine"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/EARLY DETECTION OF ONCOLOGICAL DISEASES USING ARTIFICIAL INTELLIGENCE IN MEDICINE.pdf",
+      "caption": "Early detection of oncological diseases using artificial intelligence in medicine"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2023/EARLY DETECTION OF ONCOLOGICAL DISEASES USING ARTIFICIAL INTELLIGENCE IN MEDICINE.pdf",
+      "caption": "Early detection of oncological diseases using artificial intelligence in medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kabilova D.K.pdf",
+      "caption": "Пути повышении качества оказания медицинской помощи детям в стационарах первого уровня"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kabilova D.K.pdf",
+      "caption": "Пути повышении качества оказания медицинской помощи детям в стационарах первого уровня"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kabilova D.K.pdf",
+      "caption": "Пути повышении качества оказания медицинской помощи детям в стационарах первого уровня"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kadirova X.A..pdf",
+      "caption": "Анализ исследованный лекарственных эфемеров в Узбекистане и дальнего зарубежья"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kadirova X.A..pdf",
+      "caption": "Анализ исследованный лекарственных эфемеров в Узбекистане и дальнего зарубежья"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Kadirova X.A..pdf",
+      "caption": "Анализ исследованный лекарственных эфемеров в Узбекистане и дальнего зарубежья"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Alimova I.pdf",
+      "caption": "Методика исследования и реабилитация детского аутизма у детей в Ферганском региональном филиале республиканского центра социальной адаптации детей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Alimova I.pdf",
+      "caption": "Методика исследования и реабилитация детского аутизма у детей в Ферганском региональном филиале республиканского центра социальной адаптации детей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Alimova I.pdf",
+      "caption": "Методика исследования и реабилитация детского аутизма у детей в Ферганском региональном филиале республиканского центра социальной адаптации детей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Arifov S..pdf",
+      "caption": "Клиническая характеристика больных сезонным аллергическим ринитом на примере Ферганской области"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Arifov S..pdf",
+      "caption": "Клиническая характеристика больных сезонным аллергическим ринитом на примере Ферганской области"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Arifov S..pdf",
+      "caption": "Клиническая характеристика больных сезонным аллергическим ринитом на примере Ферганской области"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Karabayev M.K.pdf",
+      "caption": "Особенности донозологического уровня физического здоровья и некоторых морфофункциональных показателей взрослого контингента коренных жителей низко и среднегорья Ферганской области"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Karabayev M.K.pdf",
+      "caption": "Особенности донозологического уровня физического здоровья и некоторых морфофункциональных показателей взрослого контингента коренных жителей низко и среднегорья Ферганской области"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2023/Karabayev M.K.pdf",
+      "caption": "Особенности донозологического уровня физического здоровья и некоторых морфофункциональных показателей взрослого контингента коренных жителей низко и среднегорья Ферганской области"
+     }
+    }
+   }
+  ],
+  "notes": []
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 1,
+  "fp": {
+   "uz": "c9b667e3fcc15c9bc86a04923bf047563cda788dc6a975ddae002f23e6b3f7c1",
+   "ru": "4f13ad603246c803421c7799479395c40ffd271e01a93b414799ed658a8da8a2",
+   "en": "d511095dfd5c70ecc3b9cbc3900a3b8b01f8c9eefb5bd1cfe74a2819b839c1a1"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.B.Abdulazizxojiyeva..pdf",
+      "caption": "Изучение влияния инфекции COVID-19 на уровень компенсации у пациентов с сахарным диабетом 1 типа"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.B.Abdulazizxojiyeva..pdf",
+      "caption": "Изучение влияния инфекции COVID-19 на уровень компенсации у пациентов с сахарным диабетом 1 типа"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.B.Abdulazizxojiyeva..pdf",
+      "caption": "Изучение влияния инфекции COVID-19 на уровень компенсации у пациентов с сахарным диабетом 1 типа"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.Yu.Astanakulov..pdf",
+      "caption": "Анализ распространенности сахарного диабета в Ферганской области за последние 5 лет"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.Yu.Astanakulov..pdf",
+      "caption": "Анализ распространенности сахарного диабета в Ферганской области за последние 5 лет"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.Yu.Astanakulov..pdf",
+      "caption": "Анализ распространенности сахарного диабета в Ферганской области за последние 5 лет"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/A.A. Djurabayev..pdf",
+      "caption": "О роли Helicobacter pylori в патогенезе атрофического гастрита и рака желудка"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/A.A. Djurabayev..pdf",
+      "caption": "О роли Helicobacter pylori в патогенезе атрофического гастрита и рака желудка"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/A.A. Djurabayev..pdf",
+      "caption": "О роли Helicobacter pylori в патогенезе атрофического гастрита и рака желудка"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.I.Israilov..pdf",
+      "caption": "Патоморфологические изменения при протрузии и грыже межпозвонкового диска поясничного отдела позвоночника"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.I.Israilov..pdf",
+      "caption": "Патоморфологические изменения при протрузии и грыже межпозвонкового диска поясничного отдела позвоночника"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.I.Israilov..pdf",
+      "caption": "Патоморфологические изменения при протрузии и грыже межпозвонкового диска поясничного отдела позвоночника"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.S.Mamajonov..pdf",
+      "caption": "Патоморфологические изменения частей диска в динамике при заболевании позвоночника спондилёзом"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.S.Mamajonov..pdf",
+      "caption": "Патоморфологические изменения частей диска в динамике при заболевании позвоночника спондилёзом"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.S.Mamajonov..pdf",
+      "caption": "Патоморфологические изменения частей диска в динамике при заболевании позвоночника спондилёзом"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.M.Muxammadsodikov..pdf",
+      "caption": "Изучение острых и хронических осложнений COVID-19 у пациентов с сахарным диабетом 1 типа"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.M.Muxammadsodikov..pdf",
+      "caption": "Изучение острых и хронических осложнений COVID-19 у пациентов с сахарным диабетом 1 типа"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.M.Muxammadsodikov..pdf",
+      "caption": "Изучение острых и хронических осложнений COVID-19 у пациентов с сахарным диабетом 1 типа"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.A.Paramonov..pdf",
+      "caption": "Влияние модификации поверхности раневого покрытия \"фолидерм\" производными хитина на пролиферацию фибробластов"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.A.Paramonov..pdf",
+      "caption": "Влияние модификации поверхности раневого покрытия \"фолидерм\" производными хитина на пролиферацию фибробластов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/B.A.Paramonov..pdf",
+      "caption": "Влияние модификации поверхности раневого покрытия \"фолидерм\" производными хитина на пролиферацию фибробластов"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.Sh.Sayfutdinova..pdf",
+      "caption": "Структура патологии щитовидной железы у женщин с нарушением фертильности"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.Sh.Sayfutdinova..pdf",
+      "caption": "Структура патологии щитовидной железы у женщин с нарушением фертильности"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/R.Sh.Sayfutdinova..pdf",
+      "caption": "Структура патологии щитовидной железы у женщин с нарушением фертильности"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.O.Saliaxunova..pdf",
+      "caption": "Оценка и коррекция эндогенной интоксикации и липопероксидации при риносинуситах с коморбидностью хронической обструктивной болезнью легких"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.O.Saliaxunova..pdf",
+      "caption": "Оценка и коррекция эндогенной интоксикации и липопероксидации при риносинуситах с коморбидностью хронической обструктивной болезнью легких"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.O.Saliaxunova..pdf",
+      "caption": "Оценка и коррекция эндогенной интоксикации и липопероксидации при риносинуситах с коморбидностью хронической обструктивной болезнью легких"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Получение поливалентной сыворотки кишечного иерсиниоза от экспериментальных животных и изучение её свойств"
+     },
+     "ru": {
+      "text": "Получение поливалентной сыворотки кишечного иерсиниоза от экспериментальных животных и изучение её свойств"
+     },
+     "en": {
+      "text": "Получение поливалентной сыворотки кишечного иерсиниоза от экспериментальных животных и изучение её свойств"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Sh.M.Turdiyev..pdf",
+      "caption": "Гигиенические особенности условий машиностроительного труда и их влияние на з доровье работающих"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Sh.M.Turdiyev..pdf",
+      "caption": "Гигиенические особенности условий машиностроительного труда и их влияние на з доровье работающих"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Sh.M.Turdiyev..pdf",
+      "caption": "Гигиенические особенности условий машиностроительного труда и их влияние на з доровье работающих"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.Sh.Xakimov..pdf",
+      "caption": "Классификация пищеводных кровотечений"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.Sh.Xakimov..pdf",
+      "caption": "Классификация пищеводных кровотечений"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.Sh.Xakimov..pdf",
+      "caption": "Классификация пищеводных кровотечений"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Z.K.Xakimov..pdf",
+      "caption": "Pathomorphological changes in the heart in sudden cardiac death"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Z.K.Xakimov..pdf",
+      "caption": "Pathomorphological changes in the heart in sudden cardiac death"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Z.K.Xakimov..pdf",
+      "caption": "Pathomorphological changes in the heart in sudden cardiac death"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.T.Yuldasheva..pdf",
+      "caption": "Study of the histomorphological condition of the respiratory tract in experimental animals (rabbits) under normal conditions"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.T.Yuldasheva..pdf",
+      "caption": "Study of the histomorphological condition of the respiratory tract in experimental animals (rabbits) under normal conditions"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.T.Yuldasheva..pdf",
+      "caption": "Study of the histomorphological condition of the respiratory tract in experimental animals (rabbits) under normal conditions"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.T.Abduvaliyeva..pdf",
+      "caption": "Гигиеническая оценка транспортного шума города Ферганы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.T.Abduvaliyeva..pdf",
+      "caption": "Гигиеническая оценка транспортного шума города Ферганы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.T.Abduvaliyeva..pdf",
+      "caption": "Гигиеническая оценка транспортного шума города Ферганы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/E.A.Axmedova..pdf",
+      "caption": "Хроническая болезнь почек у детей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/E.A.Axmedova..pdf",
+      "caption": "Хроническая болезнь почек у детей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/E.A.Axmedova..pdf",
+      "caption": "Хроническая болезнь почек у детей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Valitov E.pdf",
+      "caption": "The role of artificial intelligence and chatgpt in medical education"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Valitov E.pdf",
+      "caption": "The role of artificial intelligence and chatgpt in medical education"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Valitov E.pdf",
+      "caption": "The role of artificial intelligence and chatgpt in medical education"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/P.X.Ganijonov..pdf",
+      "caption": "Влияние стресса на физиологию и морфофункциональное состояние пищеварительной системы у крыс"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/P.X.Ganijonov..pdf",
+      "caption": "Влияние стресса на физиологию и морфофункциональное состояние пищеварительной системы у крыс"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/P.X.Ganijonov..pdf",
+      "caption": "Влияние стресса на физиологию и морфофункциональное состояние пищеварительной системы у крыс"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.A.Gafur Axunov.pdf",
+      "caption": "Молекулярно-генетические аспекты нефробластомы у детей: синдромальная и молекулярная диагностика"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.A.Gafur Axunov.pdf",
+      "caption": "Молекулярно-генетические аспекты нефробластомы у детей: синдромальная и молекулярная диагностика"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.A.Gafur Axunov.pdf",
+      "caption": "Молекулярно-генетические аспекты нефробластомы у детей: синдромальная и молекулярная диагностика"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Islomov..pdf",
+      "caption": "Клинико-морфологические особенности и результаты лечения нефробластомы у детей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Islomov..pdf",
+      "caption": "Клинико-морфологические особенности и результаты лечения нефробластомы у детей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Islomov..pdf",
+      "caption": "Клинико-морфологические особенности и результаты лечения нефробластомы у детей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/N.R.Madraximova..pdf",
+      "caption": "Morphometric basis of early diagnosis of gallstone diseases"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/N.R.Madraximova..pdf",
+      "caption": "Morphometric basis of early diagnosis of gallstone diseases"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/N.R.Madraximova..pdf",
+      "caption": "Morphometric basis of early diagnosis of gallstone diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.U.Mamadaliyev..pdf",
+      "caption": "Медицинская культура - фундамент материнского здоровья"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.U.Mamadaliyev..pdf",
+      "caption": "Медицинская культура - фундамент материнского здоровья"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.U.Mamadaliyev..pdf",
+      "caption": "Медицинская культура - фундамент материнского здоровья"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.M-A.Mirzayev..pdf",
+      "caption": "Эпидемиологические особенности и факторы риска первичного рака печени"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.M-A.Mirzayev..pdf",
+      "caption": "Эпидемиологические особенности и факторы риска первичного рака печени"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/X.M-A.Mirzayev..pdf",
+      "caption": "Эпидемиологические особенности и факторы риска первичного рака печени"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.A.Mirzajonova..pdf",
+      "caption": "Изменения процесса гипоксии организма при гемической анемии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.A.Mirzajonova..pdf",
+      "caption": "Изменения процесса гипоксии организма при гемической анемии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.A.Mirzajonova..pdf",
+      "caption": "Изменения процесса гипоксии организма при гемической анемии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.A.Nazirhudjayev..pdf",
+      "caption": "Diagnosis and treatment of post-traumatic pneumonia in patients with closed chest injuries"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.A.Nazirhudjayev..pdf",
+      "caption": "Diagnosis and treatment of post-traumatic pneumonia in patients with closed chest injuries"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/F.A.Nazirhudjayev..pdf",
+      "caption": "Diagnosis and treatment of post-traumatic pneumonia in patients with closed chest injuries"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Х.A.Odilov..pdf",
+      "caption": "Факторы, приводящие к мочекаменной болезни и их влияние на морфофункциональное состояние мочевыводящих путей"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Х.A.Odilov..pdf",
+      "caption": "Факторы, приводящие к мочекаменной болезни и их влияние на морфофункциональное состояние мочевыводящих путей"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/Х.A.Odilov..pdf",
+      "caption": "Факторы, приводящие к мочекаменной болезни и их влияние на морфофункциональное состояние мочевыводящих путей"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.O.Ten..pdf",
+      "caption": "Modern methods of treatment of burn wounds"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.O.Ten..pdf",
+      "caption": "Modern methods of treatment of burn wounds"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.O.Ten..pdf",
+      "caption": "Modern methods of treatment of burn wounds"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/G.B.Tilyaxodjayeva..pdf",
+      "caption": "Optimized methods of hirudotherapy for hypertensive crises"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/G.B.Tilyaxodjayeva..pdf",
+      "caption": "Optimized methods of hirudotherapy for hypertensive crises"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/G.B.Tilyaxodjayeva..pdf",
+      "caption": "Optimized methods of hirudotherapy for hypertensive crises"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.E.Egamberdiyev..pdf",
+      "caption": "Prevention and metaphylaxis of urolithiasis"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.E.Egamberdiyev..pdf",
+      "caption": "Prevention and metaphylaxis of urolithiasis"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/D.E.Egamberdiyev..pdf",
+      "caption": "Prevention and metaphylaxis of urolithiasis"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.I.Umarkulov..pdf",
+      "caption": "Feeding children of breast-feeding age"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.I.Umarkulov..pdf",
+      "caption": "Feeding children of breast-feeding age"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/M.I.Umarkulov..pdf",
+      "caption": "Feeding children of breast-feeding age"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Axunbaev O.A..pdf",
+      "caption": "Течении анемии при сердечно-сосудистых и желудочно-кишечных заболеваниях"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Axunbaev O.A..pdf",
+      "caption": "Течении анемии при сердечно-сосудистых и желудочно-кишечных заболеваниях"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Axunbaev O.A..pdf",
+      "caption": "Течении анемии при сердечно-сосудистых и желудочно-кишечных заболеваниях"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Iskandarova G.T..pdf",
+      "caption": "Гигиеническая оценка производственного микроклимата на предприятии машиностроительной отрасли промышленности"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Iskandarova G.T..pdf",
+      "caption": "Гигиеническая оценка производственного микроклимата на предприятии машиностроительной отрасли промышленности"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Iskandarova G.T..pdf",
+      "caption": "Гигиеническая оценка производственного микроклимата на предприятии машиностроительной отрасли промышленности"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirzakandov E.E.pdf",
+      "caption": "Pathomorphology of pathogenetic vasotonic and vasodilating periods of allergic rhinitis"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirzakandov E.E.pdf",
+      "caption": "Pathomorphology of pathogenetic vasotonic and vasodilating periods of allergic rhinitis"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirzakandov E.E.pdf",
+      "caption": "Pathomorphology of pathogenetic vasotonic and vasodilating periods of allergic rhinitis"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Maxkamova M.B..pdf",
+      "caption": "Исследование функционального состояния щитовидной железы у женщин с сахарным диабетом 1 типа, проживающих в зоне йододефицита"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Maxkamova M.B..pdf",
+      "caption": "Исследование функционального состояния щитовидной железы у женщин с сахарным диабетом 1 типа, проживающих в зоне йододефицита"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Maxkamova M.B..pdf",
+      "caption": "Исследование функционального состояния щитовидной железы у женщин с сахарным диабетом 1 типа, проживающих в зоне йододефицита"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Мuydinov R.R..pdf",
+      "caption": "Pathogenesis, morphogenesis, and pathomorphological changes of the nose and its accessory caves,polyps in allergic form"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Мuydinov R.R..pdf",
+      "caption": "Pathogenesis, morphogenesis, and pathomorphological changes of the nose and its accessory caves,polyps in allergic form"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Мuydinov R.R..pdf",
+      "caption": "Pathogenesis, morphogenesis, and pathomorphological changes of the nose and its accessory caves,polyps in allergic form"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Saydaliev S.S..pdf",
+      "caption": "Патоморфология острого периода неспецифического язвенного колита"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Saydaliev S.S..pdf",
+      "caption": "Патоморфология острого периода неспецифического язвенного колита"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Saydaliev S.S..pdf",
+      "caption": "Патоморфология острого периода неспецифического язвенного колита"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldashev D.I..pdf",
+      "caption": "Лапароскопическая пиелопластика — оценка эффективности трансперитонеального доступа, опыт клиники \"MED ART GROUP\""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldashev D.I..pdf",
+      "caption": "Лапароскопическая пиелопластика — оценка эффективности трансперитонеального доступа, опыт клиники \"MED ART GROUP\""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldashev D.I..pdf",
+      "caption": "Лапароскопическая пиелопластика — оценка эффективности трансперитонеального доступа, опыт клиники \"MED ART GROUP\""
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldasheva M.T.pdf",
+      "caption": "Pathological alterations in the nasal mucosa due to pesticide exposure"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldasheva M.T.pdf",
+      "caption": "Pathological alterations in the nasal mucosa due to pesticide exposure"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Yuldasheva M.T.pdf",
+      "caption": "Pathological alterations in the nasal mucosa due to pesticide exposure"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Abdukarimov N.M..pdf",
+      "caption": "Проявления и влияние общесоматической патологии на слизистую оболочку полости рта"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Abdukarimov N.M..pdf",
+      "caption": "Проявления и влияние общесоматической патологии на слизистую оболочку полости рта"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Abdukarimov N.M..pdf",
+      "caption": "Проявления и влияние общесоматической патологии на слизистую оболочку полости рта"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Isakova D.B..pdf",
+      "caption": "Methods of early diagnosis of cervical diseases and evaluation of results"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Isakova D.B..pdf",
+      "caption": "Methods of early diagnosis of cervical diseases and evaluation of results"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Isakova D.B..pdf",
+      "caption": "Methods of early diagnosis of cervical diseases and evaluation of results"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Ismailova M.pdf",
+      "caption": "Premature rupture of members and methods of prolonging pregnancy"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Ismailova M.pdf",
+      "caption": "Premature rupture of members and methods of prolonging pregnancy"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Ismailova M.pdf",
+      "caption": "Premature rupture of members and methods of prolonging pregnancy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kayumov J.A..pdf",
+      "caption": "Healthcare system and current treatment of type 2 diabetes in Uzbekistan"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kayumov J.A..pdf",
+      "caption": "Healthcare system and current treatment of type 2 diabetes in Uzbekistan"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kayumov J.A..pdf",
+      "caption": "Healthcare system and current treatment of type 2 diabetes in Uzbekistan"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kuziev O.I..pdf",
+      "caption": "Передняя перкутанная одновинтовая фиксация переломов зубовидного отростка аксиса"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kuziev O.I..pdf",
+      "caption": "Передняя перкутанная одновинтовая фиксация переломов зубовидного отростка аксиса"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Kuziev O.I..pdf",
+      "caption": "Передняя перкутанная одновинтовая фиксация переломов зубовидного отростка аксиса"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mamajanova Sh.K..pdf",
+      "caption": "Studying the effectiveness of magnesium in the treatment of algodysmenorrhea"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mamajanova Sh.K..pdf",
+      "caption": "Studying the effectiveness of magnesium in the treatment of algodysmenorrhea"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mamajanova Sh.K..pdf",
+      "caption": "Studying the effectiveness of magnesium in the treatment of algodysmenorrhea"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirkurbanova T.X..pdf",
+      "caption": "Д-димер и коагулограмма у беременных в разных триместрах"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirkurbanova T.X..pdf",
+      "caption": "Д-димер и коагулограмма у беременных в разных триместрах"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Mirkurbanova T.X..pdf",
+      "caption": "Д-димер и коагулограмма у беременных в разных триместрах"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Salokhiddinov K.Z..pdf",
+      "caption": "Parastomal hernias and their prevention"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Salokhiddinov K.Z..pdf",
+      "caption": "Parastomal hernias and their prevention"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 2-2024/Salokhiddinov K.Z..pdf",
+      "caption": "Parastomal hernias and their prevention"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Изучение связи патологий щитовидной железы с заболеваниями репродуктивной системы у женщин детородного возраста"
+     },
+     "ru": {
+      "text": "Изучение связи патологий щитовидной железы с заболеваниями репродуктивной системы у женщин детородного возраста"
+     },
+     "en": {
+      "text": "Изучение связи патологий щитовидной железы с заболеваниями репродуктивной системы у женщин детородного возраста"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Kattaxanova R.pdf",
+      "caption": "Выбор антибактериальной терапии внебольничной пневмонии у больных сахарным диабетом 2 типа"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Kattaxanova R.pdf",
+      "caption": "Выбор антибактериальной терапии внебольничной пневмонии у больных сахарным диабетом 2 типа"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Kattaxanova R.pdf",
+      "caption": "Выбор антибактериальной терапии внебольничной пневмонии у больных сахарным диабетом 2 типа"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Muradimova A..pdf",
+      "caption": "Профилактика гипертонической болезни у врачей и выбор антигипертензивной терапия.(на примере Наманганской области)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Muradimova A..pdf",
+      "caption": "Профилактика гипертонической болезни у врачей и выбор антигипертензивной терапия.(на примере Наманганской области)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Muradimova A..pdf",
+      "caption": "Профилактика гипертонической болезни у врачей и выбор антигипертензивной терапия.(на примере Наманганской области)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Sh.I.Ro‘ziev1, Z.G.Sharobiddinov2, Z.I.Ro‘zieva3.pdf",
+      "caption": "Determination of the prescription of rib fractures based on morphological signs in the practice of forensic medicine"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Sh.I.Ro‘ziev1, Z.G.Sharobiddinov2, Z.I.Ro‘zieva3.pdf",
+      "caption": "Determination of the prescription of rib fractures based on morphological signs in the practice of forensic medicine"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Sh.I.Ro‘ziev1, Z.G.Sharobiddinov2, Z.I.Ro‘zieva3.pdf",
+      "caption": "Determination of the prescription of rib fractures based on morphological signs in the practice of forensic medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.M.Sarimsakov1, R.X.Sultanov2.pdf",
+      "caption": "Изучение противовоспалительного действия масла хвои и ромашки лекарственной"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.M.Sarimsakov1, R.X.Sultanov2.pdf",
+      "caption": "Изучение противовоспалительного действия масла хвои и ромашки лекарственной"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.M.Sarimsakov1, R.X.Sultanov2.pdf",
+      "caption": "Изучение противовоспалительного действия масла хвои и ромашки лекарственной"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Z.K.Xakimov, М.А.Mamataliyeva, R.I.Isroilov, X.V.Nurmatov.pdf",
+      "caption": "Морфологические и морфометрические изменения щитовидной железы при внезапной сердечной смерти"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Z.K.Xakimov, М.А.Mamataliyeva, R.I.Isroilov, X.V.Nurmatov.pdf",
+      "caption": "Морфологические и морфометрические изменения щитовидной железы при внезапной сердечной смерти"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Z.K.Xakimov, М.А.Mamataliyeva, R.I.Isroilov, X.V.Nurmatov.pdf",
+      "caption": "Морфологические и морфометрические изменения щитовидной железы при внезапной сердечной смерти"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/S.A.Shakirov, A.A.Sidikov, Sh.I.Ruziev.pdf",
+      "caption": "Morphological study to determine the mechanism, viability, and age of kidney injuries in blunt abdominal trauma"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/S.A.Shakirov, A.A.Sidikov, Sh.I.Ruziev.pdf",
+      "caption": "Morphological study to determine the mechanism, viability, and age of kidney injuries in blunt abdominal trauma"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/S.A.Shakirov, A.A.Sidikov, Sh.I.Ruziev.pdf",
+      "caption": "Morphological study to determine the mechanism, viability, and age of kidney injuries in blunt abdominal trauma"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/R.M.Shermatov, B.Soliyev, D.Sh.Atadjanova.pdf",
+      "caption": "Эпидемиология пищевой непереносимости у детей дошкольного возраста в городской и сельской местности"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/R.M.Shermatov, B.Soliyev, D.Sh.Atadjanova.pdf",
+      "caption": "Эпидемиология пищевой непереносимости у детей дошкольного возраста в городской и сельской местности"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/R.M.Shermatov, B.Soliyev, D.Sh.Atadjanova.pdf",
+      "caption": "Эпидемиология пищевой непереносимости у детей дошкольного возраста в городской и сельской местности"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.A.Gofur-Oxunov, A.B.Yigitaliyev, O.M.Karimov, D.A.Sulaymanov, D.K.Egamberdiyev.pdf",
+      "caption": "Диффузная форма рака молочной железы: эпидемиология, клиника и методы диагностики"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.A.Gofur-Oxunov, A.B.Yigitaliyev, O.M.Karimov, D.A.Sulaymanov, D.K.Egamberdiyev.pdf",
+      "caption": "Диффузная форма рака молочной железы: эпидемиология, клиника и методы диагностики"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/M.A.Gofur-Oxunov, A.B.Yigitaliyev, O.M.Karimov, D.A.Sulaymanov, D.K.Egamberdiyev.pdf",
+      "caption": "Диффузная форма рака молочной железы: эпидемиология, клиника и методы диагностики"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/N.O.Axmadaliyeva, G.A.Toshmatova.pdf",
+      "caption": "Evaluation of the ecological state of the cityʻs air quality during globalization"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/N.O.Axmadaliyeva, G.A.Toshmatova.pdf",
+      "caption": "Evaluation of the ecological state of the cityʻs air quality during globalization"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/N.O.Axmadaliyeva, G.A.Toshmatova.pdf",
+      "caption": "Evaluation of the ecological state of the cityʻs air quality during globalization"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/U.Sh.Maxamatov, U.A.Teshaboyev.pdf",
+      "caption": "Роль компьютерной томографии в анализе пациентов, зараженных инфекцией COVID-19, значение микроэлемента цинка в организме человека для профилактики и лечения болезни"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/U.Sh.Maxamatov, U.A.Teshaboyev.pdf",
+      "caption": "Роль компьютерной томографии в анализе пациентов, зараженных инфекцией COVID-19, значение микроэлемента цинка в организме человека для профилактики и лечения болезни"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/U.Sh.Maxamatov, U.A.Teshaboyev.pdf",
+      "caption": "Роль компьютерной томографии в анализе пациентов, зараженных инфекцией COVID-19, значение микроэлемента цинка в организме человека для профилактики и лечения болезни"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Mirkurbanova T.X",
+      "caption": "Диагностическая значимость MAR- теста в профилактике и лечении мужского иммунологического бесплодия"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Mirkurbanova T.X",
+      "caption": "Диагностическая значимость MAR- теста в профилактике и лечении мужского иммунологического бесплодия"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Mirkurbanova T.X",
+      "caption": "Диагностическая значимость MAR- теста в профилактике и лечении мужского иммунологического бесплодия"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/G.M.Tulaboyeva, A.A.Mangasaryan.pdf",
+      "caption": "Клинико-гемодинамические особенности у пациентов пожилого возраста с артериальной гипертензией и COVID-19"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/G.M.Tulaboyeva, A.A.Mangasaryan.pdf",
+      "caption": "Клинико-гемодинамические особенности у пациентов пожилого возраста с артериальной гипертензией и COVID-19"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/G.M.Tulaboyeva, A.A.Mangasaryan.pdf",
+      "caption": "Клинико-гемодинамические особенности у пациентов пожилого возраста с артериальной гипертензией и COVID-19"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Babajanova Sh..pdf",
+      "caption": "Результаты ведения девочек препубертатного и пубертатного возрастов с образованиями яичников"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Babajanova Sh..pdf",
+      "caption": "Результаты ведения девочек препубертатного и пубертатного возрастов с образованиями яичников"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2024/Babajanova Sh..pdf",
+      "caption": "Результаты ведения девочек препубертатного и пубертатного возрастов с образованиями яичников"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Akilov F.A., Muxtarov.pdf",
+      "caption": "Оценка эффективности варикоцелэктомии у мужчин с первичным и вторичным бесплодием"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Akilov F.A., Muxtarov.pdf",
+      "caption": "Оценка эффективности варикоцелэктомии у мужчин с первичным и вторичным бесплодием"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Akilov F.A., Muxtarov.pdf",
+      "caption": "Оценка эффективности варикоцелэктомии у мужчин с первичным и вторичным бесплодием"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Allazov S.A..pdf",
+      "caption": "Одномоментное удаление пули из поясничных мышц и камня почки (симультанная операция)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Allazov S.A..pdf",
+      "caption": "Одномоментное удаление пули из поясничных мышц и камня почки (симультанная операция)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Allazov S.A..pdf",
+      "caption": "Одномоментное удаление пули из поясничных мышц и камня почки (симультанная операция)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ayubov B.A..pdf",
+      "caption": "Лапароскопическое лечение больных мочекаменной болезнью"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ayubov B.A..pdf",
+      "caption": "Лапароскопическое лечение больных мочекаменной болезнью"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ayubov B.A..pdf",
+      "caption": "Лапароскопическое лечение больных мочекаменной болезнью"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Boltayev M.I..pdf",
+      "caption": "Отдаленные результаты резекции мочевого пузыря с опухолью при мышечно-инвазивном и осложненных формах рака"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Boltayev M.I..pdf",
+      "caption": "Отдаленные результаты резекции мочевого пузыря с опухолью при мышечно-инвазивном и осложненных формах рака"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Boltayev M.I..pdf",
+      "caption": "Отдаленные результаты резекции мочевого пузыря с опухолью при мышечно-инвазивном и осложненных формах рака"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Giyasov Sh.I..pdf",
+      "caption": "Влияние легирования цинком на структурные свойства магниевых сплавов, предназначенных для изготовления стентов в урологии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Giyasov Sh.I..pdf",
+      "caption": "Влияние легирования цинком на структурные свойства магниевых сплавов, предназначенных для изготовления стентов в урологии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Giyasov Sh.I..pdf",
+      "caption": "Влияние легирования цинком на структурные свойства магниевых сплавов, предназначенных для изготовления стентов в урологии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Dadaboyev A.K..pdf",
+      "caption": "Мочекаменная болезнь"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Dadaboyev A.K..pdf",
+      "caption": "Мочекаменная болезнь"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Dadaboyev A.K..pdf",
+      "caption": "Мочекаменная болезнь"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Yegorov A.B..pdf",
+      "caption": "Рискогенные факторы возникновения инкрустирующего цистита и принципы к таргетной терапии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Yegorov A.B..pdf",
+      "caption": "Рискогенные факторы возникновения инкрустирующего цистита и принципы к таргетной терапии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Yegorov A.B..pdf",
+      "caption": "Рискогенные факторы возникновения инкрустирующего цистита и принципы к таргетной терапии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Zakirov X.K..pdf",
+      "caption": "Сравнительная оценка трансабдоминальной и трансректальной ультрасогорафии при определении объема простаты"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Zakirov X.K..pdf",
+      "caption": "Сравнительная оценка трансабдоминальной и трансректальной ультрасогорафии при определении объема простаты"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Zakirov X.K..pdf",
+      "caption": "Сравнительная оценка трансабдоминальной и трансректальной ультрасогорафии при определении объема простаты"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ermatov N.J..pdf",
+      "caption": "Metaphylaxis of calcium-oxalate urolithiasis"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ermatov N.J..pdf",
+      "caption": "Metaphylaxis of calcium-oxalate urolithiasis"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ermatov N.J..pdf",
+      "caption": "Metaphylaxis of calcium-oxalate urolithiasis"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Axunbayev.pdf",
+      "caption": "Динамики реактивной и личностной тревожности у медицинских работников в период первой и второй волны эпидемии COVID-19 в Кыргызстане"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Axunbayev.pdf",
+      "caption": "Динамики реактивной и личностной тревожности у медицинских работников в период первой и второй волны эпидемии COVID-19 в Кыргызстане"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/S.T.Axunbayev.pdf",
+      "caption": "Динамики реактивной и личностной тревожности у медицинских работников в период первой и второй волны эпидемии COVID-19 в Кыргызстане"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gafararov R.R..pdf",
+      "caption": "Systematization of postoperative complications of holmium laser enucleation of the prostate: A standardized approach"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gafararov R.R..pdf",
+      "caption": "Systematization of postoperative complications of holmium laser enucleation of the prostate: A standardized approach"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gafararov R.R..pdf",
+      "caption": "Systematization of postoperative complications of holmium laser enucleation of the prostate: A standardized approach"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gaybullayeva A..pdf",
+      "caption": "Age-related clinical and laboratory features of acute epididymitis: A retrospective analysis of 260 cases"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gaybullayeva A..pdf",
+      "caption": "Age-related clinical and laboratory features of acute epididymitis: A retrospective analysis of 260 cases"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Gaybullayeva A..pdf",
+      "caption": "Age-related clinical and laboratory features of acute epididymitis: A retrospective analysis of 260 cases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ismatov B.M..pdf",
+      "caption": "Эффективность экстренного вмешательства при переломе полового члена"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ismatov B.M..pdf",
+      "caption": "Эффективность экстренного вмешательства при переломе полового члена"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Ismatov B.M..pdf",
+      "caption": "Эффективность экстренного вмешательства при переломе полового члена"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/O.J.Uzakov.pdf",
+      "caption": "Генетические особенности Q гетерохроматиновых областей у людей, адаптирующихся к экстремальным климатическим условиям"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/O.J.Uzakov.pdf",
+      "caption": "Генетические особенности Q гетерохроматиновых областей у людей, адаптирующихся к экстремальным климатическим условиям"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM-1.2024/O.J.Uzakov.pdf",
+      "caption": "Генетические особенности Q гетерохроматиновых областей у людей, адаптирующихся к экстремальным климатическим условиям"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kadirov N.U..pdf",
+      "caption": "Современные взгляды на раннюю диагностику рака предстательной железы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kadirov N.U..pdf",
+      "caption": "Современные взгляды на раннюю диагностику рака предстательной железы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kadirov N.U..pdf",
+      "caption": "Современные взгляды на раннюю диагностику рака предстательной железы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kariyev S.S..pdf",
+      "caption": "The study of the diuretic activity of various forms of the drug from medicinal plants of the flora of Uzbekistan"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kariyev S.S..pdf",
+      "caption": "The study of the diuretic activity of various forms of the drug from medicinal plants of the flora of Uzbekistan"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kariyev S.S..pdf",
+      "caption": "The study of the diuretic activity of various forms of the drug from medicinal plants of the flora of Uzbekistan"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kayumov A.A..pdf",
+      "caption": "Показатели общего анализа крови как предикторы развития синдрома системного воспалительного ответа после пер"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kayumov A.A..pdf",
+      "caption": "Показатели общего анализа крови как предикторы развития синдрома системного воспалительного ответа после пер"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 4-2024/Kayumov A.A..pdf",
+      "caption": "Показатели общего анализа крови как предикторы развития синдрома системного воспалительного ответа после пер"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 468,
+    "caption": {
+     "uz": "Varikoselektomiyaning ikkilamchi bepusht erkaklarda samaradorligini baholash",
+     "ru": "Оценка эффективности варикоцелэктомии у мужчин с первичным и вторичным бесплодием",
+     "en": "Evaluation of varicocelectomy efficacy in primarily and secondarily infertile men"
+    },
+    "fp": {
+     "uz": "6d2af76201793a61fc6a8b3ade8ea0b2e48485b499be9a878593a7862eb643ed",
+     "ru": "6d2af76201793a61fc6a8b3ade8ea0b2e48485b499be9a878593a7862eb643ed",
+     "en": "6d2af76201793a61fc6a8b3ade8ea0b2e48485b499be9a878593a7862eb643ed"
+    }
+   }
+  ],
+  "notes": [
+   "added from the ru/en text (not in the Uzbek text): ['THE STUDY OF THE DIURETIC ACTIVITY OF VARIOUS FORM', 'ПОКАЗАТЕЛИ ОБЩЕГО АНАЛИЗА КРОВИ КАК ПРЕДИКТОРЫ РАЗ']"
+  ]
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 1,
+  "fp": {
+   "uz": "0e1dae8db171063edaa08d3e01478e253dcf9debbfb3d6012789241698b51b76",
+   "ru": "9187e9f487f7f70e69437adf9d24642f883238d80c1e2fad0c43a942acbd19ec",
+   "en": "472f5387e5492a58f2f6e7484b56ae3c166904071c8f3eb1a910e1083a586646"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axmadaliyeva  N.O..pdf",
+      "caption": "Нутритивная поддержка детей с врожденными пороками сердца при внебольничной пневмонии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axmadaliyeva  N.O..pdf",
+      "caption": "Нутритивная поддержка детей с врожденными пороками сердца при внебольничной пневмонии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axmadaliyeva  N.O..pdf",
+      "caption": "Нутритивная поддержка детей с врожденными пороками сердца при внебольничной пневмонии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axraeva . D.B..pdf",
+      "caption": "Наш опыт применения ингибиторов CDK4/6 в терапии метастатического рака молочной железы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axraeva . D.B..pdf",
+      "caption": "Наш опыт применения ингибиторов CDK4/6 в терапии метастатического рака молочной железы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Axraeva . D.B..pdf",
+      "caption": "Наш опыт применения ингибиторов CDK4/6 в терапии метастатического рака молочной железы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Qurbonov . J.B..pdf",
+      "caption": "Тромбоэмболия легочной артерии: клиника и прогностические факторы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Qurbonov . J.B..pdf",
+      "caption": "Тромбоэмболия легочной артерии: клиника и прогностические факторы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Qurbonov . J.B..pdf",
+      "caption": "Тромбоэмболия легочной артерии: клиника и прогностические факторы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Ten.D.O.pdf",
+      "caption": "Особенности изменения цитокинов и протеаз в составе ekccudatob ожоговых ран 2 и 3 степени в эксперименте у крыс"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Ten.D.O.pdf",
+      "caption": "Особенности изменения цитокинов и протеаз в составе ekccudatob ожоговых ран 2 и 3 степени в эксперименте у крыс"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Ten.D.O.pdf",
+      "caption": "Особенности изменения цитокинов и протеаз в составе ekccudatob ожоговых ран 2 и 3 степени в эксперименте у крыс"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonova.D.D..pdf",
+      "caption": "Антитела к NR2 пептиду как биомаркер ишемического инсульта"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonova.D.D..pdf",
+      "caption": "Антитела к NR2 пептиду как биомаркер ишемического инсульта"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonova.D.D..pdf",
+      "caption": "Антитела к NR2 пептиду как биомаркер ишемического инсульта"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xaydarov.A.K.pdf",
+      "caption": "Патоморфология ткани селезонки при остром вторичном перитоните"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xaydarov.A.K.pdf",
+      "caption": "Патоморфология ткани селезонки при остром вторичном перитоните"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xaydarov.A.K.pdf",
+      "caption": "Патоморфология ткани селезонки при остром вторичном перитоните"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xamraqulov.T. Z..pdf",
+      "caption": "Analysis of uterine adenomyosis in women during the premenopausal and postmenopausal stages (based on the example of the Fergana region)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xamraqulov.T. Z..pdf",
+      "caption": "Analysis of uterine adenomyosis in women during the premenopausal and postmenopausal stages (based on the example of the Fergana region)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Xamraqulov.T. Z..pdf",
+      "caption": "Analysis of uterine adenomyosis in women during the premenopausal and postmenopausal stages (based on the example of the Fergana region)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mamadaliyev . X. U..pdf",
+      "caption": "К вопросу изучения обзора литератур по эпидимиологии антифосфолипидного синдрома"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mamadaliyev . X. U..pdf",
+      "caption": "К вопросу изучения обзора литератур по эпидимиологии антифосфолипидного синдрома"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mamadaliyev . X. U..pdf",
+      "caption": "К вопросу изучения обзора литератур по эпидимиологии антифосфолипидного синдрома"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sadikov A.I.pdf",
+      "caption": "Биосинтезированные наночастицы оксида цинка для лечения дерматитов:патогенез, морфология, микробиология и перспективы применения"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sadikov A.I.pdf",
+      "caption": "Биосинтезированные наночастицы оксида цинка для лечения дерматитов:патогенез, морфология, микробиология и перспективы применения"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sadikov A.I.pdf",
+      "caption": "Биосинтезированные наночастицы оксида цинка для лечения дерматитов:патогенез, морфология, микробиология и перспективы применения"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sidikov A.A..pdf",
+      "caption": "PATOGEHETIChECKIE, ELEKTPOHHO-MIKPOCKOPIChECKIE,MIKPOBIOLOGIChECKIE I PATOMOPFOPLOGIChECKIE acpekti HAHOChACTITsI okcida TsIHKA для LEChEHIYa depmatitob"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sidikov A.A..pdf",
+      "caption": "PATOGEHETIChECKIE, ELEKTPOHHO-MIKPOCKOPIChECKIE,MIKPOBIOLOGIChECKIE I PATOMOPFOPLOGIChECKIE acpekti HAHOChACTITsI okcida TsIHKA для LEChEHIYa depmatitob"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Sidikov A.A..pdf",
+      "caption": "PATOGEHETIChECKIE, ELEKTPOHHO-MIKPOCKOPIChECKIE,MIKPOBIOLOGIChECKIE I PATOMOPFOPLOGIChECKIE acpekti HAHOChACTITsI okcida TsIHKA для LEChEHIYa depmatitob"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Akhmadaliyev R. U..pdf",
+      "caption": "Information and educational technologies in improving the quality of training for medical university students"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Akhmadaliyev R. U..pdf",
+      "caption": "Information and educational technologies in improving the quality of training for medical university students"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Akhmadaliyev R. U..pdf",
+      "caption": "Information and educational technologies in improving the quality of training for medical university students"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mirqurbonova . T . X.pdf",
+      "caption": "Эффективность существующих методов лечения иммунологического бесплодия"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mirqurbonova . T . X.pdf",
+      "caption": "Эффективность существующих методов лечения иммунологического бесплодия"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Mirqurbonova . T . X.pdf",
+      "caption": "Эффективность существующих методов лечения иммунологического бесплодия"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abdulxafizov A.pdf",
+      "caption": "Мрт-характеристика структурных изменений головного мозга у пациентов с мигренозным инсультом"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abdulxafizov A.pdf",
+      "caption": "Мрт-характеристика структурных изменений головного мозга у пациентов с мигренозным инсультом"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abdulxafizov A.pdf",
+      "caption": "Мрт-характеристика структурных изменений головного мозга у пациентов с мигренозным инсультом"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Raxmatova . F . U ..pdf",
+      "caption": "Профилактика остеопороза у женщин в менопаузе с ревматическими заболеваниями"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Raxmatova . F . U ..pdf",
+      "caption": "Профилактика остеопороза у женщин в менопаузе с ревматическими заболеваниями"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Raxmatova . F . U ..pdf",
+      "caption": "Профилактика остеопороза у женщин в менопаузе с ревматическими заболеваниями"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Y.L.Iskra.pdf",
+      "caption": "Иммуногистохимические особенности приобретённых дермальных макулярных гиперпигментаций"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Y.L.Iskra.pdf",
+      "caption": "Иммуногистохимические особенности приобретённых дермальных макулярных гиперпигментаций"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Y.L.Iskra.pdf",
+      "caption": "Иммуногистохимические особенности приобретённых дермальных макулярных гиперпигментаций"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Samigova . N . R ..pdf",
+      "caption": "Изучение технологического процесса и выявление вредных факторов цеха по производству эмали"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Samigova . N . R ..pdf",
+      "caption": "Изучение технологического процесса и выявление вредных факторов цеха по производству эмали"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Samigova . N . R ..pdf",
+      "caption": "Изучение технологического процесса и выявление вредных факторов цеха по производству эмали"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Suyarkulova M.pdf",
+      "caption": "Вспомогательные репродуктивные технологии в Ферганской области и влияние их на перинатальные исходы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Suyarkulova M.pdf",
+      "caption": "Вспомогательные репродуктивные технологии в Ферганской области и влияние их на перинатальные исходы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Suyarkulova M.pdf",
+      "caption": "Вспомогательные репродуктивные технологии в Ферганской области и влияние их на перинатальные исходы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X-1.pdf",
+      "caption": "Комплексная модель прогнозирования исхода инсульта: интеграция клинико-неврологических, биохимических и нейровизуализационных параметров"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X-1.pdf",
+      "caption": "Комплексная модель прогнозирования исхода инсульта: интеграция клинико-неврологических, биохимических и нейровизуализационных параметров"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X-1.pdf",
+      "caption": "Комплексная модель прогнозирования исхода инсульта: интеграция клинико-неврологических, биохимических и нейровизуализационных параметров"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X.pdf",
+      "caption": "Динамика показателей диффузионно-взвешенной МРТ при различных подтипах ишемического инсульта"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X.pdf",
+      "caption": "Динамика показателей диффузионно-взвешенной МРТ при различных подтипах ишемического инсульта"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Abduolimov M.X.pdf",
+      "caption": "Динамика показателей диффузионно-взвешенной МРТ при различных подтипах ишемического инсульта"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Muradimova A.R.pdf",
+      "caption": "Ультразвуковые особенности церебральной гемодинамики при мигренозном инсульте и мигрени с аурой"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Muradimova A.R.pdf",
+      "caption": "Ультразвуковые особенности церебральной гемодинамики при мигренозном инсульте и мигрени с аурой"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Muradimova A.R.pdf",
+      "caption": "Ультразвуковые особенности церебральной гемодинамики при мигренозном инсульте и мигрени с аурой"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2025/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2025/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 3-2025/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonov U..pdf",
+      "caption": "Вопросы организации хирургической помощи на передовых этапах медицинской эвакуации при неогнестрельных ранениях мягких тканей у военнослужащих"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonov U..pdf",
+      "caption": "Вопросы организации хирургической помощи на передовых этапах медицинской эвакуации при неогнестрельных ранениях мягких тканей у военнослужащих"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Usmonov U..pdf",
+      "caption": "Вопросы организации хирургической помощи на передовых этапах медицинской эвакуации при неогнестрельных ранениях мягких тканей у военнослужащих"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Исследование антиоксидантных свойств лекарственных растений южной Ферганы"
+     },
+     "ru": {
+      "text": "Исследование антиоксидантных свойств лекарственных растений южной Ферганы"
+     },
+     "en": {
+      "text": "Исследование антиоксидантных свойств лекарственных растений южной Ферганы"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     },
+     "ru": {
+      "text": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     },
+     "en": {
+      "text": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Features of the clinical course of periodic disease in children"
+     },
+     "ru": {
+      "text": "Features of the clinical course of periodic disease in children"
+     },
+     "en": {
+      "text": "Features of the clinical course of periodic disease in children"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     },
+     "ru": {
+      "text": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     },
+     "en": {
+      "text": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Gofurov J..pdf",
+      "caption": "Principles of rehabilitation and the role of dosed physical activity in children with bronchial asthma"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Gofurov J..pdf",
+      "caption": "Principles of rehabilitation and the role of dosed physical activity in children with bronchial asthma"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Gofurov J..pdf",
+      "caption": "Principles of rehabilitation and the role of dosed physical activity in children with bronchial asthma"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Ismoilova M.pdf",
+      "caption": "Оксидативный стресс в патогенезе язвенной болезни желудка"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Ismoilova M.pdf",
+      "caption": "Оксидативный стресс в патогенезе язвенной болезни желудка"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Ismoilova M.pdf",
+      "caption": "Оксидативный стресс в патогенезе язвенной болезни желудка"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yuldashev F.pdf",
+      "caption": "Целесообразность операции варикоцеле у детей: факты и рекомендации врача"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yuldashev F.pdf",
+      "caption": "Целесообразность операции варикоцеле у детей: факты и рекомендации врача"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yuldashev F.pdf",
+      "caption": "Целесообразность операции варикоцеле у детей: факты и рекомендации врача"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Digital health communication: dissemination and reliability of health information on social media"
+     },
+     "ru": {
+      "text": "Digital health communication: dissemination and reliability of health information on social media"
+     },
+     "en": {
+      "text": "Digital health communication: dissemination and reliability of health information on social media"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Oltinboyeva Z.A..pdf",
+      "caption": "Изучение факторов риска развития заболеваний щитовидной железы у женщин с метаболическим синдромом"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Oltinboyeva Z.A..pdf",
+      "caption": "Изучение факторов риска развития заболеваний щитовидной железы у женщин с метаболическим синдромом"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Oltinboyeva Z.A..pdf",
+      "caption": "Изучение факторов риска развития заболеваний щитовидной железы у женщин с метаболическим синдромом"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     },
+     "ru": {
+      "text": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     },
+     "en": {
+      "text": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Tadjiyev B.M. (2).pdf",
+      "caption": "A modern approach to the determination of molecular markers in local isolates of acute intestinal infections"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Tadjiyev B.M. (2).pdf",
+      "caption": "A modern approach to the determination of molecular markers in local isolates of acute intestinal infections"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/JCPM 1-2025/Tadjiyev B.M. (2).pdf",
+      "caption": "A modern approach to the determination of molecular markers in local isolates of acute intestinal infections"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Gadaev A.pdf",
+      "caption": "Mechanisms of development of cachecia I N chronic heart failure"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Gadaev A.pdf",
+      "caption": "Mechanisms of development of cachecia I N chronic heart failure"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Gadaev A.pdf",
+      "caption": "Mechanisms of development of cachecia I N chronic heart failure"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Yoldoshev Yo..pdf",
+      "caption": "Microscopic changes in the brain of children WHO died of cerebral palsy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Kattaxanova R..pdf",
+      "caption": "Современные методы диагностики и лечения хеликобактерной инфекции"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Rasulov F..pdf",
+      "caption": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/F.X.Rasulov.pdf",
+      "caption": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Tillayeva  Z.pdf",
+      "caption": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Turdimatov D.S..pdf",
+      "caption": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Turdimatov D.S..pdf",
+      "caption": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Turdimatov D.S..pdf",
+      "caption": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axmedov Sh.pdf",
+      "caption": "Особенности хирургической коррекции рецидивных блефароптозов"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Valitov E..pdf",
+      "caption": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Mamasaidov J.pdf",
+      "caption": "Ultrastructural changes in different forms of infantile cerebral palsy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные тенденции совершенствования организации хирургической помощи при минно-взрывных ранениях в системе медицинского обеспечения войск"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные тенденции совершенствования организации хирургической помощи при минно-взрывных ранениях в системе медицинского обеспечения войск"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Nazirov F.G., Babadjanov А.Х. Rasulov U.A..pdf",
+      "caption": "Современные тенденции совершенствования организации хирургической помощи при минно-взрывных ранениях в системе медицинского обеспечения войск"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Shermatov R.pdf",
+      "caption": "Features of the clinical course of periodic disease in children."
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Shermatov R.pdf",
+      "caption": "Features of the clinical course of periodic disease in children."
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Shermatov R.pdf",
+      "caption": "Features of the clinical course of periodic disease in children."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axunbayev O.pdf",
+      "caption": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axunbayev O.pdf",
+      "caption": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/Axunbayev O.pdf",
+      "caption": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.2/E.Axmedova..pdf",
+      "caption": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Ismoilov U.pdf",
+      "caption": "Определение морфологических и морфометрических изменений в миокарде и проводящих путях при остром коронарном синдроме"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Ismoilov U.pdf",
+      "caption": "Определение морфологических и морфометрических изменений в миокарде и проводящих путях при остром коронарном синдроме"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Ismoilov U.pdf",
+      "caption": "Определение морфологических и морфометрических изменений в миокарде и проводящих путях при остром коронарном синдроме"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Alimova I.A..pdf",
+      "caption": "Основы профилактики инвалидности у детей раннего возраста и развитие службы раннего вмешательства в амбулаторных условиях"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Alimova I.A..pdf",
+      "caption": "Основы профилактики инвалидности у детей раннего возраста и развитие службы раннего вмешательства в амбулаторных условиях"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Alimova I.A..pdf",
+      "caption": "Основы профилактики инвалидности у детей раннего возраста и развитие службы раннего вмешательства в амбулаторных условиях"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Yuldasheva M..pdf",
+      "caption": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Saidazizova S h.X,.pdf",
+      "caption": "Palliative care in pediatric subacute sclerosing panencephalitis (SSPE)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Saidazizova S h.X,.pdf",
+      "caption": "Palliative care in pediatric subacute sclerosing panencephalitis (SSPE)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Saidazizova S h.X,.pdf",
+      "caption": "Palliative care in pediatric subacute sclerosing panencephalitis (SSPE)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Shalankova O..pdf",
+      "caption": "Повышение точности прогнозирования преэклампсии у беременных с ожирением и избыточной массой тела на основе адипокин-зависимых биомаркеров"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Shalankova O..pdf",
+      "caption": "Повышение точности прогнозирования преэклампсии у беременных с ожирением и избыточной массой тела на основе адипокин-зависимых биомаркеров"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Shalankova O..pdf",
+      "caption": "Повышение точности прогнозирования преэклампсии у беременных с ожирением и избыточной массой тела на основе адипокин-зависимых биомаркеров"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Babadjanova G..pdf",
+      "caption": "Ожирение как фактор риска преэклампсии у беременных женщин"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Babadjanova G..pdf",
+      "caption": "Ожирение как фактор риска преэклампсии у беременных женщин"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Babadjanova G..pdf",
+      "caption": "Ожирение как фактор риска преэклампсии у беременных женщин"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Axmedova M.M..pdf",
+      "caption": "Clinical and laboratory features and etiology of bronchial asthma with allergic rhinosinusitis in children"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Axmedova M.M..pdf",
+      "caption": "Clinical and laboratory features and etiology of bronchial asthma with allergic rhinosinusitis in children"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Axmedova M.M..pdf",
+      "caption": "Clinical and laboratory features and etiology of bronchial asthma with allergic rhinosinusitis in children"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.pdf",
+      "caption": "Modern algorithms for the diagnosis and management of thromboembolism in intensive care"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.pdf",
+      "caption": "Modern algorithms for the diagnosis and management of thromboembolism in intensive care"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.pdf",
+      "caption": "Modern algorithms for the diagnosis and management of thromboembolism in intensive care"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.B..pdf",
+      "caption": "Pulmonary artery thromboembolism: clinical case-based analysis of clinical and pathophysiological features"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.B..pdf",
+      "caption": "Pulmonary artery thromboembolism: clinical case-based analysis of clinical and pathophysiological features"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Klinik va profilaktik tibbiyot jurnali/2025.3/Kurbanov J.B..pdf",
+      "caption": "Pulmonary artery thromboembolism: clinical case-based analysis of clinical and pathophysiological features"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "added from the ru/en text (not in the Uzbek text): ['СОВРЕМЕННЫЕ МЕТОДЫ ПРОФИЛАКТИКИ ГНОЙНЫХ ОСЛОЖНЕНИЙ']"
+  ]
+ }
+]
