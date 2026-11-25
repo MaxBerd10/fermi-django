@@ -1,0 +1,575 @@
+[
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 1,
+  "fp": {
+   "uz": "a86b10bb50ae786b7dcde75d956b0dbde38ce762bf890b3303040d880f3103ec",
+   "ru": "00760ab473a1ae591c4b25f2eaff3e2584296320e3caa4bca618c2194e45cbc1",
+   "en": "bdba360a35e41c304f124f12a0c2362597f1205ca27d5d740615769f01907e39"
+  },
+  "blocks": [
+   {
+    "block_type": "raw_html",
+    "data": {
+     "uz": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "ru": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "en": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/СБОРНИК_ДОСТИЖЕНИЕ_-1.pdf",
+      "caption": "Дос a тижения современной медицины в изучении Эпидемиологии инфекционных болезней"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/СБОРНИК_ДОСТИЖЕНИЕ_-1.pdf",
+      "caption": "Дос a тижения современной медицины в изучении Эпидемиологии инфекционных болезней"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/СБОРНИК_ДОСТИЖЕНИЕ_-1.pdf",
+      "caption": "Current issues in the diagnosis and treatment of coronavirus infection"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Cборник тезисов-2022.pdf",
+      "caption": "Koronavirus infeksiyasini tashxislash va davolashning dolzarb muammolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Cборник тезисов-2022.pdf",
+      "caption": "Актувльные проблемы диангостики и лечения коронавирусной инфекции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Cборник тезисов-2022.pdf",
+      "caption": "Koronavirus infeksiyasini tashxislash va davolashning dolzarb muammolari"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК Дермо-2022.pdf",
+      "caption": "Dermatoveneralogiya va dermato-onkologiyada diagnostika va davolashda yangi texnologiyalarni rivojlantirish istiqbollari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК Дермо-2022.pdf",
+      "caption": "Перспективы развития новых технологии в диагностике и лечении в дерматовенерологии и дерматоонкопатологии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК Дермо-2022.pdf",
+      "caption": "Prospects for the development of new technologies in diagnostics and treatment in dermatoveneralogy and dermato-oncopathology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/FIZIOLOGIYA VA PATOLOGIYADA YANGI TADQIQOT UFQLARI_ ZAMONAVIY YONDASHUVLAR VA ISTIQBOLLAR» _ILMIY-AMALIY KONFERENSIYA_.pdf",
+      "caption": "Fiziologiyada va patologiyada yangi tadqiqot ufqlari: zamonaviy yondashuvlar va istiqbollar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/FIZIOLOGIYA VA PATOLOGIYADA YANGI TADQIQOT UFQLARI_ ZAMONAVIY YONDASHUVLAR VA ISTIQBOLLAR» _ILMIY-AMALIY KONFERENSIYA_.pdf",
+      "caption": "Fiziologiyada va patologiyada yangi tadqiqot ufqlari: zamonaviy yondashuvlar va istiqbollar"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/FIZIOLOGIYA VA PATOLOGIYADA YANGI TADQIQOT UFQLARI_ ZAMONAVIY YONDASHUVLAR VA ISTIQBOLLAR» _ILMIY-AMALIY KONFERENSIYA_.pdf",
+      "caption": "Fiziologiyada va patologiyada yangi tadqiqot ufqlari: zamonaviy yondashuvlar va istiqbollar"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tibbiyot va taʻlim sifatini oshirishda innovatsiyalarning roli"
+     },
+     "ru": {
+      "text": "Роль инноваций в повышении качества медицины и образования"
+     },
+     "en": {
+      "text": "The role innovation in improving the quality of medicine education"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник 2021 вариант 1.80.pdf",
+      "caption": "Innovatsion yondashuvlar va dolzarb muammolar......"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник 2021 вариант 1.80.pdf",
+      "caption": "Инновационный подходы и актуальные проблемы......"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник 2021 вариант 1.80.pdf",
+      "caption": "Innovative approaches and current issues......"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/сборник_конференции_для_печати_2022_Актуальные_вопросы.pdf",
+      "caption": "Koronavirus infeksiyasi: diagnostika davolash va oldini olish"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/сборник_конференции_для_печати_2022_Актуальные_вопросы.pdf",
+      "caption": "Коронавирусная инфекция: Диагностика, лечение и профилактика"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/сборник_конференции_для_печати_2022_Актуальные_вопросы.pdf",
+      "caption": "Coronavirus infection: Diagnosis, treatment and prevention"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/10-mart_TAT-tuplami.pdf",
+      "caption": "Tibbiyotda axborot texnologiyalari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/10-mart_TAT-tuplami.pdf",
+      "caption": "Информационные технологии в медицине"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/10-mart_TAT-tuplami.pdf",
+      "caption": "Information technology in medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник_Конференция_Фергана_29_марта.pdf",
+      "caption": "Atrof-muhit gigiyenasi va jamoat salomatligi, implantatsiya qilinadigan biomateriallar va ularning yechimlari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник_Конференция_Фергана_29_марта.pdf",
+      "caption": "Гигиена окружающей среды и охрана здоровья населения, имплантируемые биоматериалы, проблемы и их решения"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник_Конференция_Фергана_29_марта.pdf",
+      "caption": "Environmental hygiene and public health, implantable biomaterials, problems and their solutions"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Актуальные проблемы.pdf",
+      "caption": "Ichki kasalliklarni tashxislashda va davolashning dolzarb muammolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Актуальные проблемы.pdf",
+      "caption": "Актуальные проблемы диагностики и лечения внутренних болезней"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Актуальные проблемы.pdf",
+      "caption": "Current issues in the diagnossis and treatment of internal diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam-2023..pdf",
+      "caption": "Ginekologiyaning dolzarb muammolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam-2023..pdf",
+      "caption": "Актуальные проблемы гинекологии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam-2023..pdf",
+      "caption": "Current issues in gynecology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК new 06.05.2023.pdf",
+      "caption": "Dermatoveneralogiya va dermato-onkopatologiyadagi diagnostika va davbolashda yangi texnologiyalarni rivojlantirish istiqbollari III xalqaro ilmiy-amaliy konferensiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК new 06.05.2023.pdf",
+      "caption": "III-я Международная научно-практическая конференция «Пепспективы развития новых технологий в диагностике и лечении в дерматовенерологии и дермато-онкопатологии»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/СБОРНИК new 06.05.2023.pdf",
+      "caption": "III International scientific and practical conference Prospects for the development of new technologies in diagnostics and treatment in dermatoveneralogy and dermato-oncopathology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "Pulmonologiyaning dolzarb muammolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "Актуальные проблемы пульмонологии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "Current issies in pulmonology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/Xalq tabobati 06.12.2023.pdf",
+      "caption": "Ikkilamchi immuntanqisliklarini dorivor oʻsimliklar bilan muvofiqlashtirishning dolzarb muammolari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/Xalq tabobati 06.12.2023.pdf",
+      "caption": "Актуальные вопросы лечения вторичных иммунодефитцитов с помощью лекарственных растений"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/Xalq tabobati 06.12.2023.pdf",
+      "caption": "Current issues in the treatment of secondary immunodeficiencies with medicinal plants"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Сборник_конференции_Фергана_май_2024.pdf",
+      "caption": "Dermatoveneralogiya va dermato-onkopatologiyadagi diagnostika va davolashda yangi texnologiyalarning rivojlanishi"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Сборник_конференции_Фергана_май_2024.pdf",
+      "caption": "Разработка новых технологий в диагностике и лечении в дерматоверенологии и дерматоонкопатологии"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Сборник_конференции_Фергана_май_2024.pdf",
+      "caption": "Development of new technologies in diagnostics and treatment in dermatovenerology and dermato-oncopathology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Ichki kasalliklar diagnostikasi .pdf",
+      "caption": "Ichki kasallikalr diagnostikasi va davolashning dolzarb muammolari - 2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Ichki kasalliklar diagnostikasi .pdf",
+      "caption": "Актуальные проблемы диагностики и лечения внутренных болезней - 2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Ichki kasalliklar diagnostikasi .pdf",
+      "caption": "Current problems of diagnostics and treatment on internal diseses - 2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam_2024.pdf",
+      "caption": "XXI-ars inson salomatligi: dolzarb masalalar, muammolar va innovatsiyalar - II xalqaro talabalar ilniy konferensiyasi - 2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam_2024.pdf",
+      "caption": "II-Международной студентической научнойной конференции Здоровье человека 21 века: Актуальной вопрочы, проплемы и инновации -2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/To‘plam_2024.pdf",
+      "caption": "II-nd International student scientific Conference Human health of the 21st Century: Current issies, problems anf innovation - 2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/III XALQARO ILMIY-AMALIY KONFRENSIYASI “AYOLLAR REPRODUKTIV SALOMATLIGI MUAMMOLARI, YECHIMLARI VA PROFILAKTIKASI”.pdf",
+      "caption": "III Xalqaro ilmiy-amaliy konfrensiyasi “ayollar reproduktiv salomatligi: muammolari, yechimlari va profilaktikasi”"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/III XALQARO ILMIY-AMALIY KONFRENSIYASI “AYOLLAR REPRODUKTIV SALOMATLIGI MUAMMOLARI, YECHIMLARI VA PROFILAKTIKASI”.pdf",
+      "caption": "III Международная научно- практическаяконференция «репродуктивное здоровье женщин: проблемы, пути решения и профилактика»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/III XALQARO ILMIY-AMALIY KONFRENSIYASI “AYOLLAR REPRODUKTIV SALOMATLIGI MUAMMOLARI, YECHIMLARI VA PROFILAKTIKASI”.pdf",
+      "caption": "III International Scientific and Practical Conference \"women's reproductive health: challenges, solutions and prevention\""
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Konferensiya toplami.pdf",
+      "caption": "Klinik-morfologik va fiziologik tadqiqotlar: Xirurgiyada innovatsion yechimlar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Konferensiya toplami.pdf",
+      "caption": "Klinik-morfologik va fiziologik tadqiqotlar: Xirurgiyada innovatsion yechimlar"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Konferensiya toplami.pdf",
+      "caption": "Klinik-morfologik va fiziologik tadqiqotlar: Xirurgiyada innovatsion yechimlar"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 1,
+  "fp": {
+   "uz": "14d27a19661e00ade2bfbfd4d2ae4074f631b4ff00ad90e4ed1be9e75a095076",
+   "ru": "99b5059037b5882880dfa273f5288c01076418fcfc3fbba9e38974a9550ea434",
+   "en": "99b5059037b5882880dfa273f5288c01076418fcfc3fbba9e38974a9550ea434"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "PULMONOLOGIYANING DOLZARB MUAMMOLARI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "PULMONOLOGIYANING DOLZARB MUAMMOLARI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Хаlqaro konferensiyalar/PULMONOLOGIYA.pdf",
+      "caption": "PULMONOLOGIYANING DOLZARB MUAMMOLARI"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/SBORNIK -2024.26.10.pdf",
+      "caption": "EPIDEMIOLOGIYA ASOSIDAGI PROFILAKTIK TIBBIYOT-2024"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/SBORNIK -2024.26.10.pdf",
+      "caption": "EPIDEMIOLOGIYA ASOSIDAGI PROFILAKTIK TIBBIYOT-2024"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/SBORNIK -2024.26.10.pdf",
+      "caption": "EPIDEMIOLOGIYA ASOSIDAGI PROFILAKTIK TIBBIYOT-2024"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник Психиатрия.pdf",
+      "caption": "ПСИХИАТРИЯ И ПСИХОСОМАТИКА В XXI ВЕКЕ"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник Психиатрия.pdf",
+      "caption": "ПСИХИАТРИЯ И ПСИХОСОМАТИКА В XXI ВЕКЕ"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник Психиатрия.pdf",
+      "caption": "ПСИХИАТРИЯ И ПСИХОСОМАТИКА В XXI ВЕКЕ"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Anatomiya va jarrohlikda fanlararo yondashuvlar.pdf",
+      "caption": "ANATOMIYA VA JARROHLIKDA FANLARARO YONDASHUVLAR: FUNDAMENTAL TADQIQOTLARDAN KLINIK AMALIYOTGACHA"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Anatomiya va jarrohlikda fanlararo yondashuvlar.pdf",
+      "caption": "ANATOMIYA VA JARROHLIKDA FANLARARO YONDASHUVLAR: FUNDAMENTAL TADQIQOTLARDAN KLINIK AMALIYOTGACHA"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Anatomiya va jarrohlikda fanlararo yondashuvlar.pdf",
+      "caption": "ANATOMIYA VA JARROHLIKDA FANLARARO YONDASHUVLAR: FUNDAMENTAL TADQIQOTLARDAN KLINIK AMALIYOTGACHA"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/YUQORI TEXNOLOGIYALI JARROHLIK\nAMALIYOTINING AHAMIYATI.pdf",
+      "caption": "YUQORI TEXNOLOGIYALI JARROHLIK AMALIYOTINING AHAMIYATI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/YUQORI TEXNOLOGIYALI JARROHLIK\nAMALIYOTINING AHAMIYATI.pdf",
+      "caption": "YUQORI TEXNOLOGIYALI JARROHLIK AMALIYOTINING AHAMIYATI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/YUQORI TEXNOLOGIYALI JARROHLIK\nAMALIYOTINING AHAMIYATI.pdf",
+      "caption": "YUQORI TEXNOLOGIYALI JARROHLIK AMALIYOTINING AHAMIYATI"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Sbornik-2025.05.12.pdf",
+      "caption": "JAMOAT SALOMATLIGINI MUXOFAZA QILISHDA ATROF-MUHIT VA SOGʻLOM OVQATLANISHNING AHAMIYATI"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Sbornik-2025.05.12.pdf",
+      "caption": "JAMOAT SALOMATLIGINI MUXOFAZA QILISHDA ATROF-MUHIT VA SOG‘LOM OVQATLANISHNING AHAMIYATI"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Konferensiya taqsimoti/Respublika/Sbornik-2025.05.12.pdf",
+      "caption": "JAMOAT SALOMATLIGINI MUXOFAZA QILISHDA ATROF-MUHIT VA SOG‘LOM OVQATLANISHNING AHAMIYATI"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "ЗДОРОВЬЕ ЧЕЛОВЕКА 21 ВЕКА: АКТУАЛЬНЫЕ ВОПРОСЫ, ПРОБЛЕМЫ И ИННОВАЦИИ"
+     },
+     "ru": {
+      "text": "ЗДОРОВЬЕ ЧЕЛОВЕКА 21 ВЕКА: АКТУАЛЬНЫЕ ВОПРОСЫ, ПРОБЛЕМЫ И ИННОВАЦИИ"
+     },
+     "en": {
+      "text": "ЗДОРОВЬЕ ЧЕЛОВЕКА 21 ВЕКА: АКТУАЛЬНЫЕ ВОПРОСЫ, ПРОБЛЕМЫ И ИННОВАЦИИ"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник тезис неврология .pdf",
+      "caption": "МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В НЕВРОЛОГИИ И ПСИХИАТРИИ: НАУКА И ПРАКТИКА"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник тезис неврология .pdf",
+      "caption": "МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В НЕВРОЛОГИИ И ПСИХИАТРИИ: НАУКА И ПРАКТИКА"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Сборник тезис неврология .pdf",
+      "caption": "МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В НЕВРОЛОГИИ И ПСИХИАТРИИ: НАУКА И ПРАКТИКА"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/программа 05.06.2024 (психиатрия).pdf",
+      "caption": "Программа конференции"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/программа 05.06.2024 (психиатрия).pdf",
+      "caption": "Программа конференции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/программа 05.06.2024 (психиатрия).pdf",
+      "caption": "Программа конференции"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Программа Неврология 05.06.2025.pdf",
+      "caption": "Программа конференции"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Программа Неврология 05.06.2025.pdf",
+      "caption": "Программа конференции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy konferensiyalar/Программа Неврология 05.06.2025.pdf",
+      "caption": "Программа конференции"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "tillar-konferensiyasi-materiallari-15102025",
+  "order": 1,
+  "fp": {
+   "uz": "8d831eee37fb010bb7c97577e9df6f4ad26c3cd1a140f24057d6ecd1c4221b16",
+   "ru": "08f9523c078be064161a45067631785eca3fe4e5352166f5e5a7ed654da6fc50",
+   "en": "e22db0788d7414896f081776aec2a97d539ad322c0264136de7c641eeaddf7bd"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "15.10.2025-yilda oʻtkazilgan «Tibbiy taʻlimda raqamli texnologiyalar asosida zamonaviy yondashuvlarning muammolari va yechimlari» mavzusidagi respublika ilmiy-amaliy anjumani materiallari. Toʻliq toʻplamni quyidagi kartadan oching yoki yuklab oling."
+     },
+     "ru": {
+      "text": "Материалы республиканской научно-практической конференции «Проблемы и решения современных подходов на основе цифровых технологий в медицинском образовании», состоявшейся 15.10.2025. Откройте полный сборник в карточке ниже или скачайте его."
+     },
+     "en": {
+      "text": "Proceedings of the national scientific-practical conference “Problems and solutions of modern approaches based on digital technologies in medical education”, held on 15.10.2025. Open the full collection in the card below or download it."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "konferensiya-toplami-11122023",
+  "order": 1,
+  "fp": {
+   "uz": "ac85a1d7b289b32a7b66fb7d2ce681277609e77af183c1f92ef5c033d2f9b4bf",
+   "ru": "c647599469e08a60085936325e7b54940b13e232c21c715e742ad36cbb09c853",
+   "en": "f568447f61c28356e9ecf7f44964c61e3e89285c14e199ec036bbf29ee3d9c4a"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "11.12.2023-yilda oʻtkazilgan «Innovatsion texnologiyalarni takomillashtirish va ularni tibbiy taʻlimga joriy etish» mavzusidagi xalqaro ilmiy-amaliy onlayn konferensiya toʻplami. Toʻliq toʻplamni quyidagi kartadan oching yoki yuklab oling."
+     },
+     "ru": {
+      "text": "Сборник международной научно-практической онлайн конференции «Совершенствование инновационных технологий и внедрение их в медицинское образование», состоявшейся 11.12.2023. Откройте полный сборник в карточке ниже или скачайте его."
+     },
+     "en": {
+      "text": "Proceedings of the international scientific-practical online conference “Improving innovative technologies and introducing them into medical education”, held on 11.12.2023. Open the full collection in the card below or download it."
+     }
+    }
+   }
+  ]
+ }
+]
