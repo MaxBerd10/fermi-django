@@ -136,6 +136,7 @@ def ichki():
         rows[at:at + 1] = [("paragraph", {"text": head}, None), ("paragraph", {"text": "2. " + tail}, None)]
         concept = next(i for i, (kind, payload, _) in enumerate(rows) if kind == "paragraph" and payload["text"].startswith("1."))
         rows.insert(concept + 1, ("paragraph", {"text": PROFESSOR[lang]}, None))
+    units["en"][1][1]["text"] = units["en"][1][1]["text"].replace("ThThese ", "These ", 1)  # a typo of the old English text ("ThThese Model Internal Labor Regulations")
     return hb.build_from_units(units)
 
 
