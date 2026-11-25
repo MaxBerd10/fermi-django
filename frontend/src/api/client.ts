@@ -150,6 +150,10 @@ export function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
         out.data = { ...out.data, quote: source.quote ?? attributedQuote.test(source.text) };
       }
     }
+    if (obj.block_type === "heading") {
+      const source = (obj.data as { uz?: { panel?: boolean } } | undefined)?.uz;
+      if (out.data && typeof out.data === "object") out.data = { ...out.data, panel: source?.panel === true };
+    }
     if (obj.block_type === "list") {
       const source = (obj.data as { uz?: { items?: unknown } } | undefined)?.uz;
       if (Array.isArray(source?.items) && source.items.every((item) => typeof item === "string") && out.data && typeof out.data === "object") {

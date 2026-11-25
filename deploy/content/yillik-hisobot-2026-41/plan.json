@@ -104,15 +104,18 @@
     "data": {
      "uz": {
       "text": "Kelajak haqidagi tasavvur",
-      "level": 2
+      "level": 2,
+      "panel": true
      },
      "ru": {
       "text": "Видение будущего",
-      "level": 2
+      "level": 2,
+      "panel": true
      },
      "en": {
       "text": "Vision of the future",
-      "level": 2
+      "level": 2,
+      "panel": true
      }
     }
    },

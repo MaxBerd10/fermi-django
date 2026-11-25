@@ -13,7 +13,7 @@ export type Section =
   | { kind: "person"; heading: ContentBlock; picture: Picture; text: ContentBlock[]; card: boolean }
   | { kind: "story"; heading: ContentBlock; picture: Picture; lead: ContentBlock; body: ContentBlock[] }
   | { kind: "step"; heading: ContentBlock; number: string; text: ContentBlock[] }
-  | { kind: "section"; blocks: ContentBlock[]; pictures: Picture[]; side: boolean; lead: boolean }
+  | { kind: "section"; blocks: ContentBlock[]; pictures: Picture[]; side: boolean; lead: boolean; panel: boolean }
   | { kind: "footer"; source: ContentBlock; slogan: ContentBlock; contact: ContentBlock }
   | { kind: "dated"; entries: { period: string; text: string }[]; before?: ContentBlock }
   | { kind: "block"; block: ContentBlock };
@@ -93,7 +93,7 @@ function weight(block: ContentBlock): number {
   return 0;
 }
 
-type Open = { blocks: ContentBlock[]; pictures: Picture[]; hasHeading: boolean };
+type Open = { blocks: ContentBlock[]; pictures: Picture[]; hasHeading: boolean; panel: boolean };
 
 export function layoutBlocks(blocks: ContentBlock[]): Section[] {
   const items = blocks.filter((block) => !isEmptyPicture(block));
@@ -111,11 +111,12 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
         side,
         // the first section of the page with one picture beside its text: the introduction of the page, the picture is big
         lead: side && open.pictures.length === 1 && sections.length === 0,
+        panel: open.panel,
       });
     }
     open = null;
   };
-  const start = (hasHeading: boolean): Open => (open ??= { blocks: [], pictures: [], hasHeading });
+  const start = (hasHeading: boolean, panel = false): Open => (open ??= { blocks: [], pictures: [], hasHeading, panel });
 
   // the closing source / slogan / contacts: exactly three paragraphs after the last list or table
   let lastData = -1;
@@ -225,7 +226,7 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
         continue;
       }
       flush();
-      start(true).blocks.push(block);
+      start(true, block.block_type === "heading" && block.data.panel === true).blocks.push(block);
       i++;
       continue;
     }

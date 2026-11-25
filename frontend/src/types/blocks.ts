@@ -33,6 +33,8 @@ export interface HeadingBlockData {
    * bold-text extraction heuristic otherwise flattens to one level. Renders as h2
    * (the existing default) when absent. */
   level?: 2 | 3;
+  /** Set in the admin ("Karta"): this heading starts a highlighted panel that lasts until the next section heading. Decided by the Uzbek text for all languages (resolveLocale). */
+  panel?: boolean;
 }
 export interface ParagraphBlockData {
   text: string;

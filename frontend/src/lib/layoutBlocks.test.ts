@@ -169,4 +169,13 @@ describe("layoutBlocks", () => {
     const two = layoutBlocks([h("About"), p("one"), p("two"), img("a.webp"), img("b.webp")]).find((s) => s.kind === "section" && s.pictures.length > 0);
     expect(two?.kind === "section" && two.lead).toBe(false);
   });
+  it("a heading marked as a panel starts a panel section that lasts until the next section heading; the flag comes from the Uzbek text", () => {
+    const sections = layoutBlocks([h("Mission"), p("a"), base("heading", { text: "Vision", level: 2, panel: true }), p("b"), list(2), h("Values"), p("c")]);
+    expect(sections.filter((s) => s.kind === "section").map((s) => s.kind === "section" && s.panel)).toEqual([false, true, false]);
+    const translated = base("heading", { uz: { text: "Vision", level: 2, panel: true }, ru: { text: "Видение", level: 2 }, en: { text: "Vision", level: 2 } });
+    for (const lang of ["uz", "ru", "en"] as const) {
+      const resolved = resolveLocale<ContentBlock>(translated, lang);
+      expect(layoutBlocks([h("A"), p("x"), resolved, p("y")]).filter((s) => s.kind === "section").map((s) => s.kind === "section" && s.panel)).toEqual([false, true]);
+    }
+  });
 });

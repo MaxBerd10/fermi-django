@@ -48,6 +48,10 @@ function drawBlocks(blocks: ContentBlock[]): ReactNode {
 }
 
 function SectionView({ section }: { section: Section }) {
+  // a section the admin marked as a panel (the heading's "Karta" mark): the same section inside a highlighted card
+  if (section.kind === "section" && section.panel) {
+    return <div className="article-panel"><SectionView section={{ ...section, panel: false }} /></div>;
+  }
   switch (section.kind) {
     case "opening":
       return (

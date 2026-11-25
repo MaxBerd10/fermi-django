@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useEditor, useEditorState, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import { uploadMedia } from "@/api/admin";
@@ -91,7 +92,20 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
       // StarterKit v3 already bundles Underline and Link -- registering them again as separate
       // extensions logged "Duplicate extension names" on every editor mount.
       // No target/rel on links the editor writes: a page link must keep opening in the same tab, as it does today.
-      StarterKit.configure({ link: { openOnClick: false, autolink: true, HTMLAttributes: { target: null, rel: null } } }),
+      StarterKit.configure({ heading: false, link: { openOnClick: false, autolink: true, HTMLAttributes: { target: null, rel: null } } }),
+      // A heading can be marked as the start of a highlighted panel ("Karta"): it travels as data-panel and the server keeps it as `panel`.
+      Heading.extend({
+        addAttributes() {
+          return {
+            ...this.parent?.(),
+            panel: {
+              default: false,
+              parseHTML: (element) => element.hasAttribute("data-panel"),
+              renderHTML: (attributes) => (attributes.panel ? { "data-panel": "1" } : {}),
+            },
+          };
+        },
+      }),
       // width/height stay on the picture when its page is edited: they reserve its space while it loads.
       Image.extend({
         addAttributes() {
@@ -270,6 +284,13 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
               <span className="w-px h-5 bg-background-300 mx-1" />
               <ToolbarButton title="Sarlavha 2" icon="ri-h-2" active={editor.isActive("heading", { level: 2 })} onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} />
               <ToolbarButton title="Sarlavha 3" icon="ri-h-3" active={editor.isActive("heading", { level: 3 })} onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} />
+              <ToolbarButton
+                title="Karta: shu sarlavhadan keyingi sarlavhagacha bo'lim rangli kartaga o'raladi (Sarlavha 2 uchun)"
+                icon="ri-layout-top-2-line"
+                active={Boolean(editor.isActive("heading", { level: 2 }) && editor.getAttributes("heading").panel)}
+                disabled={!editor.isActive("heading", { level: 2 })}
+                onClick={() => editor.chain().focus().updateAttributes("heading", { panel: !editor.getAttributes("heading").panel }).run()}
+              />
               <span className="w-px h-5 bg-background-300 mx-1" />
               <ToolbarButton title="Ro'yxat (belgili)" icon="ri-list-unordered" active={editor.isActive("bulletList")} onClick={() => editor.chain().focus().toggleBulletList().run()} />
               <ToolbarButton title="Ro'yxat (raqamli)" icon="ri-list-ordered" active={editor.isActive("orderedList")} onClick={() => editor.chain().focus().toggleOrderedList().run()} />

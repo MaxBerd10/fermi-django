@@ -798,3 +798,30 @@
   text-transform: uppercase;
   letter-spacing: .01em;
 }
+
+/* a panel: a section the admin marked with "Karta" -- a tinted card, white list items, the first paragraph in a white box (the "Kelajak haqidagi tasavvur" of Missiya) */
+.article-panel {
+  margin-block: 1.5rem;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  border: 1px solid #dbe4f6;
+  border-radius: .875rem;
+  background: linear-gradient(130deg, #e9eefb, #f5f7fc);
+}
+
+.inner-page-body .article-body .article-panel > :first-child {
+  margin-top: 0;
+}
+
+.article-panel :is(ul, ol) {
+  margin-bottom: 0;
+}
+
+.article-panel :is(ul, ol) > li {
+  background: #fff;
+}
+
+.article-panel h2 + p {
+  padding: .875rem 1rem;
+  border-radius: .625rem;
+  background: #fff;
+}

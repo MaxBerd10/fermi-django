@@ -75,6 +75,8 @@ def missiya():
     for block in headings[5:]:  # the six values under "Institute values" are items of that section, not sections of their own
         for lang in LANGS:
             block["data"][lang]["level"] = 3
+    for lang in LANGS:  # "Kelajak haqidagi tasavvur" is a highlighted panel (the admin's "Karta" mark on its heading, as in the design of the page)
+        headings[1]["data"][lang]["panel"] = True
     name = {lang: blocks[0]["data"][lang]["text"] for lang in LANGS}
     at = next(i for i, b in enumerate(blocks) if b["block_type"] == "list") + 1  # the institute's photo (it stood beside the opening text) after the first list
     return blocks[:at] + [repo_picture("institut-about.jpg", name)] + blocks[at:]
