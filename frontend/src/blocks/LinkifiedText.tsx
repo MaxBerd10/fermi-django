@@ -7,7 +7,7 @@ import { splitLinks } from "@/lib/textLinks";
  * any special markup -- and so does every legacy post that already has one.
  */
 export default function LinkifiedText({ text }: { text: string }) {
-  if (!text || !/(https?:\/\/|@)/.test(text)) return <>{text}</>;
+  if (!text || !/(https?:\/\/|@|\]\(\/)/.test(text)) return <>{text}</>;
   return (
     <>
       {splitLinks(text).map((piece, i) =>

@@ -1,4 +1,4 @@
-# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–48-skriptlar)
+# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–52-skriptlar)
 
 Maqsad: boʻlimning 25 sahifasi uch tilda (uz, ru, en) bir xil tipli bloklardan iborat boʻlsin; rasmlar media kutubxonasida tursin; saytda sahifaga xos maxsus kod qolmasin.
 
@@ -39,6 +39,10 @@ Sinov natijasi (2026-11-25, sinov bazasi, 39–44 tartib bilan qoʻllangandan ke
 | 46 | Institut konferensiyalari (4 sahifa): maqola/toʻplam havolalari `document` bloklariga | `dry`. Fayllar serverdagi `media/migrated/...` da boʻlishi shart, yoʻq boʻlsa `dry` roʻyxat bilan toʻxtaydi. PDFʻlar `uploads/documents/` ga nusxalanadi (eski yoʻlar 100 belgidan uzun). 2 ta havolaning fayli yoʻq (410): ularning sarlavhasi matn boʻlib qoladi, `tarjima-kerak.md`ga qarang. |
 | 47 | Institut binolari (8 sahifa): rasm-faqat `raw_html` bloklari rasm bloklariga (bir nechta rasm galereya koʻrinishida) | `dry`. Uz rasmlari asos, ru/en farqlari (2-Oʻquv kampusi en, Vivariy en, Kongress zallari ru tartib va en) `dry` chiqishida roʻyxat bilan koʻrsatiladi. Rasmlar serverdagi `media/migrated/img/fotogallery/...` da boʻlishi shart, yoʻq boʻlsa `dry` roʻyxat bilan toʻxtaydi. Bu boʻlim “Institut haqida” bilan bogʻliq emas, alohida qoʻllanadi. |
 | 48 | Institut kengashi (5 sahifa): kengash matni (paragraf, sarlavha, 2 roʻyxat), tarkib/kun tartibi/qarorlar rasmlari, qarorlar PDF kartalari, avtoreferatlar (13 himoya = 13 karta, 2 sarlavha) | `dry`. Fayllar serverdagi `media/migrated/img/...` da boʻlishi shart, yoʻq boʻlsa `dry` roʻyxat bilan toʻxtaydi. PDFʻlar `uploads/documents/` ga nusxalanadi. Mavjud 3 ta PDF kartaga nom beriladi (kartada fayl nomi koʻrinmasin). en tilidagi 5 ta vazifa rus tilidan tarjima qilingan: `tarjima-kerak.md`. |
+| 49 | Institut gazetasi (6 sahifa): muqova rasmi, arxivlarda har son PDF kartaga (uch tilda nom), mavjud kartalarga nom | `dry`. ru/en roʻyxatlari (arxivlarning nusxasi) va ru/en dagi boshqa rasm saqlanmaydi: uz asos. Fayllar `media/migrated/img/yangilikar/FJSTI gazetasi/...` da boʻlishi shart. |
+| 50 | Meʻyoriy hujjatlar (8 sahifa): qonun maʼlumotlari, akt roʻyxatlari ([nom](havola) koʻrinishida), Vazirlar buyruqlari, kartalarga nom | `dry`. ru/en matnlari uz bilan qator-qator moslangan, yoʻq boʻlgan joylar tarjima qilingan: `tarjima-kerak.md` (ru/en oʻquvchi tekshirsin). Frontend `[nom](havola)` ni havolaga aylantirishi uchun yangi frontend bilan birga chiqadi. |
+| 51 | FJSTI Ilmiy jurnali (6 sahifa): tahrir hayʼati, jurnal muqovasi, JCPM-2023/2024/2025 arxivlari (har maqola PDF kartaga, sarlavhalar KATTA HARFdan oddiy yozuvga) | `dry`. ~200 PDF `uploads/documents/` ga nusxalanadi (uzun nomlar 50 belgigacha qisqartiriladi). Maqola sarlavhalarini bir marta koʻzdan kechiring (`tarjima-kerak.md`). |
+| 52 | “Thumbay Fergana College” sahifasi (Institut yangiliklari): ingliz reklama matni uch tilda; uz va ru tarjima qilingan | `dry`. `tarjima-kerak.md` (uz va ru oʻquvchi tekshirsin). |
 
 Har bir skript: `dry` hech narsa yozmaydi; reja (`plan.json`) tuzilgan paytdagi blok oʻzgarmagan boʻlsa ishlaydi; adminʻda tahrirlangan blok `SKIPPED` boʻlib roʻyxatga tushadi; `apply` bitta tranzaksiya va backup bilan bajariladi; ikkinchi `apply` rad etiladi; `undo` faqat yangi bloklar oʻzgarmagan joyda eskisini qaytaradi.
 
@@ -53,13 +57,13 @@ Serverda faqat alohida ruxsatdan keyin ishlang. Skriptlar serverda `/home/fermi-
 1. Baza (`pg_dump`) va `media/` ning backupini oling.
 2. Yangi frontendʻni chiqaring va DARHOL (bir xizmat oynasida) 40-skriptni qoʻllang. Sabab: yangi frontend eski `raw_html` bloklarini oddiy `block` sifatida chizadi. “Institut xaqida” sahifasida esa eski kod bu blokning katta matnini (har tilda taxminan 9–10 ming belgi, hech qachon tekshirilmagan tarixiy matn) yashirib, faqat rasmni koʻrsatardi: 40 qoʻllanmaguncha bu matn ommaga ochiq boʻlib qoladi. 40 `SKIPPED` desa (blok adminʻda oʻzgartirilgan), toʻxtang: frontendʻni oldingi versiyaga qaytaring yoki rejani qayta tuzib, 40ʻni qayta ishga tushiring. Boshqa sahifalar skriptlarsiz ham ishlaydi (hisobot rasmlari 39 gacha oddiy HTML boʻlib koʻrinadi, USMLE sahifasi 41 gacha sarlavhasiz turadi).
 3. Serverdagi repozitoriy nusxasini yangilang (skriptlar rasm va PDFʻni shu nusxadan oʻqiydi).
-4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
+4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
 5. Tekshiruv: `chown` — yangi fayllar `www-data` egaligida boʻlishi kerak (`find /home/fermi-django/media -user root` boʻsh chiqsin). Skriptlar root nomidan ishlaganda oʻzi `chown` qiladi, baribir tekshiring. Keyin `scripts/audit_section.py` va 25 sahifani uch tilda brauzerda oching (sarlavha, ketma-ketlik, telefon koʻrinishi, rasm va hujjat kartalari, konsol).
 6. Boʻlim qabul qilingandan keyingina `frontend/public/images/hisobot`, `institut-about.jpg` va `institute-history` fayllarini `public` dan oʻchirish mumkin (skriptlarni qayta ishlatish kerak boʻlsa, ular kerak).
 
 ## 4. Qaytarish
 
-Faqat qoʻllangan skriptlarni teskari tartibda (48 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
+Faqat qoʻllangan skriptlarni teskari tartibda (52 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
 
 ```sh
 run_step 44 MODE=undo

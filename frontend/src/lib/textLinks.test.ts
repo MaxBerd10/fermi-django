@@ -27,6 +27,16 @@ describe("splitLinks", () => {
     expect(splitLinks("[x](javascript:alert(1))")).toEqual([{ text: "[x](javascript:alert(1))" }]);
   });
 
+  it("links a labelled address inside the site without opening a new tab", () => {
+    expect(splitLinks("[Xalqaro hamkorlik](/detail/xalqaro-hamkorlik-14?menu_id=71)")).toEqual([
+      { text: "Xalqaro hamkorlik", href: "/detail/xalqaro-hamkorlik-14?menu_id=71", external: false },
+    ]);
+  });
+
+  it("does not take a protocol-relative address (//host) for an address inside the site", () => {
+    expect(splitLinks("[x](//evil.example/a)")).toEqual([{ text: "[x](//evil.example/a)" }]);
+  });
+
   it("allows brackets and parentheses in the address of a labelled link", () => {
     const [piece] = splitLinks("[PDF](https://fermi.uz/media/a%20b(1).pdf)");
     expect(piece).toEqual({ text: "PDF", href: "https://fermi.uz/media/a%20b(1).pdf", external: true });
