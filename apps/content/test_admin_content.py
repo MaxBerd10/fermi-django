@@ -324,3 +324,43 @@ def test_the_recent_media_list_in_the_django_admin_escapes_visitor_supplied_name
     html = str(_recent_media_reference())
 
     assert "<img" not in html and "&lt;img src=x onerror=alert(1)&gt;.pdf" in html
+
+
+def test_a_heading_marked_as_a_panel_survives_the_editor_and_the_flag_comes_from_uz(page):
+    """The admin can mark a level-2 heading as the start of a highlighted panel. The flag travels in the editor HTML as data-panel,
+    is decided by the Uzbek tab alone (the translate button may drop attributes in ru/en), and an untouched save changes nothing."""
+    _add(page, 1, "heading", {lang: {"text": f"Intro {lang}", "level": 2} for lang in LANGS})
+    _add(page, 2, "paragraph", {lang: {"text": f"Text {lang}"} for lang in LANGS})
+    html = _html(page)
+    html["uz"] = html["uz"].replace("<h2>Intro uz</h2>", '<h2 data-panel="1">Intro uz</h2>') + "<h2>Vision uz</h2><p>More uz</p>"
+    html["ru"] += "<h2>Vision ru</h2><p>More ru</p>"
+    html["en"] += "<h2>Vision en</h2><p>More en</p>"
+    html["uz"] = html["uz"].replace("<h2>Vision uz</h2>", '<h2 data-panel="1">Vision uz</h2>')
+    write_blocks_from_html(page, html)
+    headings = [b.data for b in ContentBlock.objects.filter(page=page, block_type="heading").order_by("order")]
+    assert [[h[lang].get("panel") for lang in LANGS] for h in headings] == [[True] * 3, [True] * 3]
+    before = _snapshot(page)
+    write_blocks_from_html(page, _html(page))  # an untouched save
+    assert _snapshot(page) == before
+    assert 'data-panel="1"' in blocks_to_html(page, "ru")
+
+
+def test_turning_the_panel_off_removes_it_from_every_language(page):
+    _add(page, 1, "heading", {lang: {"text": f"Intro {lang}", "level": 2, "panel": True} for lang in LANGS})
+    html = _html(page)
+    html = {lang: value.replace(' data-panel="1"', "") for lang, value in html.items()}
+    write_blocks_from_html(page, html)
+    data = ContentBlock.objects.get(page=page, block_type="heading").data
+    assert all("panel" not in data[lang] for lang in LANGS)
+
+
+def test_a_new_level_three_heading_from_the_editor_is_a_level_three_heading(page):
+    write_blocks_from_html(page, {lang: f"<h2>Chapter {lang}</h2><h3>Article {lang}</h3><p>Text {lang}</p>" for lang in LANGS})
+    levels = [[b.data[lang].get("level") for lang in LANGS] for b in ContentBlock.objects.filter(page=page, block_type="heading").order_by("order")]
+    assert levels[1] == [3, 3, 3] and all(level in (None, 2) for level in levels[0])
+
+
+def test_a_heading_panel_flag_must_be_true_or_false(page):
+    block = ContentBlock(page=page, order=1, block_type="heading", data={lang: {"text": "A", "level": 2, "panel": "yes"} for lang in LANGS})
+    with pytest.raises(Exception, match="panel"):
+        block.full_clean()

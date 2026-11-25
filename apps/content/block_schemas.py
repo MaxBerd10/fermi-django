@@ -43,6 +43,8 @@ def _require_plain_text(payload, field: str, lang: str):
 
 def _validate_heading(payload: dict, lang: str) -> None:
     _require_plain_text(payload, "text", lang)
+    if "panel" in payload and not isinstance(payload["panel"], bool):
+        raise ValidationError(f"[{lang}] 'panel' must be true or false")
 
 
 def _validate_paragraph(payload: dict, lang: str) -> None:

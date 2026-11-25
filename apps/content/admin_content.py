@@ -75,7 +75,7 @@ PRESERVED_TYPES = frozenset({"table", "document", "gallery", "video", "staff_car
 # Per type: the payload fields a human can see and edit in the editor. Anything
 # else in a block's payload (bold, level, style, ...) is a hidden attribute.
 _VISIBLE_FIELDS = {
-    "heading": ("text",),
+    "heading": ("text", "panel"),  # panel: the admin's "highlighted panel starts here" mark, a data-panel attribute in the editor HTML
     "paragraph": ("text",),
     "list": ("items",),
     # alt is deliberately not "visible": extract() never reads an <img>'s alt, so
@@ -180,7 +180,8 @@ def _text_fragment(block_type: str, payload: dict) -> str | None:
     """The editor HTML for one heading/paragraph/list payload (None for any other type)."""
     if block_type == "heading":
         tag = "h3" if payload.get("level") == 3 else "h2"
-        return f"<{tag}>{_esc(payload.get('text'))}</{tag}>"
+        mark = ' data-panel="1"' if tag == "h2" and payload.get("panel") else ""
+        return f"<{tag}{mark}>{_esc(payload.get('text'))}</{tag}>"
     if block_type == "paragraph":
         # Never <strong> for a bold paragraph: extract() reads a fully-bold <p> as a
         # heading, so that would silently change the block's type. Its `bold` flag is
@@ -391,6 +392,12 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str], open_raw: b
         skip_block = False
         for lang in LANGS:
             payload = dict(payload_by_lang[lang])
+            if block_type == "heading":
+                # the structure of a heading (level 3, the highlighted-panel mark) is decided by the Uzbek tab alone
+                for key in ("level", "panel"):
+                    payload.pop(key, None)
+                    if key in payload_by_lang["uz"]:
+                        payload[key] = payload_by_lang["uz"][key]
             if block_type == "image":
                 image = _resolve_admin_image(payload.pop("image_src", None))
                 if image is None:

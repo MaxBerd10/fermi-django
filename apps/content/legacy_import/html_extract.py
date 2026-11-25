@@ -397,7 +397,8 @@ def _walk_flat_items(soup: Tag):
                 # legacy content and can't regress it.
                 text = _normalize(child.get_text(" "))
                 if text:
-                    yield ("heading_tag", text)
+                    # level 3 and the admin's "panel" mark ride along (only an editor-made heading carries them)
+                    yield ("heading_tag", (text, 3 if child.name == "h3" else None, child.has_attr("data-panel")))
                 for descendant in child.find_all(True):
                     seen_ids.add(id(descendant))
                 seen_ids.add(id(child))
@@ -474,7 +475,13 @@ def extract(html: str) -> ExtractionResult:
             if pending_image:
                 result.blocks.append(ExtractedBlock("image", {"image_src": pending_image}))
                 pending_image = None
-            result.blocks.append(ExtractedBlock("heading", {"text": value}))
+            text, level, panel = value
+            payload = {"text": text}
+            if level:
+                payload["level"] = level
+            if panel and level is None:
+                payload["panel"] = True
+            result.blocks.append(ExtractedBlock("heading", payload))
             i += 1
             continue
 
