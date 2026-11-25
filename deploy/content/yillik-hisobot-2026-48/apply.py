@@ -2,7 +2,7 @@
 #   institut-ilmiy-kengashi  the text becomes a paragraph, a heading, two lists of duties and the lead-in paragraph between them (the English page lacked five duties: translated);
 #   ilmiy-kengash-tarkibi, kengash-kun-tartibi, ilmiy-kengash  the scan becomes an `image` block (kun-tartibi/ilmiy-kengash keep the old "registered users" line as a paragraph);
 #   ilmiy-kengash  the 2022-2023 decisions without a file become a list, the 2024 PDFs become `document` cards (ru/en get the same list and cards: they had none);
-#   avtoreferatlar  13 defences: two headings (the one-off councils) and a `document` card per defence (name - thesis title).
+#   avtoreferatlar  13 defences, four blocks each: the council line, the author (heading), the thesis title, the PDF card (the site draws them as one card per defence).
 # The `document` cards already on the pages stay; the ones of ilmiy-kengash-tarkibi, kengash-kun-tartibi and ilmiy-kengash get a caption (they showed a file name).
 # Each PDF is copied from its old place in the media folder into the document library (uploads/documents/...) as a Document row; the old files stay where they are.
 # The scans are Image rows that point at the files already in the media folder (nothing is copied).

@@ -8,6 +8,8 @@ Notes on the sources (checked by assertions below):
   * ilmiy-kengash (decisions): only uz has the list of decisions (13 lines without files + 6 PDF links); ru and en have just the "registered users" line. Now all three
     languages get the same list/cards, the ru/en lines are built from the dates.
   * avtoreferatlar: 39 links = 13 defences x (council line, name, thesis title), the same 13 PDFs in the three languages; the text is Uzbek in all three languages.
+    Each defence becomes four blocks: council line (paragraph), author (heading 3), thesis title (paragraph), PDF card (caption "Avtoreferat"); the CAPITALS of the old text are
+    turned into normal writing (names: Title Case; thesis titles: first letter capital, proper names Fargʻona/Buxoro).
 """
 import hashlib
 import html
@@ -207,12 +209,34 @@ for _, council, _, _ in defences:
 HEAD = {"1": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
         "2": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"}
 assert set(HEAD) == set(councils)
-blocks = []
-for code, group in itertools.groupby(defences, key=lambda d: re.search(r"122\.0(\d)", d[1]).group(1)):
-    blocks.append(block("heading", {lang: {"text": HEAD[code], "level": 2} for lang in LANGS}))
-    for path, _, name, title in group:
-        caption = "%s — %s" % (name, title)
-        blocks.append(block("document", {lang: {"media": path, "caption": caption} for lang in LANGS}))
+PROPER = {"FARGʻONA": "Fargʻona", "BUXORO": "Buxoro"}  # the capitals of proper names in the thesis titles
+
+
+def name_case(text):  # "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI" -> "Yoʻldoshev Sobitali Zoxidjon oʻgʻli"
+    words = []
+    for word in text.split():
+        low = word.lower()
+        words.append(low if low in ("oʻgʻli", "qizi") else low[:1].upper() + low[1:])
+    return " ".join(words)
+
+
+def title_case(text):  # "TIBBIY TAʻLIM ... (FARGʻONA SHAHRI MISOLIDA)" -> "Tibbiy taʻlim ... (Fargʻona shahri misolida)"
+    low = text.lower()
+    low = re.sub(r"covid\s*-\s*19", "COVID-19", low)
+    low = re.sub(r"\b(\d)d\b", lambda m: m.group(1) + "D", low)
+    for upper, proper in PROPER.items():
+        low = low.replace(upper.lower(), proper)
+    return re.sub(r"[^\W\d_]", lambda m: m.group(0).upper(), low, count=1)
+
+
+CAPTION = {"uz": "Avtoreferat", "ru": "Автореферат", "en": "Abstract of the dissertation"}
+blocks = []  # per defence: the council line (small grey), the author, the thesis title, the PDF card
+for path, council, name, title in defences:
+    code = re.search(r"122\.0(\d)", council).group(1)
+    blocks.append(block("paragraph", {lang: {"text": HEAD[code]} for lang in LANGS}))
+    blocks.append(block("heading", {lang: {"text": name_case(name), "level": 3} for lang in LANGS}))
+    blocks.append(block("paragraph", {lang: {"text": title_case(title)} for lang in LANGS}))
+    blocks.append(block("document", {lang: {"media": path, "caption": CAPTION[lang]} for lang in LANGS}))
 plan.append(entry(slug, raw, blocks))
 
 json.dump(plan, open(os.path.join(HERE, "plan.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)

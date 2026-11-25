@@ -445,70 +445,16 @@
   },
   "blocks": [
    {
-    "block_type": "heading",
+    "block_type": "paragraph",
     "data": {
      "uz": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
-      "level": 2
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
      },
      "ru": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
-      "level": 2
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
      },
      "en": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH",
-      "level": 2
-     }
-    }
-   },
-   {
-    "block_type": "document",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
-      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
-      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
-      "caption": "SHAKIROV SARDOR ABDUSAMINOVICH — COVID -19 INFEKSIYASIDA BUYRAKNING PATOLOGIK ANATOMIYASI"
-     }
-    }
-   },
-   {
-    "block_type": "document",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
-      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
-      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
-      "caption": "MUYDINOV JAVLONBEK IBROXIMOVICH — YURAK QORINCHALAR ORALIGʻI DEVOR MEMBRANOZ QISMI TUGʻMA NUQSONINING GISTOTOPOGRAFIYASI"
-     }
-    }
-   },
-   {
-    "block_type": "document",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
-      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
-      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
-      "caption": "ABDUVALIYEVA FERUZAXON TULQINDJANOVNA — AHOLINI SUV BILAN TAʻMINLASHNI OPTIMALLASHTIRISHNING EKOLOGO-GIGIYENIK JIHATLARI (FARGʻONA SHAHRI MISOLIDA)"
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
      }
     }
    },
@@ -516,16 +462,216 @@
     "block_type": "heading",
     "data": {
      "uz": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
-      "level": 2
+      "text": "Shakirov Sardor Abdusaminovich",
+      "level": 3
      },
      "ru": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
-      "level": 2
+      "text": "Shakirov Sardor Abdusaminovich",
+      "level": 3
      },
      "en": {
-      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH",
-      "level": 2
+      "text": "Shakirov Sardor Abdusaminovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "COVID-19 infeksiyasida buyrakning patologik anatomiyasi"
+     },
+     "ru": {
+      "text": "COVID-19 infeksiyasida buyrakning patologik anatomiyasi"
+     },
+     "en": {
+      "text": "COVID-19 infeksiyasida buyrakning patologik anatomiyasi"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "Avtoreferat"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "Автореферат"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shokirov S..pdf",
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Muydinov Javlonbek Ibroximovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Muydinov Javlonbek Ibroximovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Muydinov Javlonbek Ibroximovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Yurak qorinchalar oraligʻi devor membranoz qismi tugʻma nuqsonining gistotopografiyasi"
+     },
+     "ru": {
+      "text": "Yurak qorinchalar oraligʻi devor membranoz qismi tugʻma nuqsonining gistotopografiyasi"
+     },
+     "en": {
+      "text": "Yurak qorinchalar oraligʻi devor membranoz qismi tugʻma nuqsonining gistotopografiyasi"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "Avtoreferat"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "Автореферат"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Muydinov N.pdf",
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/30.09.2020. Tib. 122.01 RAQAMLI ILMIY KENGASH ASOSIDA TUZILGAN BIR MARTALIK ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Abduvaliyeva Feruzaxon Tulqindjanovna",
+      "level": 3
+     },
+     "ru": {
+      "text": "Abduvaliyeva Feruzaxon Tulqindjanovna",
+      "level": 3
+     },
+     "en": {
+      "text": "Abduvaliyeva Feruzaxon Tulqindjanovna",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Aholini suv bilan taʻminlashni optimallashtirishning ekologo-gigiyenik jihatlari (Fargʻona shahri misolida)"
+     },
+     "ru": {
+      "text": "Aholini suv bilan taʻminlashni optimallashtirishning ekologo-gigiyenik jihatlari (Fargʻona shahri misolida)"
+     },
+     "en": {
+      "text": "Aholini suv bilan taʻminlashni optimallashtirishning ekologo-gigiyenik jihatlari (Fargʻona shahri misolida)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "Avtoreferat"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "Автореферат"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Abduvaliyeva F.pdf",
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Arabboyev Xurshidbek Xusniddinovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Arabboyev Xurshidbek Xusniddinovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Arabboyev Xurshidbek Xusniddinovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tibbiy taʻlim talabalarini krossfit metodlari orqali ommaviy sogʻlomlashtirish jarayoniga tayyorlash texnologiyasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
+     },
+     "ru": {
+      "text": "Tibbiy taʻlim talabalarini krossfit metodlari orqali ommaviy sogʻlomlashtirish jarayoniga tayyorlash texnologiyasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
+     },
+     "en": {
+      "text": "Tibbiy taʻlim talabalarini krossfit metodlari orqali ommaviy sogʻlomlashtirish jarayoniga tayyorlash texnologiyasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
      }
     }
    },
@@ -534,15 +680,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
-      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
-      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Arabboyev X..pdf",
-      "caption": "ARABBOYEV XURSHIDBEK XUSNIDDINOVICH — TIBBIY TAʻLIM TALABALARINI KROSSFIT METODLARI ORQALI OMMAVIY SOGʻLOMLASHTIRISH JARAYONIGA TAYYORLASH TEXNOLOGIYASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Xamdamova Shaxnoza Yusupaliyevna",
+      "level": 3
+     },
+     "ru": {
+      "text": "Xamdamova Shaxnoza Yusupaliyevna",
+      "level": 3
+     },
+     "en": {
+      "text": "Xamdamova Shaxnoza Yusupaliyevna",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Integratsion yondashuv asosida talabalarni kasbiy layoqatlarini rivojlantirish texnologiyasi (tibbiy taʻlimda ingliz va lotin tilini qiyoslash misolida)"
+     },
+     "ru": {
+      "text": "Integratsion yondashuv asosida talabalarni kasbiy layoqatlarini rivojlantirish texnologiyasi (tibbiy taʻlimda ingliz va lotin tilini qiyoslash misolida)"
+     },
+     "en": {
+      "text": "Integratsion yondashuv asosida talabalarni kasbiy layoqatlarini rivojlantirish texnologiyasi (tibbiy taʻlimda ingliz va lotin tilini qiyoslash misolida)"
      }
     }
    },
@@ -551,15 +742,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
-      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
-      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Xamdamova SH.pdf",
-      "caption": "XAMDAMOVA SHAXNOZA YUSUPALIYEVNA — INTEGRATSION YONDASHUV ASOSIDA TALABALARNI KASBIY LAYOQATLARINI RIVOJLANTIRISH TEXNOLOGIYASI (TIBBIY TAʻLIMDA INGLIZ VA LOTIN TILINI QIYOSLASH MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Yunusova Raʻno Gʻaybullayevna",
+      "level": 3
+     },
+     "ru": {
+      "text": "Yunusova Raʻno Gʻaybullayevna",
+      "level": 3
+     },
+     "en": {
+      "text": "Yunusova Raʻno Gʻaybullayevna",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "“Tibbiy taʻlimda biofizika fanini loyihalash asosida oʻqitish metodikasini takomillashtirish”"
+     },
+     "ru": {
+      "text": "“Tibbiy taʻlimda biofizika fanini loyihalash asosida oʻqitish metodikasini takomillashtirish”"
+     },
+     "en": {
+      "text": "“Tibbiy taʻlimda biofizika fanini loyihalash asosida oʻqitish metodikasini takomillashtirish”"
      }
     }
    },
@@ -568,15 +804,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
-      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
-      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yunusova R.pdf",
-      "caption": "YUNUSOVA RAʻNO GʻAYBULLAYEVNA — “TIBBIY TAʻLIMDA BIOFIZIKA FANINI LOYIHALASH ASOSIDA OʻQITISH METODIKASINI TAKOMILLASHTIRISH”"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Qaxorova Tursinoy Ulugʻbek qizi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Qaxorova Tursinoy Ulugʻbek qizi",
+      "level": 3
+     },
+     "en": {
+      "text": "Qaxorova Tursinoy Ulugʻbek qizi",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tibbiy taʻlim jarayonida 3D interaktiv didaktik materiallardan foydalanish metodikasini takomillashtirish texnologiyalari (ingliz tili oʻqitish misolida)"
+     },
+     "ru": {
+      "text": "Tibbiy taʻlim jarayonida 3D interaktiv didaktik materiallardan foydalanish metodikasini takomillashtirish texnologiyalari (ingliz tili oʻqitish misolida)"
+     },
+     "en": {
+      "text": "Tibbiy taʻlim jarayonida 3D interaktiv didaktik materiallardan foydalanish metodikasini takomillashtirish texnologiyalari (ingliz tili oʻqitish misolida)"
      }
     }
    },
@@ -585,15 +866,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
-      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
-      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Qaxorova T.U.pdf",
-      "caption": "QAXOROVA TURSINOY ULUGʻBEK QIZI — TIBBIY TAʻLIM JARAYONIDA 3D INTERAKTIV DIDAKTIK MATERIALLARDAN FOYDALANISH METODIKASINI TAKOMILLASHTIRISH TEXNOLOGIYALARI (INGLIZ TILI OʻQITISH MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Yoʻldoshev Sobitali Zoxidjon oʻgʻli",
+      "level": 3
+     },
+     "ru": {
+      "text": "Yoʻldoshev Sobitali Zoxidjon oʻgʻli",
+      "level": 3
+     },
+     "en": {
+      "text": "Yoʻldoshev Sobitali Zoxidjon oʻgʻli",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Boʻlajak shifokorlar valeologik kompetentligini jismoniy tarbiyaning adaptiv texnologiyalari orqali rivojlantirish metodikasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
+     },
+     "ru": {
+      "text": "Boʻlajak shifokorlar valeologik kompetentligini jismoniy tarbiyaning adaptiv texnologiyalari orqali rivojlantirish metodikasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
+     },
+     "en": {
+      "text": "Boʻlajak shifokorlar valeologik kompetentligini jismoniy tarbiyaning adaptiv texnologiyalari orqali rivojlantirish metodikasi (jismoniy tarbiya va sport fanini oʻqitish misolida)"
      }
     }
    },
@@ -602,15 +928,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
-      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
-      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/S.Yo'ldoshev.pdf",
-      "caption": "YOʻLDOSHEV SOBITALI ZOXIDJON OʻGʻLI — BOʻLAJAK SHIFOKORLAR VALEOLOGIK KOMPETENTLIGINI JISMONIY TARBIYANING ADAPTIV TEXNOLOGIYALARI ORQALI RIVOJLANTIRISH METODIKASI (JISMONIY TARBIYA VA SPORT FANINI OʻQITISH MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Turdiyev Shavkat Maʻmirovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Turdiyev Shavkat Maʻmirovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Turdiyev Shavkat Maʻmirovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tibbiy taʻlimda talabalar profilaktik kompetentligini rivojlantirishning intensiv texnologiyalari (gigiyena fanini oʻqitish misolida)"
+     },
+     "ru": {
+      "text": "Tibbiy taʻlimda talabalar profilaktik kompetentligini rivojlantirishning intensiv texnologiyalari (gigiyena fanini oʻqitish misolida)"
+     },
+     "en": {
+      "text": "Tibbiy taʻlimda talabalar profilaktik kompetentligini rivojlantirishning intensiv texnologiyalari (gigiyena fanini oʻqitish misolida)"
      }
     }
    },
@@ -619,15 +990,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
-      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
-      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Sh.Turdiyev..pdf",
-      "caption": "TURDIYEV SHAVKAT MAʻMIROVICH — TIBBIY TAʻLIMDA TALABALAR PROFILAKTIK KOMPETENTLIGINI RIVOJLANTIRISHNING INTENSIV TEXNOLOGIYALARI (GIGIYENA FANINI OʻQITISH MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Shalankov Konstantin Konstantinovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Shalankov Konstantin Konstantinovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Shalankov Konstantin Konstantinovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Musiqa terapiyasi darslarida tibbiyot talabalarining mustaqil faoliyatini tashkil etishning pedagogik shartlari"
+     },
+     "ru": {
+      "text": "Musiqa terapiyasi darslarida tibbiyot talabalarining mustaqil faoliyatini tashkil etishning pedagogik shartlari"
+     },
+     "en": {
+      "text": "Musiqa terapiyasi darslarida tibbiyot talabalarining mustaqil faoliyatini tashkil etishning pedagogik shartlari"
      }
     }
    },
@@ -636,15 +1052,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
-      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
-      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Shalankov K.K..pdf",
-      "caption": "SHALANKOV KONSTANTIN KONSTANTINOVICH — MUSIQA TERAPIYASI DARSLARIDA TIBBIYOT TALABALARINING MUSTAQIL FAOLIYATINI TASHKIL ETISHNING PEDAGOGIK SHARTLARI"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻlmasov Zikrillo Obidovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Oʻlmasov Zikrillo Obidovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Oʻlmasov Zikrillo Obidovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Umurtqalararo disk churrasini davolash va profilaktikasida dochim hamda girudoterapiya kombinatsiyasining samaradorligini baholash"
+     },
+     "ru": {
+      "text": "Umurtqalararo disk churrasini davolash va profilaktikasida dochim hamda girudoterapiya kombinatsiyasining samaradorligini baholash"
+     },
+     "en": {
+      "text": "Umurtqalararo disk churrasini davolash va profilaktikasida dochim hamda girudoterapiya kombinatsiyasining samaradorligini baholash"
      }
     }
    },
@@ -653,15 +1114,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
-      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
-      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/O‘lmasov Z.pdf",
-      "caption": "OʻLMASOV ZIKRILLO OBIDOVICH — UMURTQALARARO DISK CHURRASINI DAVOLASH VA PROFILAKTIKASIDA DOCHIM HAMDA GIRUDOTERAPIYA KOMBINATSIYASINING SAMARADORLIGINI BAHOLASH"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Yadgarova Shaxodat Solixovna",
+      "level": 3
+     },
+     "ru": {
+      "text": "Yadgarova Shaxodat Solixovna",
+      "level": 3
+     },
+     "en": {
+      "text": "Yadgarova Shaxodat Solixovna",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Aholi va sanoat korxonalaridan hosil boʻluvchi oqava suvlarning gigiyenik tavsifi (Buxoro shahri misolida)"
+     },
+     "ru": {
+      "text": "Aholi va sanoat korxonalaridan hosil boʻluvchi oqava suvlarning gigiyenik tavsifi (Buxoro shahri misolida)"
+     },
+     "en": {
+      "text": "Aholi va sanoat korxonalaridan hosil boʻluvchi oqava suvlarning gigiyenik tavsifi (Buxoro shahri misolida)"
      }
     }
    },
@@ -670,15 +1176,60 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
-      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
-      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Yadgarova Sh.pdf",
-      "caption": "YADGAROVA SHAXODAT SOLIXOVNA — AHOLI VA SANOAT KORXONALARIDAN HOSIL BOʻLUVCHI OQAVA SUVLARNING GIGIYENIK TAVSIFI (BUXORO SHAHRI MISOLIDA)"
+      "caption": "Abstract of the dissertation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "ru": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     },
+     "en": {
+      "text": "FARGʻONA JAMOAT SALOMATLIGI TIBBIYOT INSTITUTI HUZURIDAGI ILMIY DARAJALAR BERUVCHI PhD. 04/02.07.2024. Tib. 122.02 RAQAMLI ILMIY KENGASH"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Matxoshimov Nodirjon Soyibjonovich",
+      "level": 3
+     },
+     "ru": {
+      "text": "Matxoshimov Nodirjon Soyibjonovich",
+      "level": 3
+     },
+     "en": {
+      "text": "Matxoshimov Nodirjon Soyibjonovich",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mehnatga layoqatli yoshdagi aholi nogironligi profilaktikasi (Fargʻona viloyati misolida)"
+     },
+     "ru": {
+      "text": "Mehnatga layoqatli yoshdagi aholi nogironligi profilaktikasi (Fargʻona viloyati misolida)"
+     },
+     "en": {
+      "text": "Mehnatga layoqatli yoshdagi aholi nogironligi profilaktikasi (Fargʻona viloyati misolida)"
      }
     }
    },
@@ -687,15 +1238,15 @@
     "data": {
      "uz": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
-      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+      "caption": "Avtoreferat"
      },
      "ru": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
-      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+      "caption": "Автореферат"
      },
      "en": {
       "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Avtoreferatlar/Matxoshimov N.pdf",
-      "caption": "MATXOSHIMOV NODIRJON SOYIBJONOVICH — MEHNATGA LAYOQATLI YOSHDAGI AHOLI NOGIRONLIGI PROFILAKTIKASI (FARGʻONA VILOYATI MISOLIDA)"
+      "caption": "Abstract of the dissertation"
      }
     }
    }

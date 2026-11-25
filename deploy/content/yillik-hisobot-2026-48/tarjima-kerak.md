@@ -15,6 +15,6 @@ cards ("Решение Совета от 30.08.2024", "Council decision of 30.08
 ## Left as in the old text (decide if you want them changed)
 - "Ushbu sahifani ko‘rish faqat ro‘yxatdan o‘tgan foydalanuvchilarga ruxsat etilgan" stays on Kun tartibi and Qarorlar (your decision, 2026-11-26).
 - Uz duty 1: "uning davomiyligini va davomiyligini" (a word repeated, en: "its continuity and continuity") — a machine-translation slip of the old text.
-- Avtoreferatlar: the two council headings and every card are in Uzbek in all three languages (as before) and written in capitals (as before).
+- Avtoreferatlar: the council line, the author and the thesis title are Uzbek in all three languages (as before). The old CAPITALS are turned into normal writing (names in Title Case, thesis titles with a capital first letter; Fargʻona and Buxoro keep theirs). The PDF card is called "Avtoreferat" / "Автореферат" / "Abstract of the dissertation".
 - Kun tartibi: its PDF card is the file "Kengash qarori 28.12.2024" (a decision, not an agenda); the card now says so. The same file is also the card of Qarorlar.
 - Qarorlar: 13 decisions of 2022-2023 have no file (the old page listed only their names).
