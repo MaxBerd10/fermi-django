@@ -108,4 +108,21 @@ describe("layoutBlocks", () => {
       expect(layoutBlocks([old]).map((s) => s.kind)).toEqual(["block"]);
     }
   });
+  it("a list that only starts with a year is not a chronology, in any language", () => {
+    const block = base("list", {
+      uz: { items: ["2027-yil aprel: A", "2027-yil may: B"] },
+      ru: { items: ["Апрель 2027 г.: А", "Май 2027 г.: Б"] },
+      en: { items: ["April 2027: A", "May 2027: B"] },
+    });
+    for (const lang of ["uz", "ru", "en"] as const) expect(kinds([resolveLocale<ContentBlock>(block, lang)])).toEqual(["section"]);
+  });
+
+  it("a chronology is a chronology in every language even when one translation words an entry differently", () => {
+    const block = base("list", {
+      uz: { items: ["1992–1997 — A", "2021 yildan — B"] },
+      ru: { items: ["1992-1997 — А", "Весной 2021 года: Б"] },
+      en: { items: ["1992-1997 — A", "since 2021 — B"] },
+    });
+    for (const lang of ["uz", "ru", "en"] as const) expect(kinds([resolveLocale<ContentBlock>(block, lang)])).toEqual(["dated"]);
+  });
 });

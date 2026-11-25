@@ -19,12 +19,19 @@ export type Section =
 /** A picture in the side column is about 160px (5.7 lines of text) high plus the gap. */
 export const LINES_PER_SIDE_PICTURE = 5.5;
 
-const datedEntry = /^((?:(?:с|since|from)\s+)?\d{4}(?:\s*[–—-]\s*\d{4})?(?:\s+(?:yildan|года?|гг?\.?|onwards))?)\s*[–—-]\s*(.+)$/iu;
+/** "1992–1997 — A", "2021 yildan — B", "с 2021 года — C": a year (or a range) and then a dash with spaces around it. "2027-yil aprel: ..." is not a dated line. */
+const datedEntry = /^((?:(?:с|since|from)\s+)?\d{4}(?:\s*[–—-]\s*\d{4})?(?:\s+(?:yildan|года?|гг?\.?|onwards))?)\s+[–—-]\s+(.+)$/iu;
+
+/** True when every item is a dated line. The api (`resolveLocale`) decides this once from the Uzbek list and gives the answer to every language. */
+export function isDatedList(items: string[]): boolean {
+  return items.length > 0 && items.every((item) => datedEntry.test(item.trim()));
+}
 
 function datedEntries(items: string[]) {
-  const entries = items.map((item) => item.trim().match(datedEntry));
-  if (!entries.length || entries.some((entry) => !entry)) return null;
-  return entries.flatMap((entry) => entry ? [{ period: entry[1], text: entry[2] }] : []);
+  return items.map((item) => {
+    const entry = item.trim().match(datedEntry);
+    return entry ? { period: entry[1], text: entry[2] } : { period: "", text: item.trim() };
+  });
 }
 
 function toPicture(src: string, alt: string, width: number | null, height: number | null): Picture {
@@ -120,10 +127,9 @@ export function layoutBlocks(blocks: ContentBlock[]): Section[] {
       continue;
     }
     if (block.block_type === "list") {
-      const entries = datedEntries(block.data.items);
-      if (entries) {
+      if (block.data.dated ?? isDatedList(block.data.items)) {
         flush();
-        sections.push({ kind: "dated", entries });
+        sections.push({ kind: "dated", entries: datedEntries(block.data.items) });
         i++;
         continue;
       }

@@ -2,6 +2,7 @@ import i18n from "../i18n";
 import type { ApiMeta } from "../types/api";
 import { ApiError } from "../types/api";
 import { normalizeUzbekApostrophes } from "../lib/normalizeCmsText";
+import { isDatedList } from "../lib/layoutBlocks";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
 
@@ -147,6 +148,12 @@ export function resolveLocale<T>(value: unknown, lang: "uz" | "ru" | "en"): T {
       const source = translations?.uz;
       if (typeof source?.text === "string" && out.data && typeof out.data === "object") {
         out.data = { ...out.data, quote: source.quote ?? attributedQuote.test(source.text) };
+      }
+    }
+    if (obj.block_type === "list") {
+      const source = (obj.data as { uz?: { items?: unknown } } | undefined)?.uz;
+      if (Array.isArray(source?.items) && source.items.every((item) => typeof item === "string") && out.data && typeof out.data === "object") {
+        out.data = { ...out.data, dated: isDatedList(source.items as string[]) };
       }
     }
     return out as T;

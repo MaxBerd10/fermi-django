@@ -47,6 +47,8 @@ export interface ParagraphBlockData {
 }
 export interface ListBlockData {
   items: string[];
+  /** Set by the api from the Uzbek list: every item is a dated line, so the list is a chronology in all languages. */
+  dated?: boolean;
 }
 export interface StaffCardBlockData {
   full_name: string;
