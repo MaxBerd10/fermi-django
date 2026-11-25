@@ -78,6 +78,12 @@ describe("layoutBlocks", () => {
     expect(picturesOf(img("w.webp", 960, 640))[0].tall).toBe(false);
   });
 
+  it("legacy image-only raw_html of another page stays a plain block", () => {
+    const other = base("raw_html", { html: '<p><img src="https://fermi.uz/media/migrated/img/x.jpg" alt="x" width="960" height="640"></p>', slug: "y" });
+    expect(picturesOf(other)).toEqual([]);
+    expect(layoutBlocks([other]).map((s) => s.kind)).toEqual(["block"]);
+  });
+
   it("legacy image-only raw_html is read as pictures", () => {
     const legacy = base("raw_html", { html: '<p><img src="/images/hisobot/p1.webp" alt="x" width="960" height="640"></p>', slug: "x" });
     expect(picturesOf(legacy)).toHaveLength(1);

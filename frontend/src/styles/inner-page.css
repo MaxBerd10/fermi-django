@@ -523,56 +523,56 @@
 }
 
 /* Annual report: pictures are small and sit beside the text they belong to (see AnnualReportArticle) */
-.annual-hero,
-.annual-quote,
-.annual-portrait {
+.article-hero,
+.article-quote,
+.article-person {
   display: grid;
   gap: 1rem 1.25rem;
   align-items: center;
 }
 
-.annual-hero figure,
-.annual-quote figure,
-.annual-portrait figure,
-.annual-gallery figure,
-.annual-single {
+.article-hero figure,
+.article-quote figure,
+.article-person figure,
+.article-gallery figure,
+.article-single {
   margin: 0;
 }
 
-.annual-hero img,
-.annual-quote img,
-.annual-portrait img,
-.annual-gallery img,
-.annual-single img {
+.article-hero img,
+.article-quote img,
+.article-person img,
+.article-gallery img,
+.article-single img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: .625rem;
 }
 
-.annual-hero > div > p:last-child,
-.annual-quote > div > p:last-child,
-.annual-portrait > div > p:last-child {
+.article-hero > div > p:last-child,
+.article-quote > div > p:last-child,
+.article-person > div > p:last-child {
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-  .annual-hero {
+  .article-hero {
     grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
   }
 
-  .annual-hero figure {
+  .article-hero figure {
     order: 2;
   }
 }
 
-.annual-hero img {
+.article-hero img {
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
 /* quotation card: the speaker's picture (a small square, the face kept) and the words */
-.annual-quote {
+.article-quote {
   grid-template-columns: 7rem minmax(0, 1fr);
   padding: 1rem;
   border: 1px solid #dbe2f0;
@@ -580,59 +580,59 @@
   background: #f5f7fc;
 }
 
-.annual-quote img,
-.annual-portrait img {
+.article-quote img,
+.article-person img {
   aspect-ratio: 1;
   object-fit: cover;
   object-position: 50% 25%;
 }
 
-.annual-quote > div p,
-.annual-portrait > div p {
+.article-quote > div p,
+.article-person > div p {
   margin: 0 0 .75rem;
 }
 
 @media (min-width: 640px) {
-  .annual-quote {
+  .article-quote {
     grid-template-columns: 9rem minmax(0, 1fr);
   }
 }
 
 /* the rector: the portrait beside the address */
-.annual-portrait {
+.article-person {
   align-items: start;
   grid-template-columns: 7rem minmax(0, 1fr);
 }
 
 @media (min-width: 640px) {
-  .annual-portrait {
+  .article-person {
     grid-template-columns: 11rem minmax(0, 1fr);
   }
 }
 
-.annual-gallery {
+.article-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   gap: .75rem;
 }
 
-.annual-gallery img {
+.article-gallery img {
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
-.annual-single {
+.article-single {
   max-width: 28rem;
 }
 
 /* the closing lines: source (quiet), the slogan (a callout), the contacts */
-.annual-source p {
+.article-source p {
   margin: 0;
   color: #5b6b8a;
   font-size: .875rem;
 }
 
-.annual-slogan p {
+.article-slogan p {
   margin: 0;
   padding: .875rem 1rem;
   border-radius: .625rem;
@@ -641,7 +641,7 @@
   font-weight: 650;
 }
 
-.annual-contact p {
+.article-contact p {
   margin: 0;
   padding-top: .75rem;
   border-top: 1px solid #e0e6f0;
@@ -649,28 +649,28 @@
 }
 
 /* (repeated class: Tailwind's space-y-4 on the article would otherwise win over this) */
-.annual-report.annual-report.annual-report > h2 {
+.article-body.article-body.article-body > h2 {
   margin-top: 2rem;
 }
 
 /* tall pictures (a screenshot, a poster) keep their shape but never run taller than a screen */
-.annual-single img {
+.article-single img {
   width: auto;
   max-width: 100%;
   max-height: 26rem;
 }
 
-.annual-hero img {
+.article-hero img {
   object-position: 50% 20%;
 }
 
 /* many pictures in a row (up to ten): smaller tiles */
-.annual-gallery:has(figure:nth-child(5)) {
+.article-gallery:has(figure:nth-child(5)) {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
 }
 
 /* exactly four pictures: two rows of two, never three and one left alone */
-.annual-gallery:has(figure:nth-child(4):last-child) {
+.article-gallery:has(figure:nth-child(4):last-child) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -707,37 +707,37 @@
 }
 
 /* a single picture in a row of its own sits in the middle, not stuck to the left with an empty right half */
-.annual-single {
+.article-single {
   margin-inline: auto;
 }
 
 /* a section with pictures: the text on the left, the pictures of the section in a column on the right (on a wide screen) */
-.annual-split {
+.article-split {
   display: grid;
   gap: 1rem 1.5rem;
   align-items: start;
 }
 
-.annual-split > div:first-child {
+.article-split > div:first-child {
   display: grid;
   gap: 1rem;
 }
 
-.annual-split > div:first-child > * {
+.article-split > div:first-child > * {
   margin-block: 0;
 }
 
-.annual-aside {
+.article-aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   gap: .75rem;
 }
 
-.annual-aside figure {
+.article-aside figure {
   margin: 0;
 }
 
-.annual-aside img {
+.article-aside img {
   display: block;
   width: 100%;
   height: auto;
@@ -747,7 +747,7 @@
 }
 
 /* a tall picture (a screenshot) keeps its whole shape */
-.annual-aside .annual-tall img {
+.article-aside .article-tall img {
   aspect-ratio: auto;
   max-height: 26rem;
   object-fit: contain;
@@ -756,15 +756,15 @@
 }
 
 @media (min-width: 768px) {
-  .annual-split {
+  .article-split {
     grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
   }
 
-  .annual-aside {
+  .article-aside {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
-.annual-report.annual-report.annual-report > .annual-split {
+.article-body.article-body.article-body > .article-split {
   margin-top: 2rem;
 }

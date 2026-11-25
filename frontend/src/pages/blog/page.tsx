@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import InstituteHistoryArticle from "@/components/shared/InstituteHistoryArticle";
-import AnnualReportArticle from "@/components/shared/AnnualReportArticle";
+import ArticleBody from "@/components/shared/ArticleBody";
 import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
@@ -27,19 +27,6 @@ import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib
  * data (see BlockRenderer) plus the app's own menu tree for title/sidebar.
  * No per-slug special-casing.
  */
-// the pages of the annual report 2026 (the menu section "Yillik hisobot 2026"): photos, tables and lists in a set order
-const ANNUAL_REPORT_SLUGS = new Set([
-  "yillik-hisobot-2026",
-  "reyting-va-akkreditatsiya",
-  "strategik-maqsadlar-2027",
-  "xalqaro-hamkorlik-va-investitsiyalar",
-  "ilmiy-va-innovatsion-faoliyat",
-  "suniy-intellekt-tizimlari",
-  "2027-yil-vazifalari-batafsil",
-  "manaviy-marifiy-ishlar-va-olimpiadalar",
-  "moliya-oquv-uslubiy-ishlar-va-raqamlashtirish",
-]);
-
 export default function BlogPage() {
   const { t } = useTranslation();
   const { menuId, slug } = useParams<{ menuId: string; slug: string }>();
@@ -119,7 +106,6 @@ export default function BlogPage() {
   // outline valid without changing anything a sighted visitor sees.
   const isMissionPage = slug === "institut-missiyasi-va-kelajak-tasavvuri";
   const isInstituteAboutPage = slug === "institut-xaqida";
-  const isAnnualReportPage = ANNUAL_REPORT_SLUGS.has(slug ?? "");
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
 
   return (
@@ -134,10 +120,10 @@ export default function BlogPage() {
         {isHistoryPage && sortedBlocks.length > 0 ? (
           <InstituteHistoryArticle blocks={sortedBlocks} />
         ) : sortedBlocks.length > 0 ? (
-          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""}${isAnnualReportPage ? " annual-report" : ""}`}
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isMissionPage ? " institute-mission" : ""} article-body`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-              {isAnnualReportPage ? <AnnualReportArticle blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
+              {!isInstituteAboutPage ? <ArticleBody blocks={sortedBlocks} /> : sortedBlocks.map((block) =>
                 isInstituteAboutPage && block.block_type === "raw_html" && block.data.slug === slug ? (
                   <div key={block.id} className="grid items-center gap-5 md:grid-cols-2 lg:gap-8">
                     <div className="min-w-0">

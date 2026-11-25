@@ -18,6 +18,9 @@ export type Section =
 /** A picture in the side column is about 160px (5.7 lines of text) high plus the gap. */
 export const LINES_PER_SIDE_PICTURE = 5.5;
 
+/** Until the report photos are in the media library (Task 4), a raw_html block that holds only these pictures is read as pictures. Any other old HTML stays a plain block. */
+const LEGACY_PICTURE_PREFIX = "/images/hisobot/";
+
 const QUOTE_RE = /[«»“”"]/;
 
 function toPicture(src: string, alt: string, width: number | null, height: number | null): Picture {
@@ -41,7 +44,7 @@ export function picturesOf(block: ContentBlock): Picture[] {
     return (html.match(/<img\b[^>]*>/gi) ?? []).flatMap((tag) => {
       const attr = (name: string) => tag.match(new RegExp(`\\b${name}="([^"]*)"`, "i"))?.[1] ?? "";
       const src = attr("src");
-      return src ? [toPicture(src, attr("alt"), Number(attr("width")) || null, Number(attr("height")) || null)] : [];
+      return src.startsWith(LEGACY_PICTURE_PREFIX) ? [toPicture(src, attr("alt"), Number(attr("width")) || null, Number(attr("height")) || null)] : [];
     });
   }
   return [];
