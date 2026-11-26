@@ -109,7 +109,7 @@ export default function QabulPage() {
       <div className="section-container pt-5 pb-6 relative z-10">
         <div className="flex flex-wrap gap-3">
           <a
-            href="https://my.uzedu.uz"
+            href="https://my.edu.uz"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-[#0a1158] hover:bg-[#060a3d] text-white text-sm font-semibold cursor-pointer transition-colors shadow-[0_8px_20px_rgba(10,17,88,0.25)]"

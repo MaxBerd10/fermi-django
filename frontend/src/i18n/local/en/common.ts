@@ -1291,7 +1291,7 @@ export default {
   "qabul.processEyebrow": "Process",
   "qabul.processHeading": "Admission stages",
   "qabul.step1.title": "Online registration",
-  "qabul.step1.desc": "Register at my.uzedu.uz and fill in the required information",
+  "qabul.step1.desc": "Register at my.edu.uz and fill in the required information",
   "qabul.step2.title": "Upload documents",
   "qabul.step2.desc": "Upload your passport, diploma, photo, and medical certificate",
   "qabul.step3.title": "Entrance tests",

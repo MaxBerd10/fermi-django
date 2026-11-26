@@ -1291,7 +1291,7 @@ export default {
   "qabul.processEyebrow": "Jarayon",
   "qabul.processHeading": "Qabul bosqichlari",
   "qabul.step1.title": "Onlayn roʻyxatdan oʻtish",
-  "qabul.step1.desc": "my.uzedu.uz saytida roʻyxatdan oʻting va kerakli maʻlumotlarni toʻldiring",
+  "qabul.step1.desc": "my.edu.uz saytida roʻyxatdan oʻting va kerakli maʻlumotlarni toʻldiring",
   "qabul.step2.title": "Hujjatlarni yuklash",
   "qabul.step2.desc": "Pasport, diplom, fotosurat va tibbiyot xulosasini yuklang",
   "qabul.step3.title": "Test imtihonlari",
