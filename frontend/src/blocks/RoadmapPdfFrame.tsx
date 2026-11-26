@@ -69,8 +69,9 @@ export default function RoadmapPdfFrame({
 }: { src: string; title: string; filename: string; fileSize: number }) {
   return (
     <section className="space-y-4" aria-label={title}>
-      <PdfViewer key={src} src={src} title={title} />
+      {/* the buttons (open in the browser, download) come first: the viewer below can be very long */}
       <DocumentCard url={src} title={title} filename={filename} fileSize={fileSize} />
+      <PdfViewer key={src} src={src} title={title} />
     </section>
   );
 }
