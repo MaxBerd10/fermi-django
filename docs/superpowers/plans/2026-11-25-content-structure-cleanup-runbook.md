@@ -1,4 +1,4 @@
-# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–56-skriptlar)
+# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–57-skriptlar)
 
 Maqsad: boʻlimning 25 sahifasi uch tilda (uz, ru, en) bir xil tipli bloklardan iborat boʻlsin; rasmlar media kutubxonasida tursin; saytda sahifaga xos maxsus kod qolmasin.
 
@@ -47,6 +47,7 @@ Sinov natijasi (2026-11-25, sinov bazasi, 39–44 tartib bilan qoʻllangandan ke
 | 54 | Faoliyat > Xalqaro faoliyat: “Xalqaro xamkor tashkilotlar” (ofis manzillari, rasm, kartaga nom) va “Iqlim boʻyicha xarakatlar strategiyasi” (besh yillik reja, 16 siyosat PDF kartaga); ingliz matni uz va ru ga tarjima qilingan | `dry`. 16 PDF `uploads/documents/` ga nusxalanadi. `tarjima-kerak.md` (uz va ru oʻquvchi tekshirsin). “Xalqaro taʼlim” sahifasi faqat bitta hujjat kartasi, oʻzgarmaydi; Thumbay sahifasi 52-skriptda. |
 | 55 | Faoliyat > Ilmiy faoliyat (5 sahifa): Normativ-huquqiy hujjatlar (Vazirlar Mahkamasining 304-son qarori ingliz tiliga tarjima qilindi), Grant siyosati, Innovatsion gʻoyalar, Ilmiy tadqiqot yoʻnalishlari, Oliy oʻquv yurtidan keyingi taʻlim; uz asos, ru/en moslangan | `dry`. 7 PDF `uploads/documents/` ga nusxalanadi; Innovatsion gʻoyalar rasmining yoʻli 100 belgidan uzun, shuning uchun rasm kutubxonaga nusxalanadi (undo nusxani diskda qoldiradi). Konferensiyalar, Kengash, Jurnal, Avtoreferatlar 46, 48, 51 da. `tarjima-kerak.md` (uz, ru va en oʻquvchi tekshirsin). Frontend `[nom](havola)` bilan birga chiqadi. |
 | 56 | Faoliyat > Moliyaviy faoliyat (8 sahifa): 4 eski HTML sahifa (smeta havolalari kartaga, bitta tugallanmagan gap), 4 PDF karta nomlari uch tilda | `dry`. 4 PDF/Excel `uploads/documents/` ga nusxalanadi. “Davlat xaridlari ... komissiya tarkibi” sahifasi aslida tugallanmagan bitta gap: xodimlar tarkibni qoʻshishi kerak. `tarjima-kerak.md`. |
+| 57 | Faoliyat > Madaniy-maʼrifiy va Oʻquv-uslubiy faoliyat (4 sahifa): “Kam taʼminlangan talabalar...” (toza oʻzbekchada qayta yozilgan), Malaka tavsifnoma va Malaka talablari (15 PDF kartaga), Reyting nizomi (karta nomi) | `dry`. 15 PDF (~135 MB) `uploads/documents/` ga nusxalanadi: diskda joy bor-yoʻqligini tekshiring. `tarjima-kerak.md` (oʻzbekcha matnni oʻqituvchi/oʻquvchi koʻrib chiqsin). |
 
 Har bir skript: `dry` hech narsa yozmaydi; reja (`plan.json`) tuzilgan paytdagi blok oʻzgarmagan boʻlsa ishlaydi; adminʻda tahrirlangan blok `SKIPPED` boʻlib roʻyxatga tushadi; `apply` bitta tranzaksiya va backup bilan bajariladi; ikkinchi `apply` rad etiladi; `undo` faqat yangi bloklar oʻzgarmagan joyda eskisini qaytaradi.
 
@@ -61,13 +62,13 @@ Serverda faqat alohida ruxsatdan keyin ishlang. Skriptlar serverda `/home/fermi-
 1. Baza (`pg_dump`) va `media/` ning backupini oling.
 2. Yangi frontendʻni chiqaring va DARHOL (bir xizmat oynasida) 40-skriptni qoʻllang. Sabab: yangi frontend eski `raw_html` bloklarini oddiy `block` sifatida chizadi. “Institut xaqida” sahifasida esa eski kod bu blokning katta matnini (har tilda taxminan 9–10 ming belgi, hech qachon tekshirilmagan tarixiy matn) yashirib, faqat rasmni koʻrsatardi: 40 qoʻllanmaguncha bu matn ommaga ochiq boʻlib qoladi. 40 `SKIPPED` desa (blok adminʻda oʻzgartirilgan), toʻxtang: frontendʻni oldingi versiyaga qaytaring yoki rejani qayta tuzib, 40ʻni qayta ishga tushiring. Boshqa sahifalar skriptlarsiz ham ishlaydi (hisobot rasmlari 39 gacha oddiy HTML boʻlib koʻrinadi, USMLE sahifasi 41 gacha sarlavhasiz turadi).
 3. Serverdagi repozitoriy nusxasini yangilang (skriptlar rasm va PDFʻni shu nusxadan oʻqiydi).
-4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
+4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
 5. Tekshiruv: `chown` — yangi fayllar `www-data` egaligida boʻlishi kerak (`find /home/fermi-django/media -user root` boʻsh chiqsin). Skriptlar root nomidan ishlaganda oʻzi `chown` qiladi, baribir tekshiring. Keyin `scripts/audit_section.py` va 25 sahifani uch tilda brauzerda oching (sarlavha, ketma-ketlik, telefon koʻrinishi, rasm va hujjat kartalari, konsol).
 6. Boʻlim qabul qilingandan keyingina `frontend/public/images/hisobot`, `institut-about.jpg` va `institute-history` fayllarini `public` dan oʻchirish mumkin (skriptlarni qayta ishlatish kerak boʻlsa, ular kerak).
 
 ## 4. Qaytarish
 
-Faqat qoʻllangan skriptlarni teskari tartibda (56 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
+Faqat qoʻllangan skriptlarni teskari tartibda (57 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
 
 ```sh
 run_step 44 MODE=undo
