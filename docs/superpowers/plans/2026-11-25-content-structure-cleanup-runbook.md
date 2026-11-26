@@ -1,4 +1,4 @@
-# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–61-skriptlar)
+# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–62-skriptlar)
 
 Maqsad: boʻlimning 25 sahifasi uch tilda (uz, ru, en) bir xil tipli bloklardan iborat boʻlsin; rasmlar media kutubxonasida tursin; saytda sahifaga xos maxsus kod qolmasin.
 
@@ -52,6 +52,7 @@ Sinov natijasi (2026-11-25, sinov bazasi, 39–44 tartib bilan qoʻllangandan ke
 | 59 | Faoliyat > Korrupsiyaga qarshi kurashish faoliyati (6 sahifa): tadbirlar (rasmlar), Tavsiyaviy qoʻllanma (ru/en qayta yozilgan), Davlat dasturlari, SSV buyrugʻi va 19 ilova (20 PDF kartaga), 2 ta PDF karta nomi | `dry`. ~22 PDF `uploads/documents/` ga nusxalanadi. `tarjima-kerak.md` (ru va en oʻquvchi 4 abzatsni tekshirsin). |
 | 60 | Faoliyat > Doktorantura (3 sahifa): Doktorantura maʻlumotlari (inglizcha matn qayta yozilgan, 7 sarlavha, 4 roʻyxat), Malakaviy imtihonlar (12 dastur), Monografiya (muqova va 4 PDF) | `dry`. ~35 PDF (12 dastur ikki sahifada) `uploads/documents/` ga nusxalanadi: diskda joy bor-yoʻqligini tekshiring. `tarjima-kerak.md` (inglizcha matnni toʻliq oʻqitish kerak). |
 | 61 | Tuzilma, Abiturient, Talabalar, Xorijiy-talabalar, Kongress, Interaktiv xizmatlar, Yashil Universitet: 60 sahifa (uch tilda bir xil tuzilishli), umumiy konverter `_auto_plan.py` bilan bloklarga | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). Tarjima qilinmagan: faqat tarjimalangan sarlavhalar roʻyxati `tarjima-kerak.md` da. Tuzilishi turlicha sahifalar keyingi skriptlarda. |
+| 62 | Tuzilma va Abiturient: 13 sahifa (uch tilda tuzilishi turlicha edi, qoʻlda moslangan, tarjima kerak emas) | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). `tarjima-kerak.md`. |
 
 Har bir skript: `dry` hech narsa yozmaydi; reja (`plan.json`) tuzilgan paytdagi blok oʻzgarmagan boʻlsa ishlaydi; adminʻda tahrirlangan blok `SKIPPED` boʻlib roʻyxatga tushadi; `apply` bitta tranzaksiya va backup bilan bajariladi; ikkinchi `apply` rad etiladi; `undo` faqat yangi bloklar oʻzgarmagan joyda eskisini qaytaradi.
 
@@ -66,13 +67,13 @@ Serverda faqat alohida ruxsatdan keyin ishlang. Skriptlar serverda `/home/fermi-
 1. Baza (`pg_dump`) va `media/` ning backupini oling.
 2. Yangi frontendʻni chiqaring va DARHOL (bir xizmat oynasida) 40-skriptni qoʻllang. Sabab: yangi frontend eski `raw_html` bloklarini oddiy `block` sifatida chizadi. “Institut xaqida” sahifasida esa eski kod bu blokning katta matnini (har tilda taxminan 9–10 ming belgi, hech qachon tekshirilmagan tarixiy matn) yashirib, faqat rasmni koʻrsatardi: 40 qoʻllanmaguncha bu matn ommaga ochiq boʻlib qoladi. 40 `SKIPPED` desa (blok adminʻda oʻzgartirilgan), toʻxtang: frontendʻni oldingi versiyaga qaytaring yoki rejani qayta tuzib, 40ʻni qayta ishga tushiring. Boshqa sahifalar skriptlarsiz ham ishlaydi (hisobot rasmlari 39 gacha oddiy HTML boʻlib koʻrinadi, USMLE sahifasi 41 gacha sarlavhasiz turadi).
 3. Serverdagi repozitoriy nusxasini yangilang (skriptlar rasm va PDFʻni shu nusxadan oʻqiydi).
-4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
+4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
 5. Tekshiruv: `chown` — yangi fayllar `www-data` egaligida boʻlishi kerak (`find /home/fermi-django/media -user root` boʻsh chiqsin). Skriptlar root nomidan ishlaganda oʻzi `chown` qiladi, baribir tekshiring. Keyin `scripts/audit_section.py` va 25 sahifani uch tilda brauzerda oching (sarlavha, ketma-ketlik, telefon koʻrinishi, rasm va hujjat kartalari, konsol).
 6. Boʻlim qabul qilingandan keyingina `frontend/public/images/hisobot`, `institut-about.jpg` va `institute-history` fayllarini `public` dan oʻchirish mumkin (skriptlarni qayta ishlatish kerak boʻlsa, ular kerak).
 
 ## 4. Qaytarish
 
-Faqat qoʻllangan skriptlarni teskari tartibda (61 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
+Faqat qoʻllangan skriptlarni teskari tartibda (62 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
 
 ```sh
 run_step 44 MODE=undo

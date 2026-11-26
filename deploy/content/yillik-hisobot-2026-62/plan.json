@@ -1,0 +1,3657 @@
+[
+ {
+  "slug": "oqitishning-texnik-vositalar-bolimi",
+  "order": 1,
+  "fp": {
+   "uz": "707262b54e8cfd863462183821a7d9fd4fc6bc2a18f4305d3bee9887ce13b5f2",
+   "ru": "02d7e8ef9a687547ac182b14ad1009f172d1573edfe882543f2540220354dabf",
+   "en": "c40159475c74d41c5a10e7e4f128f64e25a525e0653517aff170e464475bbdb6"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitishning texnik vositalari boʻlimining asosiy yoʻnalishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Основные направления деятельности отдела технических средств обучения",
+      "level": 3
+     },
+     "en": {
+      "text": "Main Areas of Activity of the Technical Teaching Aids Department",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oʻquv jarayoniga zamonaviy texnik vositalar va oʻquv texnologiyalarini joriy etish orqali institutni bitirgan mutaxassislarni tayyorlash sifatini oshirish. Sinf xonalarini texnik tayyorgarlik bilan jihozlash, institutning moddiy-texnik bazasini yaxshilash orqali erishiladi.",
+       "Institut xodimlarining texnik tayyorgarligi darajasini oshirish. Institut professor-oʻqituvchilarining uslubiy qoʻllanmalariga texnik vositalar va yangi oʻquv axborot texnologiyalari (til laboratoriyalarida tarmoq oʻquv vositalari, kompyuter dasturlarini joriy etish) bilan ishlash. Institut oʻquv jarayonida zamonaviy texnik oʻquv qoʻllanmalaridan foydalanishni tashkil etish.",
+       "Barcha darajadagi oʻquv jarayonini texnik oʻquv vositalari bilan taʻminlash (talabalar, oʻqituvchilar, institut xodimlari).",
+       "Oʻquv jarayonida kompyuter, multimedia uskunalaridan har tomonlama va toʻlaqonli foydalanishda fakultetlarga, kafedralarga texnik, uslubiy yordam koʻrsatish.",
+       "Oʻqituvchilarga OʻTV asoslari va jihozlarga texnik xizmat koʻrsatish boʻyicha maslahatlar berish va oʻqitish.",
+       "Oʻquv jarayonida texnik oʻquv qoʻllanmalaridan foydalanish boʻyicha professor-oʻqituvchilar bilan maslahatlashish.",
+       "Amaldagi meʻyorlar va talablarga muvofiq ravishda OʻTVni amalga oshirish usullari va vositalariga muvofiqlikni taʻminlash.",
+       "Yangi texnologiyalar, moslamalar va jihozlar sohasidagi istiqbolli yangi yoʻnalishlarni tezkor oʻrganish va tadqiq qilish.",
+       "OʻTV xavfsizligi, yangi texnologiyalarni ishlab chiqish va joriy etish, texnik xizmat koʻrsatish.",
+       "Yangi oʻqitish texnologiyalarini qoʻllab-quvvatlash, joriy etish va rivojlantirish.",
+       "Institut boʻlimlari buyurtmasi boʻyicha markaz profilida ishlarni bajarish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Повышение качества подготовки специалистов, выпускаемых институтом, путем внедрения в учебный процесс современных технических средств и образовательных технологий. Достигается за счет оснащения учебных аудиторий техническими средствами и улучшения материально-технической базы института.",
+       "Повышение уровня технической подготовленности сотрудников института. Использование технических средств и новых образовательных информационных технологий в методических разработках профессорско-преподавательского состава (внедрение сетевых учебных средств в языковых лабораториях, компьютерных программ).",
+       "Организация использования современных технических учебных пособий в образовательном процессе института.",
+       "Обеспечение всех уровней учебного процесса техническими средствами обучения (для студентов, преподавателей и сотрудников института).",
+       "Оказание факультетам и кафедрам технической и методической помощи по комплексному и эффективному использованию компьютерной и мультимедийной техники в учебном процессе.",
+       "Консультирование и обучение преподавателей основам технических средств обучения и техническому обслуживанию оборудования.",
+       "Консультирование профессорско-преподавательского состава по вопросам использования технических учебных пособий в учебном процессе.",
+       "Обеспечение соответствия методов и средств технических средств обучения действующим нормативам и требованиям.",
+       "Оперативное изучение и исследование перспективных направлений в области новых технологий, устройств и оборудования.",
+       "Обеспечение безопасности технических средств обучения, разработка и внедрение новых технологий, техническое обслуживание.",
+       "Поддержка, внедрение и развитие новых образовательных технологий.",
+       "Выполнение работ в соответствии с профилем центра по заявкам подразделений института."
+      ]
+     },
+     "en": {
+      "items": [
+       "Improving the quality of training of specialists graduating from the institute through the introduction of modern technical teaching aids and educational technologies into the learning process. This is achieved by equipping classrooms with technical facilities and enhancing the institute’s material and technical base.",
+       "Enhancing the level of technical preparedness of institute staff. Using technical tools and modern educational information technologies in the methodological materials of academic staff (implementation of network-based learning tools in language laboratories and computer software).",
+       "Organizing the use of modern technical teaching aids in the institute’s educational process.",
+       "Providing all levels of the educational process with technical teaching aids (students, teachers, and institute staff).",
+       "Providing technical and methodological assistance to faculties and departments for comprehensive and effective use of computer and multimedia equipment in the learning process.",
+       "Consulting and training teachers on the fundamentals of technical teaching aids and equipment maintenance.",
+       "Consulting academic staff on the use of technical teaching aids in the educational process.",
+       "Ensuring compliance of methods and tools of technical teaching aids with current standards and requirements.",
+       "Promptly studying and researching promising new areas in the field of technologies, devices, and equipment.",
+       "Ensuring the safety of technical teaching aids, developing and implementing new technologies, and providing technical maintenance.",
+       "Supporting, implementing, and developing new teaching technologies.",
+       "Performing tasks according to the department’s profile based on requests from institute units."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Texnik oqitish boʻlimining asosiy vazifalari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Основные задачи отдела технических средств обучения",
+      "level": 3
+     },
+     "en": {
+      "text": "Main Tasks of the Technical Teaching Aids Department",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oʻquv jarayonida texnik vositalardan foydalanishning asosiy yoʻnalishlarini oʻrganish.",
+       "Oʻquv jarayonida kompyuter, multimedia uskunalaridan foydalanish. Multimediya sinflaridagi navbatchilik qilish (kalitlarni yigʻish, jihozlarning ishlashini va ularnu mavjudligini nazorat qilish, oʻqituvchilarga yordam berish).",
+       "OʻTV ni tashkil qilish va muntazam ravishda yangilash.",
+       "Kasb-hunar taʻlimi boʻlimlarining arizalarini toʻplash, umumlashtirish va tizimlashtirish va shu asosda oʻquv mashgʻulotlarini texnik oʻquv qoʻllanmalari bilan taʻminlash jadvalini tuzish.",
+       "Talabalar, doktorantlar va boshqa toifadagi kadrlarni tayyorlash uchun yangi texnologiyalarni ishlab chiqishda ishtirok etish.",
+       "OʻTVni tashkil etuvchi asbob-uskunalar va jihozlarga texnik xizmat koʻrsatish, ularni ish sharoitida saqlash va taʻmirlash ishlarini tashkil etish.",
+       "Zamonaviy uskunalar va tizimlarni joriy yetish boʻyicha zarur choralarni koʻrish.",
+       "Oʻqitishning ilgʻor uslublarini joriy yetish, oʻquv jarayonini tashkil yetishda texnik vositalardan foydalanishni taʻminlash.",
+       "Texnik tayyorgarlikni taʻminlash bilan institutning rejalashtirilmagan ishlarida qatnashish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Изучение основных направлений использования технических средств обучения в образовательном процессе.",
+       "Использование компьютерной и мультимедийной техники в учебном процессе; дежурство в мультимедийных аудиториях (прием и сдача ключей, контроль наличия и исправности оборудования, оказание помощи преподавателям).",
+       "Организация и регулярное обновление технических средств обучения.",
+       "Сбор, обобщение и систематизация заявок подразделений профессионального образования и на этой основе составление графиков обеспечения учебных занятий техническими учебными пособиями.",
+       "Участие в разработке новых технологий для подготовки студентов, докторантов и других категорий кадров.",
+       "Организация технического обслуживания оборудования и устройств, входящих в систему технических средств обучения, их сохранности и ремонта.",
+       "Принятие необходимых мер по внедрению современных устройств и систем.",
+       "Внедрение передовых методов обучения и обеспечение использования технических средств при организации учебного процесса.",
+       "Участие в незапланированных работах института с целью обеспечения технической готовности."
+      ]
+     },
+     "en": {
+      "items": [
+       "Studying the main directions of using technical teaching aids in the educational process.",
+       "Using computer and multimedia equipment in the learning process; supervising multimedia classrooms (collecting keys, monitoring equipment availability and functionality, assisting teachers).",
+       "Organizing and regularly updating technical teaching aids.",
+       "Collecting, summarizing, and systematizing applications from vocational education units and, based on this, preparing schedules for providing technical teaching aids for classes.",
+       "Participating in the development of new technologies for training students, doctoral candidates, and other categories of personnel.",
+       "Organizing maintenance, proper storage, and repair of equipment and devices that constitute technical teaching aids.",
+       "Taking necessary measures to introduce modern equipment and systems.",
+       "Implementing advanced teaching methods and ensuring the use of technical aids in organizing the educational process.",
+       "Participating in unscheduled institutional activities to ensure technical readiness."
+      ]
+     }
+    }
+   }
+  ],
+  "notes": [
+   "4 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 1,
+  "fp": {
+   "uz": "a73719d8db770d46bbcd2a62adbdae0b80e7719b0a981c5cfec1e4224257c3ba",
+   "ru": "dc219ae780680eab4e0048d0c539e544c09798a450a2b2319b8196edb1635360",
+   "en": "f4e4b2e6f38aafa66de852df1958eed7b7e0929e8c84b877a573b83517e9d4bb"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy-maʻrifiy va tarbiyaviy ishlarning asosiy yoʻnalishlari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Основные направления воспитательной и духовно-просветительской работы:",
+      "level": 3
+     },
+     "en": {
+      "text": "Main Directions of Educational and Spiritual-Enlightenment Work:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Talabalarni milliy va umuminsoniy qadriyatlar zaminida, mustaqil Oʻzbekiston Respublikasining xaqiqiy fuqarolari etib shakllantirish;",
+       "Talabalarda milliy gʻururni shakllantirish;",
+       "Xalqimiz qadimiy urf odatlarining eng yaxshilarini tarannum etish va boyitib borish;",
+       "Vatan oldidagi fuqarolik va farzandlik vazifalarini sitqidildan bajarishga tayyorlash;",
+       "Mamlakatimizning bozor iqtisodiyotiga oʻtishi munosabati bilan olib borilayotgan ijtimoiy siyosatni amalga oshirishda talabalarni tayyorlash;",
+       "Mamlakatimiz ichki va tashqi siyosatida talab darajasidagi yosh mutaxassislarni tayyorlash boʻyicha ish olib borish;",
+       "Talabalarda kasb-hunarni egallashga maʻsuliyatni oshirish;",
+       "Milliy, oilaparvar, ota-ona, qoʻni-qoʻshni, mahalla, el-yurt oldidagi burchlarini anglashga boʻlgan munosabatni tarbiyalash;",
+       "Talabaning shaxs sifatidagi, oʻziga xos individual fazilatlarni shakllantirish va takomillashtirish;",
+       "Talabalarni ijtimoiy faollik, tashabbuskorlik, oʻqishga va kasbga boʻlgan hurmat va ijtimoiy maʻsullik hissini keng targʻib qilish;",
+       "Talaba yoshlar manfaatini himoya qilish, ularning bilim olishlari va sogʻlom hayot kechirishlari uchun barcha qulayliklar yaratish;",
+       "Talabalarning ijtimoiy-siyosiy va huquqiy ongini rivojlantirish, ularda tanqidiy va tahliliy fikrlarini kengaytirish;",
+       "Jamiyatdagi salbiy illatlar, yaʻni adolatsizlik, koʻzboʻyamachilikka, poraxoʻrlikka, tanish-bilishchilik va mahalliychilik kabi illatlarga qarshi kurash;",
+       "Xalqaro terrorizm, diniy va siyosiy ekstremizm, giyoxvandlik va uyushgan jinoyatchilikka qarshi kurash borasida talaba-yoshlar oʻrtasida mafkuraviy immunitetni qaror toptirish;",
+       "Manzillashgan maʻnaviy-axloqiy ishlarni takomillashtirib borish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Формирование студентов как настоящих граждан независимой Республики Узбекистан на основе национальных и общечеловеческих ценностей;",
+       "Воспитание у студентов национальной гордости;",
+       "Популяризация и обогащение лучших традиций и обычаев нашего народа;",
+       "Подготовка к сознательному выполнению гражданских и семейных обязанностей перед Родиной;",
+       "Подготовка студентов к реализации социальной политики, проводимой в связи с переходом страны к рыночной экономике;",
+       "Подготовка квалифицированных молодых специалистов к участию во внутренней и внешней политике страны;",
+       "Формирование у студентов ответственности за овладение профессией;",
+       "Воспитание у студентов отношения к национальным, семейным, соседским, общинным и общественно-гражданским обязанностям;",
+       "Развитие индивидуальных качеств личности студента;",
+       "Продвижение социальной активности, инициативности, уважения к учебе и профессии, чувства социальной ответственности;",
+       "Создание условий для защиты интересов студентов, их обучения и здорового образа жизни;",
+       "Развитие у студентов социально-политического и правового сознания, расширение критического и аналитического мышления;",
+       "Борьба с негативными явлениями в обществе, такими как несправедливость, показушничество, коррупция, кумовство, локализм;",
+       "Формирование идеологической устойчивости у молодежи против международного терроризма, религиозного и политического экстремизма, наркомании и организованной преступности;",
+       "Совершенствование систематической духовно-нравственной работы."
+      ]
+     },
+     "en": {
+      "items": [
+       "Forming students as true citizens of the independent Republic of Uzbekistan based on national and universal human values;",
+       "Fostering national pride among students;",
+       "Promoting and enriching the best traditions and customs of our people;",
+       "Preparing students to conscientiously fulfill civic and family duties to the Motherland;",
+       "Preparing students to implement social policies in connection with the country’s transition to a market economy;",
+       "Preparing young specialists at the student level for participation in domestic and foreign policy;",
+       "Developing responsibility in students for mastering their profession;",
+       "Instilling awareness of national, family, parental, neighborly, community, and public duties;",
+       "D-eveloping the student’s personal and individual qualities;",
+       "Promoting social activity, initiative, respect for education and profession, and a sense of social responsibility;",
+       "Creating conditions to protect the interests of students, support their education, and ensure a healthy lifestyle;",
+       "Developing students’ socio-political and legal awareness and expanding their critical and analytical thinking;",
+       "Combating negative social phenomena such as injustice, showmanship, corruption, nepotism, and localism;",
+       "Establishing ideological resilience among youth against international terrorism, religious and political extremism, drug abuse, and organized crime;",
+       "Improving systematic moral and spiritual work."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Yoshlar bilan ishlash, maʻnaviyat va maʻrifat boʻlimining vazifalari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Задачи- отдела по работе с молодежью, духовного и просветительского воспитания:",
+      "level": 3
+     },
+     "en": {
+      "text": "Tasks of the Department for Youth Work, Spirituality, and Enlightenment:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Boʻlimga institut taʻlim-tarbiya jarayonini yanada takomillashtirish va samaradorligini oshirish maqsadida quyidagi vazifalar yuklatilgan:",
+       "“Maʻnaviy-maʻrifiy” tizimga rahbarlik qilish, bu sohada olib boriladigan ishlarni muvofiqlashtirish;",
+       "Ilgʻor tajribalardan foydalangan holda maʻnaviy-maʻrifiy masalalar boʻyicha zarur ilmiy-uslubiy mavzudagi adabiyotlarni tayyorlash, chop ettirish;",
+       "Barcha soha xodimlarining oʻqishlarini tashkil etish;",
+       "Turli xil toʻgaraklar, sport, jamoat klubi, uchrashuvlar, umuminsoniy qadriyatlarga hurmat, tarixiy anʻanalarga, Vatanga muhabbat, istiqlol gʻoyalariga sadoqat, mustaqillik ruhini, maʻnaviyat sohadagi yutuqlarimizni talabalarga keng tushuntirish;",
+       "Yangi turdagi yetuk davr talabiga javob beradigan yuqori malakali mutaxassislar tayyorlash, maʻnaviy-madaniy, axloqiy-ruhiy jismoniy jihatdan barkamol, Vatanga, el-yurtga sadoqatli kishilar qilib tarbiyalash;",
+       "Maʻnaviy-maʻrifiy tarbiya jarayonidagi boshqarish tizimini muntazam ravishda takomillashtirib borish;",
+       "Maʻnaviy-maʻrifiy tarbiya ishlar rejasi va dasturlarini ishlab chiqish va uning amalga oshirilishini nazorat qilish;",
+       "Oʻzbekiston Respublikasi Prezidenti Farmonlari, Oliy Majlis va Vazirlar Mahkamasining qarorlari, Oliy taʻlim Vazirligining buyruq va maʻlumotlarini shuningdek “Taʻlim toʻgʻrisida”gi qonunda va “Kadrlar tayyorlash milliy dasturi”da belgilangan vazifalarni talabalarga, murabbiylarga va professor-oʻqituvchilarga oʻz vaqtida yetkazishni, tashkil etish;",
+       "Oʻzbekiston Respublikasi Prezidentining nutqlari va maʻruzalari, Vazirlar Mahkamasi tomonidan qabul qilingan qarorlari maxmun-mohiyatini talaba-yoshlar va professor-oʻqituvchilarga oʻz vaqtida yetkazish, har tomonlama tushuntirish ishlarini tashkil etish;",
+       "Ustoz-shogird tizimini takomillashtirib borish tizimini yoʻlga qoʻyish;",
+       "Ustoz-murabbiylar tomonidan oʻtkazilayotgan murabbiylik soatlarini samarali oʻtkazilishini taʻminlab borish;",
+       "Institutda oʻtkaziladigan “Maʻnaviyat kuni” tadbirlarining mazmunli oʻtkazilishini tashkil etish;",
+       "Turli xildagi tarbiyaviy yoʻnalishdagi uchrashuvlar oʻtkazish;",
+       "Huquqbuzarlikning oldini olish maqsadida xuquq-tartibot idoralari bilan hamkorlikda ishlash tizimini takomillashtirib borish;",
+       "Talaba-yoshlarning maʻnaviy-maʻrifiy tarbiyasi masalalariga oid ilmiy-uslubiy va amaliy adabiyotlar, qoʻllanmalar tayyorlab borish va ularni chop ettirish ishlarini amalga oshirish hamda tarbiyaviy ahamiyatga molik adabiyotlar bilan taʻminlash;",
+       "Talabalarning boʻsh vaqtlarini mazmunli oʻtkazishni tashkil qilish;",
+       "Talabalar turar joyida va ijarada yashovchi talabalarning yashash sharoitlarini muntazam nazorat qilib borishni tashkil qilib borish;",
+       "Institutda sport-sogʻlomlashtirish, maishiy xizmat, ovqatlanish, dam olish, madaniy hordiq chiqarish tizimlarining uzluksiz, sifatli ishlashini taʻminlash maqsadida nazorat qilish;",
+       "Institutda turli xildagi koʻrik-tanlovlar, festivallar, spartakiadalar, olimpiadalar oʻtkazishni tashkil qilish;",
+       "Moddiy jihatdan kam taʻminlangan koʻp bolali oilalardan chiqqan, nogiron talabalarning moddiy ahvolini yaxshilash maqsadida, ularni ahvolini aniqlash hamda ijtimoiy muxofaza qilish boʻyicha muntazam ish olib borish va universitet rahbariyatiga takliflar kiritish;",
+       "Bayramlar va allomalarning yubileylari munosabati bilan turli mavzularda tadbirlar tashkil qilib borish;",
+       "Talaba va professor-oʻqituvchilarni kino-teatrlarga, muzeylarga, tarixiy ziyoratgoh joylarga tashriflarini tashkil etib borish;",
+       "Institutda talabalarning ota-onalari, mahalliy hokimiyatlar, xayriya jamgʻarmalari, mahallalar va fakultetlar tomonidan olib borilayotgan ishlarni tashkil etish va nazorat qilish;",
+       "Talabalarni milliy va umuminsoniy qadriyatlar zaminida, mustaqil Oʻzbekiston Respublikasining xaqiqiy fuqarolari etib shakllantirish;",
+       "Talabalar milliy gʻururini shakllantirish;",
+       "Vatan oldidagi fuqarolik va farzandlik burch va vazifalarini sitqidildan bajarishga tayyorlash;",
+       "Institutda koʻrik-tanlovlar, festivallar, spartakiadalar, olimpiadalar oʻtkazishni tashkil etish;",
+       "Respublika, viloyat, shahar va institutda boʻladigan turli jamoat ishlari, tadbirlarida professor-oʻqituvchilar va talabalarni ishtirokini taʻminlash;",
+       "Tarbiyaviy ishlar yoʻnalishlari va ularning samaradorligini oshirish boʻyicha taklif kiritish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Руководство системой духовно-просветительской работы и координация соответствующих мероприятий;",
+       "Подготовка и публикация научно-методической литературы по вопросам духовно-просветительской работы с использованием передового опыта;",
+       "Организация образовательной работы для всех сотрудников;",
+       "Проведение различных кружков, спортивных мероприятий, клубов, встреч, объяснение студентам ценности общечеловеческих идеалов, истории, патриотизма, независимости и достижений духовной сферы;",
+       "Подготовка высококвалифицированных специалистов, соответствующих современным требованиям, воспитание всесторонне развитых, патриотически настроенных личностей;",
+       "Постоянное совершенствование системы управления воспитательной работой;",
+       "Разработка планов и программ воспитательной работы и контроль их реализации;",
+       "Ознакомление студентов, наставников и преподавателей с указами Президента, решениями Олий Мажлиса и Кабинета Министров, приказами Министерства высшего образования, законами и национальной программой подготовки кадров;",
+       "Разъяснение студентам и преподавателям содержания речей и решений Президента и Кабинета Министров;",
+       "Совершенствование системы наставничества;",
+       "Обеспечение эффективного проведения наставнических часов;",
+       "Организация мероприятий ко «Дню духовности» в институте;",
+       "Проведение встреч различной воспитательной направленности;",
+       "Совершенствование сотрудничества с правоохранительными органами для профилактики правонарушений;",
+       "Подготовка и публикация научно-методических и практических материалов по духовно-просветительскому воспитанию студентов;",
+       "Организация содержательного досуга студентов;",
+       "Контроль условий проживания студентов в общежитиях и съемных квартирах;",
+       "Контроль непрерывной и качественной работы спортивно-оздоровительных, бытовых, пищевых и культурных служб института;",
+       "Организация конкурсов, фестивалей, спартакиад, олимпиад;",
+       "Поддержка социально уязвимых студентов, студентов из многодетных семей и инвалидов;",
+       "Организация мероприятий к праздникам и юбилеям ученых;",
+       "Организация посещения студентами и преподавателями кинотеатров, музеев, исторических мест;",
+       "Контроль и организация работы факультетов, местных органов власти и благотворительных фондов по воспитанию студентов;",
+       "Предложения по повышению эффективности воспитательной работы и её направлений."
+      ]
+     },
+     "en": {
+      "items": [
+       "Leading the spiritual-enlightenment system and coordinating activities in this field;",
+       "Preparing and publishing scientific and methodological literature on spiritual-enlightenment issues using advanced experience;",
+       "Organizing educational activities for all staff members;",
+       "Conducting various clubs, sports, community meetings, explaining universal values, history, patriotism, independence, and achievements in the field of spirituality to students;",
+       "Preparing highly qualified specialists meeting modern requirements and educating morally, culturally, and physically developed, loyal citizens;",
+       "Continuously improving the management system of educational work;",
+       "Developing plans and programs for educational work and monitoring their implementation;",
+       "Communicating Presidential decrees, decisions of the Oliy Majlis and Cabinet of Ministers, Ministry of Higher Education orders, laws, and national programs to students, mentors, and faculty;",
+       "Explaining to students and faculty the content of Presidential speeches and Cabinet decisions;",
+       "Improving the mentor-apprentice system;",
+       "Ensuring effective implementation of mentorship sessions;",
+       "Organizing meaningful “Spirituality Day” events in the institute;",
+       "Conducting meetings on various educational topics;",
+       "Enhancing cooperation with law enforcement agencies to prevent violations;",
+       "Preparing and publishing scientific, methodological, and practical materials on student spiritual-enlightenment;",
+       "Organizing meaningful leisure activities for students;",
+       "Monitoring students’ living conditions in dormitories and rented apartments;",
+       "Ensuring uninterrupted and quality operation of sports, wellness, household, food, and cultural services;",
+       "Organizing contests, festivals, spartakiads, and olympiads;",
+       "Supporting financially disadvantaged students, students from large families, and students with disabilities;",
+       "Organizing events for holidays and anniversaries of scholars;",
+       "Organizing visits to cinemas, museums, and historical sites for students and faculty;",
+       "Controlling and coordinating faculty, local authorities, and charitable foundations in educational activities for students;",
+       "Making proposals to improve the effectiveness of educational work and its directions."
+      ]
+     }
+    }
+   }
+  ],
+  "notes": [
+   "4 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "buxgalteriya-bolimi",
+  "order": 1,
+  "fp": {
+   "uz": "711cf193991f8fcea7cc8b32a8ccfa8133f6c66f6fe6af794a6a4e62728a26cc",
+   "ru": "4ecb1f47e98e8dc8004da1562ce7e72891d0cad33ce86c68923b62ff8ceba440",
+   "en": "8913bfbe2f5bd2d78e1cd218e4fb67009aefd517ee6d0cff1e28c312b64da680"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institut buxgalteriya boʻlimi Oʻzbekiston Respublikasi Adliya vazirligida 2010-yil 22-dekabrda 2169-son bilan roʻyxatga olingan “Byudjet tashkilotlarida buxgalteriya hisobi toʻgʻrisida”gi yoʻriqnomaga asosan faoliyat yuritadi. Bosh hisobchi boshchilik qiladigan institutning buxgalteriyasi mustaqil tarkibiy boʻlinma hisoblanadi va institutning boshqa biron boʻlinmasi tarkibiga kiritilishi taqiqlanadi. Institutda buxgalteriya hisobi yoʻriqnomaga muvofiq buxgalteriya hisobi yuritishning memorial orderi shaklida olib boriladi. Institut buxgalteriyasi Oʻzbekiston Respublikasi Moliya vazirligi bilan kelishgan holda buxgalteriya hisobi yuritishni jurnal-order shaklida olib boradi."
+     },
+     "ru": {
+      "text": "Бухгалтерский отдел Института осуществляет свою деятельность в соответствии с Инструкцией «О бухгалтерском учёте в бюджетных организациях», зарегистрированной Министерством юстиции Республики Узбекистан 22 декабря 2010 года за № 2169. Бухгалтерия Института, возглавляемая главным бухгалтером, является самостоятельным структурным подразделением и не может быть включена в состав других подразделений Института. Бухгалтерский учёт в Институте ведётся в форме мемориальных ордеров в соответствии с Инструкцией. По согласованию с Министерством финансов Республики Узбекистан бухгалтерия Института также может вести бухгалтерский учёт в журнально-ордерной форме."
+     },
+     "en": {
+      "text": "The Accounting Department of the Institute operates in accordance with the Instruction “On Accounting in Budgetary Organizations” registered with the Ministry of Justice of the Republic of Uzbekistan on December 22, 2010, under No. 2169. The Institute’s Accounting Department, headed by the Chief Accountant, is an independent structural unit and shall not be included in any other structural subdivision of the Institute. Accounting at the Institute is maintained in the form of memorial orders in compliance with the Instruction. By agreement with the Ministry of Finance of the Republic of Uzbekistan, accounting may also be conducted in the journal-order form."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Buxgalteriya boʻlimining vazifalari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Задачи бухгалтерского отдела:",
+      "level": 3
+     },
+     "en": {
+      "text": "Responsibilities of the Accounting Department:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oʻzbekiston Respublikasining “Buxgalteriya hisobi toʻgʻrisida”gi, “Davlat xaridlari toʻgʻrisida”gi Qonunlari, Soliq Kodeksi, Mehnat Kodeksi, ”Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisida”gi Qonun, “Bank siri toʻgʻrisida”gi Qonun, soliq va gʻaznachilikka oid meʻyoriy hujjatlar hamda budjet tashkilotlari xodimlari mehnatiga haq toʻlash va moddiy qimmatliklarning hisobini yuritish boʻyicha Yoʻriqnoma talablari bajarilishini taʻminlash;",
+       "Axborot-kommunikatsiya texnologiyalarni puxta bilish, elektron buxgalteriya tizimida ishlarni tashkil etish;",
+       "Budjet va budjetdan tashqari mablagʻlardan faqat maqsadli foydalanishni taʻminlash va noqonuniy sarf-xarajatlarga yoʻl qoʻymaslik;",
+       "Tarkibiy boʻlinmalar yaʻni kafedralar va boʻlimlardan ish vaqti tabellari va moddiy qimmatliklar boʻyicha hisobotlarning haqqoniyligini holisona tekshirish va qonundan tashqari xarajatlarning oldini olish;",
+       "Buxgalteriya hisobini zamonaviy axborot texnologiyalar (UzASBO) asosida tashkil qilish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Обеспечение выполнения требований Законов Республики Узбекистан «О бухгалтерском учёте», «О государственных закупках», Налогового кодекса, Трудового кодекса, Закона «Об исполнении судебных актов и актов иных органов», Закона «О банковской тайне», а также нормативных документов в сфере налогообложения и казначейства и Инструкции по оплате труда работников бюджетных организаций и учёту материальных ценностей;",
+       "Владение информационно-коммуникационными технологиями и организация работы в электронной бухгалтерской системе;",
+       "Обеспечение целевого использования бюджетных и внебюджетных средств и недопущение незаконных расходов;",
+       "Объективная проверка достоверности табелей учёта рабочего времени и отчётов по материальным ценностям, поступающих от структурных подразделений (кафедр и отделов), и предотвращение незаконных расходов;",
+       "Организация бухгалтерского учёта на основе современных информационных технологий (UzASBO)."
+      ]
+     },
+     "en": {
+      "items": [
+       "Ensuring compliance with the requirements of the Laws of the Republic of Uzbekistan “On Accounting,” “On Public Procurement,” the Tax Code, the Labor Code, the Law “On Enforcement of Court Decisions and Acts of Other Authorities,” the Law “On Banking Secrecy,” as well as regulatory documents related to taxation and treasury operations, and the Instruction on remuneration of employees of budgetary organizations and accounting of material assets;",
+       "Proficient use of information and communication technologies and organization of work within the electronic accounting system;",
+       "Ensuring the targeted use of budgetary and extra-budgetary funds and preventing illegal expenditures;",
+       "Objectively verifying the accuracy of timesheets and reports on material assets submitted by structural units (departments and divisions) and preventing unlawful expenses;",
+       "Organizing accounting activities based on modern information technologies (UzASBO)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Buxgalteriya boʻlimining funksiyalari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Функции бухгалтерского отдела:",
+      "level": 3
+     },
+     "en": {
+      "text": "Functions of the Accounting Department:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Buxgalteriya boʻlimi buxgalteriya masalalariga oid Oʻzbekiston Respublikasi Prezidentining farmon va qarorlari hamda Vazirlar Mahkamasining qarorlari, Oʻzbekiston Respublikasi Tashqi iqtisodiy faoliyat milliy bankining, Akademiyaning meʻyoriy hujjatlarida belgilangan talablarni oʻz vaqtida va sifatli bajarilishini taʻminlash;",
+       "Oʻzbekiston Respublikasining Iqtisodiyot va moliya vazirligi, Soliq inspeksiyasi, Statistika boshqarmasi, shuningdek mutasaddi tashkilotlar tomonidan topshirilgan buyruq va vazifalar bilan ishlashga doir masalalar boʻyicha rejada belgilangan hisobot va maʻlumotlarni tayyorlanishini taʻminlash;",
+       "Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi tomonidan tasdiqlangan meʻyoriy hujjatlarga asosan buxgalteriya hisobini tashkil qilishni taʻminlash, moddiy, mehnat va moliyaviy resurslardan samarali foydalanishni tashkil qilish;",
+       "Professor-oʻqituvchi va xodimlar oylik ish haqlarini, doktorantlar stipendiyalarini oʻz vaqtida hisoblashni va ularning tarqatilishini tashkil qilish;",
+       "Hisob varaqalarda aktivlarning holatini va harakatini, mulkiy huquqlar va majburiyatlarning holati toʻgʻrisidagi toʻliq hamda aniq maʻlumotlarni shakllantirish;",
+       "Moddiy boyliklar va pul mablagʻlari inventarizatsiyasini oʻz vaqtida oʻtkazish;",
+       "Mahalliy va respublika budjetiga hisoblangan soliqlarni oʻz muddatlarida toʻlanishini taʻminlash;",
+       "Bankdan olingan pul mablagʻlarining maqsadli sarflashini taʻminlash;",
+       "Debitorlik va kreditorlik qarzdorliklari paydo boʻlishini oldini olish;",
+       "Ish haqi fondini tasdiqlangan shtat jadvallari va shtat formulyarlari asosida toʻgʻri sarflanishini taʻminlash;",
+       "Stipendiya fondini rektor tomonidan chiqarilgan buyruqlar asosida toʻgʻri saflanishini taʻminlash;",
+       "Tovar-moddiy boyliklarni belgilangan qoidalar asosida omborxonaga qabul qilish va chiqim qilishni taʻminlash;",
+       "Budjet va budjetdan tashqari mablagʻlarni tasdiqlangan xarajatlar smetalari asosida xarajatlar moddalari boʻyicha sarflanishini taʻminlash;",
+       "Pul mablagʻlari, tovar-moddiy boyliklari va asosiy vositalar inventarizatsiyasini oʻrnatilgan tartib asosida sifatli oʻtkazilishini taʻminlash;",
+       "Oliy taʻlim, fan va innovatsiyalar vazirligiga, soliq inspeksiyasiga va boshqa tashkilotlarga oylik, choraklik va yillik hisobotlarni oʻz muddatlarida topshirilishini taʻminlash;",
+       "Oʻqitishning toʻlov-kontrakt shakli va boshqa budjetdan tashqari tushumlar hisobini yuritish;",
+       "Tashkilotlarning barcha boʻlimlari (xodimlari) buxgalteriyaga buxgalteriya hisobini yuritish uchun kerak boʻladigan barcha zaruriy hujjatlarni (buyruq va farmoyishlarning koʻchirmalarini, shuningdek, turli xil shartnoma, toʻlov hujjatlari va boshqalarni) oʻz vaqtida taqdim qilishlari shart;",
+       "Bosh hisobchining buxgalteriya hisobini yuritishi uchun talab qilinadigan hujjatlar va maʻlumotlarni rasmiylashtirish va buxgalteriyaga taqdim qilishga doir talablarini oʻz vaqtida bajarishga tashkilotning barcha xodimlari majbur."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Обеспечение своевременного и качественного выполнения требований, установленных указами и постановлениями Президента Республики Узбекистан, решениями Кабинета Министров, нормативными документами Национального банка внешнеэкономической деятельности Республики Узбекистан и Академии;",
+       "Подготовка отчётов и информации в соответствии с планом по поручениям Министерства экономики и финансов Республики Узбекистан, налоговой инспекции, органов статистики и других уполномоченных организаций;",
+       "Организация бухгалтерского учёта в соответствии с нормативными документами Министерства экономики и финансов Республики Узбекистан, обеспечение эффективного использования материальных, трудовых и финансовых ресурсов;",
+       "Своевременное начисление и организация выплаты заработной платы профессорско-преподавательскому составу и сотрудникам, а также стипендий докторантам;",
+       "Формирование полной и достоверной информации о состоянии и движении активов, имущественных правах и обязательствах;",
+       "Своевременное проведение инвентаризации материальных ценностей и денежных средств;",
+       "Обеспечение своевременной уплаты налогов в местный и республиканский бюджеты;",
+       "Обеспечение целевого использования денежных средств, полученных из банков;",
+       "Предотвращение возникновения дебиторской и кредиторской задолженности;",
+       "Контроль правильного использования фонда оплаты труда в соответствии с утверждённым штатным расписанием;",
+       "Контроль правильного использования стипендиального фонда на основании приказов ректора;",
+       "Обеспечение приёма, хранения и списания товарно-материальных ценностей в соответствии с установленными правилами;",
+       "Обеспечение расходования бюджетных и внебюджетных средств по статьям расходов в соответствии с утверждёнными сметами;",
+       "Проведение инвентаризации денежных средств, товарно-материальных ценностей и основных средств в установленном порядке;",
+       "Обеспечение своевременной сдачи месячной, квартальной и годовой отчётности в Министерство высшего образования, науки и инноваций, налоговую инспекцию и другие организации;",
+       "Ведение учёта поступлений от платно-контрактного обучения и иных внебюджетных источников;",
+       "Обязанность всех подразделений и сотрудников Института своевременно предоставлять в бухгалтерию все необходимые документы для ведения бухгалтерского учёта;",
+       "Обязанность всех сотрудников Института своевременно выполнять требования главного бухгалтера по оформлению и предоставлению документов и информации, необходимых для бухгалтерского учёта."
+      ]
+     },
+     "en": {
+      "items": [
+       "Ensuring timely and high-quality implementation of requirements established by decrees and resolutions of the President of the Republic of Uzbekistan, resolutions of the Cabinet of Ministers, and regulatory documents of the National Bank for Foreign Economic Activity and the Academy;",
+       "Preparing reports and information in accordance with approved plans based on assignments from the Ministry of Economy and Finance, Tax Inspectorate, Statistics Agency, and other authorized bodies;",
+       "Organizing accounting in compliance with regulations approved by the Ministry of Economy and Finance and ensuring efficient use of material, labor, and financial resources;",
+       "Timely calculation and organization of payment of salaries to faculty members and staff, as well as stipends to doctoral students;",
+       "Forming complete and accurate information on the condition and movement of assets, property rights, and liabilities;",
+       "Conducting timely inventory of material assets and cash funds;",
+       "Ensuring timely payment of assessed taxes to local and republican budgets;",
+       "Ensuring targeted use of funds received from banks;",
+       "Preventing the occurrence of accounts receivable and payable;",
+       "Ensuring proper use of the payroll fund in accordance with approved staffing schedules;",
+       "Ensuring proper use of the scholarship fund based on orders issued by the Rector;",
+       "Ensuring receipt, storage, and disposal of inventory items in accordance with established procedures;",
+       "Ensuring expenditure of budgetary and extra-budgetary funds by expense items in accordance with approved cost estimates;",
+       "Conducting inventories of cash, inventory items, and fixed assets in accordance with established procedures;",
+       "Ensuring timely submission of monthly, quarterly, and annual reports to the Ministry of Higher Education, Science and Innovation, tax authorities, and other organizations;",
+       "Maintaining accounting records for tuition fee-based education and other extra-budgetary revenues;",
+       "Requiring all departments and employees of the Institute to timely submit all documents necessary for accounting purposes;",
+       "Obliging all employees of the Institute to comply with the Chief Accountant’s requirements regarding preparation and submission of documents and information necessary for accounting."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Buxgalteriya boʻlimining huquqlari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Права бухгалтерского отдела:",
+      "level": 3
+     },
+     "en": {
+      "text": "Rights of the Accounting Department:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Boʻlimning zarur darajadagi faoliyati taʻminlanishi uchun zamonaviy moddiy-texnik bazaga ega boʻlish;",
+       "Boʻlim faoliyati uchun zarur boʻlgan kanselyariya buyumlari bilan taʻminlanish;",
+       "Buxgalteriya hisobi va nazorat ishlari toʻgʻri tashkil etilishini taʻminlash yuzasidan tegishli chora-tadbirlar koʻrishni tashkilot rahbaridan talab qilish;",
+       "Tarkibiy boʻlinmalarda pul mablagʻlari, tovar-moddiy va boshqa qimmatliklarni qabul qilish, saqlash hamda sarflash yuzasidan belgilangan tartibga amal qilinishini tekshirib turish;",
+       "Institutning barcha boʻlinmalaridan buxgalteriya hisobini yuritish uchun talab qilinadigan hujjatlar va maʻlumotlarni rasmiylashtirishni hamda buxgalteriyaga taqdim qilishni talab qilish;",
+       "Mansabdor shaxslar tomonidan noqonuniy xatti-harakatlar qilinayotgani maʻlum boʻlib qolgan hollarda, bosh hisobchi tegishli chora koʻrishi uchun bu haqda Institut rahbariga yozma axborot berish;",
+       "Moddiy javobgar shaxslarni (kassirlar, ombor mudirlari va boshqalar) lavozimga tayinlash, ozod etish va boshqa lavozimga oʻtkazish masalasi bosh hisobchi bilan kelishib hal qilish;",
+       "Turli tashkilotlar bilan tuziladigan shartnomalarni, agar ular bevosita Akademiyaning moliya-xoʻjalik faoliyatiga bogʻliq boʻlsa, shuningdek, xodimlarga mansab maoshlari, ish haqi ustamalari hamda mukofotlarni belgilash toʻgʻrisidagi buyruqlar va farmoyishlarni dastlab bosh hisobchi koʻrib chiqishi va ularga imzo chekishi;",
+       "Institut rahbari bosh hisobchiga ushbu 2169-yoʻriqnomaga asosan shuningdek, boshqa normativ-huquqiy hujjatlarda nazarda tutilgan oʻz majburiyatlarini bajarishi hamda huquqlaridan foydalanishida yordam berishga majbur;",
+       "Bosh hisobchiga oʻz majburiyatlarini bajargani hamda oʻz huquqlaridan foydalangani uchun tazyiq oʻtkazish qatʻiyan taqiqlanadi;",
+       "Bosh hisobchining pul mablagʻlari, tovar-moddiy va boshqa qimmatliklarni qabul qilish, saqlash va sarflash boʻyicha qonunchilikka zid boʻlgan operatsiyalar bilan bogʻliq hujjatlarni ijroga qabul qilishi hamda rasmiylashtirishi taqiqlanadi;",
+       "Agarda, Institut rektori tomonidan bosh hisobchiga ijro etishi uchun berilgan farmoyish (buyruq) yuzasidan bosh hisobchi va tashkilot rahbari oʻrtasida ushbu farmoyishni (buyruqni) buxgalteriya hisobi va hisobotini yuritishning belgilangan tartibiga yoki qonunchilikka muvofiqligi borasida ziddiyat (kelishmovchilik) yuzaga kelsa, bosh hisobchi ushbu farmoyish (buyruq)ni ijro etmay turib, zudlik bilan Akademiya rahbariga mazkur holat yuzasidan asoslangan yozma axborot beradi;",
+       "Bosh hisobchi tomonidan yozma ravishda axborot berilishiga qaramasdan tashkilot rahbari qayta yozma farmoyish (buyruq) bergan hollarda, bosh hisobchi ushbu farmoyish (buyruq)ni bajaradi. Bunda ushbu harakatning sodir boʻlganligi uchun javobgarlik toʻliq tashkilot rahbariga yuklatiladi;",
+       "Bosh hisobchiga uning hisob va hisobot boʻyicha toʻgʻridan-toʻgʻri vazifalarini bajarish bilan bogʻliq boʻlmagan topshiriqlarni berish mumkin emas. Shuningdek, bosh hisobchiga pul mablagʻlari va moddiy qimmatliklar uchun bevosita moddiy javobgarlik bilan bogʻliq boʻlgan vazifalarni yuklash mumkin emas. Unga banklar va boshqa tashkilotlardan bevosita pul mablagʻlarini olish taqiqlanadi;",
+       "Bosh hisobchi yoki uning oʻrinbosari tomonidan imzolanmagan boshlangʻich hisob hujjatlari ijro uchun yaroqsiz hisoblanadi va ijroga qabul qilinmaydi;",
+       "Qonunchilikda belgilangan boshqa huquqlarni amalga oshiradi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Обеспечение современными материально-техническими средствами для полноценной деятельности отдела;",
+       "Обеспечение канцелярскими принадлежностями;",
+       "Требование от руководителя Института принятия мер по правильной организации бухгалтерского учёта и контроля;",
+       "Проведение проверок соблюдения установленного порядка приёма, хранения и расходования денежных средств и материальных ценностей в структурных подразделениях;",
+       "Требование от всех подразделений Института оформления и предоставления необходимых бухгалтерских документов;",
+       "Информирование руководителя Института в письменной форме о выявленных незаконных действиях должностных лиц;",
+       "Согласование вопросов назначения, освобождения и перевода материально ответственных лиц;",
+       "Предварительное рассмотрение и подписание договоров и приказов, связанных с финансово-хозяйственной деятельностью Института;",
+       "Запрет на оказание давления на главного бухгалтера при исполнении им своих обязанностей;",
+       "Иные права, предусмотренные законодательством."
+      ]
+     },
+     "en": {
+      "items": [
+       "To be provided with a modern material and technical base necessary for effective operation;",
+       "To be supplied with necessary office materials;",
+       "To demand that the Institute’s management take appropriate measures to ensure proper organization of accounting and control;",
+       "To conduct inspections of compliance with established procedures for receipt, storage, and expenditure of cash and material assets in structural units;",
+       "To require all Institute departments to prepare and submit documents and information necessary for accounting;",
+       "To inform the Institute’s management in writing of any identified illegal actions by officials;",
+       "To participate in decisions regarding appointment, dismissal, and transfer of materially responsible persons;",
+       "To preliminarily review and sign contracts, orders, and instructions related to the financial and economic activities of the Institute;",
+       "To exercise other rights provided by applicable legislation."
+      ]
+     }
+    }
+   }
+  ],
+  "notes": [
+   "7 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 1,
+  "fp": {
+   "uz": "8437b568cb28ee12010b6372ff78fe07de73baa050fa530ca547ff98c7a64d92",
+   "ru": "63dfbfeb3e6647531e6439e0520b0f82d3546e26717f5baf2e1769f44f8cc4b2",
+   "en": "c47b3f86e4e240f3f0100490ead5216797ae7afbdd740ef890740629190382e3"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tarixi",
+      "level": 3
+     },
+     "ru": {
+      "text": "История",
+      "level": 3
+     },
+     "en": {
+      "text": "History",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1964 yil Margʻilon shahrida “Margʻilon shahar tibbiyot bilom yurti nomi bilan tashkil etilgan Oʻzbzekiston Respublikasi Oliy va oʻrta maxsus taʻlim vazirligi. Oʻrta maxsus taʻlim markazining 2002-yil 30 - noyabrdagi 327-sonli Fargʻona viloyati hokimligining oʻrta maxsus kasb- hunar taʻlimi xududiy boshqarmasining 2003 – yil 10sentyabrdagi 239-sonli buyrugʻI bilan Margʻilon tibbiyot kolleji maqomi berilgan. Oʻzbekiston Respublikasi Prezdentining 2020-yil 7-apreldagi “Tibbiy- sanitariya sohasida kadrlarni tayyorlash va uzluksiz kasbiy rivojlantirishning mutlaqo yangi tizimini joriy etish chora –tadbirlari togʻrisada”gi PQ-4666- sonli qaroriga asosan Margʻilon Abu Ali Ibn Sino nomidagi jamoat salomatligi texnikumiga aylantirilgan. Texnikum Margʻilon shahar, Shifokorlar koʻchasi, 20 –uyda joylashgan. Texnikumning ustavi ishlab chiqilib Margʻilon shaxar xokimi tomonida tasdiqlanib roʻyxatdan oʻtkazilgan. Taʻlim muassasasining binosi 1964-yilda qurilgan boʻlib, quvvati 2650 oʻrinli. Xudud yer maydoni – 14971 kv m2. 4 qavatli oʻquv bino, 2 qavatli yoʻldosh bino, 4 qavatli yotoqxonaning 1 qavatida maʻmuriyat va oʻquv xonalar joylashgan, 3 qavatli qoʻshimcha binoda innovatsion xonalar tashkil etilgan. Yotoqxona 100 oʻringa ega. Aloxida 654 kv sport zali mavjud. Bundan tashqari, 150 oʻrinli oshxona faoliyat yuritmoqda. 7 ta yangi innovatsion xonalar tashkillangan, Axborot kutubxona tashkil etilgan. Texnikumda jami 101 ta, 56 nazariy, 28 ta amaliy oʻquv xonalari, 17 ta simulyatsiya xonalari mavjud. Hamshiralik ishi yoʻnalishi boʻyicha 6 ta, Farmatsiya yoʻnalishi boʻyicha 4 ta, Feldsher-akusherlik ishi yoʻnalishi boʻyicha 3 ta, Tibbiy profilaktika ishi yoʻnalishi boʻyicha 2 ta, Feldsher-laboratlik ishi yoʻnalishi boʻyicha 2 ta simulyatsion trening oʻquv zallari tashkil etilgan."
+     },
+     "ru": {
+      "text": "Министерство высшего и среднего специального образования Республики Узбекистан, образованное в 1964 году в городе Маргилан под названием “Маргиланское городское медицинское образовательное учреждение\". Приказом территориального управления среднего профессионального образования хокимията Ферганской области № 327 от 30 ноября 2002 г. № 239 от 10 сентября 2003 г. центру среднего специального образования присвоен статус Маргиланского медицинского колледжа. В соответствии с постановлением Президента Республики Узбекистан от 7 апреля 2020 года № ПП - 4666”о мерах по внедрению совершенно новой системы подготовки и непрерывного профессионального развития кадров в медико –санитарной сфере \" Маргилан был преобразован в техникум общественного здравоохранения имени Абу Али Ибн Сины. Техникум расположен в городе Маргилан на улице врачей, 20. Был разработан Устав техникума, утвержден и зарегистрирован мэром города Маргилан."
+     },
+     "en": {
+      "text": "In 1964, the Ministry of Higher and Secondary Special Education of the Republic of Uzbekistan was established in the city of Margilan under the name \"Margilan City Medical University\". Margilan Medical College, by order of the Center of Secondary Special Education No. 327 dated November 30, 2002, of the Territorial Department of Secondary Special Vocational Education of Fergana Region No. 239 dated September 10, 2003, was given status. According to the decision of the President of the Republic of Uzbekistan dated April 7, 2020, \"On measures to introduce a completely new system of personnel training and continuous professional development in the field of medicine and sanitation,\" №-4666, named after Margilan Abu Ali Ibn Sino, was transformed into a technical school of public health. Technikum Margilan is located at 20 Shifokorlar Street, Margilan. The charter of the technical school was developed, approved, and registered by the mayor of Margilan. The building of the educational institution was built in 1964 and has a capacity of 2650 seats. The land area of the territory is 14971 sq. m. There is a 4-story educational building and a 2-story companion building. Administration and study rooms are located on the 1st floor of the 4-story dormitory, and innovative rooms are organized in the 3-story additional building. The dormitory has 100 beds. There is a separate 654 sq m gym. In addition, there is a kitchen with 150 seats. 7 new innovative rooms were created, and an information library was created. The technical school has a total of 101 classrooms: 56 theoretical, 28 practical, and 17 simulation rooms. 6 simulation training halls for nursing, 4 for pharmacy, 3 for paramedic-midwifery, 2 for medical preventive work, and 2 for paramedic-laboratory work have been established."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy-maʻrifiy ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Духовно-просветительская работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Spiritual and educational works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mamlakatimizda maʻnaviy-maʻrifiy ishlarni tizimli tashkil etish, bu borada amalga oshirilayotgan chora-tadbirlarning samaradorligini oshirish, Prezidentimiz Sh.M.Mirziyoyev tomonidan taklif etilgan “UCHINCHI RENESSANS” yaʻni milliy gʻoya asosida texnikumda taxsil olayotgan oʻquvchi yoshlarni turli maʻnaviy-maʻrifiy tadbirlarga jalb etish orqali, erkin va farovon hayot barpo etish kabi ulugʻ maqsadlarimiz sari intilishga, Vatan ravnaqi uchun katta hissa qoʻsha oladigan intelektual salohiyatli boʻlishga, qalbi va ongida milliy, maʻnaviy-ahloqiy tarbiyani tarkib toptirish, halol, pok, bilimli, jaxon andozalariga javob bera oladigan yetuk, amaliy koʻnikmalarga ega mutaxassis boʻlishga, xalq hizmatida yurishga oʻrgatish, vatan ravnaqi hamda tarraqiyotiga hissa qoʻshishga ongli va erkin mushohada qiliuvchi shaxs sifatida shakilanishiga alohida eʻtibor qaratib kelinlmoqda. Jumladan, texnikum qoshida professional taʻlim tizimi transformatsiyasi asosida qoʻshma taʻlim dasturlariga binoan tibbiyot hamshiralarini tayyorlashga alohida eʻtibor qaratilib, bu borada tizimli ishlar olib borilmoqda. Taʻlim muassasasida “Tibbiyotda Nemis tili” toʻgaragi tashkil etilib, Xalqaro standartlarga mos tibbiyot mutaxassislarini tayyorlashga eʻtibor qaratilmoqda.Toʻgarak mashgʻulotni sifat va samaradorligini nazorat qilish uchun Oliy taʻlim fan va inovatsiyalar vazirligi, Yoshlar agentligi, Fargʻona Jamoat salomatligi instituti tomonidan amaliy yordam koʻrsatib kelinmoqda."
+     },
+     "ru": {
+      "text": "Системная организация духовно-просветительской работы в нашей стране, реализуемая в этом направлении повышая эффективность принимаемых мер, президент Ш.M.\"Третий Ренессанс\", предложенный Мирзиеевым, заключается в том, что, привлекая учащуюся молодежь, обучающуюся в техникуме на основе национальной идеи, к различным духовно-просветительским мероприятиям, мы стремимся к достижению наших великих целей, таких как построение свободной и благополучной жизни, обладая интеллектуальным потенциалом, способным внести большой вклад в развитие Отечества, в душе и уме формируем национальное, духовно-нравственное воспитание. особое внимание уделяется становлению специалиста, обладающего зрелыми практическими навыками, способного отвечать мировым стандартам, быть честным, чистым, образованным, сознательным и свободомыслящим человеком, умеющим ходить на службу народу, вносить вклад в процветание и развитие родины. В частности, совместные образовательные программы на основе трансформации системы профессионального образования при техникуме. Кружок оказывает практическую помощь Министерству высшего образования по науке и инновациям, молодежному агентству, Ферганскому институту общественного здравоохранения для контроля качества и эффективности обучения."
+     },
+     "en": {
+      "text": "Systematic organization of spiritual and educational work in our country is done in this regard, increasing the efficiency of the measures being implemented, by involving the students studying at the technical school on the basis of the \"THIRD RENAISSANCE\" proposed by President Sh.M. Mirziyoyev, in the national idea, in various spiritual and educational activities, and to be fr to strive towards our great goals such as building a prosperous life, to have intellectual potential that can make a great contribution to the development of the Motherland, to form a national, spiritual and moral education in the heart and mind, to meet the standards of being honest, pure, educated, and worldly. Special attention is being paid to the formation of a person who is conscious and free to observe, to become a mature specialist with practical skills, to teach him to serve the people, and to contribute to the prosperity and development of the country. In particular, special attention is paid to the training of medical nurses by joint educational programs based on the transformation of the professional education system at the technical school, and systematic work is being carried out in this regard. The \"German Language in Medicine\" club has been established at the educational institution, and attention is paid to the training of medical specialists by international standards."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻquv va oʻquv-metodik ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Учебно-методическая работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Educational and study-methodical works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Yoʻnalishlar boʻyicha har bir kurslar uchun quyidagi hujjatlar asosida olib boriladi:"
+     },
+     "ru": {
+      "text": "По каждому из курсов по направлениям ведется на основании следующих документов:"
+     },
+     "en": {
+      "text": "It is conducted based on the following documents for each course, according to the directions:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Kvalifikatsion xarakteristika;",
+       "Davlat taʻlim standarti;",
+       "Namunaviy oʻquv dasturi;",
+       "Ishchi oʻquv dasturi;",
+       "Tasdiqlangan tashxis standartlari;",
+       "Zamonaviy taʻlim texnologiyalari, yangi avlod adabiyotlari, virtual laboratoriya va amaliy mashgʻulotlar uchun zamonaviy jixozlar algoritmi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Квалификационная характеристика;",
+       "Государственный образовательный стандарт;",
+       "Примерная учебная программа;",
+       "Рабочая программа обучения;",
+       "Утвержденные стандарты диагностики;",
+       "Современные образовательные технологии, литература нового поколения, алгоритм виртуальной лаборатории и современное оборудование для практических занятий."
+      ]
+     },
+     "en": {
+      "items": [
+       "Qualifying characteristics;",
+       "State educational standard;",
+       "Sample curriculum;",
+       "Working training program;",
+       "Approved diagnosis standards;",
+       "Modern educational technologies, new generation literature, virtual laboratories, and modern equipment algorithms for practical training."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish jarayonida quyidagi texnik taʻminotlar mavjud:",
+      "level": 3
+     },
+     "ru": {
+      "text": "В процессе обучения проводится следующее техническое обеспечение:",
+      "level": 3
+     },
+     "en": {
+      "text": "The following technical supplies are available during training:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Zamonaviy axborot va pedagok texnologiyalar asosida oʻquv jarayonini tashkil etib olib boorish uchun texnikumda 53 ta kompyuterlar internetga ulangan, 2 ta Wi -fi zonalar, 16 ta inavatsion doskalar, 4 ta videoproektorlar, mavzuga oid videofilmlar, prezentatsiyalar, multimediya dasturlari, maʻruza va amaliy mashgʻulotlarning oʻquv dasturiga asosan barcha yoʻnalishlar uchun 465 sonli buyrugʻiga muvofiq “Oʻquv materiallari toʻplami ” oʻquv jarayoniga tadbiq etilgan."
+     },
+     "ru": {
+      "text": "Для организации и проведения учебного процесса на основе современных информационных и педагогических технологий в техникуме 53 компьютера с подключением к интернету, 2 зоны Wi-Fi, 16 интерактивных досок, 4 видеопроектора, тематические видеофильмы, презентации, мультимедийные программы, лекции и практические занятия в соответствии с приказом № 465 по всем направлениям “Сборник учебных материалов\", применяемых к учебному процессу."
+     },
+     "en": {
+      "text": "To organize the educational process based on modern information and pedagogical technologies, the technical school has 53 computers connected to the Internet, 2 Wi-Fi zones, 16 innovative boards, 4 video projectors, video films on the topic, presentations, multimedia programs, and lectures. and \"Collection of educational materials\" was applied to the educational process by order No. 465 for all directions based on the curriculum of practical training."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Texnikum kutubxonasi:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Библиотека техникума:",
+      "level": 3
+     },
+     "en": {
+      "text": "Technical library:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kutubxonada ingliz, oʻzbek va rus tillaridagi 20 000 dan ortiq oʻquv adabiyotlar mavjud. Elektron kutubxona darslik, atlaslar, oʻquv qoʻllanmalar, oʻquv -uslubiy qoʻllanmalar va boshqalarni oʻz ichiga oladi."
+     },
+     "ru": {
+      "text": "В библиотеке более 20 000 единиц учебной литературы на английском, узбекском и русском языках. Электронная библиотека включает учебник, атласы, учебные пособия, учебно-методические пособия и многое другое."
+     },
+     "en": {
+      "text": "The library has more than 20,000 pieces of educational literature in English, Uzbek, and Russian. The electronic library includes textbooks, atlases, training manuals, teaching-methodical manuals, etc."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-11.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-11.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-11.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 489,
+    "caption": {
+     "uz": "1-Margʻilon tibbiyot texnikumi",
+     "ru": "1-Маргиланский медицинский техникум",
+     "en": "1-Margilan Medical College"
+    },
+    "fp": {
+     "uz": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be",
+     "ru": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be",
+     "en": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be"
+    }
+   }
+  ],
+  "notes": [
+   "16 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 1,
+  "fp": {
+   "uz": "b72a4d30f04254a124121fc2e7b1809afcb7048d771de51d67206136cce11410",
+   "ru": "5d472b624e0d4836aefdca97ddbc335d8b52acd8309808d95577fec15c09662b",
+   "en": "3e9e9ce43638bfd5c3365ad7f011fc1bfb395041afe96b6034867d4b5f13e494"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tarixi",
+      "level": 3
+     },
+     "ru": {
+      "text": "История",
+      "level": 3
+     },
+     "en": {
+      "text": "History",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2-Margʻilon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi dastlab 2006 yil 2-Margʻilon tibbiyot kolleji sifatida tashkil topgan boʻlib Oʻzbekiston Respublikasi Prezidentining PF-5812 sonli farmoni, Vazirlar Mahkamasining 2020-yil 7-avgustdagi 466-sonli qarori, Oʻzbekiston Respublikasi Sogʻliqni saqlash vazirining 09.10.2020 yil №239 sonli buyrugʻining 41-ilovasiga muvofiq texnikumga aylantirildi. Texnikumda 42 ta oʻkuv xonasi 2 ta laboratoriya xonasi, 1 ta kompyuter xona va 10 ta personal kompyuter mavjud, 26 ta 30 oʻrinli oʻquv xonasi, 8 ta 15 oʻrinli amaliyotgacha boʻlgan oʻquv xonasi mavjud. Oʻquv xonalarining sanitariya – gigiena xolati talab darajasida. 1-binoning 1-2 qavatida nazariy oʻquv xonalari tashkil etilgan, taʻlim tarbiya jarayoni uchun toʻliq talab darajasida."
+     },
+     "ru": {
+      "text": "2-Маргиланский техникум общественного здравоохранения имени Абу Али Ибн Сины был первоначально основан в 2006 году как 2-маргиланский медицинский колледж указом Президента Республики Узбекистан №ПФ-5812, постановлением Кабинета министров № 466 от 7 августа 2020 года, приказом министра здравоохранения Республики Узбекистан от 09.10.2020 № 239 в соответствии с приложением 41 к приказу № преобразован в техникум. В техникуме 42 учебных кабинета, 2 лабораторных, 1 компьютерный кабинет и 10 персональных компьютеров, 26 30-местных учебных кабинетов, 8 15-местных практических кабинетов. Санитарно – гигиеническое состояние учебных помещений находится на уровне спроса. Теоретические кабинеты организованы на 1-2 этажах 1-го корпуса, обучение находится на полном уровне требований к учебно-воспитательному процессу."
+     },
+     "en": {
+      "text": "The 2nd Margilon Abu Ali ibn Sino Public Health Technical School was originally established as the 2nd Margilon Medical College of 2006 and was transformed into a technical school according to decree PF-5812 of the president of the Republic of Uzbekistan, Resolution No. 466 of the Cabinet of Ministers of August 7, 2020, annex 41 of Order No. 09.10.2020 of the Minister of health of the Republic of Uzbekistan No. 239. The technicum has 42 Oakwood rooms with 2 laboratory rooms, 1 computer room and 10 personal computers, 26 30-seat study rooms, 8 15-seat pre-practice study rooms. The sanitary and hygienic condition of the study rooms is at the level of demand. On the 1-2 floors of Building 1, theoretical study rooms are organized, at the level of full demand for the educational process."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy-maʻrifiy ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Духовно-просветительская работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Spiritual and educational work",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mamlakatimizning maʻnaviy-maʻrifiy sohadagi islohotlariga javoban, 2-Margʻilon tibbiyot texnikumi jamoasi bu sohadagi ishlarni tizimli tashkil etib kelmoqda, bu borada texnikumimizda yoshlarning intellektual salohiyati, ongu tafakkuri va dunyoqarashini yuksaltirish, mafkuraviy immunitetini mustahkamlash, vatanparvarlik, xalqqa muhabbat va sadoqat tuygʻusi bilan yashaydigan barkamol avlodni tarbiyalashga alohida eʻtibor qaratilmoqda. Xususan 2-Margʻilon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida ham bu borada munosib ishlar olib borilmoqda. Taʻlim muassasasida mustaqilligimizning 32 yilligi munosabati bilan “Yangi hayot uchun, Yangi Oʻzbekiston uchun” shiori ostida tadbir tashkillandi."
+     },
+     "ru": {
+      "text": "В ответ на проводимые в стране реформы в духовно-просветительской сфере коллектив 2-го Маргиланского медицинского техникума систематически организует работу в этой области, направленную на повышение интеллектуального потенциала, сознательности и мировоззрения молодежи, укрепление ее идеологического иммунитета, воспитание гармоничного поколения, живущего в духе патриотизма, любви и преданности народу.особое внимание уделяется. В частности, 2-й маргиланский техникум общественного здравоохранения имени Абу Али Ибн Сины также проводит достойную работу в этом направлении. В связи с 32-й годовщиной Независимости в образовательном учреждении организовано мероприятие под девизом \" За новую жизнь, за новый Узбекистан."
+     },
+     "en": {
+      "text": "In response to the reforms of our country in the spiritual and educational sphere, the 2nd Margilon medical technical team has been systematically organizing work in this field, in this regard, special attention is paid to raising the intellectual potential of young people, the mind and mindset and worldview, strengthening their ideological immunity, raising a harmonious generation living with patriotism, love and loyalty to the people. In particular, the 2nd Margilan Abu Ali ibn Sino Public Health Technical School is also doing decent work on this. In the educational institution, on the 32nd anniversary of our independence, an event was organized under the slogan “for a new life, for a new Uzbekistan."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻquv va oʻquv-metodik ishlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Учебные и учебно-методические работы",
+      "level": 3
+     },
+     "en": {
+      "text": "Educational and educational-methodological work",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish har bir kurs va yoʻnalishlar uchun quyidagi tasdiqlangan hujjatlar boʻyicha olib boriladi:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Обучение проводится по следующим утвержденным документам по каждому курсу и направлению:",
+      "level": 3
+     },
+     "en": {
+      "text": "Training is carried out according to the following approved documents for each course and directions:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Kvalifikatsion xarakteristika;",
+       "Davlat taʻlim standarti;",
+       "Namunaviy oʻquv dasturi;",
+       "Ishchi oʻquv dasturi;",
+       "Tasdiqlangan tashxis standartlari;",
+       "Zamonaviy taʻlim texnologiyalari (grafik organayzerlar, keys texnologiya va proekt usuli)."
+      ]
+     },
+     "ru": {
+      "items": [
+       "квалификационные характеристики;",
+       "Государственный образовательный стандарт;",
+       "Примерная учебная программа;",
+       "Программа производственного обучения;",
+       "утвержденные диагностические стандарты;",
+       "современные образовательные технологии (графические органайзеры, кейс-технология и метод проектов)."
+      ]
+     },
+     "en": {
+      "items": [
+       "Qualifying characteristic;",
+       "state educational standard;",
+       "Model curriculum;",
+       "working curriculum;",
+       "approved diagnostic standards;",
+       "modern educational technologies (graphic organizers, keys technology and projection method)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish jarayonida quyidagi texnik taʻminotlar mavjud:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Во время обучения доступны следующие технические средства:",
+      "level": 3
+     },
+     "en": {
+      "text": "The following specifications are available during the training process:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumda barcha xonalarda smart televizor va kompyuterlar mavjud va internetga ulangan, bir necha Wi-fi zonalar mavjud. Mavzuga oid videolar, prezentatsiyalar, multimediya dasturlari, maʻruza va amaliy mashgʻulotlar, Oʻquv dasturiga asosan barcha yoʻnalishlar uchun Oʻquv materiallari toʻplami mavjud."
+     },
+     "ru": {
+      "text": "В техникуме все кабинеты оснащены смарт-телевизорами и компьютерами, подключены к Интернету, есть несколько зон Wi-Fi. На основе учебной программы имеются видеоролики, презентации, мультимедийные программы, лекции и практические занятия по теме, а также сборник учебных материалов по всем направлениям."
+     },
+     "en": {
+      "text": "The technikum has smart TVs and computers in all rooms and is connected to the internet, there are several Wi-fi zones. Subject-specific videos, presentations, multimedia programs, lecture and practical classes, there is a set of educational materials for all areas based on the curriculum."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Simulyatsion markaz",
+      "level": 3
+     },
+     "ru": {
+      "text": "Симуляционный центр",
+      "level": 3
+     },
+     "en": {
+      "text": "Simulation center",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikum talabalarining nazariy bilimlarini amaliy jihatdan mustahkamlash uchun tashkil etilgan bu markazda talabalar bemorlarni parvarishlash uchun zarur boʻlgan kompetensiyalarni shakllantirish imkoniyatiga egadirlar."
+     },
+     "ru": {
+      "text": "В этом центре, который был создан для закрепления теоретических знаний студентов технических специальностей на практике, у студентов есть возможность сформировать компетенции, необходимые для ухода за пациентами."
+     },
+     "en": {
+      "text": "Established to practically strengthen the theoretical knowledge of technical students, it is a center where students have the opportunity to form competencies necessary for patient care."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Kutubxona tizimi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Библиотека технимума",
+      "level": 3
+     },
+     "en": {
+      "text": "Library",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumning kutubxonasida Shtatlar birligi 3 kishidan iborat boʻlib, maʻlumotlari oʻrta maxsus. Kutubxonaning umumiy fondi 12820 ta. Shundan oʻquv adabiyotlari 8077 ta, badiy adabiyotlar 1027 ta, siyosiy adabiyotlar 239 ta. Ilmiy ommabop adabiyotlar 321 ta, oʻquv uslubiy qoʻllanmalar 2785 ta, elektron darsliklar 220 ta. Oʻquv zali 24 oʻrinli. Koipyuterlar soni 5 ta, nusxa koʻchirish apparati 1 ta. 5 ta kompyuterlar Internet tarmogʻiga oʻlangan."
+     },
+     "ru": {
+      "text": "В библиотеке техникума штатная единица 3 человека, Образование Среднее специальное. Общий фонд библиотеки-12820 единиц. Из них учебной литературы-8077, художественной-1027, политической-239. Научно-популярная литература 321, учебно-методические пособия 2785, электронные учебники 220. Читальный зал рассчитан на 24 места. Количество копировальных аппаратов-5, копировальных аппаратов-1. 5 компьютеров мертвы в сети Интернет. Использование библиотеки учителями-предметниками составляет 88%, использование учащимися-24% (в фельдшерско-акушерской группе 213 человек)."
+     },
+     "en": {
+      "text": "The total fund of the library is 12,820. Of this, the academic literature is 8,077, the Badi literature is 1,027, and the political literature is 239. Scientific popular literature 321, educational methodological manuals 2785, electronic textbooks 220. The study hall has 24 seats. The number of coiputers is 5, the copying apparatus is 1. 5 computers are dying into the Internet."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/5.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/5.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/5.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/6.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/6.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/6.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "notes": [
+   "20 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 1,
+  "fp": {
+   "uz": "e9d7fb3e2463b365b3c240140984e578f604cda7336d4b0f7e7e4137d5ae0e4a",
+   "ru": "bb7e215fcc626588e9ac2f59435817ef15e66b2a443bdc0b7a5151f4615e0e02",
+   "en": "29719749f0e23330758dbb52e69fb2d4a277a4081c9379dc66995b444c53c609"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tarixi",
+      "level": 3
+     },
+     "ru": {
+      "text": "История",
+      "level": 3
+     },
+     "en": {
+      "text": "History",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1925 yili Qoʻqon shaxar xalq komissarligining maorif boʻlimi tizimida «Tibbiy xamshiralar va doyalar» tayyorlov kursi sifatida tashkil etilgan. 1936-yili Respublika Sogʻliqni Saqlash xalq komissariyati koʻrsatmasiga binoan «Feldsherlik-akusherlik maktabi» deb qayta nomlangan. Oʻzbekiston Sogʻliqni Saqlash Vazirligining 1954-yil 29-apreldagi 194-sonli buyrugʻiga asosan «Qoʻqon tibbiyot bilim yurti» deb nomlangan. 1975-yili Qoʻqon tibbiyot bilim yurtiga «Tayanch bilim yurti» maqomi berilgan. Vazirlar Mahkamasining 2003-yil 29-oktyabr 473-sonli qarori va Fargʻona viloyat xokimligining oʻrta maxsus, kasb-hunar taʻlimi hududiy boshqarmasining 2004-yil 6 fevral 21-sonli qarori bilan bilim yurtiga «Kollej» maqomi berilgan, 2019 yil 6 sentyabrdagi “Professional taʻlim tizimini yanada takomillashtirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida”gi PF-5812 son Farmoni bilan Qoʻqon tibbiyot kolleji tashkil etilgan. 2023 yilning 20 iyundagi Oʻzbekiston Respublikasi Prezidentining “Maʻmuriy islohotlar doirasida sogʻliqni saqlash sohasida Davlat boshqaruvini samarali tashkil qilish chora-tadbirlari toʻgʻrisida” PQ-197 son qarori ijrosini taʻminlash maqsadida Oʻzbekiston Respublikasi Sogʻliqni saqlash vazirligining 2023 yil 6-sentabrdagi № 222-sonli buyrugʻi asosida Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumiga aylantirilgan. Manzili: Fargʻona viloyati, Qoʻqon shahri, Sarboz koʻchasi 41 uy. Loyiha boʻyicha quvvati 2680 oʻringa moʻljallangan. Hozirgi kunda Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida 2 bosqichda 633 nafar, 1 bosqichda 360 nafar, jami 993 nafar oʻquvchilar taxsil olmoqda."
+     },
+     "ru": {
+      "text": "В 1925 году в системе отдела образования Коканского городского комиссариата был создан курс повышения квалификации «Мед.сестры и акушерки». В 1936 году по указанию комиссариата здравоохранения она была переименована в «Школу фельдшеров и акушеров». На основании приказа Министерства здравоохранения Узбекистана № 194 от 29 апреля 1954 года был назван «Кокандский медицинский училище». В 1975 году Медицинскому училище был присвоен статус «Базовое образование». Постановлением Кабинета Министров № 473 от 29 октября 2003 года и решением Территориального управления среднего специального профессионального образования правительства Ферганской области № 21 от февраля 2004 года образовательному учреждению присвоен статус «Колледж». 2019 г. Кокандский медицинский колледж создан Постановлением № ПФ-5812 от 6 сентября 2012 года «О дополнительных мерах по дальнейшему совершенствованию системы профессионального образования». В целях обеспечения реализации решения Президента Республики Узбекистан от 20 июня 2023 года УП-197 «О мерах по эффективной организации государственного управления в сфере здравоохранения в рамках административной реформы» Республика Здравоохранение Узбекистана на основании приказа Министерства здравоохранения № 222 от 6 сентября 2023 года Кокандский медицинский колледж был назван техникум общественного здравоохранения имени Абу Али ибн Сины города Коканда. Адрес: Ферганская область, город Коканд, улица Сарбоз 41. По проекту вместимость рассчитана на 2680 мест. В настоящее время на 2-й ступени обучаются 633 студента, на 1-й ступени - 360, всего в техникуме общественного здравоохранения имени Абу Али ибн Сины города Коканда обучаются 993 студента."
+     },
+     "en": {
+      "text": "In 1925, the training course \"Nurses and midwives\" was established in the system of the education department of the Kokan City People's Commissariat. In 1936, according to the instructions of the People's Commissariat of Public Health, it was renamed \"School of Paramedics and Obstetrics\". Based on the order of the Ministry of Health of Uzbekistan No. 194 dated April 29, 1954, it was named \"Koqan Medical Education Yurt\". In 1975, the Kokan Medical University was granted the status of \"Tayanch University\". By the decision of the Cabinet of Ministers No. 473 of October 29, 2003, and the decision of the Territorial Department of Secondary Special Vocational Education of Fergana Regional Government No. 21 of February 2004, the educational institution was granted the status of \"College\", 2019 Kokand Medical College was established by Decree No. PF-5812 dated September 6, 2012 \"On additional measures to further improve the professional education system\". To ensure the implementation of the decision of the President of the Republic of Uzbekistan dated June 20, 2023, PQ-197 \"On measures to effectively organize public administration in the field of health care within the framework of administrative reforms\", the Republic of Uzbekistan Health based on the order of the Ministry of Health No. 222 dated September 6, 2023, Koqan was transformed into a technical school of public health named after Koqan Abu Ali ibn Sina.Address: 41 Sarboz Street, Kokand City, Fergana region. According to the project, the capacity is designed for 2680 seats. Currently, there are 633 students in the 2nd stage, and 360 in the 1st stage, and a total of 993 students are studying in the public health technical school named after Kokan Abu Ali Ibn Sina."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "6 ta yoʻnalish:"
+     },
+     "ru": {
+      "text": "Действую 6 направлений:"
+     },
+     "en": {
+      "text": "Operating 6 directions:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "“Hamshiralik ishi”",
+       "“Farmatsiya ishi”",
+       "“Feldsherlik ishi”",
+       "“Feldesher laborantlik ishi”",
+       "“Stomatologiya ishi”",
+       "“Tibbiy–ijtimoiy ish” yoʻnalishlari faoliyat yuritmoqda."
+      ]
+     },
+     "ru": {
+      "items": [
+       "«Сестринская работа»",
+       "«Фельдшерская работа»",
+       "«Фельдшерско-лабораторная работа»",
+       "«Фармация»",
+       "«Стоматология»",
+       "«Медико-социальная работа»."
+      ]
+     },
+     "en": {
+      "items": [
+       "\"Nursing\"",
+       "\"Pharmacy Work\"",
+       "\"Paramedic work\"",
+       "\"Laboratory work of a paramedic\"",
+       "\"Dental Work\"",
+       "\"Medical-social work\"."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumda jami 88 nafar oliy maʻlumotli oʻqituvchilar, ulardan 23 nafari umumtaʻlim, 65 nafari maxsus va kasbiy fan oʻqituvchilaridir."
+     },
+     "ru": {
+      "text": "В техникуме 88 преподавателей с высшим образованием, из них 23 преподавателя общеобразовательных, 65 преподавателей специальных и профессиональных предметов."
+     },
+     "en": {
+      "text": "There are 88 teachers with higher education in the technical school, 23 of them are teachers of general education, and 65 are teachers of special and professional subjects."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy-maʻrifiy ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Духовно-просветительская работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Spiritual and educational works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mamlakatimizda maʻnaviy-maʻrifiy ishlarni tizimli tashkil etish, bu borada amalga oshirilayotgan chora-tadbirlarning samaradorligini oshirish, aholi, ayniqsa yoshlarning intellektual salohiyati, ongu-tafakkuri va dunyoqarashini yuksaltirish, mavkuraviy immunitetini mustahkamlash, vatanparvarlik, xalqqa muxabbat va sadoqat tuygʻusi bilan yashaydigan barkamol avlodni taryubiyalashga alohida eʻtibor qaratilmoqda. Xususan, Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida ham bu borada tizimli ishlar olib borilmoqda. Taʻlim muassasasida Oʻzbekiston Respublikasi Mustaqilligining 32 yilligi va yangi oʻquv yilining boshlanishi munosabati bilan oʻquvchilar oʻrtasida “Yangi hayot uchun, yangi Oʻzbekiston uchun” shiori ostida retual oʻtkazildi. Retualda oʻquvchilarni texnikum rahbari Oʻ. Tojieva bayram bilan tabriklab, 32 yil davomida Oʻzbekistonnning erishgan yutuqlari “Milliy tiklanishdan – milliy yuksalish sari” gʻoyasi asosida yangi Oʻzbekistonni bunyod etish borasidagi islohatlar toʻgʻrisida gapirib oʻtdilar. Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida “Oʻzbek tiliga davlat tili maqomi” berilganligiga 33 yil toʻlganligi munosabati bilan “Oʻzbek tili oʻzbek xalqining maʻnaviy mulkidir” mavzusida davra suhbati oʻtkazildi."
+     },
+     "ru": {
+      "text": "Системная организация духовно-просветительской работы в нашей стране, повышение эффективности реализуемых в этом направлении мер, повышение интеллектуального потенциала, самосознания и мировоззрения населения, особенно молодежи, укрепление морального иммунитета, патриотизма, любви и верности. народу особое внимание уделяется воспитанию зрелого поколения, живущего с В частности, системная работа в этом направлении ведется в техникуме общественного здравоохранения имени Абу Али ибн Сины города Коканда. По случаю 32-й годовщины Независимости Республики Узбекистан и начала нового учебного года в образовательном учреждении среди студентов был проведен ритуал под девизом «За новую жизнь, за новый Узбекистан». В ритуале руководитель техникума У. Тоджиева поздравила с праздником и рассказала о реформах по созданию нового Узбекистана на основе идеи «От национального возрождения к национальному подъему» и достижениях Узбекистана за 32 года."
+     },
+     "en": {
+      "text": "Systematic organization of spiritual and educational work in our country, increasing the effectiveness of the measures implemented in this regard, raising the intellectual potential, self-thinking, and worldview of the population, especially the youth, strengthening the moral immunity, patriotism, love and loyalty to the people special attention is being paid to raising a mature generation living with In particular, systematic work is being carried out in this regard at the Technical School of public health named after Kokan Abu Ali ibn Sina. On the occasion of the 32nd anniversary of the Independence of the Republic of Uzbekistan and the beginning of the new academic year, a ritual was held among the students under the motto \"For a new life, for a new Uzbekistan\" in the educational institution. In the ritual, the head of the technical school O'. Tojieva congratulated on the holiday and talked about the reforms to create a new Uzbekistan based on the idea of \"From national revival to national rise\" the achievements of Uzbekistan for 32 years. In connection with the 33rd anniversary of the granting of the status of the state language to the Uzbek language, a roundtable discussion on the topic \"The Uzbek language is the spiritual property of the Uzbek people\" was held at the Technical College of Public Health named after Kokan Abu Ali ibn Sino."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻquv va oʻquv-metodik ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Учебные и учебно-методические работы",
+      "level": 3
+     },
+     "en": {
+      "text": "Educational and study-methodical works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida oʻqitish har bir bosqich va yoʻnalishlar uchun quyidagi taqdiqlangan hujjatlar boʻyicha olib boriladi:"
+     },
+     "ru": {
+      "text": "Обучение в техникуме общественного здравоохранения имени Абу Али ибн Сины города Коканда ведется по следующим утвержденным документам по каждому этапу и направлению:"
+     },
+     "en": {
+      "text": "Education at the Technical College of Public Health named after Kokan Abu Ali ibn Sina is conducted according to the following approved documents for each stage and directions:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Kvalifikatsion xarakteristika;",
+       "Davlat taʻlim standarti;",
+       "Namunaviy oʻquv dasturi;",
+       "Ishchi oʻquv dasturi;",
+       "Tasdiqlangan tashxis standartlari;",
+       "Zamonaviy taʻlim texnologiyalari (grafik organayzerlar, keys texnologiya va proekt usuli)."
+      ]
+     },
+     "ru": {
+      "items": [
+       "квалификационные характеристики;",
+       "Государственный образовательный стандарт;",
+       "Примерная учебная программа;",
+       "Программа производственного обучения;",
+       "утвержденные диагностические стандарты;",
+       "современные образовательные технологии (графические органайзеры, кейс-технология и метод проектов)."
+      ]
+     },
+     "en": {
+      "items": [
+       "Qualifying characteristic;",
+       "state educational standard;",
+       "Model curriculum;",
+       "working curriculum;",
+       "approved diagnostic standards;",
+       "modern educational technologies (graphic organizers, keys technology and projection method)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish jarayonida quyidagi texnik taʻminotlar mavjud",
+      "level": 3
+     },
+     "ru": {
+      "text": "Во время обучения доступны следующие технические средства:",
+      "level": 3
+     },
+     "en": {
+      "text": "The following technical supplies are available during training",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumidagi Axborot kutubxonasi, barcha sinf xonalari, kompyuter sinflari va “Kelajak fan” xonalari WI-FI internet tarmogʻiga ulangan. Yoʻnalishlar kesimida mavzularga oid oʻquv qoʻllanmalar, multimedia dasturlari, prezitnatsiyalar, maʻruza va amaliy mashgʻulotlar, oʻquv dasturiga asosan oʻquv materiallari toʻplami mavjud. Bundan tashqari oʻquv xonalari elektron doskalar, videoproektorlar, kompyuterlar toʻplami va smart televizorlar bilan toʻliq jihozlangan, oʻqituvchilar innovatsion texnologiyalarga asoslanib bilim bermoqdalar."
+     },
+     "ru": {
+      "text": "Информационная библиотека, все аудитории, компьютерные классы и кабинеты «Науки о будущем» техникуме общественного здравоохранения имени Абу Али ибн Сины города Коканда подключены к интернет-сети WI-FI. В разделе направлений представлены учебные пособия, мультимедийные программы, презентации, лекции и практические занятия, сборник учебных материалов на основе учебной программы. Кроме того, классы полностью оснащены электронными досками, видеопроекторами, компьютерными комплектами и смарт-телевизорами, а преподаватели проводят обучение на основе инновационных технологий."
+     },
+     "en": {
+      "text": "The Information Library, all classrooms, computer classrooms, and \"Future Science\" rooms of the Kokan Abu Ali Ibn Sina Technical College of Public Health are connected to the WI-FI internet network. In the section directions, there are educational guides, multimedia programs, presentations, lectures, and practical exercises, a collection of educational materials based on the curriculum. In addition, the classrooms are fully equipped with electronic boards, video projectors, computer sets, and smart TVs, and teachers provide education based on innovative technologies."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Texnikum kutubxonasi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Техническая библиотека:",
+      "level": 3
+     },
+     "en": {
+      "text": "Library:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Axborot kutubxonasi Oʻzbekiston Respublikasi Prezidentining 2006 yil 20-iyundagi PQ 381-sonli qarori hamda Fargʻona viloyati xokimligi oʻrta maxsus hududiy boshqarmasining 2006 yil 5 iyuldagi buyrugʻiga asosan Axborot resurs markazi tashkil etilgan va faoliyat yuritib kelmoqda. Kutubxona fondidan maqsadli foydalanish uchun 40 oʻrinli oʻquv qiroatxonasi, kitoblarni saqlash va hizmat koʻrsatish xonalari mavjud, oʻquvchilar dars tayyorlashlari uchun hamma sharoit yaratilgan. Kutubxonada 1 ta printer, 1 ta skaner, 10 ta kompyuter mavjud boʻlib, internet WI-FI ulangan."
+     },
+     "ru": {
+      "text": "Информационно-ресурсный центр создан и действует согласно решению Президента Республики Узбекистан УП 381 от 20 июня 2006 года и приказу Среднего специального территориального управления хокимията Ферганской области от 5 июля 2006 года. Для целевого использования библиотечного фонда имеется читальный зал на 40 мест, книгохранилище и служебные помещения, созданы все условия для подготовки студентов к урокам. В библиотеке имеется 1 принтер, 1 сканер, 10 компьютеров, подключение Wi-Fi. Информация в библиотечном центре общий фонд состоит из 23 440 учебников, пособий и литературы."
+     },
+     "en": {
+      "text": "The Information Resource Center was established and operates according to the decision of the President of the Republic of Uzbekistan PQ 381 of June 20, 2006, and the order of the Fergana Region Hokimity Middle Special Territorial Department of July 5, 2006. For purposeful use of the library fund, there is a 40-seat reading room, book storage, and service rooms, all conditions are created for students to prepare lessons. The library has 1 printer, 1 scanner, 10 computers, Wi-Fi connection. The total stock of the information library center is 23,440 textbooks, manuals, and literature."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Talabalar uchun simulyasion oʻquv xonalari tashkil qilingan",
+      "level": 3
+     },
+     "ru": {
+      "text": "Для студентов организованы симуляционные классы.",
+      "level": 3
+     },
+     "en": {
+      "text": "Simulation classrooms are organized for students",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida taʻlim jarayoniga ilgʻor pedagogik texnologiyalarni qoʻllash maqsadida 6 ta trening xonasi, simulyasiya markazi va 5 ta innovatsion fan xonalari tashkil qilingan, zamonaviy jihozlar bilan jihozlangan."
+     },
+     "ru": {
+      "text": "В техникуме общественного здравоохранения имени Абу Али ибн Сины города Коканда 6 учебных аудиторий, симуляционный центр и 5 инновационных научных кабинетов оснащены современным оборудованием с целью применения передовых педагогических технологий в образовательном процессе."
+     },
+     "en": {
+      "text": "6 training rooms, a simulation center, and 5 innovative science rooms are equipped with modern equipment to apply advanced pedagogical technologies to the educational process at the public health technical school named after Kokan Abu Ali ibn Sino."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/3.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/3.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/3.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/4.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/4.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/4.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Mahorat darsi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Mahorat darsi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Mahorat darsi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Qoʻqon tibbiyot texnikumida “Pediatriyada hamshiralik ishi” boʻyicha mahorat darslari oʻtkazildi",
+      "level": 2
+     },
+     "ru": {
+      "text": "В Кокандском медицинском техникуме прошли мастер-классы по «Сестринскому делу в педиатрии»",
+      "level": 2
+     },
+     "en": {
+      "text": "Master classes on \"Nursing in pediatrics\" were held at the Kokand Medical College",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti mutaxassislari Qoʻqon Abu Ali ibn Sino nomidagi tibbiyot texnikumi talabalari uchun zamonaviy pedagogik yondashuv asosida amaliy mahorat darslari tashkil etdilar. Fargʻona jamoat salomatligi tibbiyot instituti huzuridagi akademik litsey va texnikumlarga metodik yordam berish sektori tomonidan tibbiyot taʻlim muassasalarida oʻquv jarayonini takomillashtirish, oʻquvchilarning amaliy koʻnikmalarini rivojlantirish va pedagog-kadrlarga metodik yordam koʻrsatish maqsadida tizimli ishlar olib borilmoqda."
+     },
+     "ru": {
+      "text": "Специалисты Ферганского медицинского института общественного здоровья организовали практические мастер-классы для студентов Кокандского медицинского техникума имени Абу Али ибн Сино на основе современного педагогического подхода. Сектором методической помощи академическим лицеям и техникумам при Ферганском медицинском институте общественного здоровья проводится системная работа по совершенствованию учебного процесса в медицинских образовательных учреждениях, развитию практических навыков учащихся и оказанию методической помощи педагогическим кадрам."
+     },
+     "en": {
+      "text": "Specialists of the Ferghana Medical Institute of Public Health organized practical master classes for students of the Kokand Medical College named after Abu Ali ibn Sino on the basis of a modern pedagogical approach. The sector of methodological assistance to academic lyceums and technical schools at the Ferghana Medical Institute of Public Health carries out systematic work to improve the educational process in medical educational institutions, develop the practical skills of students, and provide methodological assistance to pedagogical personnel."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2025 yilning 23-oktyabr kuni Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi tibbiyot texnikumida “Pediatriyada hamshiralik ishi” yoʻnalishining 2–3-bosqich talabalari uchun “Bolalarda immunoprofilaktika” hamda “Turli yoshdagi bolalarning jismoniy va psixomotor rivojlanish koʻrsatkichlarini aniqlash” mavzularida mahorat darslari oʻtkazildi."
+     },
+     "ru": {
+      "text": "23 октября, 2025 года в Кокандском медицинском техникуме общественного здоровья имени Абу Али ибн Сино для студентов 2-3 ступеней направления «Сестринское дело в педиатрии» проведены мастер-классы на темы «Иммунопрофилактика у детей» и «Определение показателей физического и психомоторного развития детей разного возраста»."
+     },
+     "en": {
+      "text": "On October 23 of this year, master classes on the topics \"Immunoprophylaxis in children\" and \"Determination of indicators of physical and psychomotor development of children of different ages\" were held at the Kokand Medical College of Public Health named after Abu Ali ibn Sino for students of 2-3 levels of the direction \"Nursing in pediatrics.\""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi_1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi_1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/Qo‘qon tibbiyot texnikumi_1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mashgʻulotlarda institutning metodik yordam berish sektori bosh mutaxassisi N. Shokirova hamda “Pediatriya” kafedrasi assistentlari A. Gʻofurov, I. Alimova va S. Abdullayev ishtirok etdilar. Ular dars jarayonida pediatriya fanini oʻqitishda innovatsion IT yechimlar va zamonaviy taʻlim texnologiyalarining qoʻllanishi, talabalarda amaliy malaka va klinik fikrlashni shakllantirishning samarali usullari haqida maʻlumot berdilar. Tadbir yakunida sogʻlom turmush tarzini shakllantirish, reproduktiv salomatlik va oilani mustahkamlashga qaratilgan maxsus oʻquv kurslarini tashkil etish boʻyicha takliflar ilgari surildi. Shuningdek, N. Shokirova texnikum talabalari uchun institutdagi mavjud fakultetlar, taʻlim yoʻnalishlari hamda yaratilgan imkoniyatlar toʻgʻrisida batafsil maʻlumot berdi."
+     },
+     "ru": {
+      "text": "В занятиях приняли участие главный специалист сектора методической помощи института Н.Шокирова и ассистенты кафедры «Педиатрия» А.Гофуров, И.Алимова и С.Абдуллаев. В ходе урока они рассказали о применении инновационных IT-решений и современных образовательных технологий в преподавании педиатрии, эффективных методах формирования у студентов практических навыков и клинического мышления. По итогам мероприятия были выдвинуты предложения по организации специальных учебных курсов, направленных на формирование здорового образа жизни, укрепление репродуктивного здоровья и семьи. Кроме того, Н.Шокирова подробно рассказала студентам о существующих в институте факультетах, направлениях образования и созданных возможностях."
+     },
+     "en": {
+      "text": "The classes were attended by the chief specialist of the methodological assistance sector of the institute, N. Shokirova, and assistants of the Department of Pediatrics, A. Gofurov, I. Alimov, and S. Abdullaev. During the lesson, they talked about the use of innovative IT solutions and modern educational technologies in teaching pediatrics, effective methods of forming practical skills, and clinical thinking among students. As a result of the event, proposals were put forward for the organization of special training courses aimed at creating a healthy lifestyle, strengthening reproductive health, and the family. In addition, N. Shokirova told students in detail about the faculties existing at the institute, areas of education, and opportunities created."
+     }
+    }
+   }
+  ],
+  "notes": [
+   "29 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 1,
+  "fp": {
+   "uz": "2b589064e17c519eee90dfff03ab567bfc52b53951d566966189762b92aac9a6",
+   "ru": "0d1f058dde85aad75d2afbd4ea10d0d2963efe90e9f4bfdd36cc4468e33fe24a",
+   "en": "44a0f10d469ee401a704cc2a1c05b97d49b24dff3164672f57513034632f58f3"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tarixi",
+      "level": 3
+     },
+     "ru": {
+      "text": "История",
+      "level": 3
+     },
+     "en": {
+      "text": "History",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2008 yil 23.06 kungi № 254-sonli Fargʻona tumani xokimining qarori bilan Fargʻona tumani Chimyon qishlogʻida joylashgan “Moʻmin ota Javlonbek” fermer hujaligi er maydonidan 795 oʻrinli kasb-xunar kolleji va 100 oʻrinli yotoqhona binosini qurush uchun tumani hokimining qarori chiqarilgan.Fargʻona tumani xokimining 2009 yil 11-iyundagi №262-sonli qarori bilan Chimyon qishlogʻida joylashgan Fargʻona tumani Tibbiyot kolleji nizomini Davlat roʻyhatidan oʻtkazish toʻgʻrisida tumani hokimi qarori chiqgan.Oʻzbekiston Respublikasi Prezidentining 2019 yil 6-Sentabrdagi “Professional taʻlim tizimini yanada takomillashtirishga doir qoʻshimcha chora tadbirlari” toʻgʻrisidagi PF-58-12- sonli farmoning 3-ilovasi, Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020 yil 7-avgustdagi 466-sonli qarori bilan qayta tashkil topdi. Oʻzbekiston Respublikasi Prezidentining 2023yil 20 iyundagi “Maʻmuriy islohotlar doirasida davlat boshqaruvini samarali tashkil qilish chora-tadbirlari toʻgʻrisida”gi PQ-197- sonli qarori ijrosini taʻminlash yuzasidan Oʻzbekiston Respublikasi Sogʻliqni Saqlash vazirligining 2023-yil 24- iyuldagi №173-sonli buyrugʻi bilan Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi sifatida tashkil etildi.Texnikum manzili Fargʻona viloyati Fargʻona tumani Bahor mahalla fuqarolar yigʻini Bahor koʻchasi 149-uy.Loyiha boʻyicha quvvati 795 oʻringa muljallangan.Hozirgi kunda Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida nafar oʻquvchi tehsil olmoqda.Texnikumdagi: Hamshiralik ishi,Felʻdsherlik ishi,Felʻdsher-laborantlik ishi va Farmatsiya yoʻnalishlar mavjud. Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida 24 ta nazariy va amaliy oʻquv honalari mavjud.Texnikumda yoʻnalishlarda kelib chiqib 4 ta Innovatsiyo trening honalar,10 ta Klinikagacha boʻlgan oʻquv amaliyot honalar hamda 12 ta oʻquv nazariy honalari faoliyat olib bormoqda.Texnikum binosini 3-qavatini Klinikagacha boʻlgan amaliy mashgʻulotlar olib boorish uchun “Innovatsion amaliyot sentri” qilib zamonaviy tibbiyot asbob uskunalari,butun odam mulyajlari,amaliy mashgʻulot trinajorlari bilan jihozlangan.Har bir nazariy hamda amaliy oʻquv honalarida monitor, nootbuk, prektor, interaktiv doskalar bilan jihozlangan."
+     },
+     "ru": {
+      "text": "Решением хокима Ферганского района от 23.06.2008 г. № 254 из земельного участка фермерской ячейки “Момин ota Жавлонбек”, расположенной в селе Чимен Ферганского района, для строительства здания профессионального колледжа на 795 мест и общежития на 100 мест.Постановлением хокима Ферганского района от 11 июня 2009 года №262 принято постановление хокима Ферганского района о государственной регистрации устава медицинского колледжа Ферганского района, расположенного в селе Чимен.Указ Президента Республики Узбекистан от 6 сентября 2019 года “О совершенствовании системы профессионального образования\" ПФ” о дополнительных мерах по дальнейшему совершенствованию-58-12- приложение 3 к постановлению Кабинета Министров Республики Узбекистан от 7 августа 2020 года № 466 реорганизовано. В целях обеспечения исполнения постановления Президента Республики Узбекистан от 20 июня 2023 года № ПП-197 “О мерах по эффективной организации государственного управления в рамках административной реформы”Министерство здравоохранения Республики Узбекистан от 24 июня 2023 года- приказом №173 от июля Ферганский район был создан как техникум общественного здравоохранения имени Абу Али Ибн Сины.Адрес техникума Ферганская область Ферганский район Весенняя махалля сход граждан Весенняя улица 149.Проектная вместимость-795 мест.В настоящее время в техникуме общественного здравоохранения имени Абу Али Ибн Сины Ферганского района обучается один студент.В техникуме есть направления: Сестринское дело,фельдшерское дело,фельдшерско-Лаборантское дело и фармация. Техникум общественного здравоохранения имени Абу Али Ибн Сины Ферганского района имеет 24 теоретических и практических кабинета.В техникуме по направлениям функционируют 4 инновационных учебных кабинета,10 доклинических учебных практических кабинетов и 12 учебных теоретических кабинетов.3-й этаж здания техникума оборудован современным медицинским оборудованием,целыми человеческими муляжами,практическими тренажерами для проведения доклинических практик.Монитор, ноутбук в каждом теоретическом и практическом кабинетах, проектор, оснащенный интерактивными досками."
+     },
+     "en": {
+      "text": "On the day of 23.06 of 2008, the decision of the governor of the district for the construction of a 795-seat vocational college and a 100-seat hostel building from the land area of the farm “Holy Father Javlonbek” located in the village of Chimyon, Fergana District No. 254 of Fergana district was issued. The decision of the governor of the district on the state registration of the Charter of the Medical College of the Fergana district, located in the village of Chimyon, was made by Decree No. 262 of the Fergana district on June 11, 2009. On September 6, 2019, the president of the Republic of Uzbekistan announced the “Professional Education System PF on” additional measures for further improvement- Annex 3 of Decree No. 4 was reorganized by the decree of the Cabinet of Ministers of the Republic of Uzbekistan No. 466 of August 7, 2020. President of the Republic of Uzbekistan on June 20, 2023, on the implementation of the decree of the Ministry of health of the Republic of Uzbekistan No. 197 “on measures to effectively organize public administration within the framework of Administrative Reforms” dated June 24, 2023- by Order No. 173 of July, the Fergana district was established as a public health Technical School named after Abu Ali ibn Sino.Technical address Fergana region Fergana District Spring neighborhood Citizens Assembly Spring Street 149. The project has a capacity of 795 seats. Currently, the Fergana district receives a student tehsil in the Abu Ali ibn Sino Public Health Technical School. There are directions in the technical: nursing, fieldwork, fieldwork, and pharmacy. There are 24 theoretical and practical training rooms in the Public Health Technical School named after Abu Ali ibn Sino, Fergana district. There are 4 Innovation training honors, up to 10 Clinic training internship honors, and 12 teaching theoretical honors as part of the technical program. The 3rd floor of the technique building is equipped with modern medical instrument equipment, whole human mules, and practical training trousers, making it an “Innovative Practice Center” for conducting practical training in the clinic. Monitor in each theoretical and practical training room, notebook, the projector is equipped with interactive whiteboards."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy–marifiy ishlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Духовно – просветительские работы",
+      "level": 3
+     },
+     "en": {
+      "text": "Siritspiritualan works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mamlakatimizda maʻnaviy-marifiy ishlarni tizimli tashkil etish,bu borada amalga oshirilayotgan chora-tadbirlarning samaradorligini oshirish, texnikum talabalarini intellektual salohiyati, ongu tafakkuri va dunyoqarashini yuksaltirish, mafkuraviy immunitetini mustahkamlash, vatanparvarlik, vatanga muhabbat va sadoqat tuygʻusi bilan yashaydigan barkamol avlodni tarbiyalashga alohida eʻtibor qaratilmoqda. Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida maʻnaviy marifiy ishlarni samarali tashkil etish uchun tadbirlar rejasi ishlab chiqilgan.Texnikumdagi guruhlar oʻrtasida fan tugaraklari, Zakovat tadbirlari, bayram kunlari belgilangan tadbirlari, besh tasabbus doirasidagi tadbirlari, Fan haftaligi tadbirlari oʻtkazilib kelinmoqda. Taʻlim muassasida Oʻzbekiston Respublikasi Mustaqilligining 32 yilligi munosabati bilan “Yangi Hayot uchun Yangi Oʻzbekiston uchun” shiori ostida tadbir oʻtkazildi. Tadbirda texnikum jamoasi va oʻquvchilari ishtirok etdi."
+     },
+     "ru": {
+      "text": "Особое внимание уделяется системной организации духовно-просветительской работы в нашей стране,повышению эффективности проводимых мероприятий, повышению интеллектуального потенциала, сознательности и мировоззрения студентов техникумов, укреплению их идеологического иммунитета, воспитанию гармоничного поколения, живущего в духе патриотизма, любви и преданности Родине. В техникуме общественного здравоохранения им.Абу Али Ибн Сины Ферганского района разработан план мероприятий по эффективной организации духовно-просветительской работы.Среди групп техникума проводятся научные кружки, интеллектуальные мероприятия, мероприятия в праздничные дни, мероприятия в рамках Пяти инициатив, мероприятия Недели науки. В учебном заведении состоялось мероприятие, посвященное 32-й годовщине Независимости Республики Узбекистан, под девизом “За новый Узбекистан для новой жизни”. В мероприятии приняли участие команда и учащиеся техникума."
+     },
+     "en": {
+      "text": "In our country, special attention is paid to the systematic organization of spiritual and Religious Affairs, improving the effectiveness of the measures taken in this regard, raising the intellectual potential, mindfulness, and worldview of technical students, strengthening their ideological immunity, raising a harmonious generation living with a sense of patriotism, love, and loyalty to the motherland. In the Public Health Technical School named after Abu Ali ibn Sino, Fergana district, a plan of events was developed for the effective organization of spiritual work. Among the groups in the technical school, fan clubs, Zakovat events, fixed festive events, and events within the framework of five tastebuds, Fan Week events are held. The educational institution held an event on the occasion of the 32nd anniversary of the independence of the Republic of Uzbekistan under the slogan “For a new Uzbekistan for a new life”. The event was attended by the technical team and students."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻquv va oʻquv-metodik ishlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Учебно-методическая работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Educational and educational-methodological work",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish har bir koʻrs va yoʻnalishlar uchun quyidagi tasdiqlangan hujjatlar boʻyicha olib boriladi:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Обучение проводится по следующим утвержденным документам для каждого вида и направления:",
+      "level": 3
+     },
+     "en": {
+      "text": "Training is carried out according to the following approved documents for each blind and directions:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "-Kvalifikatsion xarakteristika",
+       "-Davlat taʻlim standarti",
+       "-Namunaviy oʻquv dastur",
+       "-Ishchi oʻquv dastur",
+       "-Tasdiqlangan tashxiz standartlari",
+       "-Zamonaviy taʻlim texnologiyalari(grafik organayzerlar,keys texnologiya va proekt usuli)."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Квалификационная характеристика",
+       "Государственный образовательный стандарт",
+       "Примерная учебная программа",
+       "Рабочая программа обучения",
+       "Утвержденные стандарты диагностики",
+       "Современные образовательные технологии(графические органайзеры,кейс-технология и метод проецирования)."
+      ]
+     },
+     "en": {
+      "items": [
+       "Qualifying characteristic",
+       "State educational standard",
+       "Sample training program",
+       "Working curriculum",
+       "Approved diagnostic standards",
+       "Modern educational technologies (graphic organizers, key technology, and projection method)."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish jarayonida quyidagi texnik taʻminot mavjud:",
+      "level": 3
+     },
+     "ru": {
+      "text": "В процессе обучения проводится следующее техническое обеспечение",
+      "level": 3
+     },
+     "en": {
+      "text": "The following techniques are available in the training process:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumida barcha honalardagi kompyuterlar internet tarmogʻiga ulangan, Wi-Fi zonalar mavjud. Mavzuga oid vidiofilmlar, prezintatsiyalar, multimediya dasturlari, maʻruza va amaliy mashgʻulotlar, Oʻquv dasturiga mos barcha yoʻnalishlar uchun Oʻqitish materiallari toʻplamlarii mavjud. Amaliy va nazariy fanlar texnikumning malakaliy pedagoglari tomonidan zamon talablari asosida olib boriladi."
+     },
+     "ru": {
+      "text": "В техникуме общественного здравоохранения имени Абу Али Ибн Сины Ферганского района компьютеры во всех комнатах подключены к сети Интернет, есть зоны Wi-Fi. Имеются тематические видеофильмы, презентации, мультимедийные программы, лекции и практические занятия, сборники учебных материалов по всем направлениям, соответствующим учебной программе. Практические и теоретические дисциплины проводятся квалифицированными педагогами техникума в соответствии с требованиями времени."
+     },
+     "en": {
+      "text": "In the Public Health Technical School named after Abu Ali ibn Sino, Fergana district, computers in all rooms are connected to the internet network, and there are Wi-Fi zones. There are collections of teaching materials for subject-specific videos, presentations, multimedia programs, lectures, and practical classes, all areas corresponding to the curriculum. Practical and theoretical subjects are carried out by qualified educators of the Technical School based on the requirements of the time."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Texnikum kutubxonasi:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Библиотека техникума",
+      "level": 3
+     },
+     "en": {
+      "text": "Technical library:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona tumani Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi Axbarot kutubxonasida jami 11713 ta kitob boʻlib ulardan: Maxsus adabiyotlar,umumtaʻlim adabiyotlar, badiiy adabiyotlar, siyosiy adabiyotlar hamda qoʻllanmalar mavjud."
+     },
+     "ru": {
+      "text": "В информационной библиотеке техникума общественного здравоохранения им.Абу Али Ибн Сины Ферганского района в общей сложности 11713 книг,среди которых: специальная литература, общеобразовательная литература, Художественная литература, политическая литература, а также пособия."
+     },
+     "en": {
+      "text": "The Akhbarot Library of the Abu Ali ibn Sino Public Health Technical School of Fergana district has a total of 11,713 Books: Special literature, general literature, non-fiction, political literature, and manuals."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/2.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/2.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/2.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/2026/Tibbiyot texnikumi Farg‘ona t-n.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/2026/Tibbiyot texnikumi Farg‘ona t-n.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/2026/Tibbiyot texnikumi Farg‘ona t-n.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/2026/Tib tex.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/2026/Tib tex.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/2026/Tib tex.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "notes": [
+   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 1,
+  "fp": {
+   "uz": "bc8509aa4678dd952f535ed21472b80d81af6bb604e7a61b1115688319b8904d",
+   "ru": "569a270b43052d6ec9f1dccea4b0422bebfe67082c4e70a8ec3c403473dbc2bb",
+   "en": "b23f41ec36628255974f68d4f0684cf71e57529381a4e9bb7645c116891f902f"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tarixi",
+      "level": 3
+     },
+     "ru": {
+      "text": "История",
+      "level": 3
+     },
+     "en": {
+      "text": "History",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Beshariq tibbiyot kolleji oʻrta-maxsus, kasb xunar taʻlimi markazining 2007 yil № 174 sonli buyrugʻiga binoan tashkil etilgan. Talim muassasasi 640 oʻringa moʻljallangan oʻquvchilar oʻrni va 100 oʻringa moʻljallangan yotoqxonadan tashkil topgan. Taʻlim muassasasida uchta kasblar boʻyicha Xamshiralik ishi, Davolash ishi, va Tibbiyot laboranti yoʻnalishlari boʻyicha oʻquvchilar tayyorlangan. Oʻzbekiston Respublikasi Prezidentining 2020 yil 7-apreldagi “Tibbiy-sanitariya sohasida kadrlarni tayyorlash va uzluksiz kasbiy rivojlantirishning mutlaqo yangi tizimini joriy etish chora-tadbirlari toʻgʻrisida”gi PQ-4666-sonli qaroriga asosan Beshariq Abu Ali ibn Sino nomidagi Jamoat salomatligi texnikumiga aylantirilgan. Texnikum Beshariq tumani Oltin Vodiy koʻchasi 169 uyda joylashgan. Loyiha boʻyicha quvvati 640 oʻringa moʻljallangan. Texnikumning ustavi ishlab chiqilib Beshariq tuman xokimi tomonidan tasdiqlanib roʻyxatdan oʻtkazilgan. Texnikumda 1 ta 3 qavatli, 1 ta 2 qavatli asosiy oʻquv binolari mavjud boʻlib, zamonaviy jixozlangan Axborot kutubxona tashkil etilgan. Texnikumda jami 40 ta oʻquv xonasi mavjud boʻlib, shundan 30 ta nazariy, 10 ta amaliy oʻquv xonalari mavjud. Texnikumda jami 8 ta trineng oʻquv xonasi boʻlib, shundan Xamshiralik ishi yoʻnalishi boʻyicha 3 ta, Farmatsiya yoʻnalishi boʻyicha 1 ta, Feldsher-akusherlik ishi yoʻnalishi boʻyicha 2 ta, Feldsher-laboratlik ishi yoʻnalishi boʻyicha 1 ta simulyatsion trening oʻquv xonalari tashkil etilgan."
+     },
+     "ru": {
+      "text": "Медицинский колледж «Бешарик» создан согласно приказу Центра профессионального образования №174 от 2007 года. Учебное заведение состоит из 640 мест студентов и 100 мест общежития. В учебном заведении студенты обучаются по трем профессиям: сестринское дело, лечение и медицинская лаборатория. Во исполнение решения Президента Республики Узбекистан от 7 апреля 2020 года «О мерах по внедрению совершенно новой системы подготовки и непрерывного профессионального развития кадров в сфере медицины и санитарии» № 1. Техникум расположен по адресу: улица Олтина Вадия, 169, Бешарыкский район. Согласно проекту, вместимость – 640 мест. Разработан устав техникума, утвержден акимом Бешарикского района и зарегистрирован. Техникум имеет 1 3-этажный, 1 2-этажный основной учебный корпус, а также современно оборудованную информационную библиотеку. Всего в техникуме 40 аудиторий, из них 30 теоретических и 10 практических. В техникуме имеется 8 учебных классов, из них организовано 3 сестринского дела, 1 фармацевтическое, 2 фельдшерско-акушерского и 1 симуляционное учебное помещение для фельдшерско-лабораторной работы."
+     },
+     "en": {
+      "text": "Besharik Medical College was established according to the order of 2007 No. 174 of the Center for Vocational Education. The educational institution consists of 640 places of students and 100 places of dormitories. In the educational institution, students are trained in three professions: Nursing, Treatment, and Medical Laboratory. Based on the decision of the President of the Republic of Uzbekistan dated April 7, 2020 \"On measures to introduce a completely new system of training and continuous professional development of personnel in the field of medicine and sanitation\" No. Technikum is located at 169, Oltin Vadi Street, Besharik district. According to the project, the capacity is designed for 640 seats. The technical school's charter was developed, approved, and registered by the governor of the Besharik district. The technical school has 1 3-story, 1 2-story main educational building, and a modernly equipped information library. The technical school has a total of 40 classrooms, of which 30 are theoretical and 10 are practical. The technical school has a total of 8 training classrooms, of which 3 for nursing, 1 for pharmacy, 2 for paramedic-midwifery, and 1 simulation training classroom for paramedic-laboratory work have been organized."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Maʻnaviy-maʻrifiy ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Уховно - просветительская работа",
+      "level": 3
+     },
+     "en": {
+      "text": "Spiritual and educational works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Beshariq Abu Ali ibn Sino nomidagi Jamoat salomatligi texnikumida maʻnaviy-maʻrifiy ishlarni tizimli tashkil etish, bu borada amalga oshirilayotgan chora-tadbirlarning samaradorligini oshirish, aholi, ayniqsa yoshlarning intellektual salohiyati, ongi tafakkuri va dunyoqarashini yuksaltirish, mafkuraviy immunitetini mustahkamlash, vatanparvarlik, xalqqa muhabbat va sadoqat tuygʻusi bilan yashaydigan barkamol avlodni tarbiyalashga alohida eʻtibor qaratilmoqda. Kelajak avlodni tarbiyalashda tizimli ishlar olib borilmoqda. Taʻlim muassasasida \"Oʻquvchi yoshlarni tarbiyalash, ularga bilim berish va ularni kelajakda oʻz oʻrnini topishlarida yordamlashish \"Til millat koʻzgusidir \" mavzusida davra suhbatlari olib borildi. Davlat mukofoti bilan taqdirlangan iqtidorli yoshlar va oʻquvchi yoshlar oʻrtasida uchrashuvlar oʻtkazildi."
+     },
+     "ru": {
+      "text": "Системная организация духовно-просветительской работы в Техническом колледже общественного здравоохранения Бешарика Абу Али ибн Сино, повышение эффективности реализуемых в этом направлении мер, повышение интеллектуального потенциала населения, особенно молодежи, мышления и мировоззрения, укрепление их идеологического иммунитета., патриотизм, Особое внимание уделяется воспитанию зрелого поколения, живущего с любовью и преданностью народу. Ведется системная работа по воспитанию будущего поколения. В образовательном учреждении прошли круглые столы на тему «Образование студенческой молодежи, предоставление им знаний и помощь в поиске своего места в будущем. Язык – зеркало нации»."
+     },
+     "en": {
+      "text": "Systematic organization of spiritual and educational work at Besharik Abu Ali ibn Sino Technical College of Public Health, increasing the effectiveness of the measures implemented in this regard, raising the intellectual potential of the population, especially young people, thinking and worldview, strengthening their ideological immunity, patriotism, Special attention is being paid to raising a mature generation that lives with love and loyalty to the people. Systematic work is being done to educate the future generation."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻquv va metodik ishlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Учебные и учебно-методические работы",
+      "level": 3
+     },
+     "en": {
+      "text": "Educational and study-methodical works",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumda oʻqitish har bir kurs va yoʻnalishlar uchun oʻquvchilarga taʻlim tarbiya berish quyidagi tasdiqlangan meyoriy hujjatlar boʻyicha olib boriladi."
+     },
+     "ru": {
+      "text": "Обучение в техническом техникум осуществляется по следующим утвержденным учебным документам по каждому курсу и направлению."
+     },
+     "en": {
+      "text": "Training at the Technical College is carried out according to the following approved educational documents for each course and direction:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Namunaviy oʻquv reja;",
+       "Ishchi oʻquv reja",
+       "Malaka talabi;",
+       "Namunaviy oʻquv dasturi;",
+       "Ishchi oʻquv dasturi;",
+       "Tarmoq talim standartlari;",
+       "zamonaviy taʻlim texnologiyalari (grafik organayzerlar, keys stadiy texnologiyalari va davra usullari)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Образец учебной программы;",
+       "Рабочая учебная программа",
+       "Квалификационные требования;",
+       "Образец учебной программы;",
+       "Рабочая программа обучения;",
+       "Стандарты сетевого обучения;",
+       "современные образовательные технологии (графические органайзеры, технологии кейсов и кружковые методы)"
+      ]
+     },
+     "en": {
+      "items": [
+       "Sample curriculum;",
+       "Working curriculum",
+       "Qualification requirement;",
+       "Sample curriculum;",
+       "Working training program;",
+       "Network training standards;",
+       "modern educational technologies (graphic organizers, case study technologies, and circle methods)"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻqitish jarayonida quyidagi texnik taʻminotlar mavjud:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Во время обучения доступны следующие технические средства:",
+      "level": 3
+     },
+     "en": {
+      "text": "The following technical supplies are available during training:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumda barcha kompyuterlar internetga ulangan, bir necha Wi-fi zoanalar mavjud. Mavzuga oid videofilmlar, prezentatsiyalar, multimediya dasturlari, maʻruza va amaliy mashgʻulotlar, Oʻquv dasturiga asosan barcha yoʻnalishlar uchun Oʻquv materiallari toʻplami mavjud."
+     },
+     "ru": {
+      "text": "В техникуме все компьютеры подключены к Интернету, есть несколько зон Wi-Fi. На основе учебной программы имеются видеоролики по теме, презентации, мультимедийные программы, лекции и практические занятия, сборник учебных материалов по всем направлениям."
+     },
+     "en": {
+      "text": "In the technical school, all computers are connected to the Internet, there are several Wi-Fi zones. There are videos on the subject, presentations, multimedia programs, lectures, and practical exercises, and a collection of Study Materials for all areas based on the Curriculum."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Texnikum kutubxonasi:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Библиотека Техникума:",
+      "level": 3
+     },
+     "en": {
+      "text": "Library:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikum kutubxonasida ingliz, oʻzbek va rus tillaridagi 900 dan ortiq oʻquv adabiyotlar mavjud. Elektron kutubxona darslik, atlaslar, oʻquv qoʻllanmalar, oʻquv-uslubiy qoʻllanmalar va boshqalarni oʻz ichiga oladi."
+     },
+     "ru": {
+      "text": "В технической библиотеке имеется более 900 экземпляров учебной литературы на английском, узбекском и русском языках. Электронная библиотека включает в себя учебники, атласы, учебные пособия, методические пособия и т.д."
+     },
+     "en": {
+      "text": "The technical library has more than 900 educational literature in English, Uzbek, and Russian languages. The electronic library includes textbooks, atlases, study guides, instructional manuals, etc."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Texnikum mahorat darsi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Texnikum mahorat darsi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Texnikum mahorat darsi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari-2.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari-2.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Mahorat darslari-2.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/photo_2025-10-09_13-26-18.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/photo_2025-10-09_13-26-18.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/photo_2025-10-09_13-26-18.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "notes": [
+   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "ish-beruvchilarning-institut-bitiruvchilari-xaqida-fikri",
+  "order": 1,
+  "fp": {
+   "uz": "3c7317e7f96ebdd865d00a0b99200417c3c9dbd77590691a9a34766faa684684",
+   "ru": "babf2195517a94bb9eab9aaf9202f9c72959f2554a79f44d56f24ffb99d54939",
+   "en": "b93835e8f134c233f8ca8bc14fc52f19d5305270296666a7446c546f477b04bc"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Savolnoma",
+      "level": 3
+     },
+     "ru": {
+      "text": "Опросник",
+      "level": 3
+     },
+     "en": {
+      "text": "Questionnaire",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Institut bitiruvchilarini Siz rahbarlik qilayotgan muassasada ishlab keta olish darajasini qanday baholaysiz?",
+       "Institut bitiruvchilarini muassasangizda aholiga tibbiy xizmat koʻrsatish sifatini yuksaltirib, muasassangiz nufuzini oshirishiga ishonasizmi?",
+       "Bitiruvchi talabalar institutda olgan bilim nazariyalarini amaliyotga tadbiq eta olishiga ishonch bildira olasizmi?",
+       "Institutni nimasi bilan mashhur deb hisoblaysiz?",
+       "Institut talabalarga berayotgan tahlim va tarbiya jarayonlarida nimalarga koʻproq ehtibor qaratishi lozim deb hisoblaysiz?",
+       "Kelajakda institut bitiruvchisidan muassasangiz rahbari yetishib chiqishiga ishonch bildira olasizmi?",
+       "Institut bitiruvchisini kelajakda halqimiz oldida sidqidildan, vijdonan xizmat qiladigan yetuk mutaxassis, yuksak mahnaviyatga ega komil inson boʻlib yetishishida qanday sharoitlar yaratib bera olasiz?",
+       "Institut bitiruvchisi jamoangizga koʻnikib keta oladi deb hisoblaysizmi?",
+       "Institut bitiruvchi talabalarini kuchli taraflari deb nimani ehtirof eta olasiz?",
+       "Institut bitiruvchilarini muassasangizdagi raqobatga bardosh bera oladi deb hisoblaysizmi?"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Как вы оцениваете уровень способности выпускников института работать в руководимом вами учреждении?",
+       "Верите ли вы, что выпускники института улучшат качество медицинских услуг в вашем учреждении и повысят репутацию вашего учреждения?",
+       "Сможете ли вы убедиться, что аспиранты смогут применять на практике теории познания, полученные в институте?",
+       "Чем, по вашему мнению, известен институт?",
+       "Как вы думаете, сможет ли выпускник института освоиться в вашем коллективе?",
+       "Может ли выпускник этого института стать в будущем руководителем вашего учреждения?",
+       "Какие условия вы можете создать для того, чтобы выпускник института стал зрелым специалистом, совершенным человеком с высокой духовностью, который в будущем будет искренне и добросовестно служить своему народу?Какие качества вы можете признать сильными сторонами аспирантов института?",
+       "Считаете ли вы, что выпускники института выдерживают конкуренцию в вашем учреждении?",
+       "На что, по вашему мнению, институт должен обращать больше внимания в процессах воспитания и обучения студентов?"
+      ]
+     },
+     "en": {
+      "items": [
+       "How do you assess the level of ability of graduates of the institute to work in the institution you lead?",
+       "Do you believe that graduates of the institute will improve the quality of medical services in your institution and increase the reputation of your institution?",
+       "Do you think that the institute's graduates are competitive in your institution?",
+       "Can you make sure that graduate students will be able to put into practice theories of knowledge received at the institute?",
+       "What qualities can you recognize as the strengths of the institute's graduate students?",
+       "What do you think the institute is famous for?",
+       "What, in your opinion, should the institute pay more attention to in the process of education and training of students?",
+       "Do you think that a graduate of the institute will be able to get used to your team?",
+       "Can a graduate of this institute become the head of your institution in the future?",
+       "What conditions can you create for a graduate of the institute to become a mature specialist, a perfect person with high spirituality, who in the future will sincerely and conscientiously serve his people?"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Karyera markazi/Bitiruvchi masalasi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Karyera markazi/Bitiruvchi masalasi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Karyera markazi/Bitiruvchi masalasi.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 490,
+    "caption": {
+     "uz": "Ish beruvchilarning institut bitiruvchilari xaqida fikri",
+     "ru": "Мнение работодателей о выпускниках института",
+     "en": "Employers' opinion on graduates of the Institute"
+    },
+    "fp": {
+     "uz": "b5faad5f83e5db6447928807984c4a7791cad72595d431b863498e4685748497",
+     "ru": "b5faad5f83e5db6447928807984c4a7791cad72595d431b863498e4685748497",
+     "en": "b5faad5f83e5db6447928807984c4a7791cad72595d431b863498e4685748497"
+    }
+   }
+  ],
+  "notes": [
+   "3 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 1,
+  "fp": {
+   "uz": "43e8486451d2bb0ecc4b6085d0726640ba4562b1755a666b12975d73afa2360a",
+   "ru": "c1332ac3ff7229579fe9fcf8e77df702859e635b07bd1e70a0a06387b6d1c7af",
+   "en": "329de6bc1e67fe9791a00acaf8e30068643732d9aa54577667f14ab0ce91e750"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "“Registrator ofisi” boʻlimi haqida",
+      "level": 3
+     },
+     "ru": {
+      "text": "О деятельности отдела «Офис регистратора»",
+      "level": 3
+     },
+     "en": {
+      "text": "About the Activities of the “Registrar’s Office”",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutining “Registrator ofisi” boʻlimi talabalikka qabul, oʻquv jarayoni va talabalarga xizmat koʻrsatish, akademik faoliyatni tashkil etish hamda taʻlim jarayonining ochiqligi va shaffofligini taʻminlash, unversitetning [https://hemis.fsjti.uz/](https://hemis.samdu.uz/) platformasida oʻquv jarayoni tashkil etish, tizimda byurokratik toʻsiqlar yuzaga kelishini oldini olish va tahliliy maʻlumotlarni shakllantirish, shuningdek, qaror qabul qilish jarayonini optimallashtirish kabi vazifalarni amalga oshiruvchi institutning tarkibiy tuzilmasi hisoblanadi. Ofis oʻz faoliyatini Oʻzbekiston Respublikasining Konstitutsiyasi, Oʻzbekiston Respublikasi “Taʻlim toʻgʻrisida”gi Qonuni, Oʻzbekiston Respublikasi Prezidentining Farmon, qaror va farmoyishlari, Oʻzbekiston Respublikasi Vazirlar Mahkamasining qarorlari, Oʻzbekiston Respublikasi Oliy taʻlim, fan va innovatsiyalar vazirligi hamda Sogʻliqni saqlash vazirliginingning Hayʻat qarorlari, buyruqlari, institut Nizomi, institut Kengashi qarorlari, institut rektori buyruqlari hamda mazkur Nizomga muvofiq olib boradi. Ofis boshligʻi oʻquv ishlari boʻyicha prorektorga boʻysunadi hamda fakultet, kafedra, oʻquv-uslubiy boshqarma va boshqa taʻlim tuzilmalari bilan hamkorlikda ishlaydi."
+     },
+     "ru": {
+      "text": "Отдел «Офис регистратора» Ферганского медицинского института общественного здоровья является структурным подразделением института, осуществляющим приём студентов, организацию учебного процесса и оказание услуг студентам, координацию академической деятельности, а также обеспечение открытости и прозрачности образовательного процесса. Отдел организует учебный процесс на университетской платформе https://hemis.fsjti.uz/, предотвращает возникновение бюрократических барьеров в системе, формирует аналитические данные и оптимизирует процесс принятия управленческих решений. В своей деятельности Офис руководствуется Конституцией Республики Узбекистан, Законом Республики Узбекистан «Об образовании», указами, постановлениями и распоряжениями Президента Республики Узбекистан, постановлениями Кабинета Министров Республики Узбекистан, решениями и приказами коллегий Министерства высшего образования, науки и инноваций и Министерства здравоохранения, Уставом института, решениями Учёного совета института, приказами ректора института, а также настоящим Положением. Начальник Офиса регистратора подчиняется проректору по учебной работе и осуществляет деятельность во взаимодействии с факультетами, кафедрами, учебно-методическим управлением и другими образовательными структурами института."
+     },
+     "en": {
+      "text": "The Registrar’s Office of the Fergana Medical Institute of Public Health is a structural unit of the Institute responsible for student admission, organization of the educational process, provision of student services, coordination of academic activities, as well as ensuring transparency and openness of the educational process. The Office organizes the academic process through the university platform https://hemis.fsjti.uz/, prevents bureaucratic barriers, generates analytical data, and optimizes decision-making processes. In its activities, the Registrar’s Office is guided by the Constitution of the Republic of Uzbekistan, the Law of the Republic of Uzbekistan “On Education,” decrees, resolutions, and orders of the President of the Republic of Uzbekistan, resolutions of the Cabinet of Ministers, decisions and orders of the Ministry of Higher Education, Science and Innovation and the Ministry of Health, the Charter of the Institute, decisions of the Academic Council, orders of the Rector, and this Regulation. The Head of the Registrar’s Office reports to the Vice-Rector for Academic Affairs and cooperates with faculties, departments, the Academic and Methodological Department, and other educational units."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Boʻlimning asosiy vazifalari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Основные задачи отдела:",
+      "level": 3
+     },
+     "en": {
+      "text": "Main responsibilities of the Office:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Talabalar bilan ishlash tizimini samarali tashkil etish, xizmatlar sifati, tezkorligi va shaffofligini taʻminlash;",
+       "akademik transkript, toʻlov shartnoma qogʻozi va boshqa maʻlumotnomalarni taqdim etish;",
+       "HEMIS, taʻlim platformalari va idoralararo yagona elektron hujjat aylanish \"Edo.ijro.uz\" tizimi dan foydalanish va nazorat qilish;",
+       "tasdiqlangan oʻquv qoidalariga asosan talabalarning kredit miqdori va GPA hisobini yuritish, talabalarni yakuniy nazoratlarga qoʻyish, talabani kursdan kursga qoldirish yoki oʻtkazish masalasini hal etish;",
+       "xalqaro taʻlim dasturlari doirasida hamda chet elda magistraturada oʻqish uchun kerakli transkript va maʻlumotnomalami xorijiy tillarda berish;",
+       "harbiy boʻlimga va boshqa soʻralgan joyga maʻlumotnomalar berish (oʻzbek, rus va ingliz tillarda);",
+       "xorijiy va davlat OTM tashkilotlariga oʻqishni koʻchirishda kerakli hujjatlami (transkript, buyruqdan koʻchirma) taqdim qilish;",
+       "oʻqishga qayta tiklanishi uchun murojaat qilgan talabalarga buyruqlaridan",
+       "koʻchirma va baholar transkriptini GPA hisoblangan holda taqdim qilish;",
+       "rektorning qabul buyruqlari asosida institutga qabul qilingan talabalar",
+       "hujjatlarini qabul qilish va ular haqida toʻliq maʻlumotlarbazasini shakllantirish;",
+       "d-arxiv.edu.uz platormasiga kelib tushgan dublikat arizalari va diplom tasdiqlash uchun kelgan murojaatlarga javob qaytarish;",
+       "barcha bitiruvchi talabalarning buyruq asosida diplom va uning davlat nusxasidagi ilovalarini tayyorlash va chop etish;",
+       "davlat granti asosida tahsil olgan bitiruvchilar diplomlaridan koʻchirmalar tayyorlash;",
+       "bitiruvchi talabalar ga diplom berish;",
+       "institut talabalari toʻgʻrisidagi buyruqlarni roʻyxatdan oʻtkazish;",
+       "ism-sharifi oʻzgargan, akademik taʻtilga chiqqan, yoʻnalish va fakultetini oʻzgartirgan, kursda qoldirilgan, talabalar safidan chiqarilgan talabalarning buyruqlaridan koʻ chirmalarni talabalar bazasiga joylashtirish;",
+       "bitiruvchi talabalar hujjatlarini toʻplab, shaxsiy yigʻma jildiga tikish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "эффективная организация системы работы со студентами, обеспечение качества, оперативности и прозрачности оказываемых услуг;",
+       "предоставление академических транскриптов, договоров об обучении и иных справок;",
+       "использование и контроль систем HEMIS, образовательных платформ и межведомственной электронной системы документооборота «Edo.ijro.uz»;",
+       "ведение расчёта кредитов и GPA студентов в соответствии с утверждёнными академическими правилами, допуск к итоговому контролю, перевод или оставление студентов на повторный курс;",
+       "предоставление транскриптов и справок на иностранных языках для участия в международных образовательных программах и обучения в магистратуре за рубежом;",
+       "выдача справок для военного отдела и иных организаций (на узбекском, русском и английском языках);",
+       "предоставление необходимых документов (транскриптов, выписок из приказов) при переводе студентов в зарубежные и государственные вузы;",
+       "оформление выписок из приказов и транскриптов с учётом GPA для студентов, восстанавливающихся на обучение;",
+       "приём документов студентов, зачисленных в институт на основании приказов ректора, и формирование единой базы данных;",
+       "рассмотрение обращений, поступивших через платформу d-arxiv.edu.uz, по вопросам выдачи дубликатов дипломов и их подтверждения;",
+       "подготовка, печать и выдача дипломов и приложений государственного образца выпускникам;",
+       "подготовка выписок из дипломов выпускников, обучавшихся на основе государственного гранта;",
+       "регистрация приказов, касающихся студентов института;",
+       "внесение в базу данных выписок из приказов в отношении студентов, изменивших фамилию, ушедших в академический отпуск, сменивших направление, факультет, оставленных на повторный курс или отчисленных;",
+       "формирование и архивирование личных дел выпускников."
+      ]
+     },
+     "en": {
+      "items": [
+       "effective organization of student services ensuring quality, efficiency, and transparency;",
+       "issuance of academic transcripts, tuition contracts, and other certificates;",
+       "use and monitoring of HEMIS, educational platforms, and the interdepartmental electronic document management system “Edo.ijro.uz”;",
+       "calculation of student credits and GPA in accordance with approved academic regulations, admission to final assessments, promotion or retention decisions;",
+       "issuance of transcripts and certificates in foreign languages for international programs and overseas master’s studies;",
+       "issuance of certificates for military departments and other institutions (in Uzbek, Russian, and English);",
+       "provision of required documents for transfer to foreign and state higher education institutions;",
+       "preparation of transcript extracts with GPA for reinstated students;",
+       "acceptance and maintenance of student admission documents and databases;",
+       "processing requests received via d-arxiv.edu.uz regarding diploma duplication and verification;",
+       "preparation, printing, and issuance of diplomas and diploma supplements;",
+       "registration of student-related orders and archival documentation."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Registrator ofisi tomonidan taqdim etiladigan xizmat turlari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Виды услуг, предоставляемых Офисом регистратора",
+      "level": 3
+     },
+     "en": {
+      "text": "Types of services provided by the Registrar’s Office",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Akademik (oʻquv) faoliyati boʻyicha koʻrsatiladigan xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Услуги в сфере академической (учебной) деятельности:",
+      "level": 3
+     },
+     "en": {
+      "text": "Academic services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "QR kodli diplom shakllantirish;",
+       "akademik maʻlumotnoma va transkript berish;",
+       "akademik mobillik asosida boshqa oliy taʻlim tashkilotiga ketgan talabalarning hujjatlarini tegishli tartibda rasmiylashtirish;",
+       "bitiruvchi talabalar uchun aylanma varaqa yaratish;",
+       "diplom dublikatini olish uchun ariza yuborishga koʻmaklashish;",
+       "imtihon natijalari boʻyicha apellyatsiya arizalarini qabul qilishni tashkil qilish;",
+       "imtihonlar roʻyxatini shakllantirish va talabaga taqdim etish;",
+       "institut talabalariga oʻqishni koʻchirish va qayta tiklash uchun ariza yuborishga koʻmaklashish;",
+       "institutning ikkinchi taʻlimga kirish uchun abituriyentlarga onlayn ariza topshirishiga koʻmaklashish;",
+       "institutning magistratura bosqichiga kirish uchun abituriyentlarga onlayn ariza topshirishiga koʻmaklashish;",
+       "oliy taʻlim olganlik haqidagi diplom maʻlumotlarini qoʻshish yoki tahrirlash uchun talabgorlarga ariza yuborishga koʻmaklashish;",
+       "stipendiya va turli grant tanlovlarida ishtirok etish uchun ariza qabul qilish;",
+       "talabaga oʻzining GPA koʻrsatkichi haqida maʻlumotnoma taqdim etish;",
+       "talabalar davomatini amaldagi tartibga asosan sababli va sababsiz holatga oʻtkazish;",
+       "talaba uzrli sabablarga koʻra (kasal, yaqin qarindoshining betobligi yoki vafoti, tugʻruq holati kabilar) oraliq va (yoki) yakuniy nazorat turiga kirmagan talabalar uchun tegishli fanlardan shaxsiy grafik yaratish;",
+       "talabalar hujjatlarini qabul qilish va arxivga topshirish;",
+       "talabalarga imtihon natijalarini taqdim etish;",
+       "talabalarga qayta oʻqish uchun ariza berishga koʻmaklashish;",
+       "talabalarga turli xil maʻlumotnoma (oʻqish joyidan, harbiy boʻlimdan v.b.)lar berish;",
+       "talabalarga oʻquv varaqa taqdim etish;",
+       "talabalarga fan resurslari boʻyicha maʻlumot taqdim etish;",
+       "talabalarni HEMIS platformasida keyingi kursga oʻtkazish;",
+       "talabalarni oʻzlashtirish koʻrsatkichlari haqida maʻlumot taqdim etish;",
+       "talabalarning joriy, oraliq va davomat natijalariga koʻra yakuniy nazoratlarda ishtirok etishiga ruxsat berish;",
+       "talabalarning parolini tiklash;",
+       "talabalarning tyutorlar tomonidan toʻgʻri toʻldirilgan shaxsiy hamda oʻquv maʻlumotlarini tahrirlash;",
+       "talabalik guvohnomasini tayyorlash va talabalarga taqdim etish;",
+       "talabani bir guruhdan ikkinchi guruhga koʻchirib oʻtkazish;",
+       "tashqi xizmatlar: Ijtimoiy himoya reyestri va ayollar daftarida turuvchi talabalar yagona reestri bazasidan sinxronizatsiya qilib roʻyxat shakllantirish;",
+       "oʻqishini koʻchirishga tavsiya etilgan, oʻqishga tiklangan yoki kursda qolgan talabalarning oʻquv rejalaridagi fanlar farqini aniqlash;",
+       "oʻquv dasturlari haqida maʻlumot berish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "формирование дипломов с QR-кодом;",
+       "выдача академических справок и транскриптов;",
+       "оформление документов студентов, обучающихся по академической мобильности;",
+       "формирование обходных листов для выпускников;",
+       "содействие в подаче заявлений на получение дубликата диплома;",
+       "организация приёма апелляций по результатам экзаменов;",
+       "формирование и предоставление студентам списков экзаменов;",
+       "содействие в подаче заявлений на перевод и восстановление на обучение;",
+       "помощь абитуриентам при подаче онлайн-заявлений на второе высшее образование и магистратуру;",
+       "содействие в подаче заявлений на добавление или редактирование данных диплома о высшем образовании;",
+       "приём заявлений для участия в стипендиальных и грантовых конкурсах;",
+       "выдача справок о GPA;",
+       "учёт посещаемости студентов;",
+       "формирование индивидуальных графиков для студентов, не сдавших контроль по уважительным причинам;",
+       "приём, архивирование и выдача студенческих документов;",
+       "предоставление результатов экзаменов;",
+       "восстановление паролей студентов;",
+       "редактирование персональных и учебных данных студентов в системе HEMIS;",
+       "оформление и выдача студенческих удостоверений;",
+       "перевод студентов между учебными группами;",
+       "синхронизация данных с государственными реестрами социальной защиты;",
+       "определение разницы учебных дисциплин при переводе и восстановлении;",
+       "предоставление информации об учебных планах и программах."
+      ]
+     },
+     "en": {
+      "items": [
+       "generation of QR-coded diplomas;",
+       "issuance of academic certificates and transcripts;",
+       "documentation for academic mobility students;",
+       "preparation of graduation clearance forms;",
+       "assistance with diploma duplicate applications;",
+       "organization of exam appeal submissions;",
+       "exam schedule preparation and delivery;",
+       "assistance with transfer and reinstatement applications;",
+       "support for online applications to second-degree and master’s programs;",
+       "GPA certificates and attendance records;",
+       "creation of individual exam schedules for students with valid absences;",
+       "student ID card issuance;",
+       "data synchronization with state social registries;",
+       "curriculum and academic program information."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Yoshlar masalalari va maʻnaviy-maʻrifiy faoliyat boʻyicha koʻrsatiladigan xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Услуги по вопросам молодёжной политики и духовно-просветительской деятельности:",
+      "level": 3
+     },
+     "en": {
+      "text": "Youth affairs and spiritual-educational services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "talabalarga yotoqxonalarga joylashish uchun ariza berishga koʻmaklashish;",
+       "ijara subsidiyasi uchun ariza yozishga koʻmaklashish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "содействие в подаче заявлений на заселение в общежитие;",
+       "помощь в оформлении заявлений на получение субсидии по аренде жилья."
+      ]
+     },
+     "en": {
+      "items": [
+       "assistance with dormitory accommodation applications;",
+       "support for rental subsidy applications."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Xalqaro aloqalar faoliyati boʻyicha koʻrsatiladigan xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Услуги в сфере международной деятельности:",
+      "level": 3
+     },
+     "en": {
+      "text": "International relations services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "talabalarga oʻqish joyidan ingliz tilida maʻlumotnoma berish;",
+       "turli xalqaro grantlar va akademik mobillik dasturlari boʻyicha maʻlumotlarni taqdim etish;",
+       "oʻqishga qabul qilingan xorijlik talabalarni elektron tizimda roʻyxatga olish va fanlarga biriktirish;",
+       "xorijiy oliygohlarda tahsil olishda konsultatsiya berish;",
+       "xorijlik talabalar uchun viza xizmatlarini amalga oshirish;",
+       "xorijlik talabalarga toʻlov-shartnomalarini taqdim etish;",
+       "xorijlik talabalarni Oʻzbekiston Respublikasida vaqtinchalik roʻyxatga qoʻyish xizmatlarini amalga oshirish;",
+       "xorijlik talabalarni oʻqishga qabul qilish boʻyicha konsultatsiya berish, ariza va talab etiladigan hujjatlarni koʻrib chiqish uchun qabul qilish;"
+      ]
+     },
+     "ru": {
+      "items": [
+       "выдача справок с места учёбы на английском языке;",
+       "предоставление информации о международных грантах и программах академической мобильности;",
+       "регистрация иностранных студентов и прикрепление к учебным дисциплинам;",
+       "консультации по обучению в зарубежных вузах;",
+       "визовая поддержка иностранных студентов;",
+       "оформление договоров об обучении для иностранных студентов;",
+       "временная регистрация иностранных студентов в Республике Узбекистан;",
+       "консультации и приём документов для поступления иностранных граждан."
+      ]
+     },
+     "en": {
+      "items": [
+       "issuance of enrollment certificates in English;",
+       "information on international grants and mobility programs;",
+       "registration and academic enrollment of foreign students;",
+       "visa support and temporary registration;",
+       "consultation and admission services for international applicants."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Buxgalteriya va marketing boʻyicha koʻrsatiladigan xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Услуги в сфере бухгалтерии и маркетинга:",
+      "level": 3
+     },
+     "en": {
+      "text": "Accounting and marketing services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "qayta oʻqishga shartnoma berish;",
+       "stipendiya toʻgʻrisida maʻlumotnoma berish;",
+       "hisob varagʻini shakllantirib berish;",
+       "talabalarga toʻlov-shartnomasi olish uchun ariza berishga koʻmaklashish;",
+       "talabaning yotoqxonalarga joylashish shartnomasi boʻyicha qarzdorligi va haqdorligi haqida maʻlumot berish;",
+       "talabaning qayta oʻqish shartnomasi boʻyicha qarzdorligi va haqdorligi haqida maʻlumot berish;",
+       "talabaning toʻlov-shartnomasi boʻyicha qarzdorligi va haqdorligi haqida maʻlumot berish;",
+       "toʻlov-shartnoma summasi haqida maʻlumot berish;",
+       "bitiruvchi talabalarga boʻlgʻusi ish oʻrni toʻgʻrisida kengroq axborotlar berish, mehnat yarmarkalarni oʻtkazishga koʻmaklashish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "оформление договоров на повторное обучение;",
+       "выдача справок о стипендии;",
+       "формирование лицевых счетов;",
+       "консультации по вопросам оплаты обучения и задолженностей;",
+       "предоставление информации о стоимости контрактов;",
+       "содействие выпускникам в трудоустройстве и организации ярмарок вакансий."
+      ]
+     },
+     "en": {
+      "items": [
+       "tuition contract processing;",
+       "scholarship certificates;",
+       "payment account formation;",
+       "debt and payment consultations;",
+       "employment support and job fair assistance."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Ilmiy faoliyat boʻyicha koʻrsatiladigan xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Услуги в сфере научной деятельности:",
+      "level": 3
+     },
+     "en": {
+      "text": "Research-related services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "grantlar va tanlovlar haqida maʻlumot berish;",
+       "ilmiy konferensiyalar haqida maʻlumot berish;",
+       "innovatsion gʻoya va startaplarni roʻyxatdan oʻtkazishga koʻmaklashish;",
+       "nomdor stipendiyalar haqida maʻlumot berish;",
+       "ilmiy loyihalar toʻgʻrisida konsultatsiya berish;",
+       "ustoz-shogird maktabiga aʻzo boʻlishga koʻmaklashish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "информирование о грантах и конкурсах;",
+       "предоставление информации о научных конференциях;",
+       "содействие в регистрации инновационных идей и стартапов;",
+       "консультации по научным проектам и именным стипендиям;",
+       "содействие вступлению в систему «Устоз–шогирд»."
+      ]
+     },
+     "en": {
+      "items": [
+       "information on grants and competitions;",
+       "research conference announcements;",
+       "startup and innovation registration support;",
+       "consultation on research projects and named scholarships."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Koʻrsatilishi zarur boʻlgan boshqa qoʻshimcha xizmatlar:",
+      "level": 3
+     },
+     "ru": {
+      "text": "Прочие дополнительные услуги:",
+      "level": 3
+     },
+     "en": {
+      "text": "Additional services:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "talabalarga tibbiy sugʻurta olish uchun yordam berish;",
+       "oʻqishga qabul va oʻqishni koʻchirish yuzasidan konsultatsiya berish;",
+       "talabalarga ishga joylashish borasida tavsiyalar berish;",
+       "talabalarga OTTda mavjud turli xizmatlar va resurslar haqida maʻlumot berish."
+      ]
+     },
+     "ru": {
+      "items": [
+       "помощь в оформлении медицинского страхования;",
+       "консультации по вопросам приёма и перевода на обучение;",
+       "рекомендации по трудоустройству;",
+       "информирование о доступных услугах и ресурсах в институте."
+      ]
+     },
+     "en": {
+      "items": [
+       "assistance with medical insurance;",
+       "consultation on admission and transfer;",
+       "employment guidance;",
+       "information on institutional services and resources."
+      ]
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 494,
+    "caption": {
+     "uz": "Registrator ofisi",
+     "ru": "Офис регистратора",
+     "en": "Registrar's office"
+    },
+    "fp": {
+     "uz": "44a050006ab5ca69a10dfc9d602d73c44bbd61284f76e4cfb120bd4b270e22aa",
+     "ru": "44a050006ab5ca69a10dfc9d602d73c44bbd61284f76e4cfb120bd4b270e22aa",
+     "en": "44a050006ab5ca69a10dfc9d602d73c44bbd61284f76e4cfb120bd4b270e22aa"
+    }
+   }
+  ],
+  "notes": [
+   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "bakalavriat-qabul-kvotasi-2025",
+  "order": 1,
+  "fp": {
+   "uz": "530e972a5ebc3099ff4900570ec5bdb639a8c0bc568d0fabd8ec0f52263f03a2",
+   "ru": "eb4652851218e162e1b75ac928246c6b298ef2346e8f48c710bbaaf5393f5741",
+   "en": "e780cebf1f9dd223f7b6ee0557a41711fc385b8bd0f38f367ad2bf91a03a3f20"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/Bakalavr -2025.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/Bakalavr -2025.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/Bakalavr -2025.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/QABUL-2025/qabul kvotasi.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/QABUL-2025/qabul kvotasi.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/QABUL-2025/qabul kvotasi.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/QABUL-2024/Kvota-2025.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/QABUL-2024/Kvota-2025.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/QABUL-2024/Kvota-2025.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/bakalavriat qabul kvotasi-2025.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/bakalavriat qabul kvotasi-2025.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/QABUL-2025/Bakalavriat-2025/bakalavriat qabul kvotasi-2025.jpg",
+      "alt": ""
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 513,
+    "caption": {
+     "uz": "Qabul kvotasi-2025",
+     "ru": "Квота приемной комиссии-2025",
+     "en": "The quota of the selection committee-2025"
+    },
+    "fp": {
+     "uz": "d500f1280ad819ced170d9c3d86a1797a6c401d971d865f32e5427b521eb1611",
+     "ru": "d500f1280ad819ced170d9c3d86a1797a6c401d971d865f32e5427b521eb1611",
+     "en": "d500f1280ad819ced170d9c3d86a1797a6c401d971d865f32e5427b521eb1611"
+    }
+   }
+  ],
+  "notes": [
+   "4 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "xorijiy-abiturient",
+  "order": 1,
+  "fp": {
+   "uz": "e5f4aa9866e613398bccaa31ffde67c15897ec2156a7b38f501e9345306dbe03",
+   "ru": "41f15d2fe1e32d2a29c0ed22084d9199886d63d9b8e2fd1c1c674ffa7697d649",
+   "en": "f620d264c7c790f65aa70403b10a1c767f2587de2e783a73e192740310022bfe"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/2025/xorijiy uz.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/2025/xorijiy uz.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/2025/xorijiy uz.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "1. Normativ-huquqiy asos",
+      "level": 3
+     },
+     "ru": {
+      "text": "1. Общие положения",
+      "level": 3
+     },
+     "en": {
+      "text": "1. General Provisions",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2019-yil 20-iyundagi 517-sonli Qarori bilan tasdiqlangan “Xorijiy fuqarolarni Oʻzbekiston Respublikasi taʻlim muassasalariga oʻqishga qabul qilish va oʻqitish tartibi toʻgʻrisidagi nizom” asosida Fargʻona jamoat salomatligi tibbiyot institutiga xorijiy fuqarolar institut tomonidan belgilangan tartibda suhbat natijalariga koʻra qabul qilinadi."
+     },
+     "ru": {
+      "text": "Приём иностранных граждан осуществляется на основании Постановления Кабинета Министров Республики Узбекистан от 20 июня 2019 года № 517 «О внесении изменений в Положение о порядке приёма и обучения иностранных граждан в образовательных учреждениях Республики Узбекистан». Иностранные граждане принимаются на обучение по результатам собеседования, проводимого приёмной комиссией института."
+     },
+     "en": {
+      "text": "Admission of foreign citizens is carried out in accordance with the Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated June 20, 2019, No. 517, “On admission of foreign citizens to educational institutions of the Republic of Uzbekistan and on introducing amendments to the regulations on the procedure for training.” Foreign applicants are admitted to the institute based on the results of an interview conducted in accordance with the procedure established by the institute."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2. Xorijiy fuqarolardan talab qilinadigan hujjatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "2. Документы, требуемые от иностранных граждан",
+      "level": 3
+     },
+     "en": {
+      "text": "2. Documents Required from Foreign Citizens",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xorijiy fuqarolarning hujjatlari institut qabul komissiyasi tomonidan quyidagi tartibda qabul qilinadi:"
+     },
+     "ru": {
+      "text": "Документы иностранных граждан принимаются приёмной комиссией института в следующем порядке:"
+     },
+     "en": {
+      "text": "Documents from foreign citizens are accepted by the institute’s admission committee in the following manner:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Rektor nomiga ariza (I.Sh., fuqaroligi va taʻlim yoʻnalishi koʻrsatilgan holda);",
+       "Milliy pasport nusxasi;",
+       "Oʻzbekistonda vaqtincha yashash guvohnomasi nusxasi (agar mavjud boʻlsa);",
+       "Umumiy oʻrta yoki oʻrta maxsus, kasb-hunar taʻlimi haqidagi shahodatnoma/diplom/sertifikatning oʻzbek yoki rus tiliga tarjima qilingan va notarius tomonidan tasdiqlangan nusxasi;",
+       "Tibbiy maʻlumotnoma (086-shakl);",
+       "Fotosurat (3,5×4,5 sm) – 6 dona."
+      ]
+     },
+     "ru": {
+      "items": [
+       "заявление на имя ректора с указанием фамилии, имени, отчества, гражданства и выбранного направления обучения;",
+       "копия национального паспорта;",
+       "копия свидетельства о временном проживании в Республике Узбекистан (при наличии);",
+       "копия аттестата / диплома / сертификата об общем среднем или среднем специальном, профессиональном образовании, переведённая на узбекский или русский язык и нотариально заверенная;",
+       "медицинская справка (форма № 086);",
+       "фотографии размером 3,5 × 4,5 см — 6 штук."
+      ]
+     },
+     "en": {
+      "items": [
+       "an application addressed to the Rector indicating the full name, citizenship, and chosen field of study;",
+       "a copy of the national passport;",
+       "a copy of the temporary residence certificate in the Republic of Uzbekistan (if available);",
+       "a notarized copy of the certificate / diploma / qualification document of general secondary or secondary specialized (vocational) education, translated into Uzbek or Russian;",
+       "medical certificate (Form No. 086);",
+       "photographs sized 3.5 × 4.5 cm — 6 copies."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hujjatlar faqat milliy pasport asosida qabul qilinadi. Agar xorijiy fuqaro Oʻzbekiston Respublikasida yashash guvohnomasiga ega boʻlsa, pasport nusxasi bilan birga ushbu guvohnoma nusxasi ham topshiriladi."
+     },
+     "ru": {
+      "text": "Документы принимаются исключительно на основании национального паспорта. В случае если иностранный гражданин имеет свидетельство о проживании в Республике Узбекистан, вместе с копией паспорта также предоставляется копия данного свидетельства."
+     },
+     "en": {
+      "text": "Documents are accepted only on the basis of a national passport. If a foreign citizen holds a residence certificate in the Republic of Uzbekistan, a copy of this certificate must be submitted together with the passport copy."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2.1.Taʻlim yoʻnalishlari:",
+      "level": 3
+     },
+     "ru": {
+      "text": "2.1. Направления обучения:",
+      "level": 3
+     },
+     "en": {
+      "text": "2. Fields of Study:",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Davolash ishi",
+       "Farmatsiya",
+       "Stomatologiya",
+       "Pediatriya"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Лечебное дело",
+       "Фармация",
+       "Стоматология",
+       "Педиатрия"
+      ]
+     },
+     "en": {
+      "items": [
+       "General Medicine",
+       "Pharmacy",
+       "Dentistry",
+       "Pediatrics"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "3. Xorijiy fuqarolarni oʻqishga qabul qilish tartibi",
+      "level": 3
+     },
+     "ru": {
+      "text": "3. Порядок приёма иностранных граждан на обучение",
+      "level": 3
+     },
+     "en": {
+      "text": "3. Admission Procedure for Foreign Citizens",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Xorijiy fuqarolar faqat toʻlov-shartnoma asosida oʻqishga qabul qilinadilar.",
+       "Toʻlov miqdori xorijiy fuqarolar uchun belgilangan stavkaga muvofiq amalga oshiriladi.",
+       "Toʻlovlar chet el valyutasi ekvivalentida, Markaziy bank tomonidan toʻlov kunidagi kurs asosida milliy valyutada toʻlanadi.",
+       "Toʻlov amalga oshirilganligini tasdiqlovchi bank toʻlov topshiriqnomasi yoki kvitansiya, shuningdek, chet el valyutasini milliy valyutaga ayirboshlash sertifikati topshirilishi shart.",
+       "Elektron manzil / Электронный адрес: fmiophadmission@mail.ru"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Иностранные граждане принимаются на обучение исключительно на платно-контрактной основе.",
+       "Размер оплаты определяется в соответствии с установленными ставками для иностранных граждан.",
+       "Оплата производится в национальной валюте в эквиваленте иностранной валюты по курсу Центрального банка на день оплаты.",
+       "В обязательном порядке предоставляются банковское платёжное поручение или квитанция, подтверждающие осуществление оплаты, а также сертификат об обмене иностранной валюты на национальную валюту.",
+       "Электронный адрес: fmiophadmission@mail.ru"
+      ]
+     },
+     "en": {
+      "items": [
+       "Foreign citizens are admitted for study exclusively on a tuition-fee (contract) basis.",
+       "The tuition fee amount is determined in accordance with the rates established for foreign citizens.",
+       "Payments are made in the national currency equivalent to foreign currency, based on the Central Bank exchange rate on the day of payment.",
+       "A bank payment order or receipt confirming the payment, as well as a certificate confirming the exchange of foreign currency into national currency, must be submitted.",
+       "Email address: fmiophadmission@mail.ru"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "4. Oʻzbekiston Respublikasida yashash guvohnomasiga ega xorijiy fuqarolar",
+      "level": 3
+     },
+     "ru": {
+      "text": "4. Иностранные граждане, имеющие вид на жительство в Республике Узбекистан",
+      "level": 3
+     },
+     "en": {
+      "text": "4. Foreign Citizens Holding a Residence Permit in the Republic of Uzbekistan",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Bunday shaxslar ham oʻqishga toʻlov-shartnoma asosida qabul qilinadilar.",
+       "Ular ham toʻlovlarni chet el valyutasi ekvivalentida milliy valyutada amalga oshiradilar.",
+       "Ulardan chet el valyutasini milliy valyutaga ayirboshlash sertifikati talab qilinmaydi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Указанные лица также принимаются на обучение на платно-контрактной основе.",
+       "Оплата обучения осуществляется в национальной валюте в эквиваленте иностранной валюты.",
+       "Предоставление сертификата об обмене иностранной валюты на национальную валюту не требуется."
+      ]
+     },
+     "en": {
+      "items": [
+       "Such individuals are also admitted for study on a tuition-fee (contract) basis.",
+       "Tuition fees are paid in the national currency equivalent to foreign currency.",
+       "Submission of a certificate confirming the exchange of foreign currency into national currency is not required."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "5. Fuqaroligi boʻlmagan shaxslarning huquqiy maqomi",
+      "level": 3
+     },
+     "ru": {
+      "text": "5. Правовой статус лиц без гражданства",
+      "level": 3
+     },
+     "en": {
+      "text": "5. Legal Status of Stateless Persons",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oʻzbekiston Respublikasining “Taʻlim toʻgʻrisida”gi Qonunining 4-moddasiga muvofiq:",
+       "Oʻzbekiston Respublikasida istiqomat qilayotgan va “Fuqaroligi yoʻq shaxs uchun Oʻzbekiston Respublikasida yashash guvohnomasi”ga ega boʻlgan shaxslar xorijiy fuqaro hisoblanmaydi.",
+       "Ular hujjatlarni Oʻzbekiston Respublikasi fuqarolari uchun belgilangan umumiy tartibda topshiradilar.",
+       "Oʻqish uchun toʻlovlar ham fuqarolar uchun belgilangan miqdorda va milliy valyutada amalga oshiriladi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "В соответствии со статьёй 4 Закона Республики Узбекистан «Об образовании»:",
+       "лица, постоянно проживающие на территории Республики Узбекистан и имеющие удостоверение лица без гражданства на проживание в Республике Узбекистан, не считаются иностранными гражданами;",
+       "такие лица подают документы в порядке, установленном для граждан Республики Узбекистан;",
+       "оплата за обучение производится в размерах, установленных для граждан, и в национальной валюте."
+      ]
+     },
+     "en": {
+      "items": [
+       "In accordance with Article 4 of the Law of the Republic of Uzbekistan “On Education”:",
+       "persons permanently residing in the Republic of Uzbekistan and holding a Residence Certificate for a Stateless Person in the Republic of Uzbekistan are not considered foreign citizens;",
+       "such persons submit documents according to the general procedure established for citizens of the Republic of Uzbekistan;",
+       "tuition fees are paid in the amounts established for citizens and in the national currency."
+      ]
+     }
+    }
+   }
+  ],
+  "notes": [
+   "15 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ },
+ {
+  "slug": "kongress-2022-2024",
+  "order": 1,
+  "fp": {
+   "uz": "325aaf2704d7b422c7ca499e7ac52cc7fa7ab5a24301314ea517353a06ea5b63",
+   "ru": "83ebfcd5c761b2825fb270f72634f4fba6e004447d0bd96140a1c6917c2e19f1",
+   "en": "7a8be6eae6ea8b024faad37ccdc204f8486a955361f10d139c61cb7702c9448a"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/BANNER DERMO-1 zal.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/BANNER DERMO-1 zal.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/BANNER DERMO-1 zal.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology...jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology...jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology...jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Dermayology.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Dermayology.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Dermayology.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/TAKLIFNOMA-1.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/TAKLIFNOMA-1.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/TAKLIFNOMA-1.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/Dermatovenerology.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/Dermatovenerology.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/Dermatovenerology.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/corusel/СПИКЕРС...jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/corusel/СПИКЕРС...jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/corusel/СПИКЕРС...jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/PARTICIPANTS-100.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/PARTICIPANTS-100.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/PARTICIPANTS-100.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/zoom.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/zoom.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/zoom.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kongress-2022/sumka.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kongress-2022/sumka.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kongress-2022/sumka.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Янгиликларга берилаётган фотолар/Заславский Денис.jpg",
+      "alt": ""
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Янгиликларга берилаётган фотолар/Заславский Денис.jpg",
+      "alt": ""
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Янгиликларга берилаётган фотолар/Заславский Денис.jpg",
+      "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Yuklab olish uchun bosing >>>>>> [Konferensiya axborot xati, 2022-yil 6-may (rus tilida)](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%98%D0%BD%D1%84_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B8_%D0%BC%D0%B0%D1%8F_2022%D0%B3_%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82.pdf)"
+     },
+     "ru": {
+      "text": "Нажмите, чтобы скачать>>>>>> [Инф_письмо_конференции_6 мая_2022г](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%98%D0%BD%D1%84_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B8_%D0%BC%D0%B0%D1%8F_2022%D0%B3_%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82.pdf)"
+     },
+     "en": {
+      "text": "Click to download >>>>>> [Conference information letter, 6 May 2022](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%98%D0%BD%D1%84_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B8_%D0%BC%D0%B0%D1%8F_2022%D0%B3_%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82.pdf)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Yuklab olish uchun bosing >>>>>> [Konferensiya dasturi, 2022-yil 6-may (kirill alifbosida)](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%9F%D0%A0%D0%9E%D0%93%D0%A0%D0%90%D0%9C%D0%9C%D0%901.pdf)"
+     },
+     "ru": {
+      "text": "Нажмите, чтобы скачать>>>>>> [Программа конференции](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%9F%D0%A0%D0%9E%D0%93%D0%A0%D0%90%D0%9C%D0%9C%D0%901.pdf)"
+     },
+     "en": {
+      "text": "Click to download >>>>>> [Conference programme (in Uzbek, Cyrillic script)](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%9F%D0%A0%D0%9E%D0%93%D0%A0%D0%90%D0%9C%D0%9C%D0%901.pdf)"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 556,
+    "caption": {
+     "uz": "Kongress",
+     "ru": "Конгресс",
+     "en": "Congress"
+    },
+    "fp": {
+     "uz": "aefc9d3ebb465148cff8e8b3619b43e56b77aba97fa54faab48d3daf06e788d3",
+     "ru": "aefc9d3ebb465148cff8e8b3619b43e56b77aba97fa54faab48d3daf06e788d3",
+     "en": "aefc9d3ebb465148cff8e8b3619b43e56b77aba97fa54faab48d3daf06e788d3"
+    }
+   }
+  ],
+  "notes": [
+   "13 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+  ]
+ }
+]
