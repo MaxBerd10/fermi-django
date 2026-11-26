@@ -1,6 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { partners } from "@/mocks/homeData";
+import { partners } from "@/data/homeData";
 import { useHomeSections } from "@/api/homeSections";
 
 export default function Partners() {

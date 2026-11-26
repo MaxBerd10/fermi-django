@@ -5,7 +5,7 @@ import { getSettings } from "@/api/settings";
 import { getLeaders } from "@/api/leaders";
 import { stripHtml } from "@/lib/html";
 import { formatShortDate, formatLongDate } from "@/lib/date";
-import { events, partners } from "@/mocks/homeData";
+import { events, partners } from "@/data/homeData";
 import type { CoruselSlide, Leader, SiteSettings, Counter, About, FacultyListItem, NewsArticle } from "@/types/content";
 
 /**

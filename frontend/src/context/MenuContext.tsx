@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState, type ReactNode 
 import { getMenu } from "../api/menu";
 import type { MenuNode } from "../types/menu";
 import i18n from "../i18n";
-import { navItems } from "../mocks/homeData";
+import { navItems } from "../data/homeData";
 import { whenPageSettled } from "../lib/whenPageSettled";
 
 interface MenuContextValue {
