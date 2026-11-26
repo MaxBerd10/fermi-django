@@ -6,6 +6,7 @@ from apps.content.models import Page
 
 FIXES = [
     ("bilim-yurtlari", 12, "Nukus shakar", "Nukus shahar"),
+    ("chet-el-talabalari-turar-joyi-togrisidagi-malumotlar", 8, "ush fuqarolar", "shu fuqarolar"),
     ("fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi", 2, "saqlasʻh", "saqlash"),
 ]
 entries = []

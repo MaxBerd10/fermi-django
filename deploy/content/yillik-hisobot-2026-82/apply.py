@@ -1,6 +1,6 @@
-# Two typos of the UZBEK text, both obvious: "Nukus shakar" -> "Nukus shahar" (the user gave the right word; the college address list) and "saqlasʻh" -> "saqlash"
-# (a stray modifier apostrophe inside the word, Ministry of Health, in the history of the Fargona technical school). Other typos found in the Uzbek source are NOT touched
-# here, because the right wording is a guess ("25.0.2001" has no month, "ush fuqarolar", "OTTda"): they go to the staff.
+# Three obvious typos of the UZBEK text, each with the right word given by the user or plain from the letters: "Nukus shakar" -> "Nukus shahar" (college address list),
+# "saqlasʻh" -> "saqlash" (a stray modifier apostrophe inside the word; history of the Fargona technical school), "ush fuqarolar" -> "shu fuqarolar" (the user's word; the
+# foreign-student housing page). The month of "25.0.2001" (digital education centre page) is NOT touched: it is unknown, the staff must give it.
 # RUN AFTER scripts 39-81.
 #
 # SAFE BY DESIGN: dry (default) writes nothing; a block is changed only if every wording of the plan is found in it exactly once (and the Uzbek start of the block is the
