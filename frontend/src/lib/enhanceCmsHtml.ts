@@ -18,11 +18,11 @@ export function getCmsArticleModifier(slug?: string): string {
   if (slug === "ilmiy-kengash") return "cms-article--council-decisions";
   if (slug === "avtoreferatlar") return "cms-article--autoreferat";
   if (slug === "tahrir-hayati-kengashi") return "cms-article--journal-editorial";
-  if (slug === "jcpm-2023" || slug === "jcpm-2024" || slug === "jcpm-2025") return "cms-article--journal-archive";
+  if (/^jcpm-\d{4}$/.test(slug ?? "")) return "cms-article--journal-archive";
   if (
     slug === "institut-ijtimoy-tibbiy-gazetasi" ||
     slug?.startsWith("institut-gazetasi-arxivi-") ||
-    slug === "institut-gazetasi-2025"
+    /^institut-gazetasi-\d{4}$/.test(slug ?? "")
   ) {
     return "cms-article--newspaper";
   }
@@ -236,7 +236,7 @@ export function enhanceCmsHtml(html: string, options?: CmsEnhanceOptions): strin
     return body.innerHTML;
   }
 
-  if (slug === "jcpm-2023" || slug === "jcpm-2024" || slug === "jcpm-2025") {
+  if (/^jcpm-\d{4}$/.test(slug)) {
     buildJournalArchiveLayout(body, slug.replace("jcpm-", ""));
     return body.innerHTML;
   }
@@ -767,35 +767,11 @@ function buildCouncilMainLayout(body: HTMLElement) {
 
 function buildCouncilDecisionsLayout(body: HTMLElement) {
   stripRestrictedNotice(body);
-  const lines: string[] = [];
-  const seenLines = new Set<string>();
-
-  body.querySelectorAll("p, div").forEach((el) => {
-    const text = el.textContent?.replace(/\u00a0/g, " ").trim() ?? "";
-    if (!text || RESTRICTED_TEXT_RE.test(text)) return;
-    text.split(/\n+/).forEach((line) => {
-      const t = line.trim();
-      if (t.length > 6 && /kengash|bayon|qaror/i.test(t) && !seenLines.has(t)) {
-        seenLines.add(t);
-        lines.push(t);
-      }
-    });
-    el.remove();
+  body.querySelectorAll("p, div").forEach((element) => {
+    if (element.closest("[data-file-card]") || element.querySelector("p, div, ul, ol, table, img, iframe, video")) return;
+    const text = element.textContent?.trim();
+    if (text && !RESTRICTED_TEXT_RE.test(text)) element.classList.add("cms-council-decision");
   });
-
-  if (lines.length === 0) return;
-
-  const list = body.ownerDocument.createElement("ul");
-  list.className = "cms-council-decisions";
-
-  lines.forEach((line) => {
-    const li = body.ownerDocument.createElement("li");
-    li.className = "cms-council-decision";
-    li.innerHTML = `<span class="cms-council-decision__icon" aria-hidden="true"><i class="ri-file-list-3-line"></i></span><span class="cms-council-decision__text">${escapeHtml(line)}</span>`;
-    list.appendChild(li);
-  });
-
-  body.appendChild(list);
 }
 
 function buildAutoreferatLayout(body: HTMLElement) {
@@ -926,16 +902,12 @@ function fileLinkAttrs(href: string): string {
 /** Pages whose layout is rebuilt from text. Their file links must not be turned into document cards first. */
 const TEXT_LAYOUT_SLUGS = new Set([
   "institut-ilmiy-kengashi",
-  "ilmiy-kengash",
   "avtoreferatlar",
   "tahrir-hayati-kengashi",
-  "jcpm-2023",
-  "jcpm-2024",
-  "jcpm-2025",
 ]);
 
 export function rebuildsLayoutFromText(slug?: string): boolean {
-  return !!slug && TEXT_LAYOUT_SLUGS.has(slug);
+  return !!slug && (TEXT_LAYOUT_SLUGS.has(slug) || /^jcpm-\d{4}$/.test(slug));
 }
 
 function buildJournalEditorialLayout(body: HTMLElement) {
@@ -993,11 +965,18 @@ function buildJournalArchiveLayout(body: HTMLElement, year: string) {
     else if (!existing.href && line.href) existing.href = line.href;
   });
   const titles = [...entries.values()];
+  const renderedLinks = new Set(titles.map((entry) => entry.href));
+  // Keep the original archive if legacy markup cannot be grouped without
+  // dropping a document link.
+  if (!titles.length || Array.from(body.querySelectorAll<HTMLAnchorElement>("a[href]")).some((anchor) => {
+    const href = anchor.getAttribute("href") ?? "";
+    return DOCUMENT_HREF_RE.test(href) && !renderedLinks.has(href);
+  })) return;
 
   body.innerHTML = "";
   const head = body.ownerDocument.createElement("div");
   head.className = "cms-journal-archive__head";
-  head.innerHTML = `<span class="cms-journal-archive__year">${escapeHtml(year)}</span><span class="cms-journal-archive__count">${titles.length} ${titles.length === 1 ? "maqola" : "maqola"}</span>`;
+  head.innerHTML = `<span class="cms-journal-archive__year">${escapeHtml(year)}</span>`;
   body.appendChild(head);
 
   const list = body.ownerDocument.createElement("ul");

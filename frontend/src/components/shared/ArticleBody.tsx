@@ -6,8 +6,8 @@ import { layoutBlocks, type Picture, type Section } from "@/lib/layoutBlocks";
 import type { ContentBlock } from "@/types/blocks";
 
 /** Draws the sections of `layoutBlocks`. All the decisions (what goes beside what) are made there; this only draws. */
-function PictureImg({ picture }: { picture: Picture }) {
-  const small = optimizedImageUrl(picture.src, 640);
+function PictureImg({ picture, width = 640 }: { picture: Picture; width?: number }) {
+  const small = optimizedImageUrl(picture.src, width);
   return (
     <img
       src={small || picture.src}
@@ -25,20 +25,20 @@ function PictureImg({ picture }: { picture: Picture }) {
   );
 }
 
-function Figure({ picture }: { picture: Picture }) {
+function Figure({ picture, width }: { picture: Picture; width?: number }) {
   return (
     <figure className={picture.tall ? "article-tall" : undefined}>
-      <PictureImg picture={picture} />
+      <PictureImg picture={picture} width={width} />
     </figure>
   );
 }
 
 /** Pictures in a row of their own: one in the middle, two or more as a small gallery. */
 function PictureRow({ pictures }: { pictures: Picture[] }) {
-  if (pictures.length === 1) return <figure className="article-single"><PictureImg picture={pictures[0]} /></figure>;
+  if (pictures.length === 1) return <figure className={pictures[0].tall ? "article-single article-tall" : "article-single"}><PictureImg picture={pictures[0]} width={1200} /></figure>;
   return (
     <div className="article-gallery">
-      {pictures.map((picture) => <Figure key={picture.src} picture={picture} />)}
+      {pictures.map((picture, index) => <Figure key={picture.src} picture={picture} width={index === 0 && pictures.length % 2 === 1 ? 1200 : 900} />)}
     </div>
   );
 }
@@ -154,12 +154,18 @@ function SectionView({ section }: { section: Section }) {
   }
 }
 
-export default function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
+export default function ArticleBody({ blocks, inlinePdfBlockId, documentTitle }: {
+  blocks: ContentBlock[];
+  inlinePdfBlockId?: number;
+  documentTitle?: string;
+}) {
   return (
     <>
       {layoutBlocks(blocks).map((section, index) => (
         <Fragment key={index}>
-          <SectionView section={section} />
+          {section.kind === "block" && section.block.id === inlinePdfBlockId
+            ? <BlockRenderer block={section.block} showPdf documentTitle={documentTitle} />
+            : <SectionView section={section} />}
         </Fragment>
       ))}
     </>

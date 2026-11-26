@@ -18,6 +18,15 @@ function toAbsoluteUrl(path: string): string {
   return apiOrigin ? `${apiOrigin}${path}` : path;
 }
 
+function documentHref(path: string): string {
+  if (import.meta.env.DEV) {
+    // Serve local uploads through the same Vite proxy as the CMS requests.
+    const localMedia = path.match(/^https?:\/\/(?:127\.0\.0\.1|localhost):8000(\/media\/.*)$/i);
+    if (localMedia) return localMedia[1];
+  }
+  return toAbsoluteUrl(path);
+}
+
 /**
  * One video. A portrait video (phone format, 9:16) would be ~1200px tall in the usual 672px column, taller than the
  * screen, so once the browser knows the real size of the video a portrait one gets a narrower column (it then fits
@@ -61,7 +70,11 @@ function VideoBlock({ src, poster, caption }: { src: string; poster: string; cap
  * surrounding layout, and a malformed block can't reach this component at all
  * (the backend rejects invalid block data before it's ever saved).
  */
-export function BlockRenderer({ block }: { block: ContentBlock }) {
+export function BlockRenderer({ block, documentTitle, showPdf = false }: {
+  block: ContentBlock;
+  documentTitle?: string;
+  showPdf?: boolean;
+}) {
   const { t } = useTranslation();
   switch (block.block_type) {
     case "heading":
@@ -143,6 +156,9 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
             width={image.width ?? undefined}
             height={image.height ?? undefined}
             className="w-full rounded-xl"
+            onError={({ currentTarget }) => {
+              if (currentTarget.getAttribute("src") !== image.file) currentTarget.src = image.file;
+            }}
           />
         </figure>
       );
@@ -192,6 +208,7 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
           html={block.data.html}
           className={`cms-article--rich ${getCmsArticleModifier(block.data.slug)}`}
           slug={block.data.slug}
+          pdfTitle={showPdf ? documentTitle : undefined}
         />
       );
 
@@ -244,16 +261,22 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
 
       return (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-          {visible.map((item, i) => (
-            <div key={item.image_id ?? i} className="aspect-square overflow-hidden rounded-lg">
-              <img
-                src={optimizedImageUrl(item.image!.file, 480) || item.image!.file}
-                alt={item.alt ?? item.image!.alt_text}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
+          {visible.map((item, i) => {
+            const image = item.image!;
+            return (
+              <div key={item.image_id ?? i} className="aspect-square overflow-hidden rounded-lg">
+                <img
+                  src={optimizedImageUrl(image.file, 480) || image.file}
+                  alt={item.alt ?? image.alt_text}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                  onError={({ currentTarget }) => {
+                    if (currentTarget.getAttribute("src") !== image.file) currentTarget.src = image.file;
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
       );
     }
@@ -261,11 +284,11 @@ export function BlockRenderer({ block }: { block: ContentBlock }) {
     case "document": {
       const { document, caption, style } = block.data;
       if (!document) return null;
-      const documentUrl = toAbsoluteUrl(document.file);
+      const documentUrl = documentHref(document.file);
 
-      const title = caption || document.title || humanizeFilename(document.filename);
+      const title = caption || document.title || documentTitle || humanizeFilename(document.filename);
 
-      if (style === "roadmap") {
+      if (style === "roadmap" || (showPdf && /\.pdf$/i.test(document.filename))) {
         return (
           <RoadmapPdfFrame
             key={documentUrl}

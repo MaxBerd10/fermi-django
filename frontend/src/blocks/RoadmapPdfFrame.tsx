@@ -10,17 +10,40 @@ const VIEWER_SETTLE_MS = 1500;
 // if the frame's load event never comes (blocked, offline), show whatever is there rather than a blank box
 const GIVE_UP_MS = 10000;
 
-function PdfViewer({ src, title }: { src: string; title: string }) {
+export function PdfViewer({ src, title }: { src: string; title: string }) {
   const { t } = useTranslation();
   const [ready, setReady] = useState(false);
+  const [available, setAvailable] = useState<boolean | null>(null);
   const timers = useRef<number[]>([]);
 
   useEffect(() => {
+    const url = new URL(src, window.location.href);
+    if (url.origin !== window.location.origin) {
+      setAvailable(true);
+      return;
+    }
+    const controller = new AbortController();
+    fetch(url, { method: "HEAD", signal: controller.signal })
+      .then((response) => {
+        if (!controller.signal.aborted) {
+          setAvailable(response.ok && /^application\/pdf\b/i.test(response.headers.get("content-type") ?? ""));
+        }
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) setAvailable(false);
+      });
+    return () => controller.abort();
+  }, [src]);
+
+  useEffect(() => {
+    if (!available) return;
     const giveUp = window.setTimeout(() => setReady(true), GIVE_UP_MS);
     timers.current.push(giveUp);
     const pending = timers.current;
     return () => pending.forEach((timer) => window.clearTimeout(timer));
-  }, []);
+  }, [available]);
+
+  if (available !== true) return null;
 
   return (
     <div className="cms-roadmap-pdf__frame">
@@ -46,7 +69,7 @@ export default function RoadmapPdfFrame({
 }: { src: string; title: string; filename: string; fileSize: number }) {
   return (
     <section className="space-y-4" aria-label={title}>
-      <PdfViewer src={src} title={title} />
+      <PdfViewer key={src} src={src} title={title} />
       <DocumentCard url={src} title={title} filename={filename} fileSize={fileSize} />
     </section>
   );

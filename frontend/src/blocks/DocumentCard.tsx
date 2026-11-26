@@ -53,7 +53,7 @@ export default function DocumentCard({ url, title, filename, fileSize }: Documen
   const meta = [extension, fileSize > 0 ? formatFileSize(fileSize) : ""].filter(Boolean).join(" · ");
 
   return (
-    <div className={CARD_CLASS}>
+    <div className={CARD_CLASS} data-file-card="">
       <div className={CARD_MAIN_CLASS}>
         <span className={CARD_ICON_CLASS} aria-hidden="true">
           <i className={fileIconClass(extension)} />

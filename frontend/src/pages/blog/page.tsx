@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import ArticleBody from "@/components/shared/ArticleBody";
+import StructureArticle from "@/components/shared/StructureArticle";
+import RegulatoryDocument from "@/components/shared/RegulatoryDocument";
 import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getPage } from "@/api/pages";
@@ -8,6 +10,7 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
+import LinkifiedText from "@/blocks/LinkifiedText";
 import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
@@ -15,8 +18,11 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
-import { findMenuTitleBySlug, INSTITUTE_ABOUT_MENU_ID, resolveMenuSection } from "@/lib/menuSection";
+import { findMenuTitleBySlug, INSTITUTE_ABOUT_MENU_ID, isStructureMenuSection, resolveMenuSection } from "@/lib/menuSection";
+import { NEWS_SECTION_MENU_ID } from "@/lib/newsSection";
+import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
+import { normalizeTechnicalCollegeHeading, normalizeTechnicalCollegeHtml, repairTechnicalCollegeText } from "@/lib/technicalCollegeHeading";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
 /**
@@ -96,7 +102,67 @@ export default function BlogPage() {
 
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
-  const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order);
+  const isTechnicalCollege = menuSection?.theme === "texnikum" || /texnikum/i.test(slug ?? "");
+  const isScientificSection = (menuSection?.sectionId ?? resolvedMenuId) === 1993;
+  const repairConferenceText = (text: string) => text.replace(/Дос\s*[аa]\s*тижения/gu, "Достижения");
+  const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order).map((block) => {
+    if (block.block_type === "list") {
+      const items = block.data.items.map(repairConferenceText);
+      return items.some((item, index) => item !== block.data.items[index])
+        ? { ...block, data: { ...block.data, items } } : block;
+    }
+    if (isTechnicalCollege && block.block_type === "raw_html") {
+      const html = normalizeTechnicalCollegeHtml(block.data.html);
+      return html === block.data.html ? block : { ...block, data: { ...block.data, html } };
+    }
+    if (block.block_type !== "heading" && block.block_type !== "paragraph") return block;
+    let text = repairTechnicalCollegeText(block.data.text);
+    text = repairConferenceText(text);
+    if (slug === "registrator-ofisi" && block.block_type === "heading") {
+      text = text.replace(/^B\s+uxgalteriya/u, "Buxgalteriya").replace(/\s+:/u, ":");
+      if (/(?:ko[ʻʼ‘’']rsatiladigan xizmatlar|qo[ʻʼ‘’']shimcha xizmatlar)\s*:?$/iu.test(text)) {
+        return { ...block, data: { ...block.data, text, level: 3 as const } };
+      }
+    }
+    if (slug === "ishga-joylashish-uchun-hujjatlari" && /^(?:ro[ʻʼ‘’']yxati|список|list)$/iu.test(text.trim())) {
+      return { ...block, block_type: "paragraph" as const, data: { text: text[0].toUpperCase() + text.slice(1).toLowerCase() } };
+    }
+    const displayText = isTechnicalCollege && block.block_type === "heading"
+      ? normalizeTechnicalCollegeHeading(text) : text;
+    return displayText === block.data.text ? block : { ...block, data: { ...block.data, text: displayText } };
+  });
+  const hasEditorialGroups = slug === "avtoreferatlar" || slug === "tahrir-hayati-kengashi";
+  const editorialGroups = hasEditorialGroups && sortedBlocks.some((block) => block.block_type === "heading")
+    ? sortedBlocks.reduce<Array<typeof sortedBlocks>>((groups, block) => {
+      if (block.block_type === "document") return groups;
+      if (!groups.length || block.block_type === "heading") groups.push([]);
+      groups[groups.length - 1].push(block);
+      return groups;
+    }, []) : null;
+  // avtoreferatlar: per defence four blocks -- the council line, the author (heading), the thesis title, the PDF card -- drawn as one card each
+  const autoreferatCards = slug === "avtoreferatlar" && sortedBlocks.length > 0 && sortedBlocks.length % 4 === 0
+    && sortedBlocks.every((block, index) => block.block_type === (["paragraph", "heading", "paragraph", "document"] as const)[index % 4])
+    ? Array.from({ length: sortedBlocks.length / 4 }, (_, index) => sortedBlocks.slice(index * 4, index * 4 + 4)) : null;
+  const isStructuredCouncil = slug === "institut-ilmiy-kengashi"
+    && sortedBlocks[0]?.block_type === "paragraph"
+    && sortedBlocks.every(({ block_type }) =>
+      block_type === "paragraph" || block_type === "heading" || block_type === "list",
+    );
+  const isPublicationArchive = /^(?:jcpm-\d{4}|institut-gazetasi-(?:arxivi-)?\d{4})$/.test(slug ?? "");
+  const isScientificRegulatoryPage = isScientificSection
+    && /normativ|normative|regulat|норматив/iu.test(`${slug ?? ""} ${title}`);
+  const isRegulatoryPage = isScientificRegulatoryPage || getCmsArticleModifier(slug) === "cms-article--regulatory";
+  const documentFacts: Array<{ id: number; label: string; value: string }> = [];
+  if (isRegulatoryPage) {
+    for (const block of sortedBlocks) {
+      if (block.block_type !== "paragraph") break;
+      const fact = /^([^:\n]{2,42}):\s*(\S[^\n]*)$/.exec(block.data.text.trim());
+      if (!fact) break;
+      documentFacts.push({ id: block.id, label: fact[1].trim(), value: fact[2] });
+    }
+  }
+  const isRegulatoryIndex = slug === "prezident-farmon-va-qarorlari"
+    || slug === "davlat-dasturlari" || slug === "ozbeksiton-respublikasi-ssv-buyruqlari";
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
   // without a real h2, PageHeader's h1 is followed straight by the footer's
@@ -106,21 +172,100 @@ export default function BlogPage() {
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
     && sortedBlocks.length > 0
     && sortedBlocks.every((block) => block.block_type === "document" || block.block_type === "image");
+  const isInstituteReference = menuSection?.theme === "institut"
+    && menuSection.sectionId !== INSTITUTE_ABOUT_MENU_ID
+    && menuSection.sectionId !== NEWS_SECTION_MENU_ID;
+  const hasReferenceIntro = isStructureMenuSection(menuTree, menuSection?.sectionId);
+  const isReferencePage = isInstituteReference || hasReferenceIntro;
+  const isTextPage = isReferencePage && sortedBlocks.every(({ block_type }) =>
+    block_type === "heading" || block_type === "paragraph" || block_type === "list",
+  );
+  const documentBlocks = sortedBlocks.filter((block) =>
+    block.block_type === "document" || block.block_type === "raw_html",
+  );
+  const inlinePdfBlockId = (isReferencePage || isScientificSection) && documentBlocks.length === 1
+    ? documentBlocks[0].id : undefined;
+  const breadcrumb = sidebarSection
+    ? (isReferencePage || sidebarSection.breadcrumbKey === "nav.section.default" ? normalizeYearLabels(sidebarSection.title) : t(sidebarSection.breadcrumbKey))
+    : t("footer.institutHaqida");
 
   return (
     <InnerPageLayout
       title={title}
-      breadcrumb={sidebarSection ? t(sidebarSection.breadcrumbKey) : t("footer.institutHaqida")}
+      breadcrumb={breadcrumb}
       contentRef={contentRef}
       sidebar={sidebarSection && <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />}
     >
       {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
       <Reveal>
         {sortedBlocks.length > 0 ? (
-          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4${isInstituteDocument ? " article-document" : ""} article-body`}
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body${isInstituteDocument ? " article-document" : ""}${isReferencePage ? " institute-reference" : ""}${hasReferenceIntro ? " reference-intro" : ""}${isTextPage ? " institute-reference--text" : ""}${slug === "ilmiy-kengash" ? " cms-article--council-decisions council-archive" : ""}${isPublicationArchive ? " publication-archive" : ""}${isRegulatoryPage ? " regulatory-archive" : ""}${isRegulatoryIndex ? " regulatory-archive--index" : ""}`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-              <ArticleBody blocks={sortedBlocks} />
+              {isStructuredCouncil ? (
+                <div className="cms-article--council council-overview">
+                  <div className="cms-council-intro"><BlockRenderer block={sortedBlocks[0]} /></div>
+                  {sortedBlocks.slice(1).map((block) => {
+                    const items = block.block_type === "list" ? block.data.items
+                      : block.block_type === "paragraph"
+                        ? block.data.text.split(";").map((item) => item.trim()).filter(Boolean)
+                        : [];
+                    if (block.block_type !== "list" && items.length < 2) {
+                      return <BlockRenderer key={block.id} block={block} />;
+                    }
+                    return (
+                      <ul key={block.id} className="cms-council-tasks">
+                        {items.map((item, index) => <li key={index}><LinkifiedText text={item} /></li>)}
+                      </ul>
+                    );
+                  })}
+                </div>
+              ) : autoreferatCards ? (
+                <div className="autoreferat-grid">
+                  {autoreferatCards.map((card) => (
+                    <section key={card[0].id} className="autoreferat-card">
+                      {card.map((block) => <BlockRenderer key={block.id} block={block} />)}
+                    </section>
+                  ))}
+                </div>
+              ) : editorialGroups ? (
+                <>
+                  <div className="council-abstracts">
+                    {editorialGroups.map((blocks) => (
+                      <section key={blocks[0].id} className="council-abstracts__entry">
+                        <ArticleBody blocks={blocks} />
+                      </section>
+                    ))}
+                  </div>
+                  <ArticleBody blocks={sortedBlocks.filter((block) => block.block_type === "document")} />
+                </>
+              ) : isRegulatoryIndex ? (
+                <div className="regulatory-index">
+                  {sortedBlocks.map((block) => block.block_type === "heading" || block.block_type === "paragraph" ? (
+                    <div key={block.id} className="regulatory-index__entry">
+                      <LinkifiedText text={block.data.text} />
+                    </div>
+                  ) : (
+                    <div key={block.id} className="regulatory-index__full">
+                      <BlockRenderer block={block} showPdf={block.id === inlinePdfBlockId} documentTitle={title} />
+                    </div>
+                  ))}
+                </div>
+              ) : documentFacts.length >= 2 ? (
+                <>
+                  <dl className="cms-regulatory__metadata">
+                    {documentFacts.map(({ id, label, value }) => (
+                      <div key={id} className="cms-regulatory__meta-row">
+                        <dt>{label}</dt>
+                        <dd><LinkifiedText text={value} /></dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <RegulatoryDocument blocks={sortedBlocks.slice(documentFacts.length)} inlinePdfBlockId={inlinePdfBlockId} title={title} />
+                </>
+              ) : isRegulatoryPage ? (
+                <RegulatoryDocument blocks={sortedBlocks} inlinePdfBlockId={inlinePdfBlockId} title={title} />
+              ) : <StructureArticle blocks={sortedBlocks} inlinePdfBlockId={inlinePdfBlockId} title={title} slug={slug} />}
             </MenuSectionOriginContext.Provider>
           </article>
         ) : (

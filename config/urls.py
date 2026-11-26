@@ -21,7 +21,10 @@ def media_serve(request, path):
     # staff-only admin API hands out (apps/media_lib/private.py).
     if is_private_path(path):
         raise Http404
-    return _cached_serve(request, path, document_root=settings.MEDIA_ROOT)
+    response = _cached_serve(request, path, document_root=settings.MEDIA_ROOT)
+    if response.get("Content-Type") == "application/pdf":
+        response["X-Frame-Options"] = "SAMEORIGIN"
+    return response
 
 urlpatterns = [
     # Not "admin/" -- the deployed frontend's own SPA also claims that path

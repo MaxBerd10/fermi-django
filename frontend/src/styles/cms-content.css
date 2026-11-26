@@ -751,48 +751,13 @@
 }
 
 /* Kengash qarorlari */
-.cms-article--council-decisions .cms-council-decisions {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.625rem;
-}
-
-.cms-article--council-decisions .cms-council-decision {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.875rem;
-  padding: 0.875rem 1rem;
-  background: #ffffff;
-  border: 1px solid rgba(10, 17, 88, 0.08);
-  border-radius: 0.75rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cms-article--council-decisions .cms-council-decision:hover {
-  border-color: rgba(10, 17, 88, 0.18);
-  box-shadow: 0 8px 24px -12px rgba(10, 17, 88, 0.15);
-}
-
-.cms-article--council-decisions .cms-council-decision__icon {
-  flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  background: rgba(10, 17, 88, 0.06);
-  color: #0a1158;
-  font-size: 1.125rem;
-}
-
-.cms-article--council-decisions .cms-council-decision__text {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #0f172a;
+.cms-article--council-decisions :is(.cms-council-decision, ol > li, ul > li) {
+  padding: .875rem 1rem;
+  background: #f6f8fc;
+  border: 1px solid #dce3ef;
+  border-inline-start: 3px solid #101c4e;
+  border-radius: .75rem;
+  overflow-wrap: anywhere;
 }
 
 /* Avtoreferatlar */
@@ -809,16 +774,17 @@
 
 .cms-article--autoreferat .cms-autoreferat-card {
   padding: 1.125rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid rgba(10, 17, 88, 0.08);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background: #f6f8fc;
+  border: 1px solid #dce3ef;
   border-radius: 0.875rem;
-  box-shadow: 0 8px 28px -16px rgba(10, 17, 88, 0.14);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color .2s ease;
 }
 
-.cms-article--autoreferat .cms-autoreferat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px -16px rgba(10, 17, 88, 0.18);
+.cms-article--autoreferat .cms-autoreferat-card:hover,
+.cms-article--autoreferat .cms-autoreferat-card:focus-within {
+  border-color: #aebcde;
 }
 
 .cms-article--autoreferat .cms-autoreferat-card__council {
@@ -833,7 +799,7 @@
 
 .cms-article--autoreferat .cms-autoreferat-card__author {
   font-family: var(--font-heading, inherit);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #0a1158;
   margin: 0 0 0.5rem;
@@ -841,7 +807,7 @@
 }
 
 .cms-article--autoreferat .cms-autoreferat-card__topic {
-  font-size: 0.875rem;
+  font-size: .9375rem;
   line-height: 1.6;
   color: #475569;
   margin: 0;
