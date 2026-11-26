@@ -25,7 +25,9 @@ def build(slugs, translations):
         if slug + "|blocks" in translations:  # a page written block by block by hand (the three old languages were too different to align)
             merged, missing, issues = [dict(b) for b in translations[slug + "|blocks"]], [], []
         else:
-            specs = {lang: specs_of(raw["data"][lang]["html"], lang, drop_notes=(slug + "|drop_notes") in translations)[0] for lang in LANGS}
+            specs = {lang: specs_of(raw["data"][lang]["html"], lang, drop_notes=(slug + "|drop_notes") in translations, join=(slug + "|join") in translations)[0] for lang in LANGS}
+            if (slug + "|uz_only") in translations:  # the Russian and English old texts are other documents: every Russian and English cell is written from the Uzbek text
+                specs["ru"], specs["en"] = [], []
             for lang in LANGS:  # a language that has the sections in another order: "slug|order|lang" = the indices of its blocks in the order of the Uzbek page
                 if "%s|order|%s" % (slug, lang) in translations:
                     specs[lang] = [specs[lang][i] for i in translations["%s|order|%s" % (slug, lang)]]

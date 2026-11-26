@@ -1,0 +1,25 @@
+### bakalavriat-uchun-yoriqnoma|30|uz  [list, from en]
+The Ministry of Higher and Secondary Specialised Education, having drawn up students' applications for transfer and reinstatement in accordance with the procedure set out in these Regulations, submits them to the Interdepartmental Commission for decision-making.
+Transfer and reinstatement of students from non-state higher education institutions without a license operating in the territory of the Republic of Uzbekistan, branches of foreign higher education institutions (centres, departments, counseling centers, etc.) to higher education institutions of the Republic of Uzbekistan is prohibited.
+Transfer of students and reinstatement to the first year of study is prohibited (as an exception, students for health reasons may be granted academic leave).
+Transfer in all relevant and related areas (specialties) of all forms of study for training on the basis of a state grant is possible only on the application of students studying on the basis of a state grant and in the presence of places allocated for training on the basis of a state grant in a given academic year in a higher educational institution.
+In all other cases, the transfer of students is carried out on a fee contract basis.
+The student's application for transfer or reinstatement of studies is accompanied by the student's rating book or a certain standard academic certificate.
+
+### bakalavriat-uchun-yoriqnoma|58|uz  [list, from ru]
+Министерство высшего и среднего специального образования, оформив заявления студентов о переводе и восстановлении на учебу, в определенном данным Положением порядке, представляет Межведомственной комиссии для принятия решения.
+Перевод и восстановление на учебу студентов из негосударственных высших образовательных заведений, не имеющих лицензии,осуществляющих деятельность на территории Республики Узбекистан, филиалов зарубежных высших образовательных заведений (Центры,отделения, консультативные пункты и др.) в высшие образовательные заведения Республики Узбекистан запрещаются.
+Перевод студентов и восстановление на учебу на первый курс запрещен (в порядке исключения, студентам по состоянию здоровья можно предоставить академический отпуск).
+Перевод по всем соответствующим и родственным направлениям (специальностям) всех форм обучения для обучения на основе государственного гранта возможен исключительно по заявлениям студентов, обучающихся на основе государственного гранта и при наличии в данном учебном году в высшем образовательном заведении отведенных мест для обучения на основе государственного гранта.
+Во всех остальных случаях перевод студентов осуществляется на платно-контрактной основе.
+К заявлению студента о переводе или восстановлении учебы прилагается рейтинговая книжка студента или определенного образца академическая справка.
+
+### bakalavriat-uchun-yoriqnoma|70|ru  [paragraph, from uz]
+Belgilangan muddatlarda fanlarni oʻzlashtira olmagan (akademik qarzdor boʻlgan) talaba oliy taʻlim muassasasi rektori buyrugʻi bilan kursdan qoldiriladi.
+
+### bakalavriat-uchun-yoriqnoma|70|en  [paragraph, from uz]
+Belgilangan muddatlarda fanlarni oʻzlashtira olmagan (akademik qarzdor boʻlgan) talaba oliy taʻlim muassasasi rektori buyrugʻi bilan kursdan qoldiriladi.
+
+### bakalavriat-uchun-yoriqnoma|71|ru  [paragraph, from uz]
+Akademik qarzdorligi tufayli kursdan qoldirilgan talaba toʻlov-kontrakt asosida oʻqishini quyi kursdagi oʻquv semestri boshidan boshlashi mumkin.
+

@@ -252,12 +252,25 @@ def is_note(text):
     return bool(re.match(r"^(?:См\.\s*предыдущее|абзац|абзацы|пункт\s+\d|в редакции|дополнен)", t, re.I)) or bool(re.match(r"^\(?\s*(?:абзац|абзацы|пункт|в редакции|подпункт)\b", text, re.I))
 
 
-def specs_of(html, lang, drop_notes=False):
+def join_wrapped(specs):
+    """Hard-wrapped text: a paragraph that does not end a sentence and is followed by a paragraph that starts in lower case is one paragraph (the old editor broke the lines inside sentences)."""
+    out = []
+    for spec in specs:
+        if out and spec["t"] == "paragraph" and out[-1]["t"] == "paragraph" and not re.search(r"[.!?;:»”)]\s*$", out[-1]["text"]) and re.match(r"^[a-zа-яёʻ]", spec["text"]):
+            out[-1] = {"t": "paragraph", "text": out[-1]["text"] + " " + spec["text"]}
+        else:
+            out.append(spec)
+    return out
+
+
+def specs_of(html, lang, drop_notes=False, join=False):
     soup = BeautifulSoup(html, "html.parser")
     walker = Walker(lang)
     walker.walk(soup)
     if drop_notes:
         walker.out = [x for x in walker.out if not (x["t"] in ("paragraph", "heading") and is_note(x.get("text", "")))]
+    if join:
+        walker.out = join_wrapped(walker.out)
     # consecutive "1. text" / "• text" paragraphs become a list
     merged = []
     run = []

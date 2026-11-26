@@ -1,0 +1,1015 @@
+[
+ {
+  "slug": "bakalavriat-uchun-yoriqnoma",
+  "order": 1,
+  "fp": {
+   "uz": "81cf2c2b18a26017288d593fccc1579f9000dae00878f98d1d8cffce3fed7364",
+   "ru": "e7bb2a2fd862039f09f9bc7f33ef6758ddd330d6ba29a756df7a39ca7cf43e9c",
+   "en": "c7f15319a3f7f9eee88062a59d7ac668bf72efc8518015e21ecb6812736b5cee"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Talabalar oʻqishini koʻchirish, qayta tiklash va oʻqishdan chetlashtirish",
+      "level": 3
+     },
+     "ru": {
+      "text": "Перевод, восстановление и отчисление студентов",
+      "level": 3
+     },
+     "en": {
+      "text": "Transfer, reinstatement and expulsion of students",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari bakalavriatiga va magistraturasiga qabul qilish tartiblari bilan Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori Oliy taʻlim muassasalariga oʻqishga qabul qilish, talabalar oʻqishini koʻchirish, qayta tiklash va oʻqishdan chetlashtirish tartibi toʻgʻrisida NIZOM\" ga muvofiq amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Порядок приёма на программы бакалавриата и магистратуры высших образовательных учреждений осуществляется в соответствии с Положением «О порядке приёма в высшие образовательные учреждения, перевода, восстановления и отчисления студентов», утверждённым постановлением Кабинета Министров Республики Узбекистан от 20 июня 2017 года № 393."
+     },
+     "en": {
+      "text": "The procedures for admission to bachelor’s and master’s degree programmes of higher education institutions are carried out in accordance with the Regulation “On the procedure for admission to higher education institutions, transfer, reinstatement and expulsion of students”, approved by Resolution No. 393 of the Cabinet of Ministers of the Republic of Uzbekistan of June 20, 2017."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori bilan tasdiqlangan Oliy taʻlim muassasalari talabalari oʻqishini koʻchirish, qayta tiklash va oʻqishdan chetlashtirish tartibi toʻgʻrisidagi nizomga muvofiq amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Осуществляется в соответствии с Положением о порядке перевода, восстановления и отчисления студентов высших образовательных учреждений, утверждённым постановлением Кабинета Министров Республики Узбекистан от 20 июня 2017 года № 393."
+     },
+     "en": {
+      "text": "It is carried out in accordance with the Regulation on the procedure for transfer, reinstatement and expulsion of students of higher education institutions, approved by Resolution No. 393 of the Cabinet of Ministers of the Republic of Uzbekistan of June 20, 2017."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalari oʻqishini koʻchirish va qayta tiklashning umumiy qoidalari."
+     },
+     "ru": {
+      "text": "Общие правила перевода и восстановления студентов высших образовательных учреждений."
+     },
+     "en": {
+      "text": "General rules for the transfer and reinstatement of students of higher education institutions."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalari oʻqishini koʻchirish va qayta tiklash (keyingi oʻrinlarda Talabalar oʻqishini koʻchirish va qayta tiklash deb ataladi)da oliy taʻlimning mos va turdosh taʻlim yoʻnalishlarini (mutaxassisliklarini) belgilash quyidagi mezonlarga asoslanadi:"
+     },
+     "ru": {
+      "text": "При переводе и восстановлении студентов высших образовательных учреждений (далее — перевод и восстановление студентов) соответствующие и родственные направления образования (специальности) высшего образования определяются на основе следующих критериев:"
+     },
+     "en": {
+      "text": "In the transfer and reinstatement of students of higher education institutions (hereinafter — transfer and reinstatement of students), the corresponding and related fields of study (specialities) of higher education are determined on the basis of the following criteria:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "taʻlim yoʻnalishlarining (mutaxassisliklarining) nomlanishi bir xil boʻlganda bunday taʻlim yoʻnalishlari (mutaxassisliklari) mos deb hisoblanadi;"
+     },
+     "ru": {
+      "text": "направления образования (специальности) с одинаковым названием считаются соответствующими;"
+     },
+     "en": {
+      "text": "fields of study (specialities) with the same name are considered corresponding;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlim muassasalari talabalari oʻqishini koʻchirish va qayta tiklash uchun oʻqishga kirishda sinov oʻtkaziladigan fanlari tarkibi va taʻlim sohasi hamda oʻqish muddati bir xil boʻlganda bunday taʻlim yoʻnalishlari (mutaxassisliklari) turdosh deb hisoblanadi."
+     },
+     "ru": {
+      "text": "направления образования (специальности) считаются родственными, если совпадают состав предметов, по которым проводится испытание при поступлении для перевода и восстановления студентов, область образования и срок обучения."
+     },
+     "en": {
+      "text": "fields of study (specialities) are considered related when the composition of the subjects examined on admission for the transfer and reinstatement of students, the field of education and the duration of study are the same."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talabalar oʻqishini koʻchirish yoki qayta tiklash quyidagilarning:"
+     },
+     "ru": {
+      "text": "Перевод или восстановление студентов осуществляется на основании решений:"
+     },
+     "en": {
+      "text": "The transfer or reinstatement of students is carried out on the basis of the decisions of:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlim muassasalari;"
+     },
+     "ru": {
+      "text": "высших образовательных учреждений;"
+     },
+     "en": {
+      "text": "higher education institutions;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "tasarrufida oliy taʻlim muassasalari boʻlgan vazirliklar va idoralar;"
+     },
+     "ru": {
+      "text": "министерств и ведомств, в ведении которых находятся высшие образовательные учреждения;"
+     },
+     "en": {
+      "text": "ministries and departments that have higher education institutions under their authority;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi taʻlim muassasalariga qabul qilish boʻyicha Davlat komissiyasi qoshidagi Talabalar oʻqishini koʻchirish va qayta tiklash idoralararo komissiyasi (keyingi oʻrinlarda Idoralararo komissiya deb ataladi) qarorlari asosida amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Межведомственной комиссии по переводу и восстановлению студентов при Государственной комиссии по приёму в образовательные учреждения Республики Узбекистан (далее — Межведомственная комиссия)."
+     },
+     "en": {
+      "text": "the Interdepartmental Commission on the Transfer and Reinstatement of Students under the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan (hereinafter — the Interdepartmental Commission)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Idoralararo komissiya Oʻzbekiston Respublikasi taʻlim muassasalariga oʻqishga qabul qilish boʻyicha Davlat komissiyasi (keyingi oʻrinlarda Davlat komissiyasi deb ataladi) tomonidan tashkil etiladi. Uning tarkibiga tasarrufida oliy taʻlim muassasalari boʻlgan vazirliklar va idoralar vakillari kiritiladi."
+     },
+     "ru": {
+      "text": "Межведомственная комиссия создаётся Государственной комиссией по приёму в образовательные учреждения Республики Узбекистан (далее — Государственная комиссия). В её состав включаются представители министерств и ведомств, в ведении которых находятся высшие образовательные учреждения."
+     },
+     "en": {
+      "text": "The Interdepartmental Commission is formed by the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan (hereinafter — the State Commission). Its members include representatives of the ministries and departments that have higher education institutions under their authority."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Idoralararo komissiyaning raisi va masʻul kotibi Davlat komissiyasi qarori bilan tayinlanadi."
+     },
+     "ru": {
+      "text": "Председатель и ответственный секретарь Межведомственной комиссии назначаются решением Государственной комиссии."
+     },
+     "en": {
+      "text": "The chairman and the executive secretary of the Interdepartmental Commission are appointed by decision of the State Commission."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Idoralararo komissiya “Oʻzbekiston Respublikasi taʻlim muassasalariga oʻqishga qabul qilish Davlat komissiyasi qoshidagi Talabalar oʻqishini koʻchirish va qayta tiklash idoralararo komissiyasi toʻgʻrisida nizom” asosida faoliyat yuritadi."
+     },
+     "ru": {
+      "text": "Межведомственная комиссия действует на основании «Положения о Межведомственной комиссии по переводу и восстановлению студентов при Государственной комиссии по приёму в образовательные учреждения Республики Узбекистан»."
+     },
+     "en": {
+      "text": "The Interdepartmental Commission operates on the basis of the “Regulation on the Interdepartmental Commission on the Transfer and Reinstatement of Students under the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan”."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bir oliy taʻlim muassasasi doirasida oliy taʻlimning mos va turdosh yoʻnalishlari (mutaxassisliklari) boʻyicha talabalar oʻqishini koʻchirish va qayta tiklash (qayta tiklash — talabalar safidan chetlashtirilganligiga 5 yilgacha boʻlgan muddatda) shu oliy taʻlim muassasasi rektorining buyrugʻi asosida amalga oshiriladi."
+     },
+     "ru": {
+      "text": "В пределах одного высшего образовательного учреждения перевод и восстановление студентов по соответствующим и родственным направлениям образования (специальностям) высшего образования (восстановление — в срок до 5 лет с момента отчисления) осуществляются на основании приказа ректора этого высшего образовательного учреждения."
+     },
+     "en": {
+      "text": "Within one higher education institution, the transfer and reinstatement of students in corresponding and related fields of study (specialities) of higher education (reinstatement — within up to 5 years after expulsion) is carried out by order of the rector of that higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Quyidagi hollarda talabalar oʻqishini koʻchirish va qayta tiklash talabani qabul qilayotgan oliy taʻlim muassasasi boʻysunadigan vazirlik (idora) qarori asosida amalga oshiriladi:"
+     },
+     "ru": {
+      "text": "В следующих случаях перевод и восстановление студентов осуществляются на основании решения министерства (ведомства), которому подчиняется принимающее студента высшее образовательное учреждение:"
+     },
+     "en": {
+      "text": "In the following cases, the transfer and reinstatement of students is carried out by decision of the ministry (department) to which the receiving higher education institution is subordinate:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlimning mos va turdosh yoʻnalishlari (mutaxassisliklari) boʻyicha bir vazirlik (idora) doirasida boshqa oliy taʻlim muassasasiga;"
+     },
+     "ru": {
+      "text": "в другое высшее образовательное учреждение в пределах одного министерства (ведомства) по соответствующим и родственным направлениям образования (специальностям) высшего образования;"
+     },
+     "en": {
+      "text": "to another higher education institution within one ministry (department) in corresponding and related fields of study (specialities) of higher education;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlimning mos va turdosh yoʻnalishlari (mutaxassisliklari) boʻyicha turli vazirlik (idora) doirasida bir oliy taʻlim muassasasidan boshqa oliy taʻlim muassasasiga;"
+     },
+     "ru": {
+      "text": "из одного высшего образовательного учреждения в другое в пределах разных министерств (ведомств) по соответствующим и родственным направлениям образования (специальностям) высшего образования;"
+     },
+     "en": {
+      "text": "from one higher education institution to another within different ministries (departments) in corresponding and related fields of study (specialities) of higher education;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabalar safidan chetlashtirilganligiga 5 yildan 10 yilgacha muddat oʻtganda."
+     },
+     "ru": {
+      "text": "если с момента отчисления прошло от 5 до 10 лет."
+     },
+     "en": {
+      "text": "when 5 to 10 years have passed since expulsion."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Quyidagi hollarda talabalar oʻqishini koʻchirish va qayta tiklash Idoralararo komissiya qarori bilan amalga oshiriladi:"
+     },
+     "ru": {
+      "text": "В следующих случаях перевод и восстановление студентов осуществляются решением Межведомственной комиссии:"
+     },
+     "en": {
+      "text": "In the following cases, the transfer and reinstatement of students is carried out by decision of the Interdepartmental Commission:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "xorijiy davlatlarning akkreditatsiyaga ega boʻlgan oliy taʻlim muassasalaridan Oʻzbekiston Respublikasi oliy taʻlim muassasalariga;"
+     },
+     "ru": {
+      "text": "из аккредитованных высших образовательных учреждений зарубежных государств в высшие образовательные учреждения Республики Узбекистан;"
+     },
+     "en": {
+      "text": "from accredited higher education institutions of foreign countries to higher education institutions of the Republic of Uzbekistan;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabalar safidan chetlashtirilganligiga 10 yildan ortiq vaqt oʻtgan boʻlsa;"
+     },
+     "ru": {
+      "text": "если с момента отчисления прошло более 10 лет;"
+     },
+     "en": {
+      "text": "if more than 10 years have passed since expulsion;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "bir oliy taʻlim muassasasi doirasida yoki bir vazirlik (idora) va turli vazirliklar (idoralar) tasarrufidagi oliy taʻlim muassasalariga oliy taʻlimning turdosh boʻlmagan yoʻnalishlariga (mutaxassisliklariga)."
+     },
+     "ru": {
+      "text": "в пределах одного высшего образовательного учреждения либо в высшие образовательные учреждения, находящиеся в ведении одного министерства (ведомства) и разных министерств (ведомств), на неродственные направления образования (специальности) высшего образования."
+     },
+     "en": {
+      "text": "within one higher education institution, or to higher education institutions under one ministry (department) or different ministries (departments), into non-related fields of study (specialities) of higher education."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Quyidagi holatlar fuqaroning oʻqishini koʻchirish va qayta tiklash haqidagi arizasiga rad javobini berilishiga asos boʻladi:"
+     },
+     "ru": {
+      "text": "Основаниями для отказа в удовлетворении заявления гражданина о переводе и восстановлении являются следующие обстоятельства:"
+     },
+     "en": {
+      "text": "The following circumstances are grounds for refusing a citizen’s application for transfer and reinstatement:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "xorijiy davlatlarning akkreditatsiyaga ega boʻlmagan oliy taʻlim muassasalarida yoki ularning filiallarida oʻqiganlarga;"
+     },
+     "ru": {
+      "text": "для обучавшихся в неаккредитованных высших образовательных учреждениях зарубежных государств или их филиалах;"
+     },
+     "en": {
+      "text": "for those who studied at non-accredited higher education institutions of foreign countries or their branches;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "respublika oliy taʻlim muassasalaridagi mavjud taʻlim shaklidan oʻzga (boshqa) taʻlim shaklida oʻqiganlarga;"
+     },
+     "ru": {
+      "text": "для обучавшихся по форме обучения, отличной от имеющейся в высших образовательных учреждениях республики;"
+     },
+     "en": {
+      "text": "for those who studied in a form of education other than the one available at the republic’s higher education institutions;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlim muassasalarining markazlari, boʻlimlari, oʻquv-maslahat punktlari va boshqalarda oʻqiganlarga;"
+     },
+     "ru": {
+      "text": "для обучавшихся в центрах, отделениях, учебно-консультационных пунктах и т. п. высших образовательных учреждений;"
+     },
+     "en": {
+      "text": "for those who studied at centres, departments, study-consultation points and the like of higher education institutions;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "birinchi kursning birinchi semestriga birinchi semestr tugallanmagan holatda (talabaga kasallik tufayli akademik taʻtil berilgan holatlar bundan istisno);"
+     },
+     "ru": {
+      "text": "на первый семестр первого курса, если первый семестр не завершён (за исключением случаев предоставления студенту академического отпуска по болезни);"
+     },
+     "en": {
+      "text": "into the first semester of the first year, if the first semester has not been completed (except for cases when the student was granted academic leave because of illness);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlim muassasasida mos (turdosh) taʻlim yoʻnalishi (mutaxassisligi) yoki taʻlim shakli mavjud boʻlmasa;"
+     },
+     "ru": {
+      "text": "если в высшем образовательном учреждении нет соответствующего (родственного) направления образования (специальности) или формы обучения;"
+     },
+     "en": {
+      "text": "if the higher education institution has no corresponding (related) field of study (speciality) or form of education;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "namunaviy oʻquv rejalaridagi umumkasbiy va ixtisoslik (mutaxassislik) fanlari boʻyicha farqlar 4 tadan oshganda;"
+     },
+     "ru": {
+      "text": "если различия по общепрофессиональным и специальным (по специальности) предметам в типовых учебных планах превышают 4;"
+     },
+     "en": {
+      "text": "if the differences in general professional and specialised (speciality) subjects in the model curricula exceed 4;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "toʻlov-kontrakt asosida oʻqishga tavsiya etilganlar toʻlovni belgilangan muddatda amalga oshirmaganda;"
+     },
+     "ru": {
+      "text": "если рекомендованные на обучение на платно-контрактной основе не произвели оплату в установленный срок;"
+     },
+     "en": {
+      "text": "if those recommended for paid-contract study do not make the payment within the set period;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabaning shaxsiy yigʻma jildi (akademik maʻlumotnoma) belgilangan muddatlarda taqdim etilmaganda;"
+     },
+     "ru": {
+      "text": "если личное дело студента (академическая справка) не представлено в установленные сроки;"
+     },
+     "en": {
+      "text": "if the student’s personal file (academic certificate) is not submitted within the set time;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oliy taʻlim muassasasiga davlat granti asosida koʻchirish va qayta tiklash davlat granti asosida taʻlim oluvchilar soni (qabul kvotalari) doirasida boʻsh oʻrinlar mavjud boʻlmasa;"
+     },
+     "ru": {
+      "text": "если при переводе и восстановлении на государственный грант в высшем образовательном учреждении нет вакантных мест в пределах числа обучающихся на государственных грантах (квот приёма);"
+     },
+     "en": {
+      "text": "if transfer and reinstatement to a state grant place at the higher education institution is requested and there are no vacant places within the number of students on state grants (admission quotas);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "qonunchilikda belgilangan boshqa holatlarda."
+     },
+     "ru": {
+      "text": "в иных случаях, установленных законодательством."
+     },
+     "en": {
+      "text": "in other cases established by legislation."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalari oʻqishini koʻchirish."
+     },
+     "ru": {
+      "text": "Перевод студентов высших образовательных учреждений."
+     },
+     "en": {
+      "text": "Transfer of students of higher education institutions."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalarining oʻqishini koʻchirish (keyingi oʻrinlarda Talabalar oʻqishini koʻchirish deb ataladi) boʻyicha arizalarni topshirish va koʻrib chiqish quyidagicha amalga oshiriladi:"
+     },
+     "ru": {
+      "text": "Подача и рассмотрение заявлений о переводе студентов высших образовательных учреждений (далее — перевод студентов) осуществляются следующим образом:"
+     },
+     "en": {
+      "text": "Applications for the transfer of students of higher education institutions (hereinafter — transfer of students) are submitted and considered as follows:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishini koʻchirish boʻyicha arizalarni taqdim etish — har yili 15 iyuldan 5 avgustga qadar amalga oshiriladi;"
+     },
+     "ru": {
+      "text": "заявления о переводе подаются ежегодно с 15 июля по 5 августа;"
+     },
+     "en": {
+      "text": "applications for transfer are submitted every year from July 15 to August 5;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "arizalarni oliy taʻlim muassasasi, tegishli vazirlik (idora) yoki Idoralararo komissiya tomonidan koʻrib chiqib, qaror qabul qilish — har yili 5 avgustdan 30 avgustga qadar amalga oshiriladi."
+     },
+     "ru": {
+      "text": "заявления рассматриваются и решения принимаются высшим образовательным учреждением, соответствующим министерством (ведомством) или Межведомственной комиссией ежегодно с 5 по 30 августа."
+     },
+     "en": {
+      "text": "applications are considered and decisions taken by the higher education institution, the relevant ministry (department) or the Interdepartmental Commission every year from August 5 to August 30."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talabalar oʻqishini koʻchirish uzrli sabablarga koʻra (bir hududdan ikkinchi hududga doimiy yashash uchun yoki turmushga chiqish munosabati bilan koʻchib oʻtganda, turmush oʻrtogʻi yoki ota-onasi harbiy xizmat oʻtash joyini oʻzgartirganda, yoxud ota-onasi (turmush oʻrtogʻi) xorijdagi davlat xizmatidan qaytganda) bahorgi semestrda oʻquv mashgʻulotlari boshlanishidan oldin ham amalga oshirilishi mumkin. Bunda:"
+     },
+     "ru": {
+      "text": "Перевод студентов по уважительным причинам (при переезде из одного региона в другой на постоянное жительство либо в связи с замужеством, при смене места военной службы супруга или родителей либо при возвращении родителей (супруга) с государственной службы за рубежом) может осуществляться и до начала учебных занятий весеннего семестра. При этом:"
+     },
+     "en": {
+      "text": "The transfer of students may also be carried out before the start of classes in the spring semester for valid reasons (moving from one region to another for permanent residence or in connection with marriage, a change of the place of military service of the spouse or parents, or the return of the parents (spouse) from state service abroad). In this case:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishini koʻchirish boʻyicha ariza topshirish — har yili 20 dekabrdan keyingi yilning 20 yanvariga qadar;"
+     },
+     "ru": {
+      "text": "заявления о переводе подаются ежегодно с 20 декабря по 20 января следующего года;"
+     },
+     "en": {
+      "text": "applications for transfer are submitted every year from December 20 to January 20 of the following year;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishini koʻchirish boʻyicha arizani koʻrib chiqib, qaror qabul qilish — har yili 25 yanvardan 15 fevralga qadar amalga oshiriladi."
+     },
+     "ru": {
+      "text": "заявления о переводе рассматриваются и решения принимаются ежегодно с 25 января по 15 февраля."
+     },
+     "en": {
+      "text": "applications for transfer are considered and decisions taken every year from January 25 to February 15."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻqishini koʻchirish istagini bildirgan fuqaro quyidagi hujjatlarni taqdim etadi:"
+     },
+     "ru": {
+      "text": "Гражданин, желающий перевестись, представляет следующие документы:"
+     },
+     "en": {
+      "text": "A citizen who wishes to transfer submits the following documents:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "koʻchirish (qayta tiklash)ni istagan taʻlim yoʻnalishi (mutaxassisligi), oʻquv tili va shakli koʻrsatilgan holdagi ariza (arizada oʻqigan oliy taʻlim muassasasi va taʻlim yoʻnalishi (mutaxassisligi), koʻchirish (qayta tiklash) sabablari, koʻchirish (qayta tiklash) qoidalari bilan tanishganligi koʻrsatiladi);"
+     },
+     "ru": {
+      "text": "заявление с указанием направления образования (специальности), языка и формы обучения, на которые испрашивается перевод (восстановление) (в заявлении указываются высшее образовательное учреждение и направление образования (специальность), где он обучался, причины перевода (восстановления) и что он ознакомлен с правилами перевода (восстановления));"
+     },
+     "en": {
+      "text": "an application indicating the field of study (speciality), language and form of instruction to which transfer (reinstatement) is requested (the application states the higher education institution and field of study (speciality) where the applicant studied, the reasons for the transfer (reinstatement) and that the applicant has read the rules of transfer (reinstatement));"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talabaning reyting daftarchasi yoki belgilangan shakldagi akademik maʻlumotnoma nusxalari;"
+     },
+     "ru": {
+      "text": "копии зачётной книжки студента либо академической справки установленной формы;"
+     },
+     "en": {
+      "text": "copies of the student’s record book or of an academic certificate in the established form;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "pasportning nusxasi."
+     },
+     "ru": {
+      "text": "копию паспорта."
+     },
+     "en": {
+      "text": "a copy of the passport."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻqishning barcha shakllari boʻyicha oliy taʻlimning mos va turdosh yoʻnalishlari (mutaxassisligi) boʻyicha davlat grantlari oʻrinlariga koʻchirishga faqat davlat grantlari asosida tahsil olgan talabalar arizasiga koʻra oliy taʻlim muassasalarida tegishli oʻquv yilidagi qabul qilish kvotalarida belgilangan davlat grantlarining soni doirasida ruxsat etiladi."
+     },
+     "ru": {
+      "text": "По всем формам обучения перевод на места государственных грантов по соответствующим и родственным направлениям образования (специальностям) высшего образования допускается только по заявлению студентов, обучавшихся на государственных грантах, в пределах числа государственных грантов, установленного в квотах приёма высших образовательных учреждений на соответствующий учебный год."
+     },
+     "en": {
+      "text": "In all forms of study, transfer to state grant places in corresponding and related fields of study (specialities) of higher education is permitted only on the application of students who studied on state grants, within the number of state grants set in the admission quotas of the higher education institutions for the relevant academic year."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Boshqa hollarda oʻqishni koʻchirish toʻlov-kontrakt asosida amalga oshiriladi."
+     },
+     "ru": {
+      "text": "В остальных случаях перевод осуществляется на платно-контрактной основе."
+     },
+     "en": {
+      "text": "In other cases, transfer is carried out on a paid-contract basis."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xorijiy oliy taʻlim muassasalaridan oʻqishini Oʻzbekiston Respublikasi oliy taʻlim muassasalariga koʻchirish va koʻchirib qayta tiklash istagini bildirgan fuqarolar tasarrufida oliy taʻlim muassasalari mavjud vazirlik va idoralarda tashkil qilingan komissiyalarda oʻzlari taʻlim olgan xorijiy oliy taʻlim muassasasidagi oʻqitish tili boʻyicha muayyan taʻlim yoʻnalishidagi oʻqishga kirish fanlari boʻyicha maxsus sinov (komissiya tomonidan belgilangan test yoki yozma ish shaklida) (turmush oʻrtogʻi yoki ota-onasi xorijiy davlatdagi davlat xizmatini oʻtash joyi Tashqi ishlar vazirligi (vakolatli idoralar) tomonidan Oʻzbekiston Respublikasiga oʻtkazilgan, Hukumat qarorlari va topshiriqlari hamda oliy taʻlim muassasalariga ega vazirlik va idoralar tomonidan davlat buyurtmasi bilan xorijga oʻqishga yuborilganlar bundan mustasno) topshiradi."
+     },
+     "ru": {
+      "text": "Граждане, желающие перевестись из зарубежных высших образовательных учреждений в высшие образовательные учреждения Республики Узбекистан и восстановиться переводом, сдают специальное испытание (в форме теста или письменной работы, определённой комиссией) по вступительным предметам по определённому направлению образования на языке обучения зарубежного высшего образовательного учреждения, где они обучались, в комиссиях, создаваемых в министерствах и ведомствах, в ведении которых находятся высшие образовательные учреждения (за исключением лиц, у которых место государственной службы супруга или родителей за рубежом переведено в Республику Узбекистан Министерством иностранных дел (уполномоченными органами), и направленных на обучение за рубеж по государственному заказу решениями и поручениями Правительства и министерствами и ведомствами, имеющими высшие образовательные учреждения)."
+     },
+     "en": {
+      "text": "Citizens who wish to transfer from foreign higher education institutions to higher education institutions of the Republic of Uzbekistan, or to be transferred and reinstated, take a special test (in the form of a test or written work set by the commission) in the entrance subjects of the particular field of study, in the language of instruction of the foreign higher education institution where they studied, before the commissions formed in the ministries and departments that have higher education institutions under their authority (except for those whose spouse’s or parents’ place of state service abroad has been moved to the Republic of Uzbekistan by the Ministry of Foreign Affairs (authorised bodies), and those sent abroad to study under a state order by Government resolutions and instructions and by ministries and departments that have higher education institutions)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fuqaroning maxsus sinov (komissiya tomonidan belgilangan test yoki yozma ish shaklida) natijasi Idoralararo komissiyaga taqdim etiladi. Maxsus sinov (komissiya tomonidan belgilangan test yoki yozma ish shaklida) natijasidan kelib chiqib, fuqaro Idoralararo komissiya qarori bilan koʻrsatilgan oʻquv shaklidagi guruhlarga koʻchiriladi"
+     },
+     "ru": {
+      "text": "Результат специального испытания гражданина (в форме теста или письменной работы, определённой комиссией) представляется в Межведомственную комиссию. По результату специального испытания гражданин переводится решением Межведомственной комиссии в группы указанной формы обучения."
+     },
+     "en": {
+      "text": "The result of the citizen’s special test (in the form of a test or written work set by the commission) is submitted to the Interdepartmental Commission. Based on the result of the special test, the citizen is transferred, by decision of the Interdepartmental Commission, to groups of the indicated form of study."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalari oʻqishini qayta tiklash."
+     },
+     "ru": {
+      "text": "Восстановление студентов высших образовательных учреждений."
+     },
+     "en": {
+      "text": "Reinstatement of students of higher education institutions."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalarining oʻqishini qayta tiklash (keyingi oʻrinlarda Talabalar oʻqishini qayta tiklash deb ataladi) boʻyicha arizalarni topshirish va koʻrib chiqish bir yilda ikki marta amalga oshiriladi:"
+     },
+     "ru": {
+      "text": "Подача и рассмотрение заявлений о восстановлении студентов высших образовательных учреждений (далее — восстановление студентов) осуществляются два раза в год:"
+     },
+     "en": {
+      "text": "Applications for the reinstatement of students of higher education institutions (hereinafter — reinstatement of students) are submitted and considered twice a year:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishini kuzgi semestrga qayta tiklash boʻyicha ariza topshirish — har yili 15 iyuldan 5 avgustga qadar;"
+     },
+     "ru": {
+      "text": "подача заявлений о восстановлении на осенний семестр — ежегодно с 15 июля по 5 августа;"
+     },
+     "en": {
+      "text": "applications for reinstatement to the autumn semester are submitted every year from July 15 to August 5;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishini bahorgi semestrga qayta tiklash boʻyicha ariza topshirish — har yili 20 dekabrdan keyingi yilning 20 yanvariga qadar davom etadi."
+     },
+     "ru": {
+      "text": "подача заявлений о восстановлении на весенний семестр — ежегодно с 20 декабря по 20 января следующего года."
+     },
+     "en": {
+      "text": "applications for reinstatement to the spring semester are submitted every year from December 20 to January 20 of the following year."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qayta tiklash boʻyicha arizalarni oliy taʻlim muassasasi, tasarrufida oliy taʻlim muassasalari boʻlgan vazirlik (idora) tomonidan koʻrib chiqib qaror qabul qilish:"
+     },
+     "ru": {
+      "text": "Рассмотрение заявлений о восстановлении и принятие решения высшим образовательным учреждением, министерством (ведомством), в ведении которого находятся высшие образовательные учреждения:"
+     },
+     "en": {
+      "text": "Applications for reinstatement are considered and decisions taken by the higher education institution or the ministry (department) that has higher education institutions under its authority:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "kuzgi semestrga qayta tiklash uchun — har yili 5 avgustdan 30 avgustga qadar;"
+     },
+     "ru": {
+      "text": "для восстановления на осенний семестр — ежегодно с 5 по 30 августа;"
+     },
+     "en": {
+      "text": "for reinstatement to the autumn semester — every year from August 5 to August 30;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "bahorgi semestrga qayta tiklash uchun — har yili 25 yanvardan 15 fevralga qadar amalga oshiriladi."
+     },
+     "ru": {
+      "text": "для восстановления на весенний семестр — ежегодно с 25 января по 15 февраля."
+     },
+     "en": {
+      "text": "for reinstatement to the spring semester — every year from January 25 to February 15."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talabalar safidan chetlashtirilgan fuqarolar oʻqishini boshqa oliy taʻlim muassasasiga mos (turdosh) taʻlim yoʻnalishi (mutaxassisligi)ga koʻchirib tiklash toʻgʻrisida ariza berish huquqiga ega. Bunda arizaga oʻqishni koʻchirish tartibidagi hujjatlar taqdim etiladi."
+     },
+     "ru": {
+      "text": "Граждане, отчисленные из числа студентов, вправе подать заявление о восстановлении с переводом в другое высшее образовательное учреждение на соответствующее (родственное) направление образования (специальность). При этом к заявлению представляются документы, предусмотренные порядком перевода."
+     },
+     "en": {
+      "text": "Citizens expelled from the student body have the right to apply for reinstatement of their studies by transfer to a corresponding (related) field of study (speciality) at another higher education institution. In this case the documents of the transfer procedure are submitted with the application."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasalari talabalarini oʻqishdan chetlashtirish."
+     },
+     "ru": {
+      "text": "Отчисление студентов высших образовательных учреждений."
+     },
+     "en": {
+      "text": "Expulsion of students of higher education institutions."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Talaba oliy taʻlim muassasasidan quyidagi hollarda chetlashtirilishi mumkin:"
+     },
+     "ru": {
+      "text": "Студент может быть отчислен из высшего образовательного учреждения в следующих случаях:"
+     },
+     "en": {
+      "text": "A student may be expelled from a higher education institution in the following cases:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻz xohishiga binoan;"
+     },
+     "ru": {
+      "text": "по собственному желанию;"
+     },
+     "en": {
+      "text": "at his or her own wish;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqishning boshqa taʻlim muassasasiga koʻchirilishi munosabati bilan;"
+     },
+     "ru": {
+      "text": "в связи с переводом в другое образовательное учреждение;"
+     },
+     "en": {
+      "text": "in connection with the transfer of studies to another educational institution;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "salomatligi tufayli (tibbiy komissiya maʻlumotnomasi asosida);"
+     },
+     "ru": {
+      "text": "по состоянию здоровья (на основании заключения медицинской комиссии);"
+     },
+     "en": {
+      "text": "for health reasons (on the basis of a medical commission certificate);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻquv intizomini va oliy taʻlim muassasasining ichki tartib-qoidalarini buzganligi uchun;"
+     },
+     "ru": {
+      "text": "за нарушение учебной дисциплины и правил внутреннего распорядка высшего образовательного учреждения;"
+     },
+     "en": {
+      "text": "for violating academic discipline and the internal rules of the higher education institution;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "bir semestr davomida darslarni uzrli sabablarsiz 74 soatdan ortiq qoldirganligi sababli;"
+     },
+     "ru": {
+      "text": "за пропуск без уважительных причин более 74 часов занятий в течение одного семестра;"
+     },
+     "en": {
+      "text": "for missing more than 74 hours of classes without a valid reason during one semester;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "oʻqish uchun belgilangan toʻlov oʻz vaqtida amalga oshirilmaganligi sababli (toʻlov-kontrakt boʻyicha tahsil olayotganlar uchun);"
+     },
+     "ru": {
+      "text": "за несвоевременную оплату установленной платы за обучение (для обучающихся на платно-контрактной основе);"
+     },
+     "en": {
+      "text": "for failure to pay the fixed tuition fee on time (for those studying on a paid-contract basis);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "talaba sud tomonidan ozodlikdan mahrum etilganligi munosabati bilan;"
+     },
+     "ru": {
+      "text": "в связи с осуждением студента к лишению свободы по решению суда;"
+     },
+     "en": {
+      "text": "in connection with the student’s deprivation of liberty by a court;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "vafot etganligi sababli."
+     },
+     "ru": {
+      "text": "в связи со смертью."
+     },
+     "en": {
+      "text": "in connection with death."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Harbiy xizmatni oʻtash, salomatligini tiklash, homiladorlik va tugʻish, shuningdek bolalarni parvarish qilish taʻtillari davrida talabaga Oliy va oʻrta maxsus taʻlim vazirligi tomonidan tasdiqlangan tartib asosida akademik taʻtil berilishi mumkin."
+     },
+     "ru": {
+      "text": "На период прохождения военной службы, восстановления здоровья, отпусков по беременности и родам, а также по уходу за детьми студенту может быть предоставлен академический отпуск в порядке, утверждённом Министерством высшего и среднего специального образования."
+     },
+     "en": {
+      "text": "During military service, recovery of health, pregnancy and childbirth leave, and childcare leave, a student may be granted academic leave in the manner approved by the Ministry of Higher and Secondary Specialised Education."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Belgilangan muddatlarda fanlarni oʻzlashtira olmagan (akademik qarzdor boʻlgan) talaba oliy taʻlim muassasasi rektori buyrugʻi bilan kursdan qoldiriladi."
+     },
+     "ru": {
+      "text": "Студент, не освоивший предметы в установленные сроки (имеющий академическую задолженность), оставляется на повторный курс приказом ректора высшего образовательного учреждения."
+     },
+     "en": {
+      "text": "A student who has not mastered the subjects within the set time (an academic debtor) is held back in the year by order of the rector of the higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Akademik qarzdorligi tufayli kursdan qoldirilgan talaba toʻlov-kontrakt asosida oʻqishini quyi kursdagi oʻquv semestri boshidan boshlashi mumkin."
+     },
+     "ru": {
+      "text": "Студент, оставленный на повторный курс из-за академической задолженности, может начать обучение на платно-контрактной основе с начала учебного семестра нижестоящего курса."
+     },
+     "en": {
+      "text": "A student held back in the year because of academic debt may start paid-contract study from the beginning of the academic semester of the lower year."
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 546,
+    "caption": {
+     "uz": "Bakalavriat",
+     "ru": "Бакалавриат",
+     "en": "Undergraduate"
+    },
+    "fp": {
+     "uz": "32d2c63dfe9906811f44602ef80821c9bc0d638f3d7ff12812fe6bfb40c7f716",
+     "ru": "32d2c63dfe9906811f44602ef80821c9bc0d638f3d7ff12812fe6bfb40c7f716",
+     "en": "32d2c63dfe9906811f44602ef80821c9bc0d638f3d7ff12812fe6bfb40c7f716"
+    }
+   }
+  ],
+  "notes": [
+   "70 blocks aligned by hand (the three languages differ in structure); 142 cells translated by us"
+  ]
+ }
+]
