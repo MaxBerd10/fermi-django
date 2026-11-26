@@ -238,9 +238,9 @@ export default function QabulPage() {
                   <div className="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mx-auto mb-2.5">
                     <i className={`${s.icon} text-lg`} />
                   </div>
-                  <span className="inline-block px-2 py-0.5 rounded-full bg-primary-50 text-primary-700 text-[10px] font-bold mb-1.5">{s.step}</span>
-                  <h3 className="font-heading text-sm font-semibold text-foreground-900">{s.title}</h3>
-                  <p className="text-xs text-foreground-600 mt-1 leading-relaxed">{s.desc}</p>
+                  <span className="inline-block px-2 py-0.5 rounded-full bg-primary-50 text-primary-700 text-xs font-bold mb-1.5">{s.step}</span>
+                  <h3 className="font-heading text-base font-semibold text-foreground-900">{s.title}</h3>
+                  <p className="text-sm text-foreground-600 mt-1 leading-relaxed">{s.desc}</p>
                 </div>
               </Reveal>
             ))}

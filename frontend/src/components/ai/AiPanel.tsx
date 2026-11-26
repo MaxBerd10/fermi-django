@@ -28,8 +28,8 @@ export default function AiPanel({
             <i className="ri-sparkling-2-line text-lg" />
           </span>
           <div className="min-w-0">
-            <Heading className="font-heading text-sm md:text-base font-bold text-[#0a1158]">{title}</Heading>
-            {subtitle && <p className="text-xs text-[#555555] mt-0.5 leading-snug">{subtitle}</p>}
+            <Heading className="font-heading text-base font-bold text-[#0a1158]">{title}</Heading>
+            {subtitle && <p className="text-sm text-[#555555] mt-0.5 leading-snug">{subtitle}</p>}
           </div>
         </div>
         {children}
