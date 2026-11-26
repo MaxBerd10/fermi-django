@@ -1,0 +1,1191 @@
+[
+ {
+  "slug": "fjsti-grant-siyosati",
+  "order": 1,
+  "fp": {
+   "uz": "b478146ad6cca20626ccdb79d02e8c34873443f76e27e82dba04f3c574591536",
+   "ru": "1fe781daaef43adbde563ebfc3e132104f318ef1b91a52d97fec330a596f891c",
+   "en": "b20c17d578bc0c6f7e7de41c038f77b4f1c2a3805831f34ed0f1ba6c8aa24d30"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Grant haqida",
+      "level": 2
+     },
+     "ru": {
+      "text": "О грантах",
+      "level": 2
+     },
+     "en": {
+      "text": "About grants",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Grant – jismoniy shaxsga yoki muassasaga tadqiqotlar oʻtkazish va bajarilishi haqida hisobot taqdim qilish uchun beriladigan begʻaraz subsidiya. Ilmiy-tadqiqot grantlar olimlarga dolzarb ilmiy tadqiqotlar oʻtkazish, ilmiy tadbirlarda ishtirok etish, asbob-uskunalar va ilmiy adabiyotlarni harid qilib olish va oʻz ilmiy ishlarini nashr etish imkoniyatini beradi. Oʻzbekiston Respublikasi Innovatsion rivojlanish vazirligi ilmiy va texnik loyihalarni moliyalashtirishning yangi tizimini ishlab chiqdi va amalga oshirmoqda. Ilmiy-tadqiqot loyihalari va startaplarni qanday moliyalashtirish haqida batafsil maʻlumotni quyidagi havolada topish mumkin https://gov.uz/oz/innovation"
+     },
+     "ru": {
+      "text": "Грант – это безвозвратная субсидия, предоставляемая физическому или юридическому лицу для проведения исследования и представления отчета о его выполнении. Гранты на исследования позволяют ученым проводить современные исследования, участвовать в исследовательской деятельности, приобретать оборудование и научную литературу, а также публиковать свои исследовательские работы. Министерством инновационного развития Республики Узбекистан разработана и внедряется новая система финансирования научно-технических проектов. Более подробную информацию о том, как финансировать исследовательские проекты и стартапы, можно найти по ссылке ниже: https://gov.uz/oz/innovation"
+     },
+     "en": {
+      "text": "A grant is a non-repayable grant given to an individual or institution to conduct research and submit a report on its implementation. Research grants allow scientists to conduct up-to-date research, participate in research activities, purchase equipment and scientific literature, and publish their research papers. The Ministry of Innovative Development of the Republic of Uzbekistan has developed and is implementing a new system of financing scientific and technical projects. More information on how to fund research projects and startups can be found at https://gov.uz/oz/innovation"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tanlovda ishtirok etish uchun quyidagilar zarur:"
+     },
+     "ru": {
+      "text": "Для участия в конкурсе необходимо:"
+     },
+     "en": {
+      "text": "To participate in the competition, you need"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Tanlovning asosiy maqsadi bilan tanishish",
+       "Arizani toʻldirish va vazirlik veb-saytida elektron roʻyxatdan oʻtkazish: https://gov.uz/oz/innovation",
+       "Loyihalarni tanlovga qogʻoz shaklida yuborish"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Ознакомиться с основной целью конкурса",
+       "Заполнить заявку и пройти электронную регистрацию на сайте Министерства: https://gov.uz/oz/innovation",
+       "Подать проекты на конкурс в бумажной форме"
+      ]
+     },
+     "en": {
+      "items": [
+       "Get acquainted with the main purpose of the competition",
+       "Completion of the application and electronic registration on the website of the Ministry: https://gov.uz/oz/innovation",
+       "Submission of projects to the competition in paper form"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekistonda va xorijda taʻlim grantlariga foydali havolalar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Полезные ссылки на образовательные гранты в Узбекистане и за рубежом",
+      "level": 2
+     },
+     "en": {
+      "text": "Useful links to educational grants in Uzbekistan and abroad",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "[eyuf.uz](https://eyuf.uz/) – “El-yurt umidi” jamgʻarmasining bakalavriat, magistratura, doktorantura yoʻnalishlari uchun grantlar",
+       "[itpu.uz](https://itpu.uz/) – IT Park universitetida oʻqish uchun grantlar",
+       "[yoshlarportali.uz](https://yoshlarportali.uz/uz/) – Yoshlar portalidagi grantlar va imkoniyatlar roʻyxati",
+       "[edu.uz](https://www.edu.uz/uz) – Iqtidorli yoshlar uchun Prezident grantlari",
+       "[www.maltalingua.com/scholarship](https://www.maltalingua.com/scholarship/) – Maltada ingliz tilini oʻrganish va IELTS kursi uchun grantlar",
+       "[uni-stuttgart.de/en/study/application/dates](https://www.uni-stuttgart.de/en/study/application/dates/) – Germaniyaning Shtutgart universitetidagi bakalavriat va magistratura uchun stipendiyalar"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[eyuf.uz](https://eyuf.uz/) – Гранты бакалавриата, магистратуры, докторантуры Фонда «Эл-юрт умиди»",
+       "[itpu.uz](https://itpu.uz/) – Гранты на обучение в IT Park University",
+       "[yoshlarportali.uz](https://yoshlarportali.uz/uz/) – Список грантов и возможностей на Молодежном портале",
+       "[edu.uz](https://www.edu.uz/uz) – Президентские гранты для талантливой молодежи",
+       "[www.maltalingua.com/scholarship](https://www.maltalingua.com/scholarship/) – Полный грант на изучение английского языка и курс IELTS на Мальте",
+       "[uni-stuttgart.de/en/study/application/dates](https://www.uni-stuttgart.de/en/study/application/dates/) – стипендии для бакалавриата и магистратуры в Штутгартском университете (Германия)"
+      ]
+     },
+     "en": {
+      "items": [
+       "[eyuf.uz](https://eyuf.uz/) – Grants for bachelor’s, master’s, doctoral studies from the El-Yurt Umidi Foundation",
+       "[itpu.uz](https://itpu.uz/) – Grants for studying at IT Park University",
+       "[yoshlarportali.uz](https://yoshlarportali.uz/uz/) – List of grants and opportunities on the Youth Portal",
+       "[edu.uz](https://www.edu.uz/uz) – Presidential grants for talented youth",
+       "[www.maltalingua.com/scholarship](https://www.maltalingua.com/scholarship/) – Full grant to study English and IELTS course in Malta",
+       "[uni-stuttgart.de/en/study/application/dates](https://www.uni-stuttgart.de/en/study/application/dates/) – scholarships for bachelor’s and master’s studies at the University of Stuttgart, Germany"
+      ]
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 496,
+    "caption": {
+     "uz": "Iqtidorli mutaxassislarning xorijda taʼlim olishini qoʻllab-quvvatlash, ularda kasbiy koʻnikmalarini rivojlantirish va ragʻbatlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisida",
+     "ru": "О дополнительных мерах по поддержке обучения за рубежом одарённых специалистов, развитию их профессиональных навыков и их стимулированию",
+     "en": "On additional measures to support the training abroad of gifted specialists, to develop their professional skills and to stimulate them"
+    },
+    "fp": {
+     "uz": "192f5693d873baa2a05357744557115b2608432dda15d74303614d39d6d7b9b5",
+     "ru": "192f5693d873baa2a05357744557115b2608432dda15d74303614d39d6d7b9b5",
+     "en": "192f5693d873baa2a05357744557115b2608432dda15d74303614d39d6d7b9b5"
+    }
+   }
+  ],
+  "notes": [
+   "the heading 'Grant haqida' is new (the old page started without one); the numbers 1. 2. 3. of the steps are gone (a list); ru: the empty label 'Ответственный за рассмотрение гранта:' is dropped",
+   "the all-capitals line at the end was the title of the PDF card: it is now the caption of the card (normal case, the Russian and English lines were cut short: completed)"
+  ]
+ },
+ {
+  "slug": "innovatsion-goyalar",
+  "order": 1,
+  "fp": {
+   "uz": "5c2e91bda4147e39eee2e7113c0ad05ff29a6accef666c5565e5292ae290e5a1",
+   "ru": "ab024dd2fc9400adc56231f496ff613955108a07659181ef4aa59da97500a05c",
+   "en": "99afaa3525355cc81559479ee04dc71e123ae13320c1b6dbb9a75c4631f6dc4c"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tibbiy interaktiv 3D darslik",
+      "level": 2
+     },
+     "ru": {
+      "text": "Медицинский интерактивный 3D учебник",
+      "level": 2
+     },
+     "en": {
+      "text": "Medical interactive 3D textbook",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/interactive-3d-content-Provides-Immersive-Learning.jpg",
+      "alt": "Tibbiy interaktiv 3D darslik"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/interactive-3d-content-Provides-Immersive-Learning.jpg",
+      "alt": "Медицинский интерактивный 3D учебник"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/interactive-3d-content-Provides-Immersive-Learning.jpg",
+      "alt": "Medical interactive 3D textbook"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilmiy rahbar: Qodirova Munira Rasulovna"
+     },
+     "ru": {
+      "text": "Научный руководитель: Кадырова Мунира Расуловна"
+     },
+     "en": {
+      "text": "Scientific advisor: Kadirova Munira Rasulovna"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Loyiha muallifi: Qaxorova Tursunoy"
+     },
+     "ru": {
+      "text": "Создатель проекта: Кахорова Турсуной"
+     },
+     "en": {
+      "text": "The creator of the project: Kakhorova Tursunoy"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tadqiqot shakli: Tibbiyot oliy oʻquv yurtlarida davolash yoʻnalishida tahsil olayotgan talabalar uchun ingliz tilini oʻqitish boʻyicha ixtisosligi doirasida interaktiv 3D oʻquv adabiyoti dasturi yaratilgan."
+     },
+     "ru": {
+      "text": "Форма исследования: Создана интерактивная программа учебной литературы в формате 3D для студентов, обучающихся в области лечения в медицинских вузах в рамках специализации преподавания английского языка."
+     },
+     "en": {
+      "text": "Research form: An interactive 3D educational literature program was created for students studying in the field of treatment in medical universities as part of their specialization in English language teaching."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tadqiqot natijalari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Результаты исследования",
+      "level": 3
+     },
+     "en": {
+      "text": "Research results",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "“Tibbiyot 3D interaktiv darslik” tibbiyot talabalariga ingliz tilida tibbiy atamalarni oson yodlash va ingliz tilida ravon gapirish imkoniyatini beradi",
+       "“Tibbiyot 3D interaktiv darslik” davolash ishlarini mutaxassislik fanlari (anatomiya, fiziologiya, normal va klinik anatomiya, farmatsevtika) bilan integratsiyalashgan",
+       "Yaratilgan interaktiv 3D oʻquv adabiyotlari dasturi orqali ixtisoslashtirilgan fanlar boʻyicha bilim, koʻnikma va malakalar shakllantiriladi"
+      ]
+     },
+     "ru": {
+      "items": [
+       "«Медицинский 3D интерактивный учебник» дает возможность студентам-медикам легко запоминать медицинские термины на английском языке и свободно говорить по-английски",
+       "«Медицинский 3D интерактивный учебник» интегрирует лечебную работу с дисциплинами специальности (анатомия, физиология, нормальная и клиническая анатомия, фармацевтика)",
+       "Благодаря созданной программе интерактивной 3D учебной литературы будут развиваться знания, навыки и компетенции по профильным предметам"
+      ]
+     },
+     "en": {
+      "items": [
+       "\"Medical 3D interactive textbook\" provides opportunities for medical students to easily memorize medical terms in English and speak English fluently",
+       "\"Medical 3D interactive textbook\" integrates the treatment work with the disciplines of specialty (anatomy, physiology, normal and clinical anatomy, pharmaceutics)",
+       "Through the created interactive 3D educational literature program, knowledge, skills and competences in specialized subjects will be developed"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Isteʻmolchi kim? — Tibbiyot yoʻnalishida tahsil olayotgan barcha tibbiyot oliy oʻquv yurtlarining talabalari va mustaqil oʻquvchilari.",
+       "“Tibbiyot 3D interaktiv darsligi” turli funksiyalarni bajaradigan boʻlimlardan iborat boʻlib, har bir dars uchun yaratilgan dialoglar darslarni yanada tushunarli qiladi. Ularning har biri fonetik, grammatik, leksik, morfologik jihatlar bilan toʻldirilgan boʻlib, oʻquvchilarning ingliz tili boʻyicha bilim, koʻnikma va malakalarini rivojlantiradi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Кто является потребителем? — Студенты и самостоятельные учащиеся всех медицинских вузов, изучающие медицину.",
+       "«Интерактивный медицинский 3D-учебник» состоит из разделов, выполняющих различные функции, а диалоги, созданные для каждого урока, делают уроки более понятными. Каждый из них наполнен фонетическими, грамматическими, лексическими, морфологическими аспектами, которые будут развивать знания, умения и навыки учащихся по английскому языку."
+      ]
+     },
+     "en": {
+      "items": [
+       "Who is the consumer? — Students and independent learners of all medical universities studying in the field of medicine.",
+       "\"Medical 3D interactive textbook\" consists of sections that perform various functions, and dialogues created for each lesson make the lessons more understandable. Each of them is filled with phonetic, grammatical, lexical, morphological aspects, which will develop students’ knowledge, skills and abilities in English."
+      ]
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 497,
+    "caption": {
+     "uz": "Loyiha tavsifi (PDF, inglizcha)",
+     "ru": "Описание проекта (PDF, на английском)",
+     "en": "Project description (PDF)"
+    },
+    "fp": {
+     "uz": "d1cda842e36929ad06341c2644a359aa78c33b389b0c09a77bafa46de9890219",
+     "ru": "d1cda842e36929ad06341c2644a359aa78c33b389b0c09a77bafa46de9890219",
+     "en": "d1cda842e36929ad06341c2644a359aa78c33b389b0c09a77bafa46de9890219"
+    }
+   }
+  ],
+  "notes": [
+   "the picture, which was the first line, now stands after the title; the numbered results and the two bullet lines became two lists"
+  ]
+ },
+ {
+  "slug": "ilmiy-tadqiqot-yonalishlari",
+  "order": 1,
+  "fp": {
+   "uz": "16d3c43b8d1deaa4b381469f334d45198144e8ed443526fbf41514a5432ca744",
+   "ru": "68d5af645ae0546ae960011c2c3a2313c87dd9a26df6f8b4098038cc215179cd",
+   "en": "4c128629e708c2fdd87bdf4d766786f61a9d8a8aa0ac4d30cf8785d9a8562d2e"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2022-yil 7-martdagi 101-sonli Farmoyishi"
+     },
+     "ru": {
+      "text": "Распоряжение Кабинета Министров Республики Узбекистан № 101 от 7 марта 2022 года"
+     },
+     "en": {
+      "text": "Order of the Cabinet of Ministers of the Republic of Uzbekistan No. 101 dated March 7, 2022"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 498,
+    "caption": {
+     "uz": "Ilmiy tadqiqot yoʻnalishlari va ilmiy kadrlar tayyorlash",
+     "ru": "Направления научных исследований и подготовка научных кадров",
+     "en": "Research directions and training of scientific staff"
+    },
+    "fp": {
+     "uz": "353740624d9c4433c5e682dfdb845ce4477c56c6b629d92fbfd1355c40744c1b",
+     "ru": "353740624d9c4433c5e682dfdb845ce4477c56c6b629d92fbfd1355c40744c1b",
+     "en": "353740624d9c4433c5e682dfdb845ce4477c56c6b629d92fbfd1355c40744c1b"
+    }
+   }
+  ],
+  "notes": [
+   "the old text was a link to a PDF on the old site fjsti.uz (404 now, also at fermi.uz) and the address https://lex.uz/ru/ (a homepage, not a document): both links are dropped, the title of the order stays as text",
+   "uz title was half Cyrillic ('Вазирлар Mahkamasining 2022 йил'), ru 'Постановления ... Минимтров', en 'Dacree': one clean title per language (the old uz says Farmoyish, ru Постановление, en Decree: we use Farmoyish / Распоряжение / Order)"
+  ]
+ },
+ {
+  "slug": "oliy-oquv-yurtidan-keyingi-talim",
+  "order": 1,
+  "fp": {
+   "uz": "d99e850213d6629bc26db4b205a89c05b981d217f3464085dcc4da0581f249db",
+   "ru": "4d2e59385d847d28a06c0829418c7463058d43f6f0de377f8a7ead3a8f488ed6",
+   "en": "af44bd1de6bb40e38fa787d0d013612093c9a17fe548a1eed72707d299fb6dc8"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilmiy va ilmiy-pedagogik kadrlar tayyorlash boʻlimining asosiy maqsadi — jamiyat ehtiyojidan kelib chiqqan holda yuqori malakali ilmiy va ilmiy-pedagogik mutaxassislarni tayyorlashdan iborat. Ushbu jarayon Oʻzbekiston Respublikasi oliy taʻlim tizimining ustuvor yoʻnalishlaridan biri boʻlib, u ilmiy salohiyatni mustahkamlash, innovatsion rivojlanishga xizmat qiluvchi kadrlar zaxirasini shakllantirishga yoʻnaltirilgan."
+     },
+     "ru": {
+      "text": "Основной целью отдела подготовки научных и научно-педагогических кадров является подготовка высококвалифицированных научных и научно-педагогических специалистов с учётом потребностей общества. Данный процесс является одним из приоритетных направлений системы высшего образования Республики Узбекистан и направлен на укрепление научного потенциала, а также формирование кадрового резерва, служащего инновационному развитию."
+     },
+     "en": {
+      "text": "The main objective of the Department of Training of Scientific and Scientific-Pedagogical Staff is to prepare highly qualified scientific and academic specialists in accordance with the needs of society. This process is one of the priority areas of the higher education system of the Republic of Uzbekistan and is aimed at strengthening scientific potential and forming a human resource reserve that supports innovative development."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy kadrlar tayyorlash.jpg",
+      "alt": "Ilmiy kadrlar tayyorlash"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy kadrlar tayyorlash.jpg",
+      "alt": "Подготовка научных кадров"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy kadrlar tayyorlash.jpg",
+      "alt": "Training of scientific staff"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilmiy darajaga ega kadrlar quyidagi shakllar orqali tayyorlanadi:"
+     },
+     "ru": {
+      "text": "Подготовка научных и научно-педагогических кадров осуществляется по следующим формам послевузовского образования:"
+     },
+     "en": {
+      "text": "Training is conducted through the following forms of postgraduate education:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Tayanch doktorantura (PhD darajasi uchun)",
+       "Doktorantura (DSc darajasi uchun)",
+       "Mustaqil izlanuvchilik (PhD yoki DSc darajasiga daʼvogarlar uchun)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Базовая докторантура (PhD) — подготовка докторов философии",
+       "Докторантура (DSc) — подготовка докторов наук",
+       "Самостоятельное соискательство — возможность получения учёной степени без отрыва от основной деятельности"
+      ]
+     },
+     "en": {
+      "items": [
+       "Basic Doctoral Studies (PhD)—Doctor of Philosophy candidates",
+       "Doctoral Studies (DSc)—Doctor of Science candidates",
+       "Independent Research (Soiskatelstvo) — for obtaining a degree without leaving full-time employment"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Huquqiy asoslar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Нормативно-правовая база",
+      "level": 2
+     },
+     "en": {
+      "text": "Legal Framework",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʼlimdan keyingi taʼlimni tashkil etish va amalga oshirish faoliyati quyidagilarga asoslanadi:"
+     },
+     "ru": {
+      "text": "Деятельность по организации и реализации послевузовского образования основывается на:"
+     },
+     "en": {
+      "text": "This activity is regulated by:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oʻzbekiston Respublikasi Prezidentining 2017-yil 16-fevraldagi PF-4958-son «Oliy oʻquv yurtidan keyingi taʼlim tizimini yanada takomillashtirish toʻgʻrisida»gi Farmoni",
+       "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2017-yil 22-maydagi 304-son «Oliy taʼlimdan keyingi taʼlim tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida»gi Qarori"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Указе Президента Республики Узбекистан от 16 февраля 2017 года № УП-4958 «О дальнейшем совершенствовании системы послевузовского образования»",
+       "Постановлении Кабинета Министров Республики Узбекистан от 22 мая 2017 года № 304 «О мерах по дальнейшему совершенствованию системы послевузовского образования»"
+      ]
+     },
+     "en": {
+      "items": [
+       "The Decree of the President of the Republic of Uzbekistan No. UP-4958 dated February 16, 2017 – “On further improving the postgraduate education system”",
+       "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 304 dated May 22, 2017—“On measures to further improve the postgraduate education system.”"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktorantura (PhD)",
+      "level": 2
+     },
+     "ru": {
+      "text": "Базовая докторантура (PhD)",
+      "level": 2
+     },
+     "en": {
+      "text": "Basic Doctoral Studies (PhD)",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktorantura — Oʻzbekiston Respublikasi Davlat byudjeti mablagʻlari asosida moliyalashtiriladigan, ishlab chiqarishdan ajratilgan holda olib boriladigan taʻlim shaklidir. U falsafa doktori (PhD) ilmiy darajasini olish istagidagi nomzodlar uchun tashkil etilib, mutaxassislik boʻyicha chuqur ilmiy izlanishlar olib borish, doktorlik dissertatsiyasini tayyorlash va himoya qilishni nazarda tutadi."
+     },
+     "ru": {
+      "text": "Базовая докторантура представляет собой форму послевузовского образования для подготовки научных и научно-педагогических кадров по углублённому изучению специальности. Она предназначена для соискателей учёной степени доктора философии (PhD), проводится с отрывом от производства и финансируется из средств Государственного бюджета Республики Узбекистан."
+     },
+     "en": {
+      "text": "Basic doctoral studies are a form of postgraduate education designed for candidates pursuing a Doctor of Philosophy (PhD) degree. The program involves an in-depth study of a specialty and the conduct of independent research, culminating in the preparation and defense of a dissertation. Training is full-time and funded by the State Budget of the Republic of Uzbekistan."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Doktorantura (DSc)",
+      "level": 2
+     },
+     "ru": {
+      "text": "Докторантура (DSc)",
+      "level": 2
+     },
+     "en": {
+      "text": "Doctoral Studies (DSc)",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Doktorantura — fan doktori (DSc) ilmiy darajasiga daʻvogarlar uchun tashkil etilgan oliy oʻquv yurtidan keyingi taʻlim shaklidir. Mazkur shakl mutaxassislikni chuqur oʻzlashtirish, ilgʻor ilmiy tadqiqotlar olib borish, dissertatsiyani tayyorlash va himoya qilish orqali yuqori malakali ilmiy va ilmiy-pedagogik kadrlar tayyorlashni koʻzda tutadi. Ushbu shakl ham davlat byudjeti hisobidan moliyalashtiriladi."
+     },
+     "ru": {
+      "text": "Докторантура — форма послевузовского образования для подготовки докторов наук (DSc). Обучение организуется с отрывом от основной профессиональной деятельности, направлено на проведение углублённых научных исследований и подготовку докторской диссертации, с последующей защитой в установленном порядке. Финансирование осуществляется за счёт государственного бюджета."
+     },
+     "en": {
+      "text": "Doctoral studies are a postgraduate form of education aimed at preparing candidates for the Doctor of Science (DSc) degree. These studies involve advanced research activities and the development of a dissertation for public defense. The program is conducted full-time and financed by the state budget."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Mustaqil izlanuvchilik",
+      "level": 2
+     },
+     "ru": {
+      "text": "Самостоятельное соискательство",
+      "level": 2
+     },
+     "en": {
+      "text": "Independent Research",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mustaqil izlanuvchilik — ishlab chiqarishdan ajralmagan holda olib boriladigan, PhD yoki DSc ilmiy darajalarini olish istagidagi mutaxassislar uchun moʻljallangan taʻlim shaklidir. Nomzodlar oʻz ish faoliyatini davom ettirgan holda mustaqil tarzda ilmiy izlanish olib boradilar va doktorlik dissertatsiyasini tayyorlab, himoya qiladilar."
+     },
+     "ru": {
+      "text": "Самостоятельное соискательство предоставляет возможность подготовки и защиты диссертационной работы на степень PhD или DSc без отрыва от основной профессиональной деятельности. Это гибкая форма обучения, предназначенная для специалистов, совмещающих научную деятельность с практической работой."
+     },
+     "en": {
+      "text": "Independent research is a flexible form of postgraduate education allowing PhD or DSc candidates to conduct scientific research and prepare a dissertation without interrupting their professional employment. This route is ideal for experienced professionals who wish to pursue academic degrees alongside their primary occupation."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Amaldagi salohiyat",
+      "level": 2
+     },
+     "ru": {
+      "text": "Научный потенциал института",
+      "level": 2
+     },
+     "en": {
+      "text": "Institutional Capacity",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hozirgi kunda institutda 10 dan ortiq ilmiy mutaxassisliklar boʻyicha falsafa doktorlari (PhD) va fan doktorlari (DSc) ni tayyorlash uchun zarur shart-sharoitlar mavjud. Bu esa institutning ilmiy salohiyatini yanada oshirish, innovatsion rivojlanishga hissa qoʻshuvchi kadrlarni yetishtirishga xizmat qilmoqda."
+     },
+     "ru": {
+      "text": "На сегодняшний день институт располагает всеми необходимыми ресурсами для подготовки докторов философии (PhD) и докторов наук (DSc) по 10 актуальным научным специальностям. Это открывает широкие перспективы для развития научной школы, формирования профессионального исследовательского сообщества и усиления интеграции науки, образования и практики."
+     },
+     "en": {
+      "text": "As of today, the institute is fully equipped and authorized to train Doctor of Philosophy (PhD) and Doctor of Science (DSc) candidates in 10 recognized scientific specializations. This capacity strengthens the institute’s academic standing, supports the development of a dynamic research environment, and fosters integration between science, education, and practice."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Vazirlar Mahkamasi huzuridagi Oliy attestatsiya komissiyasi Nizomlari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Положения Высшей аттестационной комиссии при Кабинете Министров Республики Узбекистан",
+      "level": 2
+     },
+     "en": {
+      "text": "Provisions of the Higher Attestation Commission under the Cabinet of Ministers of the Republic of Uzbekistan",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy  daraja beruvchi nizom.pdf",
+      "caption": "Ilmiy darajalar beruvchi ilmiy kengash toʻgʻrisidagi Nizom"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy  daraja beruvchi nizom.pdf",
+      "caption": "Положение о научном совете по присуждению учёных степеней"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy  daraja beruvchi nizom.pdf",
+      "caption": "Regulation on the scientific council awarding academic degrees"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy unvonlar berish.pdf",
+      "caption": "Ilmiy unvonlar berish tartibi toʻgʻrisidagi Nizom"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy unvonlar berish.pdf",
+      "caption": "Положение о порядке присвоения учёных званий"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ilmiy unvonlar berish.pdf",
+      "caption": "Regulation on the procedure for awarding academic titles"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Malakaviy imtixonlarni o‘tkazish.pdf",
+      "caption": "Malakaviy imtihonlarni oʻtkazish tartibi toʻgʻrisidagi Nizom"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Malakaviy imtixonlarni o‘tkazish.pdf",
+      "caption": "Положение о порядке проведения квалификационных экзаменов"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Malakaviy imtixonlarni o‘tkazish.pdf",
+      "caption": "Regulation on the procedure for qualification examinations"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ekspert kengashi.pdf",
+      "caption": "Ekspert kengashi toʻgʻrisidagi Nizom"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ekspert kengashi.pdf",
+      "caption": "Положение об Экспертном совете"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Ekspert kengashi.pdf",
+      "caption": "Regulation on the Expert Council"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya rasmiylashtirish.pdf",
+      "caption": "Dissertatsiya va dissertatsiya avtoreferatini rasmiylashtirish qoidalari"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya rasmiylashtirish.pdf",
+      "caption": "Правила оформления диссертации и автореферата диссертации"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya rasmiylashtirish.pdf",
+      "caption": "Rules for preparing a dissertation and its abstract"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya uslubiy ko‘rsatmalar.pdf",
+      "caption": "Dissertatsiyalar ilmiy natijalarining amaliyotga joriy qilinishini baholash boʻyicha uslubiy koʻrsatmalar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya uslubiy ko‘rsatmalar.pdf",
+      "caption": "Методические указания по оценке внедрения в практику научных результатов диссертаций"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Dissertatsiya uslubiy ko‘rsatmalar.pdf",
+      "caption": "Methodological guidelines for assessing the introduction of the scientific results of dissertations into practice"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 499,
+    "caption": {
+     "uz": "Ilmiy daraja berish tartibi toʻgʻrisidagi Nizom",
+     "ru": "Положение о порядке присуждения учёных степеней",
+     "en": "Regulation on the procedure for awarding academic degrees"
+    },
+    "fp": {
+     "uz": "60bfbc225cd6b0f58511f3ca28a2aa4590082620f039d2392e9ea522924efbce",
+     "ru": "60bfbc225cd6b0f58511f3ca28a2aa4590082620f039d2392e9ea522924efbce",
+     "en": "60bfbc225cd6b0f58511f3ca28a2aa4590082620f039d2392e9ea522924efbce"
+    }
+   }
+  ],
+  "notes": [
+   "uz 'Huquqiy asoslar': one sentence with PQ-4958 and '30-maydagi 304-son' became an introduction and two items like in ru/en (the decree is PF-4958, the resolution 304 is of 22 May 2017)",
+   "the 7 regulations are document cards (six new, the seventh 'Ilmiy daraja berish tartibi' is the card the page already had: it stays last); ru/en captions lost the stray 'согласно' / 'according to'"
+  ]
+ },
+ {
+  "slug": "ilmiy-faoliyat-boyicha-normativ-huquqiy-hujjatlar",
+  "order": 1,
+  "fp": {
+   "uz": "d9a8a6943bc4779b336087ef82b65def8626f2f4191cf5d8a8d848e4825aede4",
+   "ru": "5087d0a00148d0635e8f4ce3360996c62a552cf0bacd2351e242d7cbbd201de6",
+   "en": "7f7a18f57077d493d6aea449dc2322e14f014b4e4272124dc681cc8faca27f6d"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Qonuni “Ilm-fan va ilmiy faoliyat toʻgʻrisida”",
+      "level": 2
+     },
+     "ru": {
+      "text": "Закон Республики Узбекистан «О науке и научной деятельности»",
+      "level": 2
+     },
+     "en": {
+      "text": "Law of the Republic of Uzbekistan “On science and scientific activity”",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "“Ilm-fan va ilmiy faoliyat toʻgʻrisida”gi Qonun ilmiy ijod va axborot erkinligini taʻminlashga qaratilgan. Qonunda ilmiy ijod va axborot erkinligi, samaradorlik va ijodiy raqobat, manfaatdorlik va ragʻbatlantirish, ilmiy ekspertizaning xolisligi, inson hayoti va salomatligi, atrof tabiiy muhitga zarar yetkazmaslikdan iborat ilm-fan va ilmiy faoliyat sohasining asosiy printsiplari belgilanmoqda."
+     },
+     "ru": {
+      "text": "Закон «О науке и научной деятельности» направлен на обеспечение свободы научного творчества и информации. Законом закрепляются основные принципы сферы науки и научной деятельности, такие как свобода научного творчества и информации, эффективность и творческая конкуренция, заинтересованность и стимулирование, объективность научной экспертизы, не причинение вреда жизни и здоровью человека, окружающей природной среде."
+     },
+     "en": {
+      "text": "The Law \"On Science and Scientific Activity\" is aimed at ensuring freedom of scientific creativity and information. The law establishes the basic principles of the field of science and scientific activity, such as freedom of scientific creativity and information, efficiency and creative competition, interest and stimulation, objectivity of scientific expertise, non-harm to human life and health, the natural environment."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilm-fan va ilmiy faoliyat sohasining asosiy tushunchalari, Oʻzbekiston Respublikasi Vazirlar Mahkamasi, Oʻzbekiston Respublikasi Innovatsion rivojlanish vazirligi, Oʻzbekiston Respublikasi Fanlar akademiyasi, oliy taʻlim tizimi, shuningdek boʻysunuvida ilmiy tashkilotlar boʻlgan vazirlik, idoralar hamda tashkilotlar, ilm-fan va ilmiy faoliyat sohasidagi mahalliy davlat hokimiyati organlarining ilm-fan va ilmiy faoliyat sohasidagi vakolatlari mustahkamlab qoʻyilmoqda."
+     },
+     "ru": {
+      "text": "Также Законом предусмотрены основные направления сферы науки и научной деятельности, полномочия Кабинета Министров Республики Узбекистан, Министерства инновационного развития Республики Узбекистан, Академии наук Республики Узбекистан, полномочия системы высшего образования, а также имеющих в своем подчинении научные организации министерств, ведомств и организаций в сфере науки и научной деятельности, органов государственной власти на местах."
+     },
+     "en": {
+      "text": "The Law also provides for the main areas of science and scientific activity, the powers of the Cabinet of Ministers of the Republic of Uzbekistan, the Ministry of Innovative Development of the Republic of Uzbekistan, the Academy of Sciences of the Republic of Uzbekistan, the powers of the higher education system, as well as scientific organizations of ministries, departments and organizations in the field of science and scientific activities, local government bodies."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bundan tashqari, Qonunda ilmiy faoliyat subʻektlari doirasi, ularning huquq va majburiyatlari, oliy taʻlim muassasalarida ilmiy faoliyat yuritish tartibi ochib berilgan. Jumladan, belgilab qoʻyilishicha, oliy taʻlim muassasalarida taʻlim jarayoni bilan birga ilmiy faoliyat ham yuritiladi va ushbu muassasalarning pedagog kadrlari tegishli yoʻnalishlarda ilmiy faoliyat bilan shugʻullanishlari shart."
+     },
+     "ru": {
+      "text": "Кроме того, Законом раскрывается круг субъектов научной деятельности, их права и обязанности, порядок осуществления научной деятельности в высших образовательных учреждениях. В частности, устанавливается, что в высших образовательных учреждениях наряду с образовательным процессом ведется научная деятельность и педагогические кадры данных учреждений обязаны осуществлять научную деятельность в соответствующих направлениях."
+     },
+     "en": {
+      "text": "In addition, the Law reveals the range of subjects of scientific activity, their rights and obligations, the procedure for carrying out scientific activities in higher educational institutions. In particular, it is established that in higher educational institutions, along with the educational process, scientific activities are carried out and the teaching staff of these institutions are obliged to carry out scientific activities in the relevant directions."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ilm-fan va texnologiyalarni rivojlantirishning ustuvor yoʻnalishlari, davlat ilmiy dasturlari, ilm-fan va taʻlimning hamda ilm-fan va ishlab chiqarishning uzviy bogʻliqligi, ilmiy darajali kadrlar tayyorlashga doir normalar mustahkamlanmoqda. Qonun qabul qilinishi ilmiy va ilmiy-texnik faoliyat barcha ishtirokchilarining samarali hamkorligini taʻminlashga, ilmiy faoliyat sohasidagi huquqiy, iqtisodiy va tashkiliy munosabatlarni toʻliq tartibga solishga, tegishli masalalarni tartibga solishga, shuningdek ilm-fan sohasidagi tushunchalar uygʻunlashtirilishi va bir xilda talqin etilishini taʻminlashga koʻmaklashadi."
+     },
+     "ru": {
+      "text": "Закрепляются также нормы касательно приоритетных направлений развития науки и технологий, государственной научной программы, интеграции науки и образования, производства, подготовки кадров с ученой степенью. Закон будет способствовать обеспечению эффективного взаимодействия всех участников научной и научно-технической деятельности, более полному регулированию правовых, экономических и организационных отношений в сфере научной деятельности, урегулированию соответствующих вопросов, а также обеспечению гармонизации и единому толкованию понятий в сфере науке."
+     },
+     "en": {
+      "text": "The norms are also fixed regarding the priority directions of development of science and technology, the state scientific program, the integration of science and education, production, training of personnel with an academic degree. It was emphasized that the adoption of the Law will contribute to ensuring effective interaction of all participants in scientific and scientific and technical activities, more complete regulation of legal, economic and organizational relations in the field of scientific activity, settlement of relevant issues, as well as ensuring the harmonization and uniform interpretation of concepts in the field of science."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/576 PQ.pdf",
+      "caption": "Oʻzbekiston Respublikasi Qonuni “Ilm-fan va ilmiy faoliyat toʻgʻrisida”"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/576 PQ.pdf",
+      "caption": "Закон Республики Узбекистан «О науке и научной деятельности»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/576 PQ.pdf",
+      "caption": "Law of the Republic of Uzbekistan “On science and scientific activity”"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Prezidentining 2019-yil 8-oktyabrdagi PF-5847-son Farmoni",
+      "level": 2
+     },
+     "ru": {
+      "text": "Указ Президента Республики Узбекистан от 8 октября 2019 года № УП-5847",
+      "level": 2
+     },
+     "en": {
+      "text": "Decree of the President of the Republic of Uzbekistan dated October 8, 2019 No. DP-5847",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Prezidentining «Oʻzbekiston Respublikasi oliy taʼlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasini tasdiqlash toʻgʻrisida»gi Farmoni. Farmonga koʻra Oʻzbekiston Respublikasi oliy taʼlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasi tasdiqlandi, unda quyidagilar nazarda tutilgan:"
+     },
+     "ru": {
+      "text": "Указ Президента Республики Узбекистан “Об утверждении Концепции развития системы высшего образования Республики Узбекистан до 2030 года”. Согласно указу, Утверждена Концепция развития системы высшего образования Республики Узбекистан до 2030 года, предусмотрев в ней:"
+     },
+     "en": {
+      "text": "Decree of the President of the Republic of Uzbekistan \"On approval of the Concept for the development of the higher education system of the Republic of Uzbekistan until 2030\". According to the decree, the Concept for the development of the higher education system of the Republic of Uzbekistan until 2030 was approved, providing in it:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "davlat-xususiy sheriklikni rivojlantirish, hududlarda davlat va nodavlat oliy taʼlim muassasalari faoliyatini tashkil etish, sohada sogʻlom raqobat muhitini yaratish orqali oliy taʼlim bilan qamrov darajasini 50 foizdan oshirish",
+       "Oʻzbekiston Milliy universiteti va Samarqand davlat universitetini mamlakat oliy taʼlim muassasalarining flagmanlari sifatida shakllantirish",
+       "respublikadagi kamida 10 ta oliy taʼlim muassasasini xalqaro eʼtirof etilgan tashkilotlar (Quacquarelli Symonds World University Rankings, Times Higher Education yoki Academic Ranking of World Universities) reytingining birinchi 1 000 ta oʻrindagi oliy taʼlim muassasalari roʻyxatiga kiritish, oliy taʼlim muassasalarida oʻquv jarayonini bosqichma-bosqich kredit-modul tizimiga oʻtkazish",
+       "oliy taʼlimning ilgʻor standartlarini joriy etish, jumladan, xalqaro tajribaga tayanib, oʻquv dasturlari nazariy bilimlarni berishga qaratilgan taʼlimdan amaliy koʻnikmalarni shakllantirishga yoʻnaltirilgan taʼlim tizimiga bosqichma-bosqich oʻtish",
+       "oliy taʼlim muassasalarining akademik mustaqilligini taʼminlash",
+       "oliy taʼlim muassasalarida taʼlim, fan, innovatsiyalar va ilmiy tadqiqotlar natijalarini tijoratlashtirish faoliyatining oʻzaro bogʻliqligini koʻzda tutuvchi «Universitet 3.0» konsepsiyasini bosqichma-bosqich joriy etish",
+       "xorijiy investitsiyalarni keng jalb etish, pullik xizmatlar koʻlamini kengaytirish va boshqa byudjetdan tashqari mablagʻlar hisobiga oliy taʼlim muassasalarida texnoparklar, foresight-markazlar, transfer texnologiyalar markazlari, startaplar va akseleratorlar yaratish, ularni tegishli tarmoqlar, sohalar va hududlarning ijtimoiy-iqtisodiy rivojlanishini bashorat qilish va tadqiq etish boʻyicha ilmiy-amaliy muassasalar darajasiga chiqarish",
+       "ijtimoiy himoyaga muhtoj aholi qatlamlari, jumladan, imkoniyati cheklangan shaxslarning oliy taʼlim bilan qamrovini ular uchun infratuzilma sharoitlarini yaxshilagan holda oshirish"
+      ]
+     },
+     "ru": {
+      "items": [
+       "развитие государственно-частного партнерства в сфере высшего образования, повышение уровня охвата высшим образованием более 50 процентов на основе организации в регионах деятельности государственных и негосударственных высших образовательных учреждений, создания в сфере здоровой конкурентной среды",
+       "обеспечение становления Национального университета Узбекистана и Самаркандского государственного университета в качестве флагманов высших образовательных учреждений страны",
+       "включение не менее 10 высших образовательных учреждений республики в первую 1 000 позиций перечня высших образовательных учреждений в рейтинге международно признанных организаций (Quacquarelli Symonds World University Rankings, Times Higher Education или Academic Ranking of World Universities), поэтапный перевод учебного процесса высших образовательных учреждений на кредитно-модульную систему",
+       "внедрение передовых стандартов высшего образования, в частности, поэтапный переход от образования, учебные программы которого направлены на получение теоретических знаний, к системе образования, направленной на формирование практических навыков, исходя из международного опыта",
+       "обеспечение академической самостоятельности высших образовательных учреждений",
+       "поэтапное внедрение концепции «Университет 3.0», предусматривающей взаимосвязь деятельности по коммерциализации результатов образования, науки, инноваций и научных исследований в высших образовательных учреждениях",
+       "создание в высших образовательных учреждениях технопарков, форсайт-центров, центров трансферных технологий, стартапов и акселераторов за счет широкого привлечения зарубежных инвестиций, расширения масштаба платных услуг и других внебюджетных средств, выведение их на уровень научно-практических учреждений по прогнозированию и исследованию социально-экономического развития соответствующих отраслей, сфер и регионов",
+       "повышение уровня охвата высшим образованием нуждающихся в социальной защите слоев населения, в том числе лиц с ограниченными возможностями, с улучшением инфраструктурных условий для них"
+      ]
+     },
+     "en": {
+      "items": [
+       "development of public-private partnerships in the field of higher education, increasing the level of coverage in higher education by more than 50 percent on the basis of organizing state and non-state higher educational institutions in the regions of operation, creating a healthy competitive environment in the field",
+       "ensuring the formation of the National University of Uzbekistan and Samarkand State University as flagships of the country’s higher educational institutions",
+       "inclusion of at least 10 higher educational institutions of the republic in the first 1,000 positions of the list of higher educational institutions in the ranking of internationally recognized organizations (Quacquarelli Symonds World University Rankings, Times Higher Education or Academic Ranking of World Universities), gradual transfer of the educational process of higher educational institutions to a credit-modular system",
+       "introduction of advanced standards of higher education, in particular, a gradual transition from education, whose curricula are aimed at obtaining theoretical knowledge, to an education system aimed at developing practical skills, based on international experience",
+       "ensuring the academic independence of higher educational institutions",
+       "phased implementation of the \"University 3.0\" concept, which provides for the interconnection of activities to commercialize the results of education, science, innovation and research in higher educational institutions",
+       "creation of technoparks, foresight centers, transfer technology centers, start-ups and accelerators in higher educational institutions by attracting foreign investments, expanding the scale of paid services and other extra-budgetary funds, bringing them to the level of scientific and practical institutions for forecasting and researching socio-economic development relevant industries, spheres and regions",
+       "increasing the level of enrollment in higher education for the strata of the population in need of social protection, including persons with disabilities, with an improvement in the infrastructural conditions for them"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlimdan keyingi taʻlim tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida",
+      "level": 2
+     },
+     "ru": {
+      "text": "О мерах по дальнейшему совершенствованию системы послевузовского образования",
+      "level": 2
+     },
+     "en": {
+      "text": "On measures to further improve the postgraduate education system",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(Qaror nomi Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](https://lex.uz/docs/-5084654?ONDATE=07.11.2020%2000#-5088155) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son)."
+     },
+     "ru": {
+      "text": "В наименование акта внесено изменение [постановлением](https://lex.uz/docs/5085289) Кабинета Министров Республики Узбекистан от 6 ноября 2020 года № 696. См. текст на [узбекском языке](https://lex.uz/docs/3213410#5096301)."
+     },
+     "en": {
+      "text": "The title of the act was amended by [Resolution](https://lex.uz/docs/5085289) of the Cabinet of Ministers of the Republic of Uzbekistan No. 696 of November 6, 2020. See the text in [Uzbek](https://lex.uz/docs/3213410#5096301)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Prezidentining “Oliy oʻquv yurtidan keyingi taʻlim tizimini yanada takomillashtirish toʻgʻrisida” 2017-yil 16-fevraldagi PF-4958-son [Farmoni](https://lex.uz/docs/-3119699) ijrosini taʻminlash maqsadida Vazirlar Mahkamasi qaror qiladi:"
+     },
+     "ru": {
+      "text": "Во исполнение [Указа](https://lex.uz/docs/3119697) Президента Республики Узбекистан от 16 февраля 2017 года № УП-4958 «О дальнейшем совершенствовании системы послевузовского образования»Кабинет Министров постановляет:"
+     },
+     "en": {
+      "text": "In pursuance of the [Decree](https://lex.uz/docs/3119697) of the President of the Republic of Uzbekistan No. UP-4958 of February 16, 2017 “On further improving the postgraduate education system”, the Cabinet of Ministers resolves:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1. Quyidagilar:"
+     },
+     "ru": {
+      "text": "1. Утвердить:"
+     },
+     "en": {
+      "text": "1. To approve:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Oliy taʻlimdan keyingi taʻlimga qoʻyiladigan davlat talablari 1-ilovaga muvofiq",
+       "Oliy taʻlimdan keyingi taʻlim toʻgʻrisidagi Nizom 2-ilovaga muvofiq",
+       "Oliy taʻlimdan keyingi taʻlim toʻgʻrisidagi hujjatlarning — falsafa doktori (Doctor of Philosophy), fan doktori (Doctor of Science) diplomlari, shuningdek dotsent, katta ilmiy xodim va professor attestatlarining davlat namunalari 3 — 7-ilovalarga muvofiq tasdiqlansin"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Государственные требования к послевузовскому образованию согласно приложению № 1",
+       "Положение о послевузовском образовании согласно приложению № 2",
+       "государственные образцы документов о послевузовском образовании — диплома доктора философии (Doctor of Philosophy), доктора наук (Doctor of Science), а также аттестатов доцента, старшего научного сотрудника и профессора согласно приложениям № 3 — 7"
+      ]
+     },
+     "en": {
+      "items": [
+       "State requirements for postgraduate education according to Appendix No. 1",
+       "Regulations on postgraduate education according to Appendix No. 2",
+       "State samples of documents on postgraduate education: diplomas of Doctor of Philosophy (PhD) and Doctor of Science (DSc), and certificates of associate professor, senior researcher and professor according to Appendices No. 3–7"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(1-bandning ikkinchi, uchinchi va toʻrtinchi xatboshilari Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](https://lex.uz/docs/-5084654?ONDATE=07.11.2020%2000#-5088159) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son) [Oldingi tahrirga qarang](https://lex.uz/docs/-3213410?ONDATE=29.05.2017%2000#-3213504)."
+     },
+     "ru": {
+      "text": "В пункт 1 внесено изменение [постановлением](https://lex.uz/docs/5085289) Кабинета Министров Республики Узбекистан от 6 ноября 2020 года № 696. См. текст на [узбекском языке](https://lex.uz/docs/3213410#5096335)."
+     },
+     "en": {
+      "text": "Paragraph 1 was amended by [Resolution](https://lex.uz/docs/5085289) of the Cabinet of Ministers of the Republic of Uzbekistan No. 696 of November 6, 2020. See the text in [Uzbek](https://lex.uz/docs/3213410#5096335)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2. Oʻzbekiston Respublikasi Vazirlar Mahkamasi huzuridagi Oliy attestatsiya komissiyasi manfaatdor vazirlik va idoralar bilan birgalikda 2017-yil 1-iyuldan boshlab ushbu qaror bilan tasdiqlanadigan talablarga muvofiq attestatsiya ishlarini qabul qilish, koʻrib chiqish va izlanuvchilarga falsafa doktori (Doctor of Philosophy) va fan doktori (Doctor of Science) ilmiy darajalarini berishni taʻminlasin."
+     },
+     "ru": {
+      "text": "2. Высшей аттестационной комиссии при Кабинете Министров Республики Узбекистан совместно с заинтересованными министерствами и ведомствами обеспечить, начиная с 1 июля 2017 года, прием, рассмотрение аттестационных дел и присуждение соискателям ученых степеней доктора философии (Doctor of Philosophy) и доктора наук (Doctor of Science) в соответствии с утверждаемыми настоящим постановлением требованиями."
+     },
+     "en": {
+      "text": "2. The Higher Attestation Commission under the Cabinet of Ministers of the Republic of Uzbekistan, together with the interested ministries and departments, shall ensure, starting from July 1, 2017, the acceptance and consideration of attestation files and the award to applicants of the academic degrees of Doctor of Philosophy (PhD) and Doctor of Science (DSc) in accordance with the requirements approved by this resolution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "3. Oʻzbekiston Respublikasi Fan va texnologiyalar agentligi va Vazirlar Mahkamasi huzuridagi Oliy attestatsiya komissiyasi manfaatdor vazirlik va idoralar bilan birgalikda ular tomonidan qabul qilingan meʻyoriy-huquqiy hujjatlarni bir oy muddatda ushbu qarorga muvofiqlashtirsin."
+     },
+     "ru": {
+      "text": "3. Агентству по науке и технологиям и Высшей аттестационной комиссии при Кабинете Министров Республики Узбекистан совместно с заинтересованными министерствами и ведомствами в месячный срок привести принятые ими нормативно-правовые акты в соответствие с настоящим постановлением."
+     },
+     "en": {
+      "text": "3. The Agency for Science and Technology and the Higher Attestation Commission under the Cabinet of Ministers of the Republic of Uzbekistan, together with the interested ministries and departments, shall within one month bring the regulatory legal acts adopted by them into conformity with this resolution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "4. Vazirlar Mahkamasining “Oliy taʻlimdan keyingi taʻlim va oliy malakali ilmiy va ilmiy-pedagog kadrlarni attestatsiyadan oʻtkazish tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida” 2012-yil 28-dekabrdagi 365-son [qaroriga](https://lex.uz/docs/-2111824) (Oʻzbekiston Respublikasi SP, 2012-yil, 12-son, 90-modda) 8-ilovaga muvofiq oʻzgartirishlar kiritilsin."
+     },
+     "ru": {
+      "text": "4. Внести изменения в [постановление](https://lex.uz/docs/2111826) Кабинета Министров от 28 декабря 2012 года № 365 «О мерах по дальнейшему совершенствованию системы послевузовского образования и аттестации научных и научно-педагогических кадров высшей квалификации» (СП Республики Узбекистан, 2012 г., № 12, ст. 90) согласно приложению № 8."
+     },
+     "en": {
+      "text": "4. To amend the [resolution](https://lex.uz/docs/2111826) of the Cabinet of Ministers of December 28, 2012 No. 365 “On measures to further improve the postgraduate education system and the attestation of highly qualified scientific and scientific-pedagogical personnel” (Collection of Legislation of the Republic of Uzbekistan, 2012, No. 12, Art. 90) in accordance with Appendix No. 8."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(4-band Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](https://lex.uz/docs/-5084654?ONDATE=07.11.2020%2000#-5088165) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son) [Oldingi tahrirga qarang](https://lex.uz/docs/-3213410?ONDATE=29.05.2017%2000#-3213509)."
+     },
+     "ru": {
+      "text": "В пункт 4 внесено изменение [постановлением](https://lex.uz/docs/5085289) Кабинета Министров Республики Узбекистан от 6 ноября 2020 года № 696. См. текст на [узбекском языке](https://lex.uz/docs/3213410#5096386)."
+     },
+     "en": {
+      "text": "Paragraph 4 was amended by [Resolution](https://lex.uz/docs/5085289) of the Cabinet of Ministers of the Republic of Uzbekistan No. 696 of November 6, 2020. See the text in [Uzbek](https://lex.uz/docs/3213410#5096386)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "5. Mazkur qarorning bajarilishini nazorat qilish Oʻzbekiston Respublikasi Vazirlar Mahkamasining IT-texnologiyalar, telekommunikatsiyalar va innovatsion faoliyatni rivojlantirish masalalari departamentiga yuklansin."
+     },
+     "ru": {
+      "text": "5. Контроль за исполнением настоящего постановления возложить на Информационно-аналитический департамент по вопросам образования и науки Кабинета Министров Республики Узбекистан."
+     },
+     "en": {
+      "text": "5. Control over the implementation of this resolution shall be assigned to the Information and Analytical Department for Education and Science of the Cabinet of Ministers of the Republic of Uzbekistan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "(5-band Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](https://lex.uz/docs/-5084654?ONDATE=07.11.2020%2000#-5088167) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son) [Oldingi tahrirga qarang](https://lex.uz/docs/-3213410?ONDATE=29.05.2017%2000#-3213510)."
+     },
+     "ru": {
+      "text": "В пункт 5 внесено изменение [постановлением](https://lex.uz/docs/5085289) Кабинета Министров Республики Узбекистан от 6 ноября 2020 года № 696. См. текст на [узбекском языке](https://lex.uz/docs/3213410#5096399)."
+     },
+     "en": {
+      "text": "Paragraph 5 was amended by [Resolution](https://lex.uz/docs/5085289) of the Cabinet of Ministers of the Republic of Uzbekistan No. 696 of November 6, 2020. See the text in [Uzbek](https://lex.uz/docs/3213410#5096399)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasining Bosh vaziri A. ARIPOV"
+     },
+     "ru": {
+      "text": "Премьер-министр Республики Узбекистан А. АРИПОВ"
+     },
+     "en": {
+      "text": "Prime Minister of the Republic of Uzbekistan A. ARIPOV"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Toshkent sh., 2017-yil 22-may, 304-son"
+     },
+     "ru": {
+      "text": "г. Ташкент, 22 мая 2017 г., № 304"
+     },
+     "en": {
+      "text": "Tashkent, May 22, 2017, No. 304"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Batafsil](https://lex.uz/docs/-3213410?otherlang=1)"
+     },
+     "ru": {
+      "text": "[Подробнее](https://lex.uz/docs/-3213410?otherlang=1)"
+     },
+     "en": {
+      "text": "[More details](https://lex.uz/docs/-3213410?otherlang=1)"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 495,
+    "caption": {
+     "uz": "Oʻzbekiston Respublikasi Prezidentining 2019-yil 8-oktyabrdagi PF-5847-son Farmoni",
+     "ru": "Указ Президента Республики Узбекистан от 8 октября 2019 года № УП-5847",
+     "en": "Decree of the President of the Republic of Uzbekistan dated October 8, 2019 No. DP-5847"
+    },
+    "fp": {
+     "uz": "122d7ee666c203e50abb8bfe6e7b43d3b07a59153594ac467b777ec9a1bb4a36",
+     "ru": "122d7ee666c203e50abb8bfe6e7b43d3b07a59153594ac467b777ec9a1bb4a36",
+     "en": "122d7ee666c203e50abb8bfe6e7b43d3b07a59153594ac467b777ec9a1bb4a36"
+    }
+   }
+  ],
+  "notes": [
+   "en had no text at all for the Cabinet resolution No. 304 of 22 May 2017 (half of the page): translated from the Russian text; uz decree paragraph was a short summary: replaced by a full translation of the ru/en list (8 items)",
+   "lex.uz editor notes: the five 'Oldingi tahrirga qarang' lines of uz were joined with the notes of the changes (one note per point as in ru); ru-only label 'Комментарий LexUz' dropped",
+   "the Decree PF-5847 PDF is the card the page already had (it stays last, with a caption); the Law PDF is a new card after the law text"
+  ]
+ }
+]
