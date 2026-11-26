@@ -89,10 +89,21 @@ def source_text(row):
 def assemble(slug, rows, translations):
     """-> (blocks, missing, problems); `missing` = [(key, source_lang, source_text, kind)] of the cells without text and without a translation."""
     blocks, missing, problems = [], [], []
+    translations = dict(translations)
+
+    def shaped(key, kind):  # a translation written as a text for a list (or as a list for a paragraph) is adapted to the kind of the row
+        value = translations.get(key)
+        if kind == "list" and isinstance(value, str):
+            translations[key] = [value]
+        elif kind in ("paragraph", "heading") and isinstance(value, list):
+            translations[key] = " ".join(value)
+
     for k, row in enumerate(rows):
         kind = kind_of(row)
         if kind == "paragraph":
             row = {lang: flat(spec) for lang, spec in row.items()}
+        for lang in LANGS:
+            shaped("%s|%d|%s" % (slug, k, lang), kind)
         if kind is None:
             problems.append("row %d: incompatible blocks %s" % (k, {l: s["t"] for l, s in row.items() if s}))
             continue

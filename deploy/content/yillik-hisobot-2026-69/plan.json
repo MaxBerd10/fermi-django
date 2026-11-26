@@ -122,14 +122,10 @@
       "text": "Ushbu Nizom «[Taʻlim toʻgʻrisida](http://lex.uz/docs/16188)» va «[Kadrlar tayyorlash milliy dasturi toʻgʻrisida](http://lex.uz/docs/196944)»gi Oʻzbekiston Respublikasi qonunlariga muvofiq Oʻzbekiston Respublikasi oliy taʻlim muassasalarining bakalavriatiga talabalarni oʻqishga qabul qilish tartibini belgilaydi."
      },
      "ru": {
-      "text": [
-       "Настоящее Положение устанавливает порядок приёма студентов на программы бакалавриата высших образовательных учреждений Республики Узбекистан в соответствии с законами Республики Узбекистан «Об образовании» ([ссылка](http://lex.uz/docs/16188)) и «О Национальной программе по подготовке кадров» ([ссылка](http://lex.uz/docs/196944))."
-      ]
+      "text": "Настоящее Положение устанавливает порядок приёма студентов на программы бакалавриата высших образовательных учреждений Республики Узбекистан в соответствии с законами Республики Узбекистан «Об образовании» ([ссылка](http://lex.uz/docs/16188)) и «О Национальной программе по подготовке кадров» ([ссылка](http://lex.uz/docs/196944))."
      },
      "en": {
-      "text": [
-       "This Regulation establishes the procedure for admitting students to bachelor’s degree programmes of higher education institutions of the Republic of Uzbekistan in accordance with the laws of the Republic of Uzbekistan “On Education” ([link](http://lex.uz/docs/16188)) and “On the National Programme for Personnel Training” ([link](http://lex.uz/docs/196944))."
-      ]
+      "text": "This Regulation establishes the procedure for admitting students to bachelor’s degree programmes of higher education institutions of the Republic of Uzbekistan in accordance with the laws of the Republic of Uzbekistan “On Education” ([link](http://lex.uz/docs/16188)) and “On the National Programme for Personnel Training” ([link](http://lex.uz/docs/196944))."
      }
     }
    },
@@ -353,10 +349,14 @@
       ]
      },
      "ru": {
-      "items": "Приём на направления образования с обучением на таджикском, казахском, туркменском и кыргызском языках осуществляется на основе профессиональных (творческих) экзаменов и тестовых испытаний по многобалльной системе. Перечень направлений образования, по которым проводятся профессиональные (творческие) экзамены, разрабатывается Государственным центром тестирования и Министерством высшего и среднего специального образования и утверждается Государственной комиссией."
+      "items": [
+       "Приём на направления образования с обучением на таджикском, казахском, туркменском и кыргызском языках осуществляется на основе профессиональных (творческих) экзаменов и тестовых испытаний по многобалльной системе. Перечень направлений образования, по которым проводятся профессиональные (творческие) экзамены, разрабатывается Государственным центром тестирования и Министерством высшего и среднего специального образования и утверждается Государственной комиссией."
+      ]
      },
      "en": {
-      "items": "Admission to fields of study in which instruction is conducted in Tajik, Kazakh, Turkmen and Kyrgyz is based on professional (creative) examinations and test examinations under the multi-point system. The list of fields of study in which professional (creative) examinations are held is developed by the State Testing Centre and the Ministry of Higher and Secondary Specialised Education and approved by the State Commission."
+      "items": [
+       "Admission to fields of study in which instruction is conducted in Tajik, Kazakh, Turkmen and Kyrgyz is based on professional (creative) examinations and test examinations under the multi-point system. The list of fields of study in which professional (creative) examinations are held is developed by the State Testing Centre and the Ministry of Higher and Secondary Specialised Education and approved by the State Commission."
+      ]
      }
     }
    },
@@ -383,10 +383,14 @@
       ]
      },
      "ru": {
-      "items": "Абитуриенты, изучавшие в учреждениях общего среднего образования (на базе 11 класса), среднего специального, профессионального образования в качестве иностранного языка испанский, арабский, персидский, дари, хинди, урду, китайский, корейский, уйгурский, итальянский, японский язык (при отсутствии преподавания английского, немецкого и французского языков), сдают по этому языку экзамен по многобалльной системе оценок, а по остальным предметам проходят тестовые испытания."
+      "items": [
+       "Абитуриенты, изучавшие в учреждениях общего среднего образования (на базе 11 класса), среднего специального, профессионального образования в качестве иностранного языка испанский, арабский, персидский, дари, хинди, урду, китайский, корейский, уйгурский, итальянский, японский язык (при отсутствии преподавания английского, немецкого и французского языков), сдают по этому языку экзамен по многобалльной системе оценок, а по остальным предметам проходят тестовые испытания."
+      ]
      },
      "en": {
-      "items": "Applicants who studied Spanish, Arabic, Persian, Dari, Hindi, Urdu, Chinese, Korean, Uyghur, Italian or Japanese as a foreign language in institutions of general secondary education (on the basis of grade 11), secondary specialised or vocational education (without English, German and French being taught) take an examination in that language under the multi-point grading system and pass test examinations in the remaining subjects."
+      "items": [
+       "Applicants who studied Spanish, Arabic, Persian, Dari, Hindi, Urdu, Chinese, Korean, Uyghur, Italian or Japanese as a foreign language in institutions of general secondary education (on the basis of grade 11), secondary specialised or vocational education (without English, German and French being taught) take an examination in that language under the multi-point grading system and pass test examinations in the remaining subjects."
+      ]
      }
     }
    },
@@ -498,10 +502,14 @@
       ]
      },
      "ru": {
-      "items": "Приём иностранных граждан в высшие образовательные учреждения осуществляется на основании постановления Кабинета Министров Республики Узбекистан от 4 августа 2008 года № 169 «О совершенствовании порядка приёма и обучения иностранных граждан в образовательных учреждениях Республики Узбекистан» ([ссылка](http://lex.uz/docs/1380636)) и международных договоров Республики Узбекистан."
+      "items": [
+       "Приём иностранных граждан в высшие образовательные учреждения осуществляется на основании постановления Кабинета Министров Республики Узбекистан от 4 августа 2008 года № 169 «О совершенствовании порядка приёма и обучения иностранных граждан в образовательных учреждениях Республики Узбекистан» ([ссылка](http://lex.uz/docs/1380636)) и международных договоров Республики Узбекистан."
+      ]
      },
      "en": {
-      "items": "Admission of foreign citizens to higher education institutions is carried out on the basis of Resolution No. 169 of the Cabinet of Ministers of the Republic of Uzbekistan of August 4, 2008 “On improving the procedure for admitting foreign citizens to educational institutions of the Republic of Uzbekistan and training them” ([link](http://lex.uz/docs/1380636)) and the international treaties of the Republic of Uzbekistan."
+      "items": [
+       "Admission of foreign citizens to higher education institutions is carried out on the basis of Resolution No. 169 of the Cabinet of Ministers of the Republic of Uzbekistan of August 4, 2008 “On improving the procedure for admitting foreign citizens to educational institutions of the Republic of Uzbekistan and training them” ([link](http://lex.uz/docs/1380636)) and the international treaties of the Republic of Uzbekistan."
+      ]
      }
     }
    },
@@ -542,10 +550,14 @@
       ]
      },
      "ru": {
-      "items": "В целях качественной организации приёма на обучение в высших образовательных учреждениях создаются приёмные комиссии."
+      "items": [
+       "В целях качественной организации приёма на обучение в высших образовательных учреждениях создаются приёмные комиссии."
+      ]
      },
      "en": {
-      "items": "To organise admission to higher education institutions at a high quality, admission commissions are formed at higher education institutions."
+      "items": [
+       "To organise admission to higher education institutions at a high quality, admission commissions are formed at higher education institutions."
+      ]
      }
     }
    },
@@ -894,10 +906,14 @@
       ]
      },
      "ru": {
-      "items": "Профессиональные (творческие) экзамены проводятся до проведения тестовых испытаний, с 11 по 20 июля, по единой многобалльной системе оценки в диапазоне от 0 до 100 процентов максимального балла, предусмотренного для предмета, в зависимости от места предмета в тестовых комплексах."
+      "items": [
+       "Профессиональные (творческие) экзамены проводятся до проведения тестовых испытаний, с 11 по 20 июля, по единой многобалльной системе оценки в диапазоне от 0 до 100 процентов максимального балла, предусмотренного для предмета, в зависимости от места предмета в тестовых комплексах."
+      ]
      },
      "en": {
-      "items": "Professional (creative) examinations are held before the test examinations, from July 11 to July 20, under a uniform multi-point grading system in the range from 0 to 100 percent of the maximum score provided for the subject, depending on the place of the subject in the test sets."
+      "items": [
+       "Professional (creative) examinations are held before the test examinations, from July 11 to July 20, under a uniform multi-point grading system in the range from 0 to 100 percent of the maximum score provided for the subject, depending on the place of the subject in the test sets."
+      ]
      }
     }
    },
@@ -952,10 +968,14 @@
       ]
      },
      "ru": {
-      "items": "Тестовые испытания для дневной, специальной заочной и вечерней (посменной) форм обучения проводятся ежегодно с 1 по 15 августа, как правило, в две смены в день."
+      "items": [
+       "Тестовые испытания для дневной, специальной заочной и вечерней (посменной) форм обучения проводятся ежегодно с 1 по 15 августа, как правило, в две смены в день."
+      ]
      },
      "en": {
-      "items": "Test examinations for full-time, special part-time and evening (shift) forms of study are held every year from August 1 to August 15, as a rule in two shifts per day."
+      "items": [
+       "Test examinations for full-time, special part-time and evening (shift) forms of study are held every year from August 1 to August 15, as a rule in two shifts per day."
+      ]
      }
     }
    },
@@ -982,10 +1002,14 @@
       ]
      },
      "ru": {
-      "items": "В зависимости от выбранного в высшем образовательном учреждении направления образования абитуриенты проходят тестовые испытания соответственно по одному, двум или трём комплексам предметов."
+      "items": [
+       "В зависимости от выбранного в высшем образовательном учреждении направления образования абитуриенты проходят тестовые испытания соответственно по одному, двум или трём комплексам предметов."
+      ]
      },
      "en": {
-      "items": "Depending on the field of study chosen at the higher education institution, applicants take test examinations in one, two or three sets of subjects, respectively."
+      "items": [
+       "Depending on the field of study chosen at the higher education institution, applicants take test examinations in one, two or three sets of subjects, respectively."
+      ]
      }
     }
    },
@@ -1088,10 +1112,14 @@
       ]
      },
      "ru": {
-      "items": "Приём абитуриентов на платно-контрактной основе осуществляется Государственной комиссией в пределах квот приёма, утверждённых соответствующим постановлением Президента или Кабинета Министров Республики Узбекистан, на основе единых правил приёма по рейтингу баллов тестовых испытаний."
+      "items": [
+       "Приём абитуриентов на платно-контрактной основе осуществляется Государственной комиссией в пределах квот приёма, утверждённых соответствующим постановлением Президента или Кабинета Министров Республики Узбекистан, на основе единых правил приёма по рейтингу баллов тестовых испытаний."
+      ]
      },
      "en": {
-      "items": "Admission of applicants on a paid-contract basis is carried out by the State Commission within the admission quotas approved by the relevant resolution of the President or the Cabinet of Ministers of the Republic of Uzbekistan, on the basis of uniform admission rules, according to the rating of test scores."
+      "items": [
+       "Admission of applicants on a paid-contract basis is carried out by the State Commission within the admission quotas approved by the relevant resolution of the President or the Cabinet of Ministers of the Republic of Uzbekistan, on the basis of uniform admission rules, according to the rating of test scores."
+      ]
      }
     }
    },
@@ -1160,10 +1188,14 @@
       ]
      },
      "ru": {
-      "items": "По предложениям высших образовательных учреждений с учётом их возможностей, конкурса и набранных баллов на основании решения Государственной комиссии абитуриенты могут быть дополнительно приняты на обучение на платно-контрактной основе сверх установленной квоты (далее — дополнительный приём)."
+      "items": [
+       "По предложениям высших образовательных учреждений с учётом их возможностей, конкурса и набранных баллов на основании решения Государственной комиссии абитуриенты могут быть дополнительно приняты на обучение на платно-контрактной основе сверх установленной квоты (далее — дополнительный приём)."
+      ]
      },
      "en": {
-      "items": "According to the proposals of higher education institutions, taking into account their capacity, the competition and the points scored, applicants may be admitted to study on a paid-contract basis in addition to the established quota on the basis of a decision of the State Commission (hereinafter — additional admission)."
+      "items": [
+       "According to the proposals of higher education institutions, taking into account their capacity, the competition and the points scored, applicants may be admitted to study on a paid-contract basis in addition to the established quota on the basis of a decision of the State Commission (hereinafter — additional admission)."
+      ]
      }
     }
    },
@@ -1246,10 +1278,14 @@
       ]
      },
      "ru": {
-      "items": "Высшие образовательные учреждения осуществляют дополнительный приём в соответствии с показателями, установленными решением Государственной комиссии, из числа абитуриентов, набравших не менее 30 процентов от наивысшего балла (68,0 балла) и не добравших до основных границ приёма до 4 баллов, при строгом соблюдении последовательности баллов."
+      "items": [
+       "Высшие образовательные учреждения осуществляют дополнительный приём в соответствии с показателями, установленными решением Государственной комиссии, из числа абитуриентов, набравших не менее 30 процентов от наивысшего балла (68,0 балла) и не добравших до основных границ приёма до 4 баллов, при строгом соблюдении последовательности баллов."
+      ]
      },
      "en": {
-      "items": "Higher education institutions carry out additional admission, in accordance with the figures set by the decision of the State Commission, from among applicants whose points are not less than 30 percent of the highest score (68.0 points) and who fall short of the main admission thresholds by up to 4 points, strictly observing the sequence of points."
+      "items": [
+       "Higher education institutions carry out additional admission, in accordance with the figures set by the decision of the State Commission, from among applicants whose points are not less than 30 percent of the highest score (68.0 points) and who fall short of the main admission thresholds by up to 4 points, strictly observing the sequence of points."
+      ]
      }
     }
    },
