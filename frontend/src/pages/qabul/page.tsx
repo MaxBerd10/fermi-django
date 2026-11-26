@@ -106,7 +106,7 @@ export default function QabulPage() {
         breadcrumb={t("footer.qabul")}
         description={t("qabul.heroDescription")}
       />
-      <div className="section-container -mt-2 pb-6 relative z-10">
+      <div className="section-container pt-5 pb-6 relative z-10">
         <div className="flex flex-wrap gap-3">
           <a
             href="https://my.uzedu.uz"

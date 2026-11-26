@@ -562,25 +562,30 @@
   margin-bottom: 1em;
 }
 
-.inner-page-body .news-article__blocks > ol {
-  padding: .75rem 1rem .75rem 2.5rem;
-  border: 1px solid #dce3ef;
-  border-radius: .875rem;
-  background: #f6f8fc;
-  list-style: decimal;
+/* A list in a news article: the generic boxed-list rules of inner-page.css apply (one box per item); the number sits INSIDE its box. */
+.inner-page-body .cms-article--rich.cms-article--news.news-article__blocks > ol:not([class]) {
+  list-style: none;
+  counter-reset: news-item;
 }
 
-.inner-page-body .news-article__blocks > ol > li {
-  padding-block: .5rem;
+.inner-page-body .cms-article--rich.cms-article--news.news-article__blocks > ol:not([class]) > li {
+  position: relative;
+  padding-inline-start: 2.75rem;
+  counter-increment: news-item;
 }
 
-.inner-page-body .news-article__blocks > ol > li + li {
-  border-top: 1px solid #dce3ef;
-}
-
-.inner-page-body .news-article__blocks > ol > li::marker {
+.inner-page-body .cms-article--rich.cms-article--news.news-article__blocks > ol:not([class]) > li::before {
+  content: counter(news-item) ".";
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: .85rem;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
   color: #101c4e;
   font-weight: 700;
+  line-height: 1.75;
 }
 
 .cms-article--news img {

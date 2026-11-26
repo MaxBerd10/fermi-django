@@ -25,9 +25,13 @@ function PictureImg({ picture, width = 640 }: { picture: Picture; width?: number
   );
 }
 
+/** The galleries show every picture in a 3:2 frame. A picture of about that shape fills it; one much wider (a 16:9 poster) or narrower would lose its
+ *  sides, and on a poster the sides carry the text, so it is shown whole instead (class `article-contain`). */
 function Figure({ picture, width }: { picture: Picture; width?: number }) {
+  const ratio = picture.width && picture.height ? picture.width / picture.height : null;
+  const wholeShape = !picture.tall && ratio !== null && (ratio > 1.7 || ratio < 1.3);
   return (
-    <figure className={picture.tall ? "article-tall" : undefined}>
+    <figure className={picture.tall ? "article-tall" : wholeShape ? "article-contain" : undefined}>
       <PictureImg picture={picture} width={width} />
     </figure>
   );

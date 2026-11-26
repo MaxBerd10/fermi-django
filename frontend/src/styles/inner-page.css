@@ -473,6 +473,12 @@
   object-fit: cover;
 }
 
+.article-gallery .article-contain img,
+.article-aside .article-contain img {
+  object-fit: contain;
+  background: #eef2f9;
+}
+
 /* a single picture in a row of its own fills the width of the text (a landscape picture); only a tall one (a portrait, a screenshot) stays narrow and in the middle */
 .article-single {
   max-width: none;
