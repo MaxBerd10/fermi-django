@@ -142,7 +142,7 @@ export default function QabulPage() {
                 value={aiQ}
                 onChange={(e) => setAiQ(e.target.value)}
                 placeholder={t("ai.qabulPlaceholder")}
-                className="flex-1 h-10 px-3 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-[#0a1158]"
+                className="sm:flex-1 h-12 shrink-0 px-3 rounded-xl border border-[#e5e5e5] bg-white text-base placeholder:text-[#6b7280] focus:outline-none focus:border-[#0a1158]"
               />
               <button
                 type="button"
@@ -169,7 +169,7 @@ export default function QabulPage() {
                     setAiLoading(false);
                   }
                 }}
-                className="h-10 px-4 rounded-xl bg-[#0a1158] text-white text-sm font-semibold cursor-pointer disabled:opacity-50"
+                className="h-12 px-5 rounded-xl bg-[#0a1158] text-white text-base font-semibold cursor-pointer disabled:opacity-50"
               >
                 {aiLoading ? t("ai.thinking") : t("ai.ask")}
               </button>

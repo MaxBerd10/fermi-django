@@ -1859,7 +1859,7 @@ export default {
   "ai.searchRun": "AI bilan qidirish",
   "ai.qabulTitle": "Qabul boʻyicha yordamchi",
   "ai.qabulSub": "Hujjatlar, bosqichlar va bakalavriat/magistratura/ordinatura boʻyicha qisqa javob + my.edu.uz",
-  "ai.qabulPlaceholder": "Masalan: ordinatura uchun qanday hujjat kerak?",
+  "ai.qabulPlaceholder": "Masalan: ordinaturaga qanday hujjat kerak?",
   "ai.facultyTitle": "Fakultet tanlash maslahatchisi",
   "ai.facultySub": "Qiziqish yoki maqsadingizni yozing — mos fakultet tavsiya qilinadi.",
   "ai.facultyPlaceholder": "Masalan: jamoat salomatligi va profilaktika...",
