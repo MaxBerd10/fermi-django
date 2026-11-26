@@ -1,0 +1,260 @@
+[
+ {
+  "slug": "byudjet-smetasi",
+  "order": 1,
+  "fp": {
+   "uz": "e357cd3d3934afa102e936db0680a17094e723c88221d01250627b5c0fdafd62",
+   "ru": "bd05e507961b743fafa4fb33ba245fc8d7dabf280bd5b5e3d464e1079774d669",
+   "en": "9869472288f937b0659580c48df1c929af20bdc061f8e722b33546e93e6a187d"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Буджет сметаси.xlsx",
+      "caption": "Byudjet smetasi (Excel)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Буджет сметаси.xlsx",
+      "caption": "Смета бюджета (Excel)"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Буджет сметаси.xlsx",
+      "caption": "Budget estimate (Excel)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta kontrakt.pdf",
+      "caption": "Kontrakt smetasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta kontrakt.pdf",
+      "caption": "Смета контракта"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta kontrakt.pdf",
+      "caption": "Contract estimate"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta qo‘shma.pdf",
+      "caption": "Qoʻshma smeta"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta qo‘shma.pdf",
+      "caption": "Совместная смета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/Reja smeta 2025/Smeta qo‘shma.pdf",
+      "caption": "Joint estimate"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 502,
+    "caption": {
+     "uz": "Byudjet smetasi, 2-chorak",
+     "ru": "Смета бюджета, 2-й квартал",
+     "en": "Budget estimate, 2nd quarter"
+    },
+    "fp": {
+     "uz": "66dd520b2826a852753e2e8390328e0ae1f43ff6df8dde3f561d8a2910e3e677",
+     "ru": "66dd520b2826a852753e2e8390328e0ae1f43ff6df8dde3f561d8a2910e3e677",
+     "en": "66dd520b2826a852753e2e8390328e0ae1f43ff6df8dde3f561d8a2910e3e677"
+    }
+   }
+  ],
+  "notes": [
+   "the lines 'Yuklab olish uchun bosing>>>>>>' are gone (a card has its own download button); the Excel file exists only in the Uzbek text: its ru/en captions are ours; the 4th link (Byudjet smetasi, 2 chorak) is the PDF card the page already had: it stays last"
+  ]
+ },
+ {
+  "slug": "mansabdor-shaxslarning-xizmat-safarlari-va-xorijdan-tashrif-buyurgan-mehmonlarni-kutib-olish-xarajatlari-togrisidagi-malumotlar",
+  "order": 1,
+  "fp": {
+   "uz": "ecd76d38b1e5aa9c3dc846f69f300bd328b7342e4e1b883a224b3f4edf97d91b",
+   "ru": "58f5b7189cd4c2c06a65f9e663ee94caf08175fb3bda336ac1db0cd1802daf58",
+   "en": "0c1d2c081237035593c37efa67258c63d997b7c5b24d37ca2f2745cf24b730fb"
+  },
+  "blocks": [],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 504,
+    "caption": {
+     "uz": "Xizmat safarlari xarajatlari",
+     "ru": "Командировочные расходы",
+     "en": "Business travel expenses"
+    },
+    "fp": {
+     "uz": "02dc1bca73646a511cdc59ccabb092d081836de16b7df3f3f39cbd4c9078a608",
+     "ru": "02dc1bca73646a511cdc59ccabb092d081836de16b7df3f3f39cbd4c9078a608",
+     "en": "02dc1bca73646a511cdc59ccabb092d081836de16b7df3f3f39cbd4c9078a608"
+    }
+   }
+  ],
+  "notes": [
+   "the old text was only the name of the PDF (nothing in Uzbek, a link in Russian): it becomes the caption of the card and the HTML block is removed"
+  ]
+ },
+ {
+  "slug": "xarid-qilinishi-rejalashtirilgan-tovarlar-ishlar-xizmatlar-togrisida-malumotlar",
+  "order": 1,
+  "fp": {
+   "uz": "cca1daf035abd20ad9269027ce0bac6cc534ad5f154c5564ba4367a1abf56438",
+   "ru": "64c4e399616244f036391ac4bf7c95c58f861db4b172e2c7bc4d338b0f3acbde",
+   "en": "7475818a938865f89b14a6fe2b82421cd87a69d1b9ee0b5673003015e2cba6ee"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/D-Xarid 2 chorak/Тугридан_тугри_шартномалар_хакида_маълумот.pdf",
+      "caption": "Xarid qilinishi rejalashtirilgan tovarlar (ishlar, xizmatlar) toʻgʻrisida maʼlumotlar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/D-Xarid 2 chorak/Тугридан_тугри_шартномалар_хакида_маълумот.pdf",
+      "caption": "Информация о товарах (работах, услугах), которые планируется приобрести"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Moliyaviy faoliyat/D-Xarid 2 chorak/Тугридан_тугри_шартномалар_хакида_маълумот.pdf",
+      "caption": "Information on the goods (works, services) planned to be purchased"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the link is now a document card; typos corrected in the title: uz 'toʻgrisida', ru 'услкгах' and 'коротые'"
+  ]
+ },
+ {
+  "slug": "davlat-xaridlari-va-investitsiya-loyihalari-doirasida-tashkil-etiladigan-xarid-komissiyalarining-tarkibi-togrisidagi-malumotlar",
+  "order": 1,
+  "fp": {
+   "uz": "de929357b06a46fa54aeb81e7c5fb7268114b82a345970ad3110601098cb35a8",
+   "ru": "f829cd1a5d5f1add7961298bd3a97c2500239b2c2ad69d7f938782268576fc82",
+   "en": "ffa28ea9bcc2b1446bce7c208be59f2d665a11979a027aac904730f2ba481ecd"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasining 2021-yil 22-apreldagi 684-son Qonuni ijrosini taʼminlash va Fargʻona jamoat salomatligi tibbiyot instituti rektorining 2022-yil 20-yanvardagi «Xarid komissiyasi tarkibini tuzish toʻgʻrisida»gi 38-sonli buyrugʻiga muvofiq Xarid komissiyasi tarkibiga oʻzgartirish kiritish maqsadida"
+     },
+     "ru": {
+      "text": "В целях обеспечения исполнения Закона Республики Узбекистан от 22 апреля 2021 года № 684 и приказа ректора Ферганского медицинского института общественного здоровья от 20 января 2022 года № 38 «О составе Закупочной комиссии» — с целью внесения изменений в состав закупочной комиссии"
+     },
+     "en": {
+      "text": "In order to ensure the implementation of Law No. 684 of the Republic of Uzbekistan dated April 22, 2021 and Order No. 38 of the Rector of the Fergana Medical Institute of Public Health dated January 20, 2022 “On the composition of the Procurement Commission”, and to amend the composition of the procurement commission"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the old page is ONE unfinished sentence ('... maqsadida'): nothing follows it (no names, no file): kept as it is, typos corrected (22-apreI -> 22-aprel, Ns -> №, toʻgʻirisida, 'o’ zgartirish'); the staff must add the composition of the commission"
+  ]
+ },
+ {
+  "slug": "kontrakt-xisob-raqam-smetasi",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 561,
+    "caption": {
+     "uz": "Kontrakt hisob raqami smetasi",
+     "ru": "Смета контрактного счёта",
+     "en": "Contract account estimate"
+    },
+    "fp": {
+     "uz": "205a349da7d3b2ece68b37a4f3b6e2a1bd0ea8788efe8adabde54bd6ace92487",
+     "ru": "205a349da7d3b2ece68b37a4f3b6e2a1bd0ea8788efe8adabde54bd6ace92487",
+     "en": "205a349da7d3b2ece68b37a4f3b6e2a1bd0ea8788efe8adabde54bd6ace92487"
+    }
+   }
+  ],
+  "notes": [
+   "only the caption of the PDF card is set (the old one had none)"
+  ]
+ },
+ {
+  "slug": "valyuta-xisob-raqam-smetasi",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 569,
+    "caption": {
+     "uz": "Valyuta hisob raqami smetasi",
+     "ru": "Смета валютного счёта",
+     "en": "Foreign currency account estimate"
+    },
+    "fp": {
+     "uz": "2a929422f21a249fce388058153b85a25302e517ab13479919662d2188c4d50a",
+     "ru": "2a929422f21a249fce388058153b85a25302e517ab13479919662d2188c4d50a",
+     "en": "2a929422f21a249fce388058153b85a25302e517ab13479919662d2188c4d50a"
+    }
+   }
+  ],
+  "notes": [
+   "the old caption was a Russian file name ('иностранной валюты') in all three languages: replaced"
+  ],
+  "recaption": true
+ },
+ {
+  "slug": "kvartal-boyicha-tushumlar-va-xarajatlar",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 562,
+    "caption": {
+     "uz": "Kvartal boʻyicha tushumlar va xarajatlar",
+     "ru": "Доходы и расходы за квартал",
+     "en": "Revenues and expenses for the quarter"
+    },
+    "fp": {
+     "uz": "d541c9791a08a413031738a536714c9ddcd269b475075692cb47efb6d3f15c32",
+     "ru": "d541c9791a08a413031738a536714c9ddcd269b475075692cb47efb6d3f15c32",
+     "en": "d541c9791a08a413031738a536714c9ddcd269b475075692cb47efb6d3f15c32"
+    }
+   }
+  ],
+  "notes": [
+   "only the caption of the PDF card is set (the old one had none)"
+  ]
+ },
+ {
+  "slug": "davlat-organlari-va-tashkilotlari-tasarrufidagi-xizmat-avtomototransport-vositalari-xizmat-uylari-va-boshqa-kochmas-mulklar-togrisidagi-malumotlar",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 503,
+    "caption": {
+     "uz": "Davlat organlari va tashkilotlari tasarrufidagi xizmat avtomototransport vositalari, xizmat uylari va boshqa koʻchmas mulklar toʻgʻrisidagi maʼlumotlar",
+     "ru": "Сведения о служебных автомобилях, служебных домах и другом недвижимом имуществе государственных органов и организаций",
+     "en": "Information on service vehicles, service houses and other real estate of government agencies and organizations"
+    },
+    "fp": {
+     "uz": "ca6b3b1623e5a8e743eb66242171836e36744d90383b4b821410bc5ff55ef6bf",
+     "ru": "ca6b3b1623e5a8e743eb66242171836e36744d90383b4b821410bc5ff55ef6bf",
+     "en": "ca6b3b1623e5a8e743eb66242171836e36744d90383b4b821410bc5ff55ef6bf"
+    }
+   }
+  ],
+  "notes": [
+   "only the caption of the PDF card is set (the old one had none)"
+  ]
+ }
+]

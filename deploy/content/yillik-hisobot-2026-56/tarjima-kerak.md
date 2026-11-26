@@ -1,0 +1,9 @@
+# Script 56 (Faoliyat > Moliyaviy faoliyat, 8 pages): what we wrote or corrected — please let uz / ru / en readers check it
+
+Four pages were old HTML, four were one PDF card each. Captions below are ours (the old cards had none, except the currency page).
+
+- **Byudjet smetasi**: "Byudjet smetasi (Excel)" / "Смета бюджета (Excel)" / "Budget estimate (Excel)" (the Excel file was in the Uzbek text only), "Qoʻshma smeta" / "Совместная смета" / "Joint estimate", "Byudjet smetasi, 2-chorak" / "Смета бюджета, 2-й квартал" / "Budget estimate, 2nd quarter" (the old link had the words "2 chorak" next to it).
+- **Mansabdor shaxslarning xizmat safarlari**: the old uz text was empty; the card is captioned "Xizmat safarlari xarajatlari" (ru "Командировочные расходы", en "Business travel expenses": the old ru/en text).
+- **Xarid qilinishi rejalashtirilgan tovarlar**: the link is a card; typos fixed in the titles (uz "toʻgrisida", ru "услкгах", "коротые").
+- **Davlat xaridlari ... xarid komissiyalarining tarkibi**: the old text is ONE UNFINISHED SENTENCE ("... Xarid komissiyasi tarkibiga oʻzgartirish kiritish maqsadida") and nothing else (no names, no file). Typos corrected ("22-apreI", "Ns", "toʻgʻirisida", "o’ zgartirish"); the Russian and English sentences are our rewording of the old ones. **The staff must add the composition of the commission** (a table or a PDF).
+- **Kontrakt / Valyuta / Kvartal / Davlat organlari ... koʻchmas mulklar**: captions written by us from the menu labels: "Kontrakt hisob raqami smetasi" / "Смета контрактного счёта" / "Contract account estimate"; "Valyuta hisob raqami smetasi" / "Смета валютного счёта" / "Foreign currency account estimate" (the old caption was the Russian file name "иностранной валюты" in all three languages); the other two as the menu labels. Please check the Russian menu label of the currency page ("Расчетный номер валютного счета" does not mean "estimate of the account").
