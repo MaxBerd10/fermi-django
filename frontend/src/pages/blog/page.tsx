@@ -78,8 +78,7 @@ export default function BlogPage() {
   // Same year-rename Navbar.tsx already applies to this exact label when rendering
   // the nav link itself — without it, a page reached via a "-2026" URL would show
   // its own stale "-2025" title even though the link the visitor clicked said 2026.
-  const correctedTitle = isScientificSection ? rawTitle?.replace(/^Нучно-исследовательские/u, "Научно-исследовательские") : rawTitle;
-  const title = (correctedTitle && normalizeYearLabels(correctedTitle)) || t("footer.institutHaqida");
+  const title = (rawTitle && normalizeYearLabels(rawTitle)) || t("footer.institutHaqida");
 
   useEffect(() => {
     if (!slug) return;
@@ -120,13 +119,7 @@ export default function BlogPage() {
   const isTechnicalCollege = menuSection?.theme === "texnikum" || /texnikum/i.test(slug ?? "");
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order).map((block) => {
     if (block.block_type !== "heading" && block.block_type !== "paragraph") return block;
-    let text = block.data.text;
-    if (slug === "registrator-ofisi" && block.block_type === "heading") {
-      text = text.replace(/^B\s+uxgalteriya/u, "Buxgalteriya").replace(/\s+:/u, ":");
-      if (/(?:ko[ʻʼ‘’']rsatiladigan xizmatlar|qo[ʻʼ‘’']shimcha xizmatlar)\s*:?$/iu.test(text)) {
-        return { ...block, data: { ...block.data, text, level: 3 as const } };
-      }
-    }
+    const text = block.data.text;
     // the headings of the technical-college pages were typed in capitals
     const displayText = isTechnicalCollege && block.block_type === "heading"
       ? normalizeTechnicalCollegeHeading(text) : text;
