@@ -232,7 +232,6 @@ export default {
   "science.intro.regulatory": "Ilmiy faoliyat sohasidagi qonunlar, farmonlar va boshqa normativ-huquqiy hujjatlar.",
   "science.intro.journal": "«Klinik va profilaktik tibbiyot» ilmiy jurnali — sonlar, OAK xati va toʻliq jurnal boʻlimi.",
   "science.intro.grants": "FJSTI grant siyosati, tanlov tartibi va Oʻzbekiston hamda xorijdagi taʻlim grantlari havolalari.",
-  "science.grantOverview": "Grant haqida",
   "science.intro.medicalResearch": "Tibbiy taʻlimga bagʻishlangan ilmiy tadqiqot ishlari — mualliflar va mavzular roʻyxati.",
   "science.intro.innovation": "Institutda amalga oshirilayotgan innovatsion gʻoyalar va loyihalar haqida maʻlumot.",
   "science.intro.directions": "Institut ilmiy tadqiqot yoʻnalishlari va ustuvor dasturlar hujjatlari.",

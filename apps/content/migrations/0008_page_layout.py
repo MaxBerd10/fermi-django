@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='page',
             name='layout',
-            field=models.CharField(choices=[('default', 'Oddiy sahifa'), ('regulatory', 'Qaror / normativ hujjat (faktlar jadvali + matn)'), ('regulatory_index', "Qarorlar ro'yxati"), ('council', 'Kengash (kirish + vazifalar)'), ('council_decisions', 'Kengash qarorlari'), ('abstracts', 'Avtoreferatlar (kartochkalar)'), ('editorial', 'Tahririyat (guruhlar)'), ('archive', 'Arxiv (jurnal / gazeta)'), ('faq', 'Savol-javob')], default='default', max_length=24),
+            field=models.CharField(choices=[('default', 'Oddiy sahifa'), ('regulatory', 'Qaror / normativ hujjat (faktlar jadvali + matn)'), ('regulatory_index', "Qarorlar ro'yxati"), ('council', 'Kengash (kirish + vazifalar)'), ('council_decisions', 'Kengash qarorlari'), ('abstracts', 'Avtoreferatlar (kartochkalar)'), ('editorial', 'Tahririyat (guruhlar)'), ('archive', 'Arxiv (jurnal / gazeta)'), ('faq', 'Savol-javob'), ('conference', "Konferensiyalar (mavzular ro'yxati)")], default='default', max_length=24),
         ),
     ]

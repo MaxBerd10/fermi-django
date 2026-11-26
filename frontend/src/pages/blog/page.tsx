@@ -24,17 +24,6 @@ import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { normalizeTechnicalCollegeHeading } from "@/lib/technicalCollegeHeading";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
-// Pages drawn as a regulatory document: a table of facts (Qabul raqami: ...) above the text of the decree.
-const REGULATORY_PAGE_SLUGS = new Set([
-  "talim-togrisia",
-  "prezident-farmon-va-qarorlari",
-  "taraqqiyot-strategiyasi",
-  "davlat-dasturlari",
-  "oliy-talimning-davlat-talim-standarti",
-  "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
-  "ozbeksiton-respublikasi-ssv-buyruqlari",
-]);
-
 /**
  * Generic renderer for every static/informational page pulled from the old
  * site (bylaws, council/journal archives, admission info, building
@@ -72,7 +61,7 @@ export default function BlogPage() {
     originSection && slug && !originSection.links.some((link) => link.href.endsWith(`/${slug}`)) ? originSection : menuSection;
   const isScientificSection = (menuSection?.sectionId ?? resolvedMenuId) === 1993;
   const sectionTitle = menuSection?.links.find((link) => link.href === `/blog/${menuId}/${slug}`)?.title;
-  const rawTitle = isScientificSection && slug === "ilmiy-kengash"
+  const rawTitle = isScientificSection && page?.layout === "council_decisions"
     ? t("science.dissertationLinkCouncil")
     : sectionTitle || (slug && findMenuTitleBySlug(menuTree, slug)) || menuSection?.title;
   // Same year-rename Navbar.tsx already applies to this exact label when rendering
@@ -125,7 +114,8 @@ export default function BlogPage() {
       ? normalizeTechnicalCollegeHeading(text) : text;
     return displayText === block.data.text ? block : { ...block, data: { ...block.data, text: displayText } };
   });
-  const hasEditorialGroups = slug === "avtoreferatlar" || slug === "tahrir-hayati-kengashi";
+  const layout = page.layout ?? "default";
+  const hasEditorialGroups = layout === "abstracts" || layout === "editorial";
   const editorialGroups = hasEditorialGroups && sortedBlocks.some((block) => block.block_type === "heading")
     ? sortedBlocks.reduce<Array<typeof sortedBlocks>>((groups, block) => {
       if (block.block_type === "document") return groups;
@@ -134,18 +124,16 @@ export default function BlogPage() {
       return groups;
     }, []) : null;
   // avtoreferatlar: per defence four blocks -- the council line, the author (heading), the thesis title, the PDF card -- drawn as one card each
-  const autoreferatCards = slug === "avtoreferatlar" && sortedBlocks.length > 0 && sortedBlocks.length % 4 === 0
+  const autoreferatCards = layout === "abstracts" && sortedBlocks.length > 0 && sortedBlocks.length % 4 === 0
     && sortedBlocks.every((block, index) => block.block_type === (["paragraph", "heading", "paragraph", "document"] as const)[index % 4])
     ? Array.from({ length: sortedBlocks.length / 4 }, (_, index) => sortedBlocks.slice(index * 4, index * 4 + 4)) : null;
-  const isStructuredCouncil = slug === "institut-ilmiy-kengashi"
+  const isStructuredCouncil = layout === "council"
     && sortedBlocks[0]?.block_type === "paragraph"
     && sortedBlocks.every(({ block_type }) =>
       block_type === "paragraph" || block_type === "heading" || block_type === "list",
     );
-  const isPublicationArchive = /^(?:jcpm-\d{4}|institut-gazetasi-(?:arxivi-)?\d{4})$/.test(slug ?? "");
-  const isScientificRegulatoryPage = isScientificSection
-    && /normativ|normative|regulat|норматив/iu.test(`${slug ?? ""} ${title}`);
-  const isRegulatoryPage = isScientificRegulatoryPage || REGULATORY_PAGE_SLUGS.has(slug ?? "");
+  const isPublicationArchive = layout === "archive";
+  const isRegulatoryPage = layout === "regulatory";
   const documentFacts: Array<{ id: number; label: string; value: string }> = [];
   if (isRegulatoryPage) {
     for (const block of sortedBlocks) {
@@ -155,15 +143,13 @@ export default function BlogPage() {
       documentFacts.push({ id: block.id, label: fact[1].trim(), value: fact[2] });
     }
   }
-  const isRegulatoryIndex = slug === "prezident-farmon-va-qarorlari"
-    || slug === "davlat-dasturlari" || slug === "ozbeksiton-respublikasi-ssv-buyruqlari";
+  const isRegulatoryIndex = layout === "regulatory_index";
   // Plenty of these ~235 pages have no heading block anywhere in their body
   // (the real site's own content for them is just plain/bold paragraphs) --
   // without a real h2, PageHeader's h1 is followed straight by the footer's
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
-  const showGrantOverview = slug === "fjsti-grant-siyosati" && sortedBlocks[0]?.block_type === "paragraph";
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
     && sortedBlocks.length > 0
     && sortedBlocks.every((block) => block.block_type === "document" || block.block_type === "image");
@@ -191,13 +177,12 @@ export default function BlogPage() {
       contentRef={contentRef}
       sidebar={sidebarSection && <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />}
     >
-      {!hasBodyHeading && !showGrantOverview && <h2 className="sr-only">{title}</h2>}
+      {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
       <Reveal>
         {sortedBlocks.length > 0 ? (
-          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body${isInstituteDocument ? " article-document" : ""}${isReferencePage ? " institute-reference" : ""}${hasReferenceIntro ? " reference-intro" : ""}${isTextPage ? " institute-reference--text" : ""}${slug === "ilmiy-kengash" ? " cms-article--council-decisions council-archive" : ""}${isPublicationArchive ? " publication-archive" : ""}${isRegulatoryPage ? " regulatory-archive" : ""}${isRegulatoryIndex ? " regulatory-archive--index" : ""}`}
+          <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body${isInstituteDocument ? " article-document" : ""}${isReferencePage ? " institute-reference" : ""}${hasReferenceIntro ? " reference-intro" : ""}${isTextPage ? " institute-reference--text" : ""}${layout === "council_decisions" ? " cms-article--council-decisions council-archive" : ""}${isPublicationArchive ? " publication-archive" : ""}${isRegulatoryPage ? " regulatory-archive" : ""}${isRegulatoryIndex ? " regulatory-archive--index" : ""}`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
-              {showGrantOverview && <h2>{t("science.grantOverview")}</h2>}
               {isStructuredCouncil ? (
                 <div className="cms-article--council council-overview">
                   <div className="cms-council-intro"><BlockRenderer block={sortedBlocks[0]} /></div>
@@ -261,7 +246,7 @@ export default function BlogPage() {
                 </>
               ) : isRegulatoryPage ? (
                 <RegulatoryDocument blocks={sortedBlocks} inlinePdfBlockId={inlinePdfBlockId} title={title} />
-              ) : <StructureArticle blocks={sortedBlocks} inlinePdfBlockId={inlinePdfBlockId} title={title} slug={slug} />}
+              ) : <StructureArticle blocks={sortedBlocks} inlinePdfBlockId={inlinePdfBlockId} title={title} layout={layout} />}
             </MenuSectionOriginContext.Provider>
           </article>
         ) : (

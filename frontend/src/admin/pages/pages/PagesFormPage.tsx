@@ -10,6 +10,7 @@ import RichTextEditor from "@/admin/components/RichTextEditor";
 import { useToast } from "@/admin/components/Toast";
 import { nowLabel, useUnsavedGuard } from "@/admin/components/useUnsavedGuard";
 import { ApiError } from "@/types/api";
+import type { PageLayout } from "@/types/content";
 import { adminErrorMessage } from "@/admin/hooks/useAdminList";
 
 const pagesApi = adminResource<AdminPage>("pages");
@@ -22,6 +23,19 @@ const EMPTY: Partial<AdminPage> = {
   content_ru: "",
   content_en: "",
 };
+
+const LAYOUT_OPTIONS: Array<{ value: PageLayout; label: string }> = [
+  { value: "default", label: "Oddiy sahifa" },
+  { value: "regulatory", label: "Qaror / normativ hujjat (faktlar jadvali + matn)" },
+  { value: "regulatory_index", label: "Qarorlar ro'yxati" },
+  { value: "council", label: "Kengash (kirish + vazifalar)" },
+  { value: "council_decisions", label: "Kengash qarorlari" },
+  { value: "abstracts", label: "Avtoreferatlar (kartochkalar)" },
+  { value: "editorial", label: "Tahririyat (guruhlar)" },
+  { value: "archive", label: "Arxiv (jurnal / gazeta)" },
+  { value: "faq", label: "Savol-javob" },
+  { value: "conference", label: "Konferensiyalar (mavzular ro'yxati)" },
+];
 
 function hasText(html: string | null | undefined) {
   return (html ?? "").replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim() !== "";
@@ -148,6 +162,18 @@ export default function PagesFormPage() {
       )}
 
       <form onSubmit={onSubmit}>
+        <div className="mb-4 rounded-xl border border-background-200 bg-background-50 p-4 sm:p-5">
+          <label htmlFor="page-layout" className="mb-1.5 block text-sm font-medium text-foreground-700">Sahifa maketi</label>
+          <select
+            id="page-layout"
+            value={form.layout ?? "default"}
+            onChange={(e) => set("layout", e.target.value as PageLayout)}
+            className="w-full h-11 px-3 rounded-lg border border-background-300 bg-background-50 text-sm focus:outline-none focus:border-primary-500"
+          >
+            {LAYOUT_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+          </select>
+          <p className="mt-1.5 text-xs text-foreground-500">Matn va rasmlar bir xil qoladi, faqat saytda joylashuvi o'zgaradi. Ko'pchilik sahifalar uchun «Oddiy sahifa» to'g'ri.</p>
+        </div>
         <section className="rounded-xl border border-background-200 bg-background-50 p-4 sm:p-5">
           <div className="mb-4">
             <LangTabs value={lang} onChange={setLang} filled={filled} invalid={invalid} />

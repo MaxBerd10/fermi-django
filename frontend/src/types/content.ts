@@ -128,9 +128,16 @@ export interface VideoItem {
   url: string | null;
 }
 
+/** How a page body is drawn (the backend's Page.layout): every layout reads the same blocks and arranges them its own way. */
+export type PageLayout =
+  | "default" | "regulatory" | "regulatory_index" | "council" | "council_decisions"
+  | "abstracts" | "editorial" | "archive" | "faq" | "conference";
+
 export interface Page {
   id: number;
   slug: string;
+  /** Absent in answers of a backend older than the layout column: drawn as "default". */
+  layout?: PageLayout;
   blocks: ContentBlock[];
 }
 

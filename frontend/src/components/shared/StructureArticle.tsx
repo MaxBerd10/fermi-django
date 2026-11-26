@@ -1,4 +1,5 @@
 import type { ContentBlock } from "@/types/blocks";
+import type { PageLayout } from "@/types/content";
 import LinkifiedText from "@/blocks/LinkifiedText";
 import ArticleBody from "./ArticleBody";
 
@@ -41,17 +42,17 @@ function DirectoryValue({ label, value }: { label: string; value: string }) {
   return <ContactLine text={value} />;
 }
 
-export default function StructureArticle({ blocks, inlinePdfBlockId, title, slug, regulatory }: {
+export default function StructureArticle({ blocks, inlinePdfBlockId, title, layout, regulatory }: {
   blocks: ContentBlock[];
   inlinePdfBlockId?: number;
   title: string;
-  slug?: string;
+  layout?: PageLayout;
   regulatory?: boolean;
 }) {
   const sections = [];
   const isHealthDirectory = blocks.filter((block) => healthOffice.test(blockText(block))).length >= 2;
-  const isCareerFaq = slug === "eng-kop-beriladigan-savollar";
-  const isConference = /^(?:xalqaro|ilmiy|respublika-ilmiy)-konferensiyalar(?:i)?$/.test(slug ?? "");
+  const isCareerFaq = layout === "faq";
+  const isConference = layout === "conference";
   let start = 0;
 
   function flush(end: number) {
@@ -120,19 +121,15 @@ export default function StructureArticle({ blocks, inlinePdfBlockId, title, slug
       );
       index += 3;
       start = index + 1;
-    } else if (
-      (slug === "oliy-oquv-yurtidan-keyingi-talim" && /^(?:ilmiy darajalar beruvchi|о научном совете|regulations? on (?:the )?scientific council)/iu.test(text))
-      || (isConference && text)
-    ) {
+    } else if (isConference && text) {
       let end = index;
-      while (end < blocks.length && (isConference ? blockText(blocks[end]) : blocks[end].block_type === "heading")) end++;
+      while (end < blocks.length && blockText(blocks[end])) end++;
       if (end === index) continue;
       flush(index);
       sections.push(
         <ul className="structure-topic-list" key={blocks[index].id}>
           {blocks.slice(index, end).map((block) => (
-            <li key={block.id}><LinkifiedText text={blockText(block)
-              .replace(/^Ilmiy daraja berich\b/u, "Ilmiy daraja berish")} /></li>
+            <li key={block.id}><LinkifiedText text={blockText(block)} /></li>
           ))}
         </ul>,
       );

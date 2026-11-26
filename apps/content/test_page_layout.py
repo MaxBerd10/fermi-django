@@ -43,7 +43,7 @@ def test_every_layout_the_frontend_knows_is_allowed(db):
 
     assert names == {
         "default", "regulatory", "regulatory_index", "council", "council_decisions",
-        "abstracts", "editorial", "archive", "faq",
+        "abstracts", "editorial", "archive", "faq", "conference",
     }
 
 

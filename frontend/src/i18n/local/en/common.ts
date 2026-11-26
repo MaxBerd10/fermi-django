@@ -232,7 +232,6 @@ export default {
   "science.intro.regulatory": "Laws, decrees and other regulatory documents on research activities.",
   "science.intro.journal": "Clinical and Preventive Medicine journal — issues, accreditation letter and full journal section.",
   "science.intro.grants": "FJSTI grant policy, application process and links to education grants in Uzbekistan and abroad.",
-  "science.grantOverview": "About grants",
   "science.intro.medicalResearch": "Research works on medical education — list of authors and topics.",
   "science.intro.innovation": "Innovative ideas and projects implemented at the institute.",
   "science.intro.directions": "Institute research directions and priority programme documents.",

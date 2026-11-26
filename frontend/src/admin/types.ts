@@ -1,3 +1,4 @@
+import type { PageLayout } from "@/types/content";
 export interface AdminPost {
   id: number;
   title_uz: string;
@@ -31,6 +32,8 @@ export interface AdminPage {
   content_ru: string | null;
   content_en: string | null;
   slug: string | null;
+  /** How the page body is drawn on the site (see PageLayout). */
+  layout?: PageLayout;
   file: string | null;
   file_en: string | null;
   file_ru: string | null;

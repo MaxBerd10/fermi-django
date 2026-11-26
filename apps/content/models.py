@@ -198,6 +198,7 @@ class Page(models.Model):
         EDITORIAL = "editorial", "Tahririyat (guruhlar)"
         ARCHIVE = "archive", "Arxiv (jurnal / gazeta)"
         FAQ = "faq", "Savol-javob"
+        CONFERENCE = "conference", "Konferensiyalar (mavzular ro'yxati)"
 
     layout = models.CharField(max_length=24, choices=Layout.choices, default=Layout.DEFAULT)
     created_at = models.DateTimeField(auto_now_add=True)
