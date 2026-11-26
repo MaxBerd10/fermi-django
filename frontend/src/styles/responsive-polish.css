@@ -1,0 +1,97 @@
+/* ===== Sitewide responsive polish ===== */
+@media (max-width: 1023px) {
+  :root {
+    --section-py: clamp(1rem, 2.2vw, 1.75rem);
+    --section-px: clamp(0.9rem, 3.5vw, 2rem);
+  }
+
+  .hero-tool {
+    min-height: 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-px: clamp(0.75rem, 4vw, 1.1rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+  }
+
+  .section-eyebrow {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.7rem 0.3rem 0.65rem;
+  }
+
+  .nav-glass .section-container {
+    padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+  }
+
+  .hero-v2__btn-primary,
+  .hero-v2__btn-ghost {
+    flex: 1 1 auto;
+    justify-content: center;
+    min-width: 9.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .hero-radar {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-mobile-links {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-fade,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .animate-marquee,
+  .blob,
+  .hero-ecg,
+  .hero-v2__badge-dot,
+  .hero-radar__ring,
+  .hero-radar__scan,
+  .hero-radar__burst,
+  .hero-radar__node-ring,
+  .med-atmosphere__orb,
+  .med-atmosphere__plus,
+  .med-atmosphere__organ,
+  .med-atmosphere__heartbeat,
+  .med-atmosphere__heartbeat::before,
+  .med-atmosphere__heartbeat::after {
+    animation: none !important;
+  }
+
+  .med-atmosphere__orb,
+  .med-atmosphere__grid,
+  .med-atmosphere__plus,
+  .med-atmosphere__organ,
+  .med-atmosphere__heartbeat {
+    transform: none !important;
+    translate: none !important;
+  }
+
+  .hero-ecg {
+    stroke-dashoffset: 0 !important;
+  }
+
+  /* Keep partner marquees moving, just slower */
+}
+

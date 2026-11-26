@@ -1,0 +1,469 @@
+:root {
+  --section-py: clamp(1rem, 2vw, 1.5rem);
+  --section-px: clamp(0.85rem, 3.2vw, 3.5rem);
+  --content-max: 100%;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-ios: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-reveal: 700ms;
+  --radius: 1.125rem;
+  --radius-sm: 0.75rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 1.75rem;
+  --glass-blur: 28px;
+  --glass-blur-strong: 40px;
+  --glass-sat: 1.35;
+  --touch-min: 44px;
+}
+
+/* ===== FerMI brand mark ===== */
+.brand-fermi {
+  display: inline-flex;
+  align-items: flex-start;
+  min-width: 0;
+  line-height: 1.05;
+  color: inherit;
+}
+
+.brand-fermi--stack {
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.brand-fermi--inline {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.brand-fermi__word {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.brand-fermi__fer {
+  color: inherit;
+}
+
+.brand-fermi__mi {
+  color: #0a1158;
+  background: linear-gradient(180deg, transparent 75%, rgba(255, 214, 0, 0.55) 75%);
+  padding-inline: 0.01em;
+}
+
+.brand-fermi__full {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #555555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14rem;
+}
+
+.brand-fermi--sm .brand-fermi__word {
+  font-size: 0.95rem;
+}
+
+.brand-fermi--sm .brand-fermi__full {
+  font-size: 0.52rem;
+}
+
+.brand-fermi--md .brand-fermi__word {
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+}
+
+.brand-fermi--md .brand-fermi__full {
+  font-size: 0.55rem;
+}
+
+@media (min-width: 768px) {
+  .brand-fermi--md .brand-fermi__word {
+    font-size: 1.25rem;
+  }
+
+  .brand-fermi--md .brand-fermi__full {
+    font-size: 0.58rem;
+  }
+}
+
+.brand-fermi--lg .brand-fermi__word {
+  font-size: 1.35rem;
+}
+
+.brand-fermi--lg .brand-fermi__full {
+  font-size: 0.62rem;
+}
+
+@media (max-width: 640px) {
+  .brand-fermi--nav .brand-fermi__full {
+    display: none;
+  }
+
+  .page-header .brand-fermi__full {
+    display: none;
+  }
+}
+
+/* At the desktop nav breakpoint (lg, matches Navbar's `lg:flex`), the logo's
+   subtitle competes with the priority-nav row for width — hiding it here
+   gives the nav more room to fit items directly instead of overflowing into
+   "Yana"/"Ещё", without shrinking the nav items themselves. */
+@media (min-width: 1024px) {
+  .brand-fermi--nav .brand-fermi__full {
+    display: none;
+  }
+}
+
+.section-pad {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  position: relative;
+}
+
+/* ===== Inner pages — match home glass / light med-tech ===== */
+.page-header {
+  isolation: isolate;
+  border-bottom: 1px solid rgba(10, 17, 88, 0.06);
+}
+
+.page-header__glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 8% 20%, rgba(10, 17, 88, 0.07), transparent 60%),
+    radial-gradient(ellipse 45% 55% at 92% 30%, rgba(10, 17, 88, 0.05), transparent 55%);
+  pointer-events: none;
+}
+
+.page-header__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(10, 17, 88, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 17, 88, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 40% 40%, #000 15%, transparent 75%);
+  pointer-events: none;
+}
+
+.page-header__rule {
+  width: 3.5rem;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0a1158, #ffd600);
+}
+
+@media (max-width: 640px) {
+  .page-header .section-container {
+    padding-top: max(1.5rem, calc(0.75rem + env(safe-area-inset-top, 0px)));
+    padding-bottom: 1.75rem;
+  }
+
+  .page-card {
+    border-radius: 1rem;
+  }
+
+  .page-input,
+  input.page-input,
+  textarea.page-input,
+  select.page-input {
+    min-height: var(--touch-min);
+    font-size: 16px; /* iOS zoom prevent */
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.45rem, 6.5vw, 1.85rem);
+    line-height: 1.15;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  .prose table,
+  .page-card table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .page-header .section-container {
+    padding-top: 1.75rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(10, 17, 88, 0.09);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(10, 17, 88, 0.045);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+
+.page-card:hover {
+  border-color: rgba(10, 17, 88, 0.16);
+  box-shadow: 0 10px 28px rgba(10, 17, 88, 0.07);
+}
+
+/* Inner page content shell — home-aligned density */
+
+.page-grid {
+  display: grid;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .page-grid {
+    gap: 1rem;
+  }
+}
+
+a.page-card:hover,
+button.page-card:hover {
+  transform: translateY(-2px);
+  border-color: #ffd600;
+}
+
+.page-input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(10, 17, 88, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  color: #0a0a0a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.page-input:focus {
+  outline: none;
+  border-color: #0a1158;
+  box-shadow: 0 0 0 3px rgba(10, 17, 88, 0.1);
+}
+
+.section-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: max(var(--section-px), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--section-px), env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
+}
+
+/* The desktop nav row packs the most items of any section-container user, so it gets
+   its own (narrower) side padding here rather than sharing --section-px with the rest
+   of the page -- freeing up room for the priority-nav items before they overflow into
+   "Yana". */
+@media (min-width: 1024px) {
+  .nav-glass .section-container,
+  .nav-glass-clear .section-container {
+    padding-left: 0.875rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: oklch(var(--primary-600));
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 0.85rem 0.35rem 0.75rem;
+  background: oklch(var(--primary-50) / 0.85);
+  border: 1px solid oklch(var(--primary-100) / 0.8);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: none;
+}
+
+.section-eyebrow::before {
+  content: "";
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: oklch(var(--secondary-500));
+  flex-shrink: 0;
+}
+
+/* Dark navy sections — solid yellow chip, navy text */
+.section-eyebrow--on-dark {
+  color: #0a1158 !important;
+  background: #ffd600 !important;
+  border-color: #ffd600 !important;
+  box-shadow: none;
+}
+
+.section-eyebrow--on-dark::before {
+  background: #0a1158;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: oklch(var(--foreground-950));
+  font-size: clamp(1.75rem, 3.5vw, 3.25rem);
+}
+
+.uni-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: oklch(var(--primary-700));
+  transition: color 0.25s var(--ease-ios), gap 0.25s var(--ease-ios), opacity 0.25s;
+}
+
+.uni-link:hover {
+  color: oklch(var(--primary-500));
+  gap: 0.6rem;
+  transform: none;
+}
+
+.uni-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--touch-min);
+  height: 2.875rem;
+  padding: 0 1.35rem;
+  font-family: var(--font-label);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  border-radius: 999px;
+  background: oklch(var(--primary-800) / 0.88);
+  color: oklch(var(--background-50));
+  border: 1px solid oklch(var(--background-50) / 0.12);
+  box-shadow:
+    0 1px 0 oklch(var(--background-50) / 0.18) inset,
+    0 8px 24px oklch(var(--primary-950) / 0.18);
+  backdrop-filter: blur(16px) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(16px) saturate(var(--glass-sat));
+  transition: transform 0.25s var(--ease-ios), background 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.uni-btn::after {
+  content: none;
+}
+
+.uni-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  background: oklch(var(--primary-700) / 0.92);
+  box-shadow:
+    0 1px 0 oklch(var(--background-50) / 0.22) inset,
+    0 12px 28px oklch(var(--primary-950) / 0.22);
+  filter: none;
+}
+
+.uni-btn:active {
+  transform: scale(0.98);
+}
+
+.uni-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.875rem;
+  padding: 0 1.35rem;
+  font-family: var(--font-label);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  border-radius: 999px;
+  color: oklch(var(--background-50));
+  border: 1px solid oklch(var(--background-50) / 0.28);
+  background: oklch(var(--background-50) / 0.12);
+  backdrop-filter: blur(18px) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(18px) saturate(var(--glass-sat));
+  box-shadow: 0 1px 0 oklch(var(--background-50) / 0.2) inset;
+  transition: background 0.25s var(--ease-ios), border-color 0.25s, transform 0.25s var(--ease-ios);
+}
+
+.uni-btn-ghost:hover {
+  background: oklch(var(--background-50) / 0.22);
+  color: oklch(var(--background-50));
+  border-color: oklch(var(--background-50) / 0.4);
+  transform: translateY(-1px);
+}
+
+.uni-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.875rem;
+  padding: 0 1.35rem;
+  font-family: var(--font-label);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  border-radius: 999px;
+  background: linear-gradient(180deg, oklch(var(--secondary-400)), oklch(var(--secondary-500)));
+  color: oklch(var(--primary-950));
+  border: 1px solid oklch(var(--secondary-300) / 0.55);
+  box-shadow:
+    0 1px 0 oklch(var(--background-50) / 0.45) inset,
+    0 8px 22px oklch(var(--secondary-700) / 0.22);
+  transition: transform 0.25s var(--ease-ios), filter 0.25s, box-shadow 0.25s;
+}
+
+.uni-btn-gold:hover {
+  background: linear-gradient(180deg, oklch(var(--secondary-300)), oklch(var(--secondary-400)));
+  transform: translateY(-1px) scale(1.01);
+}
+
+.uni-btn-gold:active {
+  transform: scale(0.98);
+}
+
+/* Frosted glass — light panels */
+.glass-card,
+.frosted-glass {
+  background: oklch(var(--background-50) / 0.62);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid oklch(var(--background-50) / 0.65);
+  border-radius: var(--radius);
+  box-shadow:
+    0 1px 0 oklch(var(--background-50) / 0.75) inset,
+    0 12px 40px oklch(var(--primary-950) / 0.06);
+  color: oklch(var(--foreground-900));
+}
+

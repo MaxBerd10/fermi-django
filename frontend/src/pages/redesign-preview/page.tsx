@@ -16,7 +16,7 @@ import type { CoruselSlide, Leader, SiteSettings, Counter, About, FacultyListIte
  * config changes) so nothing here can affect the live pages.
  *
  * The live site now uses shared Animation (`@/components/Animation`) and
- * design tokens from global.css; this preview remains for historical
+ * design tokens from styles/base.css; this preview remains for historical
  * comparison only — do not delete the page.
  *
  * This pass covers the client's full-homepage feedback round: dropping the

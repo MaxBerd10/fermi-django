@@ -1,0 +1,719 @@
+/* ===== Medical atmosphere (mouse + float) ===== */
+.med-atmosphere {
+  --mx: 0;
+  --my: 0;
+}
+
+/* Keep the page background still. Its ambient drift looked like page scroll. */
+.med-atmosphere * {
+  animation: none !important;
+}
+
+.med-atmosphere__base {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at calc(20% + var(--mx) * 3%) calc(10% + var(--my) * 2%), rgba(10, 17, 88, 0.08), transparent 55%),
+    radial-gradient(ellipse 55% 45% at calc(85% + var(--mx) * -2%) calc(30% + var(--my) * 3%), rgba(10, 17, 88, 0.1), transparent 50%),
+    radial-gradient(ellipse 50% 40% at calc(50% + var(--mx) * 2%) calc(90% + var(--my) * -2%), rgba(10, 17, 88, 0.06), transparent 55%),
+    linear-gradient(165deg, #f7f8fc 0%, #eef1f8 42%, #f3f4f9 100%);
+}
+
+.med-atmosphere__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(10, 17, 88, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 17, 88, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 20%, transparent 75%);
+  transform: translate3d(calc(var(--mx) * 8px), calc(var(--my) * 6px), 0);
+  transition: transform 0.1s linear;
+}
+
+.med-atmosphere__orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(48px);
+  will-change: transform, translate;
+  animation: med-orb-drift 16s ease-in-out infinite;
+  transform: translate3d(
+    calc(var(--mx) * var(--ox, 18px)),
+    calc(var(--my) * var(--oy, 14px)),
+    0
+  );
+}
+
+.med-atmosphere__orb--a {
+  width: min(42vw, 380px);
+  height: min(42vw, 380px);
+  left: -5%;
+  top: 8%;
+  background: rgba(10, 17, 88, 0.12);
+  --ox: 28px;
+  --oy: 20px;
+}
+
+.med-atmosphere__orb--b {
+  width: min(36vw, 320px);
+  height: min(36vw, 320px);
+  right: -4%;
+  top: 35%;
+  background: rgba(10, 17, 88, 0.11);
+  animation-delay: -5s;
+  --ox: -22px;
+  --oy: 24px;
+}
+
+@keyframes med-pulse-beat {
+  0%,
+  100% {
+    transform: translate3d(
+        calc(var(--mx) * 14px * var(--depth, 1)),
+        calc(var(--my) * 12px * var(--depth, 1)),
+        0
+      )
+      scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(
+        calc(var(--mx) * 14px * var(--depth, 1)),
+        calc(var(--my) * 12px * var(--depth, 1)),
+        0
+      )
+      scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes med-pulse-ring {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes med-dot-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    scale: 1;
+  }
+  50% {
+    opacity: 0.8;
+    scale: 1.5;
+  }
+}
+
+@keyframes med-links-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+/* Faint floating FJSTI watermarks */
+.med-atmosphere__mark {
+  position: absolute;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: rgba(10, 17, 88, 0.05);
+  user-select: none;
+  pointer-events: none;
+  animation: med-mark-drift ease-in-out infinite;
+  will-change: transform;
+}
+
+.med-atmosphere__mark--a {
+  top: 18%;
+  left: 6%;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  transform: rotate(-12deg);
+  animation-duration: 18s;
+  animation-delay: 0s;
+}
+
+.med-atmosphere__mark--b {
+  top: 42%;
+  right: 4%;
+  left: auto;
+  font-size: clamp(2.4rem, 6.5vw, 4.8rem);
+  color: rgba(10, 17, 88, 0.04);
+  transform: rotate(8deg);
+  animation-duration: 22s;
+  animation-delay: -6s;
+  animation-direction: reverse;
+}
+
+.med-atmosphere__mark--c {
+  bottom: 14%;
+  left: 28%;
+  top: auto;
+  font-size: clamp(1.5rem, 3.8vw, 2.6rem);
+  color: rgba(10, 17, 88, 0.035);
+  transform: rotate(-6deg);
+  animation-duration: 20s;
+  animation-delay: -11s;
+}
+
+.med-atmosphere__mark.is-static {
+  animation: none;
+}
+
+@keyframes med-mark-drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 14px -18px;
+  }
+  50% {
+    translate: -10px 12px;
+  }
+  75% {
+    translate: 18px 8px;
+  }
+}
+
+/* Faint pulsing medical + marks (same vibe as FJSTI watermarks) */
+.med-atmosphere__plus {
+  position: absolute;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(10, 17, 88, 0.14);
+  user-select: none;
+  pointer-events: none;
+  animation-name: med-plus-pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+.med-atmosphere__plus--1 {
+  top: 12%;
+  left: 18%;
+  font-size: 1.6rem;
+}
+.med-atmosphere__plus--2 {
+  top: 26%;
+  right: 16%;
+  left: auto;
+  font-size: 2.1rem;
+  color: rgba(10, 17, 88, 0.11);
+}
+.med-atmosphere__plus--3 {
+  top: 48%;
+  left: 8%;
+  font-size: 1.35rem;
+}
+.med-atmosphere__plus--4 {
+  top: 62%;
+  right: 28%;
+  left: auto;
+  font-size: 1.9rem;
+  color: rgba(10, 17, 88, 0.1);
+}
+.med-atmosphere__plus--5 {
+  bottom: 18%;
+  left: 42%;
+  top: auto;
+  font-size: 1.5rem;
+}
+.med-atmosphere__plus.is-static {
+  animation: none;
+  opacity: 0.35;
+}
+
+@keyframes med-plus-pulse {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+  35% {
+    opacity: 0.55;
+    transform: translate3d(4px, -6px, 0) scale(1.12);
+  }
+  55% {
+    opacity: 0.4;
+    transform: translate3d(-3px, 4px, 0) scale(1);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translate3d(6px, 2px, 0) scale(1.08);
+  }
+}
+
+/* 5 faint organ icons — same vibe as + / FJSTI */
+.med-atmosphere__organ {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  color: rgba(10, 17, 88, 0.16);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(10, 17, 88, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  animation: med-organ-beat 1.35s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.med-atmosphere__organ i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.med-atmosphere__organ--1 {
+  top: 16%;
+  right: 12%;
+  left: auto;
+  animation-duration: 1.3s;
+}
+
+.med-atmosphere__organ--2 {
+  top: 40%;
+  left: 10%;
+  animation-duration: 1.45s;
+  color: rgba(10, 17, 88, 0.13);
+}
+
+.med-atmosphere__organ--3 {
+  top: 55%;
+  right: 20%;
+  left: auto;
+  width: 3rem;
+  height: 3rem;
+  animation-duration: 1.4s;
+}
+
+.med-atmosphere__organ--4 {
+  bottom: 22%;
+  left: 30%;
+  top: auto;
+  animation-duration: 1.5s;
+  color: rgba(10, 17, 88, 0.12);
+}
+
+.med-atmosphere__organ--5 {
+  top: 28%;
+  left: 48%;
+  width: 2.5rem;
+  height: 2.5rem;
+  animation-duration: 1.35s;
+  color: rgba(10, 17, 88, 0.11);
+}
+
+.med-atmosphere__organ.is-static {
+  animation: none;
+  opacity: 0.4;
+}
+
+/* Heartbeat lub-dub on organ chips */
+@keyframes med-organ-beat {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  12% {
+    opacity: 0.55;
+    transform: translate3d(0, -2px, 0) scale(1.12);
+  }
+  22% {
+    opacity: 0.32;
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+  34% {
+    opacity: 0.5;
+    transform: translate3d(0, -1px, 0) scale(1.08);
+  }
+  48% {
+    opacity: 0.3;
+    transform: translate3d(2px, 3px, 0) scale(1);
+  }
+}
+
+/* Heartbeat impulse rings (lub-dub expanding) */
+.med-atmosphere__heartbeat {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  margin: -28px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(10, 17, 88, 0.16);
+  pointer-events: none;
+  animation: med-heartbeat-ring 1.35s ease-out infinite;
+}
+
+.med-atmosphere__heartbeat::before,
+.med-atmosphere__heartbeat::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 17, 88, 0.12);
+  animation: med-heartbeat-ring 1.35s ease-out infinite;
+}
+
+.med-atmosphere__heartbeat::before {
+  animation-delay: 0.14s;
+}
+
+.med-atmosphere__heartbeat::after {
+  animation-delay: 0.28s;
+  border-color: rgba(10, 17, 88, 0.08);
+}
+
+.med-atmosphere__heartbeat--a {
+  top: 20%;
+  left: 70%;
+  animation-delay: 0s;
+}
+
+.med-atmosphere__heartbeat--b {
+  top: 60%;
+  left: 16%;
+  width: 72px;
+  height: 72px;
+  margin: -36px;
+  animation-delay: 0.45s;
+}
+
+.med-atmosphere__heartbeat--c {
+  bottom: 18%;
+  right: 18%;
+  left: auto;
+  top: auto;
+  width: 48px;
+  height: 48px;
+  margin: -24px;
+  animation-delay: 0.9s;
+}
+
+.med-atmosphere__heartbeat.is-static {
+  animation: none;
+  opacity: 0.2;
+}
+
+.med-atmosphere__heartbeat.is-static::before,
+.med-atmosphere__heartbeat.is-static::after {
+  animation: none;
+}
+
+@keyframes med-heartbeat-ring {
+  0% {
+    transform: scale(0.35);
+    opacity: 0.55;
+  }
+  14% {
+    transform: scale(0.85);
+    opacity: 0.35;
+  }
+  22% {
+    transform: scale(0.55);
+    opacity: 0.2;
+  }
+  36% {
+    transform: scale(1.15);
+    opacity: 0.28;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes med-orb-drift {
+  0%,
+  100% {
+    translate: 0 0;
+    scale: 1;
+  }
+  33% {
+    translate: 18px -22px;
+    scale: 1.06;
+  }
+  66% {
+    translate: -14px 12px;
+    scale: 0.96;
+  }
+}
+
+@keyframes med-ecg {
+  0% {
+    stroke-dashoffset: 420;
+    opacity: 0.35;
+  }
+  35% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+}
+
+@keyframes med-floater-ring {
+  0% {
+    opacity: 0.45;
+    scale: 0.92;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.35;
+  }
+}
+
+@keyframes med-floater-drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+@keyframes med-cross-spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* Atmosphere density — phone / tablet */
+@media (max-width: 1023px) {
+  .med-hide-md {
+    display: none !important;
+  }
+
+  .med-atmosphere__grid {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 767px) {
+  .med-hide-sm {
+    display: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid oklch(var(--primary-500));
+  outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 0.75rem, 0);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity var(--duration-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-fade.is-visible {
+  opacity: 1;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-2rem, 0, 0);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(2rem, 0, 0);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-spring);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Leadership featured portrait — crisp rendering */
+.leadership-portrait {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.leadership-portrait img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.06) saturate(1.04) brightness(1.02);
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.7;
+  }
+}
+
+@keyframes ring-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(18px, -22px) scale(1.06);
+  }
+  66% {
+    transform: translate(-14px, 12px) scale(0.96);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1.02) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-0.8%, -0.5%);
+  }
+}
+
+@keyframes hero-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hero-ecg-draw {
+  0% {
+    stroke-dashoffset: 480;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-ecg {
+  stroke-dasharray: 480;
+  animation: hero-ecg-draw 3.5s ease-in-out infinite;
+}
+
+/* Linear hover chips under hero CTAs */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes partners-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes partners-scroll-reverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+

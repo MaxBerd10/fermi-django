@@ -1,0 +1,129 @@
+/* ===== AI cards — brand navy + yellow animated gradient ===== */
+.ai-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(10, 17, 88, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 10px 30px rgba(10, 17, 88, 0.06);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  padding: 1rem 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .ai-panel {
+    padding: 1.15rem 1.25rem;
+  }
+}
+
+.ai-panel__glow {
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    rgba(10, 17, 88, 0.05) 22%,
+    rgba(247, 248, 252, 0.98) 40%,
+    rgba(10, 17, 88, 0.09) 58%,
+    rgba(255, 255, 255, 0.95) 78%,
+    rgba(10, 17, 88, 0.04) 100%
+  );
+  background-size: 320% 320%;
+  animation: ai-panel-gradient 22s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.ai-panel__shine {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 48%,
+    rgba(10, 17, 88, 0.06) 52%,
+    transparent 70%
+  );
+  background-size: 220% 100%;
+  animation: ai-panel-sheen 14s linear infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.ai-panel__content {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-panel__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a1158;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(10, 17, 88, 0.22);
+}
+
+.ai-panel__icon i {
+  display: inline-block;
+  animation: ai-panel-spark 5s ease-in-out infinite;
+}
+
+@keyframes ai-panel-gradient {
+  0% {
+    background-position: 0% 40%;
+  }
+  25% {
+    background-position: 60% 20%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  75% {
+    background-position: 40% 100%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+
+@keyframes ai-panel-sheen {
+  0% {
+    background-position: 140% 0;
+  }
+  100% {
+    background-position: -140% 0;
+  }
+}
+
+@keyframes ai-panel-spark {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-panel__glow,
+  .ai-panel__shine,
+  .ai-panel__icon i {
+    animation: none !important;
+  }
+
+  .ai-panel__glow {
+    background-position: 40% 50%;
+  }
+}
