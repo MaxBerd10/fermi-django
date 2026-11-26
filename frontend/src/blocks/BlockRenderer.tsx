@@ -288,7 +288,8 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
 
       const title = caption || document.title || documentTitle || humanizeFilename(document.filename);
 
-      if (style === "roadmap" || (showPdf && /\.pdf$/i.test(document.filename))) {
+      const isPdf = /\.pdf$/i.test(document.filename.trim()) || /\.pdf(?:[?#]|$)/i.test(documentUrl);
+      if (style === "roadmap" || (showPdf && isPdf)) {
         return (
           <RoadmapPdfFrame
             key={documentUrl}

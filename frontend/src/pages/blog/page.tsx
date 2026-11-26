@@ -60,11 +60,16 @@ export default function BlogPage() {
   );
   const sidebarSection =
     originSection && slug && !originSection.links.some((link) => link.href.endsWith(`/${slug}`)) ? originSection : menuSection;
-  const rawTitle = (slug && findMenuTitleBySlug(menuTree, slug)) || menuSection?.title;
+  const isScientificSection = (menuSection?.sectionId ?? resolvedMenuId) === 1993;
+  const sectionTitle = menuSection?.links.find((link) => link.href === `/blog/${menuId}/${slug}`)?.title;
+  const rawTitle = isScientificSection && slug === "ilmiy-kengash"
+    ? t("science.dissertationLinkCouncil")
+    : sectionTitle || (slug && findMenuTitleBySlug(menuTree, slug)) || menuSection?.title;
   // Same year-rename Navbar.tsx already applies to this exact label when rendering
   // the nav link itself — without it, a page reached via a "-2026" URL would show
   // its own stale "-2025" title even though the link the visitor clicked said 2026.
-  const title = (rawTitle && normalizeYearLabels(rawTitle)) || t("footer.institutHaqida");
+  const correctedTitle = isScientificSection ? rawTitle?.replace(/^Нучно-исследовательские/u, "Научно-исследовательские") : rawTitle;
+  const title = (correctedTitle && normalizeYearLabels(correctedTitle)) || t("footer.institutHaqida");
 
   useEffect(() => {
     if (!slug) return;
@@ -103,7 +108,6 @@ export default function BlogPage() {
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
   const isTechnicalCollege = menuSection?.theme === "texnikum" || /texnikum/i.test(slug ?? "");
-  const isScientificSection = (menuSection?.sectionId ?? resolvedMenuId) === 1993;
   const repairConferenceText = (text: string) => text.replace(/Дос\s*[аa]\s*тижения/gu, "Достижения");
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order).map((block) => {
     if (block.block_type === "list") {
@@ -169,6 +173,7 @@ export default function BlogPage() {
   // h3, an invalid skipped heading level. A visually-hidden h2 keeps the
   // outline valid without changing anything a sighted visitor sees.
   const hasBodyHeading = sortedBlocks.some((b) => b.block_type === "heading");
+  const showGrantOverview = slug === "fjsti-grant-siyosati" && sortedBlocks[0]?.block_type === "paragraph";
   const isInstituteDocument = menuSection?.sectionId === INSTITUTE_ABOUT_MENU_ID
     && sortedBlocks.length > 0
     && sortedBlocks.every((block) => block.block_type === "document" || block.block_type === "image");
@@ -183,8 +188,8 @@ export default function BlogPage() {
   const documentBlocks = sortedBlocks.filter((block) =>
     block.block_type === "document" || block.block_type === "raw_html",
   );
-  const inlinePdfBlockId = (isReferencePage || isScientificSection) && documentBlocks.length === 1
-    ? documentBlocks[0].id : undefined;
+  // a page with exactly one document (a PDF) opens it inline, in every section; the buttons (open, download) stand above it
+  const inlinePdfBlockId = documentBlocks.length === 1 ? documentBlocks[0].id : undefined;
   const breadcrumb = sidebarSection
     ? (isReferencePage || sidebarSection.breadcrumbKey === "nav.section.default" ? normalizeYearLabels(sidebarSection.title) : t(sidebarSection.breadcrumbKey))
     : t("footer.institutHaqida");
@@ -196,12 +201,13 @@ export default function BlogPage() {
       contentRef={contentRef}
       sidebar={sidebarSection && <MenuSectionNav menuId={sidebarSection.sectionId} currentSlug={slug} />}
     >
-      {!hasBodyHeading && <h2 className="sr-only">{title}</h2>}
+      {!hasBodyHeading && !showGrantOverview && <h2 className="sr-only">{title}</h2>}
       <Reveal>
         {sortedBlocks.length > 0 ? (
           <article className={`page-card px-5 py-4 md:px-7 md:py-5 lg:px-8 lg:py-6 cms-article cms-article--rich space-y-4 article-body${isInstituteDocument ? " article-document" : ""}${isReferencePage ? " institute-reference" : ""}${hasReferenceIntro ? " reference-intro" : ""}${isTextPage ? " institute-reference--text" : ""}${slug === "ilmiy-kengash" ? " cms-article--council-decisions council-archive" : ""}${isPublicationArchive ? " publication-archive" : ""}${isRegulatoryPage ? " regulatory-archive" : ""}${isRegulatoryIndex ? " regulatory-archive--index" : ""}`}
           >
             <MenuSectionOriginContext.Provider value={sidebarSection?.sectionId}>
+              {showGrantOverview && <h2>{t("science.grantOverview")}</h2>}
               {isStructuredCouncil ? (
                 <div className="cms-article--council council-overview">
                   <div className="cms-council-intro"><BlockRenderer block={sortedBlocks[0]} /></div>

@@ -51,6 +51,7 @@ export default function StructureArticle({ blocks, inlinePdfBlockId, title, slug
   const sections = [];
   const isHealthDirectory = blocks.filter((block) => healthOffice.test(blockText(block))).length >= 2;
   const isCareerFaq = slug === "eng-kop-beriladigan-savollar";
+  const isConference = /^(?:xalqaro|ilmiy|respublika-ilmiy)-konferensiyalar(?:i)?$/.test(slug ?? "");
   let start = 0;
 
   function flush(end: number) {
@@ -121,11 +122,10 @@ export default function StructureArticle({ blocks, inlinePdfBlockId, title, slug
       start = index + 1;
     } else if (
       (slug === "oliy-oquv-yurtidan-keyingi-talim" && /^(?:ilmiy darajalar beruvchi|о научном совете|regulations? on (?:the )?scientific council)/iu.test(text))
-      || ((slug === "xalqaro-konferensiyalar" || /^xalqaro konferensiyalar$/iu.test(title)) && text)
+      || (isConference && text)
     ) {
-      const conference = slug !== "oliy-oquv-yurtidan-keyingi-talim";
       let end = index;
-      while (end < blocks.length && (conference ? blockText(blocks[end]) : blocks[end].block_type === "heading")) end++;
+      while (end < blocks.length && (isConference ? blockText(blocks[end]) : blocks[end].block_type === "heading")) end++;
       if (end === index) continue;
       flush(index);
       sections.push(

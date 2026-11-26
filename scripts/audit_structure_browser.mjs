@@ -68,6 +68,8 @@ try {
             tables: root?.querySelectorAll("table").length ?? 0,
             documentCards: root?.querySelectorAll("[data-file-card]").length ?? 0,
             inlinePdfViewers: root?.querySelectorAll(".cms-roadmap-pdf__iframe").length ?? 0,
+            documentLinks: [...new Set(Array.from(root?.querySelectorAll("[data-file-card] a[href]") ?? [],
+              (link) => new URL(link.href).pathname))],
             contacts: root?.querySelectorAll("a[href^='tel:']").length ?? 0,
             overflow: document.documentElement.scrollWidth > innerWidth + 1,
           };
