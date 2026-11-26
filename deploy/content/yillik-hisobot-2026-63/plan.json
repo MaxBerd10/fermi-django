@@ -5075,7 +5075,7 @@
        "for health reasons — based on the conclusion of a special medical commission;",
        "for violation of academic discipline or internal regulations;",
        "for missing more than 74 academic hours of classes in one semester without valid reasons;",
-       "for students studying on a tuition-fee (contract) basis — failure to pay tuition fees within the установленный deadline;",
+       "for students studying on a tuition-fee (contract) basis — failure to pay tuition fees within the established deadline;",
        "due to deprivation of liberty by a court decision;",
        "in cases where the student’s death is confirmed."
       ]
@@ -5679,7 +5679,7 @@
       "text": "В целях оценки знаний и практических навыков клинических ординаторов в течение учебного года предусматривается проведение полугодовой, годовой (по итогам первого года обучения) и итоговой аттестации. Состав аттестационной комиссии утверждается приказом руководителя образовательного учреждения. В состав комиссии включаются ведущие учёные (для полугодовой, годовой и итоговой аттестации), а также представители заказчиков кадров (для итоговой аттестации). Председателем комиссии, как правило, назначается проректор по научной работе или заместитель директора."
      },
      "en": {
-      "text": "In order to assess the knowledge and practical skills of clinical residents during the academic year, semi-annual, annual (at the end of the first year of study), and final attestations are conducted. The composition of the attestation commission is approved by an order of the head of the educational institution. The commission includes leading scholars (for semi-annual, annual, and final attestations) as well as representatives of personnel заказчики (for final attestation). The chairperson of the commission is usually appointed from among the Vice-Rector for Academic or Scientific Affairs or the Deputy Director."
+      "text": "In order to assess the knowledge and practical skills of clinical residents during the academic year, semi-annual, annual (at the end of the first year of study), and final attestations are conducted. The composition of the attestation commission is approved by an order of the head of the educational institution. The commission includes leading scholars (for semi-annual, annual, and final attestations) as well as representatives of personnel customers (employers) (for final attestation). The chairperson of the commission is usually appointed from among the Vice-Rector for Academic or Scientific Affairs or the Deputy Director."
      }
     }
    },
@@ -6098,7 +6098,8 @@
        "Davolash ishi (General Medicine)",
        "Farmatsiya (Pharmacy)",
        "Stomatologiya (Dentistry)",
-       "Pediatriya (Pediatrics)"
+       "Pediatriya (Pediatrics)",
+       "Bundan tashqari, xorijiy talabalar uchun qoʻshma taʻlim dasturlari yoʻlga qoʻyilgan."
       ]
      },
      "ru": {
@@ -6115,7 +6116,8 @@
        "General Medicine",
        "Pharmacy",
        "Stomatology",
-       "Pediatrics"
+       "Pediatrics",
+       "In addition, joint educational programmes have been set up for foreign students."
       ]
      }
     }

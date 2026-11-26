@@ -62,3 +62,10 @@ These pages said different things in the three languages (different numbers of b
 - `chet-ellik-talabalar-xavfsizligi` (3 blocks)
 - `study-in-uzbekistan` (25 blocks)
 - `aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi` (9 blocks)
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+- `study-in-uzbekistan`: yo'nalishlar ro'yxatiga ruscha sahifada bor edi: "Bundan tashqari, xorijiy talabalar uchun qo'shma ta'lim dasturlari yo'lga qo'yilgan" (uz va en ga ruscha matndan tarjima qilib qo'shildi).
+- `davlat-imtihonlari` (en): "zakazchiki" so'zi "customers (employers)" ga almashtirildi.
+- `talaba-maqomi` (en): "ustanovlennyy" so'zi "established" ga almashtirildi.

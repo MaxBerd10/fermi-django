@@ -15,3 +15,9 @@ These pages said different things in the three languages (different numbers of b
 - `korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi` (6 blocks)
 - `ekofaol-xodim` (29 blocks)
 - `fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi` (14 blocks)
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+- `korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi`: ru da vazifalar ro'yxati qisqartirilgan edi (13 band), uz asosida 26 bandga to'liq tarjima qilindi; huquqlar ro'yxati (4 band) ru va en da qayta yozildi (eski ru/en da u vazifalar bilan aralashib ketgan edi). `translations.json`.
+- `karyera-kuni` (ru): lotin `M` kirill `М` ga tuzatildi.

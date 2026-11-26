@@ -1599,7 +1599,7 @@
       "level": 2
      },
      "en": {
-      "text": "Collection of admission documents",
+      "text": "Admission to the master’s degree programme begins online from 1 July",
       "level": 2
      }
     }
@@ -1616,7 +1616,7 @@
       "level": 2
      },
      "en": {
-      "text": "Admission to the master's degree program begins online from 1 July. Recall some information about admission to the master's degree program:",
+      "text": "Some information about admission to the master’s degree programme:",
       "level": 2
      }
     }
@@ -1633,7 +1633,7 @@
       "level": 2
      },
      "en": {
-      "text": "Files magistr.edu.uz only online admission through the portal, applicants do not come to HEI for the document application; Applicants are not allowed to choose 5 directions of specialization in the master's degree program. Only one direction is chosen; Entrance examinations are on the subject of specialty and foreign language. From other subjects will not; The maximum score that can be scored in the master's exams is 250 points.",
+      "text": "Documents are accepted online only, through the [magistr.edu.uz](http://magistr.edu.uz/home) portal; applicants do not come to the higher education institution to submit documents. Applicants to the master’s programme are not given the option of choosing 5 specialisations; only one field is chosen. Entrance examinations are in the specialty and in a foreign language; there are no examinations in other subjects;",
       "level": 2
      }
     }
@@ -1650,7 +1650,7 @@
       "level": 2
      },
      "en": {
-      "text": "At the entrance to the master's degree program, applicants (those with a bachelor's degree, specialists with a diploma) submit the following documents to the admission Commission of the higher educational institution:",
+      "text": "At the entrance to the master’s degree programme, applicants (holders of a bachelor’s degree and diploma specialists) submit the following documents to the admission commission of the higher education institution:",
       "level": 2
      }
     }
@@ -1659,13 +1659,13 @@
     "block_type": "paragraph",
     "data": {
      "uz": {
-      "text": "magistratura mutaxassisligi koʻrsatilgan holda, oliy taʻlim muassasasi rektori nomiga ariza; oliy maʻlumot toʻgʻrisidagi hujjatning asl nusxasi (yoki diplomdan koʻchirma — Oʻzbekiston Respublikasi oliy taʻlim muassasalarini davlat granti boʻyicha oʻqib tugatganlar uchun) hamda unga ilova; chop etilgan ilmiy maqola yoki tezislari (yoki ularga tenglashtirilgan hujjatlari) nusxasi (mavjud boʻlgan holda); 5 x 4.5 hajmdagi 6 dona rangli fotosurat; 086-U — shakldagi tibbiy maʻlumotnoma."
+      "text": "magistratura mutaxassisligi koʻrsatilgan holda, oliy taʻlim muassasasi rektori nomiga ariza; oliy maʻlumot toʻgʻrisidagi hujjatning asl nusxasi (yoki diplomdan koʻchirma — Oʻzbekiston Respublikasi oliy taʻlim muassasalarini davlat granti boʻyicha oʻqib tugatganlar uchun) hamda unga ilova; chop etilgan ilmiy maqola yoki tezislari (yoki ularga tenglashtirilgan hujjatlari) nusxasi (mavjud boʻlgan holda); 3,5 x 4,5 hajmdagi 6 dona rangli fotosurat; 086-U — shakldagi tibbiy maʻlumotnoma."
      },
      "ru": {
-      "text": "• заявление на имя ректора с указанием специальности; • подлинник документа о высшем образовании (выписка из диплома для обучавшихся в вузах Республики Узбекистан на основе государственных грантов), приложение к диплому; • копии напечатанных научных статей или тезисов (приравненные к ним документы), (если имеются) • медицинская справка формы 086-У • 6 цветных фотографий размером 3,5х4,5 см;"
+      "text": "заявление на имя ректора высшего образовательного учреждения с указанием специальности магистратуры; подлинник документа о высшем образовании (или выписка из диплома — для окончивших вузы Республики Узбекистан на основе государственного гранта) и приложение к нему; копии опубликованных научных статей или тезисов (или приравненных к ним документов), если имеются; 6 цветных фотографий размером 3,5 х 4,5 см; медицинская справка формы 086-У."
      },
      "en": {
-      "text": "application to the rector of a higher educational institution with a master's degree; original of the document on higher education (or an extract from the diploma — for graduates of a state grant of higher education institutions of the Republic of Uzbekistan) and application to it; a copy of published scientific articles or theses (or equivalent documents) (if available); o 3.5 x 4.5 size 6 PCs color photo frame; Medical certificate of 086-U-form."
+      "text": "an application addressed to the rector of the higher education institution, stating the master’s specialty; the original of the document on higher education (or an extract from the diploma — for those who graduated from higher education institutions of the Republic of Uzbekistan on a state grant) together with its supplement; a copy of a published scientific article or theses (or equivalent documents), if any; 6 colour photographs, 3.5 x 4.5 in size; medical certificate, form 086-U."
      }
     }
    },
@@ -1693,7 +1693,7 @@
       "text": "При подаче документов абитуриенты лично предъявляют паспорт и документы воинского учёта."
      },
      "en": {
-      "text": "In the process of submission of documents, applicants personally indicate their passport and military service documents."
+      "text": "When submitting documents, applicants must present their passport and military service documents in person."
      }
     }
    },
@@ -1721,7 +1721,7 @@
       "text": "Балл по диплому — 100 баллов;"
      },
      "en": {
-      "text": "-Diploma point-100 points;"
+      "text": "Diploma score — 100 points;"
      }
     }
    },
@@ -1737,7 +1737,7 @@
       "level": 2
      },
      "en": {
-      "text": "-Proficiency test point-100 points;",
+      "text": "Documents are accepted from 1 July to 30 July.",
       "level": 2
      }
     }
@@ -1752,7 +1752,7 @@
       "text": "Балл по тесту по иностранному языку — 100 баллов."
      },
      "en": {
-      "text": "-Foreign Language test point-100 points."
+      "text": "Foreign language test score — 100 points."
      }
     }
    },
@@ -1766,7 +1766,7 @@
       "text": "За опубликованные статьи на вступительных экзаменах баллы не начисляются;"
      },
      "en": {
-      "text": "-For published articles, points are not given in entrance exams;"
+      "text": "No points are awarded in the entrance examinations for published articles;"
      }
     }
    },
@@ -1782,7 +1782,7 @@
       "level": 2
      },
      "en": {
-      "text": "-Acceptance of documents takes 1 month, that is, starting from 1 July and will last until 30 July;",
+      "text": "When submitting documents, applicants must present in person their passport and the documents on their military service status.",
       "level": 2
      }
     }
@@ -2162,10 +2162,10 @@
       "text": "Fargʻona jamoat salomatligi tibbiyot institutining 2024 yil yanvar-iyun oylarida murojaatlar bilan ishlash borasida amalga oshirilgan ishlar yuzasidan taxliliy yozma"
      },
      "ru": {
-      "text": "Рассмотрение заявок, поступивших через портал cabinetpm2.gov.uz виртуальной приемной Президента Республики Узбекистан в Ферганском медицинском институте здравоохранения"
+      "text": "Аналитическая письменная информация о работе, проделанной Ферганским медицинским институтом общественного здоровья по работе с обращениями в январе–июне 2024 года"
      },
      "en": {
-      "text": "Farg‘ona jamoat salomatligi tibbiyot institutining 2024 yil yanvar-iyun oylarida murojaatlar bilan ishlash borasida amalga oshirilgan ishlar yuzasidan taxliliy yozma"
+      "text": "Analytical written information on the work done at the Fergana Medical Institute of Public Health on handling appeals in January–June 2024"
      }
     }
    },
@@ -2177,11 +2177,11 @@
       "level": 3
      },
      "ru": {
-      "text": "Динамика",
+      "text": "Информация",
       "level": 3
      },
      "en": {
-      "text": "Axborot",
+      "text": "Information",
       "level": 3
      }
     }
@@ -2196,7 +2196,7 @@
       "text": "В Ферганском медицинском институте общественного здоровья одной из основных задач считается безусловное и своевременное исполнение требований Закона Республики Узбекистан «Об обращениях физических и юридических лиц»."
      },
      "en": {
-      "text": "Farg'ona jamoat salomatligi tibbiyot institutida “Jismoniy va yuridik shaxslarning murojaatlari to‘g‘risida”gi O‘zbekiston Respublikasi Qonuni talablarini so‘zsiz va o‘z vaqtida bajarish asosiy vazifalaridan biri deb hisoblanadi."
+      "text": "At the Fergana Medical Institute of Public Health, the unconditional and timely fulfilment of the requirements of the Law of the Republic of Uzbekistan “On Appeals of Individuals and Legal Entities” is regarded as one of the main tasks."
      }
     }
    },
@@ -2210,7 +2210,7 @@
       "text": "Работа по обеспечению безусловного исполнения обращений физических и юридических лиц, поступающих в институт через Виртуальную приёмную и Народную приёмную Президента Республики Узбекистан, веб-сайт, электронную почту, письменно и устно, по телефону доверия, а также по своевременному устранению допущенных недостатков организована на должном уровне. Разрабатываются меры, направленные на систематическое освещение результатов рассмотрения обращений, поступивших через официальный сайт института, социальные сети и другими способами, предусмотренными законодательством. В течение года изучается мнение студентов (анонимные опросы), родителей и общественности о состоянии работы с обращениями в системе медицинского образования, а сведения о его результатах регулярно обсуждаются на заседаниях Учёного совета института и ректората."
      },
      "en": {
-      "text": "O‘zbekiston Respublikasi Prezidentining Virtual qabulxonasi, Prezident Xalq qabulxonasi, veb-sayt, elektron pochta, yozma va og‘zaki, ishonch telefoni orqali institutga jismoniy va yuridik shaxslar tomonidan kelib tushayotgan murojaatlarning ijrosi so‘zsiz bajarilishini ta'minlash va yo‘l qo‘yilgan kamchiliklarni o‘z vaqtida bartaraf etish yuzasidan amalga oshirilgan ishlari yetarli darajada tashkil etilmoqda. Institutning rasmiy sayti, ijtimoiy tarmoqlar orqali hamda qonunchilikda belgilangan boshqa yo‘llar bilan yuborilgan murojaatlar ko‘rib chiqilishi natijalarini tizimli yoritishni ta‘minlashga qaratilgan chora-tadbirlar ishlab chiqilmoqda. Yil davomida tibbiyot ta’lim tizimida murojaatlar bilan ishlashning xolati to‘g‘risida talabalar (anonim so‘rovnomalar) va ota-onalar, jamoatchilik fikrini o‘rganib borish va ularning natijalari haqida ma’lumotlar institut jamoasini ilmiy kengashi va rektorat yig‘ilishlarida muntazam muhokama qilib boriladi."
+      "text": "The work done to ensure that appeals received by the institute from individuals and legal entities through the Virtual Reception and the People’s Reception of the President of the Republic of Uzbekistan, the website, e-mail, in writing and orally, and the hotline are unconditionally carried out, and that shortcomings are eliminated in good time, is organised at a sufficient level. Measures are being developed to ensure systematic coverage of the results of the consideration of appeals sent through the institute’s official website, social networks and other ways established by legislation. Throughout the year, the state of handling appeals in the medical education system is studied through the opinions of students (anonymous questionnaires), parents and the public, and information on the results is regularly discussed at meetings of the institute’s Academic Council and the rectorate."
      }
     }
    },
@@ -2224,7 +2224,7 @@
       "text": "Расширение открытости и прозрачности в работе с обращениями физических и юридических лиц находится под личным контролем ректора А. Сидикова. Приём обратившихся организован согласно графику приёма, утверждённому ректором института А. Сидиковым. Приём ответственными лицами по обращениям физических и юридических лиц ведётся по утверждённому графику. В соответствии с Законом Республики Узбекистан «Об обращениях физических и юридических лиц» обращения анализируются, а исполнение обращений критически обсуждается на еженедельных заседаниях ректората института. Обращения, поступившие через официальный веб-сайт Ферганского медицинского института общественного здоровья (fermi.uz), электронный адрес fmioz@mail.ru и телефон доверия (73-243-06-62), систематически рассматриваются ответственными лицами, и авторам в установленные законом сроки направляются полные, обоснованные и подписанные руководителями ответы по каждой проблеме, изложенной в обращении."
      },
      "en": {
-      "text": "Institutda jismoniy va yuridik shaxslar murojaatlari bilan ishlashda ochiqlik va shaffoflikni yanada kengroq ta'minlash ishlari shaxsan rektor A.Sidikov tomonidan nazorat etiladi. Institut rektori A.Sidikovning murojaatchilarni qabulini tashkil etish jadvaliga asosan qabullar tashkil qilingan. Jismoniy va yuridik shaxslarning murojaatlari bo‘yicha ma‘sullarning qabullari tasdiqlangan jadval asosida olib borilmoqda. O‘zbekistan Respublikasi “Jismoniy va yuridik shaxslarning murojaatlari to‘g‘risida”gi Qonuniga muvofiq jismoniy va yuridik shaxslarning murojaatlarini tahlil qilinadi va institutning xaftalik rektorat yig'ilishlarida murojaatlar ijrosini tanqidiy muhokama etib boriladi. Farg'ona jamoat salomatligi tibbiyot institutining rasmiy veb sayti (fermi.uz), elektron manzil fmioz@mail.ru, ishonch telefoni (73-243-06-62) orqali kelib tushgan murojaatlar tizimli ravishda ma'sullar tomonidan mualliflarga murojaatda keltirilgan har bir muammo yuzasidan to‘liq va asoslantirilgan hamda rahbarlar tomonidan imzolangan javob xatlari berilishini ta'minlash qonunda ko'rsatilgan muddatlarda amalga oshirilmoqda."
+      "text": "Ensuring even greater openness and transparency in handling appeals of individuals and legal entities is personally supervised by the rector, A. Sidikov. Receptions have been organised according to the schedule of receiving applicants drawn up by the institute’s rector, A. Sidikov. The responsible officials receive the appeals of individuals and legal entities according to an approved schedule. In accordance with the Law of the Republic of Uzbekistan “On Appeals of Individuals and Legal Entities”, appeals are analysed, and their execution is critically discussed at the institute’s weekly rectorate meetings. Appeals received through the official website of the Fergana Medical Institute of Public Health (fermi.uz), the e-mail address fmioz@mail.ru and the hotline (73-243-06-62) are handled systematically; the responsible officials ensure, within the periods set by law, that the authors receive full and reasoned reply letters, signed by the heads, on every problem raised in the appeal."
      }
     }
    },
@@ -2238,7 +2238,7 @@
       "text": "Обращения физических и юридических лиц ежеквартально обобщаются, анализируются и в установленном порядке на основе форм отчётности в установленные сроки представляются в Министерство высшего образования, науки и инноваций и Министерство здравоохранения начальником отдела института по работе с обращениями физических и юридических лиц, контролю и мониторингу А. Хусанбоевым (916796110)."
      },
      "en": {
-      "text": "Jismoniy va yuridik shaxslarning murojaatlarini har chorakda umumlashtirilib, tahlil qilinib, hisobot shakllari asosida o'rnatilgan tartibda Oliy ta'lim, fan va innovatsiyalar vazirligi va Sog‘liqni saqlash vazirligiga institut Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash, nazorat va monitoring bo‘limi boshlig‘i A.Xusanboyev (916796110) tomonidan o‘z muddatlarida taqdim etilishi yo‘lga qo‘yilgan."
+      "text": "A procedure has been established under which the appeals of individuals and legal entities are summarised and analysed every quarter and submitted on time, in the established order and on the basis of reporting forms, to the Ministry of Higher Education, Science and Innovation and the Ministry of Health by A. Khusanboyev (916796110), head of the institute’s Department for Work with Appeals of Individuals and Legal Entities, Control and Monitoring."
      }
     }
    },
@@ -2249,10 +2249,10 @@
       "text": "2024 yilning oʻtgan davri mobaynida fuqarolarning murojaatlari boʻyicha ish yutirish tizimli ravishda tashkil etildi. Yanvar-iyun oylarida fuqarolardan jami 85 ta murojatlar tushgan shundan, institutning oʻzida 47 nafar fuqaro murojaat qilib, 9 nafari rektor, 38 nafari prorektorlar tomonidan qabul qilingan virtual qabul xonadan 38 ta, 9 ta yozma, 29 ta ogʻzaki kelgan murojaatlarni tashkil etadi. Bunday murojaatlarni kamaytirish choralarini koʻrish maqsadida haftalik rektorat yigʻilishlarida va institut murabbiylar kengashi yigʻilishlarida, professor oʻqituvchilar va talabalarga davlatimiz tomonidan chiqarilayotgan hukumat qarorlari va koʻrsatmalari bilan muntazam tanishtirish ishlari olib borish ishlari belgilandi."
      },
      "ru": {
-      "text": "За 9 месяцев 2021 года в Ферганский медицинский институт здравоохранения поступило 19 обращений через портал cabinetpm2.gov.uz виртуальной приемной Президента Республики Узбекистан, переезд, трудоустройство, внутренние споры в служебной должности. Рабочая группа института провела тщательное изучение дел, упомянутых в этих обращениях, и заявители имеют право на юридическую помощь. Все обращения были решены положительно. Динамика Ферганского медицинского института здравоохранения за 9 месяцев 2021 года, разбитая по месяцам порталом виртуальной приемной Президента Республики Узбекистан cabinetpm2.gov.uz."
+      "text": "В течение прошедшего периода 2024 года работа по обращениям граждан была организована системно. В январе–июне от граждан поступило всего 85 обращений, из них 47 граждан обратились непосредственно в институт (9 приняты ректором, 38 — проректорами), 38 обращений поступило через виртуальную приёмную (9 письменных и 29 устных). В целях принятия мер по сокращению таких обращений на еженедельных заседаниях ректората и на заседаниях совета кураторов института определено регулярно знакомить профессорско-преподавательский состав и студентов с принимаемыми государством постановлениями и указаниями правительства."
      },
      "en": {
-      "text": "2024 yilning o‘tgan davri mobaynida fuqarolarning murojaatlari bo‘yicha ish yutirish tizimli ravishda tashkil etildi. Yanvar-iyun oylarida fuqarolardan jami 85 ta murojatlar tushgan shundan, institutning o‘zida 47 nafar fuqaro murojaat qilib, 9 nafari rektor, 38 nafari prorektorlar tomonidan qabul qilingan virtual qabul xonadan 38 ta, 9 ta yozma, 29 ta og‘zaki kelgan murojaatlarni tashkil etadi. Bunday murojaatlarni kamaytirish choralarini ko‘rish maqsadida xaftalik rektorat yig'ilishlarida va institut murabbiylar kengashi yig‘ilishlarida, professor o‘qituvchilar va talabalarga davlatimiz tomonidan chiqarilayotgan hukumat qarorlari va ko‘rsatmalari bilan muntazam tanishtirish ishlari olib borish ishlari belgilandi."
+      "text": "During the past period of 2024, work on citizens’ appeals was organised systematically. In January–June a total of 85 appeals were received from citizens: 47 citizens applied at the institute itself (9 were received by the rector and 38 by the pro-rectors), and 38 appeals came through the virtual reception (9 written and 29 oral). In order to take measures to reduce such appeals, it was decided to regularly familiarise teaching staff and students with the government resolutions and instructions issued by our state, at the weekly rectorate meetings and at the meetings of the institute’s council of mentors."
      }
     }
    },
@@ -2266,7 +2266,7 @@
       "text": "В институте установлены регулярное изучение ответственными руководителями состояния приёма граждан и соблюдения исполнительской дисциплины, обсуждение его результатов и постоянный контроль за устранением недостатков."
      },
      "en": {
-      "text": "Institutda mutasaddi rahbarlar tomonidan fuqarolarni qabul qilish hamda ijro intizomiga rioya etish holatini muntazam ravishda o‘rganish, ularni natijalarini muhokama etish, kamchiliklarni bartaraf etish yuzasidan doimiy nazorat olib borish o‘rnatildi."
+      "text": "At the institute, regular study by the responsible heads of the state of receiving citizens and of compliance with executive discipline, discussion of its results, and constant monitoring of the elimination of shortcomings have been established."
      }
     }
    }

@@ -9,3 +9,8 @@ These pages said different things in the three languages (different numbers of b
 ## Pages
 
 - `tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi` (53 blocks)
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+**Ruscha matn:** eski saytda ruscha sahifada o'zbekcha matn turgan edi. Nizomning to'liq ruscha tarjimasi (53 blok) yozildi, `translations.json` da `|k|ru` kalitlari. Yuridik matn, rus tilini biladigan mutaxassis tekshirishi shart. Uzbekcha matndagi 11 blokda yozuv xatolari tuzatildi (imtixon→imtihon, xarbiy→harbiy, mone→mos, muvofik→muvofiq, bʻyicha→boʻyicha va h.k.). Uzbekcha "boshda" so'zi ma'nosi noaniq, ru va en da "как правило / as a rule" deb berilgan.

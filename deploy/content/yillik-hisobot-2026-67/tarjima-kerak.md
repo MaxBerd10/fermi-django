@@ -11,3 +11,8 @@ These pages said different things in the three languages (different numbers of b
 
 - `hududiy-boshqarmalar` (42 blocks)
 - `bilim-yurtlari` (20 blocks)
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+- `hududiy-boshqarmalar` (en): manzildagi kirill "А" lotin "A" ga almashtirildi (№16A).

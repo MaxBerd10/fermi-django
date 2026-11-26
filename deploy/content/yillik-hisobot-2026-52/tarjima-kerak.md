@@ -6,3 +6,8 @@ names "Graduate Entry Doctor of Medicine (MD)", "Twinning", "GCC". Please check:
 "Fargʻona tibbiyot instituti" / "Ферганский медицинский институт" (the English text says "Fergana Medical Institute").
 
 Also: the two lists of advantages of the old page repeated each other: only one list is kept; the "Apply Now" links lost the advertising parameters (`?utm_...`); the brochure card is captioned.
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+- `thumbay-fergana-college-of-medical-sciences` (uz): `University’da` dagi `’` apostrofi `ʻ` ga almashtirildi.

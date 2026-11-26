@@ -25,3 +25,9 @@ These pages said different things in the three languages (different numbers of b
 - `magistratura-qabul-hujjatlari-toplami` (13 blocks)
 - `magistrlik-dissertatsiyasi-himoyasi` (18 blocks)
 - `fuqarolar-murojaatlari-statistikasi` (9 blocks)
+
+
+## Qo'shimcha: tarjima tekshiruvi (2026-11-26)
+
+- `fuqarolar-murojaatlari-statistikasi`: ru sahifasi 2021-yil ma'lumotlari edi (uz 2024-yil), 1, 2, 7-bloklar uz asosida qayta yozildi; en sahifasi o'zbekcha matn edi, 1–8-bloklar tarjima qilindi. **Diqqat:** uz sahifasining 1-bloki tugallanmagan jumla ("...taxliliy yozma"), uni xodimlar to'ldirsin.
+- `magistratura-qabul-hujjatlari-toplami`: en bloklari surilib ketgan edi (0, 1, 2, 3, 4, 6, 8–12) uz asosida qayta yozildi; en dagi "250 ball" gapi uz va ru da yo'qligi uchun olib tashlandi. ru 4-blok uz uslubiga keltirildi. uz da fotosurat o'lchami "5 x 4.5" edi, ru va en ga ko'ra "3,5 x 4,5" ga tuzatildi (**tekshirilsin**).

@@ -42,6 +42,8 @@ def fix(text, lang):
     text = clean(text)
     if lang == "uz":
         text = uz_text(text)
+    if lang == "ru":  # a Latin M typed instead of the Cyrillic one in initials ("M.Мусаджонов")
+        text = re.sub(r"(?<![A-Za-z])M(?=\.\s?[\"«]?[А-ЯЁ])", "М", text)
     text = re.sub(r"\s+([,.;:!?])", r"\1", text)
     text = re.sub(r"\(\s+", "(", text)
     text = re.sub(r"\s+\)", ")", text)
