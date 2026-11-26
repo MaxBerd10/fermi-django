@@ -101,17 +101,19 @@ def assemble(slug, rows, translations):
             s = row[lang]
             key = "%s|%d|%s" % (slug, k, lang)
             if kind in ("heading", "paragraph"):
-                if s:
+                if key in translations:
+                    data[lang] = {"text": translations[key]} if kind == "paragraph" else {"text": translations[key], "level": (row["uz"] or row["ru"] or row["en"]).get("level", 3)}
+                elif s:
                     data[lang] = {"text": s["text"]} if kind == "paragraph" else {"text": s["text"], "level": (row["uz"] or row["ru"] or row["en"]).get("level", 3)}
                 elif key in translations:
                     data[lang] = {"text": translations[key]} if kind == "paragraph" else {"text": translations[key], "level": (row["uz"] or row["ru"] or row["en"]).get("level", 3)}
                 else:
                     missing.append((key, source_text(row)[0], source_text(row)[1], kind))
             elif kind == "list":
-                if s:
-                    data[lang] = {"items": s["items"]}
-                elif key in translations:
+                if key in translations:
                     data[lang] = {"items": translations[key]}
+                elif s:
+                    data[lang] = {"items": s["items"]}
                 else:
                     missing.append((key, source_text(row)[0], source_text(row)[1], kind))
             elif kind in ("image", "document"):

@@ -241,10 +241,23 @@ class Walker:
         return list(imgs) + [node]
 
 
-def specs_of(html, lang):
+NOTE = re.compile(r"^\s*(?:\[?\(?(?:см\.|СМ\.)\s*(?:предыдущее|ПРЕДЫДУЩЕЕ)|\[?\(?(?:абзац|Абзац|АБЗАЦ|абзацы|Абзацы|АБЗАЦЫ|пункт|Пункт|ПУНКТ|в редакции|В редакции|В РЕДАКЦИИ|дополнен|ДОПОЛНЕН|См\.)\b)", re.I)
+
+
+def is_note(text):
+    """A line of the editor of lex.uz (a link "see the previous edition", "(paragraph 4 in the edition of the resolution ...)"): not part of the act."""
+    if re.match(r"^\[Oldingi\]", text, re.I) or re.search(r"Qonun hujjatlari ma.lumotlari milliy bazasi", text):
+        return True  # the same two kinds of notes in Uzbek
+    t = re.sub(r"^[\[(\s]+", "", text)
+    return bool(re.match(r"^(?:См\.\s*предыдущее|абзац|абзацы|пункт\s+\d|в редакции|дополнен)", t, re.I)) or bool(re.match(r"^\(?\s*(?:абзац|абзацы|пункт|в редакции|подпункт)\b", text, re.I))
+
+
+def specs_of(html, lang, drop_notes=False):
     soup = BeautifulSoup(html, "html.parser")
     walker = Walker(lang)
     walker.walk(soup)
+    if drop_notes:
+        walker.out = [x for x in walker.out if not (x["t"] in ("paragraph", "heading") and is_note(x.get("text", "")))]
     # consecutive "1. text" / "• text" paragraphs become a list
     merged = []
     run = []
