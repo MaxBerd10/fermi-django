@@ -1,0 +1,1917 @@
+[
+ {
+  "slug": "vrachlar-malakasini-oshirish-sertifikati",
+  "order": 2,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "0d6b31e2242084dc46ec6caf4f4e3fc545bbf8ee5941b348bacb43fd4862e2c6",
+    "ru": "a9130e62ed9e26e99d818b599185b4bc681018aea3673fa3b9c94ac79dff653e",
+    "en": "a9130e62ed9e26e99d818b599185b4bc681018aea3673fa3b9c94ac79dff653e"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "1",
+        "Dexqonov Gapparjon XXX",
+        "IV-1 N 312176",
+        "1337"
+       ],
+       [
+        "2",
+        "Jurayev Xusanboy Ergashbayevich",
+        "N 275835",
+        "1338"
+       ],
+       [
+        "3",
+        "Hamdamov Hasanboy Ozodovich",
+        "N 097975",
+        "1339"
+       ],
+       [
+        "4",
+        "Raximov Inomjon Ibroximovich",
+        "V N-658089",
+        "1340"
+       ],
+       [
+        "5",
+        "Ziyavutdinova Dilafruz Qobiljon qizi",
+        "V N-943940",
+        "1341"
+       ],
+       [
+        "6",
+        "Saydaliyev Sultongazi Satvaldievich",
+        "I V N-231354",
+        "1342"
+       ],
+       [
+        "7",
+        "Muxtorov Odiljon Amindjanovich",
+        "N-139775",
+        "1343"
+       ],
+       [
+        "8",
+        "Mamatqulov Gʻayrat Omanovich",
+        "KV N-849337",
+        "1344"
+       ],
+       [
+        "9",
+        "Eraliyev SHavkat Sultonovich",
+        "№263812",
+        "1399"
+       ],
+       [
+        "10",
+        "Xolmatov Xusanboy Rustamovich",
+        "№290084",
+        "1400"
+       ],
+       [
+        "11",
+        "Mirzaraximov Baxodir Soliyevich",
+        "MM №024761",
+        "1401"
+       ],
+       [
+        "12",
+        "Abduolimova Rayxonoy Oʻktamovna",
+        "MM №001474",
+        "1402"
+       ],
+       [
+        "13",
+        "Gʻafurjonova Mavluda Ismailjonovna",
+        "№140743",
+        "1403"
+       ],
+       [
+        "14",
+        "Xolmetov Nodirbek Sulaymonqulovich",
+        "№277553",
+        "1404"
+       ],
+       [
+        "15",
+        "Saydazimov Maxammadqodir Maxamadaliyevich",
+        "№290149",
+        "1405"
+       ],
+       [
+        "16",
+        "Arapov Baxtiyorjon Abduxalil oʻgʻli",
+        "M №00058912",
+        "1406"
+       ],
+       [
+        "17",
+        "Abdujalilov SHuxrat Anvarovich",
+        "№138852",
+        "1407"
+       ],
+       [
+        "18",
+        "Saliyeva Anna Alekseyevna",
+        "B №857808",
+        "1408"
+       ],
+       [
+        "19",
+        "Dadajonov Dilshod Boʻriboyevich",
+        "№009891",
+        "1409"
+       ],
+       [
+        "20",
+        "Karimovich Otabek Neʻmatovich",
+        "№108948",
+        "1410"
+       ],
+       [
+        "21",
+        "Gʻulomov Otabek Akmaljon oʻgʻli",
+        "B №00173933",
+        "1411"
+       ],
+       [
+        "22",
+        "Xusanov Maʻrufjon Abdullaevich",
+        "ЗВ №842232",
+        "1412"
+       ],
+       [
+        "23",
+        "Ergashev Nodirali Yuldashevich",
+        "№270862",
+        "1413"
+       ],
+       [
+        "24",
+        "Otajonov Shokirjon Zokirovich",
+        "B №777333",
+        "1414"
+       ],
+       [
+        "25",
+        "Boyxonova Farida Qaxxorovna",
+        "PB №870427",
+        "1415"
+       ],
+       [
+        "26",
+        "Aliboyev Muslimjon Rustamjon oʻgʻli",
+        "B №857922",
+        "1416"
+       ],
+       [
+        "27",
+        "Ikromov Isroil Islomjon",
+        "B №914076",
+        "1417"
+       ],
+       [
+        "28",
+        "Mamajonov Nasimjon Salimovich",
+        "№290276",
+        "1418"
+       ],
+       [
+        "29",
+        "Mamazaitov Avazbek Abduvaliyevich",
+        "B №914031",
+        "1419"
+       ],
+       [
+        "30",
+        "Muhammadjonov Muhammadkamol Shavkatjon oʻgʻli",
+        "B00229913",
+        "1420"
+       ],
+       [
+        "31",
+        "Pirmatov Samadjon Xamroliyevich",
+        "№290087",
+        "1421"
+       ],
+       [
+        "32",
+        "Pozilov Abrorjon Abduvaxobovich",
+        "B №899953",
+        "1422"
+       ],
+       [
+        "33",
+        "Sayfuddinov Suxrobbek Ziloldin oʻgʻli",
+        "№AA 016569",
+        "1423"
+       ],
+       [
+        "34",
+        "Sirojiddinov Diyorbek Iragimovich",
+        "№275802",
+        "1424"
+       ],
+       [
+        "35",
+        "Sodiqov Ilxomjon Zoʻraliyevich",
+        "B №772023",
+        "1425"
+       ],
+       [
+        "36",
+        "Tursunov Sultonxoʻja Sadulloxujayevich",
+        "B №700112",
+        "1426"
+       ],
+       [
+        "37",
+        "Shamatov Elyor Baxodirjonovich",
+        "B00128673",
+        "1427"
+       ],
+       [
+        "38",
+        "Shokirova Muslimaxon Maxamadali qizi",
+        "B №00173924",
+        "1428"
+       ],
+       [
+        "39",
+        "Yusupov Xislatjon Xayotjon oʻgʻli",
+        "B00151880",
+        "1429"
+       ],
+       [
+        "40",
+        "Abduraximova Masturaxon Yusupovna",
+        "Г-II №316302",
+        "1430"
+       ],
+       [
+        "41",
+        "Juraev Saxibulla Mamatxonovich",
+        "№152236",
+        "1431"
+       ],
+       [
+        "42",
+        "Xojiraximov Jaxongir Olimjonovich",
+        "№286352",
+        "1432"
+       ],
+       [
+        "43",
+        "Mansurov Kamolxon Rustamxoʻjaevich",
+        "B №658250",
+        "1433"
+       ],
+       [
+        "44",
+        "Karimov Sherzodjon Rafiqovich",
+        "№251916",
+        "1434"
+       ],
+       [
+        "45",
+        "Zulfikar Nizom Kazakbayevich",
+        "№009239",
+        "1435"
+       ],
+       [
+        "46",
+        "Yangiboyev Bexzod Gʻanijon oʻgʻli",
+        "B №00230221",
+        "1436"
+       ],
+       [
+        "47",
+        "Karabayev Umidjon Muxsinovich",
+        "№121657",
+        "1437"
+       ],
+       [
+        "48",
+        "Nabiyev Ibroximjon Murodiljon",
+        "В №914017",
+        "1438"
+       ],
+       [
+        "49",
+        "Sayfutdinov Nazir Aminovich",
+        "№019557",
+        "1439"
+       ],
+       [
+        "50",
+        "Egamov Sarvar Shavkatbekovich",
+        "№297886",
+        "1440"
+       ],
+       [
+        "51",
+        "Ulmasov Elmurodjon Erkinboyevich",
+        "ЕВ №67810",
+        "1441"
+       ],
+       [
+        "52",
+        "Xojimetov Davron Shuxratbekovich",
+        "В №772118",
+        "1442"
+       ],
+       [
+        "53",
+        "Umurzakov Nuriddin Raximberdiyevich",
+        "№289226",
+        "1443"
+       ],
+       [
+        "54",
+        "Sodiqov Ilxomjon Zoʻraliyevich",
+        "B №772023",
+        "1444"
+       ],
+       [
+        "55",
+        "Yusupova Feruza Aminovna",
+        "№172394",
+        "1445"
+       ],
+       [
+        "56",
+        "Abdullaev Muxamadali Xalimovich",
+        "№009661",
+        "1446"
+       ]
+      ]
+     },
+     "ru": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "1",
+        "Dexqonov Gapparjon XXX",
+        "IV-1 N 312176",
+        "1337"
+       ],
+       [
+        "2",
+        "Jurayev Xusanboy Ergashbayevich",
+        "N 275835",
+        "1338"
+       ],
+       [
+        "3",
+        "Hamdamov Hasanboy Ozodovich",
+        "N 097975",
+        "1339"
+       ],
+       [
+        "4",
+        "Raximov Inomjon Ibroximovich",
+        "V N-658089",
+        "1340"
+       ],
+       [
+        "5",
+        "Ziyavutdinova Dilafruz Qobiljon qizi",
+        "V N-943940",
+        "1341"
+       ],
+       [
+        "6",
+        "Saydaliyev Sultongazi Satvaldievich",
+        "I V N-231354",
+        "1342"
+       ],
+       [
+        "7",
+        "Muxtorov Odiljon Amindjanovich",
+        "N-139775",
+        "1343"
+       ],
+       [
+        "8",
+        "Mamatqulov G’ayrat Omanovich",
+        "KV N-849337",
+        "1344"
+       ],
+       [
+        "9",
+        "Eraliyev SHavkat Sultonovich",
+        "№263812",
+        "1399"
+       ],
+       [
+        "10",
+        "Xolmatov Xusanboy Rustamovich",
+        "№290084",
+        "1400"
+       ],
+       [
+        "11",
+        "Mirzaraximov Baxodir Soliyevich",
+        "MM №024761",
+        "1401"
+       ],
+       [
+        "12",
+        "Abduolimova Rayxonoy O‘ktamovna",
+        "MM №001474",
+        "1402"
+       ],
+       [
+        "13",
+        "G’afurjonova Mavluda Ismailjonovna",
+        "№140743",
+        "1403"
+       ],
+       [
+        "14",
+        "Xolmetov Nodirbek Sulaymonqulovich",
+        "№277553",
+        "1404"
+       ],
+       [
+        "15",
+        "Saydazimov Maxammadqodir Maxamadaliyevich",
+        "№290149",
+        "1405"
+       ],
+       [
+        "16",
+        "Arapov Baxtiyorjon Abduxalil o’g’li",
+        "M №00058912",
+        "1406"
+       ],
+       [
+        "17",
+        "Abdujalilov SHuxrat Anvarovich",
+        "№138852",
+        "1407"
+       ],
+       [
+        "18",
+        "Saliyeva Anna Alekseyevna",
+        "B №857808",
+        "1408"
+       ],
+       [
+        "19",
+        "Dadajonov Dilshod Bo’riboyevich",
+        "№009891",
+        "1409"
+       ],
+       [
+        "20",
+        "Karimovich Otabek Ne’matovich",
+        "№108948",
+        "1410"
+       ],
+       [
+        "21",
+        "G’ulomov Otabek Akmaljon o’g’li",
+        "B №00173933",
+        "1411"
+       ],
+       [
+        "22",
+        "Xusanov Ma’rufjon Abdullaevich",
+        "ЗВ №842232",
+        "1412"
+       ],
+       [
+        "23",
+        "Ergashev Nodirali Yuldashevich",
+        "№270862",
+        "1413"
+       ],
+       [
+        "24",
+        "Otajonov Shokirjon Zokirovich",
+        "B №777333",
+        "1414"
+       ],
+       [
+        "25",
+        "Boyxonova Farida Qaxxorovna",
+        "PB №870427",
+        "1415"
+       ],
+       [
+        "26",
+        "Aliboyev Muslimjon Rustamjon o’g’li",
+        "B №857922",
+        "1416"
+       ],
+       [
+        "27",
+        "Ikromov Isroil Islomjon",
+        "B №914076",
+        "1417"
+       ],
+       [
+        "28",
+        "Mamajonov Nasimjon Salimovich",
+        "№290276",
+        "1418"
+       ],
+       [
+        "29",
+        "Mamazaitov Avazbek Abduvaliyevich",
+        "B №914031",
+        "1419"
+       ],
+       [
+        "30",
+        "Muhammadjonov Muhammadkamol Shavkatjon o’g’li",
+        "B00229913",
+        "1420"
+       ],
+       [
+        "31",
+        "Pirmatov Samadjon Xamroliyevich",
+        "№290087",
+        "1421"
+       ],
+       [
+        "32",
+        "Pozilov Abrorjon Abduvaxobovich",
+        "B №899953",
+        "1422"
+       ],
+       [
+        "33",
+        "Sayfuddinov Suxrobbek Ziloldin o’g’li",
+        "№AA 016569",
+        "1423"
+       ],
+       [
+        "34",
+        "Sirojiddinov Diyorbek Iragimovich",
+        "№275802",
+        "1424"
+       ],
+       [
+        "35",
+        "Sodiqov Ilxomjon Zo’raliyevich",
+        "B №772023",
+        "1425"
+       ],
+       [
+        "36",
+        "Tursunov Sultonxo’ja Sadulloxujayevich",
+        "B №700112",
+        "1426"
+       ],
+       [
+        "37",
+        "Shamatov Elyor Baxodirjonovich",
+        "B00128673",
+        "1427"
+       ],
+       [
+        "38",
+        "Shokirova Muslimaxon Maxamadali qizi",
+        "B №00173924",
+        "1428"
+       ],
+       [
+        "39",
+        "Yusupov Xislatjon Xayotjon o’g’li",
+        "B00151880",
+        "1429"
+       ],
+       [
+        "40",
+        "Abduraximova Masturaxon Yusupovna",
+        "Г-II №316302",
+        "1430"
+       ],
+       [
+        "41",
+        "Juraev Saxibulla Mamatxonovich",
+        "№152236",
+        "1431"
+       ],
+       [
+        "42",
+        "Xojiraximov Jaxongir Olimjonovich",
+        "№286352",
+        "1432"
+       ],
+       [
+        "43",
+        "Mansurov Kamolxon Rustamxo‘jaevich",
+        "B №658250",
+        "1433"
+       ],
+       [
+        "44",
+        "Karimov Sherzodjon Rafiqovich",
+        "№251916",
+        "1434"
+       ],
+       [
+        "45",
+        "Zulfikar Nizom Kazakbayevich",
+        "№009239",
+        "1435"
+       ],
+       [
+        "46",
+        "Yangiboyev Bexzod G’anijon o‘g’li",
+        "B №00230221",
+        "1436"
+       ],
+       [
+        "47",
+        "Karabayev Umidjon Muxsinovich",
+        "№121657",
+        "1437"
+       ],
+       [
+        "48",
+        "Nabiyev Ibroximjon Murodiljon",
+        "В №914017",
+        "1438"
+       ],
+       [
+        "49",
+        "Sayfutdinov Nazir Aminovich",
+        "№019557",
+        "1439"
+       ],
+       [
+        "50",
+        "Egamov Sarvar Shavkatbekovich",
+        "№297886",
+        "1440"
+       ],
+       [
+        "51",
+        "Ulmasov Elmurodjon Erkinboyevich",
+        "ЕВ №67810",
+        "1441"
+       ],
+       [
+        "52",
+        "Xojimetov Davron Shuxratbekovich",
+        "В №772118",
+        "1442"
+       ],
+       [
+        "53",
+        "Umurzakov Nuriddin Raximberdiyevich",
+        "№289226",
+        "1443"
+       ],
+       [
+        "54",
+        "Sodiqov Ilxomjon Zo’raliyevich",
+        "B №772023",
+        "1444"
+       ],
+       [
+        "55",
+        "Yusupova Feruza Aminovna",
+        "№172394",
+        "1445"
+       ],
+       [
+        "56",
+        "Abdullaev Muxamadali Xalimovich",
+        "№009661",
+        "1446"
+       ]
+      ]
+     },
+     "en": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "1",
+        "Dexqonov Gapparjon XXX",
+        "IV-1 N 312176",
+        "1337"
+       ],
+       [
+        "2",
+        "Jurayev Xusanboy Ergashbayevich",
+        "N 275835",
+        "1338"
+       ],
+       [
+        "3",
+        "Hamdamov Hasanboy Ozodovich",
+        "N 097975",
+        "1339"
+       ],
+       [
+        "4",
+        "Raximov Inomjon Ibroximovich",
+        "V N-658089",
+        "1340"
+       ],
+       [
+        "5",
+        "Ziyavutdinova Dilafruz Qobiljon qizi",
+        "V N-943940",
+        "1341"
+       ],
+       [
+        "6",
+        "Saydaliyev Sultongazi Satvaldievich",
+        "I V N-231354",
+        "1342"
+       ],
+       [
+        "7",
+        "Muxtorov Odiljon Amindjanovich",
+        "N-139775",
+        "1343"
+       ],
+       [
+        "8",
+        "Mamatqulov G’ayrat Omanovich",
+        "KV N-849337",
+        "1344"
+       ],
+       [
+        "9",
+        "Eraliyev SHavkat Sultonovich",
+        "№263812",
+        "1399"
+       ],
+       [
+        "10",
+        "Xolmatov Xusanboy Rustamovich",
+        "№290084",
+        "1400"
+       ],
+       [
+        "11",
+        "Mirzaraximov Baxodir Soliyevich",
+        "MM №024761",
+        "1401"
+       ],
+       [
+        "12",
+        "Abduolimova Rayxonoy O‘ktamovna",
+        "MM №001474",
+        "1402"
+       ],
+       [
+        "13",
+        "G’afurjonova Mavluda Ismailjonovna",
+        "№140743",
+        "1403"
+       ],
+       [
+        "14",
+        "Xolmetov Nodirbek Sulaymonqulovich",
+        "№277553",
+        "1404"
+       ],
+       [
+        "15",
+        "Saydazimov Maxammadqodir Maxamadaliyevich",
+        "№290149",
+        "1405"
+       ],
+       [
+        "16",
+        "Arapov Baxtiyorjon Abduxalil o’g’li",
+        "M №00058912",
+        "1406"
+       ],
+       [
+        "17",
+        "Abdujalilov SHuxrat Anvarovich",
+        "№138852",
+        "1407"
+       ],
+       [
+        "18",
+        "Saliyeva Anna Alekseyevna",
+        "B №857808",
+        "1408"
+       ],
+       [
+        "19",
+        "Dadajonov Dilshod Bo’riboyevich",
+        "№009891",
+        "1409"
+       ],
+       [
+        "20",
+        "Karimovich Otabek Ne’matovich",
+        "№108948",
+        "1410"
+       ],
+       [
+        "21",
+        "G’ulomov Otabek Akmaljon o’g’li",
+        "B №00173933",
+        "1411"
+       ],
+       [
+        "22",
+        "Xusanov Ma’rufjon Abdullaevich",
+        "ЗВ №842232",
+        "1412"
+       ],
+       [
+        "23",
+        "Ergashev Nodirali Yuldashevich",
+        "№270862",
+        "1413"
+       ],
+       [
+        "24",
+        "Otajonov Shokirjon Zokirovich",
+        "B №777333",
+        "1414"
+       ],
+       [
+        "25",
+        "Boyxonova Farida Qaxxorovna",
+        "PB №870427",
+        "1415"
+       ],
+       [
+        "26",
+        "Aliboyev Muslimjon Rustamjon o’g’li",
+        "B №857922",
+        "1416"
+       ],
+       [
+        "27",
+        "Ikromov Isroil Islomjon",
+        "B №914076",
+        "1417"
+       ],
+       [
+        "28",
+        "Mamajonov Nasimjon Salimovich",
+        "№290276",
+        "1418"
+       ],
+       [
+        "29",
+        "Mamazaitov Avazbek Abduvaliyevich",
+        "B №914031",
+        "1419"
+       ],
+       [
+        "30",
+        "Muhammadjonov Muhammadkamol Shavkatjon o’g’li",
+        "B00229913",
+        "1420"
+       ],
+       [
+        "31",
+        "Pirmatov Samadjon Xamroliyevich",
+        "№290087",
+        "1421"
+       ],
+       [
+        "32",
+        "Pozilov Abrorjon Abduvaxobovich",
+        "B №899953",
+        "1422"
+       ],
+       [
+        "33",
+        "Sayfuddinov Suxrobbek Ziloldin o’g’li",
+        "№AA 016569",
+        "1423"
+       ],
+       [
+        "34",
+        "Sirojiddinov Diyorbek Iragimovich",
+        "№275802",
+        "1424"
+       ],
+       [
+        "35",
+        "Sodiqov Ilxomjon Zo’raliyevich",
+        "B №772023",
+        "1425"
+       ],
+       [
+        "36",
+        "Tursunov Sultonxo’ja Sadulloxujayevich",
+        "B №700112",
+        "1426"
+       ],
+       [
+        "37",
+        "Shamatov Elyor Baxodirjonovich",
+        "B00128673",
+        "1427"
+       ],
+       [
+        "38",
+        "Shokirova Muslimaxon Maxamadali qizi",
+        "B №00173924",
+        "1428"
+       ],
+       [
+        "39",
+        "Yusupov Xislatjon Xayotjon o’g’li",
+        "B00151880",
+        "1429"
+       ],
+       [
+        "40",
+        "Abduraximova Masturaxon Yusupovna",
+        "Г-II №316302",
+        "1430"
+       ],
+       [
+        "41",
+        "Juraev Saxibulla Mamatxonovich",
+        "№152236",
+        "1431"
+       ],
+       [
+        "42",
+        "Xojiraximov Jaxongir Olimjonovich",
+        "№286352",
+        "1432"
+       ],
+       [
+        "43",
+        "Mansurov Kamolxon Rustamxo‘jaevich",
+        "B №658250",
+        "1433"
+       ],
+       [
+        "44",
+        "Karimov Sherzodjon Rafiqovich",
+        "№251916",
+        "1434"
+       ],
+       [
+        "45",
+        "Zulfikar Nizom Kazakbayevich",
+        "№009239",
+        "1435"
+       ],
+       [
+        "46",
+        "Yangiboyev Bexzod G’anijon o‘g’li",
+        "B №00230221",
+        "1436"
+       ],
+       [
+        "47",
+        "Karabayev Umidjon Muxsinovich",
+        "№121657",
+        "1437"
+       ],
+       [
+        "48",
+        "Nabiyev Ibroximjon Murodiljon",
+        "В №914017",
+        "1438"
+       ],
+       [
+        "49",
+        "Sayfutdinov Nazir Aminovich",
+        "№019557",
+        "1439"
+       ],
+       [
+        "50",
+        "Egamov Sarvar Shavkatbekovich",
+        "№297886",
+        "1440"
+       ],
+       [
+        "51",
+        "Ulmasov Elmurodjon Erkinboyevich",
+        "ЕВ №67810",
+        "1441"
+       ],
+       [
+        "52",
+        "Xojimetov Davron Shuxratbekovich",
+        "В №772118",
+        "1442"
+       ],
+       [
+        "53",
+        "Umurzakov Nuriddin Raximberdiyevich",
+        "№289226",
+        "1443"
+       ],
+       [
+        "54",
+        "Sodiqov Ilxomjon Zo’raliyevich",
+        "B №772023",
+        "1444"
+       ],
+       [
+        "55",
+        "Yusupova Feruza Aminovna",
+        "№172394",
+        "1445"
+       ],
+       [
+        "56",
+        "Abdullaev Muxamadali Xalimovich",
+        "№009661",
+        "1446"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Klinik IFA, IXLA va PCR diagnostika: Tahlil natijalarini toʻgʻri baholash”yoʻnalishi 144 soatlik UMO",
+      "level": 3
+     },
+     "ru": {
+      "text": "Klinik IFA, IXLA va PCR diagnostika: Tahlil natijalarini to‘g‘ri baholash”yo‘nalishi 144 soatlik UMO",
+      "level": 3
+     },
+     "en": {
+      "text": "Klinik IFA, IXLA va PCR diagnostika: Tahlil natijalarini to‘g‘ri baholash”yo‘nalishi 144 soatlik UMO",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "57",
+        "Mutalipova Ikbolxon Abduraximovna",
+        "№ 166356",
+        "0001865"
+       ],
+       [
+        "58",
+        "Emirvaliyev Arsen Rafikovich",
+        "B № 635632",
+        "0001866"
+       ],
+       [
+        "59",
+        "Jurayev Sherali Axmadjonovich",
+        "281747",
+        "0001867"
+       ],
+       [
+        "60",
+        "Isroilov Fazliddin Gʻofurjon oʻgʻli",
+        "B № 00280053",
+        "0001868"
+       ],
+       [
+        "61",
+        "Yusupova Mexriniso Obidjonovna",
+        "B № 636200",
+        "0001869"
+       ],
+       [
+        "62",
+        "Gʻofurova Muhayyo Abdukarimovna",
+        "B № 272227",
+        "0001870"
+       ],
+       [
+        "63",
+        "Kasimova Gulnora Tolibjanovna",
+        "№ 170684",
+        "0001871"
+       ],
+       [
+        "64",
+        "Soliyeva Nilufarxon Maxamadaliyevna",
+        "291456",
+        "0001872"
+       ],
+       [
+        "65",
+        "Olimova Azizaxon Akmalxujayevna",
+        "MB-I № 074606",
+        "0001873"
+       ],
+       [
+        "66",
+        "Yuldashev Sobirjon Toshmamat oʻgʻli",
+        "B№956026",
+        "0001895"
+       ],
+       [
+        "67",
+        "Juraboyev Ismoiljon Abduhayo oʻgʻli",
+        "B№956028",
+        "0001896"
+       ],
+       [
+        "68",
+        "Kurbonova Nozimaxon Dilshodovna",
+        "293511",
+        "0001897"
+       ],
+       [
+        "69",
+        "Abduraxmonov Muslimjon Alisher oʻgʻli",
+        "B00320251",
+        "0001898"
+       ],
+       [
+        "70",
+        "Axunov Shuhratjon Sodiqjonovich",
+        "279757",
+        "0001899"
+       ],
+       [
+        "71",
+        "Erkinjonov Abrorjon Inomjon oʻgʻli",
+        "B00581580",
+        "0001900"
+       ],
+       [
+        "72",
+        "Buvakulova Mukambarxon Azimovna",
+        "296454",
+        "0001901"
+       ],
+       [
+        "73",
+        "Xusanova Gulsanam Ravshanbek qizi",
+        "B№00067649",
+        "0001902"
+       ],
+       [
+        "74",
+        "Normatova Munisxon Xusanboyevna",
+        "188981",
+        "0001903"
+       ]
+      ]
+     },
+     "ru": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "57",
+        "Mutalipova Ikbolxon Abduraximovna",
+        "№ 166356",
+        "0001865"
+       ],
+       [
+        "58",
+        "Emirvaliyev Arsen Rafikovich",
+        "B № 635632",
+        "0001866"
+       ],
+       [
+        "59",
+        "Jurayev Sherali Axmadjonovich",
+        "281747",
+        "0001867"
+       ],
+       [
+        "60",
+        "Isroilov Fazliddin G‘ofurjon o‘g‘li",
+        "B № 00280053",
+        "0001868"
+       ],
+       [
+        "61",
+        "Yusupova Mexriniso Obidjonovna",
+        "B № 636200",
+        "0001869"
+       ],
+       [
+        "62",
+        "G‘ofurova Muhayyo Abdukarimovna",
+        "B № 272227",
+        "0001870"
+       ],
+       [
+        "63",
+        "Kasimova Gulnora Tolibjanovna",
+        "№ 170684",
+        "0001871"
+       ],
+       [
+        "64",
+        "Soliyeva Nilufarxon Maxamadaliyevna",
+        "291456",
+        "0001872"
+       ],
+       [
+        "65",
+        "Olimova Azizaxon Akmalxujayevna",
+        "MB-I № 074606",
+        "0001873"
+       ],
+       [
+        "66",
+        "Yuldashev Sobirjon Toshmamat o‘g‘li",
+        "B№956026",
+        "0001895"
+       ],
+       [
+        "67",
+        "Juraboyev Ismoiljon Abduhayo o‘g‘li",
+        "B№956028",
+        "0001896"
+       ],
+       [
+        "68",
+        "Kurbonova Nozimaxon Dilshodovna",
+        "293511",
+        "0001897"
+       ],
+       [
+        "69",
+        "Abduraxmonov Muslimjon Alisher o‘g‘li",
+        "B00320251",
+        "0001898"
+       ],
+       [
+        "70",
+        "Axunov Shuhratjon Sodiqjonovich",
+        "279757",
+        "0001899"
+       ],
+       [
+        "71",
+        "Erkinjonov Abrorjon Inomjon o‘g‘li",
+        "B00581580",
+        "0001900"
+       ],
+       [
+        "72",
+        "Buvakulova Mukambarxon Azimovna",
+        "296454",
+        "0001901"
+       ],
+       [
+        "73",
+        "Xusanova Gulsanam Ravshanbek qizi",
+        "B№00067649",
+        "0001902"
+       ],
+       [
+        "74",
+        "Normatova Munisxon Xusanboyevna",
+        "188981",
+        "0001903"
+       ]
+      ]
+     },
+     "en": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "57",
+        "Mutalipova Ikbolxon Abduraximovna",
+        "№ 166356",
+        "0001865"
+       ],
+       [
+        "58",
+        "Emirvaliyev Arsen Rafikovich",
+        "B № 635632",
+        "0001866"
+       ],
+       [
+        "59",
+        "Jurayev Sherali Axmadjonovich",
+        "281747",
+        "0001867"
+       ],
+       [
+        "60",
+        "Isroilov Fazliddin G‘ofurjon o‘g‘li",
+        "B № 00280053",
+        "0001868"
+       ],
+       [
+        "61",
+        "Yusupova Mexriniso Obidjonovna",
+        "B № 636200",
+        "0001869"
+       ],
+       [
+        "62",
+        "G‘ofurova Muhayyo Abdukarimovna",
+        "B № 272227",
+        "0001870"
+       ],
+       [
+        "63",
+        "Kasimova Gulnora Tolibjanovna",
+        "№ 170684",
+        "0001871"
+       ],
+       [
+        "64",
+        "Soliyeva Nilufarxon Maxamadaliyevna",
+        "291456",
+        "0001872"
+       ],
+       [
+        "65",
+        "Olimova Azizaxon Akmalxujayevna",
+        "MB-I № 074606",
+        "0001873"
+       ],
+       [
+        "66",
+        "Yuldashev Sobirjon Toshmamat o‘g‘li",
+        "B№956026",
+        "0001895"
+       ],
+       [
+        "67",
+        "Juraboyev Ismoiljon Abduhayo o‘g‘li",
+        "B№956028",
+        "0001896"
+       ],
+       [
+        "68",
+        "Kurbonova Nozimaxon Dilshodovna",
+        "293511",
+        "0001897"
+       ],
+       [
+        "69",
+        "Abduraxmonov Muslimjon Alisher o‘g‘li",
+        "B00320251",
+        "0001898"
+       ],
+       [
+        "70",
+        "Axunov Shuhratjon Sodiqjonovich",
+        "279757",
+        "0001899"
+       ],
+       [
+        "71",
+        "Erkinjonov Abrorjon Inomjon o‘g‘li",
+        "B00581580",
+        "0001900"
+       ],
+       [
+        "72",
+        "Buvakulova Mukambarxon Azimovna",
+        "296454",
+        "0001901"
+       ],
+       [
+        "73",
+        "Xusanova Gulsanam Ravshanbek qizi",
+        "B№00067649",
+        "0001902"
+       ],
+       [
+        "74",
+        "Normatova Munisxon Xusanboyevna",
+        "188981",
+        "0001903"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "(144) soatlik UMO \"Otorinolaringologiya\" yoʻnalishi 03.04.2026 dan 30.04.2026 gacha",
+      "level": 3
+     },
+     "ru": {
+      "text": "(144) soatlik UMO \"Otorinolaringologiya\" yo‘nalishi 03.04.2026 dan 30.04.2026 gacha",
+      "level": 3
+     },
+     "en": {
+      "text": "(144) soatlik UMO \"Otorinolaringologiya\" yo‘nalishi 03.04.2026 dan 30.04.2026 gacha",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "75",
+        "Boʻriboyev Islomjon Ilyosjon oʻgʻli",
+        "B00049920",
+        "0001904"
+       ],
+       [
+        "76",
+        "Kenjayev Elyor Abdullajonovich",
+        "294955",
+        "0001905"
+       ],
+       [
+        "77",
+        "Kenjaboyev Alisher Abdusamadovich",
+        "№ 263822",
+        "0001906"
+       ],
+       [
+        "78",
+        "Rahmonov Muhammadamin Mamasoliyevich",
+        "298042",
+        "0001907"
+       ],
+       [
+        "79",
+        "Joʻrayev Farhodjon Rahimovich",
+        "B933376",
+        "0001908"
+       ],
+       [
+        "80",
+        "Xoshimov Gʻulomjon Gʻofurjon oʻgʻli",
+        "B № 00626775",
+        "0001909"
+       ],
+       [
+        "81",
+        "Asadullayev Omonboy Ziyodullo oʻgʻli",
+        "B № 899868",
+        "0001910"
+       ],
+       [
+        "82",
+        "Xakimov Davronjon Yakubovich",
+        "302487",
+        "0001911"
+       ],
+       [
+        "83",
+        "Egamshukurov Xasanboy Oktamovich",
+        "B № 45878",
+        "0001912"
+       ],
+       [
+        "84",
+        "Suyarqulov Boburmirzo Quchqarboy oʻgʻli",
+        "B № 1073850",
+        "0001913"
+       ],
+       [
+        "85",
+        "Kasimova Gulchexra Sabirjanovna",
+        "289066",
+        "0001914"
+       ],
+       [
+        "86",
+        "Toshqulova Gulshunosxon Xayitovna",
+        "B № 737443",
+        "0001915"
+       ]
+      ]
+     },
+     "ru": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "75",
+        "Bo‘riboyev Islomjon Ilyosjon o‘g‘li",
+        "B00049920",
+        "0001904"
+       ],
+       [
+        "76",
+        "Kenjayev Elyor Abdullajonovich",
+        "294955",
+        "0001905"
+       ],
+       [
+        "77",
+        "Kenjaboyev Alisher Abdusamadovich",
+        "№ 263822",
+        "0001906"
+       ],
+       [
+        "78",
+        "Rahmonov Muhammadamin Mamasoliyevich",
+        "298042",
+        "0001907"
+       ],
+       [
+        "79",
+        "Jo‘rayev Farhodjon Rahimovich",
+        "B933376",
+        "0001908"
+       ],
+       [
+        "80",
+        "Xoshimov G‘ulomjon G‘ofurjon o‘g‘li",
+        "B № 00626775",
+        "0001909"
+       ],
+       [
+        "81",
+        "Asadullayev Omonboy Ziyodullo o‘g‘li",
+        "B № 899868",
+        "0001910"
+       ],
+       [
+        "82",
+        "Xakimov Davronjon Yakubovich",
+        "302487",
+        "0001911"
+       ],
+       [
+        "83",
+        "Egamshukurov Xasanboy Oktamovich",
+        "B № 45878",
+        "0001912"
+       ],
+       [
+        "84",
+        "Suyarqulov Boburmirzo Quchqarboy o‘g‘li",
+        "B № 1073850",
+        "0001913"
+       ],
+       [
+        "85",
+        "Kasimova Gulchexra Sabirjanovna",
+        "289066",
+        "0001914"
+       ],
+       [
+        "86",
+        "Toshqulova Gulshunosxon Xayitovna",
+        "B № 737443",
+        "0001915"
+       ]
+      ]
+     },
+     "en": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "75",
+        "Bo‘riboyev Islomjon Ilyosjon o‘g‘li",
+        "B00049920",
+        "0001904"
+       ],
+       [
+        "76",
+        "Kenjayev Elyor Abdullajonovich",
+        "294955",
+        "0001905"
+       ],
+       [
+        "77",
+        "Kenjaboyev Alisher Abdusamadovich",
+        "№ 263822",
+        "0001906"
+       ],
+       [
+        "78",
+        "Rahmonov Muhammadamin Mamasoliyevich",
+        "298042",
+        "0001907"
+       ],
+       [
+        "79",
+        "Jo‘rayev Farhodjon Rahimovich",
+        "B933376",
+        "0001908"
+       ],
+       [
+        "80",
+        "Xoshimov G‘ulomjon G‘ofurjon o‘g‘li",
+        "B № 00626775",
+        "0001909"
+       ],
+       [
+        "81",
+        "Asadullayev Omonboy Ziyodullo o‘g‘li",
+        "B № 899868",
+        "0001910"
+       ],
+       [
+        "82",
+        "Xakimov Davronjon Yakubovich",
+        "302487",
+        "0001911"
+       ],
+       [
+        "83",
+        "Egamshukurov Xasanboy Oktamovich",
+        "B № 45878",
+        "0001912"
+       ],
+       [
+        "84",
+        "Suyarqulov Boburmirzo Quchqarboy o‘g‘li",
+        "B № 1073850",
+        "0001913"
+       ],
+       [
+        "85",
+        "Kasimova Gulchexra Sabirjanovna",
+        "289066",
+        "0001914"
+       ],
+       [
+        "86",
+        "Toshqulova Gulshunosxon Xayitovna",
+        "B № 737443",
+        "0001915"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "(144) soatlik UMO \"Umumiy endokrinologiya\" yoʻnalishi 06.04.2026 dan 02.05.2026 gacha",
+      "level": 3
+     },
+     "ru": {
+      "text": "(144) soatlik UMO \"Umumiy endokrinologiya\" yo‘nalishi 06.04.2026 dan 02.05.2026 gacha",
+      "level": 3
+     },
+     "en": {
+      "text": "(144) soatlik UMO \"Umumiy endokrinologiya\" yo‘nalishi 06.04.2026 dan 02.05.2026 gacha",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "87",
+        "Kudratov Shokirxuja Anvarovich",
+        "№ 014525",
+        "0001916"
+       ],
+       [
+        "88",
+        "Toʻxtasinov Nodirbekxoji Toʻxtasinjon oʻgʻli",
+        "282324",
+        "0001917"
+       ],
+       [
+        "89",
+        "Murodullayeva Mutabar Sharipovna",
+        "ФВ № 936389",
+        "0001918"
+       ],
+       [
+        "90",
+        "Akramov Saydolim Muxammadaliyevich",
+        "B № 772091",
+        "0001919"
+       ],
+       [
+        "91",
+        "Ernazarov Muslimbek Xoshimjon oʻgʻli",
+        "B № 925919",
+        "0001920"
+       ],
+       [
+        "92",
+        "Abdullayeva Dilbarxon",
+        "Г-II № 326465",
+        "0001921"
+       ],
+       [
+        "93",
+        "Mamajonov Muzaffar Sidiqjonovich",
+        "B № 772401",
+        "0001922"
+       ],
+       [
+        "94",
+        "Maxsudov Ilxomjon Mansurovich",
+        "B № 803494",
+        "0001923"
+       ],
+       [
+        "95",
+        "Yusupov Abdumalik Raxmonberdiyevich",
+        "№ 092045",
+        "0001924"
+       ]
+      ]
+     },
+     "ru": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "87",
+        "Kudratov Shokirxuja Anvarovich",
+        "№ 014525",
+        "0001916"
+       ],
+       [
+        "88",
+        "To‘xtasinov Nodirbekxoji To‘xtasinjon o‘g‘li",
+        "282324",
+        "0001917"
+       ],
+       [
+        "89",
+        "Murodullayeva Mutabar Sharipovna",
+        "ФВ № 936389",
+        "0001918"
+       ],
+       [
+        "90",
+        "Akramov Saydolim Muxammadaliyevich",
+        "B № 772091",
+        "0001919"
+       ],
+       [
+        "91",
+        "Ernazarov Muslimbek Xoshimjon o‘g‘li",
+        "B № 925919",
+        "0001920"
+       ],
+       [
+        "92",
+        "Abdullayeva Dilbarxon",
+        "Г-II № 326465",
+        "0001921"
+       ],
+       [
+        "93",
+        "Mamajonov Muzaffar Sidiqjonovich",
+        "B № 772401",
+        "0001922"
+       ],
+       [
+        "94",
+        "Maxsudov Ilxomjon Mansurovich",
+        "B № 803494",
+        "0001923"
+       ],
+       [
+        "95",
+        "Yusupov Abdumalik Raxmonberdiyevich",
+        "№ 092045",
+        "0001924"
+       ]
+      ]
+     },
+     "en": {
+      "headers": [
+       "№",
+       "F.I.SH",
+       "№diplom",
+       "Sertifikat raqami"
+      ],
+      "rows": [
+       [
+        "87",
+        "Kudratov Shokirxuja Anvarovich",
+        "№ 014525",
+        "0001916"
+       ],
+       [
+        "88",
+        "To‘xtasinov Nodirbekxoji To‘xtasinjon o‘g‘li",
+        "282324",
+        "0001917"
+       ],
+       [
+        "89",
+        "Murodullayeva Mutabar Sharipovna",
+        "ФВ № 936389",
+        "0001918"
+       ],
+       [
+        "90",
+        "Akramov Saydolim Muxammadaliyevich",
+        "B № 772091",
+        "0001919"
+       ],
+       [
+        "91",
+        "Ernazarov Muslimbek Xoshimjon o‘g‘li",
+        "B № 925919",
+        "0001920"
+       ],
+       [
+        "92",
+        "Abdullayeva Dilbarxon",
+        "Г-II № 326465",
+        "0001921"
+       ],
+       [
+        "93",
+        "Mamajonov Muzaffar Sidiqjonovich",
+        "B № 772401",
+        "0001922"
+       ],
+       [
+        "94",
+        "Maxsudov Ilxomjon Mansurovich",
+        "B № 803494",
+        "0001923"
+       ],
+       [
+        "95",
+        "Yusupov Abdumalik Raxmonberdiyevich",
+        "№ 092045",
+        "0001924"
+       ]
+      ]
+     }
+    }
+   }
+  ]
+ }
+]
