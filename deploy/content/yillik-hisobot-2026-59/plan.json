@@ -1,0 +1,749 @@
+[
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-tadbirlari",
+  "order": 1,
+  "fp": {
+   "uz": "d210c3ed495fdac0a9f0994928ddd40b6fa4b89742b062974cec212a84239994",
+   "ru": "de8d7e1fa5d8c528ac6d379d26b8ae8d658eaca9272349ce09e19149cde47719",
+   "en": "a2f89c8a703f726e08cd48dcd6760a8c3d1e64453bd4972364c3cc817259f118"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/photo_2023-06-30_17-18-01.jpg",
+      "alt": "«Biz korrupsiyaga qarshimiz» targʻibot banneri"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/photo_2023-06-30_17-18-01.jpg",
+      "alt": "Агитационный баннер «Мы против коррупции»"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/photo_2023-06-30_17-18-01.jpg",
+      "alt": "“We are against corruption” campaign banner"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/KTFL.jpg",
+      "alt": "«Korrupsiya — taraqqiyot kushandasi» tadbiri"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/KTFL.jpg",
+      "alt": "Мероприятие «Коррупция — враг прогресса»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/KTFL.jpg",
+      "alt": "The event “Corruption is the enemy of progress”"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Tadbirlardan fotolavhalar.jpg",
+      "alt": "Tadbirlardan fotolavhalar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Tadbirlardan fotolavhalar.jpg",
+      "alt": "Фотографии с мероприятий"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Tadbirlardan fotolavhalar.jpg",
+      "alt": "Photographs from the events"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/korupsiya.jpg",
+      "alt": "Talabalar yakuniy imtihonlarni topshirmoqda"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/korupsiya.jpg",
+      "alt": "Студенты сдают итоговые экзамены"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/Korrupsiya tadbirlari rasmalari/korupsiya.jpg",
+      "alt": "Students are taking final examinations"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Talabalarimiz yakuniy imtihonlarni topshirmoqda",
+      "level": 2
+     },
+     "ru": {
+      "text": "Наши студенты сдают итоговые экзамены",
+      "level": 2
+     },
+     "en": {
+      "text": "Our Students Are Taking Final Examinations",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institutimizning bakalavriat bosqichi talabalari uchun yakuniy imtihonlar boshlandi. Unda har bir talaba ogʻizaki, yozma va test koʻrinishida imtihon topshiradi. Yakuniy imtihonlar odilona va shaffof oʻtishi, korrupsion holatlar boʻlmasligini taʻminlash va uni nazorat qilish maqsadida institutimizning Korrupsiyaga qarshi kurash “Komplaens nazorat” tizimini boshqarish boʻlimi bosh mutaxassisi S. Isaqov ushbu imtihonlarda ishtirok etmoqda. Yakuniy imtihonlar joriy yilning 17-fevraliga qadar bosqichma-bosqich davom etadi."
+     },
+     "ru": {
+      "text": "Для студентов бакалавриата нашего института начались итоговые экзамены. Каждый студент сдаёт экзамены в устной, письменной и тестовой формах. В целях обеспечения справедливого и прозрачного проведения итоговых экзаменов, предотвращения коррупционных проявлений и осуществления контроля в экзаменах принимает участие главный специалист отдела по управлению системой антикоррупционного «Комплаенс-контроля» нашего института С. Исааков. Итоговые экзамены будут проводиться поэтапно до 17 февраля текущего года."
+     },
+     "en": {
+      "text": "Final examinations have begun for undergraduate students of our institute. Each student takes the exams in oral, written, and test formats. In order to ensure that the final examinations are conducted fairly and transparently, to prevent corruption-related situations, and to provide proper oversight, S. Isaqov, the chief specialist of the Anti-Corruption “Compliance Control” System Management Department of our institute, is participating in the examination process. The final examinations will be held in stages until February 17 of the current year."
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fotogallery/stop korrupsiya.jpg",
+      "alt": "«Stop korrupsiya» chellenji"
+     },
+     "ru": {
+      "media": "migrated/img/fotogallery/stop korrupsiya.jpg",
+      "alt": "Челлендж «Стоп коррупция»"
+     },
+     "en": {
+      "media": "migrated/img/fotogallery/stop korrupsiya.jpg",
+      "alt": "The “Stop corruption” challenge"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutida “Stop korrupsiya” chellenji davom etmoqda."
+     },
+     "ru": {
+      "text": "В Ферганском медицинском институте общественного здоровья продолжается борьба с коррупцией."
+     },
+     "en": {
+      "text": "The stop corruption challenge continues at the Fergana Medical Institute of Public Health."
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the picture blocks are in the order of the old page (four pictures, the news about the final examinations, the fifth picture with its sentence); picture descriptions (alt texts) are ours; the uz title 'stop korrupsiya chellenji' got its quotation marks"
+  ]
+ },
+ {
+  "slug": "tavsiyaviy-qollanma",
+  "order": 1,
+  "fp": {
+   "uz": "3e1ca8ccb2b1c412a6ee56f75b47f84fd5a7fb67393c382e3d92e564d00c1ba8",
+   "ru": "7519d55aa787d9c3d533b9398a9428060b528186df3b13f1784b174d3eed800f",
+   "en": "fc03bfe86097f6a2fdb83d00141932775f421d8dc1b8d399ac7044005f5c080f"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur tavsiyaviy qoʻllanma Oʻzbekiston Respublikasining 2017-yil 3-yanvardagi “Korrupsiyaga qarshi kurashish toʻgʻrisida”gi Qonuni hamda Oʻzbekiston Respublikasi Prezidentining 2019-yil 27-maydagi PF-5729-son Farmoni bilan tasdiqlangan 2019–2020-yillarda korrupsiyaga qarshi kurashish Davlat dasturi asosida davlat organlari va tashkilotlarning masʻul xodimlari tomonidan ishga qabul qilinganidan soʻng hamda muayyan vaqt oʻtganidan soʻng, kasbiy odob-axloq qoidalariga rioya etish, manfaatlar toʻqnashuvini bartaraf qilish va korrupsiyaga qarshi kurashishning boshqa yoʻnalishlari boʻyicha bilim va koʻnikmalarini mustahkamlashga qaratilgan."
+     },
+     "ru": {
+      "text": "Настоящее рекомендательное пособие разработано на основе Закона Республики Узбекистан «О противодействии коррупции» от 3 января 2017 года и Государственной программы по противодействию коррупции на 2019–2020 годы, утверждённой Указом Президента Республики Узбекистан от 27 мая 2019 года № УП-5729, и направлено на закрепление ответственными работниками государственных органов и организаций — после приёма на работу, а также по истечении определённого времени — знаний и навыков по соблюдению правил профессиональной этики, устранению конфликта интересов и другим направлениям противодействия коррупции."
+     },
+     "en": {
+      "text": "This recommendation manual is based on the Law of the Republic of Uzbekistan “On Combating Corruption” of January 3, 2017 and the State Anti-Corruption Program for 2019–2020 approved by Decree of the President of the Republic of Uzbekistan No. PD-5729 of May 27, 2019. It is intended to strengthen the knowledge and skills of responsible employees of state bodies and organizations — after they are hired and after a certain period of time — in compliance with the rules of professional ethics, elimination of conflicts of interest and other areas of combating corruption."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi Prezidentining 2019-yil 3-oktabrdagi “Oʻzbekiston Respublikasida kadrlar siyosati va davlat fuqarolik xizmati tizimini tubdan takomillashtirish chora-tadbirlari toʻgʻrisida”gi PF-5843-son Farmoni bilan Oʻzbekiston Respublikasi Prezidenti huzuridagi Davlat xizmatini rivojlantirish agentligi tuzilgan."
+     },
+     "ru": {
+      "text": "Указом Президента Республики Узбекистан от 3 октября 2019 года № УП-5843 «О мерах по коренному совершенствованию кадровой политики и системы государственной гражданской службы в Республике Узбекистан» образовано Агентство по развитию государственной службы при Президенте Республики Узбекистан."
+     },
+     "en": {
+      "text": "By Decree of the President of the Republic of Uzbekistan No. PD-5843 of October 3, 2019 “On measures to radically improve the personnel policy and the system of state civil service in the Republic of Uzbekistan”, the Agency for the Development of Public Service under the President of the Republic of Uzbekistan was established."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Agentligining asosiy vazifalaridan biri sifatida davlat fuqarolik xizmatchilarida yuksak kasbiy axloq-odobni, korrupsiyaga qarshi turish madaniyatini va unga toqatsiz munosabatni shakllantirish belgilangan."
+     },
+     "ru": {
+      "text": "Одной из основных задач Агентства определено формирование у государственных гражданских служащих высокой профессиональной этики, культуры противодействия коррупции и нетерпимого отношения к ней."
+     },
+     "en": {
+      "text": "One of the main tasks of the Agency is the formation of high professional ethics, a culture of combating corruption and an intolerant attitude towards it among state civil servants."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Shu bilan birga 2019 yil 31 iyulda Korrupsiyaga qarshi kurashish boʻyicha respublika idoralararo komissiyasining raisi tomonidan tasdiqlangan “Korrupsiyaga qarshi kurashish maqsadida aholining huquqiy ongi va huquqiy madaniyatini yuksaltirish, jamiyatda korrupsiyaga nisbatan murosasiz munosabatni shakllantirish boʻyicha chora-tadbirlar rejasi”ning 7-bandiga asosan Korrupsiyaga qarshi kurashish masalalariga doir tushuntirish ishlariga doir tavsiyaviy qoʻllanma ishlab chiqish nazarda tutilgan."
+     },
+     "ru": {
+      "text": "Вместе с тем, согласно пункту 7 «Плана мер по повышению правового сознания и правовой культуры населения в целях противодействия коррупции, формированию в обществе нетерпимого отношения к коррупции», утверждённого председателем Республиканской межведомственной комиссии по противодействию коррупции 31 июля 2019 года, предусмотрена разработка рекомендательного пособия по вопросам разъяснительной работы в сфере противодействия коррупции."
+     },
+     "en": {
+      "text": "In addition, according to paragraph 7 of the “Plan of measures to increase the legal awareness and legal culture of the population in order to combat corruption and to form an intolerant attitude towards corruption in society”, approved by the chairman of the Republican Interdepartmental Commission on Combating Corruption on July 31, 2019, the development of a recommendation manual on explanatory work in the field of combating corruption is envisaged."
+     }
+    }
+   }
+  ],
+  "notes": [
+   "ru and en: the first and the last paragraph were broken machine translations (a sentence without a main verb, a sentence that ended with 'the Republic of Uzbekistan'): written again after the Uzbek text; 'PF-5729-son' became '№ УП-5729' / 'No. PD-5729'; uz dates written as 2019-yil 27-maydagi"
+  ]
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-davlat-dasturlari",
+  "order": 1,
+  "fp": {
+   "uz": "ce19a38454fd4783c04d59d841f5919626b3cadaa6d3c5a9605b81ee7cb1a9d6",
+   "ru": "7c64326b23783c334b215d0ec426197fba3a838621faa560519ea3933c755236",
+   "en": "5170027ce4374a7e1da98604f293486628f1001ec78e632aeb7c31d8a52d1530"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Korrupsiyaga qarshi kurash – umummilliy vazifa, har bir vatanparvar yurtdoshimizning vijdon ishidir. — Sh. Mirziyoyev",
+      "quote": true
+     },
+     "ru": {
+      "text": "Борьба с коррупцией — это общенациональная задача, добросовестный труд каждого соотечественника. — Ш. Мирзиёев",
+      "quote": true
+     },
+     "en": {
+      "text": "The fight against corruption is a nationwide task, the conscientious work of every compatriot. — Sh. Mirziyoyev",
+      "quote": true
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Shavkat Mirziyoyev: «Korrupsiyaga qarshi kurash — umummilliy vazifa»"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Шавкат Мирзиёев: «Борьба с коррупцией — общенациональная задача»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Shavkat Mirziyoyev: “The fight against corruption is a nationwide task”"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Kompleans nazorat.jpg",
+      "alt": "«Stop korrupsiya»: korrupsiyaga qarshi kurashish «Komplayens-nazorat» tizimini boshqarish"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Kompleans nazorat.jpg",
+      "alt": "«Стоп коррупция»: управление системой «Комплаенс-контроль» по борьбе с коррупцией"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Kompleans nazorat.jpg",
+      "alt": "“Stop corruption”: management of the “Compliance Control” anti-corruption system"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Topshiriqlar.pdf",
+      "caption": "Oʻzbekiston Respublikasi Prezidenti Sh. M. Mirziyoyev tomonidan Korrupsiyaga qarshi kurashish boʻyicha milliy kengash yigʻilishida Oliy taʼlim, fan va innovatsiyalar vazirligiga belgilab berilgan topshiriqlar"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Topshiriqlar.pdf",
+      "caption": "Поручения, данные Президентом Республики Узбекистан Ш. М. Мирзиёевым Министерству высшего образования, науки и инноваций на заседании Национального совета по противодействию коррупции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Topshiriqlar.pdf",
+      "caption": "Tasks assigned to the Ministry of Higher Education, Science and Innovation by President Sh. M. Mirziyoyev at the meeting of the National Council on Combating Corruption"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Korrupsiya dastur.jpg",
+      "alt": "Korrupsiyaga qarshi kurashish davlat dasturi: infografika"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Korrupsiya dastur.jpg",
+      "alt": "Государственная программа по противодействию коррупции: инфографика"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Korrupsiya dastur.jpg",
+      "alt": "State anti-corruption program: infographic"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the quotation and the line 'Sh.Mirziyoyev.' became one quotation paragraph; the PDF 'Topshiriqlar' (two links in uz, none in ru/en) is one document card (the same PDF in all languages, captions ours); picture descriptions are ours"
+  ]
+ },
+ {
+  "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
+  "order": 1,
+  "fp": {
+   "uz": "1629c88c6807db5e3084509581acb08f841579ea63e2d7b1d3989521c5102f77",
+   "ru": "a4cf3d5b7cdddca7f415e48809f303e90f15a1a07250ea62c79f86351d295409",
+   "en": "2bef038c19a9d5b10cdb1b85c6528ad1a2baf3c60ef7e99f441bc9e0fb08057e"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/SSV buyruq.pdf",
+      "caption": "Sogʻliqni saqlash vazirligining korrupsiyaga qarshi kurashish sohasiga oid ichki meʻyoriy hujjatlarini tasdiqlash toʻgʻrisida"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/SSV buyruq.pdf",
+      "caption": "Об утверждении внутренних нормативных актов Министерства здравоохранения в сфере противодействия коррупции"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/SSV buyruq.pdf",
+      "caption": "On approval of the internal regulations of the Ministry of Health in the field of combating corruption"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Shavkat Mirziyoyev: «Korrupsiyaga qarshi kurash — umummilliy vazifa»"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Шавкат Мирзиёев: «Борьба с коррупцией — общенациональная задача»"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/Sh.Mirziyoyev.jpg",
+      "alt": "Shavkat Mirziyoyev: “The fight against corruption is a nationwide task”"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Ilovalar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Приложения",
+      "level": 2
+     },
+     "en": {
+      "text": "Annexes",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/1-илова.pdf",
+      "caption": "1-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/1-илова.pdf",
+      "caption": "Приложение 1"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/1-илова.pdf",
+      "caption": "Annex 1"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/2-илова.pdf",
+      "caption": "2-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/2-илова.pdf",
+      "caption": "Приложение 2"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/2-илова.pdf",
+      "caption": "Annex 2"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/3-илова.pdf",
+      "caption": "3-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/3-илова.pdf",
+      "caption": "Приложение 3"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/3-илова.pdf",
+      "caption": "Annex 3"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/4-илова.pdf",
+      "caption": "4-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/4-илова.pdf",
+      "caption": "Приложение 4"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/4-илова.pdf",
+      "caption": "Annex 4"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/5-илова.pdf",
+      "caption": "5-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/5-илова.pdf",
+      "caption": "Приложение 5"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/5-илова.pdf",
+      "caption": "Annex 5"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/6-илова.pdf",
+      "caption": "6-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/6-илова.pdf",
+      "caption": "Приложение 6"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/6-илова.pdf",
+      "caption": "Annex 6"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/7-илова.pdf",
+      "caption": "7-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/7-илова.pdf",
+      "caption": "Приложение 7"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/7-илова.pdf",
+      "caption": "Annex 7"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8-илова.pdf",
+      "caption": "8-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8-илова.pdf",
+      "caption": "Приложение 8"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8-илова.pdf",
+      "caption": "Annex 8"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8.1-илова.pdf",
+      "caption": "8.1-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8.1-илова.pdf",
+      "caption": "Приложение 8.1"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/8.1-илова.pdf",
+      "caption": "Annex 8.1"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/9-илова.pdf",
+      "caption": "9-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/9-илова.pdf",
+      "caption": "Приложение 9"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/9-илова.pdf",
+      "caption": "Annex 9"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/10-илова.pdf",
+      "caption": "10-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/10-илова.pdf",
+      "caption": "Приложение 10"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/10-илова.pdf",
+      "caption": "Annex 10"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11-илова.pdf",
+      "caption": "11-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11-илова.pdf",
+      "caption": "Приложение 11"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11-илова.pdf",
+      "caption": "Annex 11"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.1-илова.pdf",
+      "caption": "11.1-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.1-илова.pdf",
+      "caption": "Приложение 11.1"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.1-илова.pdf",
+      "caption": "Annex 11.1"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.2-илова.pdf",
+      "caption": "11.2-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.2-илова.pdf",
+      "caption": "Приложение 11.2"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.2-илова.pdf",
+      "caption": "Annex 11.2"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.3-илова.pdf",
+      "caption": "11.3-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.3-илова.pdf",
+      "caption": "Приложение 11.3"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.3-илова.pdf",
+      "caption": "Annex 11.3"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.4-илова.pdf",
+      "caption": "11.4-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.4-илова.pdf",
+      "caption": "Приложение 11.4"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/11.4-илова.pdf",
+      "caption": "Annex 11.4"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/12-илова.pdf",
+      "caption": "12-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/12-илова.pdf",
+      "caption": "Приложение 12"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/12-илова.pdf",
+      "caption": "Annex 12"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/13-илова.pdf",
+      "caption": "13-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/13-илова.pdf",
+      "caption": "Приложение 13"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/13-илова.pdf",
+      "caption": "Annex 13"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/14-илова.pdf",
+      "caption": "14-ilova"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/14-илова.pdf",
+      "caption": "Приложение 14"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Kompleans/SSV korrupsiya/14-илова.pdf",
+      "caption": "Annex 14"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the order and its 19 annexes (1, 2, ... 8.1, ... 11.4, ... 14) are 20 document cards; the number of each annex is read from the file it opens (the old links were cut into pieces); captions 'N-ilova' / 'Приложение N' / 'Annex N' are ours (the titles of the annexes are not on the page)"
+  ]
+ },
+ {
+  "slug": "uslubiy-qollanma-va-tavsiyalar",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 568,
+    "caption": {
+     "uz": "Uslubiy qoʻllanmalar va tavsiyalar",
+     "ru": "Методические пособия и рекомендации",
+     "en": "Methodological manuals and recommendations"
+    },
+    "fp": {
+     "uz": "0adf903aceee8574b41f621e9aca2ddb53384c2b5960d3e6c8545d91c448b4ef",
+     "ru": "20ef0e5afe057740c1cbccd2ec4a0df887748e70979691703ae0a697538b3aad",
+     "en": "20ef0e5afe057740c1cbccd2ec4a0df887748e70979691703ae0a697538b3aad"
+    }
+   }
+  ],
+  "recaption": true,
+  "notes": [
+   "only the caption of the PDF card is set (the old caption was the file name, with wrong apostrophes in ru and en)"
+  ]
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-ichki-nazorat-komplayens-tizimini-joriy-etish-boyicha-qollanma",
+  "existing_documents": [
+   {
+    "order": 1,
+    "document_id": 567,
+    "caption": {
+     "uz": "Korrupsiyaga qarshi ichki nazorat (Komplayens) tizimini joriy etish boʻyicha qoʻllanma",
+     "ru": "Руководство по внедрению системы антикоррупционного внутреннего контроля (комплаенс)",
+     "en": "Guide to implementing the anti-corruption internal control (compliance) system"
+    },
+    "fp": {
+     "uz": "576b71bec080dd9ae6764fbb8889416fffe242367de44255d83209925817e066",
+     "ru": "f1b4389fce68969f890aaadecad1e07be7df96644557a1a324220b29c6e145b0",
+     "en": "f1b4389fce68969f890aaadecad1e07be7df96644557a1a324220b29c6e145b0"
+    }
+   }
+  ],
+  "recaption": true,
+  "notes": [
+   "only the caption of the PDF card is set (the old caption was the file name, with wrong apostrophes in ru and en)"
+  ]
+ }
+]
