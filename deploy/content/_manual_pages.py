@@ -43,6 +43,15 @@ def build(slugs, translations):
             continue
         for b in merged:
             b.pop("_row", None)
+        seen_pictures, kept = set(), []
+        for b in merged:  # one photo twice in a row (the Russian and the English page each had it) is shown once
+            if b.get("block_type") == "image":
+                picture = tuple(b["data"][lang].get("media") for lang in LANGS)
+                if picture in seen_pictures:
+                    continue
+                seen_pictures.add(picture)
+            kept.append(b)
+        merged = kept
         cards = None
         if documents:
             if len(documents) == 1 and slug in labels:

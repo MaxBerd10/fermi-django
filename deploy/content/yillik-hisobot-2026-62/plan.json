@@ -802,23 +802,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-1.jpg",
       "alt": ""
      },
@@ -828,23 +811,6 @@
      },
      "en": {
       "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-1.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/Tibbiyot texnikumi.jpg",
       "alt": ""
      }
     }
@@ -863,6 +829,20 @@
      "en": {
       "media": "migrated/img/yangilikar/Texnikumlar/1 Margilon TT/tex-11.jpg",
       "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "raw_html",
+    "data": {
+     "uz": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "ru": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "en": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" width=\"640\" title=\"YouTube\"></iframe></p>"
      }
     }
    }
@@ -884,7 +864,7 @@
    }
   ],
   "notes": [
-   "16 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "15 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  },
  {
@@ -1124,23 +1104,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/4.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
       "alt": ""
      },
@@ -1150,23 +1113,6 @@
      },
      "en": {
       "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/3.jpg",
       "alt": ""
      }
     }
@@ -1201,23 +1147,6 @@
      },
      "en": {
       "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/5.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/2-Margilon TT/1.jpg",
       "alt": ""
      }
     }
@@ -1241,7 +1170,7 @@
    }
   ],
   "notes": [
-   "20 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  },
  {
@@ -1541,40 +1470,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/5.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/1.jpg",
       "alt": ""
      },
@@ -1618,23 +1513,6 @@
      },
      "en": {
       "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/4.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Qo‘qon TT/2.jpg",
       "alt": ""
      }
     }
@@ -1751,7 +1629,7 @@
    }
   ],
   "notes": [
-   "29 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "26 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  },
  {
@@ -1960,23 +1838,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/3.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/yangilikar/Texnikumlar/Farg‘ona TT/1.jpg",
       "alt": ""
      },
@@ -2060,7 +1921,7 @@
    }
   ],
   "notes": [
-   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "16 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  },
  {
@@ -2337,23 +2198,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/Tibbiyot texnikumi mahorat darslari.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/yangilikar/Texnikumlar/Besharik TT/photo_2025-10-09_13-26-18.jpg",
       "alt": ""
      },
@@ -2369,7 +2213,7 @@
    }
   ],
   "notes": [
-   "17 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "16 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  },
  {
@@ -3439,23 +3283,6 @@
     "block_type": "image",
     "data": {
      "uz": {
-      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
-      "alt": ""
-     },
-     "ru": {
-      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
-      "alt": ""
-     },
-     "en": {
-      "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology firma.jpg",
-      "alt": ""
-     }
-    }
-   },
-   {
-    "block_type": "image",
-    "data": {
-     "uz": {
       "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/dermatology...jpg",
       "alt": ""
      },
@@ -3483,6 +3310,20 @@
      "en": {
       "media": "migrated/img/fotogallery/DERMATOLOGY CONFERENCE/Dermayology.jpg",
       "alt": ""
+     }
+    }
+   },
+   {
+    "block_type": "raw_html",
+    "data": {
+     "uz": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "ru": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "en": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/Mg6MBqg4f5o\" width=\"640\" title=\"YouTube\"></iframe></p>"
      }
     }
    },
@@ -3632,6 +3473,20 @@
       "text": "Click to download >>>>>> [Conference programme (in Uzbek, Cyrillic script)](https://fermi.uz/media/migrated/img/yangilikar/Kongress-2022/%D0%9F%D0%A0%D0%9E%D0%93%D0%A0%D0%90%D0%9C%D0%9C%D0%901.pdf)"
      }
     }
+   },
+   {
+    "block_type": "raw_html",
+    "data": {
+     "uz": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/rGQRdpp6YfI\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "ru": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/rGQRdpp6YfI\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     },
+     "en": {
+      "html": "<p><iframe frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/rGQRdpp6YfI\" width=\"640\" title=\"YouTube\"></iframe></p>"
+     }
+    }
    }
   ],
   "existing_documents": [
@@ -3651,7 +3506,7 @@
    }
   ],
   "notes": [
-   "13 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
+   "14 blocks aligned by hand (the three languages differ in structure); 0 cells translated by us"
   ]
  }
 ]
