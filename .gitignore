@@ -8,3 +8,8 @@ db.sqlite3
 /staticfiles/
 .pytest_cache/
 .DS_Store
+
+# local leftovers
+dump.rdb
+_tmp_*/
+!_tmp_news_upload5/
