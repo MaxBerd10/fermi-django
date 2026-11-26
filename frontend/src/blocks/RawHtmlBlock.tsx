@@ -2,18 +2,15 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import RichContent from "@/components/shared/RichContent";
 import { convertFileLinkParagraphs } from "@/lib/fileLinkCards";
-import { rebuildsLayoutFromText } from "@/lib/enhanceCmsHtml";
 import { normalizeUzbekApostrophes } from "@/lib/normalizeCmsText";
 import { PdfViewer } from "./RoadmapPdfFrame";
 
 /**
- * A raw_html block, with any "file on its own line" link turned into a document card first -- except on the
- * pages whose layout is rebuilt from the text (journal archives, abstracts, council decisions): those read the
- * original markup, and cards would put "PDF" / "Brauzerda ochish" into their titles.
+ * A raw_html block (what is left of it: embedded videos and maps), with any "file on its own line" link turned into a
+ * document card first.
  */
-export default function RawHtmlBlock({ html, slug, className, pdfTitle }: {
+export default function RawHtmlBlock({ html, className, pdfTitle }: {
   html: string;
-  slug?: string;
   className: string;
   pdfTitle?: string;
 }) {
@@ -22,8 +19,8 @@ export default function RawHtmlBlock({ html, slug, className, pdfTitle }: {
   const openLabel = t("document.open");
   const downloadLabel = t("document.download");
   const withCards = useMemo(
-    () => (rebuildsLayoutFromText(slug) ? html : convertFileLinkParagraphs(html, openLabel, isUzbek ? normalizeUzbekApostrophes : undefined, downloadLabel)),
-    [html, openLabel, downloadLabel, slug, isUzbek],
+    () => convertFileLinkParagraphs(html, openLabel, isUzbek ? normalizeUzbekApostrophes : undefined, downloadLabel),
+    [html, openLabel, downloadLabel, isUzbek],
   );
   const pdfUrl = useMemo(() => {
     if (!pdfTitle || typeof DOMParser === "undefined") return null;
@@ -43,9 +40,9 @@ export default function RawHtmlBlock({ html, slug, className, pdfTitle }: {
     return (
       <div className="space-y-4">
         <PdfViewer key={pdfUrl} src={pdfUrl} title={pdfTitle} />
-        <RichContent html={withCards} className={className} slug={slug} />
+        <RichContent html={withCards} className={className} />
       </div>
     );
   }
-  return <RichContent html={withCards} className={className} slug={slug} />;
+  return <RichContent html={withCards} className={className} />;
 }

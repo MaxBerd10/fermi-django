@@ -13,9 +13,6 @@ import { useMenu } from "@/context/MenuContext";
 // them eagerly on every route (including ones that never render CMS HTML,
 // like the homepage) was pure render-blocking dead weight there.
 import "@/styles/cms-content.css";
-import "@/styles/buildings-content.css";
-import "@/styles/conference-content.css";
-import "@/styles/newspaper-content.css";
 import "@/styles/regulatory-content.css";
 
 // This renders CKEditor output from CMS admins, but ALSO `article.content` for
@@ -67,12 +64,10 @@ export default function RichContent({
   html,
   className = "",
   enhanced = true,
-  slug,
 }: {
   html: string;
   className?: string;
   enhanced?: boolean;
-  slug?: string;
 }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -83,9 +78,9 @@ export default function RichContent({
       const title = findMenuTitleBySlug(menu, target);
       return title && normalizeYearLabels(title);
     };
-    const withLayout = enhanced ? enhanceCmsHtml(html, { slug, pageTitle }) : html;
+    const withLayout = enhanced ? enhanceCmsHtml(html, { pageTitle }) : html;
     return sanitizeHtml(withLayout);
-  }, [html, enhanced, slug, menu]);
+  }, [html, enhanced, menu]);
 
   if (!processed) return null;
 

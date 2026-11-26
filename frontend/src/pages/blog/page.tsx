@@ -20,10 +20,20 @@ import { Reveal } from "@/components/Animation";
 import { useMenu } from "@/context/MenuContext";
 import { findMenuTitleBySlug, INSTITUTE_ABOUT_MENU_ID, isStructureMenuSection, resolveMenuSection } from "@/lib/menuSection";
 import { NEWS_SECTION_MENU_ID } from "@/lib/newsSection";
-import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
-import { normalizeTechnicalCollegeHeading, normalizeTechnicalCollegeHtml, repairTechnicalCollegeText } from "@/lib/technicalCollegeHeading";
+import { normalizeTechnicalCollegeHeading } from "@/lib/technicalCollegeHeading";
 import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
+
+// Pages drawn as a regulatory document: a table of facts (Qabul raqami: ...) above the text of the decree.
+const REGULATORY_PAGE_SLUGS = new Set([
+  "talim-togrisia",
+  "prezident-farmon-va-qarorlari",
+  "taraqqiyot-strategiyasi",
+  "davlat-dasturlari",
+  "oliy-talimning-davlat-talim-standarti",
+  "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "ozbeksiton-respublikasi-ssv-buyruqlari",
+]);
 
 /**
  * Generic renderer for every static/informational page pulled from the old
@@ -108,29 +118,16 @@ export default function BlogPage() {
   // Every page of a menu section keeps the section list beside it, "Institut haqida" included -- without it
   // a visitor reading the section page by page loses the list and has to go back to the menu each time.
   const isTechnicalCollege = menuSection?.theme === "texnikum" || /texnikum/i.test(slug ?? "");
-  const repairConferenceText = (text: string) => text.replace(/Дос\s*[аa]\s*тижения/gu, "Достижения");
   const sortedBlocks = page.blocks.slice().sort((a, b) => a.order - b.order).map((block) => {
-    if (block.block_type === "list") {
-      const items = block.data.items.map(repairConferenceText);
-      return items.some((item, index) => item !== block.data.items[index])
-        ? { ...block, data: { ...block.data, items } } : block;
-    }
-    if (isTechnicalCollege && block.block_type === "raw_html") {
-      const html = normalizeTechnicalCollegeHtml(block.data.html);
-      return html === block.data.html ? block : { ...block, data: { ...block.data, html } };
-    }
     if (block.block_type !== "heading" && block.block_type !== "paragraph") return block;
-    let text = repairTechnicalCollegeText(block.data.text);
-    text = repairConferenceText(text);
+    let text = block.data.text;
     if (slug === "registrator-ofisi" && block.block_type === "heading") {
       text = text.replace(/^B\s+uxgalteriya/u, "Buxgalteriya").replace(/\s+:/u, ":");
       if (/(?:ko[ʻʼ‘’']rsatiladigan xizmatlar|qo[ʻʼ‘’']shimcha xizmatlar)\s*:?$/iu.test(text)) {
         return { ...block, data: { ...block.data, text, level: 3 as const } };
       }
     }
-    if (slug === "ishga-joylashish-uchun-hujjatlari" && /^(?:ro[ʻʼ‘’']yxati|список|list)$/iu.test(text.trim())) {
-      return { ...block, block_type: "paragraph" as const, data: { text: text[0].toUpperCase() + text.slice(1).toLowerCase() } };
-    }
+    // the headings of the technical-college pages were typed in capitals
     const displayText = isTechnicalCollege && block.block_type === "heading"
       ? normalizeTechnicalCollegeHeading(text) : text;
     return displayText === block.data.text ? block : { ...block, data: { ...block.data, text: displayText } };
@@ -155,7 +152,7 @@ export default function BlogPage() {
   const isPublicationArchive = /^(?:jcpm-\d{4}|institut-gazetasi-(?:arxivi-)?\d{4})$/.test(slug ?? "");
   const isScientificRegulatoryPage = isScientificSection
     && /normativ|normative|regulat|норматив/iu.test(`${slug ?? ""} ${title}`);
-  const isRegulatoryPage = isScientificRegulatoryPage || getCmsArticleModifier(slug) === "cms-article--regulatory";
+  const isRegulatoryPage = isScientificRegulatoryPage || REGULATORY_PAGE_SLUGS.has(slug ?? "");
   const documentFacts: Array<{ id: number; label: string; value: string }> = [];
   if (isRegulatoryPage) {
     for (const block of sortedBlocks) {

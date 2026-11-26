@@ -7,7 +7,6 @@ import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import LinkifiedText from "./LinkifiedText";
 import { isChapterHeading } from "@/lib/layoutBlocks";
 import RoadmapPdfFrame from "./RoadmapPdfFrame";
-import { getCmsArticleModifier } from "@/lib/enhanceCmsHtml";
 
 // Django's media FileFields always serialize as absolute URLs (build_absolute_uri),
 // unlike the old CMS's occasional bare "/uploads/..." path — this is just a defensive
@@ -206,8 +205,7 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
       return (
         <RawHtmlBlock
           html={block.data.html}
-          className={`cms-article--rich ${getCmsArticleModifier(block.data.slug)}`}
-          slug={block.data.slug}
+          className="cms-article--rich"
           pdfTitle={showPdf ? documentTitle : undefined}
         />
       );
