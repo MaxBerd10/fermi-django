@@ -1,0 +1,488 @@
+[
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Javob: Ishga yoʻllash tartibi ",
+  "old": "Порядок направления на работу определён Постановлении",
+  "new": "Порядок направления на работу определён Постановлением",
+  "why": "minor: Case error: \"определён Постановлении\" is ungrammatical."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 7,
+  "lang": "ru",
+  "anchor": "2. Savol: Bitiruvchilarni majb",
+  "old": "для обязательного приема на работу",
+  "new": "для обязательной отработки",
+  "why": "terminology: \"Обязательный приём на работу\" means compulsory hiring by the employer, not the graduate's mandatory service (обязательная отработка) used elsewhere on the page."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 9,
+  "lang": "ru",
+  "anchor": "Bitiruvchilarni majburiy ishla",
+  "old": "В целях распределения выпускников на обязательные работы, а также координации и контроля процесса обязательных работ",
+  "new": "В целях распределения выпускников для обязательной отработки, а также координации и контроля процесса обязательной отработки",
+  "why": "terminology: \"Обязательные работы\" is a criminal-law punishment in Russian; the term here is обязательная отработка."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Bunda Komissiya birinchi navba",
+  "old": "В этом случае Комиссия в первую очередь распределяет имеющиеся вакансии в ОП и центральных районных (городских) многопрофильных поликлиниках для обязательного трудоустройства выпускников магистратуры и клинической ординатуры.",
+  "new": "При этом Комиссия в первую очередь распределяет выпускников магистратуры и клинической ординатуры для обязательной отработки на имеющиеся вакансии в ОП и центральных районных (городских) многопрофильных поликлиниках.",
+  "why": "wrong: Uzbek: the Commission assigns graduates to vacancies; the translation says it distributes the vacancies."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 17,
+  "lang": "en",
+  "anchor": "Bunda Komissiya birinchi navba",
+  "old": "In this case, the Commission will, first of all, distribute the available vacancies in the OP and the central district (city) multidisciplinary clinics for the mandatory employment of graduates of master's and clinical residency.",
+  "new": "In this case, the Commission first assigns graduates of master's and clinical residency programmes for mandatory service to the available vacancies in OPs and central district (city) multidisciplinary polyclinics.",
+  "why": "wrong: Uzbek: graduates are assigned to vacancies (not vacancies distributed); poliklinika = polyclinic."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "Выпускники магистратуры и клинической ординатуры высших медицинских учебных заведений, обучающиеся на основе государственного гранта по направлению бакалавриат, должны прибыть",
+  "new": "Выпускники магистратуры и клинической ординатуры, обучавшиеся в бакалавриате высших медицинских учебных заведений на основе государственного гранта, по окончании обучения должны прибыть",
+  "why": "wrong: Wrong tense and broken case (\"по направлению бакалавриат\"); \"after graduation\" omitted; block #16 already has the correct wording."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "en",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "Graduates of master's and clinical residencies studying for a bachelor's degree in higher medical education on the basis of a state grant",
+  "new": "Graduates of master's and clinical residency programmes who studied on a state grant in the bachelor's programmes of higher medical education institutions",
+  "why": "wrong: Says the graduates are \"studying for a bachelor's degree\", which is wrong: they did their bachelor's on a state grant."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "трудовой договор в соответствии с контрактом",
+  "new": "трудовой договор в соответствии с договором",
+  "why": "terminology: Shartnoma is translated as договор everywhere else; \"контракт\" makes it look like a different document."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 24,
+  "lang": "ru",
+  "anchor": "Majburiy ishlab berish uchun t",
+  "old": "отказаться от обязательного приема на работу",
+  "new": "отказаться от обязательной отработки",
+  "why": "terminology: Wrong term: the graduate refuses mandatory service, not \"compulsory hiring\"."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 25,
+  "lang": "ru",
+  "anchor": "Javob: Yoʻq, haqli emas. Bitir",
+  "old": "В случае отказа выпускника от работы в обязательном порядке:",
+  "new": "В случае отказа от обязательной отработки выпускник выполняет следующее:",
+  "why": "terminology: \"Отказ от работы в обязательном порядке\" reads as \"refusal of work, made compulsorily\"; the term is обязательная отработка."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 26,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "В случае отказа от обязательного приема на работу",
+  "new": "В случае отказа от обязательной отработки",
+  "why": "terminology: Wrong term (see #24)."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "для оформления отказа от обязательного приема на работу",
+  "new": "для оформления отказа от обязательной отработки",
+  "why": "terminology: Wrong term (see #24)."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "является дата отказа от обязательного приема на работу",
+  "new": "считается датой отказа от обязательной отработки",
+  "why": "terminology: Wrong term; the sentence also reverses the logic: the date of the application is deemed the date of refusal."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "en",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "transfers the sum of compensation to the income of the republican budget of the Republic of Uzbekistan.",
+  "new": "transfers the sum of compensation to the revenue of the republican budget of the Republic of Uzbekistan in the manner prescribed by law.",
+  "why": "missing: \"In the manner prescribed by law\" is left out."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 29,
+  "lang": "ru",
+  "anchor": "Mehnat layoqatini qisman yoki ",
+  "old": "освобождаются от компенсации",
+  "new": "освобождаются от уплаты компенсации",
+  "why": "minor: Toʻlashdan = from paying; \"освобождаются от компенсации\" means they lose the compensation."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "1. Savol: Bakalavriatning aloh",
+  "old": "Вы можете объяснить порядок",
+  "new": "Объясните, пожалуйста, порядок",
+  "why": "minor: A \"Вы можете...\" question cannot end with \"!\"; the Uzbek is a polite request."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 5,
+  "lang": "en",
+  "anchor": "3. Oliy tibbiy taʻlim muassasa",
+  "old": "The Ministry of Health of the Republic of Uzbekistan determines the bachelor's directions of graduates of higher medical educational institutions for compulsory work in OSHP and OP.",
+  "new": "The bachelor's programmes of higher medical education institutions whose graduates are assigned to mandatory service in OSHPs and OPs are determined by the Ministry of Health of the Republic of Uzbekistan.",
+  "why": "minor: The current sentence garbles the meaning (\"directions of graduates\")."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 19,
+  "lang": "ru",
+  "anchor": "Javob: Oliy taʻlim muassasasin",
+  "old": "Набор студентов, окончивших высшее учебное заведение на основе государственного гранта, на работу по направлению, осуществляется",
+  "new": "Приём на работу по направлению выпускников, окончивших высшее учебное заведение на основе государственного гранта, осуществляется",
+  "why": "minor: \"Набор студентов на работу\" is wrong usage; it should match the question in #18."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 22,
+  "lang": "ru",
+  "anchor": "4. Savol: Bitiruvchilarning ma",
+  "old": "Какая процедура, если возможно?",
+  "new": "Если да, то каков порядок?",
+  "why": "minor: Ungrammatical question."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 5,
+  "lang": "en",
+  "anchor": "1. Iqtisodiyot va moliya vazir",
+  "old": "(hereinafter \"educational loan)",
+  "new": "(hereinafter, the \"educational loan\")",
+  "why": "minor: The closing quotation mark is missing."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "a) Oliy taʻlim, fan va innovat",
+  "old": "формирование платного контракта всех",
+  "new": "формирование договоров платного контракта всех",
+  "why": "minor: The Uzbek means the paid-contract agreements are generated; \"формирование платного контракта\" is incomplete."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 22,
+  "lang": "en",
+  "anchor": "Prezidenti Sh.MIRZIYOEV",
+  "old": "President of the Republic of Uzbekistan Sh. MIRZIYOEV",
+  "new": "President Sh. MIRZIYOEV",
+  "why": "minor: Block #21 already reads \"Republic of Uzbekistan\", so the signature repeats it."
+ },
+ {
+  "slug": "talim-yonalishlarini-tanlash-yoriqnomasi-2025",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Oliy va kasbiy taʻlim muassasa",
+  "old": "принявших участие в вступительных экзаменах",
+  "new": "принявших участие во вступительных экзаменах",
+  "why": "minor: The preposition must be \"во\" before \"вступительных\"."
+ },
+ {
+  "slug": "magistratura-imtihon-fanlari-royxati",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "️ bakalavriat diplomi ilovasin",
+  "old": "Средний балл диплома бакалавриата",
+  "new": "Средний балл приложения к диплому бакалавра",
+  "why": "minor: \"Ilovasi\" (diploma supplement) is omitted."
+ },
+ {
+  "slug": "magistratura-imtihon-fanlari-royxati",
+  "order": 3,
+  "lang": "en",
+  "anchor": "️ bakalavriat diplomi ilovasin",
+  "old": "The average score of the undergraduate diploma is",
+  "new": "The average score of the bachelor's diploma supplement:",
+  "why": "minor: \"Ilovasi\" (diploma supplement) is omitted."
+ },
+ {
+  "slug": "xalqaro-qoshma-talim-2025",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Taʻlim tili – rus tili.",
+  "old": "Язык обучения – Русский.",
+  "new": "Язык обучения – русский.",
+  "why": "minor: Language names are lowercase in Russian."
+ },
+ {
+  "slug": "chet-ellik-talabalar-xavfsizligi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Oʻzbekiston Respublikasi hudud",
+  "old": "higher educational universities",
+  "new": "higher education institutions",
+  "why": "minor: \"Higher educational universities\" is not idiomatic English."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Xavfsizlik tizimi, internet va",
+  "old": "Столовая и бытового обслуживания",
+  "new": "Столовая и места бытового обслуживания",
+  "why": "minor: Broken phrase: the noun \"места\" is missing."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Toʻlov miqdorlari “Study in Uz",
+  "old": "Размер оплаты указан отдельно на портале «Study in Uzbekistan» и осуществляется в национальной валюте по курсу Центрального банка.",
+  "new": "Размеры оплаты указаны отдельно на портале «Study in Uzbekistan»; оплата производится в национальной валюте по курсу Центрального банка.",
+  "why": "minor: \"Размер оплаты ... осуществляется\" is ungrammatical (an amount is not \"carried out\")."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Toʻlov miqdorlari “Study in Uz",
+  "old": "The amount of payment is indicated separately on the \"Study in Uzbekistan\" portal and is carried out in national currency at the rate of the Central Bank.",
+  "new": "The fees are listed separately on the \"Study in Uzbekistan\" portal; payment is made in the national currency at the Central Bank rate.",
+  "why": "minor: An amount cannot be \"carried out\"."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 19,
+  "lang": "en",
+  "anchor": "Hujjat topshirish elektron sha",
+  "old": "all questions can be consulted online",
+  "new": "online consultation is available on all questions",
+  "why": "minor: \"Questions can be consulted\" is ungrammatical."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Xorijiy abituriyentlar va tala",
+  "old": "([ФМИОЗ](/blog/6/study-in-uzbekistan))",
+  "new": "(ФМИОЗ)",
+  "why": "minor: The Uzbek has no link; this added link points to the page itself (the English links to /uz instead)."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Magistraturaning asosiy nizomi",
+  "old": "The main provision of the magistracy, Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated March 2, 2015, No. 36, Decree of the President of the Republic of Uzbekistan dated June 24, 2012, No. PF-4456 \"On Education,\" \"National Plan for the Training of Specialists,\" Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated September 10, 2007 No. 190 Certification of scientific and scientific-pedagogical specialists of the highest category \"karori\" \"and\" Measures to improve the efficiency and further improvement of the activities of the magistracy in the higher education system of the Republic of Uzbekistan. \"",
+  "new": "The main Regulation on the Master’s Degree was approved on the basis of Resolution No. 36 of the Cabinet of Ministers of the Republic of Uzbekistan of March 2, 2015, Decree No. PF-4456 of the President of the Republic of Uzbekistan of June 24, 2012, the Law “On Education” and the “National Programme for Personnel Training”, Resolution No. 190 of the Cabinet of Ministers of the Republic of Uzbekistan of September 10, 2007 “On improving the system of attestation and further training of highly qualified scientific and scientific-pedagogical personnel”, and the “Measures to increase the efficiency and further improve the activities of the master’s degree in the higher education system of the Republic of Uzbekistan”.",
+  "why": "wrong: Machine-translation garbage: no main verb, a stray Uzbek word “karori”, broken quotation marks, the title of Resolution No. 190 mangled; the date of PF-4456 is left as in the Uzbek."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Magistraturaning asosiy nizomi",
+  "old": "Согласно Положению о магистратуре, утвержденному постановлением Кабинетом Министров РУз от 2 марта 2015г. №36, а также в соответствии с законами Республики Узбекистан «Об образовании» и «О Национальной программе по подготовке кадров», Указом Президента Республики Узбекистан от 24 июля 2012 года № УП-4456 «О дальнейшем совершенствовании системы подготовки и аттестации научных и научно-педагогических кадров высшей квалификации», постановлением Кабинета Министров Республики Узбекистан от 10 сентября 2007 года № 190 «О мерах по дальнейшему совершенствованию и повышению эффективности деятельности магистратуры в системе высшего образования Республики Узбекистан» и в целях повышения эффективности подготовки магистров в высших образовательных учреждениях:",
+  "new": "Положение о магистратуре утверждено на основании постановления Кабинета Министров Республики Узбекистан от 2 марта 2015 года № 36, Указа Президента Республики Узбекистан от 24 июня 2012 года № УП-4456, Закона «Об образовании» и «Национальной программы по подготовке кадров», постановления Кабинета Министров Республики Узбекистан от 10 сентября 2007 года № 190 «О совершенствовании системы аттестации и дальнейшей подготовки научных и научно-педагогических кадров высшей квалификации», а также «Мер по повышению эффективности и дальнейшему совершенствованию деятельности магистратуры в системе высшего образования Республики Узбекистан».",
+  "why": "wrong: The sentence is a fragment ending with a colon (no main clause), has “постановлением Кабинетом Министров”, and gives No. 190 the magistracy title while the Uzbek gives it the attestation title; the PF-4456 date is left untouched."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining aktu",
+  "old": "presentation of relevance, scientific novelty and liquidation of master's scientific work;",
+  "new": "Presenting the relevance, scientific novelty and completeness of the master’s thesis;",
+  "why": "wrong: Nonsense machine translation: “liquidation”, “feedback”, “preliminary protection”, “a recall is presented”, “false flat fragments”, “cannot be saved to this Regulation”; plagiarism is missing in item 3."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining aktu",
+  "old": "Submission of feedback 3 days before preliminary protection;",
+  "new": "Submitting the review 3 days before the preliminary defence;",
+  "why": "wrong: Nonsense machine translation: “liquidation”, “feedback”, “preliminary protection”, “a recall is presented”, “false flat fragments”, “cannot be saved to this Regulation”; plagiarism is missing in item 3."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining aktu",
+  "old": "In case of violation of the rules of professional ethics, a recall is presented (falsification of information, presentation of false flat fragments, etc.);",
+  "new": "Any violation of the rules of professional ethics (plagiarism, falsification of data, presentation of false text fragments, etc.) is stated in the review;",
+  "why": "wrong: Nonsense machine translation: “liquidation”, “feedback”, “preliminary protection”, “a recall is presented”, “false flat fragments”, “cannot be saved to this Regulation”; plagiarism is missing in item 3."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining aktu",
+  "old": "If the master's scientific work does not meet the established requirements, the student violates the rules of professional ethics (fraud, falsification of information, presentation of false direct fragments, etc.), as well as if it is impossible to complete the master's scientific work as soon as possible, the master's scientific work cannot be saved to this Regulation.",
+  "new": "If the master’s thesis does not meet the established requirements, if the master’s student has violated the rules of professional ethics (plagiarism, falsification of data, presentation of false text fragments, etc.), and if the reviewer considers that it cannot be corrected within a short time, the reviewer concludes that the master’s thesis should not be admitted to the defence.",
+  "why": "wrong: Nonsense machine translation: “liquidation”, “feedback”, “preliminary protection”, “a recall is presented”, “false flat fragments”, “cannot be saved to this Regulation”; plagiarism is missing in item 3."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining mavz",
+  "old": "Know the relevance of the topic of the master's scientific work and associate it with practice.;",
+  "new": "Knowledge of the relevance of the topic of the master's thesis and its connection with practice;",
+  "why": "minor: Imperative “Know … associate” does not fit a list of assessment criteria, and “.;” is doubled punctuation."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "2-Fargʻona tibbiyot kolleji Oʻ",
+  "old": "№ ПФ-5812",
+  "new": "№ УП-5812",
+  "why": "terminology: In Russian a presidential decree is designated УП, not the Uzbek abbreviation ПФ."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "№ ПФ-5927",
+  "new": "№ УП-5927",
+  "why": "terminology: In Russian a presidential decree is designated УП, not ПФ."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "[ПФ-5847]",
+  "new": "[УП-5847]",
+  "why": "terminology: In Russian a presidential decree is designated УП, not ПФ (link text only; the URL is unchanged)."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 22,
+  "lang": "ru",
+  "anchor": "Umuman olganda, institut talab",
+  "old": "качественного обучения, комфортного проживания и полноценного отдыха студентов",
+  "new": "обучения, отдыха и развития студентов",
+  "why": "minor: The Uzbek names study, rest and development; the Russian drops “development” and adds “living”."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 8,
+  "lang": "ru",
+  "anchor": "Mazkur turar joylarda institut",
+  "old": "В настоящее время здесь обучаются и проживают:",
+  "new": "В настоящее время здесь обучаются и проживают граждане следующих стран:",
+  "why": "minor: The following list gives countries, so without “граждане следующих стран” it reads as if countries study here."
+ },
+ {
+  "slug": "fuqarolar-murojaatlari-statistikasi",
+  "order": 6,
+  "lang": "ru",
+  "anchor": "Institutda jismoniy va yuridik",
+  "old": "согласно графику приёма, утверждённому ректором института А. Сидиковым",
+  "new": "согласно графику приёма обратившихся ректором института А. Сидиковым",
+  "why": "minor: The Uzbek speaks of the schedule of the rector’s own receptions of applicants, not a schedule he approved."
+ },
+ {
+  "slug": "fuqarolar-murojaatlari-statistikasi",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Institutda jismoniy va yuridik",
+  "old": "according to the schedule of receiving applicants drawn up by the institute’s rector, A. Sidikov",
+  "new": "according to the schedule of the institute’s rector, A. Sidikov, for receiving applicants",
+  "why": "minor: The Uzbek speaks of the rector’s own reception schedule, not one he drew up."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Yashil Universitet atamasi, as",
+  "old": "лидерами в области образования в области изменения климата",
+  "new": "лидерами в образовании в сфере изменения климата",
+  "why": "minor: “в области … в области” repeated is a grammar slip a native reader notices."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 12,
+  "lang": "en",
+  "anchor": "“Yangi daraxt — yangi nafas” —",
+  "old": "\"A new tree is a new breath\"",
+  "new": "“New Tree — New Breath”",
+  "why": "minor: The championship name differs from the one used in blocks #2 and #3."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "improving the environmental environment",
+  "new": "improving the ecological situation",
+  "why": "minor: Tautology “environmental environment”."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Institutning barcha fakultetla",
+  "old": "Students plant decorative and fruit seedlings of trees, flowers.",
+  "new": "Students plant ornamental and fruit tree seedlings and flower seedlings;",
+  "why": "minor: Broken phrase “seedlings of trees, flowers”."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 38,
+  "lang": "ru",
+  "anchor": "Rahbar: Tulakov Ravshan Panjiy",
+  "old": "Хонободское шоссе",
+  "new": "ул. Хонобод",
+  "why": "minor: The Uzbek says Xonobod street, not a highway."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 41,
+  "lang": "en",
+  "anchor": "Rahbar: Qurbonov Murad Ismailo",
+  "old": "Duslik guzari",
+  "new": "Dustlik guzari",
+  "why": "minor: Wrong transliteration of Doʻstlik."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 11,
+  "lang": "en",
+  "anchor": "Rahbar: Yusupov Salohiddin Gʻu",
+  "old": "G‘ulomjonovich",
+  "new": "Gulomjonovich",
+  "why": "minor: Uzbek letter left in an English name; all other English names on the page are transliterated (e.g. Gafur)."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 16,
+  "lang": "en",
+  "anchor": "Rektor: Madazimov Madamin Moʻm",
+  "old": "Yu. Otabekova street",
+  "new": "Y. Otabekov street",
+  "why": "minor: Russian transliteration and genitive ending leaked into the English address."
+ }
+]

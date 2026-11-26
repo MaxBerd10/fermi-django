@@ -1,0 +1,192 @@
+[
+ {
+  "page": "magistrlik-dissertatsiyasi-himoyasi",
+  "block": 2,
+  "lang": "en",
+  "severity": "wrong",
+  "uz": "Magistraturaning asosiy nizomi ... asosida tasdiqlangan",
+  "current": "The main provision of the magistracy, Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated March 2, 2015, No. 36, Decree of the President of the Republic of Uzbekistan dated June 24, 2012, No. PF-4456 \"On Education,\" \"National Plan for the Training of Specialists,\" Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated September 10, 2007 No. 190 Certification of scientific and scientific-pedagogical specialists of the highest category \"karori\" \"and\" Measures to improve the efficiency and further improvement of the activities of the magistracy in the higher education system of the Republic of Uzbekistan. \"",
+  "fix": "The main Regulation on the Master’s Degree was approved on the basis of Resolution No. 36 of the Cabinet of Ministers of the Republic of Uzbekistan of March 2, 2015, Decree No. PF-4456 of the President of the Republic of Uzbekistan of June 24, 2012, the Law “On Education” and the “National Programme for Personnel Training”, Resolution No. 190 of the Cabinet of Ministers of the Republic of Uzbekistan of September 10, 2007 “On improving the system of attestation and further training of highly qualified scientific and scientific-pedagogical personnel”, and the “Measures to increase the efficiency and further improve the activities of the master’s degree in the higher education system of the Republic of Uzbekistan”.",
+  "why": "Machine-translation garbage: no main verb, a stray Uzbek word “karori”, broken quotation marks, the title of Resolution No. 190 mangled; the date of PF-4456 is left as in the Uzbek."
+ },
+ {
+  "page": "magistrlik-dissertatsiyasi-himoyasi",
+  "block": 2,
+  "lang": "ru",
+  "severity": "wrong",
+  "uz": "Magistraturaning asosiy nizomi ... asosida tasdiqlangan",
+  "current": "Согласно Положению о магистратуре, утвержденному постановлением Кабинетом Министров РУз от 2 марта 2015г. №36, а также в соответствии с законами Республики Узбекистан «Об образовании» и «О Национальной программе по подготовке кадров», Указом Президента Республики Узбекистан от 24 июля 2012 года № УП-4456 «О дальнейшем совершенствовании системы подготовки и аттестации научных и научно-педагогических кадров высшей квалификации», постановлением Кабинета Министров Республики Узбекистан от 10 сентября 2007 года № 190 «О мерах по дальнейшему совершенствованию и повышению эффективности деятельности магистратуры в системе высшего образования Республики Узбекистан» и в целях повышения эффективности подготовки магистров в высших образовательных учреждениях:",
+  "fix": "Положение о магистратуре утверждено на основании постановления Кабинета Министров Республики Узбекистан от 2 марта 2015 года № 36, Указа Президента Республики Узбекистан от 24 июля 2012 года № УП-4456, Закона «Об образовании» и «Национальной программы по подготовке кадров», постановления Кабинета Министров Республики Узбекистан от 10 сентября 2007 года № 190 «О совершенствовании системы аттестации и дальнейшей подготовки научных и научно-педагогических кадров высшей квалификации», а также «Мер по повышению эффективности и дальнейшему совершенствованию деятельности магистратуры в системе высшего образования Республики Узбекистан».",
+  "why": "The sentence is a fragment ending with a colon (no main clause), has “постановлением Кабинетом Министров”, and gives No. 190 the magistracy title while the Uzbek gives it the attestation title; the PF-4456 date is left untouched."
+ },
+ {
+  "page": "magistrlik-dissertatsiyasi-himoyasi",
+  "block": 10,
+  "lang": "en",
+  "severity": "wrong",
+  "uz": "aktualligi, ilmiy yangiligi va tugatilishini ... himoyaga quyilmasin deb xulosa beriladi",
+  "current": "presentation of relevance, scientific novelty and liquidation of master's scientific work; ‖ Submission of feedback 3 days before preliminary protection; ‖ In case of violation of the rules of professional ethics, a recall is presented (falsification of information, presentation of false flat fragments, etc.); ‖ If the master's scientific work does not meet the established requirements, the student violates the rules of professional ethics (fraud, falsification of information, presentation of false direct fragments, etc.), as well as if it is impossible to complete the master's scientific work as soon as possible, the master's scientific work cannot be saved to this Regulation.",
+  "fix": "Presenting the relevance, scientific novelty and completeness of the master’s thesis; ‖ Submitting the review 3 days before the preliminary defence; ‖ Any violation of the rules of professional ethics (plagiarism, falsification of data, presentation of false text fragments, etc.) is stated in the review; ‖ If the master’s thesis does not meet the established requirements, if the master’s student has violated the rules of professional ethics (plagiarism, falsification of data, presentation of false text fragments, etc.), and if the reviewer considers that it cannot be corrected within a short time, the reviewer concludes that the master’s thesis should not be admitted to the defence.",
+  "why": "Nonsense machine translation: “liquidation”, “feedback”, “preliminary protection”, “a recall is presented”, “false flat fragments”, “cannot be saved to this Regulation”; plagiarism is missing in item 3."
+ },
+ {
+  "page": "magistrlik-dissertatsiyasi-himoyasi",
+  "block": 15,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "mavzusini aktualligini bilish va uning amaliyot bilan bogʻlash",
+  "current": "Know the relevance of the topic of the master's scientific work and associate it with practice.;",
+  "fix": "Knowledge of the relevance of the topic of the master's thesis and its connection with practice;",
+  "why": "Imperative “Know … associate” does not fit a list of assessment criteria, and “.;” is doubled punctuation."
+ },
+ {
+  "page": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "block": 2,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "PF-5812-son Farmoni",
+  "current": "№ ПФ-5812",
+  "fix": "№ УП-5812",
+  "why": "In Russian a presidential decree is designated УП, not the Uzbek abbreviation ПФ."
+ },
+ {
+  "page": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "block": 2,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "PF-5927-son Farmoni",
+  "current": "№ ПФ-5927",
+  "fix": "№ УП-5927",
+  "why": "In Russian a presidential decree is designated УП, not ПФ."
+ },
+ {
+  "page": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "block": 2,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "PF-5847-son Farmoni",
+  "current": "[ПФ-5847]",
+  "fix": "[УП-5847]",
+  "why": "In Russian a presidential decree is designated УП, not ПФ (link text only; the URL is unchanged)."
+ },
+ {
+  "page": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "block": 22,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "taʻlim olishi, dam olishi va rivojlanishi uchun",
+  "current": "качественного обучения, комфортного проживания и полноценного отдыха студентов",
+  "fix": "обучения, отдыха и развития студентов",
+  "why": "The Uzbek names study, rest and development; the Russian drops “development” and adds “living”."
+ },
+ {
+  "page": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "block": 8,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Hozirda bu yerda ush fuqarolar tahsil olib, yashab kelmoqdalar:",
+  "current": "В настоящее время здесь обучаются и проживают:",
+  "fix": "В настоящее время здесь обучаются и проживают граждане следующих стран:",
+  "why": "The following list gives countries, so without “граждане следующих стран” it reads as if countries study here."
+ },
+ {
+  "page": "fuqarolar-murojaatlari-statistikasi",
+  "block": 6,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Institut rektori A.Sidikovning murojaatchilarni qabulini tashkil etish jadvaliga asosan",
+  "current": "согласно графику приёма, утверждённому ректором института А. Сидиковым",
+  "fix": "согласно графику приёма обратившихся ректором института А. Сидиковым",
+  "why": "The Uzbek speaks of the schedule of the rector’s own receptions of applicants, not a schedule he approved."
+ },
+ {
+  "page": "fuqarolar-murojaatlari-statistikasi",
+  "block": 6,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Institut rektori A.Sidikovning murojaatchilarni qabulini tashkil etish jadvaliga asosan",
+  "current": "according to the schedule of receiving applicants drawn up by the institute’s rector, A. Sidikov",
+  "fix": "according to the schedule of the institute’s rector, A. Sidikov, for receiving applicants",
+  "why": "The Uzbek speaks of the rector’s own reception schedule, not one he drew up."
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 17,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "taʻlim berishda etakchi",
+  "current": "лидерами в области образования в области изменения климата",
+  "fix": "лидерами в образовании в сфере изменения климата",
+  "why": "“в области … в области” repeated is a grammar slip a native reader notices."
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 12,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "“Yangi daraxt — yangi nafas”",
+  "current": "\"A new tree is a new breath\"",
+  "fix": "“New Tree — New Breath”",
+  "why": "The championship name differs from the one used in blocks #2 and #3."
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 3,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "ekologik muhitni yaxshilash",
+  "current": "improving the environmental environment",
+  "fix": "improving the ecological situation",
+  "why": "Tautology “environmental environment”."
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 6,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "manzarali va mevali daraxt koʻchatlari, gul koʻchatlari ekiladi",
+  "current": "Students plant decorative and fruit seedlings of trees, flowers.",
+  "fix": "Students plant ornamental and fruit tree seedlings and flower seedlings;",
+  "why": "Broken phrase “seedlings of trees, flowers”."
+ },
+ {
+  "page": "hududiy-boshqarmalar",
+  "block": 38,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Xonobod koʻchasi, №28",
+  "current": "Хонободское шоссе",
+  "fix": "ул. Хонобод",
+  "why": "The Uzbek says Xonobod street, not a highway."
+ },
+ {
+  "page": "hududiy-boshqarmalar",
+  "block": 41,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Doʻstlik guzari koʻchasi",
+  "current": "Duslik guzari",
+  "fix": "Dustlik guzari",
+  "why": "Wrong transliteration of Doʻstlik."
+ },
+ {
+  "page": "hududiy-boshqarmalar",
+  "block": 11,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Yusupov Salohiddin Gʻulomjonovich",
+  "current": "G‘ulomjonovich",
+  "fix": "Gulomjonovich",
+  "why": "Uzbek letter left in an English name; all other English names on the page are transliterated (e.g. Gafur)."
+ },
+ {
+  "page": "bilim-yurtlari",
+  "block": 16,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Y. Otabekov koʻchasi",
+  "current": "Yu. Otabekova street",
+  "fix": "Y. Otabekov street",
+  "why": "Russian transliteration and genitive ending leaked into the English address."
+ }
+]

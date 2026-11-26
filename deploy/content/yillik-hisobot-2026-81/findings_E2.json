@@ -1,0 +1,372 @@
+[
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 2,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "qaroriga asosan amalga oshiriladi",
+  "current": "Порядок направления на работу определён Постановлении",
+  "fix": "Порядок направления на работу определён Постановлением",
+  "why": "Case error: \"определён Постановлении\" is ungrammatical."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 7,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berishga taqsimlash",
+  "current": "для обязательного приема на работу",
+  "fix": "для обязательной отработки",
+  "why": "\"Обязательный приём на работу\" means compulsory hiring by the employer, not the graduate's mandatory service (обязательная отработка) used elsewhere on the page."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 9,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berish uchun taqsimlash, shuningdek majburiy ishlab berish jarayonini",
+  "current": "В целях распределения выпускников на обязательные работы, а также координации и контроля процесса обязательных работ",
+  "fix": "В целях распределения выпускников для обязательной отработки, а также координации и контроля процесса обязательной отработки",
+  "why": "\"Обязательные работы\" is a criminal-law punishment in Russian; the term here is обязательная отработка."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 17,
+  "lang": "ru",
+  "severity": "wrong",
+  "uz": "Komissiya ... bitiruvchilarini ... mavjud boʻsh oʻrinlarga taqsimlaydi",
+  "current": "В этом случае Комиссия в первую очередь распределяет имеющиеся вакансии в ОП и центральных районных (городских) многопрофильных поликлиниках для обязательного трудоустройства выпускников магистратуры и клинической ординатуры.",
+  "fix": "При этом Комиссия в первую очередь распределяет выпускников магистратуры и клинической ординатуры для обязательной отработки на имеющиеся вакансии в ОП и центральных районных (городских) многопрофильных поликлиниках.",
+  "why": "Uzbek: the Commission assigns graduates to vacancies; the translation says it distributes the vacancies."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 17,
+  "lang": "en",
+  "severity": "wrong",
+  "uz": "Komissiya ... bitiruvchilarini ... mavjud boʻsh oʻrinlarga taqsimlaydi; koʻp tarmoqli poliklinikalar",
+  "current": "In this case, the Commission will, first of all, distribute the available vacancies in the OP and the central district (city) multidisciplinary clinics for the mandatory employment of graduates of master's and clinical residency.",
+  "fix": "In this case, the Commission first assigns graduates of master's and clinical residency programmes for mandatory service to the available vacancies in OPs and central district (city) multidisciplinary polyclinics.",
+  "why": "Uzbek: graduates are assigned to vacancies (not vacancies distributed); poliklinika = polyclinic."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 20,
+  "lang": "ru",
+  "severity": "wrong",
+  "uz": "bakalavriat yoʻnalishida davlat granti asosida tahsil olgan magistratura va klinik ordinatura bitiruvchilari oʻqishni tamomlagach",
+  "current": "Выпускники магистратуры и клинической ординатуры высших медицинских учебных заведений, обучающиеся на основе государственного гранта по направлению бакалавриат, должны прибыть",
+  "fix": "Выпускники магистратуры и клинической ординатуры, обучавшиеся в бакалавриате высших медицинских учебных заведений на основе государственного гранта, по окончании обучения должны прибыть",
+  "why": "Wrong tense and broken case (\"по направлению бакалавриат\"); \"after graduation\" omitted; block #16 already has the correct wording."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 20,
+  "lang": "en",
+  "severity": "wrong",
+  "uz": "bakalavriat yoʻnalishida davlat granti asosida tahsil olgan magistratura va klinik ordinatura bitiruvchilari",
+  "current": "Graduates of master's and clinical residencies studying for a bachelor's degree in higher medical education on the basis of a state grant",
+  "fix": "Graduates of master's and clinical residency programmes who studied on a state grant in the bachelor's programmes of higher medical education institutions",
+  "why": "Says the graduates are \"studying for a bachelor's degree\", which is wrong: they did their bachelor's on a state grant."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 20,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "shartnomaga muvofiq",
+  "current": "трудовой договор в соответствии с контрактом",
+  "fix": "трудовой договор в соответствии с договором",
+  "why": "Shartnoma is translated as договор everywhere else; \"контракт\" makes it look like a different document."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 24,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berishdan bosh tortishga",
+  "current": "отказаться от обязательного приема на работу",
+  "fix": "отказаться от обязательной отработки",
+  "why": "Wrong term: the graduate refuses mandatory service, not \"compulsory hiring\"."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 25,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "Bitiruvchi majburiy ishlab berishdan bosh tortgan holatda quyidagilarni amalga oshiradi",
+  "current": "В случае отказа выпускника от работы в обязательном порядке:",
+  "fix": "В случае отказа от обязательной отработки выпускник выполняет следующее:",
+  "why": "\"Отказ от работы в обязательном порядке\" reads as \"refusal of work, made compulsorily\"; the term is обязательная отработка."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 26,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berishdan bosh tortgan hollarda",
+  "current": "В случае отказа от обязательного приема на работу",
+  "fix": "В случае отказа от обязательной отработки",
+  "why": "Wrong term (see #24)."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 28,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berishdan bosh tortishni rasmiylashtirishi",
+  "current": "для оформления отказа от обязательного приема на работу",
+  "fix": "для оформления отказа от обязательной отработки",
+  "why": "Wrong term (see #24)."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 28,
+  "lang": "ru",
+  "severity": "terminology",
+  "uz": "majburiy ishlab berishdan bosh tortish sanasi",
+  "current": "является дата отказа от обязательного приема на работу",
+  "fix": "считается датой отказа от обязательной отработки",
+  "why": "Wrong term; the sentence also reverses the logic: the date of the application is deemed the date of refusal."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 28,
+  "lang": "en",
+  "severity": "missing",
+  "uz": "qonun hujjatlarida belgilangan tartibda oʻtkazilishini",
+  "current": "transfers the sum of compensation to the income of the republican budget of the Republic of Uzbekistan.",
+  "fix": "transfers the sum of compensation to the revenue of the republican budget of the Republic of Uzbekistan in the manner prescribed by law.",
+  "why": "\"In the manner prescribed by law\" is left out."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 29,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "kompensatsiya toʻlashdan ozod etiladi",
+  "current": "освобождаются от компенсации",
+  "fix": "освобождаются от уплаты компенсации",
+  "why": "Toʻlashdan = from paying; \"освобождаются от компенсации\" means they lose the compensation."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 1,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "tushuntirib bersangiz!",
+  "current": "Вы можете объяснить порядок",
+  "fix": "Объясните, пожалуйста, порядок",
+  "why": "A \"Вы можете...\" question cannot end with \"!\"; the Uzbek is a polite request."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 5,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "bitiruvchilar taqsimlanadigan bakalavriat yoʻnalishlari ... belgilanadi",
+  "current": "The Ministry of Health of the Republic of Uzbekistan determines the bachelor's directions of graduates of higher medical educational institutions for compulsory work in OSHP and OP.",
+  "fix": "The bachelor's programmes of higher medical education institutions whose graduates are assigned to mandatory service in OSHPs and OPs are determined by the Ministry of Health of the Republic of Uzbekistan.",
+  "why": "The current sentence garbles the meaning (\"directions of graduates\")."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 19,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "yoʻllanma boʻyicha ishga qabul qilish",
+  "current": "Набор студентов, окончивших высшее учебное заведение на основе государственного гранта, на работу по направлению, осуществляется",
+  "fix": "Приём на работу по направлению выпускников, окончивших высшее учебное заведение на основе государственного гранта, осуществляется",
+  "why": "\"Набор студентов на работу\" is wrong usage; it should match the question in #18."
+ },
+ {
+  "page": "eng-kop-beriladigan-savollar",
+  "block": 22,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Mumkin boʻlsa buning tartibi qanday?",
+  "current": "Какая процедура, если возможно?",
+  "fix": "Если да, то каков порядок?",
+  "why": "Ungrammatical question."
+ },
+ {
+  "page": "raqamli-talim-texnologiyalari-markazi",
+  "block": 2,
+  "lang": "ru",
+  "severity": "missing",
+  "uz": "Markaz ... tarkibiy boʻlinmasi hisoblanib, taʻlim muassasasiga axborot-kommunikatsiya texnologiyalarni joriy etish bilan bogʻliq ishlarni amalga oshiradi.",
+  "current": "приказа Министерства высшего образования, науки и инноваций Республики Узбекистан от 25.05.2001 года № 23.",
+  "fix": "приказа Министерства высшего образования, науки и инноваций Республики Узбекистан от 25.05.2001 года № 23. Центр является структурным подразделением Ферганского медицинского института общественного здоровья и осуществляет работу по внедрению информационно-коммуникационных технологий в образовательное учреждение.",
+  "why": "The second Uzbek sentence is omitted (it repeats block #3, so leaving it out is a choice to confirm). Note: the Uzbek order date is \"25.0.2001\" and the translations assume 25.05."
+ },
+ {
+  "page": "raqamli-talim-texnologiyalari-markazi",
+  "block": 2,
+  "lang": "en",
+  "severity": "missing",
+  "uz": "Markaz ... tarkibiy boʻlinmasi hisoblanib, ... ishlarni amalga oshiradi.",
+  "current": "dated May 25, 2001.",
+  "fix": "dated May 25, 2001. The Center is a structural unit of the Fergana Medical Institute of Public Health and carries out work related to introducing information and communication technologies into the educational institution.",
+  "why": "The second Uzbek sentence is omitted (it repeats block #3)."
+ },
+ {
+  "page": "qabul-komissiyasi-yangiliklari",
+  "block": 5,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "(keyingi oʻrinlarda – taʻlim krediti)",
+  "current": "(hereinafter \"educational loan)",
+  "fix": "(hereinafter, the \"educational loan\")",
+  "why": "The closing quotation mark is missing."
+ },
+ {
+  "page": "qabul-komissiyasi-yangiliklari",
+  "block": 16,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "toʻlov-kontrakt shartnomasi ... shakllantirilishini",
+  "current": "формирование платного контракта всех",
+  "fix": "формирование договоров платного контракта всех",
+  "why": "The Uzbek means the paid-contract agreements are generated; \"формирование платного контракта\" is incomplete."
+ },
+ {
+  "page": "qabul-komissiyasi-yangiliklari",
+  "block": 22,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Prezidenti Sh.MIRZIYOEV",
+  "current": "President of the Republic of Uzbekistan Sh. MIRZIYOEV",
+  "fix": "President Sh. MIRZIYOEV",
+  "why": "Block #21 already reads \"Republic of Uzbekistan\", so the signature repeats it."
+ },
+ {
+  "page": "talim-yonalishlarini-tanlash-yoriqnomasi-2025",
+  "block": 1,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "kirish imtihonlarida ishtirok etgan",
+  "current": "принявших участие в вступительных экзаменах",
+  "fix": "принявших участие во вступительных экзаменах",
+  "why": "The preposition must be \"во\" before \"вступительных\"."
+ },
+ {
+  "page": "magistratura-imtihon-fanlari-royxati",
+  "block": 3,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "bakalavriat diplomi ilovasining oʻrtacha balli",
+  "current": "Средний балл диплома бакалавриата",
+  "fix": "Средний балл приложения к диплому бакалавра",
+  "why": "\"Ilovasi\" (diploma supplement) is omitted."
+ },
+ {
+  "page": "magistratura-imtihon-fanlari-royxati",
+  "block": 3,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "bakalavriat diplomi ilovasining oʻrtacha balli",
+  "current": "The average score of the undergraduate diploma is",
+  "fix": "The average score of the bachelor's diploma supplement:",
+  "why": "\"Ilovasi\" (diploma supplement) is omitted."
+ },
+ {
+  "page": "xalqaro-qoshma-talim-2025",
+  "block": 3,
+  "lang": "ru",
+  "severity": "missing",
+  "uz": "Oʻqish muddati 6 yil (3+3).",
+  "current": "(квота приема 50 мест).",
+  "fix": "(квота приема 50 мест). Срок обучения 6 лет (3+3).",
+  "why": "The duration sentence is omitted (it repeats block #5)."
+ },
+ {
+  "page": "xalqaro-qoshma-talim-2025",
+  "block": 3,
+  "lang": "en",
+  "severity": "missing",
+  "uz": "Oʻqish muddati 6 yil (3+3).",
+  "current": "(admission quota 50 places).",
+  "fix": "(admission quota 50 places). Duration of study: 6 years (3+3).",
+  "why": "The duration sentence is omitted (it repeats block #5)."
+ },
+ {
+  "page": "xalqaro-qoshma-talim-2025",
+  "block": 4,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "rus tili",
+  "current": "Язык обучения – Русский.",
+  "fix": "Язык обучения – русский.",
+  "why": "Language names are lowercase in Russian."
+ },
+ {
+  "page": "davlat-imtihonlari",
+  "block": 11,
+  "lang": "ru",
+  "severity": "missing",
+  "uz": "Klinik ordinator attestatsiyaga ... qoʻyiladi. Ushbu hisobot ... taqdim etiladi.",
+  "current": "Порядок проведения аттестации, перечень",
+  "fix": "Клинический ординатор допускается к аттестации на основании отчёта, утверждённого на заседании кафедры (отделения, лаборатории и др.). Отчёт утверждается заведующим кафедрой и представляется в аттестационную комиссию. Порядок проведения аттестации, перечень",
+  "why": "The first two Uzbek sentences are omitted (the English keeps them; they repeat #9/#10)."
+ },
+ {
+  "page": "chet-ellik-talabalar-xavfsizligi",
+  "block": 1,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Oliy oʻquv yurtlarida",
+  "current": "higher educational universities",
+  "fix": "higher education institutions",
+  "why": "\"Higher educational universities\" is not idiomatic English."
+ },
+ {
+  "page": "study-in-uzbekistan",
+  "block": 12,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Oshxona va maishiy xizmat joylari",
+  "current": "Столовая и бытового обслуживания",
+  "fix": "Столовая и места бытового обслуживания",
+  "why": "Broken phrase: the noun \"места\" is missing."
+ },
+ {
+  "page": "study-in-uzbekistan",
+  "block": 15,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "Toʻlov miqdorlari ... koʻrsatilgan boʻlib, ular ... milliy valyutada amalga oshiriladi",
+  "current": "Размер оплаты указан отдельно на портале «Study in Uzbekistan» и осуществляется в национальной валюте по курсу Центрального банка.",
+  "fix": "Размеры оплаты указаны отдельно на портале «Study in Uzbekistan»; оплата производится в национальной валюте по курсу Центрального банка.",
+  "why": "\"Размер оплаты ... осуществляется\" is ungrammatical (an amount is not \"carried out\")."
+ },
+ {
+  "page": "study-in-uzbekistan",
+  "block": 15,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "Toʻlov miqdorlari ... amalga oshiriladi",
+  "current": "The amount of payment is indicated separately on the \"Study in Uzbekistan\" portal and is carried out in national currency at the rate of the Central Bank.",
+  "fix": "The fees are listed separately on the \"Study in Uzbekistan\" portal; payment is made in the national currency at the Central Bank rate.",
+  "why": "An amount cannot be \"carried out\"."
+ },
+ {
+  "page": "study-in-uzbekistan",
+  "block": 19,
+  "lang": "en",
+  "severity": "minor",
+  "uz": "barcha savollar boʻyicha onlayn maslahat olish imkoniyati mavjud",
+  "current": "all questions can be consulted online",
+  "fix": "online consultation is available on all questions",
+  "why": "\"Questions can be consulted\" is ungrammatical."
+ },
+ {
+  "page": "study-in-uzbekistan",
+  "block": 3,
+  "lang": "ru",
+  "severity": "minor",
+  "uz": "(FJSTI)",
+  "current": "([ФМИОЗ](/blog/6/study-in-uzbekistan))",
+  "fix": "(ФМИОЗ)",
+  "why": "The Uzbek has no link; this added link points to the page itself (the English links to /uz instead)."
+ }
+]
