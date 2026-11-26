@@ -1,0 +1,619 @@
+[
+ {
+  "slug": "xalqaro-xamkor-tashkilotlar",
+  "order": 1,
+  "fp": {
+   "uz": "f8b10e75cf67c51c733f22a8d55440333d81ccef1b95fe9cd9e26b4ab3647a54",
+   "ru": "fc478d88a63749443939df04161cc296cbdddaaee29561f3630457a4408c2317",
+   "en": "48a70a77c17b42ff862999f24239d8013cba59ef9b2bcc4eb12a6419855d8d8e"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xalqaro talabalar uchun bosh ofis: Fargʻona jamoat salomatligi tibbiyot instituti, Fargʻona, Oʻzbekiston."
+     },
+     "ru": {
+      "text": "Головной офис для иностранных студентов: Ферганский медицинский институт общественного здоровья, Фергана, Узбекистан."
+     },
+     "en": {
+      "text": "Head office for International students: Fergana Medical Institute of Public Health, Fergana, Uzbekistan."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Hindistondagi bosh ofis",
+      "level": 3
+     },
+     "ru": {
+      "text": "Головной офис в Индии",
+      "level": 3
+     },
+     "en": {
+      "text": "India Head Office",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Manzil: 10-C, 10-qavat, Gopala Tower, Govind Lal Sikka Marg, Prasad Nagar, Nyu-Deli, Deli 110008."
+     },
+     "ru": {
+      "text": "Адрес: 10-C, 10-й этаж, Gopala Tower, Govind Lal Sikka Marg, Prasad Nagar, Нью-Дели, Дели 110008."
+     },
+     "en": {
+      "text": "Address: 10-C, 10th Floor, Gopala Tower, Govind Lal Sikka Marg, Prasad Nagar, New Delhi, Delhi 110008."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Telefon: +91 1143036884"
+     },
+     "ru": {
+      "text": "Телефон: +91 1143036884"
+     },
+     "en": {
+      "text": "Phone: +91 1143036884"
+     }
+    }
+   },
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/India/India.jpg",
+      "alt": "Hindistondagi bosh ofis"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/India/India.jpg",
+      "alt": "Головной офис в Индии"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/India/India.jpg",
+      "alt": "India Head Office"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 500,
+    "caption": {
+     "uz": "Institut haqida umumiy maʼlumot (inglizcha)",
+     "ru": "Общая информация об институте (на английском)",
+     "en": "General information about the institute"
+    },
+    "fp": {
+     "uz": "dab26ba367d6da354a88693ee96d14bafa821dba37e7cd9c3590c981d6397eb3",
+     "ru": "dab26ba367d6da354a88693ee96d14bafa821dba37e7cd9c3590c981d6397eb3",
+     "en": "dab26ba367d6da354a88693ee96d14bafa821dba37e7cd9c3590c981d6397eb3"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "iqlim-boyicha-xarakatlar-strategiyasi",
+  "order": 1,
+  "fp": {
+   "uz": "c22d57c13b561fc6f4934fa17bf582c1d5600e0bbe08afbf9497be306218147c",
+   "ru": "2a12dc059b09a437db1410b157de27cd394345a1f99bdb28034bd99cdb573e1c",
+   "en": "96b76b828d632c803d01fdcf19c81ad5c5e79c9a08137dcf4ec408949bbb663e"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "migrated/img/corusel/osen.jpg",
+      "alt": "Fargʻona jamoat salomatligi tibbiyot instituti: besh yillik barqarorlik va iqlim boʻyicha harakatlar rejasi"
+     },
+     "ru": {
+      "media": "migrated/img/corusel/osen.jpg",
+      "alt": "Пятилетний план действий по устойчивому развитию и климату Ферганского медицинского института общественного здоровья"
+     },
+     "en": {
+      "media": "migrated/img/corusel/osen.jpg",
+      "alt": "Five-Year Sustainability and Climate Action Plan of Ferghana Medical Institute of Public Health"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti: besh yillik barqarorlik va iqlim boʻyicha harakatlar rejasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Пятилетний план действий по устойчивому развитию и климату Ферганского медицинского института общественного здоровья",
+      "level": 2
+     },
+     "en": {
+      "text": "Five-Year Sustainability and Climate Action Plan of Ferghana Medical Institute of Public Health",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot institutining 2022–2027-yillarga moʻljallangan barqarorlik va iqlim boʻyicha harakatlar rejasi yakunlandi va amalga oshirishga tayyor: unda maqsadlarga erishish uchun jasoratli koʻrsatkichlar va batafsil choralar belgilangan. Besh yillik reja institutning xoʻjalik va infratuzilma boʻlimi jamoasi olib borgan va kampusning koʻplab manfaatdor tomonlarini qamrab olgan uzoq jamoatchilik jarayoni natijasidir. 2021-yilda barqarorlik va iqlim oʻzgarishi borasidagi jamoatchilik tushunchasi va xavotirlarini aniqlash uchun soʻrovnoma oʻtkazildi. Bir necha ochiq uchrashuvdan soʻng kampusdagi turli boʻlimlar va talabalardan iborat 40 dan ortiq kishilik guruh tuzildi va ular taxminan bir yil davomida besh yillik rejani ishlab chiqdi."
+     },
+     "ru": {
+      "text": "План действий Ферганского медицинского института общественного здоровья по устойчивому развитию и климату на 2022–2027 годы завершён и готов к реализации: в нём определены амбициозные цели и подробные меры для их достижения. Пятилетний план — результат длительного общественного процесса, проведённого командой службы эксплуатации и инфраструктуры института с участием широкого круга участников кампуса. В 2021 году был проведён опрос, чтобы определить исходный уровень понимания и озабоченности сообщества вопросами устойчивого развития и изменения климата. После нескольких открытых встреч была сформирована группа из более чем 40 человек из разных подразделений кампуса и студентов, которая около года разрабатывала пятилетний план."
+     },
+     "en": {
+      "text": "The Ferghana Medical Institute of Public Health’s Sustainability and Climate Action Plan for 2022-2027 is now finalized and ready for implementation, with ambitious targets and detailed measures to achieve those goals. The five-year plan is the result of a lengthy public process conducted by the Ferghana Medical Institute of Public Health Facilities Team and including a wide range of campus stakeholders. In 2021, a survey was conducted to create a baseline of community understanding and concerns regarding sustainability and climate change. Following several public meetings, a group of more than 40 people from various departments on campus and students was formed, and they worked for about a year to develop the five-year plan."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Missiya",
+      "level": 2
+     },
+     "ru": {
+      "text": "Миссия",
+      "level": 2
+     },
+     "en": {
+      "text": "Mission",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Taʼlim, tadqiqot, tibbiy xizmat koʻrsatish va jamoatchilik xizmatida yetakchilik qilib va yangilik yaratib, biz Fargʻonadagi va butun dunyodagi turli hamjamiyatlarning salomatligi va farovonligini yaxshilaymiz."
+     },
+     "ru": {
+      "text": "Возглавляя и внедряя инновации в образовании, науке, оказании медицинской помощи и общественном служении, мы улучшаем здоровье и благополучие разных сообществ в Фергане и во всём мире."
+     },
+     "en": {
+      "text": "By leading and innovating in education, research, health care delivery, and public service, we improve the health and wellness of our varied communities in Ferghana and around the world."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Barqarorlikning taʼrifi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Определение устойчивого развития",
+      "level": 2
+     },
+     "en": {
+      "text": "Definition of sustainability",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni keng va yaxlit maʼnoda taʼriflaydi. Oliy taʼlimda barqarorlikni rivojlantirish assotsiatsiyasi (AASHE) barqarorlikni «inson va ekologik salomatlik, ijtimoiy adolat, barqaror turmush vositalari va barcha avlodlar uchun yaxshiroq sayyora» deb taʼriflaydi. Institutning ekologik, ijtimoiy va iqtisodiy muammolarga taʼsirini hisobga oladigan barqaror amaliyotlar ushbu majburiyatga kiradi."
+     },
+     "ru": {
+      "text": "Ферганский медицинский институт общественного здоровья понимает устойчивость широко и целостно. Ассоциация по развитию устойчивости в высшем образовании (AASHE) определяет её как «здоровье человека и экосистем, социальную справедливость, стабильные средства к существованию и лучшую планету для всех поколений». В это обязательство входят устойчивые практики, учитывающие влияние института на экологические, социальные и экономические проблемы."
+     },
+     "en": {
+      "text": "The Ferghana Medical Institute of Public Health defines sustainability inclusively and holistically. Sustainability is defined by the Association for the Advancement of Sustainability in Higher Education (AASHE) as \"human and ecological health, social justice, stable livelihoods, and a better planet for all generations.\" Sustainable practices that address the Ferghana Medical Institute of Public Health’s influence on environmental, social, and economic challenges are included in this pledge."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Barqarorlik va iqlim boʻyicha harakatlar qarashi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Видение устойчивого развития и климатических действий",
+      "level": 2
+     },
+     "en": {
+      "text": "Vision for sustainability and climate action",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oʻz faoliyati, taʼlimi va tadqiqotlari orqali Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni oshiradigan, iqlim oʻzgarishini yumshatadigan va kelajak avlodlar uchun resurslarni tejaydigan tibbiy taʼlim va tadqiqotlarni taqdim etib, mamlakat va butun dunyo aholisining farovonligiga hissa qoʻshadi."
+     },
+     "ru": {
+      "text": "Через свою деятельность, образование и исследования Ферганский медицинский институт общественного здоровья способствует благополучию всех людей в стране и мире, предоставляя медицинское образование и научные исследования, которые повышают устойчивость, смягчают изменение климата и сберегают ресурсы для будущих поколений."
+     },
+     "en": {
+      "text": "Through its operations, education, and research, Ferghana Medical Institute of Public Health promotes well-being for all people in the nation and the world by delivering health care education and research that improves sustainability, mitigates climate change, and saves resources for future generations."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Rejada toʻrtta asosiy yoʻnalish bor:"
+     },
+     "ru": {
+      "text": "В плане четыре приоритетных направления:"
+     },
+     "en": {
+      "text": "The plan has four areas of focus:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Transport",
+       "Binolar va energiya",
+       "Hudud va suvni boshqarish",
+       "Materiallar va resurslarni boshqarish"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Транспорт",
+       "Здания и энергетика",
+       "Территория и управление водными ресурсами",
+       "Материалы и управление ресурсами"
+      ]
+     },
+     "en": {
+      "items": [
+       "Transportation",
+       "Buildings and energy",
+       "Grounds and water management",
+       "Materials and resource management"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Har bir yoʻnalish uchun besh yillik maqsadlarga erishishga yordam beradigan aniq tadbirlar roʻyxati mavjud. Masalan, transport boʻyicha institut kampusda foydalaniladigan transport vositalaridan chiqadigan emissiyani ikki baravar kamaytirishni rejalashtirmoqda. Bundan tashqari, kampusga qatnovdan chiqadigan emissiyani kamaytirish ham qiyinchilik tugʻdirmoqda. Bu klinik komponentga ega, ilmiy-tadqiqotlarga yoʻnaltirilgan kampus boʻlgani uchun rejada alohida binolarda energiya sarfini oʻlchash va tekshirish dasturini yaratishni davom ettirish hamda barcha obyektlarda energiyani tejash va qayta tiklashni kuchaytirish koʻzda tutilgan. Materiallar va resurslarni boshqarish boʻyicha kampus hosil qiladigan qattiq chiqindi miqdorini 20 foizga kamaytiradi. Institut rejalashtirish jarayonini boshqarishda yordam berish uchun oliy taʼlim va sogʻliqni saqlash tashkilotlariga iqlim oʻzgarishi taʼsirini yumshatishda koʻmaklashadigan maslahat guruhi — oʻz hamkorlari bilan ishlaydi. Hamkorlarimiz energiyani tejash va issiqxona gazlarini kamaytirish boʻyicha iqlim harakatlari strategiyalarini ishlab chiqish va amalga oshirishda bizga yordam beradi."
+     },
+     "ru": {
+      "text": "Для каждого направления составлен перечень конкретных мер, помогающих достичь пятилетних целей. Например, в области транспорта институт планирует вдвое сократить выбросы от транспортных средств, используемых на территории кампуса. Кроме того, сложностью остаётся сокращение выбросов от поездок в кампус. Поскольку это кампус с интенсивной научной работой и клиническим компонентом, план предусматривает продолжение создания программы измерения и проверки энергопотребления для отдельных зданий, а также усиление энергосбережения и рекуперации во всех объектах. В области материалов и управления ресурсами кампус сократит объём образуемых твёрдых отходов на 20 %. Институт взаимодействует со своими партнёрами — консалтинговой группой, цель которой — помогать организациям высшего образования и здравоохранения смягчать последствия изменения климата, — чтобы возглавить процесс планирования. Наши партнёры помогают нам разрабатывать и реализовывать климатические стратегии по энергосбережению и сокращению выбросов парниковых газов."
+     },
+     "en": {
+      "text": "Each emphasis area has a list of specific efforts to help them meet their five-year objectives. On transportation, for example, the Ferghana medical institute of public health plans to cut emissions from the vehicles it uses on campus by half. Additionally, the neighborhood faces a difficulty in reducing emissions from commutes to campus. Because this is a research-intensive campus with a clinical component, the plan calls for continuing to construct an energy-use metering and validation program for specific buildings, as well as increasing energy conservation and recovery in all facilities. The campus will reduce the amount of solid waste it generates by 20% in terms of materials and resource management. Ferghana Medical Institute of Public Health interacts with its partners, a consulting group whose aim is to help higher education and health care organizations mitigate the effects of climate change, to help lead the planning process. Our partners assist us in the creation and execution of energy-saving and greenhouse-gas-reduction climate action strategies."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti siyosatlari: BMTning barqaror rivojlanish maqsadlari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Политики Ферганского медицинского института общественного здоровья: цели ООН в области устойчивого развития",
+      "level": 2
+     },
+     "en": {
+      "text": "Ferghana Medical Institute of Public Health policies: the UN Sustainable Development Goals",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of  public health Policy on Reducing Inequalities.pdf",
+      "caption": "Tengsizlikni kamaytirish siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of  public health Policy on Reducing Inequalities.pdf",
+      "caption": "Политика сокращения неравенства"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of  public health Policy on Reducing Inequalities.pdf",
+      "caption": "Policy on Reducing Inequalities"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health  Industry Innovation and Infrastructure Strategy.pdf",
+      "caption": "Sanoat, innovatsiyalar va infratuzilma strategiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health  Industry Innovation and Infrastructure Strategy.pdf",
+      "caption": "Стратегия индустриализации, инноваций и инфраструктуры"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health  Industry Innovation and Infrastructure Strategy.pdf",
+      "caption": "Industry Innovation and Infrastructure Strategy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Clean Water and Sanitation Policy.pdf",
+      "caption": "Toza suv va sanitariya siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Clean Water and Sanitation Policy.pdf",
+      "caption": "Политика в области чистой воды и санитарии"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Clean Water and Sanitation Policy.pdf",
+      "caption": "Clean Water and Sanitation Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Climate Change Policy.pdf",
+      "caption": "Iqlim oʻzgarishi siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Climate Change Policy.pdf",
+      "caption": "Политика в области изменения климата"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Climate Change Policy.pdf",
+      "caption": "Climate Change Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health decent work and  economic growth policy.pdf",
+      "caption": "Munosib mehnat va iqtisodiy oʻsish siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health decent work and  economic growth policy.pdf",
+      "caption": "Политика достойного труда и экономического роста"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health decent work and  economic growth policy.pdf",
+      "caption": "Decent Work and Economic Growth Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Gender Equality Policy.pdf",
+      "caption": "Gender tengligi siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Gender Equality Policy.pdf",
+      "caption": "Политика гендерного равенства"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Gender Equality Policy.pdf",
+      "caption": "Gender Equality Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Healthy and Quality Life Policy.pdf",
+      "caption": "Sogʻlom va sifatli hayot siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Healthy and Quality Life Policy.pdf",
+      "caption": "Политика здоровой и качественной жизни"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Healthy and Quality Life Policy.pdf",
+      "caption": "Healthy and Quality Life Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy for the Protection of the Seas and Aquatic Spaces.pdf",
+      "caption": "Dengizlar va suv muhitini muhofaza qilish siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy for the Protection of the Seas and Aquatic Spaces.pdf",
+      "caption": "Политика защиты морей и водных пространств"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy for the Protection of the Seas and Aquatic Spaces.pdf",
+      "caption": "Policy for the Protection of the Seas and Aquatic Spaces"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy to terminate Poverty.pdf",
+      "caption": "Qashshoqlikka barham berish siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy to terminate Poverty.pdf",
+      "caption": "Политика ликвидации бедности"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Policy to terminate Poverty.pdf",
+      "caption": "Policy to Terminate Poverty"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Quality Education Policy.pdf",
+      "caption": "Sifatli taʼlim siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Quality Education Policy.pdf",
+      "caption": "Политика качественного образования"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Quality Education Policy.pdf",
+      "caption": "Quality Education Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable  development goals of  the united  nations.pdf",
+      "caption": "Birlashgan Millatlar Tashkilotining barqaror rivojlanish maqsadlari"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable  development goals of  the united  nations.pdf",
+      "caption": "Цели ООН в области устойчивого развития"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable  development goals of  the united  nations.pdf",
+      "caption": "Sustainable Development Goals of the United Nations"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Cities and Societies Policy in Line with the Sustainable.pdf",
+      "caption": "Barqaror shaharlar va jamiyatlar siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Cities and Societies Policy in Line with the Sustainable.pdf",
+      "caption": "Политика устойчивых городов и сообществ"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Cities and Societies Policy in Line with the Sustainable.pdf",
+      "caption": "Sustainable Cities and Societies Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable development goals of the united nations.pdf",
+      "caption": "Birlashgan Millatlar Tashkilotining barqaror rivojlanish maqsadlari"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable development goals of the united nations.pdf",
+      "caption": "Цели ООН в области устойчивого развития"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable development goals of the united nations.pdf",
+      "caption": "Sustainable Development Goals of the United Nations"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Production and Consumption Policy.pdf",
+      "caption": "Barqaror ishlab chiqarish va isteʼmol siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Production and Consumption Policy.pdf",
+      "caption": "Политика устойчивого производства и потребления"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Sustainable Production and Consumption Policy.pdf",
+      "caption": "Sustainable Production and Consumption Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terminating Hunger Policy.pdf",
+      "caption": "Ocharchilikka barham berish siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terminating Hunger Policy.pdf",
+      "caption": "Политика ликвидации голода"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terminating Hunger Policy.pdf",
+      "caption": "Terminating Hunger Policy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terrestrial Life Policy.pdf",
+      "caption": "Quruqlikdagi hayotni saqlash siyosati"
+     },
+     "ru": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terrestrial Life Policy.pdf",
+      "caption": "Политика сохранения экосистем суши"
+     },
+     "en": {
+      "media": "migrated/img/halqaro xamkorlik/Green University-2023/17 goals of UN Policies/Fergana medical institute of public health Terrestrial Life Policy.pdf",
+      "caption": "Terrestrial Life Policy"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 501,
+    "caption": {
+     "uz": "Arzon va toza energiya siyosati",
+     "ru": "Политика в области доступной и чистой энергии",
+     "en": "Accessible and clean energy policy"
+    },
+    "fp": {
+     "uz": "d18838212d8379bf34cf48365c4940f34de448944e8a298009b880fed0678243",
+     "ru": "d18838212d8379bf34cf48365c4940f34de448944e8a298009b880fed0678243",
+     "en": "d18838212d8379bf34cf48365c4940f34de448944e8a298009b880fed0678243"
+    }
+   }
+  ]
+ }
+]
