@@ -11,7 +11,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import NewsCard from "@/components/shared/NewsCard";
 import NewsPagination from "@/components/shared/NewsPagination";
-import { LoadingState } from "@/components/shared/LoadingState";
+import { ErrorState, LoadingState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal } from "@/components/Animation";
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
@@ -24,10 +24,12 @@ export default function NewsPage() {
   const [items, setItems] = useState<NewsArticle[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setFailed(false);
     let retryTimer: number | undefined;
     listNews(page)
       .then((res) => {
@@ -55,7 +57,10 @@ export default function NewsPage() {
         }, 6000);
       })
       .catch(() => {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          setFailed(true);
+          setLoading(false);
+        }
       });
     return () => {
       cancelled = true;
@@ -75,13 +80,17 @@ export default function NewsPage() {
         compact
       />
 
-      <NewsSectionLayout intro={t("news.intro")}>
+      <NewsSectionLayout>
         {loading ? (
           <LoadingState />
+        ) : failed ? (
+          <ErrorState message={t("common.genericError")} />
+        ) : items.length === 0 ? (
+          <p className="news-empty">{t("news.empty")}</p>
         ) : (
           <>
             <Reveal>
-              <div className="news-grid">
+              <div className="news-grid news-grid--institute">
                 {items.map((item, i) => (
                   <NewsCard key={item.id} article={item} menuId={NEWS_DEFAULT_MENU_ID} index={i} />
                 ))}

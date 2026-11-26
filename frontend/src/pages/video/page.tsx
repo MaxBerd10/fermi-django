@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Animation";
 import PageHeader from "@/components/shared/PageHeader";
 import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import NewsPagination from "@/components/shared/NewsPagination";
-import { LoadingState } from "@/components/shared/LoadingState";
+import { ErrorState, LoadingState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 // The uploaded clips are served without HTTP range support, so even
@@ -65,7 +65,7 @@ function VideoCard({ src }: { src: string }) {
 
   return (
     <div ref={wrapRef} className="w-full h-full">
-      {visible && <video ref={videoRef} src={src} controls preload="metadata" className="w-full h-full object-cover" />}
+      {visible && <video ref={videoRef} src={src} controls playsInline preload="metadata" className="object-contain" />}
     </div>
   );
 }
@@ -89,15 +89,27 @@ export default function VideoPage() {
   const [items, setItems] = useState<VideoItem[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
     setLoading(true);
+    setFailed(false);
     listVideo(page)
       .then((res) => {
+        if (cancelled) return;
         setItems(res.data);
         setTotal(res.meta?.total ?? res.data.length);
       })
-      .finally(() => setLoading(false));
+      .catch(() => {
+        if (!cancelled) setFailed(true);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [page]);
 
   const pageSize = API_PAGE_SIZE;
@@ -107,14 +119,16 @@ export default function VideoPage() {
     <div className="text-foreground-950">
       <PageHeader title={t("video.title")} breadcrumb={t("news.title")} compact />
 
-      <NewsSectionLayout intro={t("video.intro")}>
+      <NewsSectionLayout>
         {loading ? (
           <LoadingState />
+        ) : failed ? (
+          <ErrorState message={t("common.genericError")} />
         ) : (
           <>
             <Reveal>
               <div className="news-video-grid">
-                {items.map((v) => (
+                {items.filter((v) => v.url || v.video).map((v) => (
                   <div key={v.id} className="news-video-card">
                     {v.url ? (
                       <YoutubeCard videoId={v.url} />

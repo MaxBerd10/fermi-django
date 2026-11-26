@@ -45,7 +45,7 @@ export default function GaleryaPage() {
     <div className="text-foreground-950">
       <PageHeader title={t("gallery.eyebrow")} breadcrumb={t("news.title")} compact />
 
-      <NewsSectionLayout intro={t("gallery.intro")} menuSectionId={menuSectionId}>
+      <NewsSectionLayout menuSectionId={menuSectionId}>
         {loading ? (
           <LoadingState />
         ) : (
@@ -56,15 +56,18 @@ export default function GaleryaPage() {
                   <Link
                     key={img.id}
                     to={`/full-gallery/${img.id}`}
-                    className="news-gallery-item group"
+                    className="news-gallery-item"
                   >
                     <img
                       src={optimizedImageUrl(img.img, 480)}
                       alt={img.title || t("gallery.altText")}
                       loading="lazy"
+                      onError={({ currentTarget }) => {
+                        if (currentTarget.getAttribute("src") !== img.img) currentTarget.src = img.img;
+                      }}
                     />
-                    <div className="news-gallery-item__overlay">
-                      <i className="ri-zoom-in-line opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
+                    <div className="news-gallery-item__overlay" aria-hidden>
+                      <i className="ri-zoom-in-line" />
                     </div>
                   </Link>
                 ))}

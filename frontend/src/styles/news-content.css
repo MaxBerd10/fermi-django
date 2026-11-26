@@ -301,6 +301,42 @@
   grid-template-columns: 1fr;
 }
 
+.news-grid--institute .news-card {
+  min-width: 0;
+  border-color: #dce3ef;
+  border-radius: .875rem;
+  box-shadow: none;
+}
+
+.news-grid--institute .news-card:focus-within,
+.news-grid--institute .news-card:hover {
+  border-color: #aebcde;
+  box-shadow: 0 6px 18px rgb(12 28 71 / .08);
+  transform: none;
+}
+
+.news-grid--institute .news-card__media {
+  border-bottom: 1px solid #dce3ef;
+}
+
+.news-grid--institute .news-card__title {
+  color: #101c4e;
+  overflow-wrap: anywhere;
+}
+
+.news-grid--institute .news-card__more {
+  align-self: flex-start;
+  padding: .5rem .65rem;
+  border-radius: .5rem;
+  background: #edf1fa;
+  transition: background-color .2s ease;
+}
+
+.news-grid--institute .news-card__more:hover {
+  gap: .35rem;
+  background: #fff4bd;
+}
+
 /* Pagination */
 .news-pagination {
   display: flex;
@@ -371,12 +407,8 @@
 }
 
 /* ── Article detail ── */
-.news-article {
-  background: #ffffff;
-  border: 1px solid rgba(10, 17, 88, 0.08);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 16px 48px -28px rgba(10, 17, 88, 0.16);
+.news-article__content {
+  min-width: 0;
 }
 
 .news-article__meta {
@@ -385,6 +417,8 @@
   align-items: center;
   gap: 0.625rem 1rem;
   margin-bottom: 1.25rem;
+  padding-bottom: .875rem;
+  border-bottom: 1px solid #dce3ef;
   font-size: 0.8125rem;
   color: #64748b;
 }
@@ -394,8 +428,8 @@
   align-items: center;
   padding: 0.3rem 0.75rem;
   border-radius: 9999px;
-  background: rgba(10, 17, 88, 0.06);
-  color: #0a1158;
+  background: #edf1fa;
+  color: #101c4e;
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -411,27 +445,13 @@
   border-radius: 0.875rem;
   overflow: hidden;
   margin-bottom: 1.25rem;
-  border: 1px solid rgba(10, 17, 88, 0.08);
+  border: 1px solid #dce3ef;
 }
 
 .news-article__hero img {
   width: 100%;
   height: auto;
-  max-height: 28rem;
-  object-fit: cover;
-  object-position: top center;
   display: block;
-}
-
-/* Telegram photos aren't pre-cropped to any particular shape — show the whole
-   photo (letterboxed) instead of cropping whatever doesn't fit 28rem tall. */
-.news-article__hero--contain {
-  background: #f1f5f9;
-}
-
-.news-article__hero--contain img {
-  max-height: 32rem;
-  object-fit: contain;
 }
 
 /* The institute seal stands in for a post that has no photo. It only exists as a 256px image, so it is never
@@ -463,16 +483,13 @@
 }
 
 .news-article__hero--logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 0;
-  background: #ffffff;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .news-article__hero--logo img {
-  width: 15rem;
-  max-width: 70%;
+  width: 10rem;
+  max-width: 100%;
   height: auto;
   max-height: none;
   aspect-ratio: 1 / 1;
@@ -524,16 +541,6 @@
   font-size: 1.1rem;
 }
 
-.news-article__content {
-  padding: 1.25rem 1.375rem 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .news-article__content {
-    padding: 1.5rem 1.75rem 1.75rem;
-  }
-}
-
 .cms-article--news {
   font-size: 1rem;
   line-height: 1.75;
@@ -559,9 +566,44 @@
   margin-bottom: 1em;
 }
 
+.inner-page-body .news-article__blocks > ol {
+  padding: .75rem 1rem .75rem 2.5rem;
+  border: 1px solid #dce3ef;
+  border-radius: .875rem;
+  background: #f6f8fc;
+  list-style: decimal;
+}
+
+.inner-page-body .news-article__blocks > ol > li {
+  padding-block: .5rem;
+}
+
+.inner-page-body .news-article__blocks > ol > li + li {
+  border-top: 1px solid #dce3ef;
+}
+
+.inner-page-body .news-article__blocks > ol > li::marker {
+  color: #101c4e;
+  font-weight: 700;
+}
+
 .cms-article--news img {
   border-radius: 0.75rem;
-  margin: 1.25em auto;
+}
+
+.inner-page-body .cms-article--news > figure.max-w-lg {
+  max-width: 100%;
+  margin-inline: 0;
+}
+
+.inner-page-body .cms-article--news > img,
+.inner-page-body .cms-article--news > p img,
+.inner-page-body .cms-article--news > figure.max-w-lg > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
 }
 
 /* the document cards' buttons (cms-download-btn) keep their own colours: this rule used to turn the white text of
@@ -625,18 +667,16 @@
 
 .news-gallery-item {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
   border-radius: 0.875rem;
   overflow: hidden;
-  background: #eef2ff;
-  border: 1px solid rgba(10, 17, 88, 0.08);
-  box-shadow: 0 8px 24px -16px rgba(10, 17, 88, 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #edf1fa;
+  border: 1px solid #dce3ef;
 }
 
-.news-gallery-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px -16px rgba(10, 17, 88, 0.25);
+.news-gallery-item:focus-visible {
+  outline: 2px solid #101c4e;
+  outline-offset: 2px;
 }
 
 .news-gallery-item img {
@@ -644,11 +684,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.5s ease;
-}
-
-.news-gallery-item:hover img {
-  transform: scale(1.08);
 }
 
 .news-gallery-item__overlay {
@@ -657,14 +692,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 17, 88, 0);
-  transition: background 0.3s ease;
+  opacity: 0;
+  background: rgb(10 17 88 / .32);
+  transition: opacity .2s ease;
   color: #ffffff;
   font-size: 1.75rem;
 }
 
-.news-gallery-item:hover .news-gallery-item__overlay {
-  background: rgba(10, 17, 88, 0.35);
+.news-gallery-item:hover .news-gallery-item__overlay,
+.news-gallery-item:focus-visible .news-gallery-item__overlay {
+  opacity: 1;
 }
 
 /* ── Video grid ── */
@@ -682,16 +719,9 @@
 .news-video-card {
   border-radius: 0.875rem;
   overflow: hidden;
-  background: #0a1158;
-  border: 1px solid rgba(10, 17, 88, 0.1);
+  background: #101c4e;
+  border: 1px solid #dce3ef;
   aspect-ratio: 16 / 9;
-  box-shadow: 0 12px 36px -20px rgba(10, 17, 88, 0.3);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-}
-
-.news-video-card:hover {
-  box-shadow: 0 20px 44px -18px rgba(10, 17, 88, 0.35);
-  transform: translateY(-2px);
 }
 
 .news-video-card iframe,
@@ -704,10 +734,9 @@
 
 /* Full gallery single view */
 .news-full-gallery {
-  border-radius: 1rem;
+  border-radius: .875rem;
   overflow: hidden;
-  border: 1px solid rgba(10, 17, 88, 0.08);
-  box-shadow: 0 20px 50px -24px rgba(10, 17, 88, 0.18);
+  border: 1px solid #dce3ef;
 }
 
 .news-full-gallery img {

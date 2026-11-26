@@ -55,6 +55,7 @@ export interface NewsArticle {
   translated?: boolean;
   isVideo?: boolean;
   hasDocument?: boolean;
+  coverInBody?: boolean;
 }
 
 export interface FacultyListItem {

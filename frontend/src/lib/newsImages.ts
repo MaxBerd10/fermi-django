@@ -55,6 +55,7 @@ export function resolveNewsImageUrl(src: string): string {
   let url = src.trim().replace(/&amp;/g, "&");
 
   if (url.startsWith("//")) url = `https:${url}`;
+  if (url.startsWith("/media/")) return url;
   if (url.startsWith("/")) url = `${API_ORIGIN}${url}`;
 
   url = url.replace(/^https?:\/\/(?:www\.)?fjsti\.uz/i, API_ORIGIN);
@@ -87,6 +88,31 @@ export function extractFirstImageFromHtml(html: string): string | null {
   }
 
   return null;
+}
+
+export function hasNewsImageInBody(article: NewsArticle, coverUrl: string): boolean {
+  function imageKey(src: string): string {
+    const resolved = resolveNewsImageUrl(src);
+    try {
+      const url = new URL(resolved, window.location.origin);
+      return url.pathname.startsWith("/media/") ? url.pathname : url.origin + url.pathname;
+    } catch {
+      return resolved;
+    }
+  }
+
+  const cover = imageKey(coverUrl);
+  const matches = (src?: string) => Boolean(src && imageKey(src) === cover);
+  const htmlMatches = (html: string) =>
+    Array.from(html.matchAll(/<img\b[^>]*\ssrc\s*=\s*["']([^"']+)["']/gi)).some((match) => matches(match[1]));
+
+  if (!article.blocks?.length) return htmlMatches(article.content);
+  return article.blocks.some((block) => {
+    if (block.block_type === "image") return matches(block.data.image?.file);
+    if (block.block_type === "gallery") return block.data.items.some((item) => matches(item.image?.file));
+    if (block.block_type === "raw_html") return htmlMatches(block.data.html);
+    return false;
+  });
 }
 
 export function getNewsArticleImage(

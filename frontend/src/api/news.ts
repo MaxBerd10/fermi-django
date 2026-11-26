@@ -35,6 +35,7 @@ interface DjangoNewsListItem {
 }
 interface DjangoNewsDetail extends DjangoNewsListItem {
   page: { id: number; slug: string; blocks: ContentBlock[] };
+  cover_in_body?: boolean;
 }
 
 function mapListItem(post: DjangoNewsListItem): NewsArticle {
@@ -57,6 +58,7 @@ function mapDetail(post: DjangoNewsDetail): NewsArticle {
     ...mapListItem(post),
     content: blocksToPlainText(post.page.blocks),
     blocks: post.page.blocks,
+    coverInBody: post.cover_in_body,
   };
 }
 

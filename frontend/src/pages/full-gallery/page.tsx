@@ -46,7 +46,13 @@ export default function FullGalleryPage() {
       <NewsSectionLayout>
         <Reveal>
           <div className="news-full-gallery">
-            <img src={optimizedImageUrl(img.img, 1600)} alt={img.title || t("gallery.altText")} />
+            <img
+              src={optimizedImageUrl(img.img, 1600)}
+              alt={img.title || t("gallery.altText")}
+              onError={({ currentTarget }) => {
+                if (currentTarget.getAttribute("src") !== img.img) currentTarget.src = img.img;
+              }}
+            />
           </div>
         </Reveal>
 

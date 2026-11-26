@@ -27,6 +27,7 @@ import { Reveal } from "@/components/Animation";
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 
 import { getNewsCategoryConfig } from "@/lib/newsCategorySection";
+import { normalizeNewsCategorySlug } from "@/lib/newsImages";
 
 import NewsCategoryHero from "@/components/shared/NewsCategoryHero";
 
@@ -63,6 +64,18 @@ export default function NewsCategoryPage() {
   const resolvedMenuId = menuId ? Number(menuId) : NEWS_DEFAULT_MENU_ID;
 
   const categoryConfig = getNewsCategoryConfig(slug);
+  const categorySlug = normalizeNewsCategorySlug(slug ?? "");
+  const useInstituteGrid = resolvedMenuId === NEWS_DEFAULT_MENU_ID || [
+    "institut-yangiliklari",
+    "elonlar",
+    "madaniy-marifiy-tadbirlar",
+    "xalqaro-tadbirlar",
+    "talabalar-hayoti",
+    "sport-tadbirlari",
+    "yoshlar-ittifoqi-tadbirlari",
+    "qabul-komissiyasi",
+    "tadbirlar",
+  ].includes(categorySlug);
 
   // A news category reached from another menu section (Faoliyat > Madaniy-ma'rifiy fa'oliyat > Madaniy-ma'rifiy
   // tadbirlar, /news/2019/...) lists THAT section's pages beside it. Only the two news roots -- "Institut
@@ -170,9 +183,9 @@ export default function NewsCategoryPage() {
 
         currentSlug={slug}
 
-        intro={categoryConfig ? undefined : t("news.intro")}
+        intro={categoryConfig || useInstituteGrid ? undefined : t("news.intro")}
 
-        theme={categoryConfig?.theme}
+        theme={useInstituteGrid ? undefined : categoryConfig?.theme}
 
         menuSectionId={sectionNavId}
 
@@ -180,7 +193,7 @@ export default function NewsCategoryPage() {
 
         hero={
 
-          categoryConfig && category ? (
+          !useInstituteGrid && categoryConfig && category ? (
 
             <NewsCategoryHero title={category.title} config={categoryConfig} count={total} />
 
@@ -202,7 +215,7 @@ export default function NewsCategoryPage() {
 
           <Reveal>
 
-            <div className="news-grid">
+            <div className={useInstituteGrid ? "news-grid news-grid--institute" : "news-grid"}>
 
               {items.map((n, i) => (
 

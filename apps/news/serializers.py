@@ -39,3 +39,16 @@ class NewsPostDetailSerializer(NewsPostListSerializer):
 
     class Meta(NewsPostListSerializer.Meta):
         fields = NewsPostListSerializer.Meta.fields + ["page"]
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        # An image block can use a separate file for each language. Treat the
+        # block as the cover's placement when it has a resolved image in all
+        # languages and one of those images is the cover.
+        data["cover_in_body"] = bool(instance.cover_id and any(
+            block["block_type"] == "image"
+            and all(block["data"].get(lang, {}).get("image") for lang in ("uz", "ru", "en"))
+            and any(payload.get("image_id") == instance.cover_id for payload in block["data"].values())
+            for block in data["page"]["blocks"]
+        ))
+        return data

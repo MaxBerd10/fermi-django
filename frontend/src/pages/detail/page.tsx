@@ -15,7 +15,7 @@ import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
-import { getNewsArticleImage, isPlaceholderLogo, showsWholeCover } from "@/lib/newsImages";
+import { getNewsArticleImage, hasNewsImageInBody, isPlaceholderLogo } from "@/lib/newsImages";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { formatLongDate } from "@/lib/date";
 import { Reveal } from "@/components/Animation";
@@ -79,12 +79,9 @@ export default function DetailPage() {
 
   const categorySlug = article.category?.slug;
   const heroImage = getNewsArticleImage(article);
-  // Same reasoning as the "telegram" case below the image itself already
-  // documents: a "tanlovlar" cover is typically one whole poster/infographic
-  // (every line of it is content, e.g. the iShifo contest call's evaluation
-  // chart) rather than a photo that crops fine -- object-fit:cover's default
-  // 28rem-tall crop was cutting real content off the bottom of a wide one.
-  const useContainHero = showsWholeCover(article.category);
+  const showHero = heroImage && (article.isVideo || (
+    !isPlaceholderLogo(heroImage) && !article.coverInBody && !hasNewsImageInBody(article, heroImage)
+  ));
   const hasBodyHeading = article.blocks
     ? article.blocks.some((b) => b.block_type === "heading")
     : /<h[1-6][ >]/i.test(article.content);
@@ -96,7 +93,7 @@ export default function DetailPage() {
       <MenuSectionOriginContext.Provider value={originSection}>
       <NewsSectionLayout currentSlug={originSection ? undefined : categorySlug} menuSectionId={originSection}>
         <Reveal>
-          <article className="news-article">
+          <article className="page-card news-article">
             <div className="news-article__content">
               <div className="news-article__meta">
                 {article.category && (
@@ -116,9 +113,15 @@ export default function DetailPage() {
                 )}
               </div>
 
-              {heroImage && (
-                <div className={`news-article__hero${isPlaceholderLogo(heroImage) ? " news-article__hero--logo" : useContainHero ? " news-article__hero--contain" : ""}`}>
-                  <img src={optimizedImageUrl(heroImage, 1200)} alt={article.title} />
+              {showHero && (
+                <div className={`news-article__hero${isPlaceholderLogo(heroImage) ? " news-article__hero--logo" : ""}`}>
+                  <img
+                    src={optimizedImageUrl(heroImage, 1200)}
+                    alt={article.title}
+                    onError={({ currentTarget }) => {
+                      if (currentTarget.getAttribute("src") !== heroImage) currentTarget.src = heroImage;
+                    }}
+                  />
                   {article.isVideo && (
                     <span className="news-article__video-badge" aria-hidden>
                       <i className="ri-play-fill" />
@@ -164,7 +167,7 @@ export default function DetailPage() {
                   no Page/ContentBlock backing), so it keeps using
                   RichContent on article.content exactly as before. */}
               {article.blocks && article.blocks.length > 0 ? (
-                <div className="cms-article cms-article--rich cms-article--news space-y-4">
+                <div className="cms-article cms-article--rich cms-article--news news-article__blocks space-y-4">
                   {article.blocks.map((block) => (
                     <BlockRenderer key={block.id} block={block} />
                   ))}
