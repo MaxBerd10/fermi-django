@@ -42,3 +42,10 @@ def _plain_http_for_tests(settings):
     http://, so every request would be answered with a 301 to https. In production that redirect is nginx's and
     the Node server's job; here it is switched off so the tests exercise the views."""
     settings.SECURE_SSL_REDIRECT = False
+
+
+@pytest.fixture(autouse=True)
+def _static_files_without_a_build_step(settings):
+    """Production serves static files through a hashed manifest, which only exists after `collectstatic`. Tests (and CI,
+    which never runs collectstatic) must not depend on that build step: plain storage resolves the same URLs."""
+    settings.STORAGES = {**settings.STORAGES, "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"}}
