@@ -34,3 +34,11 @@ def _public_registration_on_for_tests(settings):
     """Production keeps sign-up closed (settings.PUBLIC_REGISTRATION_ENABLED); the sign-up tests exercise the flow
     itself, and test_registration_closed.py covers the closed default."""
     settings.PUBLIC_REGISTRATION_ENABLED = True
+
+
+@pytest.fixture(autouse=True)
+def _plain_http_for_tests(settings):
+    """With DEBUG off (as in CI and production) settings turn SECURE_SSL_REDIRECT on, and the test client talks plain
+    http://, so every request would be answered with a 301 to https. In production that redirect is nginx's and
+    the Node server's job; here it is switched off so the tests exercise the views."""
+    settings.SECURE_SSL_REDIRECT = False
