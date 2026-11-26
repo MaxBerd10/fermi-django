@@ -1,0 +1,969 @@
+[
+ {
+  "slug": "malakaviy-imtihonlar",
+  "order": 1,
+  "fp": {
+   "uz": "dbdf3e6cf849f428b2862710f382213b6ce8209d7d8fb88a4e5ceeb97b38cdef",
+   "ru": "e6fa9908e0fa294104699b90424a818579a751a8bc1b3c0f82d936f18d50e35e",
+   "en": "4d22f263865490e44c2544e912ebc361fde0079aacdbee8459216bdd04766ec3"
+  },
+  "blocks": [
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Akusherlik va ginekologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Акушерство и гинекология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Obstetrics and gynecology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Morfologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Морфология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Morphology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Gigiyena"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Гигиена"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Hygiene"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Dermatologiya va venerologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Дерматология и венерология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Dermatology and venereology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Nevrologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Неврология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Neurology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Patologik anatomiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Патологическая анатомия"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Pathological anatomy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Taʻlim va tarbiya nazariyasi va metodikasi (sohalar boʻyicha)"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Теория и методика обучения и воспитания (по областям)"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Theory and methodology of education and upbringing (by field)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Endokrinologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Эндокринология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Endocrinology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Odam va hayvonlar fiziologiyasi"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Физиология человека и животных"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Human and Animal Physiology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Ichki kasalliklar"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Внутренние болезни"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Internal diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Profilaktik tibbiyot"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Профилактическая медицина"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Preventive Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Klinik laborator va funksional diagnostika"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Клиническая лабораторная и функциональная диагностика"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Clinical laboratory and functional diagnostics"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the twelve links are document cards ('code — name' in three languages); uz typos: 'Profilaktik tibbyot', 'funktsional'; the 13.00.02 name is written again in all three languages (ru was 'Образование и теория и методология образования по областям'); the Russian link of 14.00.43 was a broken address (the Uzbek file is used)"
+  ]
+ },
+ {
+  "slug": "monografiya",
+  "order": 1,
+  "fp": {
+   "uz": "6787fbab0e7cfcbe9abf1e4cc4c9907a1e1276d1fcedab686fb9dfaf0827af40",
+   "ru": "d4403b52394acbe6b582a4501c8787714a7579e01675b22c2546165c8871531e",
+   "en": "d4403b52394acbe6b582a4501c8787714a7579e01675b22c2546165c8871531e"
+  },
+  "blocks": [
+   {
+    "block_type": "image",
+    "data": {
+     "uz": {
+      "media": "monografiya/monografiya-2025-muqova.jpg",
+      "alt": "«Tibbiyot oliy taʻlim muassasalarida fundamental fanlarni integral tizimida oʻqitishning asosiy motivlari» monografiyasining muqovasi (M. T. Rasulov, 2025)"
+     },
+     "ru": {
+      "media": "monografiya/monografiya-2025-muqova.jpg",
+      "alt": "Обложка монографии «Основные мотивы преподавания фундаментальных дисциплин в интегральной системе в медицинских вузах» (М. Т. Расулов, 2025)"
+     },
+     "en": {
+      "media": "monografiya/monografiya-2025-muqova.jpg",
+      "alt": "Cover of the monograph “The main motives for teaching fundamental sciences in an integral system at medical higher education institutions” (M. T. Rasulov, 2025)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "monografiya/monografiya-2025-rasulov-mt.pdf",
+      "caption": "Tibbiyot oliy taʻlim muassasalarida fundamental fanlarni integral tizimida oʻqitishning asosiy motivlari (M. T. Rasulov, 2025)"
+     },
+     "ru": {
+      "media": "monografiya/monografiya-2025-rasulov-mt.pdf",
+      "caption": "Основные мотивы преподавания фундаментальных дисциплин в интегральной системе в медицинских вузах (М. Т. Расулов, 2025)"
+     },
+     "en": {
+      "media": "monografiya/monografiya-2025-rasulov-mt.pdf",
+      "caption": "The main motives for teaching fundamental sciences in an integral system at medical higher education institutions (M. T. Rasulov, 2025)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ПИЩЕВАРИТЕЛЬНОЙ СИСТЕМЫ.pdf",
+      "caption": "Hazm tizimi fiziologiyasi (rus tilida)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ПИЩЕВАРИТЕЛЬНОЙ СИСТЕМЫ.pdf",
+      "caption": "Физиология пищеварительной системы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ПИЩЕВАРИТЕЛЬНОЙ СИСТЕМЫ.pdf",
+      "caption": "Physiology of the digestive system (in Russian)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ВЫДЕЛИТЕЛЬНОЙ И ЭНДОКРИННОЙ СИСТЕМЫ.pdf",
+      "caption": "Ayirish va endokrin tizimlar fiziologiyasi (rus tilida)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ВЫДЕЛИТЕЛЬНОЙ И ЭНДОКРИННОЙ СИСТЕМЫ.pdf",
+      "caption": "Физиология выделительной и эндокринной системы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/ФИЗИОЛОГИЯ ВЫДЕЛИТЕЛЬНОЙ И ЭНДОКРИННОЙ СИСТЕМЫ.pdf",
+      "caption": "Physiology of the excretory and endocrine systems (in Russian)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/НОРМАЛЬНАЯ ФИЗИОЛОГИЯ.pdf",
+      "caption": "Normal fiziologiya (rus tilida)"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/НОРМАЛЬНАЯ ФИЗИОЛОГИЯ.pdf",
+      "caption": "Нормальная физиология"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Innovatsiya barcha bo`limlari/Ilmiy tadqiqotlar/Monografiyalar/НОРМАЛЬНАЯ ФИЗИОЛОГИЯ.pdf",
+      "caption": "Normal physiology (in Russian)"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the cover is an image block; the four PDF links are cards; the three monographs on physiology are in Russian (their Russian titles were the link texts in all three languages): the captions in uz and en say '(in Russian)', the ru/en captions of the 2025 monograph were the Uzbek title with wrong apostrophes: translated by us"
+  ]
+ },
+ {
+  "slug": "doktorantura-malumotlari",
+  "order": 1,
+  "fp": {
+   "uz": "d2714ea7fc7a45b28a7769a1fa142e16c8704a4041a5cb924951f2f87046c12a",
+   "ru": "bbc097548bce4158cc614f021c722bcb0ac23ecc397148f7d65674ee91c023cf",
+   "en": "2d79281df1a632522f7bf4e051e3eaf4c7ff3e9adef9923a8a77a8eb335aacbf"
+  },
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Institutda 40 nafar tayanch doktorant, 255 nafar mustaqil izlanuvchi faoliyat olib boradi. Tayanch doktorantura (PhD), doktorantura (DSc) hamda mustaqil izlanuvchilik ixtisosliklari soni 24 ta."
+     },
+     "ru": {
+      "text": "В институте действуют 40 базовых докторантов и 255 самостоятельных соискателей. Количество специальностей базовой докторантуры (PhD), докторантуры (DSc) и самостоятельного соискательства — 24."
+     },
+     "en": {
+      "text": "The institute has 40 basic doctoral students and 255 independent researchers. The number of specialties of basic doctoral studies (PhD), doctoral studies (DSc) and independent research is 24."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "FJSTIda 2025-yil uchun tayanch doktorantura institutiga qabul qilish boʻyicha imtihon dasturlari",
+      "level": 2
+     },
+     "ru": {
+      "text": "Экзаменационные программы для приёма в базовую докторантуру Ферганского медицинского института общественного здоровья на 2025 год",
+      "level": 2
+     },
+     "en": {
+      "text": "Examination programmes for admission to basic doctoral studies at the Fergana Medical Institute of Public Health for 2025",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Akusherlik va ginekologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Акушерство и гинекология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_7AXWbQR.00.01-Akusherlik_va_ginekologiya_dastur.pdf",
+      "caption": "14.00.01 — Obstetrics and gynecology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Morfologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Морфология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_Hwd532f.00.02.-Morfologiya_dastur.pdf",
+      "caption": "14.00.02 — Morphology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Gigiyena"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Гигиена"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_P3V0mET.00.07-Gigiyena_dastur.pdf",
+      "caption": "14.00.07 — Hygiene"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Dermatologiya va venerologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Дерматология и венерология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_zE8aEJj.00.11-Dermatologiya_va_venerologiya_dastur.pdf",
+      "caption": "14.00.11 — Dermatology and venereology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Nevrologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Неврология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_06fm9Zl.00.13-Nevrologiya_dastur.pdf",
+      "caption": "14.00.13 — Neurology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Patologik anatomiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Патологическая анатомия"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_3u0aknd.00.15-Patologik_anatomiya_dastur.pdf",
+      "caption": "14.00.15 — Pathological anatomy"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Taʻlim va tarbiya nazariyasi va metodikasi (sohalar boʻyicha)"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Теория и методика обучения и воспитания (по областям)"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/13_00_02_Talim_va_tarbiya_nazariyasi_va_metodikasi_dastur_Sh6BFAL.pdf",
+      "caption": "13.00.02 — Theory and methodology of education and upbringing (by field)"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Endokrinologiya"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Эндокринология"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_VcqHird.00.03-Endokrinologiya_dastur.pdf",
+      "caption": "14.00.03 — Endocrinology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Odam va hayvonlar fiziologiyasi"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Физиология человека и животных"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/03_a0fuB7F.00.08-Odam_va_hayvonlar_fiziologiyasi_dastur.pdf",
+      "caption": "03.00.08 — Human and Animal Physiology"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Ichki kasalliklar"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Внутренние болезни"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_sSMxYXO.00.05-Ichki_kasalliklar_dastur.pdf",
+      "caption": "14.00.05 — Internal diseases"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Profilaktik tibbiyot"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Профилактическая медицина"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_MkWMfNC.00.43-Profilaktik_tibbyot_dastur.pdf",
+      "caption": "14.00.43 — Preventive Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Klinik laborator va funksional diagnostika"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Клиническая лабораторная и функциональная диагностика"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/14_00_25_Klinik_laborator_va_funktsional_diagnostika_dastur_lvg2Kkx.pdf",
+      "caption": "14.00.25 — Clinical laboratory and functional diagnostics"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Oliy oʻquv yurtidan keyingi taʻlim institutlariga kiruvchi talabgorlarga qoʻyiladigan talablar",
+      "level": 2
+     },
+     "ru": {
+      "text": "Требования к соискателям, поступающим в учреждения послевузовского образования",
+      "level": 2
+     },
+     "en": {
+      "text": "Requirements for applicants to postgraduate education institutions",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktoranturaga va doktoranturaga qabul qilish OTM yoki ITMlari tashkil etadigan qabul komissiyalar tomonidan qonun hujjatlarida belgilangan tartibda tanlov asosida amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Приём в базовую докторантуру и докторантуру осуществляется приёмными комиссиями, создаваемыми высшими образовательными учреждениями или научно-исследовательскими центрами, на конкурсной основе в порядке, установленном законодательством."
+     },
+     "en": {
+      "text": "Admission to the basic doctoral and doctoral programs is carried out on a competitive basis by admission commissions formed by universities or research institutes in the manner prescribed by law."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktoranturada oʻqishga talabgorlarni tanlab olish kirish imtihonlari natijalariga koʻra, doktoranturaga esa — suhbat natijalariga koʻra amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Отбор поступающих в базовую докторантуру осуществляется по результатам вступительных экзаменов, а в докторантуру — по результатам собеседования."
+     },
+     "en": {
+      "text": "Applicants for the basic doctoral program are selected based on the results of the entrance exams, and for the doctoral program, based on the results of interviews."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mustaqil izlanuvchilik institutiga rasmiylashtirish suhbat natijalariga koʻra amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Оформление в институт самостоятельного соискательства осуществляется по результатам собеседования."
+     },
+     "en": {
+      "text": "Registration for independent research is based on the results of an interview."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Falsafa doktori (PhD) uchun talablar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Требования к лицам, поступающим в базовую докторантуру или оформляемым как самостоятельный соискатель для получения степени PhD",
+      "level": 3
+     },
+     "en": {
+      "text": "Requirements for applicants to basic doctoral studies or independent researchers for the PhD degree",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Falsafa doktori (PhD) ilmiy darajasini olish uchun tayanch doktoranturaga kiruvchi yoki mustaqil izlanuvchi sifatida rasmiylashtiriluvchi shaxslar quyidagi talablarga javob berishi lozim:"
+     },
+     "ru": {
+      "text": "Лица, поступающие в базовую докторантуру либо оформляемые в качестве самостоятельного соискателя для получения учёной степени доктора философии (PhD), должны соответствовать следующим требованиям:"
+     },
+     "en": {
+      "text": "In order to receive the degree of Doctor of Philosophy (PhD), persons entering the basic doctoral program or being registered as independent researchers must meet the following requirements:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "magistr darajasi yoki klinik ordinatura (tibbiyot fanlari uchun), yoki oliy maʻlumot (mutaxassislik dasturlari boʻyicha) toʻgʻrisidagi diplomga ega boʻlish",
+       "falsafa doktori (PhD) ilmiy darajasini olish uchun dissertatsiya tadqiqoti asosini tashkil qilishi mumkin boʻlgan muayyan ilmiy natijalarga, shu jumladan, ilmiy jurnallar va nashrlarda chop etilgan kamida bitta ilmiy maqolaga hamda ilmiy-amaliy konferensiyalar, seminarlarda, tegishli ilmiy yoʻnalishlar boʻyicha ilmiy ishlar toʻplamlarida kamida ikkita tezisga ega boʻlish"
+      ]
+     },
+     "ru": {
+      "items": [
+       "иметь диплом магистра или клинической ординатуры (для медицинских наук), либо диплом о высшем образовании (по программам подготовки специалистов)",
+       "иметь определённые научные результаты, которые могут составить основу диссертационного исследования на соискание степени PhD, в том числе не менее одной научной статьи, опубликованной в научных журналах и изданиях, и не менее двух тезисов, опубликованных в сборниках научных работ по соответствующим научным направлениям, а также представленных на научно-практических конференциях и семинарах"
+      ]
+     },
+     "en": {
+      "items": [
+       "hold a master’s degree or a clinical residency diploma (for medical sciences), or a diploma of higher education (for specialist programmes)",
+       "have certain scientific results that may form the basis of dissertation research for the PhD degree, including at least one scientific article published in scientific journals and publications and at least two theses in scientific-practical conferences, seminars and collections of scientific papers in the relevant fields"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Falsafa doktori (PhD) ilmiy darajasini olish uchun mustaqil izlanuvchilikka ikki yildan kam boʻlmagan ilmiy-pedagogik stajga yoki aniq ilmiy yutuqqa (ixtiroga patent yoki mualliflik guvohnomasi) ega boʻlgan shaxslar rasmiylashtiriladi."
+     },
+     "ru": {
+      "text": "для оформления в самостоятельное соискательство на степень PhD допускаются лица, имеющие научно-педагогический стаж не менее двух лет либо конкретное научное достижение (патент на изобретение или авторское свидетельство)."
+     },
+     "en": {
+      "text": "To obtain the degree of Doctor of Philosophy (PhD), an independent researcher must have at least two years of scientific and pedagogical experience or a specific scientific achievement (patent or certificate of invention)."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktoranturaga kirish uchun hujjatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Документы для поступления в базовую докторантуру",
+      "level": 3
+     },
+     "en": {
+      "text": "Documents for admission to basic doctoral studies",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Tayanch doktoranturada oʻqishga talabgorlar OTM yoki ITMga quyidagi hujjatlarni taqdim etadilar:"
+     },
+     "ru": {
+      "text": "Поступающие в базовую докторантуру представляют в высшее образовательное учреждение или научно-исследовательский центр следующие документы:"
+     },
+     "en": {
+      "text": "Applicants for basic doctoral studies must submit the following documents to the university:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Qisqacha biografik maʻlumot (obyektivka)",
+       "Oliy taʻlim muassasasi magistraturasi diplomi yoki oliy maʻlumot (mutaxassislik dasturlari boʻyicha) toʻgʻrisida diplom nusxasi. (tizimda integratsiya qilingan boʻlsa shart emas)",
+       "Nashr etilgan ilmiy ishlarning nusxalari, havolalari bilan (kamida 1 ta ilmiy maqola va 2 ta tezis)",
+       "Oʻzbekiston Respublikasi Prezidenti Davlat stipendiyasi hujjat nusxasi (mavjud boʻlsa)",
+       "Chet tilini bilish boʻyicha tan olingan talab darajasidagi sertifikatlar"
+      ]
+     },
+     "ru": {
+      "items": [
+       "краткая биографическая справка (объективка)",
+       "копия диплома магистратуры высшего образовательного учреждения либо копия диплома о высшем образовании (по программам подготовки специалистов) (при наличии интеграции в системе — не требуется)",
+       "копии опубликованных научных работ и/или ссылки на них (не менее 1 научной статьи и 2 тезисов)",
+       "копия документа о Государственной стипендии Президента Республики Узбекистан (при наличии)",
+       "сертификаты по иностранному языку признанного уровня, соответствующие установленным требованиям"
+      ]
+     },
+     "en": {
+      "items": [
+       "brief biographical information (CV)",
+       "a copy of the master’s diploma of a higher education institution or of a diploma of higher education (for specialist programmes) (not required if integrated in the system)",
+       "copies of published scientific works, with links (at least 1 scientific article and 2 theses)",
+       "a copy of the document on the State Scholarship of the President of the Republic of Uzbekistan (if any)",
+       "certificates of recognised foreign-language proficiency at the required level"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Doktoranturaga kirish uchun hujjatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Документы для поступления в докторантуру",
+      "level": 3
+     },
+     "en": {
+      "text": "Documents for admission to doctoral studies",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Doktoranturada oʻqishga talabgorlar OTM yoki ITMga quyidagi hujjatlarni taqdim etadilar:"
+     },
+     "ru": {
+      "text": "Поступающие в докторантуру представляют в высшее образовательное учреждение или научно-исследовательский центр следующие документы:"
+     },
+     "en": {
+      "text": "Applicants for doctoral studies must submit the following documents to the university:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Qisqacha biografik maʻlumot (obyektivka)",
+       "Chet tilini bilish boʻyicha tan olingan talab darajasidagi sertifikatlar",
+       "Oliy maʻlumot, fan nomzodi yoxud falsafa doktori (PhD) yoki xorijiy davlatlarda unga tenglashtirilgan ilmiy darajaga ega boʻlganligi toʻgʻrisidagi diplom nusxasi",
+       "Tadqiqot mavzusi boʻyicha ilmiy maʻruza va fan doktori (DSc) ilmiy darajasini olish uchun tayyorlangan doktorlik dissertatsiyasi rejasining mufassal loyihasi",
+       "Nashr etilgan ilmiy ishlar roʻyxati, shuningdek ularning nusxalari, havolalari bilan (kamida 3 ta ilmiy maqola va 2 ta tezis)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "краткая биографическая справка (объективка)",
+       "сертификаты по иностранному языку признанного уровня, соответствующие установленным требованиям",
+       "копия диплома о высшем образовании, либо диплома кандидата наук / доктора философии (PhD), либо учёной степени, приравненной к ним и полученной в зарубежных государствах",
+       "научный доклад по теме исследования и подробный проект плана докторской диссертации, подготовленной для получения учёной степени доктора наук (DSc)",
+       "перечень опубликованных научных работ, а также их копии и/или ссылки на них (не менее 3 научных статей и 2 тезисов)"
+      ]
+     },
+     "en": {
+      "items": [
+       "brief biographical information (CV)",
+       "certificates of recognised foreign-language proficiency at the required level",
+       "a copy of a diploma of higher education, or a diploma of Candidate of Sciences / Doctor of Philosophy (PhD), or an equivalent academic degree obtained abroad",
+       "a scientific report on the research topic and a detailed draft plan of the doctoral dissertation prepared for the degree of Doctor of Science (DSc)",
+       "a list of published scientific works, with their copies and links (at least 3 scientific articles and 2 theses)"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Mustaqil izlanuvchilikka rasmiylashtirish uchun hujjatlar",
+      "level": 3
+     },
+     "ru": {
+      "text": "Документы для оформления в самостоятельное соискательство",
+      "level": 3
+     },
+     "en": {
+      "text": "Documents for registration as an independent researcher",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mustaqil izlanuvchilikka talabgor quyidagi hujjatlarni ilova qilgan holda ariza bilan OTM yoki ITMga murojaat qiladi:"
+     },
+     "ru": {
+      "text": "Соискатель для оформления в самостоятельное соискательство обращается в высшее образовательное учреждение или научно-исследовательский центр с заявлением, приложив следующие документы:"
+     },
+     "en": {
+      "text": "Applicants for independent research apply to the university with the following documents:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "qisqacha biografik maʻlumotnoma",
+       "falsafa doktori (PhD) ilmiy darajasini olish uchun mustaqil izlanuvchi sifatida rasmiylashtirish uchun magistrlik yoki klinik ordinatura (tibbiyot fanlari uchun) yoki oliy maʻlumot (mutaxassislik dasturi boʻyicha) toʻgʻrisidagi diplom nusxasi",
+       "ilmiy ishlar roʻyxati va ularning nusxasi",
+       "fan doktori (DSc) ilmiy darajasini olish uchun mustaqil izlanuvchi sifatida rasmiylashtirish uchun fan nomzodi yoki falsafa doktori (PhD) diplomi yoki xorijda olingan unga tenglashtirilgan boshqa ilmiy darajalar diplomi nusxasi",
+       "ish joyidan tavsifnoma"
+      ]
+     },
+     "ru": {
+      "items": [
+       "краткая биографическая справка",
+       "для оформления в качестве самостоятельного соискателя на степень доктора философии (PhD) — копия диплома магистра или клинической ординатуры (для медицинских наук) либо копия диплома о высшем образовании (по программе подготовки специалистов)",
+       "список научных работ и их копии",
+       "для оформления в качестве самостоятельного соискателя на степень доктора наук (DSc) — копия диплома кандидата наук или доктора философии (PhD), либо копия иной приравненной учёной степени, полученной за рубежом",
+       "характеристика с места работы"
+      ]
+     },
+     "en": {
+      "items": [
+       "brief biographical information",
+       "for registration for the PhD degree: a copy of the master’s diploma or the clinical residency diploma (for medical sciences) or of the diploma of higher education (for specialist programmes)",
+       "a list of scientific works and their copies",
+       "for registration for the DSc degree: a copy of the diploma of Candidate of Sciences or Doctor of Philosophy (PhD), or of another equivalent academic degree obtained abroad",
+       "a reference from the place of work"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Doktorantura nizomi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Положение о докторантуре",
+      "level": 2
+     },
+     "en": {
+      "text": "Doctoral regulations",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_304-son_qarori.pdf",
+      "caption": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 304-son qarori"
+     },
+     "ru": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_304-son_qarori.pdf",
+      "caption": "Постановление Кабинета Министров Республики Узбекистан № 304"
+     },
+     "en": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_304-son_qarori.pdf",
+      "caption": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 304"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_937-son_qarori.pdf",
+      "caption": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 937-son qarori"
+     },
+     "ru": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_937-son_qarori.pdf",
+      "caption": "Постановление Кабинета Министров Республики Узбекистан № 937"
+     },
+     "en": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_937-son_qarori.pdf",
+      "caption": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 937"
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_606-son_qarori.pdf",
+      "caption": "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 606-son qarori"
+     },
+     "ru": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_606-son_qarori.pdf",
+      "caption": "Постановление Кабинета Министров Республики Узбекистан № 606"
+     },
+     "en": {
+      "media": "migrated/img/kafedra/Doktorantura nizomlar/ozbekiston_respublikasi_vazirlar_maxkamasining_606-son_qarori.pdf",
+      "caption": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 606"
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 511,
+    "caption": {
+     "uz": "Doktorantlar maktabi. Nizom. 572 (26.06.2019)",
+     "ru": "Докторантская школа. Положение. 572 (26.06.2019)",
+     "en": "School of Doctoral Students. Regulation. 572 (26.06.2019)"
+    },
+    "fp": {
+     "uz": "9d363e7fa1c083dd423238087f62c0a83a5b2d8516fe959f8aef23eef66863a6",
+     "ru": "9d363e7fa1c083dd423238087f62c0a83a5b2d8516fe959f8aef23eef66863a6",
+     "en": "9d363e7fa1c083dd423238087f62c0a83a5b2d8516fe959f8aef23eef66863a6"
+    }
+   }
+  ],
+  "notes": [
+   "uz was the base; the old English text had other lists (application, employment history...) and a block about DSc requirements that is neither in uz nor in ru: the English lists are written again after the Uzbek and Russian lists (listed in tarjima-kerak.md), the extra DSc paragraph is dropped",
+   "the twelve exam programmes are the same twelve PDFs as on 'Malakaviy imtihonlar' (copied again as cards); the four regulations are cards: the Cabinet resolution 304 pointed at tsuull.uz in uz and at the site's own file in ru: the site's file is used in all languages; the card the page already had (Doktorantlar maktabi, 572) stays last"
+  ]
+ }
+]
