@@ -26,6 +26,9 @@ def build(slugs, translations):
             merged, missing, issues = [dict(b) for b in translations[slug + "|blocks"]], [], []
         else:
             specs = {lang: specs_of(raw["data"][lang]["html"], lang)[0] for lang in LANGS}
+            for lang in LANGS:  # a language that has the sections in another order: "slug|order|lang" = the indices of its blocks in the order of the Uzbek page
+                if "%s|order|%s" % (slug, lang) in translations:
+                    specs[lang] = [specs[lang][i] for i in translations["%s|order|%s" % (slug, lang)]]
             rows = rows_of(specs)
             merged, missing, issues = assemble(slug, rows, translations)
         if issues:
