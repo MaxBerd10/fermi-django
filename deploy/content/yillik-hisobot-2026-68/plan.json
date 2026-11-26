@@ -1,0 +1,852 @@
+[
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 1,
+  "fp": {
+   "uz": "42521d3dd33f03445b5a796927173116e486948e9479e3f618270545b5474f96",
+   "ru": "70189dfaefd36a4072e623202be63ca0bdf306449d097ae5d815e53b2fa21dbf",
+   "en": "d87bc75eb7aa2fbf88015fe170ab6e5e3399c237307e9b661657769cb862d770"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Vazirlar Mahkamasining 2022 yil \"_____yanvardagi -son qaroriga ilova",
+      "level": 3
+     },
+     "ru": {
+      "text": "Vazirlar Mahkamasining 2022 yil \"_____yanvardagi -son qaroriga ilova",
+      "level": 3
+     },
+     "en": {
+      "text": "Annex to the resolution of the Cabinet of Ministers of January ___, 2022, No. ___",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni oliy taʻlim muassasalarining bakalavriat taʻlim yoʻnalishlariga suhbat asosida oʻqishga qabul qilish tartibi toʻgrisida"
+     },
+     "ru": {
+      "text": "Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga suhbat asosida o‘qishga qabul qilish tartibi to‘grisida"
+     },
+     "en": {
+      "text": "On the procedure for admitting graduates who have successfully completed technical colleges to bachelor’s degree programmes of higher education institutions on the basis of an interview"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "NIZOM",
+      "level": 3
+     },
+     "ru": {
+      "text": "NIZOM",
+      "level": 3
+     },
+     "en": {
+      "text": "REGULATION",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1-bob. Umumiy qoidalar"
+     },
+     "ru": {
+      "text": "1-bob. Umumiy qoidalar"
+     },
+     "en": {
+      "text": "Chapter 1. General provisions"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "1. Mazkur Nizom texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni (keyingi oʻrinlarda - bitiruvchilar) oʻz sohasiga mone bakalavriat taʻlim yoʻnalishlariga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali oliy taʻlim muassasalarining 2-bosqichidan oʻqishini davom ettirish uchun qabul qilish tartibini belgilaydi."
+     },
+     "ru": {
+      "text": "1. Mazkur Nizom texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni (keyingi o‘rinlarda - bitiruvchilar) o‘z sohasiga mone bakalavriat ta’lim yo‘nalishlariga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali oliy ta’lim muassasalarining 2-bosqichidan o‘qishini davom ettirish uchun qabul qilish tartibini belgilaydi."
+     },
+     "en": {
+      "text": "1. This Regulation establishes the procedure for admitting graduates who have successfully completed technical colleges (hereinafter — graduates) to continue their studies from the 2nd year of higher education institutions, in bachelor’s degree programmes corresponding to their field, without entrance examinations, through an individual interview."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Ushbu Nizom oliy xarbiy, oliy xarbiylashtirilgan taʻlim muassasalariga, Toshkent davlat yuridik universitetiga, Oʻzbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy taʻlim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi."
+     },
+     "ru": {
+      "text": "Ushbu Nizom oliy xarbiy, oliy xarbiylashtirilgan ta’lim muassasalariga, Toshkent davlat yuridik universitetiga, O‘zbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy ta’lim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi."
+     },
+     "en": {
+      "text": "This Regulation does not apply to higher military and higher paramilitary educational institutions, Tashkent State University of Law, foreign and non-state higher education organisations operating in Uzbekistan and their branches."
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Bitiruvchilar oliy taʻlim muassasalarining 2-bosqichidan oʻqishni davom ettirishi mumkin boʻlgan oʻz sohasiga mos bakalavriat taʻlim yoʻnalishlari roʻyxati Oʻzbekiston Respublikasi Oliy va oʻrta maxsus taʻlim vazirligi tomonidan tasdiqlanadi.",
+       "Bitiruvchilarni oliy taʻlim muassasalariga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali bakalavriat taʻlim yoʻnalishlarining 2-bosqichidan oʻqishga qabul qilish toʻlov-kontrakt asosida amalga oshiriladi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Bitiruvchilar oliy ta’lim muassasalarining 2-bosqichidan o‘qishni davom ettirishi mumkin bo‘lgan o‘z sohasiga mos bakalavriat ta’lim yo‘nalishlari ro‘yxati O‘zbekiston Respublikasi Oliy va o‘rta maxsus ta’lim vazirligi tomonidan tasdiqlanadi.",
+       "Bitiruvchilarni oliy ta’lim muassasalariga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali bakalavriat ta’lim yo‘nalishlarining 2-bosqichidan o‘qishga qabul qilish to‘lov-kontrakt asosida amalga oshiriladi."
+      ]
+     },
+     "en": {
+      "items": [
+       "The list of bachelor’s degree programmes corresponding to their field in which graduates may continue their studies from the 2nd year of higher education institutions is approved by the Ministry of Higher and Secondary Specialised Education of the Republic of Uzbekistan.",
+       "Graduates are admitted to the 2nd year of bachelor’s degree programmes without entrance examinations, through an individual interview, on a paid-contract basis."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Toʻlov-kontrakt asosida oʻqitishning toʻlov miqdori bir talabani oʻqitish bilan bogʻliq xarajatlar miqdoridan kelib chiqib belgilanadi."
+     },
+     "ru": {
+      "text": "To‘lov-kontrakt asosida o‘qitishning to‘lov miqdori bir talabani o‘qitish bilan bog‘liq xarajatlar miqdoridan kelib chiqib belgilanadi."
+     },
+     "en": {
+      "text": "The tuition fee under the paid-contract form of study is set on the basis of the costs of training one student."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "4. Texnikumni muvaffaqiyatli tamomlaganlar toifasiga texnikumdagi butun oʻqish davrida oʻquv semestrlari yakuniga koʻra oʻzlashtirish baholari \"5 (aʻlo)\" va \"4 (yaxshi)\", biroq oʻzlashtirish baholarining kamida 50 foizi (tibbiyot oliy taʻlim muassasalari uchun kamida 85 foizi) \"5 (aʻlo)\" boʻlgan bitiruvchilar kiradi."
+     },
+     "ru": {
+      "text": "4. Texnikumni muvaffaqiyatli tamomlaganlar toifasiga texnikumdagi butun o‘qish davrida o‘quv semestrlari yakuniga ko‘ra o‘zlashtirish baholari \"5 (a’lo)\" va \"4 (yaxshi)\", biroq o‘zlashtirish baholarining kamida 50 foizi (tibbiyot oliy ta’lim muassasalari uchun kamida 85 foizi) \"5 (a’lo)\" bo‘lgan bitiruvchilar kiradi."
+     },
+     "en": {
+      "text": "4. Graduates who have successfully completed a technical college are those whose grades at the end of the academic semesters throughout their studies at the technical college are “5 (excellent)” and “4 (good)”, provided that at least 50 percent of the grades (at least 85 percent for medical higher education institutions) are “5 (excellent)”."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2021/2022 oʻquv yilidan boshlab bitiruvchilarni oliy taʻlim muassasasi bakalavriat taʻlim yoʻnalishiga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali qabul qilish tartibi texnikumni tamomlagan yildan boshlab ikki yil mobaynida tatbiq etiladi."
+     },
+     "ru": {
+      "text": "2021/2022 o‘quv yilidan boshlab bitiruvchilarni oliy ta’lim muassasasi bakalavriat ta’lim yo‘nalishiga kirish imtixonlarisiz, yakka tartibdagi suhbat orqali qabul qilish tartibi texnikumni tamomlagan yildan boshlab ikki yil mobaynida tatbiq etiladi."
+     },
+     "en": {
+      "text": "Starting from the 2021/2022 academic year, the procedure for admitting graduates to bachelor’s degree programmes of higher education institutions without entrance examinations, through an individual interview, applies for two years from the year of graduation from the technical college."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Yuqorida qayd etilgan toifaga kirmaydigan hamda texnikumni bitirganiga ikki yildan oshganlar oʻqishga kirish istagini bildirganda, ularni oliy taʻlim muassasalarining bakalavriat taʻlim yoʻnalishlariga oʻqishga qabul qilish umumiy belgilangan tartibda amalga oshiriladi."
+     },
+     "ru": {
+      "text": "Yuqorida qayd etilgan toifaga kirmaydigan hamda texnikumni bitirganiga ikki yildan oshganlar o‘qishga kirish istagini bildirganda, ularni oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga o‘qishga qabul qilish umumiy belgilangan tartibda amalga oshiriladi."
+     },
+     "en": {
+      "text": "Persons who do not belong to the above category and who graduated from a technical college more than two years ago are admitted to bachelor’s degree programmes of higher education institutions, when they express a wish to study, in accordance with the general procedure."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "5. Bitiruvchilarni oʻz sohasiga mos bakalavriat taʻlim yoʻnalishlariga suhbat asosida oʻqishga qabul qilish ushbu Nizomga 1-ilovaga muvofik sxema asosida amalga oshiriladi."
+     },
+     "ru": {
+      "text": "5. Bitiruvchilarni o‘z sohasiga mos bakalavriat ta’lim yo‘nalishlariga suhbat asosida o‘qishga qabul qilish ushbu Nizomga 1-ilovaga muvofik sxema asosida amalga oshiriladi."
+     },
+     "en": {
+      "text": "5. Graduates are admitted by interview to bachelor’s degree programmes corresponding to their field according to the scheme in Annex 1 to this Regulation."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "2-bob. Hujjatlarni qabul qilish",
+      "level": 3
+     },
+     "ru": {
+      "text": "2-bob. Hujjatlarni qabul qilish",
+      "level": 3
+     },
+     "en": {
+      "text": "Chapter 2. Acceptance of documents",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "6. Bitiruvchilarni oliy taʻlim muassasasining 2-bosqichidan oʻqishga qabul qilish uchun har yili oliy taʻlim muassasasi rektori (filial direktori) buyrugʻi bilan qabul komissiyasi tuziladi."
+     },
+     "ru": {
+      "text": "6. Bitiruvchilarni oliy ta’lim muassasasining 2-bosqichidan o‘qishga qabul qilish uchun har yili oliy ta’lim muassasasi rektori (filial direktori) buyrug‘i bilan qabul komissiyasi tuziladi."
+     },
+     "en": {
+      "text": "6. Every year an admission commission is formed by order of the rector of the higher education institution (director of the branch) for admitting graduates to the 2nd year of the higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy taʻlim muassasasi rektori (filial direktori) qabul komissiyasining raisi hisoblanadi."
+     },
+     "ru": {
+      "text": "Oliy ta’lim muassasasi rektori (filial direktori) qabul komissiyasining raisi hisoblanadi."
+     },
+     "en": {
+      "text": "The rector of the higher education institution (director of the branch) is the chairman of the admission commission."
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Bitiruvchilar har yili 5 iyuldan 25 iyulga qadar Oʻzbekiston Respublikasi Oliy va oʻrta maxsus taʻlim vazirligining rasmiy veb-sayti orqali onlayn roʻyxatdan oʻtadilar.",
+       "Bitiruvchilar oliy taʻlim muassasalarining bakalavriat taʻlim yoʻnalishlari boʻyicha roʻyxatdan oʻtishida tizimga shaxsiy maʻlumotlarini kiritishi va quyidagi hujjatlarni yuklashi talab etiladi:"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Bitiruvchilar har yili 5 iyuldan 25 iyulga qadar O‘zbekiston Respublikasi Oliy va o‘rta maxsus ta’lim vazirligining rasmiy veb-sayti orqali onlayn ro‘yxatdan o‘tadilar.",
+       "Bitiruvchilar oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlari bo‘yicha ro‘yxatdan o‘tishida tizimga shaxsiy ma’lumotlarini kiritishi va quyidagi hujjatlarni yuklashi talab etiladi:"
+      ]
+     },
+     "en": {
+      "items": [
+       "Every year, from July 5 to July 25, graduates register online through the official website of the Ministry of Higher and Secondary Specialised Education of the Republic of Uzbekistan.",
+       "When registering for bachelor’s degree programmes of higher education institutions, graduates are required to enter their personal data into the system and upload the following documents:"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "pasport yoki ID karta nusxasi;"
+     },
+     "ru": {
+      "text": "pasport yoki ID karta nusxasi;"
+     },
+     "en": {
+      "text": "a copy of the passport or ID card;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "texnikumni bitirganlik toʻgʻrisidagi hujjat va unga ilovaning nusxasi."
+     },
+     "ru": {
+      "text": "texnikumni bitirganlik to‘g‘risidagi hujjat va unga ilovaning nusxasi."
+     },
+     "en": {
+      "text": "a document on graduation from the technical college and a copy of its appendix."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Oliy va oʻrta maxsus taʻlim vazirligi tomonidan vazirlikning rasmiy veb-sayti orqali bitiruvchilarni roʻyxatdan oʻtkazish jarayonlari muvofiqlashtirilib boriladi."
+     },
+     "ru": {
+      "text": "Oliy va o‘rta maxsus ta’lim vazirligi tomonidan vazirlikning rasmiy veb-sayti orqali bitiruvchilarni ro‘yxatdan o‘tkazish jarayonlari muvofiqlashtirilib boriladi."
+     },
+     "en": {
+      "text": "The registration of graduates is coordinated by the Ministry of Higher and Secondary Specialised Education through the Ministry’s official website."
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Onlayn roʻyxatdan oʻtgan bitiruvchilarning tizimga yuklangan hujjatlari oliy taʻlim muassasalari qabul komissiyalari tomonidan har yili 5 avgustga qadar oʻrganib chiqiladi va oʻrganish natijalari boʻyicha abiturientlarning shaxsiy kabineti orqali ularga xabar beriladi.",
+       "Bitiruvchilar tomonidan topshirilgan hujjatlarning qalbakiligi aniqlanganda, u suhbatdan (talabalikka qabul qilingandan keyin aniqlansa, talabalikdan) chetlashtiriladi hamda hujjatlari belgilangan tartibda huquqni muhofaza qiluvchi oʻrganlarga yuboriladi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Onlayn ro‘yxatdan o‘tgan bitiruvchilarning tizimga yuklangan xujjatlari oliy ta’lim muassasalari qabul komissiyalari tomonidan har yili 5 avgustga qadar o‘rganib chiqiladi va o‘rganish natijalari bo‘yicha abiturientlarning shaxsiy kabineti orqali ularga xabar beriladi.",
+       "Bitiruvchilar tomonidan topshirilgan hujjatlarning qalbakiligi aniqlanganda, u suhbatdan (talabalikka qabul qilingandan keyin aniqlansa, talabalikdan) chetlashtiriladi hamda hujjatlari belgilangan tartibda huquqni muhofaza qiluvchi o‘rganlarga yuboriladi."
+      ]
+     },
+     "en": {
+      "items": [
+       "The documents uploaded to the system by graduates who registered online are examined by the admission commissions of higher education institutions every year by August 5, and the results of the examination are communicated to the applicants through their personal accounts.",
+       "If the documents submitted by a graduate are found to be forged, the graduate is excluded from the interview (or, if this is discovered after admission, from the student body), and the documents are sent to the law enforcement authorities in the established order."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "3-bob. Suhbat jarayonini tashkil etish va oʻtkazish",
+      "level": 3
+     },
+     "ru": {
+      "text": "3-bob. Suhbat jarayonini tashkil etish va o‘tkazish",
+      "level": 3
+     },
+     "en": {
+      "text": "Chapter 3. Organisation and conduct of the interview",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "11. Oliy taʻlim muassasasi rektori (filial direktori) har yili 10 avgustga qadar oʻz buyrugʻi bilan har bir taʻlim yoʻnalishi bʻyicha alohida Suhbat komissiyasini tuzadi."
+     },
+     "ru": {
+      "text": "11. Oliy ta’lim muassasasi rektori (filial direktori) har yili 10 avgustga qadar o‘z buyrug‘i bilan har bir ta’lim yo‘nalishi b‘yicha alohida Suhbat komissiyasini tuzadi."
+     },
+     "en": {
+      "text": "11. Every year by August 10, the rector of the higher education institution (director of the branch) forms, by his or her order, a separate Interview Commission for each field of study."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat komissiyasi 9 nafardan kam boʻlmagan tarkibda tuziladi va uning tarkibiga kadrlarning asosiy ish beruvchilari boʻlgan tashkilotlar va oliy taʻlim muassasasi boʻysinuvi boʻyicha vazirliklar va idoralarning maʻsul xodimlari, sohaga taalluqli texnikumning malakali oʻqituvchisi hamda boshda oliy taʻlim muassasasining tegishli soha boʻyicha professor-oʻqituvchisi kiritiladi."
+     },
+     "ru": {
+      "text": "Suhbat komissiyasi 9 nafardan kam bo‘lmagan tarkibda tuziladi va uning tarkibiga kadrlarning asosiy ish beruvchilari bo‘lgan tashkilotlar va oliy ta’lim muassasasi bo‘ysinuvi bo‘yicha vazirliklar va idoralarning ma’sul xodimlari, sohaga taalluqli texnikumning malakali o‘qituvchisi hamda boshda oliy ta’lim muassasasining tegishli soha bo‘yicha professor-o‘qituvchisi kiritiladi."
+     },
+     "en": {
+      "text": "The Interview Commission is formed of at least 9 members and includes responsible officials of organisations that are the main employers of personnel and of ministries and departments to which the higher education institution is subordinate, a highly qualified teacher of the technical college in the relevant field, and, as a rule, a professor-teacher of the higher education institution in the relevant field."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "12. Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni oliy taʻlim muassasalariga oʻqishga qabul qilish boʻyicha suhbat jarayoni toʻliq videokuzatuv ostida oʻtkaziladi va jarayon ota-onalar, kuzatuvchilar uchun ajratilgan alohida kutish joyiga ovozli tarzda onlayn translyatsiya qilib boriladi."
+     },
+     "ru": {
+      "text": "12. Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni oliy ta’lim muassasalariga o‘qishga qabul qilish bo‘yicha suhbat jarayoni to‘liq videokuzatuv ostida o‘tkaziladi va jarayon ota-onalar, kuzatuvchilar uchun ajratilgan alohida kutish joyiga ovozli tarzda onlayn translyatsiya qilib boriladi."
+     },
+     "en": {
+      "text": "12. The interview for admitting graduates who have successfully completed technical colleges to higher education institutions is held under full video surveillance, and the process is broadcast online, with sound, to a separate waiting area for parents and observers."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat jarayoni toʻliq va sifatli videokuzatuv ostida oʻtkazilishini va videoyozuvlarning kamida uch yil oliy taʻlim muassasasida saqlanishini taʻminlash maʻsuliyati shaxsan oliy taʻlim muassasasi rektori (filial direktori) zimmasiga yuklatiladi."
+     },
+     "ru": {
+      "text": "Suhbat jarayoni to‘liq va sifatli videokuzatuv ostida o‘tkazilishini va videoyozuvlarning kamida uch yil oliy ta’lim muassasasida saqlanishini ta’minlash ma’suliyati shaxsan oliy ta’lim muassasasi rektori (filial direktori) zimmasiga yuklatiladi."
+     },
+     "en": {
+      "text": "Responsibility for ensuring that the interview is held under full and high-quality video surveillance, and that the video recordings are stored at the higher education institution for at least three years, is assigned personally to the rector of the higher education institution (director of the branch)."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "13. Bitiruvchilarni oliy taʻlim muassasalariga oʻqishga qabul qilish boʻyicha oʻtkaziladigan suhbat jarayoni har yili 10 avgustdan 25 avgustgacha, oliy taʻlim muassasasi tomonidan belgilangan muddatda, Suhbat komissiyasi tarkibining kamida uchdan ikki qismi ishtirok etgan taqdirda oʻtkaziladi."
+     },
+     "ru": {
+      "text": "13. Bitiruvchilarni oliy ta’lim muassasalariga o‘qishga qabul qilish bo‘yicha o‘tkaziladigan suhbat jarayoni har yili 10 avgustdan 25 avgustgacha, oliy ta’lim muassasasi tomonidan belgilangan muddatda, Suhbat komissiyasi tarkibining kamida uchdan ikki qismi ishtirok etgan taqdirda o‘tkaziladi."
+     },
+     "en": {
+      "text": "13. The interview for admitting graduates to higher education institutions is held every year from August 10 to August 25, within the period set by the higher education institution, provided that at least two thirds of the members of the Interview Commission take part."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat oʻtkazish muddatlari suhbat jarayonlari boshlanishidan kamida bir hafta oldin oliy taʻlim muassasasining rasmiy veb-saytida eʻlon qilinadi."
+     },
+     "ru": {
+      "text": "Suhbat o‘tkazish muddatlari suhbat jarayonlari boshlanishidan kamida bir hafta oldin oliy ta’lim muassasasining rasmiy veb-saytida e’lon qilinadi."
+     },
+     "en": {
+      "text": "The dates of the interview are announced on the official website of the higher education institution at least one week before the interviews begin."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat jarayoniga jamoatchilik vakillari ham xolis kuzatuvchi sifatida jalb etilishi mumkin."
+     },
+     "ru": {
+      "text": "Suhbat jarayoniga jamoatchilik vakillari ham xolis kuzatuvchi sifatida jalb etilishi mumkin."
+     },
+     "en": {
+      "text": "Representatives of the public may also be involved in the interview as impartial observers."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "14. Belgilangan muddatlarda suhbatga kelmagan bitiruvchilarga shu oʻquv yili uchun qayta suhbat oʻtkazilmaydi va ular oliy taʻlim muassasasi bakalavriat taʻlim yoʻnalishining 2-bosqichidan oʻqishga qabul qilinmaydi."
+     },
+     "ru": {
+      "text": "14. Belgilangan muddatlarda suhbatga kelmagan bitiruvchilarga shu o‘quv yili uchun qayta suhbat o‘tkazilmaydi va ular oliy ta’lim muassasasi bakalavriat ta’lim yo‘nalishining 2-bosqichidan o‘qishga qabul qilinmaydi."
+     },
+     "en": {
+      "text": "14. Graduates who do not come to the interview within the set time limits are not given a repeat interview for that academic year and are not admitted to the 2nd year of a bachelor’s degree programme of the higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Bitiruvchi uzrli sabablarga koʻra (kasalligi, xizmat safarida boʻlganligi yoki oila aʻzolarining vafot etganligini tasdiqlovchi hujjatni taqdim etganda) suhbatda ishtirok eta olmaydigan boʻlsa yoki ishtirok etmasa, suhbat oʻtkazilgan sanadan uch kundan kechikmay oliy taʻlim muassasasida tuzilgan qabul komissiyasiga murojaat etishi lozim. Mazkur toifadagi bitiruvchilar uchun suhbat jarayonlari toʻliq yakunlanganidan soʻng bir hafta muddat ichida qoʻshimcha suhbat oʻtkaziladi."
+     },
+     "ru": {
+      "text": "Bitiruvchi uzrli sabablarga ko‘ra (kasalligi, xizmat safarida bo‘lganligi yoki oila a’zolarining vafot etganligini tasdiqlovchi hujjatni taqdim etganda) suhbatda ishtirok eta olmaydigan bo‘lsa yoki ishtirok etmasa, suhbat o‘tkazilgan sanadan uch kundan kechikmay oliy ta’lim muassasasida tuzilgan qabul komissiyasiga murojaat etishi lozim. Mazkur toifadagi bitiruvchilar uchun suhbat jarayonlari to‘liq yakunlanganidan so‘ng bir xafta muddat ichida qo‘shimcha suhbat o‘tkaziladi."
+     },
+     "en": {
+      "text": "If a graduate cannot take part in the interview, or does not take part, for a valid reason (illness, a business trip or the death of a family member, confirmed by a document), he or she must apply to the admission commission formed at the higher education institution no later than three days after the date of the interview. For graduates of this category an additional interview is held within one week after the interview process has been fully completed."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "15. Suhbat jarayonida bitiruvchilarning har biriga quyidagi mavzular boʻyicha bittadan jami toʻrtta savol beriladi:"
+     },
+     "ru": {
+      "text": "15. Suhbat jarayonida bitiruvchilarning har biriga quyidagi mavzular bo‘yicha bittadan jami to‘rtta savol beriladi:"
+     },
+     "en": {
+      "text": "15. During the interview, each graduate is asked four questions in total, one on each of the following topics:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "mamlakatda oʻz sohasiga oid amalga oshirilayotgan islohotlarning mohiyati va ahamiyatini tushunish;"
+     },
+     "ru": {
+      "text": "mamlakatda o‘z sohasiga oid amalga oshirilayotgan islohotlarning mohiyati va ahamiyatini tushunish;"
+     },
+     "en": {
+      "text": "understanding the essence and importance of the reforms being carried out in the country in the graduate’s field;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "bakalavriat taʻlim yunalishini tanlashda motivatsiya (soha kasbining mohiyati va ijtimoiy ahamiyatini tushunish, unga doimiy qizidish koʻrsatish);"
+     },
+     "ru": {
+      "text": "bakalavriat ta’lim yunalishini tanlashda motivatsiya (soha kasbining mohiyati va ijtimoiy ahamiyatini tushunish, unga doimiy qizidish ko‘rsatish);"
+     },
+     "en": {
+      "text": "motivation in choosing the bachelor’s degree programme (understanding the essence and social importance of the profession, a steady interest in it);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "shaxsiy-kasbiy xususiyatlar (oʻqishga qobiliyat, kasbiy vazifalarni hal qilishda amaliy faoliyat, intizomlilik, hamjidatlik, maʻsuliyatlilik, qaror qabul qilishda mustaqillik darajasi, shaxsiy yutugʻlar mavjudligi shuningdek, oʻz ustida ishlash va ijodkorlik qobiliyatlari);"
+     },
+     "ru": {
+      "text": "shaxsiy-kasbiy xususiyatlar (o‘qishga qobiliyat, kasbiy vazifalarni hal qilishda amaliy faoliyat, intizomlilik, hamjidatlik, ma’suliyatlilik, qaror qabul qilishda mustaqillik darajasi, shaxsiy yutug‘lar mavjudligi shuningdek, o‘z ustida ishlash va ijodkorlik qobiliyatlari);"
+     },
+     "en": {
+      "text": "personal and professional qualities (ability to study, practical activity in solving professional tasks, discipline, solidarity, responsibility, degree of independence in decision-making, personal achievements, as well as the ability to work on oneself and creativity);"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "tanlangan bakalavriat taʻlim yoʻnalishi sohasidagi bilim va kasbiy koʻnikmalarning mavjudligi."
+     },
+     "ru": {
+      "text": "tanlangan bakalavriat ta’lim yo‘nalishi sohasidagi bilim va kasbiy ko‘nikmalarning mavjudligi."
+     },
+     "en": {
+      "text": "knowledge and professional skills in the field of the chosen bachelor’s degree programme."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Jami toʻplash mumkin boʻlgan eng yuqori ball 100 ballni tashkil etadi."
+     },
+     "ru": {
+      "text": "Jami to‘plash mumkin bo‘lgan eng yuqori ball 100 ballni tashkil etadi."
+     },
+     "en": {
+      "text": "The maximum total score that can be obtained is 100 points."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Mazkur savollar boʻyicha baholash mezonlari tegishli oliy taʻlim muassasasi tomonidan ishlab chiqilib, tasdiqlanadi hamda ularning rasmiy veb-saytlarida eʻlon qilinadi."
+     },
+     "ru": {
+      "text": "Mazkur savollar bo‘yicha baholash mezonlari tegishli oliy ta’lim muassasasi tomonidan ishlab chiqilib, tasdiqlanadi hamda ularning rasmiy veb-saytlarida e’lon qilinadi."
+     },
+     "en": {
+      "text": "The criteria for assessing these questions are developed and approved by the relevant higher education institution and published on its official website."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "16. Savollar oliy taʻlim muassasasi qabul komissiyasi tomonidan ishlab chiqilib, qabul komissiyasi raisi tomonidan tasdiqlanadi."
+     },
+     "ru": {
+      "text": "16. Savollar oliy ta’lim muassasasi qabul komissiyasi tomonidan ishlab chiqilib, qabul komissiyasi raisi tomonidan tasdiqlanadi."
+     },
+     "en": {
+      "text": "16. The questions are developed by the admission commission of the higher education institution and approved by the chairman of the admission commission."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Savollar mazkur Nizomning 15-bandida nazarda tutilgan mavzularga mos tuzilganligi boʻyicha maʻsuliyat qabul komissiyasi raisi zimmasiga yuklatiladi."
+     },
+     "ru": {
+      "text": "Savollar mazkur Nizomning 15-bandida nazarda tutilgan mavzularga mos tuzilganligi bo‘yicha ma’suliyat qabul komissiyasi raisi zimmasiga yuklatiladi."
+     },
+     "en": {
+      "text": "Responsibility for ensuring that the questions correspond to the topics provided for in paragraph 15 of this Regulation is assigned to the chairman of the admission commission."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "17. Suhbat jarayonida Suhbat komissiyasining har bir aʻzosiga ushbu Nizomga 2-ilovaga muvofiq namunaviy shakldagi bitiruvchining suhbat natijalarini qayd etish varagʻi (keyingi oʻrinlarda - suhbat natijalarini qayd etish varagʻi) beriladi."
+     },
+     "ru": {
+      "text": "17. Suhbat jarayonida Suhbat komissiyasining har bir a’zosiga ushbu Nizomga 2-ilovaga muvofiq namunaviy shakldagi bitiruvchining suhbat natijalarini qayd etish varag‘i (keyingi o‘rinlarda - suhbat natijalarini qayd etish varag‘i) beriladi."
+     },
+     "en": {
+      "text": "17. During the interview, each member of the Interview Commission is given a graduate’s interview result record sheet (hereinafter — the interview result record sheet) in the model form according to Annex 2 to this Regulation."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat komissiyasi aʻzolari tomonidan suhbat natijalarini qayd etish varagʻiga har bir bitiruvchi bilan oʻtkazilgan suhbat natijasiga koʻra ball belgilab boriladi va imzolanadi."
+     },
+     "ru": {
+      "text": "Suhbat komissiyasi a’zolari tomonidan suhbat natijalarini qayd etish varag‘iga har bir bitiruvchi bilan o‘tkazilgan suhbat natijasiga ko‘ra ball belgilab boriladi va imzolanadi."
+     },
+     "en": {
+      "text": "The members of the Interview Commission award points on the interview result record sheet according to the result of the interview with each graduate and sign it."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "18. Muayyan taʻlim yoʻnalishi (guruh) boʻyicha suhbat jarayoni yakunlangach Suhbat komissiyasi aʻzolari tomonidan toʻldirilgan suhbat natijalarini qayd etish varaqlaridagi ballar hisoblab chiqiladi va shu asosida ushbu Nizomga 3-ilovaga muvofiq namunaviy shakldagi bitiruvchi bilan oʻtkazilgan suhbatning yakuniy natijalarini qayd etish varagʻi (keyingi oʻrinlarda - suhbatning yakuniy natijalarini qayd etish varagʻi) toʻldirilib, Suhbat komissiyasi tomonidan tasdiqlanadi."
+     },
+     "ru": {
+      "text": "18. Muayyan ta’lim yo‘nalishi (guruh) bo‘yicha suhbat jarayoni yakunlangach Suhbat komissiyasi a’zolari tomonidan to‘ldirilgan suhbat natijalarini qayd etish varaqlaridagi ballar hisoblab chiqiladi va shu asosida ushbu Nizomga 3-ilovaga muvofiq namunaviy shakldagi bitiruvchi bilan o‘tkazilgan suhbatning yakuniy natijalarini qayd etish varag‘i (keyingi o‘rinlarda - suhbatning yakuniy natijalarini qayd etish varag‘i) to‘ldirilib, Suhbat komissiyasi tomonidan tasdiqlanadi."
+     },
+     "en": {
+      "text": "18. After the interview in a given field of study (group) is completed, the points on the interview result record sheets filled in by the members of the Interview Commission are counted, and on this basis the final result record sheet of the interview with the graduate (hereinafter — the final result record sheet of the interview) in the model form according to Annex 3 to this Regulation is filled in and approved by the Interview Commission."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varagʻiga asosan Suhbat komissiyasining ishtirok etgan aʻzolari tomonidan qoʻyilgan ballarning oʻrtachasi 67 ball va undan yuqori boʻlganda abiturient suhbatdan oʻtgan hisoblanadi."
+     },
+     "ru": {
+      "text": "Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varag‘iga asosan Suhbat komissiyasining ishtirok etgan a’zolari tomonidan qo‘yilgan ballarning o‘rtachasi 67 ball va undan yuqori bo‘lganda abiturient suhbatdan o‘tgan hisoblanadi."
+     },
+     "en": {
+      "text": "According to the final result record sheet of the interview approved by the Interview Commission, an applicant is considered to have passed the interview when the average of the points given by the participating members of the Interview Commission is 67 points or higher."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Muayyan taʻlim yoʻnalishi (guruh) boʻyicha oʻtkazilgan suhbat natijalariga koʻra suhbatdan oʻtganlar roʻyxati shu kunning oʻzida abiturientlarga oʻqib eshittiriladi."
+     },
+     "ru": {
+      "text": "Muayyan ta’lim yo‘nalishi (guruh) bo‘yicha o‘tkazilgan suhbat natijalariga ko‘ra suhbatdan o‘tganlar ro‘yxati shu kunning o‘zida abiturientlarga o‘qib eshittiriladi."
+     },
+     "en": {
+      "text": "The list of those who passed the interview in a given field of study (group) is read out to the applicants on the same day."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "19. Oliy taʻlim muassasasida suhbatlar oʻtkazilishi davrida belgilangan tartibda apellyatsiya shikoyatlarini koʻrib chiqish uchun apellyatsiya komissiyasi tashkil etiladi."
+     },
+     "ru": {
+      "text": "19. Oliy ta’lim muassasasida suhbatlar o‘tkazilishi davrida belgilangan tartibda apellyatsiya shikoyatlarini ko‘rib chiqish uchun apellyatsiya komissiyasi tashkil etiladi."
+     },
+     "en": {
+      "text": "19. During the interviews, an appeal commission is formed at the higher education institution to consider appeals in the established order."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Apellyatsiya shikoyatlari suhbat natijalari eʻlon qilingan vaqtdan boshlab 24 soat ichida oliy taʻlim muassasasida toʻgridan-toʻgri yozma shaklda yoki Oliy va oʻrta maxsus taʻlim vazirligining rasmiy veb-sayti orqali onlayn shaklda qabul qilinadi va appelyatsiya komissiyasi tomonidan murojaat qilganlarning sonidan kelib chiqqan holda bir kundan uch kungacha boʻlgan muddatda videoyozuv asosida koʻrib chiqiladi."
+     },
+     "ru": {
+      "text": "Apellyatsiya shikoyatlari suhbat natijalari e’lon qilingan vaqtdan boshlab 24 soat ichida oliy ta’lim muassasasida to‘gridan-to‘gri yozma shaklda yoki Oliy va o‘rta maxsus ta’lim vazirligining rasmiy veb-sayti orqali onlayn shaklda qabul qilinadi va appelyatsiya komissiyasi tomonidan murojaat qilganlarning sonidan kelib chiqqan holda bir kundan uch kungacha bo‘lgan muddatda videoyozuv asosida ko‘rib chiqiladi."
+     },
+     "en": {
+      "text": "Appeals are accepted within 24 hours from the time the interview results are announced, directly at the higher education institution in writing or online through the official website of the Ministry of Higher and Secondary Specialised Education, and are considered by the appeal commission on the basis of the video recording within one to three days, depending on the number of applicants."
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Suhbat natijalariga koʻra talabalikka tavsiya etilganlar toʻgʻrisidagi maʻlumotlar natijalar eʻlon qilingan kundan boshlab uch kun muddatda oliy taʻlim muassasasi rektori (filial direktori) tomonidan boʻysunuvi boʻyicha vazirlik, idoraga taqdim etiladi.",
+       "Suhbat komissiyasining suhbat natijalarini qayd etish hamda suhbatning yakuniy natijalarini qayd etish varaqlari uch yil oliy taʻlim muassasasida saqlanadi.",
+       "Suhbat komissiyasi aʻzolari mehnatiga haq toʻlash oliy taʻlim muassasalari talabalariga oʻquv mashgʻulotlarini olib borganlik uchun belgilangan soatbay haq toʻlash shartlarida oliy taʻlim muassasasining budjetdan tashqari toʻlov-kontrakt mablagʻlari hisobidan amalga oshiriladi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Suhbat natijalariga ko‘ra talabalikka tavsiya etilganlar to‘g’risidagi ma’lumotlar natijalar e’lon qilingan kundan boshlab uch kun muddatda oliy ta’lim muassasasi rektori (filial direktori) tomonidan bo‘ysunuvi bo‘yicha vazirlik, idoraga taqdim etiladi.",
+       "Suhbat komissiyasining suhbat natijalarini qayd etish hamda suhbatning yakuniy natijalarini qayd etish varaqlari uch yil oliy ta’lim muassasasida saqlanadi.",
+       "Suhbat komissiyasi a’zolari mehnatiga haq to‘lash oliy ta’lim muassasalari talabalariga o‘quv mashg’ulotlarini olib borganlik uchun belgilangan soatbay haq to‘lash shartlarida oliy ta’lim muassasasining budjetdan tashqari to‘lov-kontrakt mablag’lari hisobidan amalga oshiriladi."
+      ]
+     },
+     "en": {
+      "items": [
+       "Information on those recommended for admission as students according to the interview results is submitted by the rector of the higher education institution (director of the branch) to the ministry or department to which it is subordinate within three days from the date the results are announced.",
+       "The interview result record sheets and the final result record sheets of the interview of the Interview Commission are stored at the higher education institution for three years.",
+       "The members of the Interview Commission are paid out of the extra-budgetary paid-contract funds of the higher education institution, under the conditions of hourly pay established for conducting classes with students of higher education institutions."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "4-bob. Toʻlov-kontrakt asosida talabalikka qabul qilish",
+      "level": 3
+     },
+     "ru": {
+      "text": "4-bob. To‘lov-kontrakt asosida talabalikka qabul qilish",
+      "level": 3
+     },
+     "en": {
+      "text": "Chapter 4. Admission as students on a paid-contract basis",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varagʻiga asosan bitiruvchilar oʻz sohasiga mos bakalavriat taʻlim yoʻnalishining 2-bosqichidan oʻqishini davom ettirish uchun oliy taʻlim muassasasi rektori (filial direktori) tomonidan talabalikka tavsiya etiladi.",
+       "Talabalikka tavsiya etilganlarning umumiy roʻyxati suhbat jarayoni toʻliq yakunlangandan soʻng bir kun muddatda oliy taʻlim muassasasining veb-saytida eʻlon qilinadi va shu kundan boshlab ularga belgilangan namunadagi toʻlov-kontrakt blankalari oliy taʻlim muassasasi qabul komissiyasi tomonidan beriladi.",
+       "Talabalikka tavsiya etilganlar uchun toʻlov har yili kontrakt shartlarida koʻrsatilgan muddatlarda amalga oshiriladi."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varag’iga asosan bitiruvchilar o‘z sohasiga mos bakalavriat ta’lim yo‘nalishining 2-bosqichidan o‘qishini davom ettirish uchun oliy ta’lim muassasasi rektori (filial direktori) tomonidan talabalikka tavsiya etiladi.",
+       "Talabalikka tavsiya etilganlarning umumiy ro‘yxati suhbat jarayoni to‘liq yakunlangandan so‘ng bir kun muddatda oliy ta’lim muassasasining veb-saytida e’lon qilinadi va shu kundan boshlab ularga belgilangan namunadagi to‘lov-kontrakt blankalari oliy ta’lim muassasasi qabul komissiyasi tomonidan beriladi.",
+       "Talabalikka tavsiya etilganlar uchun to‘lov har yili kontrakt shartlarida ko‘rsatilgan muddatlarda amalga oshiriladi."
+      ]
+     },
+     "en": {
+      "items": [
+       "According to the final result record sheet of the interview approved by the Interview Commission, graduates are recommended by the rector of the higher education institution (director of the branch) for admission as students to continue their studies from the 2nd year of the bachelor’s degree programme corresponding to their field.",
+       "The general list of those recommended for admission as students is published on the website of the higher education institution one day after the interview process has been fully completed, and from that day the admission commission of the higher education institution issues to them paid-contract forms of the established model.",
+       "Payment for those recommended for admission as students is made every year within the periods specified in the contract."
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kontrakt shartlari, tomonlarning hududlari va majburiyatlari, ularni amalga oshirish tartibi qonunchilik hujjatlariga muvofiq belgilanadi."
+     },
+     "ru": {
+      "text": "Kontrakt shartlari, tomonlarning hududlari va majburiyatlari, ularni amalga oshirish tartibi qonunchilik hujjatlariga muvofiq belgilanadi."
+     },
+     "en": {
+      "text": "The terms of the contract, the rights and obligations of the parties and the procedure for their implementation are determined in accordance with legislation."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "26. Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varagʻiga asosan talabalikka tavsiya etilganlar belgilangan muddatlarda toʻlov-kontrakt shartlari bajarilgandan soʻng oliy taʻlim muassasasi rektorining buyrugʻi bilan muayyan bakalavriat taʻlim yoʻnalishining 2-bosqichiga oʻqishga qabul qilinadi."
+     },
+     "ru": {
+      "text": "26. Suhbat komissiyasi tomonidan tasdiqlangan suhbatning yakuniy natijalarini qayd etish varag’iga asosan talabalikka tavsiya etilganlar belgilangan muddatlarda to‘lov-kontrakt shartlari bajarilgandan so‘ng oliy ta’lim muassasasi rektorining buyrug’i bilan muayyan bakalavriat ta’lim yo‘nalishining 2-bosqichiga o‘qishga qabul qilinadi."
+     },
+     "en": {
+      "text": "26. According to the final result record sheet of the interview approved by the Interview Commission, those recommended for admission as students are admitted, after fulfilling the paid-contract conditions within the set periods, to the 2nd year of a particular bachelor’s degree programme by order of the rector of the higher education institution."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "5-bob. Yakunlovchi qoidalar",
+      "level": 3
+     },
+     "ru": {
+      "text": "5-bob. Yakunlovchi qoidalar",
+      "level": 3
+     },
+     "en": {
+      "text": "Chapter 5. Final provisions",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Mazkur Nizomni qoʻllashda yuzaga keladigan nizolar qonunchilik hujjatlarida belgilangan tartibda hal etiladi.",
+       "Ushbu Nizom talablari buzilishida aybdor boʻlgan shaxslar qonunchilik hujjatlariga muvofiq javob beradilar."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Mazkur Nizomni qo‘llashda yuzaga keladigan nizolar qonunchilik hujjatlarida belgilangan tartibda hal etiladi.",
+       "Ushbu Nizom talablari buzilishida aybdor bo‘lgan shaxslar qonunchilik hujjatlariga muvofiq javob beradilar."
+      ]
+     },
+     "en": {
+      "items": [
+       "Disputes arising in the application of this Regulation are resolved in the manner established by legislation.",
+       "Persons guilty of violating the requirements of this Regulation are liable in accordance with legislation."
+      ]
+     }
+    }
+   }
+  ],
+  "existing_documents": [
+   {
+    "order": 2,
+    "document_id": 489,
+    "caption": {
+     "uz": "Qabul nizomi",
+     "ru": "Правила приема",
+     "en": "Admission rules"
+    },
+    "fp": {
+     "uz": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be",
+     "ru": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be",
+     "en": "2c7fcc9e543a8712684f555d53f211abbb081038842cb813478a75a7e3e373be"
+    }
+   }
+  ],
+  "notes": [
+   "53 blocks aligned by hand (the three languages differ in structure); 53 cells translated by us"
+  ]
+ }
+]
