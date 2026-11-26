@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import LinkifiedText from "@/blocks/LinkifiedText";
@@ -29,9 +30,11 @@ const facultySections: Record<string, {
   },
 };
 
-export default function FacultyOverview({ slug, blocks }: { slug: string; blocks: ContentBlock[] }) {
+export default function FacultyOverview({ slug, blocks, logoUrl }: { slug: string; blocks: ContentBlock[]; logoUrl?: string | null }) {
   const { t } = useTranslation();
-  const { missionKey } = getFacultyPageConfig(slug);
+  const { introKey, missionKey, stats } = getFacultyPageConfig(slug);
+  const logo = logoUrl?.trim();
+  const [failedLogo, setFailedLogo] = useState<string>();
   const ordered = [...blocks].sort((a, b) => a.order - b.order);
   const byId = new Map(ordered.map((block) => [block.id, block]));
   const used = new Set<number>();
@@ -54,8 +57,10 @@ export default function FacultyOverview({ slug, blocks }: { slug: string; blocks
   ) : [];
 
   if (intro?.block_type === "paragraph") {
-    used.add(intro.id);
-    if (pediatric && byId.get(26918)?.block_type === "paragraph") used.add(26918);
+    const preceding = pediatric ? byId.get(26918) : undefined;
+    if (preceding?.block_type === "paragraph" && preceding.data.text.trim() === intro.data.text.trim()) {
+      used.add(preceding.id);
+    }
   }
   if (clinics?.block_type === "list") used.add(clinics.id);
   if (items && entries.length) {
@@ -74,8 +79,33 @@ export default function FacultyOverview({ slug, blocks }: { slug: string; blocks
   return (
     <section className="faculty-overview" aria-labelledby="faculty-about-heading">
       <h2 id="faculty-about-heading" className="academic-page__title">{t("faculty.aboutTitle")}</h2>
-      {missionKey && <blockquote className="academic-intro__note">{t(missionKey)}</blockquote>}
-      {intro?.block_type === "paragraph" && <p className="faculty-overview__lead">{intro.data.text}</p>}
+      <div className="faculty-overview__summary">
+        <div className="faculty-overview__intro">
+          {logo && failedLogo !== logo && (
+            <div className="faculty-hero__logo-wrap">
+              <img src={logo} alt="" className="faculty-hero__logo" onError={() => setFailedLogo(logo)} />
+            </div>
+          )}
+          <p className="faculty-overview__lead">{t(introKey)}</p>
+        </div>
+        {stats.length > 0 ? (
+          <ul className="faculty-overview__stats">
+            {stats.map((stat) => (
+              <li key={stat.labelKey + (stat.value ?? stat.valueKey)} className="faculty-overview__stat">
+                <i className={stat.icon} aria-hidden />
+                <span className="faculty-overview__stat-value">{stat.valueKey ? t(stat.valueKey) : stat.value}</span>
+                <span className="faculty-overview__stat-label">{t(stat.labelKey)}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+      {missionKey && (
+        <section className="faculty-overview__mission">
+          <h3>{t("faculty.missionTitle")}</h3>
+          <p>{t(missionKey)}</p>
+        </section>
+      )}
 
       {programs.length > 0 && (
         <section>
@@ -114,9 +144,13 @@ export default function FacultyOverview({ slug, blocks }: { slug: string; blocks
         </section>
       )}
 
-      {remaining.length > 0 && (used.size > 0 ? (
+      {remaining.length > 0 && ((missionKey || used.size > 0) ? (
         <details className="faculty-overview__details">
-          <summary>{t("faculty.historyMore")}</summary>
+          <summary>
+            <i className="ri-file-list-3-line" aria-hidden="true" />
+            <span>{t("faculty.historyMore")}</span>
+            <i className="ri-arrow-down-s-line" aria-hidden="true" />
+          </summary>
           {article}
         </details>
       ) : article)}

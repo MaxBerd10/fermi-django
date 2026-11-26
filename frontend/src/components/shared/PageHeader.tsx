@@ -8,12 +8,13 @@ interface PageHeaderProps {
   breadcrumb?: string;
   description?: string;
   compact?: boolean;
+  titleIcon?: ReactNode;
   /** Optional content rendered beside the title (e.g. a stat/CTA banner) -- sits to
    * its right on wide screens and wraps below it on narrow ones. */
   aside?: ReactNode;
 }
 
-export default function PageHeader({ title, breadcrumb, description, compact, aside }: PageHeaderProps) {
+export default function PageHeader({ title, breadcrumb, description, compact, aside, titleIcon }: PageHeaderProps) {
   const { t } = useTranslation();
 
   return (
@@ -38,24 +39,27 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
         </nav>
 
         <div className={aside ? "grid gap-4 lg:grid-cols-[max-content_minmax(0,1fr)] lg:items-start lg:gap-3" : undefined}>
-          <div>
-            <p className="mb-1.5">
-              <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
-            </p>
-
-            <h1
-              className={`font-heading font-extrabold text-[#0a0a0a] leading-[1.05] tracking-tight max-w-4xl ${
-                aside ? "text-[clamp(2.35rem,4.2vw,4rem)]" : "text-[clamp(1.45rem,3vw,2.15rem)]"
-              }`}
-            >
-              {title}
-            </h1>
-
-            {description && (
-              <p className="mt-3 text-base text-[#444444] max-w-2xl leading-relaxed">
-                {description}
+          <div className={titleIcon ? "flex min-w-0 flex-wrap items-center gap-4" : undefined}>
+            {titleIcon}
+            <div className={titleIcon ? "min-w-0 flex-1 basis-56" : "min-w-0"}>
+              <p className="mb-1.5">
+                <BrandMark size="sm" showFull layout="inline" className="text-[#0a1158]" />
               </p>
-            )}
+
+              <h1
+                className={`font-heading font-extrabold text-[#0a0a0a] leading-[1.05] tracking-tight max-w-4xl ${
+                  aside ? "text-[clamp(2.35rem,4.2vw,4rem)]" : "text-[clamp(1.45rem,3vw,2.15rem)]"
+                }`}
+              >
+                {title}
+              </h1>
+
+              {description && (
+                <p className="mt-3 text-base text-[#444444] max-w-2xl leading-relaxed">
+                  {description}
+                </p>
+              )}
+            </div>
           </div>
 
           {aside && <div className="md:min-w-0">{aside}</div>}

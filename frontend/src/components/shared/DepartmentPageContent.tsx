@@ -20,8 +20,11 @@ export default function DepartmentPageContent({
 }) {
   const { t } = useTranslation();
   const [headOpen, setHeadOpen] = useState(false);
+  const [failedLogo, setFailedLogo] = useState<string>();
 
   const hasContent = department.blocks.length > 0;
+  const logo = department.img?.trim();
+  const showLogo = logo && logo !== failedLogo;
 
   const ordered = [...department.blocks].sort((a, b) => a.order - b.order);
   const article = inInstituteSection ? (
@@ -57,7 +60,7 @@ export default function DepartmentPageContent({
         </section>
       )}
 
-      {hasContent ? (
+      {hasContent || (!inInstituteSection && showLogo) ? (
         <section className="department-page__about" aria-labelledby="department-about-heading">
           {inInstituteSection ? (
             <h2 id="department-about-heading" className="sr-only">
@@ -68,7 +71,11 @@ export default function DepartmentPageContent({
               {t("department.aboutTitle")}
             </h2>
           )}
-          {article}
+          {!inInstituteSection && showLogo && (
+            <img className="department-page__logo" src={logo} alt="" decoding="async"
+              onError={() => setFailedLogo(logo)} />
+          )}
+          {hasContent && article}
         </section>
       ) : (
         !head && (

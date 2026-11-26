@@ -9,16 +9,16 @@ import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
 import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
-import AcademicPageHero from "@/components/shared/AcademicPageHero";
 import FacultyPageContent from "@/components/shared/FacultyPageContent";
 import { LoadingState, ErrorState } from "@/components/shared/LoadingState";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { stripHtml } from "@/lib/html";
-import { FACULTY_MENU_ID, getFacultyPageConfig } from "@/lib/facultySection";
+import { FACULTY_MENU_ID } from "@/lib/facultySection";
 
 export default function FacultyPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.resolvedLanguage;
   const { menuId, slug } = useParams<{ menuId: string; slug: string }>();
   const [faculty, setFaculty] = useState<FacultyDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -28,18 +28,26 @@ export default function FacultyPage() {
 
   useEffect(() => {
     if (!slug) return;
+    let current = true;
     setLoading(true);
     setError(null);
     setNotFound(false);
     getFaculty(slug, menuId ? Number(menuId) : undefined)
-      .then(setFaculty)
+      .then((data) => {
+        if (current) setFaculty(data);
+      })
       .catch((e) => {
+        if (!current) return;
         setNotFound(isNotFound(e));
         setError(isNotFound(e) ? null : e instanceof ApiError ? e.message : t("common.genericError"));
       })
-      .finally(() => setLoading(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug, menuId]);
+      .finally(() => {
+        if (current) setLoading(false);
+      });
+    return () => {
+      current = false;
+    };
+  }, [slug, menuId, language, t]);
 
   usePageMeta(faculty?.title, faculty ? stripHtml(faculty.content).slice(0, 160) : null);
 
@@ -49,16 +57,11 @@ export default function FacultyPage() {
   if (notFound) return <NotFound />;
   if (error || !faculty) return <ErrorState message={error ?? undefined} />;
 
-  const config = getFacultyPageConfig(slug ?? "");
-
   return (
     <InnerPageLayout
-      className="faculty-layout"
+      className="faculty-layout leadership-layout"
       title={faculty.title}
-      header={
-        <AcademicPageHero title={faculty.title} logoUrl={faculty.img} theme={config.theme}
-          breadcrumb={t("nav.section.fakultetlar")} description={t(config.introKey)} stats={config.stats} />
-      }
+      breadcrumb={t("nav.section.fakultetlar")}
       contentRef={contentRef}
       sidebar={<MenuSectionNav menuId={FACULTY_MENU_ID} currentSlug={slug} />}
     >

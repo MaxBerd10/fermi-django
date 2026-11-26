@@ -7,7 +7,6 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { Reveal } from "@/components/Animation";
-import AcademicPageHero from "@/components/shared/AcademicPageHero";
 import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
 import DepartmentPageContent from "@/components/shared/DepartmentPageContent";
@@ -45,10 +44,9 @@ export default function DepartmentPage() {
     setError(null);
     setNotFound(false);
     setIsFallback(false);
+    setHead(null);
 
     async function load() {
-      const listResult = await listDepartments();
-
       try {
         const detail = await getDepartment(slug!, resolvedMenuId);
         if (cancelled) return;
@@ -59,6 +57,8 @@ export default function DepartmentPage() {
         }
         return;
       } catch (e) {
+        if (cancelled) return;
+        const listResult = await listDepartments().catch(() => []);
         const meta = listResult.find((item) => item.slug === slug);
         if (!meta) {
           if (!cancelled) {
@@ -115,16 +115,13 @@ export default function DepartmentPage() {
     <InnerPageLayout
       className={inInstituteSection ? undefined : "academic-layout"}
       title={displayTitle}
-      header={inInstituteSection ? undefined : (
-        <AcademicPageHero title={displayTitle} logoUrl={dept.img} theme="department"
-          breadcrumb={t("nav.section.kafedralar")} description={t("department.intro")} />
-      )}
       breadcrumb={inInstituteSection ? t("footer.institutHaqida") : t("nav.section.kafedralar")}
       contentRef={contentRef}
       sidebar={<MenuSectionNav menuId={sidebarMenuId} currentSlug={slug} />}
     >
       <Reveal>
         <DepartmentPageContent
+          key={dept.slug}
           department={dept}
           inInstituteSection={inInstituteSection}
           head={head}

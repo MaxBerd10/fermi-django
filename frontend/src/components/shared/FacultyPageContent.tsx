@@ -5,13 +5,11 @@ import type { FacultyDetail } from "@/types/content";
 import LeaderProfileCard from "@/components/shared/LeaderProfileCard";
 import { getFacultyRoleKey } from "@/lib/facultyDisplay";
 import FacultyOverview from "./FacultyOverview";
-import { getFacultyPageConfig } from "@/lib/facultySection";
 
 export default function FacultyPageContent({ faculty, slug }: { faculty: FacultyDetail; slug: string }) {
   const { t } = useTranslation();
   const [openLeaderId, setOpenLeaderId] = useState<number | null>(null);
 
-  const hasContent = faculty.blocks.length > 0 || Boolean(getFacultyPageConfig(slug).missionKey);
 
   return (
     <div className="academic-page">
@@ -34,7 +32,7 @@ export default function FacultyPageContent({ faculty, slug }: { faculty: Faculty
         </section>
       )}
 
-      {hasContent && <FacultyOverview slug={slug} blocks={faculty.blocks} />}
+      <FacultyOverview key={slug} slug={slug} blocks={faculty.blocks} logoUrl={faculty.img} />
     </div>
   );
 }

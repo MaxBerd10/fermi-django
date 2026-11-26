@@ -1146,3 +1146,79 @@ a.leader-card__meta-item:hover {
   height: auto;
   max-height: none;
 }
+
+.leadership-layout .leader-prorector {
+  container: leader-profile / inline-size;
+  border: 1px solid #dce3ef;
+  border-radius: .875rem;
+  box-shadow: none;
+}
+
+.leadership-layout .leader-prorector__header {
+  grid-template-columns: minmax(0, 1fr);
+  background: #f5f7fc;
+}
+
+.leadership-layout .leader-prorector__summary {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.leadership-layout .leader-prorector__portrait {
+  border: 1px solid #dce3ef;
+  box-shadow: none;
+}
+
+.leadership-layout .leader-prorector__contacts {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+}
+
+.leadership-layout .leader-pill {
+  background: #fff;
+  border-color: #dce3ef;
+}
+
+.leadership-layout .leader-pill__label {
+  color: #64748b;
+}
+
+.leadership-layout .leader-prorector__toggle {
+  justify-self: start;
+}
+
+@container leader-profile (min-width: 34rem) {
+  .leadership-layout .leader-prorector__header {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .leadership-layout .leader-prorector__toggle {
+    grid-column: 2;
+  }
+}
+
+.leadership-layout .leader-profile-highlights {
+  margin-block-start: 1rem;
+  border: 1px solid #e0e6f0;
+  border-radius: .625rem;
+  background: #f5f7fc;
+}
+
+.leadership-layout .leader-prorector__panels {
+  padding-block-start: 1rem;
+}
+
+.leadership-layout .leader-panel {
+  border-color: #dce3ef;
+  border-radius: .875rem;
+  box-shadow: none;
+}
+
+.leadership-layout .leader-panel__head {
+  background: #edf1fa;
+}
+
+.leadership-layout .leader-panel__body {
+  overflow: visible;
+  scrollbar-gutter: auto;
+}

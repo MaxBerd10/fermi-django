@@ -40,7 +40,6 @@ export const FACULTY_PAGE_CONFIG: Record<string, FacultyPageConfig> = {
     stats: [
       { icon: "ri-graduation-cap-line", value: "707", labelKey: "faculty.stats.students" },
       { icon: "ri-route-line", value: "5", labelKey: "faculty.stats.directions" },
-      { icon: "ri-heart-pulse-line", valueKey: "faculty.stats.value.js", labelKey: "faculty.stats.focus" },
     ],
   },
   "xalqaro-fakultet": {

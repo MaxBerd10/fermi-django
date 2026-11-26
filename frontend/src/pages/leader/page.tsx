@@ -96,6 +96,7 @@ export default function LeaderPage() {
 
   return (
     <InnerPageLayout
+      className="leadership-layout"
       title={title ?? data.category.title}
       breadcrumb={isLeaderSection ? t("leader.breadcrumb") : title}
       contentRef={contentRef}

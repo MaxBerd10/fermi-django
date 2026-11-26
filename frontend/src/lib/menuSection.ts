@@ -1,6 +1,8 @@
 import type { MenuNode } from "@/types/menu";
 import { normalizeMenuHref } from "@/lib/siteConstants";
 
+const STRUCTURE_MENU_ID = 1904;
+
 /** Top-level navbar roots shown in main navigation.
  *
  * Keyed by MenuItem.id -- these are OUR Django DB's own auto-increment ids
@@ -13,7 +15,7 @@ import { normalizeMenuHref } from "@/lib/siteConstants";
  * MENU_SECTION_THEMES below. */
 export const NAV_ROOT_THEMES: Record<number, { theme: string; breadcrumbKey: string }> = {
   1826: { theme: "institut", breadcrumbKey: "nav.section.institut" },
-  1904: { theme: "tuzilma", breadcrumbKey: "nav.section.tuzilma" },
+  [STRUCTURE_MENU_ID]: { theme: "tuzilma", breadcrumbKey: "nav.section.tuzilma" },
   1992: { theme: "faoliyat", breadcrumbKey: "nav.section.faoliyat" },
   2047: { theme: "abiturient", breadcrumbKey: "nav.section.abiturient" },
   2124: { theme: "talabalar", breadcrumbKey: "nav.section.talabalar" },
@@ -66,6 +68,7 @@ export const MENU_SECTION_THEMES: Record<number, { theme: string; breadcrumbKey:
   514: { theme: "matbuot", breadcrumbKey: "nav.section.matbuot", introKey: "section.intro.matbuot" },
   530: { theme: "registrator", breadcrumbKey: "nav.section.registrator", introKey: "section.intro.registrator" },
   48: { theme: "faoliyat", breadcrumbKey: "nav.section.ilmiyFaoliyat", introKey: "section.intro.ilmiyFaoliyat" },
+  1993: { theme: "faoliyat", breadcrumbKey: "nav.section.ilmiyFaoliyat", introKey: "section.intro.ilmiyFaoliyat" },
   49: { theme: "faoliyat", breadcrumbKey: "nav.section.xalqaroFaoliyat", introKey: "section.intro.xalqaroFaoliyat" },
   50: { theme: "faoliyat", breadcrumbKey: "nav.section.moliyaviyFaoliyat", introKey: "section.intro.moliyaviyFaoliyat" },
   51: { theme: "faoliyat", breadcrumbKey: "nav.section.madaniyFaoliyat", introKey: "section.intro.madaniyFaoliyat" },
@@ -103,6 +106,12 @@ function findNodeById(nodes: MenuNode[], id: number): MenuNode | null {
     if (found) return found;
   }
   return null;
+}
+
+export function isStructureMenuSection(menu: MenuNode[], sectionId?: number): boolean {
+  if (sectionId === undefined) return false;
+  const structure = menu.find(({ id }) => id === STRUCTURE_MENU_ID);
+  return structure !== undefined && findNodeById([structure], sectionId) !== null;
 }
 
 function findRootTheme(menu: MenuNode[], sectionId: number): string {

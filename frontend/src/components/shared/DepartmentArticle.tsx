@@ -50,19 +50,19 @@ function DepartmentArticleProfile({
   name, image, role, biography,
 }: {
   name: string;
-  image: LocalizedImage;
+  image?: LocalizedImage;
   role?: string;
-  biography: ContentBlock[];
+  biography?: ContentBlock[];
 }) {
   const { t } = useTranslation();
 
   return (
     <section className="department-article__profile">
-      <DepartmentImage image={image} alt={name} />
+      {image && <DepartmentImage image={image} alt={name} />}
       <div className="department-article__profile-info">
-        <h3>{name}</h3>
+        <h3 className="leader-prorector__name">{name}</h3>
         {role && <p><LinkifiedText text={role} /></p>}
-        {biography.length > 0 && (
+        {biography && biography.length > 0 && (
           <details>
             <summary>{t("leader.biography")}</summary>
             {biography.map((block) => <BlockRenderer key={block.id} block={block} />)}
@@ -90,6 +90,10 @@ export default function DepartmentArticle({ blocks }: { blocks: ContentBlock[] }
 
   for (let index = 0; index < blocks.length; index += 1) {
     const block = blocks[index];
+    if (block.block_type === "staff_card") {
+      staff.push(<DepartmentArticleProfile key={block.id} name={block.data.full_name} role={block.data.title} />);
+      continue;
+    }
     const name = profileName(block);
     const portrait = blocks[index + 1];
 
@@ -268,17 +272,26 @@ export default function DepartmentArticle({ blocks }: { blocks: ContentBlock[] }
   ];
   const active = sections[selected].items.length ? selected : sections.findIndex(({ items }) => items.length > 0);
   if (active < 0) return null;
+  const hasMultipleSections = sections.filter(({ items }) => items.length > 0).length > 1;
 
   return (
     <>
-      <div className="department-section-switch" role="group" aria-label={t("department.aboutTitle")}>
-        {sections.map(({ label, items }, index) => items.length > 0 && (
-          <button key={label} type="button" aria-pressed={active === index} onClick={() => setSelected(index)}>
-            {t(label)}
-          </button>
-        ))}
+      {hasMultipleSections && (
+        <div className="department-section-switch" role="group" aria-label={t("department.aboutTitle")}>
+          {sections.map(({ label, items }, index) => items.length > 0 && (
+            <button key={label} type="button" aria-pressed={active === index} onClick={() => setSelected(index)}>
+              {t(label)}
+            </button>
+          ))}
+        </div>
+      )}
+      <div key={active} className={
+        sections[active].items === staff ? "department-article__staff"
+          : sections[active].items === media ? "department-article__media"
+            : "department-article__flow"
+      }>
+        {sections[active].items}
       </div>
-      <div key={active} className={sections[active].items === media ? "department-article__media" : "space-y-4"}>{sections[active].items}</div>
     </>
   );
 }
