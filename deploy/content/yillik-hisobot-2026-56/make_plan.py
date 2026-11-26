@@ -72,7 +72,7 @@ raw, documents = page_blocks(slug)
 assert not documents
 L = {lang: lines_of(raw["data"][lang]["html"]) for lang in LANGS}
 assert all(len(L[lang]) == 1 and len(L[lang][0]["links"]) == 1 for lang in LANGS) and L["uz"][0]["links"][0][0] == L["ru"][0]["links"][0][0] == L["en"][0]["links"][0][0]
-title = t("Xarid qilinishi rejalashtirilgan tovarlar (ishlar, xizmatlar) toʻgʻrisida maʼlumotlar", "Информация о товарах (работах, услугах), которые планируется приобрести",
+title = t("Xarid qilinishi rejalashtirilgan tovarlar (ishlar, xizmatlar) toʻgʻrisida maʻlumotlar", "Информация о товарах (работах, услугах), которые планируется приобрести",
           "Information on the goods (works, services) planned to be purchased")
 entry_ = entry(slug, raw, [document_block(media_of(L["uz"][0]["links"][0][0]), title)])
 entry_["notes"] = ["the link is now a document card; typos corrected in the title: uz 'toʻgrisida', ru 'услкгах' and 'коротые'"]
@@ -84,7 +84,7 @@ raw, documents = page_blocks(slug)
 assert not documents
 L = {lang: lines_of(raw["data"][lang]["html"]) for lang in LANGS}
 assert all(len(L[lang]) == 1 for lang in LANGS) and "apreI" in L["uz"][0]["text"]
-text = t("Oʻzbekiston Respublikasining 2021-yil 22-apreldagi 684-son Qonuni ijrosini taʼminlash va Fargʻona jamoat salomatligi tibbiyot instituti rektorining 2022-yil 20-yanvardagi «Xarid komissiyasi tarkibini tuzish toʻgʻrisida»gi 38-sonli buyrugʻiga muvofiq Xarid komissiyasi tarkibiga oʻzgartirish kiritish maqsadida",
+text = t("Oʻzbekiston Respublikasining 2021-yil 22-apreldagi 684-son Qonuni ijrosini taʻminlash va Fargʻona jamoat salomatligi tibbiyot instituti rektorining 2022-yil 20-yanvardagi «Xarid komissiyasi tarkibini tuzish toʻgʻrisida»gi 38-sonli buyrugʻiga muvofiq Xarid komissiyasi tarkibiga oʻzgartirish kiritish maqsadida",
          "В целях обеспечения исполнения Закона Республики Узбекистан от 22 апреля 2021 года № 684 и приказа ректора Ферганского медицинского института общественного здоровья от 20 января 2022 года № 38 «О составе Закупочной комиссии» — с целью внесения изменений в состав закупочной комиссии",
          "In order to ensure the implementation of Law No. 684 of the Republic of Uzbekistan dated April 22, 2021 and Order No. 38 of the Rector of the Fergana Medical Institute of Public Health dated January 20, 2022 “On the composition of the Procurement Commission”, and to amend the composition of the procurement commission")
 entry_ = entry(slug, raw, [para(text)])
@@ -96,7 +96,7 @@ caption_only("kontrakt-xisob-raqam-smetasi", t("Kontrakt hisob raqami smetasi", 
 caption_only("valyuta-xisob-raqam-smetasi", t("Valyuta hisob raqami smetasi", "Смета валютного счёта", "Foreign currency account estimate"), recaption=True)
 caption_only("kvartal-boyicha-tushumlar-va-xarajatlar", t("Kvartal boʻyicha tushumlar va xarajatlar", "Доходы и расходы за квартал", "Revenues and expenses for the quarter"))
 caption_only("davlat-organlari-va-tashkilotlari-tasarrufidagi-xizmat-avtomototransport-vositalari-xizmat-uylari-va-boshqa-kochmas-mulklar-togrisidagi-malumotlar",
-             t("Davlat organlari va tashkilotlari tasarrufidagi xizmat avtomototransport vositalari, xizmat uylari va boshqa koʻchmas mulklar toʻgʻrisidagi maʼlumotlar",
+             t("Davlat organlari va tashkilotlari tasarrufidagi xizmat avtomototransport vositalari, xizmat uylari va boshqa koʻchmas mulklar toʻgʻrisidagi maʻlumotlar",
                "Сведения о служебных автомобилях, служебных домах и другом недвижимом имуществе государственных органов и организаций",
                "Information on service vehicles, service houses and other real estate of government agencies and organizations"))
 for item in plan[-4:]:

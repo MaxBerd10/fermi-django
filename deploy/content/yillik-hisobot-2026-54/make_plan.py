@@ -1,7 +1,7 @@
 """Builds plan.json of script 54 (Faoliyat > Xalqaro faoliyat: the pages "Xalqaro xamkor tashkilotlar" and "Iqlim boyicha xarakatlar strategiyasi") from the live pages.
 Both pages were English text in all three languages (styled by hand in the editor: centred headings in blue, bold labels, the policies as a column of links). Now: typed blocks,
 English stays for English, Uzbek and Russian are our translation (listed in tarjima-kerak.md); the 16 policy links become document cards (one per PDF, the 17th is the card the
-page already had); the page "Xalqaro taʼlim" is only one document card and stays as it is. The third page of the section (Thumbay) is script 52.
+page already had); the page "Xalqaro taʻlim" is only one document card and stays as it is. The third page of the section (Thumbay) is script 52.
     python deploy/content/yillik-hisobot-2026-54/make_plan.py"""
 import json
 import os
@@ -44,7 +44,7 @@ blocks1 = [
     para(t("Telefon: +91 1143036884", "Телефон: +91 1143036884", "Phone: +91 1143036884")),
     image_block(picture1[0], t("Hindistondagi bosh ofis", "Головной офис в Индии", "India Head Office")),
 ]
-card1 = captions_of_cards(documents1, [t("Institut haqida umumiy maʼlumot (inglizcha)", "Общая информация об институте (на английском)", "General information about the institute")])
+card1 = captions_of_cards(documents1, [t("Institut haqida umumiy maʻlumot (inglizcha)", "Общая информация об институте (на английском)", "General information about the institute")])
 
 # ---------- page 2: Iqlim boyicha xarakatlar strategiyasi ----------
 SLUG2 = "iqlim-boyicha-xarakatlar-strategiyasi"
@@ -69,11 +69,11 @@ POLICIES = [  # (line, English title without the name of the institute, uz, ru) 
     (22, "Healthy and Quality Life Policy", "Sogʻlom va sifatli hayot siyosati", "Политика здоровой и качественной жизни"),
     (23, "Policy for the Protection of the Seas and Aquatic Spaces", "Dengizlar va suv muhitini muhofaza qilish siyosati", "Политика защиты морей и водных пространств"),
     (24, "Policy to Terminate Poverty", "Qashshoqlikka barham berish siyosati", "Политика ликвидации бедности"),
-    (25, "Quality Education Policy", "Sifatli taʼlim siyosati", "Политика качественного образования"),
+    (25, "Quality Education Policy", "Sifatli taʻlim siyosati", "Политика качественного образования"),
     (26, "Sustainable Development Goals of the United Nations", "Birlashgan Millatlar Tashkilotining barqaror rivojlanish maqsadlari", "Цели ООН в области устойчивого развития"),
     (27, "Sustainable Cities and Societies Policy", "Barqaror shaharlar va jamiyatlar siyosati", "Политика устойчивых городов и сообществ"),
     (28, "Sustainable Development Goals of the United Nations", "Birlashgan Millatlar Tashkilotining barqaror rivojlanish maqsadlari", "Цели ООН в области устойчивого развития"),
-    (29, "Sustainable Production and Consumption Policy", "Barqaror ishlab chiqarish va isteʼmol siyosati", "Политика устойчивого производства и потребления"),
+    (29, "Sustainable Production and Consumption Policy", "Barqaror ishlab chiqarish va isteʻmol siyosati", "Политика устойчивого производства и потребления"),
     (30, "Terminating Hunger Policy", "Ocharchilikka barham berish siyosati", "Политика ликвидации голода"),
     (31, "Terrestrial Life Policy", "Quruqlikdagi hayotni saqlash siyosati", "Политика сохранения экосистем суши"),
 ]
@@ -88,22 +88,22 @@ blocks2 = [
            "План действий Ферганского медицинского института общественного здоровья по устойчивому развитию и климату на 2022–2027 годы завершён и готов к реализации: в нём определены амбициозные цели и подробные меры для их достижения. Пятилетний план — результат длительного общественного процесса, проведённого командой службы эксплуатации и инфраструктуры института с участием широкого круга участников кампуса. В 2021 году был проведён опрос, чтобы определить исходный уровень понимания и озабоченности сообщества вопросами устойчивого развития и изменения климата. После нескольких открытых встреч была сформирована группа из более чем 40 человек из разных подразделений кампуса и студентов, которая около года разрабатывала пятилетний план.",
            en2[1])),
     heading(t("Missiya", "Миссия", "Mission")),
-    para(t("Taʼlim, tadqiqot, tibbiy xizmat koʻrsatish va jamoatchilik xizmatida yetakchilik qilib va yangilik yaratib, biz Fargʻonadagi va butun dunyodagi turli hamjamiyatlarning salomatligi va farovonligini yaxshilaymiz.",
+    para(t("Taʻlim, tadqiqot, tibbiy xizmat koʻrsatish va jamoatchilik xizmatida yetakchilik qilib va yangilik yaratib, biz Fargʻonadagi va butun dunyodagi turli hamjamiyatlarning salomatligi va farovonligini yaxshilaymiz.",
            "Возглавляя и внедряя инновации в образовании, науке, оказании медицинской помощи и общественном служении, мы улучшаем здоровье и благополучие разных сообществ в Фергане и во всём мире.",
            en2[3])),
-    heading(t("Barqarorlikning taʼrifi", "Определение устойчивого развития", "Definition of sustainability")),
-    para(t("Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni keng va yaxlit maʼnoda taʼriflaydi. Oliy taʼlimda barqarorlikni rivojlantirish assotsiatsiyasi (AASHE) barqarorlikni «inson va ekologik salomatlik, ijtimoiy adolat, barqaror turmush vositalari va barcha avlodlar uchun yaxshiroq sayyora» deb taʼriflaydi. Institutning ekologik, ijtimoiy va iqtisodiy muammolarga taʼsirini hisobga oladigan barqaror amaliyotlar ushbu majburiyatga kiradi.",
+    heading(t("Barqarorlikning taʻrifi", "Определение устойчивого развития", "Definition of sustainability")),
+    para(t("Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni keng va yaxlit maʻnoda taʻriflaydi. Oliy taʻlimda barqarorlikni rivojlantirish assotsiatsiyasi (AASHE) barqarorlikni «inson va ekologik salomatlik, ijtimoiy adolat, barqaror turmush vositalari va barcha avlodlar uchun yaxshiroq sayyora» deb taʻriflaydi. Institutning ekologik, ijtimoiy va iqtisodiy muammolarga taʻsirini hisobga oladigan barqaror amaliyotlar ushbu majburiyatga kiradi.",
            "Ферганский медицинский институт общественного здоровья понимает устойчивость широко и целостно. Ассоциация по развитию устойчивости в высшем образовании (AASHE) определяет её как «здоровье человека и экосистем, социальную справедливость, стабильные средства к существованию и лучшую планету для всех поколений». В это обязательство входят устойчивые практики, учитывающие влияние института на экологические, социальные и экономические проблемы.",
            en2[5])),
     heading(t("Barqarorlik va iqlim boʻyicha harakatlar qarashi", "Видение устойчивого развития и климатических действий", "Vision for sustainability and climate action")),
-    para(t("Oʻz faoliyati, taʼlimi va tadqiqotlari orqali Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni oshiradigan, iqlim oʻzgarishini yumshatadigan va kelajak avlodlar uchun resurslarni tejaydigan tibbiy taʼlim va tadqiqotlarni taqdim etib, mamlakat va butun dunyo aholisining farovonligiga hissa qoʻshadi.",
+    para(t("Oʻz faoliyati, taʻlimi va tadqiqotlari orqali Fargʻona jamoat salomatligi tibbiyot instituti barqarorlikni oshiradigan, iqlim oʻzgarishini yumshatadigan va kelajak avlodlar uchun resurslarni tejaydigan tibbiy taʻlim va tadqiqotlarni taqdim etib, mamlakat va butun dunyo aholisining farovonligiga hissa qoʻshadi.",
            "Через свою деятельность, образование и исследования Ферганский медицинский институт общественного здоровья способствует благополучию всех людей в стране и мире, предоставляя медицинское образование и научные исследования, которые повышают устойчивость, смягчают изменение климата и сберегают ресурсы для будущих поколений.",
            en2[7])),
     para(t("Rejada toʻrtta asosiy yoʻnalish bor:", "В плане четыре приоритетных направления:", en2[8])),
     block("list", {"uz": {"items": ["Transport", "Binolar va energiya", "Hudud va suvni boshqarish", "Materiallar va resurslarni boshqarish"]},
                    "ru": {"items": ["Транспорт", "Здания и энергетика", "Территория и управление водными ресурсами", "Материалы и управление ресурсами"]},
                    "en": {"items": en2[9:13]}}),
-    para(t("Har bir yoʻnalish uchun besh yillik maqsadlarga erishishga yordam beradigan aniq tadbirlar roʻyxati mavjud. Masalan, transport boʻyicha institut kampusda foydalaniladigan transport vositalaridan chiqadigan emissiyani ikki baravar kamaytirishni rejalashtirmoqda. Bundan tashqari, kampusga qatnovdan chiqadigan emissiyani kamaytirish ham qiyinchilik tugʻdirmoqda. Bu klinik komponentga ega, ilmiy-tadqiqotlarga yoʻnaltirilgan kampus boʻlgani uchun rejada alohida binolarda energiya sarfini oʻlchash va tekshirish dasturini yaratishni davom ettirish hamda barcha obyektlarda energiyani tejash va qayta tiklashni kuchaytirish koʻzda tutilgan. Materiallar va resurslarni boshqarish boʻyicha kampus hosil qiladigan qattiq chiqindi miqdorini 20 foizga kamaytiradi. Institut rejalashtirish jarayonini boshqarishda yordam berish uchun oliy taʼlim va sogʻliqni saqlash tashkilotlariga iqlim oʻzgarishi taʼsirini yumshatishda koʻmaklashadigan maslahat guruhi — oʻz hamkorlari bilan ishlaydi. Hamkorlarimiz energiyani tejash va issiqxona gazlarini kamaytirish boʻyicha iqlim harakatlari strategiyalarini ishlab chiqish va amalga oshirishda bizga yordam beradi.",
+    para(t("Har bir yoʻnalish uchun besh yillik maqsadlarga erishishga yordam beradigan aniq tadbirlar roʻyxati mavjud. Masalan, transport boʻyicha institut kampusda foydalaniladigan transport vositalaridan chiqadigan emissiyani ikki baravar kamaytirishni rejalashtirmoqda. Bundan tashqari, kampusga qatnovdan chiqadigan emissiyani kamaytirish ham qiyinchilik tugʻdirmoqda. Bu klinik komponentga ega, ilmiy-tadqiqotlarga yoʻnaltirilgan kampus boʻlgani uchun rejada alohida binolarda energiya sarfini oʻlchash va tekshirish dasturini yaratishni davom ettirish hamda barcha obyektlarda energiyani tejash va qayta tiklashni kuchaytirish koʻzda tutilgan. Materiallar va resurslarni boshqarish boʻyicha kampus hosil qiladigan qattiq chiqindi miqdorini 20 foizga kamaytiradi. Institut rejalashtirish jarayonini boshqarishda yordam berish uchun oliy taʻlim va sogʻliqni saqlash tashkilotlariga iqlim oʻzgarishi taʻsirini yumshatishda koʻmaklashadigan maslahat guruhi — oʻz hamkorlari bilan ishlaydi. Hamkorlarimiz energiyani tejash va issiqxona gazlarini kamaytirish boʻyicha iqlim harakatlari strategiyalarini ishlab chiqish va amalga oshirishda bizga yordam beradi.",
            "Для каждого направления составлен перечень конкретных мер, помогающих достичь пятилетних целей. Например, в области транспорта институт планирует вдвое сократить выбросы от транспортных средств, используемых на территории кампуса. Кроме того, сложностью остаётся сокращение выбросов от поездок в кампус. Поскольку это кампус с интенсивной научной работой и клиническим компонентом, план предусматривает продолжение создания программы измерения и проверки энергопотребления для отдельных зданий, а также усиление энергосбережения и рекуперации во всех объектах. В области материалов и управления ресурсами кампус сократит объём образуемых твёрдых отходов на 20 %. Институт взаимодействует со своими партнёрами — консалтинговой группой, цель которой — помогать организациям высшего образования и здравоохранения смягчать последствия изменения климата, — чтобы возглавить процесс планирования. Наши партнёры помогают нам разрабатывать и реализовывать климатические стратегии по энергосбережению и сокращению выбросов парниковых газов.",
            p13)),
     heading(t("Fargʻona jamoat salomatligi tibbiyot instituti siyosatlari: BMTning barqaror rivojlanish maqsadlari",

@@ -16,13 +16,13 @@ Uzbek is the base of every page; Russian and English follow it block by block. T
 - The all-capitals line at the bottom is the title of the PDF: now its caption in normal case. The old Russian and English lines were cut short; we completed them ("и их стимулированию" / "and to stimulate them").
 
 ## 3. Innovatsion goyalar
-- No new text (the three languages were aligned). The picture now stands after the title, the numbered results and the two bullet lines are two lists; "Isteʼmolchi kim?-" got a proper dash. The PDF is the same text as the page (in English): caption "Loyiha tavsifi (PDF, inglizcha)".
+- No new text (the three languages were aligned). The picture now stands after the title, the numbered results and the two bullet lines are two lists; "Isteʻmolchi kim?-" got a proper dash. The PDF is the same text as the page (in English): caption "Loyiha tavsifi (PDF, inglizcha)".
 
 ## 4. Ilmiy tadqiqot yoʻnalishlari
 - The old page was one link and a stray address. The PDF on the old site fjsti.uz is gone (404, also on fermi.uz) and https://lex.uz/ru/ is a homepage: both links are dropped, only the title of the order stays as text (we wrote: "Farmoyishi" / "Распоряжение" / "Order": the old uz said Farmoyish, ru Постановление, en Decree — please check which one No. 101 of 7 March 2022 is). The old uz title was half Cyrillic.
 - Caption of the PDF card (written by us): "Ilmiy tadqiqot yoʻnalishlari va ilmiy kadrlar tayyorlash" (the PDF is the report about the research directions).
 
-## 5. Oliy oʻquv yurtidan keyingi taʼlim
+## 5. Oliy oʻquv yurtidan keyingi taʻlim
 - **Uz "Huquqiy asoslar"**: the old sentence said "PQ-4958" (it is PF-4958, a Farmon) and "2017-yil 30-maydagi 304-sonli Qarori" (Russian and English say 22 May 2017, and the resolution itself is dated 22 May): corrected; it is now an introduction and two items like in ru/en. Please confirm the date.
 - The seven regulations are document cards (captions in three languages, written by us from the old link texts; ru/en lost the stray "согласно" / "according to"). One of them (Ilmiy daraja berish tartibi) is the card the page already had and stays last.
 

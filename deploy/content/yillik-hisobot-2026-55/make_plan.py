@@ -50,7 +50,7 @@ def md(lines, lang, i):
 
 
 def uz_ok(text):
-    assert not re.search(r"['‘’`´]", text), text  # Uzbek uses only ʻ (U+02BB) and ʼ (U+02BC)
+    assert not re.search(r"['‘’`´]", text), text  # Uzbek uses only ʻ (U+02BB) and ʻ (U+02BC)
     return text
 
 
@@ -96,7 +96,7 @@ blocks = [
     heading(t(L["uz"][5]["text"].rstrip(":"), L["ru"][7]["text"].rstrip(":"), L["en"][5]["text"].rstrip(":"))),
     items(useful),
 ]
-title = t("Iqtidorli mutaxassislarning xorijda taʼlim olishini qoʻllab-quvvatlash, ularda kasbiy koʻnikmalarini rivojlantirish va ragʻbatlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisida",
+title = t("Iqtidorli mutaxassislarning xorijda taʻlim olishini qoʻllab-quvvatlash, ularda kasbiy koʻnikmalarini rivojlantirish va ragʻbatlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisida",
           "О дополнительных мерах по поддержке обучения за рубежом одарённых специалистов, развитию их профессиональных навыков и их стимулированию",
           "On additional measures to support the training abroad of gifted specialists, to develop their professional skills and to stimulate them")
 plan.append(entry(slug, raw, blocks, captions_of_cards(documents, [title])))
@@ -151,9 +151,9 @@ assert len(picture) == 1 and all(images_of(raw["data"][lang]["html"]) == picture
 UZ = lambda i: L["uz"][i]["text"]
 RU = lambda i: L["ru"][i]["text"]
 EN = lambda i: L["en"][i]["text"]
-legal = t("Oliy taʼlimdan keyingi taʼlimni tashkil etish va amalga oshirish faoliyati quyidagilarga asoslanadi:", RU(6), EN(6))
-legal_items = t(["Oʻzbekiston Respublikasi Prezidentining 2017-yil 16-fevraldagi PF-4958-son «Oliy oʻquv yurtidan keyingi taʼlim tizimini yanada takomillashtirish toʻgʻrisida»gi Farmoni",
-                 "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2017-yil 22-maydagi 304-son «Oliy taʼlimdan keyingi taʼlim tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida»gi Qarori"],
+legal = t("Oliy taʻlimdan keyingi taʻlimni tashkil etish va amalga oshirish faoliyati quyidagilarga asoslanadi:", RU(6), EN(6))
+legal_items = t(["Oʻzbekiston Respublikasi Prezidentining 2017-yil 16-fevraldagi PF-4958-son «Oliy oʻquv yurtidan keyingi taʻlim tizimini yanada takomillashtirish toʻgʻrisida»gi Farmoni",
+                 "Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2017-yil 22-maydagi 304-son «Oliy taʻlimdan keyingi taʻlim tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida»gi Qarori"],
                 [RU(7).rstrip(";"), RU(8).rstrip(".")], [EN(7).rstrip(";"), EN(8).rstrip(".")])
 for text in legal_items["uz"] + [legal["uz"]]:
     uz_ok(text)
@@ -173,7 +173,7 @@ blocks = [
     para(t(UZ(0), RU(0), EN(0))),
     image_block(picture[0], t("Ilmiy kadrlar tayyorlash", "Подготовка научных кадров", "Training of scientific staff")),
     para(t(UZ(1), RU(1).rstrip(":") + ":", EN(1))),
-    items(t(["Tayanch doktorantura (PhD darajasi uchun)", "Doktorantura (DSc darajasi uchun)", "Mustaqil izlanuvchilik (PhD yoki DSc darajasiga daʼvogarlar uchun)"],
+    items(t(["Tayanch doktorantura (PhD darajasi uchun)", "Doktorantura (DSc darajasi uchun)", "Mustaqil izlanuvchilik (PhD yoki DSc darajasiga daʻvogarlar uchun)"],
             [RU(2).rstrip(";"), RU(3).rstrip(";"), RU(4).rstrip(".")], [EN(2).rstrip(";"), EN(3).rstrip(";"), EN(4).rstrip(".")])),
     heading(t(UZ(5), RU(5), EN(5))),
     para(legal),
@@ -201,15 +201,15 @@ ru1 = R(1)
 cut = ru1.index("Также Законом предусмотрены")
 ru1a, ru1b = ru1[:cut].strip(), ru1[cut:].strip()
 law_href = re.search(r"\]\(([^)]+)\)", U(5)).group(1)
-decree_uz_intro = "Oʻzbekiston Respublikasi Prezidentining «Oʻzbekiston Respublikasi oliy taʼlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasini tasdiqlash toʻgʻrisida»gi Farmoni. Farmonga koʻra Oʻzbekiston Respublikasi oliy taʼlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasi tasdiqlandi, unda quyidagilar nazarda tutilgan:"
-decree_uz = ["davlat-xususiy sheriklikni rivojlantirish, hududlarda davlat va nodavlat oliy taʼlim muassasalari faoliyatini tashkil etish, sohada sogʻlom raqobat muhitini yaratish orqali oliy taʼlim bilan qamrov darajasini 50 foizdan oshirish",
-             "Oʻzbekiston Milliy universiteti va Samarqand davlat universitetini mamlakat oliy taʼlim muassasalarining flagmanlari sifatida shakllantirish",
-             "respublikadagi kamida 10 ta oliy taʼlim muassasasini xalqaro eʼtirof etilgan tashkilotlar (Quacquarelli Symonds World University Rankings, Times Higher Education yoki Academic Ranking of World Universities) reytingining birinchi 1 000 ta oʻrindagi oliy taʼlim muassasalari roʻyxatiga kiritish, oliy taʼlim muassasalarida oʻquv jarayonini bosqichma-bosqich kredit-modul tizimiga oʻtkazish",
-             "oliy taʼlimning ilgʻor standartlarini joriy etish, jumladan, xalqaro tajribaga tayanib, oʻquv dasturlari nazariy bilimlarni berishga qaratilgan taʼlimdan amaliy koʻnikmalarni shakllantirishga yoʻnaltirilgan taʼlim tizimiga bosqichma-bosqich oʻtish",
-             "oliy taʼlim muassasalarining akademik mustaqilligini taʼminlash",
-             "oliy taʼlim muassasalarida taʼlim, fan, innovatsiyalar va ilmiy tadqiqotlar natijalarini tijoratlashtirish faoliyatining oʻzaro bogʻliqligini koʻzda tutuvchi «Universitet 3.0» konsepsiyasini bosqichma-bosqich joriy etish",
-             "xorijiy investitsiyalarni keng jalb etish, pullik xizmatlar koʻlamini kengaytirish va boshqa byudjetdan tashqari mablagʻlar hisobiga oliy taʼlim muassasalarida texnoparklar, foresight-markazlar, transfer texnologiyalar markazlari, startaplar va akseleratorlar yaratish, ularni tegishli tarmoqlar, sohalar va hududlarning ijtimoiy-iqtisodiy rivojlanishini bashorat qilish va tadqiq etish boʻyicha ilmiy-amaliy muassasalar darajasiga chiqarish",
-             "ijtimoiy himoyaga muhtoj aholi qatlamlari, jumladan, imkoniyati cheklangan shaxslarning oliy taʼlim bilan qamrovini ular uchun infratuzilma sharoitlarini yaxshilagan holda oshirish"]
+decree_uz_intro = "Oʻzbekiston Respublikasi Prezidentining «Oʻzbekiston Respublikasi oliy taʻlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasini tasdiqlash toʻgʻrisida»gi Farmoni. Farmonga koʻra Oʻzbekiston Respublikasi oliy taʻlim tizimini 2030 yilgacha rivojlantirish kontseptsiyasi tasdiqlandi, unda quyidagilar nazarda tutilgan:"
+decree_uz = ["davlat-xususiy sheriklikni rivojlantirish, hududlarda davlat va nodavlat oliy taʻlim muassasalari faoliyatini tashkil etish, sohada sogʻlom raqobat muhitini yaratish orqali oliy taʻlim bilan qamrov darajasini 50 foizdan oshirish",
+             "Oʻzbekiston Milliy universiteti va Samarqand davlat universitetini mamlakat oliy taʻlim muassasalarining flagmanlari sifatida shakllantirish",
+             "respublikadagi kamida 10 ta oliy taʻlim muassasasini xalqaro eʻtirof etilgan tashkilotlar (Quacquarelli Symonds World University Rankings, Times Higher Education yoki Academic Ranking of World Universities) reytingining birinchi 1 000 ta oʻrindagi oliy taʻlim muassasalari roʻyxatiga kiritish, oliy taʻlim muassasalarida oʻquv jarayonini bosqichma-bosqich kredit-modul tizimiga oʻtkazish",
+             "oliy taʻlimning ilgʻor standartlarini joriy etish, jumladan, xalqaro tajribaga tayanib, oʻquv dasturlari nazariy bilimlarni berishga qaratilgan taʻlimdan amaliy koʻnikmalarni shakllantirishga yoʻnaltirilgan taʻlim tizimiga bosqichma-bosqich oʻtish",
+             "oliy taʻlim muassasalarining akademik mustaqilligini taʻminlash",
+             "oliy taʻlim muassasalarida taʻlim, fan, innovatsiyalar va ilmiy tadqiqotlar natijalarini tijoratlashtirish faoliyatining oʻzaro bogʻliqligini koʻzda tutuvchi «Universitet 3.0» konsepsiyasini bosqichma-bosqich joriy etish",
+             "xorijiy investitsiyalarni keng jalb etish, pullik xizmatlar koʻlamini kengaytirish va boshqa byudjetdan tashqari mablagʻlar hisobiga oliy taʻlim muassasalarida texnoparklar, foresight-markazlar, transfer texnologiyalar markazlari, startaplar va akseleratorlar yaratish, ularni tegishli tarmoqlar, sohalar va hududlarning ijtimoiy-iqtisodiy rivojlanishini bashorat qilish va tadqiq etish boʻyicha ilmiy-amaliy muassasalar darajasiga chiqarish",
+             "ijtimoiy himoyaga muhtoj aholi qatlamlari, jumladan, imkoniyati cheklangan shaxslarning oliy taʻlim bilan qamrovini ular uchun infratuzilma sharoitlarini yaxshilagan holda oshirish"]
 for text in decree_uz + [decree_uz_intro]:
     uz_ok(text)
 decree = t(decree_uz, [re.sub(r";$|\.$", "", R(i)) for i in range(7, 15)], [re.sub(r";$|\.$", "", E(i)) for i in range(8, 16)])
@@ -224,7 +224,7 @@ en_notes = {
 def uz_note(what, note_line, previous_line):
     """The lex.uz note of a change: the words of uz line `note_line` and the link "Oldingi tahrirga qarang" of uz line `previous_line` (they were two lines)."""
     assert "Oldingi" in U(previous_line)
-    return uz_ok("(%s Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](%s) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son) [Oldingi tahrirga qarang](%s)." % (
+    return uz_ok("(%s Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](%s) tahririda — Qonun hujjatlari maʻlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son) [Oldingi tahrirga qarang](%s)." % (
         what, re.search(r"\]\(([^)]+)\)", U(note_line)).group(1), re.search(r"\]\(([^)]+)\)", U(previous_line)).group(1)))
 
 
@@ -239,7 +239,7 @@ blocks = [
     para(t(decree_uz_intro, R(6), E(7))),
     items(decree),
     heading(t(U(9), R(16), "On measures to further improve the postgraduate education system")),
-    para(t(uz_ok("(Qaror nomi Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](%s) tahririda — Qonun hujjatlari maʼlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son)." % re.search(r"\]\(([^)]+)\)", U(10)).group(1)),
+    para(t(uz_ok("(Qaror nomi Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 6-noyabrdagi 696-sonli [qarori](%s) tahririda — Qonun hujjatlari maʻlumotlari milliy bazasi, 07.11.2020-y., 09/20/696/1481-son)." % re.search(r"\]\(([^)]+)\)", U(10)).group(1)),
            R(17), en_notes["title"])),
     para(t(U(11).rstrip(":") + ":", R(18), "In pursuance of the [Decree](https://lex.uz/docs/3119697) of the President of the Republic of Uzbekistan No. UP-4958 of February 16, 2017 “On further improving the postgraduate education system”, the Cabinet of Ministers resolves:")),
     para(t(U(12), R(19), "1. To approve:")),

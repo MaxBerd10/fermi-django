@@ -114,9 +114,9 @@ cover = {lang: MENU[slug][lang] for lang in LANGS}
 plan.append(entry(slug, raw, [block("heading", {lang: {"text": texts[lang][0], "level": 2} for lang in LANGS}),
                               image_block(pictures["uz"][0], cover),
                               para({lang: texts[lang][1] for lang in LANGS}), para({lang: texts[lang][2] for lang in LANGS}), para({lang: texts[lang][3] for lang in LANGS}),
-                              block("heading", {"uz": {"text": "Tahrir hayʻati aʼzolari", "level": 2}, "ru": {"text": "Члены редакционной коллегии", "level": 2},
+                              block("heading", {"uz": {"text": "Tahrir hayʻati aʻzolari", "level": 2}, "ru": {"text": "Члены редакционной коллегии", "level": 2},
                                                 "en": {"text": "Members of the editorial board", "level": 2}}),
-                              image_block(pictures["uz"][1], {"uz": "Tahrir hayʻati aʼzolari", "ru": "Члены редакционной коллегии", "en": "Members of the editorial board"})],
+                              image_block(pictures["uz"][1], {"uz": "Tahrir hayʻati aʻzolari", "ru": "Члены редакционной коллегии", "en": "Members of the editorial board"})],
                   captions_of_cards(documents, [{lang: MENU[slug][lang] for lang in LANGS}])))
 
 # ---- jurnal-xaqida -----------------------------------------------------------------------------------------------------------------------------------------------------
