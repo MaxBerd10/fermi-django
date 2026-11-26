@@ -132,7 +132,8 @@ class Walker:
                 continue  # a bare address or a stray sign is not a line of the page
             m = re.fullmatch(r"\[([^\]]+)\]\(([^)]+)\)[\s.;,]*", text)
             if m and DOC_EXT.search(m.group(2)) and "/media/" in m.group(2):
-                self.out.append({"t": "document", "media": media_of(m.group(2)), "caption": m.group(1)})
+                caption = m.group(1)
+                self.out.append({"t": "document", "media": media_of(m.group(2)), "caption": sentence_case(caption, self.lang) if is_caps(caption) else caption})
                 continue
             if heading or (node is not None and self.bold_only(node) and len(text) <= 150 and not text.endswith((".", "!", "?", ";", ","))) or (is_caps(text) and len(text) <= 140):
                 if is_caps(text):

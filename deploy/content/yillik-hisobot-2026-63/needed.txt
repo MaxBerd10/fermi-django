@@ -1,0 +1,273 @@
+### raqamli-talim-texnologiyalari-markazi|2|uz  [paragraph, from en]
+The Center is a structural subdivision of the Fergana Institute of Public Health and carries out activities related to the implementation of information and communication technologies within the educational institution.
+
+### raqamli-talim-texnologiyalari-markazi|2|ru  [paragraph, from en]
+The Center is a structural subdivision of the Fergana Institute of Public Health and carries out activities related to the implementation of information and communication technologies within the educational institution.
+
+### raqamli-talim-texnologiyalari-markazi|4|uz  [paragraph, from ru]
+Основной целью Центра - является широкое внедрение цифровых образовательных технологий в Институте, цифровизация образовательного процесса, создание современной цифровой среды для профессорско-преподавательского состава, сотрудников и студентов, а также обеспечение исполнения соответствующих нормативных документов.
+
+### raqamli-talim-texnologiyalari-markazi|4|en  [paragraph, from ru]
+Основной целью Центра - является широкое внедрение цифровых образовательных технологий в Институте, цифровизация образовательного процесса, создание современной цифровой среды для профессорско-преподавательского состава, сотрудников и студентов, а также обеспечение исполнения соответствующих нормативных документов.
+
+### bitiruvchilar|1|ru  [paragraph, from uz]
+Aprel oyining oxiri va may oyining boshlarida bitiruvchilarni ish beruvchilar korxona va tashkilotlar yaʻni sogʻliqni saqlash boshqarmalari raxbarlari, tuman tibbiyot birlashmalari raxbarlari va boshqa ish beruvchilar bilan birgalikda Yakuniy taqsimot oʻtkaziladi. YDA soʻng davlat granti asosida tugatgan bitiruvchilarga diplomdan koʻchirma, taqsimot komissiyasi qaroridan koʻchirma, shaxsiy taqsimot qaydnomasi va ishga yoʻllanma beriladi. Toʻlov-kontrakt asosida tugatgan bitiruvchilarga diplom va ishga yoʻllanma beriladi. Bitiruvchilar oʻqishni tugatgan yildan boshlab 3 yilgacha ularni ishga joylashish monitoringi muntazam ravishda institut tomonidan oʻtkazib boriladi.
+
+### bitiruvchilar|1|en  [paragraph, from uz]
+Aprel oyining oxiri va may oyining boshlarida bitiruvchilarni ish beruvchilar korxona va tashkilotlar yaʻni sogʻliqni saqlash boshqarmalari raxbarlari, tuman tibbiyot birlashmalari raxbarlari va boshqa ish beruvchilar bilan birgalikda Yakuniy taqsimot oʻtkaziladi. YDA soʻng davlat granti asosida tugatgan bitiruvchilarga diplomdan koʻchirma, taqsimot komissiyasi qaroridan koʻchirma, shaxsiy taqsimot qaydnomasi va ishga yoʻllanma beriladi. Toʻlov-kontrakt asosida tugatgan bitiruvchilarga diplom va ishga yoʻllanma beriladi. Bitiruvchilar oʻqishni tugatgan yildan boshlab 3 yilgacha ularni ishga joylashish monitoringi muntazam ravishda institut tomonidan oʻtkazib boriladi.
+
+### eng-kop-beriladigan-savollar|15|en  [paragraph, from uz]
+5. Oliy tibbiy taʻlim muassasalarining bakalavriat yoʻnalishida davlat granti asosida tahsil olgan magistratura va klinik ordinatura bitiruvchilari Komissiya tomonidan oliy tibbiy taʻlim muassasalari, ilmiy tadqiqot institutlari, ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazlari va boshqa sogʻliqni saqlash muassasalarining ushbu mutaxassislarga boʻlgan ehtiyojidan kelib chiqqan holda taqsimlanadi.
+
+### online-royxatdan-otish-2025|0|ru  [paragraph, from uz]
+2025-2026-oʻquv yili uchun abituriyentlarni roʻyxatga olish boshlandi.
+
+### online-royxatdan-otish-2025|0|en  [paragraph, from uz]
+2025-2026-oʻquv yili uchun abituriyentlarni roʻyxatga olish boshlandi.
+
+### qabul-komissiyasi-yangiliklari|1|ru  [paragraph, from uz]
+Oliy va professional taʻlim tashkilotlari talabalari va oʻquvchilariga byudjet mablagʻlari hisobidan taʻlim kreditini ajratish tartibini takomillashtirish toʻgʻrisida
+
+### qabul-komissiyasi-yangiliklari|20|en  [paragraph, from uz]
+Oʻzbekiston Respublikasi
+
+### qabul-komissiyasi-joylashgan-orni|6|ru  [paragraph, from uz]
+Elektron pochta manzili:[info@fjsti.uz](http://info@fjsti.uz), [fmioz@mail.ru](http://fmioz@mail.ru)
+
+### qabul-komissiyasi-joylashgan-orni|6|en  [paragraph, from uz]
+Elektron pochta manzili:[info@fjsti.uz](http://info@fjsti.uz), [fmioz@mail.ru](http://fmioz@mail.ru)
+
+### qabul-hujjatlar-toplami|3|uz  [paragraph, from ru]
+Обратите внимание!
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|2|ru  [caption, from uz]
+BAKALAVR
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|2|en  [caption, from uz]
+BAKALAVR
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|4|ru  [caption, from uz]
+MAGISTRATURA
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|4|en  [caption, from uz]
+MAGISTRATURA
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|5|ru  [caption, from uz]
+MAQSADLI QABUL
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|5|en  [caption, from uz]
+MAQSADLI QABUL
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|6|ru  [heading, from uz]
+Imtiyozli kvotalar:
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|6|en  [heading, from uz]
+Imtiyozli kvotalar:
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|7|ru  [caption, from uz]
+5 yil stajga ega xotin-qizlar uchun
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|7|en  [caption, from uz]
+5 yil stajga ega xotin-qizlar uchun
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|9|ru  [caption, from uz]
+Nogironligi boʻlgan shaxslar uchun
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|9|en  [caption, from uz]
+Nogironligi boʻlgan shaxslar uchun
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|10|ru  [heading, from uz]
+Qoʻshimcha kvotalar:
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|10|en  [heading, from uz]
+Qoʻshimcha kvotalar:
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|11|ru  [caption, from uz]
+Mehribonlik uyi va bolalar shaharchalarining bitiruvchilari uchun qoʻshimcha kvota
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|11|en  [caption, from uz]
+Mehribonlik uyi va bolalar shaharchalarining bitiruvchilari uchun qoʻshimcha kvota
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|12|ru  [caption, from uz]
+Harbiy tavsiyanomaga ega boʻlganlar uchun qoʻshimcha 5 %li qabul koʻrsatkichlari taqsimoti
+
+### talim-yonalishlarini-tanlash-yoriqnomasi-2025|12|en  [caption, from uz]
+Harbiy tavsiyanomaga ega boʻlganlar uchun qoʻshimcha 5 %li qabul koʻrsatkichlari taqsimoti
+
+### nogironligi-bolgan-shaxslarga-qoshimcha-kvota|1|ru  [paragraph, from uz]
+Respublika oliy taʻlim muassasalariga abituriyentlarni qabul qilishning umumiy soniga nisbatan nogironligi boʻlgan shaxslar uchun qoʻshimcha ikki foizli davlat granti asosidagi qabul koʻrsatkichlarining oliy taʻlim muassasalari va taʻlim shakllari kesimidagi
+
+### nogironligi-bolgan-shaxslarga-qoshimcha-kvota|1|en  [paragraph, from uz]
+Respublika oliy taʻlim muassasalariga abituriyentlarni qabul qilishning umumiy soniga nisbatan nogironligi boʻlgan shaxslar uchun qoʻshimcha ikki foizli davlat granti asosidagi qabul koʻrsatkichlarining oliy taʻlim muassasalari va taʻlim shakllari kesimidagi
+
+### nogironligi-bolgan-shaxslarga-qoshimcha-kvota|2|ru  [heading, from uz]
+Taqsimoti
+
+### nogironligi-bolgan-shaxslarga-qoshimcha-kvota|2|en  [heading, from uz]
+Taqsimoti
+
+### bakalavriat-talim-granti-20252026|1|ru  [caption, from uz]
+Biotibbiyot muhandisligi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|1|en  [caption, from uz]
+Biotibbiyot muhandisligi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|2|ru  [caption, from uz]
+Fundamental tibbiyot yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|2|en  [caption, from uz]
+Fundamental tibbiyot yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|3|ru  [caption, from uz]
+Oliy hamshiralik ishi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|3|en  [caption, from uz]
+Oliy hamshiralik ishi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|4|ru  [caption, from uz]
+Tibbiy-profilaktika ishi
+
+### bakalavriat-talim-granti-20252026|4|en  [caption, from uz]
+Tibbiy-profilaktika ishi
+
+### bakalavriat-talim-granti-20252026|5|ru  [caption, from uz]
+Davolash ishi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|5|en  [caption, from uz]
+Davolash ishi yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|6|ru  [caption, from uz]
+Farmatsiya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|6|en  [caption, from uz]
+Farmatsiya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|7|ru  [caption, from uz]
+Pediatriya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|7|en  [caption, from uz]
+Pediatriya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|8|ru  [caption, from uz]
+Stomatologiya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|8|en  [caption, from uz]
+Stomatologiya yoʻnalishi
+
+### bakalavriat-talim-granti-20252026|9|ru  [paragraph, from uz]
+Taʻlim grantlarini qayta taqsimlash jarayonidan norozi boʻlgan talabgorlar har bir koʻrsatkich boʻyicha 48 soat ichida murojaat qilishlari mumkin.
+
+### bakalavriat-talim-granti-20252026|9|en  [paragraph, from uz]
+Taʻlim grantlarini qayta taqsimlash jarayonidan norozi boʻlgan talabgorlar har bir koʻrsatkich boʻyicha 48 soat ichida murojaat qilishlari mumkin.
+
+### bakalavriat-talim-granti-20252026|10|ru  [heading, from uz]
+[Appellatsiya komissiyasiga aʻriza berish](https://docs.google.com/forms/d/e/1FAIpQLSd1QGg7C17XbsY9UKcUCEURX-rfP5OJuLrcb-CqJvQYOlaEFw/viewform)
+
+### bakalavriat-talim-granti-20252026|10|en  [heading, from uz]
+[Appellatsiya komissiyasiga aʻriza berish](https://docs.google.com/forms/d/e/1FAIpQLSd1QGg7C17XbsY9UKcUCEURX-rfP5OJuLrcb-CqJvQYOlaEFw/viewform)
+
+### magistratura-imtihon-fanlari-royxati|1|uz  [paragraph, from ru]
+Эти баллы распределяются в следующем порядке:
+
+### magistratura-natijalari-2024|1|uz  [caption, from en]
+Download results
+
+### magistratura-natijalari-2024|1|ru  [caption, from en]
+Download results
+
+### magistratura-talim-granti-20252026|1|ru  [caption, from uz]
+Magistartura mutaxassisligi
+
+### magistratura-talim-granti-20252026|1|en  [caption, from uz]
+Magistartura mutaxassisligi
+
+### ordinatura-mandat-natijalari-2025|1|ru  [paragraph, from uz]
+Klinik ordinatura test sinovi natijalari eʻlon qilindi
+
+### ordinatura-mandat-natijalari-2025|1|en  [paragraph, from uz]
+Klinik ordinatura test sinovi natijalari eʻlon qilindi
+
+### ordinatura-mandat-natijalari-2025|2|ru  [paragraph, from uz]
+Izoh: Test natijalariga asosan Fargʻona jamoat salomatligi tibbiyot institutiga, viloyatlarga berilgan kvotalarga asosan ballar ketma ketligida taqsimlanadi.
+
+### ordinatura-mandat-natijalari-2025|2|en  [paragraph, from uz]
+Izoh: Test natijalariga asosan Fargʻona jamoat salomatligi tibbiyot institutiga, viloyatlarga berilgan kvotalarga asosan ballar ketma ketligida taqsimlanadi.
+
+### ordinatura-qabul-komissiyasi-yangiliklari-2025|1|ru  [heading, from uz]
+Imtihonlar quyidagi manzillarda oʻtkaziladi:
+
+### ordinatura-qabul-komissiyasi-yangiliklari-2025|1|en  [heading, from uz]
+Imtihonlar quyidagi manzillarda oʻtkaziladi:
+
+### xalqaro-qoshma-talim-2025|4|uz  [paragraph, from ru]
+Продолжительность обучения 6 лет (3 + 3).
+
+### xalqaro-qabul-hujjatlar-toplami|14|ru  [paragraph, from uz]
+Haftaning ish kunlari soat 9:00 dan 18:00 gacha murojaat etishingiz mumkin.
+
+### xalqaro-qabul-hujjatlar-toplami|14|en  [paragraph, from uz]
+Haftaning ish kunlari soat 9:00 dan 18:00 gacha murojaat etishingiz mumkin.
+
+### bakalavriat-2025|4|uz  [caption, from ru]
+Образец заявления
+
+### bakalavriat-2025|4|en  [caption, from ru]
+Образец заявления
+
+### texnikumlar-uchun-qabul-komissiyasi-markazi|6|ru  [paragraph, from uz]
+Elektron pochta manzili:[info@fjsti.uz](http://info@fjsti.uz/), [fmioz@mail.ru](http://fmioz@mail.ru/)
+
+### texnikumlar-uchun-qabul-komissiyasi-markazi|6|en  [paragraph, from uz]
+Elektron pochta manzili:[info@fjsti.uz](http://info@fjsti.uz/), [fmioz@mail.ru](http://fmioz@mail.ru/)
+
+### appelyatsiya-komissiyasi|1|ru  [heading, from uz]
+2024/2025-oʻquv yilida texnikumlarni bitiruvchilarini suhbat asosida oʻqishga qabul qilish imtihon natijasi boʻyicha appelyatsiya komissiyasi
+
+### appelyatsiya-komissiyasi|1|en  [heading, from uz]
+2024/2025-oʻquv yilida texnikumlarni bitiruvchilarini suhbat asosida oʻqishga qabul qilish imtihon natijasi boʻyicha appelyatsiya komissiyasi
+
+### mutaxassisliklar-boyicha-testlar-toplami|73|ru  [heading, from uz]
+Operativ jarroxlik va topografik anatomiya kafedrasi
+
+### mutaxassisliklar-boyicha-testlar-toplami|73|en  [heading, from uz]
+Operativ jarroxlik va topografik anatomiya kafedrasi
+
+### mutaxassisliklar-boyicha-testlar-toplami|74|ru  [caption, from uz]
+Xarbiy dala jarroxligi Tibbiy profilaktika yoʻnalishi uchun (uzb)
+
+### mutaxassisliklar-boyicha-testlar-toplami|74|en  [caption, from uz]
+Xarbiy dala jarroxligi Tibbiy profilaktika yoʻnalishi uchun (uzb)
+
+### talaba-maqomi|5|uz  [paragraph, from ru]
+Примечание:
+
+### yoriqnoma-klinik-ordinatura|3|uz  [paragraph, from ru]
+Деятельность клинической ординатуры организуется на основании следующих нормативных документов:
+
+### davlat-imtihonlari|8|uz  [paragraph, from ru]
+Клинический ординатор допускается к аттестации на основании отчёта, утверждённого на заседании кафедры (отделения, лаборатории и др.).
+
+### davlat-imtihonlari|8|en  [paragraph, from ru]
+Клинический ординатор допускается к аттестации на основании отчёта, утверждённого на заседании кафедры (отделения, лаборатории и др.).
+
+### davlat-imtihonlari|9|uz  [paragraph, from ru]
+Отчёт утверждается заведующим кафедрой и представляется в аттестационную комиссию.
+
+### davlat-imtihonlari|9|en  [paragraph, from ru]
+Отчёт утверждается заведующим кафедрой и представляется в аттестационную комиссию.
+
+### chet-ellik-talabalar-xavfsizligi|1|uz  [caption, from ru]
+Узнать больше....... Конституция Республики Узбекистан
+
+### chet-ellik-talabalar-xavfsizligi|1|en  [caption, from ru]
+Узнать больше....... Конституция Республики Узбекистан
+
+### chet-ellik-talabalar-xavfsizligi|2|ru  [heading, from uz]
+Batafsil bilish uchun... [Oʻzbekiston Respublikasi Konstitutsiyasi](https://lex.uz/docs/-6445145)
+
+### study-in-uzbekistan|8|ru  [paragraph, from uz]
+Bundan tashqari, xorijiy talabalar uchun qoʻshma taʻlim dasturlari ham yoʻlga qoʻyilgan.
+
+### aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi|5|uz  [paragraph, from ru]
+переписной лист — бланк установленной формы, предназначенный для записи персональных данных по установленным вопросам;
+

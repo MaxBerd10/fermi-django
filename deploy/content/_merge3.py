@@ -3,7 +3,7 @@ a language only (or is missing in a language) becomes a row with a missing cell,
 (key "slug|row|lang" -> text, or -> {"items": [...]} for a list). `rows_of(specs)` -> rows; `assemble(rows, translations)` -> (blocks, missing)."""
 import re
 
-from _align import align, tokens
+from _align import align, score, tokens
 
 LANGS = ("uz", "ru", "en")
 TEXT_KINDS = {"heading", "paragraph"}
@@ -32,6 +32,30 @@ def rows_of(specs):
         en_extra = [specs["en"][j] for j in extras["en"].get(i, [])]
         for a, b in align(ru_extra, en_extra):
             rows.append({"uz": None, "ru": ru_extra[a] if a is not None else None, "en": en_extra[b] if b is not None else None})
+    return reunite(rows)
+
+
+def reunite(rows):
+    """A block that stands in another place of the page in a language (a list after the picture in Uzbek, before it in Russian) is unmatched in both: put the two together."""
+    for lang in ("ru", "en"):
+        for _ in range(len(rows)):
+            best = None
+            for a, row_a in enumerate(rows):
+                if not (row_a["uz"] and not row_a[lang]):
+                    continue
+                for b, row_b in enumerate(rows):
+                    if a == b or row_b["uz"] or not row_b[lang]:
+                        continue
+                    sc = score(row_a["uz"], row_b[lang])
+                    if sc >= 1.9 and (best is None or sc > best[0]):
+                        best = (sc, a, b)
+            if best is None:
+                break
+            _, a, b = best
+            rows[a][lang] = rows[b][lang]
+            rows[b][lang] = None
+            if not any(rows[b].values()):
+                rows.pop(b)
     return rows
 
 

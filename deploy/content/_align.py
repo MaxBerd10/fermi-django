@@ -21,7 +21,7 @@ def norm(media):
     return re.sub(r"[^0-9a-zа-я]", "", (media or "").rsplit("/", 1)[-1].lower())
 
 
-def score(a, b):
+def score(a, b, pos=0.0):
     ta, tb = tokens(a), tokens(b)
     s = 0.0
     kinds = {a["t"], b["t"]}
@@ -43,6 +43,7 @@ def score(a, b):
         s += 3.0 if norm(a.get("media")) == norm(b.get("media")) else -1.0
     la, lb = max(len(ta), 1), max(len(tb), 1)
     s += 1.0 * min(la, lb) / max(la, lb)
+    s += 0.9 * max(0.0, 1.0 - 4.0 * pos)  # blocks of the same place of the page
     return s
 
 
@@ -58,7 +59,7 @@ def align(a, b, gap=-0.9, floor=1.2):
         back[0][j] = "l"
     for i in range(1, n + 1):
         for j in range(1, m + 1):
-            sc = score(a[i - 1], b[j - 1])
+            sc = score(a[i - 1], b[j - 1], abs((i - 1) / max(n, 1) - (j - 1) / max(m, 1)))
             best, move = dp[i - 1][j] + gap, "u"
             if dp[i][j - 1] + gap > best:
                 best, move = dp[i][j - 1] + gap, "l"
