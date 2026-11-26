@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "department-42",
+    "order": 32,
+    "block_type": "paragraph",
+    "source_sha": "befbb5bad5ead9184bd6dbed60d7ce0f0a1de8f6936493eca7c2dad03f6a4fc5",
+    "text": {
+      "en": "ISOQOV ERKINJON ZIYOYEVICH. Doctor of Medical Sciences. He headed the department in 2000–2006 and in 2012, and served as deputy director of the branch for academic and scientific affairs in 2013–2015."
+    }
+  },
+  {
+    "slug": "department-42",
+    "order": 35,
+    "block_type": "paragraph",
+    "source_sha": "a5201ac3055f4ce918543c7391d37f54725dd2327ea77d70cf33f4a03d19b384",
+    "text": {
+      "ru": "Кандидат медицинских наук, доцент. В 2013–2015 годах — декан факультета, в 2016–2023 годах — заместитель директора по учебной и научной работе.",
+      "en": "Candidate of Medical Sciences, associate professor. He served as dean of the faculty in 2013–2015 and deputy director for academic and scientific affairs in 2016–2023."
+    }
+  },
+  {
+    "slug": "department-42",
+    "order": 38,
+    "block_type": "paragraph",
+    "source_sha": "0deecd42fc228e063707741ac52ce9994d84ea1169d2024ffc281db4289448f7",
+    "text": {
+      "ru": "Кандидат медицинских наук, доцент. В 2016–2022 годах — проректор по научной работе и инновациям.",
+      "en": "Candidate of Medical Sciences, associate professor. She served as vice-rector for research and innovation in 2016–2022."
+    }
+  },
+  {
+    "slug": "department-42",
+    "order": 49,
+    "block_type": "paragraph",
+    "source_sha": "6fe19d5426339771c730cbc4ce79b661b0c5123fd7768bbccb45eabfb6239224",
+    "text": {
+      "en": "In the early 1990s, perestroika in the former Soviet Union led to a difficult political, economic and social situation. Uzbekistan made historic decisions to stabilize public administration and set a course for independent development. The presidential system was introduced on 24 March 1990, and a declaration of state independence and the corresponding resolution were adopted on 31 August 1991. The national referendum and presidential election held on 29 December 1991 strengthened the legal and political foundations of independent state development."
+    }
+  },
+  {
+    "slug": "department-42",
+    "order": 55,
+    "block_type": "paragraph",
+    "source_sha": "fa67d8c6cff20aed3a58d930800fcb0ccecb264bf63b1002941840eb373db0f8",
+    "text": {
+      "en": "In 1992, with the approval of two ministries, a faculty of medicine was also established at Fergana State University. The initiative was important for research and practice because public health was recognized as a key measure of social development and there was a need to train specialists with in-depth knowledge and skills in preventive medicine. The faculty was housed, its leadership and teaching staff appointed, and its teaching program organized in stages. Teaching began on 1 September 1992, with 105 students admitted to the first year and 46 to the second."
+    }
+  },
+  {
+    "slug": "department-42",
+    "order": 56,
+    "block_type": "paragraph",
+    "source_sha": "7455011248491989c0da86e3680b0e81f040065345d9896f87c734967517e982",
+    "text": {
+      "en": "From 1992 to 1994, partnerships were developed to improve the quality of education and strengthen scientific and teaching support. In October 1994, a cooperation agreement with the Second Tashkent State Medical Institute was formally approved, enabling faculty exchanges and academic support."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 1,
+    "block_type": "paragraph",
+    "source_sha": "469b63b4fb440a4153a84a28d960a9aaa60f7f2df306d873e5e39beef3832f93",
+    "text": {
+      "uz": "Amerika Qoʻshma Shtatlari tibbiy litsenziyalash imtihoni ( United States Medical Licensing Examination , USMLE ) — AQShda tibbiy faoliyat bilan shugʻullanish uchun litsenziya olishga moʻljallangan uch bosqichli imtihon dasturi. Uni Davlat tibbiyot kengashlari federatsiyasi (FSMB) va Milliy tibbiy ekspertlar kengashi (NBME) homiyligida oʻtkaziladi. Tibbiyot doktori (MD) darajasiga ega shifokorlar litsenziya olish uchun USMLE imtihonidan oʻtishlari shart. Osteopatik tibbiyot doktori (DO) darajasiga ega shifokorlar esa COMLEX-USA (COMLEX) imtihonlarini topshiradi."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 2,
+    "block_type": "paragraph",
+    "source_sha": "53bc3bcb5b555388dbcd9d0f88ac6c1eb609dadeca651ba63aebad5b69776290",
+    "text": {
+      "uz": "USMLE shifokorning bilim, tushuncha va tamoyillarni qoʻllash qobiliyatini, shuningdek salomatlik va kasallik holatida muhim boʻlgan hamda xavfsiz va samarali bemor parvarishining asosini tashkil etuvchi, bemorga yoʻnaltirilgan asosiy koʻnikmalarni baholaydi. Imtihon materiallarini har yili AQSh va uning hududlaridagi tibbiyot oʻqituvchilari hamda amaliyotchi shifokorlardan iborat imtihon qoʻmitalari tayyorlaydi. Har bir test topshirigʻi yoki klinik holatni kamida ikki qoʻmita tanqidiy koʻrib chiqadi, shubhali materiallarni qayta ishlaydi yoki chiqarib tashlaydi. Dastur AQShdagi shtat tibbiyot kengashlariga litsenziya olishni istovchilarning barchasi uchun yagona imtihon taqdim etishni maqsad qilgan. MD darajasiga ega shifokorlar USMLE ni topshiradi, DO darajasiga ega shifokorlar esa shtat litsenziyasini olish uchun COMLEX ni topshiradi."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 3,
+    "block_type": "paragraph",
+    "source_sha": "aa1d4b04d4809ab7b21b0a1dcd7679122529032e1f36e7ed7df13f33b627da17",
+    "text": {
+      "uz": "USMLE Step 1 Bu bosqich tibbiyot oliy oʻquv yurti talabalari yoki bitiruvchilari asosiy fanlarning muhim tushunchalarini tushunishini va ularni tibbiy amaliyotda qoʻllay olishini baholaydi. Step 1 nafaqat hozirgi paytda xavfsiz va malakali tibbiy amaliyotga asos boʻlgan fanlarni oʻzlashtirishni, balki umr boʻyi oʻqish orqali malakani saqlab turish uchun zarur ilmiy tamoyillarni ham tekshiradi. Imtihon ikki yoʻnalish — tizim va jarayon — boʻyicha asosiy fanlar materialini tartiblaydigan yagona mazmun rejasi asosida tuzilgan. U quyidagi fanlarni oʻz ichiga oladi: anatomiya, xulq-atvor fanlari, biokimyo, mikrobiologiya, patologiya, farmakologiya, fiziologiya hamda oziqlanish, genetika va qarish kabi fanlararo mavzular."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 4,
+    "block_type": "paragraph",
+    "source_sha": "afbcbcfdead1ce944bcd956c28fe24c5fd5a1b48d342b08de6c1e2b6ec0d1a99",
+    "text": {
+      "uz": "USMLE Step 2 Klinik bilim (Clinical Knowledge) bosqichi — nomzodning bemorni nazorat ostida davolash uchun zarur boʻlgan tibbiy bilim, koʻnikma va klinik fanlarni tushunishni qoʻllay olish qobiliyatini baholaydigan standartlashtirilgan test. U turli tibbiyot yoʻnalishlarini qamrab oladi: ichki kasalliklar, akusherlik va ginekologiya, pediatriya, psixiatriya va jarrohlik."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 7,
+    "block_type": "paragraph",
+    "source_sha": "a1ce663630690d65cb38d907af090336b1058986de73a1e153b45c88ba93f791",
+    "text": {
+      "uz": "USMLE Step 3 Bu USMLE ketma-ketligidagi yakuniy imtihon: u tibbiyot oliy oʻquv yurti talabalari yoki bitiruvchilari mustaqil (nazoratsiz) tibbiy amaliyot uchun zarur boʻlgan biotibbiy va klinik fanlar boʻyicha tibbiy bilim va tushunchalarni qoʻllay olishini baholaydi, bunda ambulator sharoitda bemorni olib borishga alohida eʻtibor beriladi. AQSh tibbiyot oliy oʻquv yurtlari bitiruvchilari odatda bu imtihonni rezidenturaning birinchi yili oxirida topshiradi. Imtihon qatnashchilari quyidagi mavzular boʻyicha sinaladi: markaziy asab tizimi; koʻz, quloq, burun, ogʻiz va tomoq; nafas tizimi; qon aylanish tizimi; ovqat hazm qilish tizimi; xulq-atvor va hissiy buzilishlar; tayanch-harakat tizimi; teri va teri osti toʻqimasi; endokrin tizim, oziqlanish va modda almashinuvi buzilishlari; buyraklar va siydik yoʻlari; reproduktiv tizim; homiladorlik va tugʻruq; yangi tugʻilgan chaqaloq va bolalik davri kasalliklari; qon va qon yaratuvchi aʻzolar; yuqumli va parazitar kasalliklar; jarohatlar, yaralar, zaharli taʻsirlar va kuyishlar; salomatlikni saqlash masalalari."
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 5,
+    "block_type": "heading",
+    "source_sha": "4273a21966e2fd6ab54ad7fc24ce29adb4adfc415bf6e69a313d76babab082ef",
+    "text": {
+      "uz": "USMLE 3-bosqichi",
+      "ru": "Третий этап USMLE",
+      "en": "USMLE Step 3"
+    }
+  },
+  {
+    "slug": "usmle-dasturi",
+    "order": 6,
+    "block_type": "paragraph",
+    "source_sha": "a2daa8717b381541e172a602c335db936e470b9a88141c3ebbb0c941be19182d",
+    "text": null
+  }
+]
