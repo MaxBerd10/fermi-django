@@ -1,0 +1,1294 @@
+{
+ "hududiy-boshqarmalar|blocks": [
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Fargʻona viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ферганское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Fergana regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Bobur Primqulov",
+      "Manzil: Yuksalish koʻchasi №104",
+      "Telefon: +998 (73) 244-37-22 +998 (73) 244-96-16"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Примкулов Бобур",
+      "Адрес: ул. Юксалиш 104",
+      "Телефон: +998 (73) 244-37-22"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Primkulov Bobur",
+      "Address: Yuksalish St. №104",
+      "Phone: +998 (73) 244-37-22"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent shahar sogʻliqni saqlash bosh boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Главное управление здравоохранения города Ташкента",
+     "level": 3
+    },
+    "en": {
+     "text": "The main department of Health of the city of Tashkent",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Alimov Anvar Valiyevich",
+      "Manzil: Yashnobod tumani Taraqqiyot koʻchasi №2",
+      "Telefon: +998 (71) 233-95-00"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Алимов Анвар Валиевич",
+      "Адрес: Яшнабадский район,ул. Таракиёт, дом № 2",
+      "Телефон: +998 (71) 233-95-00"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Alimov Anvar Valiyevich",
+      "Address: Taraqqiyot street № 2 Yashnabad district",
+      "Phone: +998 (71) 233-95-00"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ташкентское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Tashkent regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Arziqulov Turaqul Sadikovich",
+      "Manzil: Shifokorlar koʻchasi №22",
+      "Telefon: +998 (71) 250-40-56, +998 (90) 958-79-32"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Арзикулов Туракул Садикович",
+      "Адрес: улица Шифокорлар д.22",
+      "Телефон: +998 (71) 250-40-56"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Arzikulov Turakul Sadikovich",
+      "Address: Shifokorlar Street №22",
+      "Phone: +998 (71) 250-40-56"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Andijon viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Андижанское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Andijan regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Yusupov Salohiddin Gʻulomjonovich",
+      "Manzil: Amir Umarxonova koʻchasi, 19-uy",
+      "Telefon: +998 (74) 228-42-84"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Юсупов Салохиддин Гуломжонович",
+      "Адрес: ул. Амир Умархона 19",
+      "Телефон: +998 (74) 228-42-84"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Yusupov Salohiddin G‘ulomjonovich",
+      "Address: Amir Umarxonova street №19",
+      "Phone: +998 (74) 228-42-84"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Buxoro viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Бухарское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Bukhara regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Saidov Gʻafur Normurodovich",
+      "Manzil: Islom Karimov koʻchasi №20",
+      "Telefon: +998 (65) 221-23-87+998 (65) 221-21-16"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Саидов Гафур Нормуродович",
+      "Адрес: ул Ислама Каримова дом 20",
+      "Телефон: +998 (65) 221-23-87+998 (65) 221-21-16"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Saidov Gafur Normurodovich",
+      "Address: Islom Karimov street №20",
+      "Phone: +998 (65) 221-23-87 +998 (65) 221-21-1616"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Jizzax viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Джизакское областое управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Jizzakh regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Maxmudova Ozoda Javlanovna",
+      "Manzil: Turaqulov koʻchasi №2",
+      "Telefon: +998 (72) 226-55-66"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Махмудова Озода Джавлановна",
+      "Адрес: ул. Туракулов, дом №2",
+      "Телефон: +998 (72) 226-55-66"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Makhmudova Ozoda Javlanovna",
+      "Address: Turakulov street №2",
+      "Phone: +998 (72) 226-55-66"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Navoiy viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Навоийское областое управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Navoi regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Rasulov Zafar Ilhomovich",
+      "Manzil: Tolstoy koʻchasi №18",
+      "Telefon: +998 (79) 225-12-24"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Расулов Зафар Ильхомович",
+      "Адрес: Навоий шаҳар, Толстого кўчаси 18",
+      "Телефон: +998 (79) 225-12-24"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Rasulov Zafar Ilhomovich",
+      "Address: Tolstoy street №18",
+      "Phone: +998 (79) 225-12-24"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Namangan viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Наманганское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Namangan regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Eminov Abdulxodi Muhiddinovich",
+      "Manzil: Islom Karimov koʻchasi №10",
+      "Telefon: +998 (69) 234-32-34"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Эминов Абдулходи Мухиддинович",
+      "Адрес: ул Ислома Каримова, дом № 10",
+      "Телефон: +998 (69) 234-32-34"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Eminov Abdulxodi Muhiddinovich",
+      "Address: Islom Karimov street №10",
+      "Phone: +998 (69) 234-32-34"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Samarqand viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Самаркандское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Samarkand regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Jumaniyazov Davronbek Husainbaevich",
+      "Manzil: Koʻksaroy koʻchasi №1",
+      "Telefon: +998 (66) 234-99-36"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Жуманиязов Давронбек Хусаинбоевич",
+      "Адрес: ул. Куксарой майдони, дом № 1, корп 1",
+      "Телефон: +998 (66) 234-99-36"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Jumaniyazov Davronbek Khusainbaevich",
+      "Address: Kuksaray street №1",
+      "Phone: +998 (66) 234-99-36"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Sirdaryo viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Сырдарьинское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Syrdarya regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Yuldashev Rustam Shavkatovich",
+      "Manzil: Sayxun koʻchasi №43",
+      "Telefon: +998 (67) 225-05-33"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Юлдашев Рустам Шавкатович",
+      "Адрес: ул. Сайхун 43",
+      "Телефон: +998 (67) 225-05-33"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Yuldashev Rustam Shavkatovich",
+      "Address: Sayxun street №43",
+      "Phone: +998 (67) 225-05-33"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Surxondaryo viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Сурхандарьинское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Surkhandarya regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Abdivoxidov Komil Murtazayevich",
+      "Manzil: Taraqqiyot koʻchasi №15",
+      "Telefon: +998 (76) 223-19-28"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Абдивохидов Комил Муртазаевич",
+      "Адрес: ул. Тараккиёт, дом № 15",
+      "Телефон: +998 (76) 223-19-28"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Abdivoxidov Komil Murtazayevich",
+      "Address: Taraqqiyot №15",
+      "Phone: +998 (76) 223-19-28"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Xorazm viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Хорезмское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Khorazem regional Department of health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Hojiyev Inoyat Sadullayevich",
+      "Manzil: Urgench shahri, Gʻofur Gʻulom koʻchasi №16А",
+      "Telefon: +998 (62) 223-06-30+998 (62) 223-04-00"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Ходжиев Иноят Садуллаевич",
+      "Адрес: г. Ургенч, ул. Гофура Гуляма, дом № 16 А",
+      "Телефон: +998 (62) 223-06-30+998 (62) 223-04-00"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Hojiyev Inoyat Sadullayevich",
+      "Address: Urgench city,Gafur Gulam street №16А",
+      "Phone: +998 (62) 223-06-30 +998 (62) 223-04-00"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Qashqadaryo viloyati sogʻliqni saqlash boshqarmasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Кашкадарьинское областное управление здравоохранения",
+     "level": 3
+    },
+    "en": {
+     "text": "Kashkadarya regional health department",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Tulakov Ravshan Panjiyevich",
+      "Manzil: Xonobod koʻchasi, №28",
+      "Telefon: +998 (78) 771-03-34"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Турсунов Дониёр Шодиевич",
+      "Адрес: г.Карши, Хонободское шоссе, дом № 28",
+      "Телефон: +998 (78) 771-03-34"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Tursunov Doniyor Shodievich",
+      "Address: Khonobod street, №28",
+      "Phone: +998 (78) 771-03-34"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Qoraqalpogʻiston Respublikasi Sogʻliqni saqlash vazirligi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Министерство здравоохранения Республики Каракалпакстан",
+     "level": 3
+    },
+    "en": {
+     "text": "Ministry of Health of the Republic of Karakalpakstan",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rahbar: Qurbonov Murad Ismailovich",
+      "Manzil: Doʻstlik guzari koʻchasi №152",
+      "Telefon: +998 (61) 226-00-48"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Курбонов Мурад Исмаилович",
+      "Адрес: ул. Дослык Гузари, 152",
+      "Телефон: +998 (61) 226-00-48"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Kurbanov Murad Ismailovich",
+      "Address: Duslik guzari street №152",
+      "Phone: +998 (61) 226-00-48"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "raw_html",
+   "data": {
+    "uz": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "ru": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    },
+    "en": {
+     "html": "<p><iframe frameborder=\"0\" height=\"450\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s width=600 height=450 style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade\" width=\"600\" title=\"Map\"></iframe></p>"
+    }
+   }
+  }
+ ],
+ "bilim-yurtlari|blocks": [
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Fargʻona jamoat salomatligi tibbiyot instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ферганский медицинский институт общественного здоровья",
+     "level": 3
+    },
+    "en": {
+     "text": "Fergana Medical Institute of Public Health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Sidikov Akmal Abdikaxorovich",
+      "Manzil: Fargʻona viloyati, Fargʻona shahri, Yangi Turon koʻchasi No 2-A",
+      "Telefon: +998 (73) 245-59-07",
+      "Elektron pochta: fmioz@mail.ru",
+      "Veb sayt: fermi.uz"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Сыдиков Акмал Абдикахарович",
+      "Адрес: Ферганская область город Фергана, улица Янги Турон №2-А",
+      "Телефон: +998 (73) 245-59-07",
+      "E-mail: fmioz@mail.ru",
+      "Веб-сайт: fermi.uz"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Sydikov Akmal Abdikhaxarovich",
+      "Address: Yangi Turon street №2-A, Fergana city",
+      "Phone: +998 (73) 245-59-07",
+      "E-mail:fmioz@mail.ru",
+      "Website:fermi.uz"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent farmasevtika instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ташкентский фармацевтический институт",
+     "level": 3
+    },
+    "en": {
+     "text": "Tashkent Pharmaceutical Institute",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Rizaev Kamol Saidakbarovich",
+      "Manzil: Toshkent shahri Mirobod tumani, Aybek koʻchasi 45 -uy",
+      "Telefon: +998 (71) 256-37-38",
+      "Elektron pochta: info@pharmi.uz",
+      "Veb -sayt: [www.pharmi.uz](http://www.pharmi.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Ризаев Камал Саидакбарович",
+      "Адрес: Город Ташкент Мирабадский район, улица Айбека №45",
+      "Телефон: +998 (71) 256-37-38",
+      "E-mail: info@pharmi.uz",
+      "Веб-сайт: [www.pharmi.uz](http://www.pharmi.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Rizaev Kamal Saidakbarovich",
+      "Address: Oybek street №45, Mirabad district, Tashkent city",
+      "Phone: +998 (71) 256-37-38",
+      "E-mail: info@pharmi.uz",
+      "Website: [www.pharmi.uz](http://www.pharmi.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent pediatriya tibbiyot instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ташкентский педиатрический медицинский институт",
+     "level": 3
+    },
+    "en": {
+     "text": "Tashkent pediatric medical institute",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Daminov Botir Turgʻunpoʻlatovich",
+      "Manzil: Toshkent shahri, Yunusobod tumani, Bogʻishamol koʻchasi 223 – uy",
+      "Telefon: +998 (71) 260-36-58",
+      "Elektron pochta: info@tashpmi.uz",
+      "Veb -sayt: [www.tashpmi.uz](http://www.tashpmi.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Даминов Ботир Тургунпулатович",
+      "Адрес: Город Ташкент, Юнусабадский район, улица Богишамол №223",
+      "Телефон: +998 (71) 260-36-58",
+      "E-mail: info@tashpmi.uz",
+      "Веб-сайт: [www.tashpmi.uz](http://www.tashpmi.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Daminov Botir Turgunpulatovich",
+      "Address: Bogishamol street №223, Yunusabad district, Tashkent city",
+      "Phone: +998 (71) 260-36-58",
+      "E-mail: info@tashpmi.uz",
+      "Website: [www.tashpmi.uz](http://www.tashpmi.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent davlat stomatologiya instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Тошкентский государственный стоматологический институт",
+     "level": 3
+    },
+    "en": {
+     "text": "Tashkent State Dental Institute",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Xaydarov Nodir Qodirovich",
+      "Manzil: Toshkent shahri, Yashnobod tumani, Maxtumquli koʻchasi 103 -uy",
+      "Telefon: +998 (71) 230-20-65",
+      "Elektron pochta: info@tdsi.uz",
+      "Veb -sayt: [www.tdsi.uz](http://www.tdsi.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Хайдаров Нодир Кадирович",
+      "Адрес: Город Ташкент, Яшнабадский район, улица Махтумкули № 103",
+      "Телефон: +998 (71) 230-20-65",
+      "E-mail: info@tdsi.uz",
+      "Веб-сайт: [www.tdsi.uz](http://www.tdsi.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Khaydarov Nodir Kadirovich",
+      "Address: Makhtumkuli street №103, Yashnobod district, Tashkent city",
+      "Phone: +998 (71) 230-20-65",
+      "E-mail: info@tdsi.uz",
+      "Website: [www.tdsi.uz](http://www.tdsi.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent tibbiyot akademiyasi",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ташкентская медицинская академия",
+     "level": 3
+    },
+    "en": {
+     "text": "Tashkent medical academy",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Shadmanov Alisher Qayumovich",
+      "Manzil: Toshkent shahri, Olmazor tumani, Forobiy koʻchasi 2 -uy",
+      "Telefon: +998 (71) 214-83-11",
+      "Elektron pochta: info@tma.uz",
+      "Veb -sayt: [www.tma.uz](http://www.tma.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Шадманов Алишер Каюмович",
+      "Адрес: Город Ташкент, Алмазарский район, улица Фароби №2",
+      "Телефон: +998 (71) 214-83-11",
+      "E-mail: info@tma.uz",
+      "Веб-сайт: [www.tma.uz](http://www.tma.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Shadmanov Alisher Kayumovich",
+      "Address: Farobi street №2, Olmazor district, Tashkent city",
+      "Phone: +998 (71) 214-83-11",
+      "E-mail: info@tma.uz",
+      "Website: www.tma.uz."
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Qoraqalpogʻiston tibbiyot instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Медицинский институт Каракалпакстана",
+     "level": 3
+    },
+    "en": {
+     "text": "Karakalpakstan Medical Institute",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Ataniyazova Oral Aminovna",
+      "Manzil: Qoraqalpogʻiston Respublikasi Nukus shakar, A.Doʻsnazarov koʻchasi, 104 -uy",
+      "Telefon: +998 (61) 222-84-32",
+      "Elektron pochta: info@kkmeduniver.uz",
+      "Veb -sayt: [www.kkmeduniver.uz](http://www.kkmeduniver.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Атаниязова Орал Аминовна",
+      "Адрес: Қорақалпоғистон Республикаси Нукус шаҳар, А. Досназаров кўчаси 104-уй",
+      "Телефон: +998 (61) 222-84-32",
+      "E-mail: info@kkmeduniver.uz",
+      "Веб-сайт: [www.kkmeduniver.uz](http://www.kkmeduniver.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Ataniyazova Oral Aminovna",
+      "Address: Dusnazarov street №104,Nukus region, Republic of Karakalpakstan",
+      "Phone: +998 (61) 222-84-32",
+      "E-mail: info@kkmeduniver.uz",
+      "Website: [www.kkmeduniver.uz](http://www.kkmeduniver.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Abu Ali ibn Sino nomidagi Buxoro davlat tibbiyot instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Бухарский государственный медицинский институт имени Абу Али ибн Сино",
+     "level": 3
+    },
+    "en": {
+     "text": "Bukhara State Medical Institute named after Abu Ali ibn Sino",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Teshaev Shuxrat Jumaevich",
+      "Manzil: Buxoro viloyati, Buxoro shahri, Navoiy koʻchasi 1 -uy",
+      "Telefon: +998 (65) 223-00-50",
+      "Elektron pochta: info@bsmi.uz",
+      "Veb -sayt: [www.bsmi.uz](http://www.bsmi.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Тешаев Шухрат Жумаевич",
+      "Адрес: Бухарская область, город Бухара, улица Навои № 1",
+      "Телефон: +998 (65) 223-00-50",
+      "E-mail: info@bsmi.uz",
+      "Веб-сайт: [www.bsmi.uz](http://www.bsmi.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Teshaev Shukhrat Jumaevich",
+      "Address: Navoi street №1, Bukhara city, Bukhara region",
+      "Phone: +998 (65) 223-00-50",
+      "E-mail: info@bsmi.uz",
+      "Website: [www.bsmi.uz](http://www.bsmi.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Andijon davlat tibbiyot instituti",
+     "level": 3
+    },
+    "ru": {
+     "text": "Андижанский государственный медицинский институт",
+     "level": 3
+    },
+    "en": {
+     "text": "Andijan State Medical Institute",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Rektor: Madazimov Madamin Moʻminovich",
+      "Manzil: Andijon viloyati, Andijon shahri, Y. Otabekov koʻchasi 1-uy",
+      "Telefon: +998 (74) 223-94-50",
+      "Elektron pochta: info@adti.uz",
+      "Veb -sayt: [www.adti.uz](http://www.adti.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Мадазимов Мадамин Муминович",
+      "Адрес: Андижанская область город Андижан, улица Ю. Отабекова № 1",
+      "Телефон: +998 (74) 223-94-50",
+      "E-mail: info@adti.uz",
+      "Веб-сайт: [www.adti.uz](http://www.adti.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Madazimov Madamin Muminovich",
+      "Address: Yu. Otabekova street № 1, Andijan city, Andijan region",
+      "Phone: +998 (74) 223-94-50",
+      "E-mail: info@adti.uz",
+      "Website: [www.adti.uz](http://www.adti.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent tibbiyot akademiyasi Termiz filiali",
+     "level": 3
+    },
+    "ru": {
+     "text": "Термезский филиал Ташкентской медицинской академии",
+     "level": 3
+    },
+    "en": {
+     "text": "Termez branch of the Tashkent Medical Academy",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Direktor: Berdiev Ergash Abdullaevich",
+      "Manzil: Surxondaryo viloyati, Termiz shahri, I. Karimov koʻchasi 64 -uy",
+      "Telefon: +998 (76) 223-47-20",
+      "Elektron pochta: info@ttatf.uz",
+      "Veb -sayt: [www.ttatf.uz](http://www.ttatf.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Руководитель: Бердиев Эргаш Абдуллаевич",
+      "Адрес: Сурхандарьинская область город Термез, улица И. Каримова №64",
+      "Телефон: +998 (76) 223-47-20",
+      "E-mail: info@ttatf.uz",
+      "Веб-сайт: [www.ttatf.uz](http://www.ttatf.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Berdiev Ergash Abdullaevich",
+      "Address: I.Karimov street No. 64, Termez city, Surkhandarya region",
+      "Phone: +998 (76) 223-47-20",
+      "E-mail: info@ttatf.uz",
+      "Website: [www.ttatf.uz](http://www.ttatf.uz/)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Toshkent tibbiyot akademiyasi Urganch filiali",
+     "level": 3
+    },
+    "ru": {
+     "text": "Ургенчский филиал Ташкентской медицинской академии",
+     "level": 3
+    },
+    "en": {
+     "text": "Urgench branch of Tashkent medical academy",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "Direktor: Roʻziboev Rashid Yusupovich",
+      "Manzil: Xorazm viloyati, Urganch shahri, Al-Xorazmiy koʻchasi 28-uy",
+      "Telefon: +998 (62) 224-84-84",
+      "Elektron pochta: info@urgfiltma.uz",
+      "Veb -sayt: [www.urgfiltma.uz](http://www.urgfiltma.uz/)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "Директор: Рузибаев Рашид Юсупович",
+      "Адрес: Хорезмская область, город Ургенч, улица Аль-Хорезми, дом 28",
+      "Телефон: +998 (62) 224-84-84",
+      "E-mail: info@urgfiltma.uz",
+      "Веб-сайт: [www.urgfiltma.uz](http://www.urgfiltma.uz/)"
+     ]
+    },
+    "en": {
+     "items": [
+      "Head: Ruzibaev Rashid Yusupovich",
+      "Address: Al-Khorazmi street №828, Urgench city, Khorezm region,",
+      "Phone: +998 (62) 224-84-84",
+      "E-mail: info@urgfiltma.uz",
+      "Website: [www.urgfiltma.uz](http://www.urgfiltma.uz/)"
+     ]
+    }
+   }
+  }
+ ]
+}

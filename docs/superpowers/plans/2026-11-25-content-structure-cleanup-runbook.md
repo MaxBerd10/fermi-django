@@ -1,4 +1,4 @@
-# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–66-skriptlar)
+# “Institut haqida” boʻlimi: kontentni bazaga oʻtkazish (39–67-skriptlar)
 
 Maqsad: boʻlimning 25 sahifasi uch tilda (uz, ru, en) bir xil tipli bloklardan iborat boʻlsin; rasmlar media kutubxonasida tursin; saytda sahifaga xos maxsus kod qolmasin.
 
@@ -57,6 +57,7 @@ Sinov natijasi (2026-11-25, sinov bazasi, 39–44 tartib bilan qoʻllangandan ke
 | 64 | Abiturient, Talabalar, Interaktiv: 10 sahifa (3 tasi qoʻlda yozilgan, 74 ta matn bizning tarjimamiz) | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). `tarjima-kerak.md`. |
 | 65 | Tuzilma va Yashil Universitet: 4 sahifa (biri qoʻlda yozilgan, 7 ta matn bizning tarjimamiz) | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). `tarjima-kerak.md`. |
 | 66 | Interaktiv xizmatlar: shifokorlar malaka oshirish sertifikatlari reyestri (2 jadval, birlashgan kataklar) | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). `tarjima-kerak.md`. |
+| 67 | Tuzilma: hududiy boshqarmalar (14 hudud, xaritalar bilan) va bilim yurtlari (10 muassasa) qoʻlda yozilgan | `dry`. Rasm va PDF nusxalanadi (diskni tekshiring). `tarjima-kerak.md`. |
 
 Har bir skript: `dry` hech narsa yozmaydi; reja (`plan.json`) tuzilgan paytdagi blok oʻzgarmagan boʻlsa ishlaydi; adminʻda tahrirlangan blok `SKIPPED` boʻlib roʻyxatga tushadi; `apply` bitta tranzaksiya va backup bilan bajariladi; ikkinchi `apply` rad etiladi; `undo` faqat yangi bloklar oʻzgarmagan joyda eskisini qaytaradi.
 
@@ -71,13 +72,13 @@ Serverda faqat alohida ruxsatdan keyin ishlang. Skriptlar serverda `/home/fermi-
 1. Baza (`pg_dump`) va `media/` ning backupini oling.
 2. Yangi frontendʻni chiqaring va DARHOL (bir xizmat oynasida) 40-skriptni qoʻllang. Sabab: yangi frontend eski `raw_html` bloklarini oddiy `block` sifatida chizadi. “Institut xaqida” sahifasida esa eski kod bu blokning katta matnini (har tilda taxminan 9–10 ming belgi, hech qachon tekshirilmagan tarixiy matn) yashirib, faqat rasmni koʻrsatardi: 40 qoʻllanmaguncha bu matn ommaga ochiq boʻlib qoladi. 40 `SKIPPED` desa (blok adminʻda oʻzgartirilgan), toʻxtang: frontendʻni oldingi versiyaga qaytaring yoki rejani qayta tuzib, 40ʻni qayta ishga tushiring. Boshqa sahifalar skriptlarsiz ham ishlaydi (hisobot rasmlari 39 gacha oddiy HTML boʻlib koʻrinadi, USMLE sahifasi 41 gacha sarlavhasiz turadi).
 3. Serverdagi repozitoriy nusxasini yangilang (skriptlar rasm va PDFʻni shu nusxadan oʻqiydi).
-4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
+4. 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 tartibida: har biri uchun avval `MODE=dry`, natijani oʻqing, keyin `MODE=apply`.
 5. Tekshiruv: `chown` — yangi fayllar `www-data` egaligida boʻlishi kerak (`find /home/fermi-django/media -user root` boʻsh chiqsin). Skriptlar root nomidan ishlaganda oʻzi `chown` qiladi, baribir tekshiring. Keyin `scripts/audit_section.py` va 25 sahifani uch tilda brauzerda oching (sarlavha, ketma-ketlik, telefon koʻrinishi, rasm va hujjat kartalari, konsol).
 6. Boʻlim qabul qilingandan keyingina `frontend/public/images/hisobot`, `institut-about.jpg` va `institute-history` fayllarini `public` dan oʻchirish mumkin (skriptlarni qayta ishlatish kerak boʻlsa, ular kerak).
 
 ## 4. Qaytarish
 
-Faqat qoʻllangan skriptlarni teskari tartibda (66 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
+Faqat qoʻllangan skriptlarni teskari tartibda (67 → 39) qaytaring, `BACKUP_DIR` apply paytidagi bilan bir xil boʻlsin:
 
 ```sh
 run_step 44 MODE=undo
