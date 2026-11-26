@@ -1,0 +1,23 @@
+[
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 3,
+  "why": "master's admission: the portal is my.edu.uz (magistr.edu.uz was the 2024/25 platform)",
+  "fp": {
+   "uz": "9842f19c4b8426f8e7c1ed32d3382f86dd950016be549c9024f83db01dd0e24d",
+   "ru": "5c1abeee814644d1e162726ad960ebb95afa172412f7de5bd513f3bfc8f49f2e",
+   "en": "e7ca8fa7939f417c7d2b042a99c7f2bb74f70143e25324d32ecb7837b91211fb"
+  },
+  "data": {
+   "en": {
+    "text": "Documents are accepted online only, through the [my.edu.uz](https://my.edu.uz) portal; applicants do not come to the higher education institution to submit documents. Applicants to the master’s programme are not given the option of choosing 5 specialisations; only one field is chosen. Entrance examinations are in the specialty and in a foreign language; there are no examinations in other subjects;"
+   },
+   "ru": {
+    "text": "Приём документов осуществляется только в онлайн режиме через портал [my.edu.uz](https://my.edu.uz), абитуриенты не приходят в ВУЗ для сдачи документов; Для абитуриентов магистратуры не предусмотрен выбор одновременно 5 специальностей. Можно выбрать только одну специальность; Вступительные экзамены пройдёт по предмету выбранной специальности и иностранному языку. Экзаменов по другим предметам не предусмотрено;"
+   },
+   "uz": {
+    "text": "Hujjatlar [my.edu.uz](https://my.edu.uz) portali orqali faqat onlayn qabul qilinadi, abiturientlar hujjat topshirish uchun OTMga kelmaydi; Magistraturada abiturientlarga 5 ta mutaxassislik yoʻnalishini tanlash imkoniyati berilmaydi. Faqat bitta yoʻnalish tanlanadi; Kirish imtihonlari mutaxassislik hamda chet tili fanidan boʻladi. Boshqa fanlardan boʻlmaydi;"
+   }
+  }
+ }
+]
