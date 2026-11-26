@@ -1,0 +1,839 @@
+[
+ {
+  "slug": "bakalavriat-talim-granti-20252026",
+  "order": 11,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "97cfb05be24c8526bfb77f93375e83004b1da08ca6ac1cb9dc8b557252cc2a04",
+    "ru": "993807d24931aba3d7d27c2634dc48a94e2c126c6764b39998cb552ba6787e13",
+    "en": "8dabb93db8c807c070ab6d365cb9527b312c48517c88c9ed1e3c3d0284a9ead3"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Appellatsiya komissiyasiga aʻriza berish](https://docs.google.com/forms/d/e/1FAIpQLSd1QGg7C17XbsY9UKcUCEURX-rfP5OJuLrcb-CqJvQYOlaEFw/viewform)"
+     },
+     "ru": {
+      "text": "[Подать заявление в апелляционную комиссию](https://docs.google.com/forms/d/e/1FAIpQLSd1QGg7C17XbsY9UKcUCEURX-rfP5OJuLrcb-CqJvQYOlaEFw/viewform)"
+     },
+     "en": {
+      "text": "[Apply to the appeal commission](https://docs.google.com/forms/d/e/1FAIpQLSd1QGg7C17XbsY9UKcUCEURX-rfP5OJuLrcb-CqJvQYOlaEFw/viewform)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "chet-ellik-talabalar-xavfsizligi",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "74dcbc0716bccfef6fc73fd654e520137e03866444556622cb58d091109f8908",
+    "ru": "8222d8e36028830e2a63fc2c3c4f04b1168575e5873fa4580ce86d0a6f1255db",
+    "en": "785d93c356e2c2f7e4f3759b56af904c7936093ffa3499386a8b6a422720e1f0"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Batafsil bilish uchun... [Oʻzbekiston Respublikasi Konstitutsiyasi](https://lex.uz/docs/-6445145)"
+     },
+     "ru": {
+      "text": "Подробнее... [Конституция Республики Узбекистан](https://lex.uz/docs/-6445145)"
+     },
+     "en": {
+      "text": "To learn more... [Constitution of the Republic of Uzbekistan](https://lex.uz/docs/-6445145)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 25,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "89d1ad89c6b938d7e42e0548cbd09723655ec4878768065026c52c911debea57",
+    "ru": "4bdd20bf3ab6d2a0b5b7820e832647fe2621cc527635b7e587e370163829c242",
+    "en": "5cb8ca780887b91129982b9178955b67462ed4e268596b1600868c245cfc81fa"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Javob: Yoʻq, haqli emas. Bitiruvchi majburiy ishlab berishdan bosh tortgan holatda quyidagilarni amalga oshiradi:"
+     },
+     "ru": {
+      "text": "Ответ: Нет, не так. В случае отказа выпускника от работы в обязательном порядке:"
+     },
+     "en": {
+      "text": "Answer: No, not right. In case of refusal of the graduate to work compulsorily:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 19,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "a89535c034b7c9466e1d8dc2a0e935af6594732260890bba6e15cd6222648fa2",
+    "ru": "f27dfe1e565dd837bfb91c166323b0bd2f97d53b955a31291f5b442527336151",
+    "en": "f442e41bccc7b74c8e834e37b09b96fb29fb43a91b3d1f18552e9988ff5dcbbf"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Javob: Oliy taʻlim muassasasini davlat garanti asosida oʻqib bitirgan talabalarni yoʻllanma boʻyicha ishga qabul qilish quyidagicha amalga oshiriladi:"
+     },
+     "ru": {
+      "text": "Ответ: Набор студентов, окончивших высшее учебное заведение на основании государственной гарантии, осуществляется следующим образом:"
+     },
+     "en": {
+      "text": "Answer: Recruitment of students who graduated from a higher education institution on the basis of a state guarantee is carried out as follows:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "iqtidorli-talabalarning-ilmiy-tadqiqot-faoliyatini-tashkil-etish-bolimi",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "71d220c5274f91fd8f73de347dea1c2feece20027cc6365bb236545fcf4f3af9",
+    "ru": "79020470d44dee83b42ee269066e5b887f52bc51bdcd5cbda45ce0cc27f07cfc",
+    "en": "0e76a4cf585b6896f5225add0b6c8e99435845a06265f7dbb9f55f517cc15671"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Iqtidorli talabalar bilan ishlash, shuningdek, ularning ilmiy-tadqiqot faoliyatini tashkil etishning asosiy vazifalari quyidagilardan iborat:"
+     },
+     "ru": {
+      "text": "Основные задачи по работе с одарёнными студентами и организации их научно-исследовательской деятельности:"
+     },
+     "en": {
+      "text": "Main tasks of working with gifted students and organizing their research activities include:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-online-royxatdan-otish-2025",
+  "order": 2,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "c3da0a949f9486803d489eb302485d88b11680acd89688ff9e652ecb7c758242",
+    "ru": "b644a7d81d6406d39cc97917885460dc67b425a5cf4fc85a0a0f5b43c3b87f69",
+    "en": "eee303fee85a37b321f3036b2e51935abab0ad6e235c7e33fca2475d2230cd90"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Eslatib oʻtamiz, 2022/2023-oʻquv yilidan boshlab magistraturaga qabul abituriyentning bakalavriat diplom bali oʻrtacha koʻrsatkichi hamda xorijiy tilni bilish darajasi boʻyicha tegishli milliy yoki xalqaro sertifikat bali asosida, ballar ketma-ketligiga qatʻiy rioya qilgan holda amalga oshiriladi. Qoʻshimcha imtihon oʻtkazilmaydi."
+     },
+     "ru": {
+      "text": "Напоминаем, что начиная с 2022/2023 учебного года приём в магистратуру осуществляется на основании среднего балла диплома бакалавра абитуриента и балла соответствующего национального или международного сертификата об уровне знаний иностранного языка, строго соблюдая последовательность баллов. Дополнительных испытаний проводиться не будет."
+     },
+     "en": {
+      "text": "We remind you that starting from the 2022/2023 academic year, admission to the master’s program is carried out based on the average score of the applicant’s bachelor’s degree and the score of the corresponding national or international certificate on the level of knowledge of a foreign language, strictly following the sequence of points. No additional tests will be carried out."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-online-royxatdan-otish-2025",
+  "order": 1,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "fba5df5421121c62beb0d2b41ad0ac34abf49d10109c075de3c667aedb7b0c67",
+    "ru": "fd60b355720acda45d9049d20d133e60aa19030de89c5ae4e777971d4c76178a",
+    "en": "3a64a2fa498df708b6d8bd96f84f6156dd581c00cdee366655fbdacf8c46c689"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "2025/2026-oʻquv yili uchun davlat OTMning magistratura mutaxassisliklariga oʻqishga kirish uchun hujjatlarni topshirish jarayoni rasmiy [my.edu.uz](http://my.edu.uz) veb-sayti orqali 30-iyulga qadar (shu kuni ham) davom etadi."
+     },
+     "ru": {
+      "text": "Процесс приёма документов для поступления на специальности магистратуры государственных высших учебных заведений на 2025/2026 учебный год продолжится до 30 июля (30 июля включительно) через официальный сайт министерства по адресу [my.edu.uz](http://my.edu.uz)."
+     },
+     "en": {
+      "text": "The process of accepting documents for admission to the specialties of the magistracy of state higher educational institutions for the 2025/2026 academic year will continue until July 30 (July 30 inclusive) through the ministry's official website at [my.edu.uz](http://my.edu.uz)."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 13,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "3eb44c267009137dc81c16eee86a3c3166888a29e6fa1b788734da164c741a67",
+    "ru": "cf048e92d9852ea690da6ce168efa7747b614f3e3cdc4a8c32fa068ab0b0e109",
+    "en": "1645353dd8c1a9d545d3757217021608ff65d57f5124ba538d8c9d3b92f1a3f2"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hujjatlar taqdim etilishi jarayonida abituriyentlar pasport va harbiy xizmatga aloqadorlik haqidagi hujjatlarini shaxsan koʻrsatadilar."
+     },
+     "ru": {
+      "text": "Паспорт и документ о военной обязанности предъявляются лично."
+     },
+     "en": {
+      "text": "When submitting documents, applicants must present in person their passport and the documents on their military service status."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 8,
+  "count": 5,
+  "fp": [
+   {
+    "uz": "03601ffe0981bd0bc87b9a9be6e213ce3e0de5b56b944665901ef445fccf19d8",
+    "ru": "1abe5da9a1423abd8b66b91c0cc82780b5a601daf670d0bf16a5d1aeb6cfae79",
+    "en": "7a2c1fb1dee57c80a49bcbe31b22a5fbcd5648db52ac2abac06579bb48fffacf"
+   },
+   {
+    "uz": "8934d5c8fc33ba4595969bf0c72bede5b74268168fb09b584be2bc81d7216c5b",
+    "ru": "7199db4fff972baf3fd6bf7a2a4743c7b518c6208b9d4cb29900eb067fa309e5",
+    "en": "a33b2aec15bcb11f78e3dced9f4c8debafa2c8125aee12974b6b5e7f367aa2a4"
+   },
+   {
+    "uz": "7c80ffb1998842eaafa517ce848273a92cadaa5589370a71538b271cd8e009ac",
+    "ru": "a30bb2fb51a6e0e81b2d44423eb02171d7f503a5396293ae1a125e1f61994ac4",
+    "en": "e66ebd835f0f6595fcacb5e0d28671fca9c1f7330a2ae9528b7cdf73c2b1be69"
+   },
+   {
+    "uz": "a784ede5cae5e4d46b4aff0cfcadfa0146284bb854e687b8a59df7db0d07ce55",
+    "ru": "2ac688a49f626de281d3f0333f553b9827a9c8b3bfafedda79bb85075b745e04",
+    "en": "cfbfdd59fcb0171709731a81a02d2d08be3d469d8eabd8fa083375bc4805647f"
+   },
+   {
+    "uz": "6ee03f5de6026bf974b2d6ab22c88e154fca76b3b106bafae5b4fa7916d8b1df",
+    "ru": "dcbc21e85553013d1ad5c6b43566e8b6f2df46a26cfa321d6faedd30fe3f300f",
+    "en": "28d73e3c10df2c9a60f650c48a96ee05087a3dd7f7a215ef21bd694a65555a3c"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Imtihon fanlari roʻyxati",
+      "level": 3
+     },
+     "ru": {
+      "text": "Список экзаменационных предметов",
+      "level": 3
+     },
+     "en": {
+      "text": "List of examination subjects",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Diplom boʻyicha ball — 100 ball;",
+       "Chet tili testi boʻyicha ball — 100 ball.",
+       "Chop etilgan maqolalar uchun kirish imtihonlarida ball berilmaydi;"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Балл по диплому — 100 баллов;",
+       "Балл по тесту по иностранному языку — 100 баллов.",
+       "За опубликованные статьи на вступительных экзаменах баллы не начисляются;"
+      ]
+     },
+     "en": {
+      "items": [
+       "Diploma score — 100 points;",
+       "Foreign language test score — 100 points.",
+       "No points are awarded in the entrance examinations for published articles;"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hujjatlar 1 iyuldan 30 iyulgacha qabul qilinadi."
+     },
+     "ru": {
+      "text": "Документы принимаются с 1-го июля по 30 июля."
+     },
+     "en": {
+      "text": "Documents are accepted from 1 July to 30 July."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "188966ad4a06230f242aed5395a68ab224b9a8bbd3206f53b3f670db61661a8b",
+    "ru": "f97c81f37d33c8f3b0828eed07266d05d6d3bde599a7c962df66e50164a43e72",
+    "en": "59fe9528406fdfa27a6cf88707430ab60f7b541f03f845f00c26a1fc75f5e113"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Magistraturaga kirishda abituriyentlar (bakalavr darajasiga ega boʻlganlar, diplomli mutaxassislar) oliy taʻlim muassasasi qabul komissiyasiga quyidagi hujjatlarni taqdim etadilar:"
+     },
+     "ru": {
+      "text": "Для поступления в магистратуру абитуриенты (имеющие степень бакалавра, дипломированные специалисты) предоставляют в приёмную комиссию следующие документы:"
+     },
+     "en": {
+      "text": "At the entrance to the master’s degree programme, applicants (holders of a bachelor’s degree and diploma specialists) submit the following documents to the admission commission of the higher education institution:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "606ff01d53c2bb8d9c8a44a342dbfcd6468021d4553877a523e8169df7dca40f",
+    "ru": "95402f5b045631915c6ecfabdd61c089f6e6c61d2b3f58df3737898949757f2c",
+    "en": "18e625b9828180130c485851f5b2c9ebb0ec273eb85f5f218863c337485edf92"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Hujjatlar [magistr.edu.uz](http://magistr.edu.uz/home) portali orqali faqat onlayn qabul qilinadi, abiturientlar hujjat topshirish uchun OTMga kelmaydi; Magistraturada abiturientlarga 5 ta mutaxassislik yoʻnalishini tanlash imkoniyati berilmaydi. Faqat bitta yoʻnalish tanlanadi; Kirish imtihonlari mutaxassislik hamda chet tili fanidan boʻladi. Boshqa fanlardan boʻlmaydi;"
+     },
+     "ru": {
+      "text": "Приём документов осуществляется только в онлайн режиме через портал [magistr.edu.uz](http://magistr.edu.uz/home), абитуриенты не приходят в ВУЗ для сдачи документов; Для абитуриентов магистратуры не предусмотрен выбор одновременно 5 специальностей. Можно выбрать только одну специальность; Вступительные экзамены пройдёт по предмету выбранной специальности и иностранному языку. Экзаменов по другим предметам не предусмотрено;"
+     },
+     "en": {
+      "text": "Documents are accepted online only, through the [magistr.edu.uz](http://magistr.edu.uz/home) portal; applicants do not come to the higher education institution to submit documents. Applicants to the master’s programme are not given the option of choosing 5 specialisations; only one field is chosen. Entrance examinations are in the specialty and in a foreign language; there are no examinations in other subjects;"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 2,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "c492907c29a5eeca744293e0820fa95c9ea2f8010afe51378c29d993fdc2ad26",
+    "ru": "d22058f090fcb8752bb06350215811c00abeda15ff40d8e5a8575eea34200770",
+    "en": "ec91b68d2323a9b091b40f91ef126babbbd6f0c566459ec0c371c31187fa5c9f"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Magistraturaga qabul haqida baʻzi maʻlumotlarni eslatib oʻtamiz:"
+     },
+     "ru": {
+      "text": "Напомним некоторые моменты относительно приёма в магистратуру:"
+     },
+     "en": {
+      "text": "Some information about admission to the master’s degree programme:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ordinatura-imtihonga-kirish-ruxsatnomasi-2025",
+  "order": 2,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "a6aad84f29cda2e20e4516dd05f7399793dd84a2d23aecd0cb0cc2f823bf7776",
+    "ru": "b17aba1d09b16428d0b28cc786cc49c9754547abcc740329ea472e3276f52173",
+    "en": "dc0784fc8a122b811d0143822f5e25c30c0ff37d17657cb2857b265eed1151e2"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[RUXSATNOMA YUKLAB OLISH](https://tmbm.ssv.uz/site/permission)"
+     },
+     "ru": {
+      "text": "[ПОЛУЧЕНИЕ РАЗРЕШЕНИЯ](https://tmbm.ssv.uz/site/permission)"
+     },
+     "en": {
+      "text": "[OBTAINING PERMISSION](https://tmbm.ssv.uz/site/permission)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-joylashgan-orni",
+  "order": 6,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "b33d57d68cb976f8eb3ca4c068e2c51bbd49276d042b770cbf1f9af5954cdfc2",
+    "ru": "b33d57d68cb976f8eb3ca4c068e2c51bbd49276d042b770cbf1f9af5954cdfc2",
+    "en": "b33d57d68cb976f8eb3ca4c068e2c51bbd49276d042b770cbf1f9af5954cdfc2"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "+998 (95) 048-23-45"
+     },
+     "ru": {
+      "text": "+998 (95) 048-23-45"
+     },
+     "en": {
+      "text": "+998 (95) 048-23-45"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-joylashgan-orni",
+  "order": 5,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "93245c7f8ac1440f8a2f872eaff12b304821158bc39d3bf9d89ae51aa7fe5624",
+    "ru": "93245c7f8ac1440f8a2f872eaff12b304821158bc39d3bf9d89ae51aa7fe5624",
+    "en": "93245c7f8ac1440f8a2f872eaff12b304821158bc39d3bf9d89ae51aa7fe5624"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "+998 (95) 046-23-45"
+     },
+     "ru": {
+      "text": "+998 (95) 046-23-45"
+     },
+     "en": {
+      "text": "+998 (95) 046-23-45"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-joylashgan-orni",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "70a2d1bef08dad0c101052b06be595421b9fa43154fff16ac0f8d00907b29742",
+    "ru": "3070ed2db22914b53d1a21a50081eba4b86e55a964dd16ac7d143f32f2bebe94",
+    "en": "89bf2e99898c023f0c8e979d75c477c942af26a1dec4d1138afe7ebb0e6e7b22"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Qabul telefon raqamlari: +998 (95) 044-23-45"
+     },
+     "ru": {
+      "text": "Телефоны приемной: +998 (95) 044-23-45"
+     },
+     "en": {
+      "text": "Reception telephone numbers: +998 (95) 044-23-45"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-qoshma-talim-2025",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "d74f33c3c183c43286e14c0c2db4178adba0ff691cad96bb88546c7c712c6fdc",
+    "ru": "d74f33c3c183c43286e14c0c2db4178adba0ff691cad96bb88546c7c712c6fdc",
+    "en": "d74f33c3c183c43286e14c0c2db4178adba0ff691cad96bb88546c7c712c6fdc"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "+99895 048-23-45"
+     },
+     "ru": {
+      "text": "+99895 048-23-45"
+     },
+     "en": {
+      "text": "+99895 048-23-45"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-qoshma-talim-2025",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "4bc3bb611d807617756a8338a0192bbc426e771f611a17d9ac71e6dc14c05844",
+    "ru": "4bc3bb611d807617756a8338a0192bbc426e771f611a17d9ac71e6dc14c05844",
+    "en": "4bc3bb611d807617756a8338a0192bbc426e771f611a17d9ac71e6dc14c05844"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "+99895 046-23-45"
+     },
+     "ru": {
+      "text": "+99895 046-23-45"
+     },
+     "en": {
+      "text": "+99895 046-23-45"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-komissiyasi-qoshma-talim-2025",
+  "order": 1,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "cedc0d306909f33969c1435356c6dad8498f2207d7f0958a406f4b8616f4bf36",
+    "ru": "2492c87e799853c50ab8900e6e0d6e6f38cfc1515f94066f4e18de0e82b67051",
+    "en": "b9a55438355ff94775cd213c93d9e579f23049f8c5d9c56856fb4277e6ebe594"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Manzil: Fargʻona viloyati, Fargʻona shahar, Yangi Turon koʻchasi 2a -uy"
+     },
+     "ru": {
+      "text": "Адрес: Ферганская область, город Фергана, улица Янги Турон 2а - дом"
+     },
+     "en": {
+      "text": "Address: Fergana region, Fergana city, Yangi Turon street 2a"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "632a3798e80d15a196151e64e3a07cf7d5655b6e1cb07dc633609d42a03b1873",
+    "ru": "632a3798e80d15a196151e64e3a07cf7d5655b6e1cb07dc633609d42a03b1873",
+    "en": "632a3798e80d15a196151e64e3a07cf7d5655b6e1cb07dc633609d42a03b1873"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "https://lex.uz/docs/-3244181"
+     },
+     "ru": {
+      "text": "https://lex.uz/docs/-3244181"
+     },
+     "en": {
+      "text": "https://lex.uz/docs/-3244181"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 25,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "2a151cd180d63d41ac3ccdfffd71c5faa80b42463f9621de30f0aac661a09eb6",
+    "ru": "bf9762620ed5b94908b882d3664801ed3a0c7fe3f25c340213582eb9e651d72b",
+    "en": "65d667f525ebe4edc6d4b8d1fa2803d03d0f339b34399ae5eca93194a5dfa222"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "[Study in Uzbekistan](https://studyin-uzbekistan.uz/universities/80) ustiga bosing"
+     },
+     "ru": {
+      "text": "Нажмите на [Study in Uzbekistan](https://studyin-uzbekistan.uz/universities/80)"
+     },
+     "en": {
+      "text": "Click on [Study in Uzbekistan](https://studyin-uzbekistan.uz/universities/80)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "vakant-lavozimlar-2025",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "388e592ef9c76bc931580696168e408309d7b583dbd51047bd1c8aa2b3580006",
+    "ru": "9184c03343939f056ccf01dc12266ee14c212b6d66c0594411e12980f6ef9d0e",
+    "en": "9184c03343939f056ccf01dc12266ee14c212b6d66c0594411e12980f6ef9d0e"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "+99890230-37-97"
+     },
+     "ru": {
+      "text": "+998 90 230-37-97"
+     },
+     "en": {
+      "text": "+998 90 230-37-97"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "vakant-lavozimlar-2025",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "89be20e45e65b02bfb7e01499cb70ea2339c231dbc2f8e0960ac8cf4a01bdece",
+    "ru": "4458d6d97503684356dd2c8e72fd42fd6ca2612bc32b4b8e6982db1cf9a11f28",
+    "en": "7a0302862f62275cf0f69fa74e9a6e71df94851148044e9e44b119676a80f276"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xodimlar bilan ishlash boʻlimi masʻul xodimi: +99890583-28-57"
+     },
+     "ru": {
+      "text": "Ответственный сотрудник отдела по работе с персоналом: +998 90 583-28-57"
+     },
+     "en": {
+      "text": "Responsible staff member of the Human Resources Department: +998 90 583-28-57"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "vakant-lavozimlar-2025",
+  "order": 2,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "5cfc28e71028fc78bb5cf5b5a6819802ef236a4dd1fdb2db07817d99985d7529",
+    "ru": "917df0a2b687e2a567db47040454fd54f1c0c4d38c9374d6e19be4e927930d3d",
+    "en": "b94282ca11eebea91cab4c9632999bc626331340d3b45a5735a6e945ae4fb5ad"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Fargʻona jamoat salomatligi tibbiyot instituti quyidagi vakant lavozimlarga tanlov eʻlon qiladi:"
+     },
+     "ru": {
+      "text": "Ферганский медицинский институт общественного здоровья объявляет конкурс на замещение следующих вакантных должностей:"
+     },
+     "en": {
+      "text": "Fergana Institute of Public Health announces a competition for the following vacant positions:"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 7,
+  "count": 6,
+  "fp": [
+   {
+    "uz": "366095f599d8aea7a8615fd8a0dc42493138cee2a8aad05f96266fc9370554a1",
+    "ru": "e1cb689d1dcca0b86f28485b459644942efc941ac87a848fc79eba735b9a8420",
+    "en": "5e5b26aa9772d4ec99dd9b3f1d9ceebb16241ce7b6eff274f173586a55310be4"
+   },
+   {
+    "uz": "b3b9e399c554dad0e1fe0346aa0ceaa70f56c2da7034d3baacbef7ffd8a8d5ec",
+    "ru": "082d499d60952e3da31ff678b2b8e0c30d1324ce05922445f91514651057ef47",
+    "en": "f1e8ee9914730ebff247c237dc9fbdcb77a755ad9e3807b0fa1b3e90f2fff11d"
+   },
+   {
+    "uz": "7580fbbec2adbe1805cec7382c6635f5693d281de04ac1844ad6f79da6b5d1f9",
+    "ru": "5ff825bc9877e510858e2fb22856d28677f5d014e13ce8fcb181ee6940350ef8",
+    "en": "6804904e9d2427291651191929fed67a076eef4e989252c5453581815347f10f"
+   },
+   {
+    "uz": "e6612cab10dc6c1011c57e772ae37a61976b6d92768a744e625811220e09f331",
+    "ru": "fe8063372f505cca69dd91c3a7e5d6c2dc529fdc0c5d5356b6ced4e8b0c0ccc3",
+    "en": "d5d82f0b89fd236158237eb5da676267b3fb908c203266f2cba9f37d58766fd0"
+   },
+   {
+    "uz": "10f6c43c85b488dee5fdbaf8fe79307cc784941855a3988d38321415fa73895e",
+    "ru": "441241750af85904d599b97c14ed72728b6949d671f9d9e925d952e0e669acf5",
+    "en": "07f767d6bf7d0a1e0584f180b519108918bfc82a9513d34d6c042029607f8f73"
+   },
+   {
+    "uz": "9499992be520d674f81e51cff25a9b54d00ff1e257e4e1b8e7935f8c3bc54171",
+    "ru": "90649f39a3bfa4092a4e7d7dec1d9141250016e4ad42cb83fb59efc667b83535",
+    "en": "b5f5a07b57dd0a8c94f1499b82e915539e1d7a56f8a970cc127ff8864f2fe393"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Biometrik pasport yoki ID kartasi",
+       "Diplom va uning ilovasi yoki attestat",
+       "Fotosurat 3,5 X 4,5 sm",
+       "Forma 086",
+       "Forma 063",
+       "OITS markazidan sertifikat asli"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Паспорт переведённый и нотариально заверенный",
+       "Диплом или аттестат переведённый и нотариально заверенный",
+       "Фото 3х4",
+       "Форма 086",
+       "Форма 063",
+       "Сертификат на отсутствие заболевания СПИД"
+      ]
+     },
+     "en": {
+      "items": [
+       "Passport translated and notarized",
+       "Diploma or certificate translated and notarized",
+       "Photo 3x4",
+       "Form 086",
+       "Form 063",
+       "AIDS-free certificate"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "xorijiy-fuqarolar-uchun-magistratura-va-klinik-ordinatura",
+  "order": 5,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "dbe59bda3bb50c9417e45cc5824409a22a8e7173437444eec4ddd28202381e51",
+    "ru": "1d6a69fcbce31e9222dd4bfe2f0cb5d6f86cf5cf4e330487d9f1507a507b4924",
+    "en": "fc4e5489fa803ba7d8ce4904549722b70e349175d864c3f246de438ed2ce86fe"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Xorijiy fuqarolar uchun hujjatlarni topshirish tartibi toʻgʻrisidagi maʻlumotlarni quyidagi havola orqali olish mumkin:"
+     },
+     "ru": {
+      "text": "Информацию о порядке подачи документов для иностранных граждан можно получить пройдя по ссылке ниже:"
+     },
+     "en": {
+      "text": "Information on the procedure for submitting documents for foreign citizens can be obtained by clicking on the link below:"
+     }
+    }
+   }
+  ]
+ }
+]
