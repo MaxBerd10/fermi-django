@@ -99,8 +99,14 @@ def text_units(value, field):
 
 
 def check_link(url, location):
-    parts = urlsplit(url.rstrip(").,;"))
-    if parts.hostname not in (None, "fermi.uz", "www.fermi.uz"):
+    url = re.split(r"[()\]]", url)[0]  # the rest is text glued to the link, not part of it
+    try:
+        parts = urlsplit(url.rstrip(".,;:"))
+        host = parts.hostname
+    except ValueError:  # an address that is not an address (a broken link in the old text)
+        issue("link", location, f"not a valid address: {url[:70]}")
+        return
+    if host not in (None, "fermi.uz", "www.fermi.uz"):
         return
     if parts.path.startswith(("/blog/", "/departments/")) and not local_page(parts.geturl()):
         issue("link", location, f"no CMS target for {parts.path}")
