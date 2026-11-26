@@ -1,0 +1,474 @@
+[
+ {
+  "slug": "fakultet-talim-faoliyati",
+  "order": 1,
+  "fp": {
+   "uz": "a33e6c7df2ed3b20398c48f4ddcd0d0354604378c27e210fdbf28d636c27b846",
+   "ru": "78dcd8d62811748a6d7dec3b87c983271236d9f7ad5bba8dd5f7b2ec6b939503",
+   "en": "38b29d74e46c301791299c852e071cf8839f367a69fef3ec542fb2937d06a978"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Davolash ishi fakultetining kredit modul tizimi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Кредитно-модульная система лечебного факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Credit-module system of the Faculty of Medicine",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Davolash fakulteti/КРЕДИТ МОДУЛ ТИЗИМИ НИЗОМИ (o`zbekcha).pdf",
+      "caption": "Davolash ishi fakultetida kredit-modul oʻqitish tizimini joriy etish toʻgʻrisida nizom"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Davolash fakulteti/КРЕДИТ МОДУЛ ТИЗИМИ НИЗОМИ (ruschasi).pdf",
+      "caption": "Положение о внедрении кредитно-модульной системы обучения на лечебном факультете"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Davolash fakulteti/CREDIT-MODULAR SYSTEM.pdf",
+      "caption": "Regulation on the introduction of the credit-module training system at the Faculty of Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Davolash ishi fakultetining kompetensiyasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Компетенции лечебного факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Competencies of the Faculty of Medicine",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Kompetency/Davolash ishi fakulteti kompetensiyasi (o`zbekchasi).pdf",
+      "caption": "Davolash ishi fakulteti kompetensiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Kompetency/Davolash ishi fakulteti kompetensiyasi (ruscha).pdf",
+      "caption": "Компетенции лечебного факультета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Kompetency/Davolash ishi fakulteti kompetensiyasi (englishchasi).pdf",
+      "caption": "Competencies of the Faculty of Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Strategik reja",
+      "level": 2
+     },
+     "ru": {
+      "text": "Стратегический план",
+      "level": 2
+     },
+     "en": {
+      "text": "Strategic plan",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/Strategiya_Davolash_5hSUoKv.pdf",
+      "caption": "Davolash ishi fakultetining strategik rejasi"
+     },
+     "ru": {
+      "media": "uploads/documents/2026/09/Strategiya_Davolash_5hSUoKv.pdf",
+      "caption": "Стратегический план лечебного факультета"
+     },
+     "en": {
+      "media": "uploads/documents/2026/09/Strategiya_Davolash_5hSUoKv.pdf",
+      "caption": "Strategic plan of the Faculty of Medicine"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Missiya",
+      "level": 2
+     },
+     "ru": {
+      "text": "Миссия",
+      "level": 2
+     },
+     "en": {
+      "text": "Mission",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Fakultetlar/MISSIYA/Davolash ishi fakulteti missiyalari(o`zbekcha).pdf",
+      "caption": "Davolash ishi fakultetining missiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/MISSIYA/Davolash ishi fakulteti missiyalari(Ruschasi).pdf",
+      "caption": "Миссия лечебного факультета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/MISSIYA/Davolash ishi fakulteti missiyalari(English).pdf",
+      "caption": "Mission of the Faculty of Medicine"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "the old uz page had three pieces of one title as three links, the en page had no visible link for the credit-module text: one card per document; each card points at the PDF of its language; the strategic plan has only an Uzbek PDF (ru and en show it too)"
+  ]
+ },
+ {
+  "slug": "xalqaro-talim-faoliyati",
+  "order": 1,
+  "fp": {
+   "uz": "1877f65a5a35c24b25acb21ef9fa09a87815cd733050ce824a5d77ad21d86453",
+   "ru": "3e56c9543e10be54ecccb8b8cfa1cb9a6fa652d59a2c37d596a02a076ca31080",
+   "en": "b443d92fc9a23d598499c12a17af48d56dc64b144aeb75eaf258eb29cb308512"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Xalqaro fakultetning kompetensiyasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Компетенции Международного факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Competencies of the International Faculty",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Kompetensiya/Xalqaro fakultet kompentsiyasi UZB.pdf",
+      "caption": "Xalqaro fakultet kompetensiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Kompetensiya/Xalqaro fakultet kompentsiyasi RUS.pdf",
+      "caption": "Компетенции Международного факультета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Kompetensiya/Xalqaro fakultet kompentsiyasi ENG.pdf",
+      "caption": "Competencies of the International Faculty"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Missiya",
+      "level": 2
+     },
+     "ru": {
+      "text": "Миссия",
+      "level": 2
+     },
+     "en": {
+      "text": "Mission",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "uploads/documents/2026/09/Xalqaro_fakultet_missiyalari_UZB_kmEhTtS.pdf",
+      "caption": "Xalqaro fakultet missiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Missiyasi/Xalqaro fakultet missiyalari RUS.pdf",
+      "caption": "Миссия Международного факультета"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Missiyasi/Xalqaro fakultet missiyalari ENG.pdf",
+      "caption": "Mission of the International Faculty"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Strategik reja",
+      "level": 2
+     },
+     "ru": {
+      "text": "Стратегический план",
+      "level": 2
+     },
+     "en": {
+      "text": "Strategic plan",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Strategiya/Xalqaro strategik reja UZB.pdf",
+      "caption": "Xalqaro fakultetning 2021–2026-yillar uchun strategik rejasi"
+     },
+     "ru": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Strategiya/Xalqaro strategik reja RUS.pdf",
+      "caption": "Стратегический план Международного факультета на 2021–2026 годы"
+     },
+     "en": {
+      "media": "migrated/img/yangilikar/Fakultetlar/Xalqaro fakultet/Strategiya/Xalqaro strategik reja ENG.pdf",
+      "caption": "Strategic plan of the International Faculty for 2021–2026"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "three headings in capitals became normal case; the English headings said 'MISSIYA'; each card points at the PDF of its language"
+  ]
+ },
+ {
+  "slug": "pediatriya-fakulteti-faoliyati",
+  "order": 1,
+  "fp": {
+   "uz": "bc1977ef27d97d9c3bc2ec76e7d98e345e94c74e32712fe10be24f52cdb0dda9",
+   "ru": "b53ca07b2f96d54dd7ac9aed5790f4e0eea2608269b5aba007fe9e24176d24f2",
+   "en": "cde57823d51931646ca51d9e04e444236919a2c8cbcabdb440695ec2ef945ef3"
+  },
+  "blocks": [
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining kredit modul tizimi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Кредитно-модульная система педиатрического факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Credit-module system of the Faculty of Pediatrics",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kredit-modul tizimi — bu taʻlim jarayonini baholash va tashkil etishning zamonaviy, xalqaro andozalarga mos tizimi boʻlib, unda oʻquv jarayoni kreditlar va modullar asosida quriladi. Kredit-modul tizimi — talabaning oʻqish davomida egallagan bilim, koʻnikma va malakasini kredit birliklari orqali baholaydigan, mustaqil taʻlimga asoslangan oʻquv tizimidir."
+     },
+     "ru": {
+      "text": "Кредитно-модульная система — это современная, соответствующая международным стандартам система оценки и организации образовательного процесса, в которой образовательный процесс строится на основе кредитов и модулей. Кредитно-модульная система — это система обучения, основанная на самостоятельной работе, которая оценивает знания, умения и навыки, приобретенные студентом в процессе обучения, посредством зачетных единиц."
+     },
+     "en": {
+      "text": "The credit–module system is a modern educational system for organizing and assessing the learning process in accordance with international standards, in which education is structured based on credits and modules. The credit–module system is an education system based on independent learning that evaluates the knowledge, skills, and competencies acquired by students during their studies through credit units."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Педиатрия_деканати_Кредит_модул_низоми.pdf",
+      "caption": "Fakultetning kredit modul tizimi nizomi"
+     },
+     "ru": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Положение_кредитно_модульной_системы_Педиатрического_факультета.pdf",
+      "caption": "Положение о кредитно-модульной системе факультета"
+     },
+     "en": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Педиатрия_деканати_Кредит_модул_низоми.pdf",
+      "caption": "Regulation on the faculty credit-module system"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining kompetensiyasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Компетенции педиатрического факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Competencies of the Faculty of Pediatrics",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Kompetensiya talablari — bu talabalarning oʻqish jarayonida egallashi zarur boʻlgan bilim, koʻnikma, malaka va qadriyatlar majmuini ifodalaydi. Yaʻni, bitiruvchi oʻz mutaxassislik faoliyatini samarali bajarishi uchun ega boʻlishi kerak boʻlgan kasbiy tayyorgarlik darajasini belgilaydi."
+     },
+     "ru": {
+      "text": "Требования к компетентностям представляют собой совокупность знаний, навыков, квалификаций и ценностей, которые студенты должны приобрести в процессе обучения. То есть они определяют уровень профессиональной подготовки, необходимый выпускнику для эффективного выполнения профессиональной деятельности."
+     },
+     "en": {
+      "text": "Competency requirements represent a set of knowledge, skills, abilities, and values that students must acquire during their studies. In other words, they define the level of professional training required for graduates to effectively perform their professional activities."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Компетенции_для_педиатрического_факультетат_Узбекча.pdf",
+      "caption": "Fakultetning kompetensiya talablari"
+     },
+     "ru": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Компетенции_для_педиатрического_факультетат.pdf",
+      "caption": "Требования к компетенциям факультета"
+     },
+     "en": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Компетенции_для_педиатрического_факультетат_Узбекча.pdf",
+      "caption": "Faculty competency requirements"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining strategik rejasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Стратегический план педиатрического факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Strategic plan of the Faculty of Pediatrics",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining strategik rivojlanish rejasi fakultet faoliyatini uzoq muddatli istiqbolda takomillashtirish, taʻlim sifati, ilmiy salohiyat va amaliy samaradorlikni oshirish, shuningdek, milliy va xalqaro talablarga javob beradigan pediatr mutaxassislarni tayyorlashga qaratilgan."
+     },
+     "ru": {
+      "text": "Стратегический план развития педиатрического факультета направлен на совершенствование деятельности факультета в долгосрочной перспективе, повышение качества образования, научного потенциала и практической эффективности, а также подготовку специалистов в области педиатрии, соответствующих национальным и международным требованиям."
+     },
+     "en": {
+      "text": "The strategic development plan of the Faculty of Pediatrics is aimed at the long-term improvement of faculty activities, enhancing the quality of education, scientific potential, and practical effectiveness, as well as training pediatric specialists who meet national and international standards."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/стратегия педиатрия узбекча.pdf",
+      "caption": "Fakultetning strategik rejasi"
+     },
+     "ru": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/СТРАТЕГИЯ ПЕДИАТРИЯ РУСКИЙ.pdf",
+      "caption": "Стратегический план факультета"
+     },
+     "en": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/стратегия педиатрия узбекча.pdf",
+      "caption": "Faculty strategic plan"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining missiyasi",
+      "level": 2
+     },
+     "ru": {
+      "text": "Миссия педиатрического факультета",
+      "level": 2
+     },
+     "en": {
+      "text": "Mission of the Faculty of Pediatrics",
+      "level": 2
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "Pediatriya fakultetining missiyasi — mahalliy va jahon fani hamda sogʻliqni saqlash sohasidagi eng yaxshi yutuqlarni inobatga olgan holda talabalarga (kelajakdagi shifokorlarga) taʻlim berish, zamonaviy sharoitlarda sogʻliqni saqlashning dolzarb muammolarini hal qila oladigan, mehnat bozorida raqobatbardosh va yuqori talabga ega boʻlgan yuqori malakali mutaxassislarni shakllantirishdan iborat."
+     },
+     "ru": {
+      "text": "Миссия педиатрического факультета — это обучение студентов медиков с учетом лучших достижений отечественной и мировой науки, здравоохранения, формирование высококвалифицированного специалиста, способного решать актуальные проблемы здравоохранения в современных условиях конкурентоспособного и востребованного на рынке труда."
+     },
+     "en": {
+      "text": "The mission of the Faculty of Pediatrics is to educate students (future physicians) by taking into account the best achievements of national and global science and healthcare, and to develop highly qualified specialists who are capable of addressing current healthcare challenges in modern conditions and are competitive and in high demand in the labor market."
+     }
+    }
+   },
+   {
+    "block_type": "document",
+    "data": {
+     "uz": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Миссия факультета на узбекском.pdf",
+      "caption": "Fakultet missiyasi"
+     },
+     "ru": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Миссия факультета на русском.pdf",
+      "caption": "Миссия факультета"
+     },
+     "en": {
+      "media": "migrated/img/fakultet/Pediatriya fakulteti/Fakultet faoliyati/Миссия факультета на узбекском.pdf",
+      "caption": "Faculty mission"
+     }
+    }
+   }
+  ],
+  "notes": [
+   "headings in capitals became normal case; the old ru heading said 'КОМПЕТЕНТНОСТЬ ЛЕЧЕБНОГО ФАКУЛЬТЕТА' (medical, not pediatric faculty) and the ru link of the competencies was called 'Положение о системе кредитных модулей': corrected; the English cards (credit-module, competencies, strategic plan, mission) point at the Uzbek PDFs, as on the old page (no English file)"
+  ]
+ }
+]
