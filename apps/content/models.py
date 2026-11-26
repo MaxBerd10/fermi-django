@@ -184,6 +184,22 @@ class Page(models.Model):
     title_uz = models.CharField(max_length=255, blank=True)
     title_ru = models.CharField(max_length=255, blank=True)
     title_en = models.CharField(max_length=255, blank=True)
+
+    class Layout(models.TextChoices):
+        """How the page body is drawn. Every layout reads the same blocks; they differ in how the blocks are
+        arranged (the frontend's BlogPage maps each value to one arrangement)."""
+
+        DEFAULT = "default", "Oddiy sahifa"
+        REGULATORY = "regulatory", "Qaror / normativ hujjat (faktlar jadvali + matn)"
+        REGULATORY_INDEX = "regulatory_index", "Qarorlar ro'yxati"
+        COUNCIL = "council", "Kengash (kirish + vazifalar)"
+        COUNCIL_DECISIONS = "council_decisions", "Kengash qarorlari"
+        ABSTRACTS = "abstracts", "Avtoreferatlar (kartochkalar)"
+        EDITORIAL = "editorial", "Tahririyat (guruhlar)"
+        ARCHIVE = "archive", "Arxiv (jurnal / gazeta)"
+        FAQ = "faq", "Savol-javob"
+
+    layout = models.CharField(max_length=24, choices=Layout.choices, default=Layout.DEFAULT)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

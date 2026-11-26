@@ -5,6 +5,7 @@ backing every legacy-imported static page, department, faculty, and news
 post, but here as its own standalone CRUD resource (an admin-created page
 has no MenuItem of its own, hence Page.title_* -- see that field's own
 comment in models.py)."""
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.utils.text import slugify
 from rest_framework import serializers, viewsets
 from rest_framework.permissions import IsAuthenticated
@@ -47,7 +48,7 @@ class AdminPageSerializer(serializers.ModelSerializer):
         fields = [
             "id", "title_uz", "title_ru", "title_en",
             "content_uz", "content_ru", "content_en",
-            "slug", "file", "file_en", "file_ru", "date", "status", "korish", "meta_key",
+            "slug", "layout", "file", "file_en", "file_ru", "date", "status", "korish", "meta_key",
             "menu_title", "raw_editing",
         ]
 
@@ -102,6 +103,11 @@ class AdminPageSerializer(serializers.ModelSerializer):
         instance.title_uz = data.get("title_uz", instance.title_uz or "")
         instance.title_ru = data.get("title_ru", instance.title_ru or "")
         instance.title_en = data.get("title_en", instance.title_en or "")
+        instance.layout = data.get("layout", instance.layout)
+        try:
+            instance.full_clean(exclude=["slug"])  # an unknown layout is a 400, not a silently wrong page
+        except DjangoValidationError as error:
+            raise serializers.ValidationError(error.message_dict)
         if not instance.slug:
             slug = (data.get("slug") or "").strip() or slugify(instance.title_uz or f"sahifa-{Page.objects.count() + 1}", allow_unicode=False)
             instance.slug = slug
