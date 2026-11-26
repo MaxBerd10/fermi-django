@@ -128,17 +128,6 @@ export interface VideoItem {
   url: string | null;
 }
 
-export interface HomeData {
-  corusel: CoruselSlide[];
-  about: About | null;
-  counter: Counter;
-  news: NewsArticle[];
-  images: { id: number; img: string }[];
-  videos: { id: number; video: string | null; url: string | null }[];
-  faculties: FacultyListItem[];
-  departments: DepartmentListItem[];
-}
-
 export interface Page {
   id: number;
   slug: string;

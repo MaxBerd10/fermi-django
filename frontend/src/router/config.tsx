@@ -18,7 +18,6 @@ const DocumentsPage = lazy(() => import("../pages/documents/page"));
 const NewsCategoryPage = lazy(() => import("../pages/news-category/page"));
 const DetailPage = lazy(() => import("../pages/news-article/page"));
 const AboutPage = lazy(() => import("../pages/about/page"));
-const RedesignPreviewPage = lazy(() => import("../pages/redesign-preview/page"));
 const GaleryaPage = lazy(() => import("../pages/galereya/page"));
 const FullGalleryPage = lazy(() => import("../pages/full-gallery/page"));
 const VideoPage = lazy(() => import("../pages/video/page"));
@@ -44,7 +43,6 @@ const routes: RouteObject[] = [
   // Standalone design-concept preview — deliberately outside <Layout/> so
   // it doesn't inherit the current Navbar/Footer while the client evaluates
   // the new visual direction. Not linked from anywhere in real navigation.
-  { path: "/yangi-dizayn", element: <RedesignPreviewPage /> },
   {
     element: <Layout />,
     children: [
