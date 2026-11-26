@@ -1,0 +1,1298 @@
+[
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Markaz Fargʻona jamoat salomat",
+  "old": "Fergana Institute of Public Health",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: Official institute name lacks 'Medical'."
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Markazning asosiy maqsadi – in",
+  "old": "Центр входит в структуру Ферганского медицинского института общественного здоровья и осуществляет деятельность, связанную с внедрением информационно-коммуникационных технологий в образовательное учреждение.",
+  "new": "Основная цель Центра — широкое внедрение цифровых образовательных технологий в Институте, цифровизация образовательного процесса, создание современной цифровой среды для профессорско-преподавательского состава, сотрудников и студентов, а также обеспечение исполнения нормативных документов в этой сфере.",
+  "why": "wrong: Russian repeats block #3 instead of translating the Center's main goal."
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Markazning asosiy maqsadi — in",
+  "old": "Основной целью Центра - является",
+  "new": "Основной целью Центра является",
+  "why": "minor: Stray dash breaks the Russian sentence."
+ },
+ {
+  "slug": "bitiruvchilar",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Bitiruvchilar roʻyxati viloyat",
+  "old": "Список выпускников будет подготовлен по регионам и направлен в региональные департаменты здравоохранения, где будет создана гарантированная заявка на работу для каждого выпускника и будет создан «Портфель заказов». В соответствии с Указом № 769 «О мерах по дальнейшему совершенствованию подготовки медицинского персонала» будут заключены 4-х и 3-х сторонние контракты для выпускников, обучающихся на грантовой основе.",
+  "new": "Список выпускников составляется в разрезе областей и направляется в территориальные управления здравоохранения, от которых получают гарантийные заявки на трудоустройство каждого выпускника и формируют «Портфель заказов». В соответствии с Постановлением Кабинета Министров Республики Узбекистан от 27 сентября 2017 года № 769 «О мерах по дальнейшему совершенствованию подготовки медицинских кадров» с выпускниками, обучавшимися на основе государственного гранта, оформляются четырёхсторонние, а с выпускниками, обучавшимися на платно-контрактной основе, — трёхсторонние договоры.",
+  "why": "wrong: Called a 'decree', date dropped, and both 4- and 3-party contracts wrongly given to grant students only."
+ },
+ {
+  "slug": "bitiruvchilar",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Bitiruvchilar roʻyxati viloyat",
+  "old": "The list of graduates will be prepared by region and sent to the regional health departments, and they will receive a guaranteed application for the employment of each graduate. A \"portfolio of orders\" will be formed and approved by the Cabinet of Ministers of the Republic of Uzbekistan on September 27, 2017. According to Decree №-769, \"On measures to further improve the training of medical personnel,\" for graduates studying on the basis of state grants, four-sided contracts will be drawn up, and for graduates studying on a fee-paying basis, tripartite contracts.",
+  "new": "The list of graduates is prepared by region and sent to the regional health departments, from which guaranteed requests for the employment of each graduate are obtained and a \"Portfolio of Orders\" is formed. In accordance with Resolution No. 769 of the Cabinet of Ministers of the Republic of Uzbekistan of 27 September 2017 \"On measures to further improve the training of medical personnel\", four-party contracts are concluded with graduates who studied on a state grant and three-party contracts with graduates who studied on a paid-contract basis.",
+  "why": "wrong: Says the portfolio was 'approved by the Cabinet of Ministers' and calls Resolution 769 a decree."
+ },
+ {
+  "slug": "bitiruvchilar",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "2021/2022 oʻquv yilida Fargʻon",
+  "old": "В конце апреля и начале мая будет проведено окончательное распределение среди работодателей предприятий и организаций, включая департаменты здравоохранения, районные медицинские ассоциации и других работодателей. После завершения итоговой аттестации штата выпускники, получившие государственный грант, получат диплом, копию решения комиссии по распределению, личный счет распределения и руководство по трудоустройству. Выпускники получат дипломы и рекомендации по трудоустройству. Мониторинг трудоустройства выпускников осуществляется институтом на регулярной основе до 3 лет.",
+  "new": "Ферганский медицинский институт общественного здоровья, 2021/2022 учебный год: [ВЕДОМОСТЬ РЕКОМЕНДАЦИИ ВЫПУСКНИКОВ НА РАБОТУ НА ОСНОВЕ ДОГОВОРОВ](/blog/367/shartnomalar-namunasi-2) (выпускники, обучавшиеся на платно-контрактной основе). Просмотр этой страницы разрешён только зарегистрированным пользователям.",
+  "why": "wrong: Russian is a garbled repeat of block #2; the 2021/2022 record, its link and the access note are lost."
+ },
+ {
+  "slug": "bitiruvchilar",
+  "order": 3,
+  "lang": "en",
+  "anchor": "2021/2022 oʻquv yilida Fargʻon",
+  "old": "In late April-early May, the final distribution of graduates will be held together with the heads of employers, enterprises, and organizations, that is, heads of health departments, heads of district medical associations, and other employers. After the YDA, graduates who graduate from a state grant will receive a transcript of their diploma, an extract from the distribution commission decision, a personal distribution account, and a job offer. Graduates who complete their studies on a paid basis will receive a diploma and a job offer. The Institute regularly monitors graduates for up to 3 years after graduation.",
+  "new": "Fergana Medical Institute of Public Health, 2021/2022 academic year: [RECORD OF GRADUATES RECOMMENDED FOR EMPLOYMENT UNDER CONTRACTS](/blog/367/shartnomalar-namunasi-2) (graduates who studied on a paid-contract basis). Viewing this page is allowed only for registered users.",
+  "why": "wrong: English is a repeat of block #2; the 2021/2022 record, its link and the access note are lost."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "1. Savol: Bakalavriatning aloh",
+  "old": "в семейные поликлиники и семейные поликлиники",
+  "new": "в семейные врачебные пункты и семейные поликлиники",
+  "why": "wrong: Family doctor points became a duplicated 'family polyclinics'."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 1,
+  "lang": "en",
+  "anchor": "1. Savol: Bakalavriatning aloh",
+  "old": "to work in family clinics?",
+  "new": "to work in family doctor points and family polyclinics?",
+  "why": "missing: Family doctor points are omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Javob: Ishga yoʻllash tartibi ",
+  "old": "Порядок приема на работу основывается на",
+  "new": "Порядок направления на работу определён",
+  "why": "wrong: The rule is about referral to work, not hiring."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Javob: Ishga yoʻllash tartibi ",
+  "old": "No. 769:",
+  "new": "No. 769 \"On measures to further improve the training of medical personnel\":",
+  "why": "missing: Title of the resolution is omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Ushbu Nizom bakalavriatning al",
+  "old": "Настоящее Положение предусматривает, что выпускники высших медицинских учебных заведений (далее - выпускники), обучавшиеся на основе государственных грантов по отдельным направлениям бакалавриата, принимаются в кабинеты семейного врача и семейные поликлиники (далее - ОШП и ОП.).) определяет порядок развертывания.",
+  "new": "Настоящее Положение определяет порядок направления выпускников высших медицинских учебных заведений (далее — выпускники), обучавшихся на основе государственного гранта по отдельным направлениям бакалавриата, на работу в семейные врачебные пункты и семейные поликлиники (далее — ОШП и ОП).",
+  "why": "wrong: Machine-translation garble ('принимаются', 'порядок развертывания', broken brackets)."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Ushbu Nizom bakalavriatning al",
+  "old": "Выпускники будут разделены на OSHP и OP с момента выпуска в 2017/2018 учебном году, а затем будут работать в обязательном порядке на постоянном месте жительства.",
+  "new": "Начиная с выпускников 2017/2018 учебного года, выпускники распределяются в ОШП и ОП для обязательной отработки по месту постоянного проживания.",
+  "why": "wrong: 'Разделены на OSHP' is wrong and uses Latin letters in Russian."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Ushbu Nizom bakalavriatning al",
+  "old": "This regulation provides that graduates of higher medical education institutions (hereinafter referred to as graduates) who studied on the basis of state grants in certain areas of undergraduate education are admitted to family doctor's offices and family clinics (hereinafter referred to as OSHP and OP). It determines the order of referral.",
+  "new": "This Regulation establishes the procedure for referring graduates of higher medical education institutions (hereinafter, graduates) who studied on a state grant in certain bachelor's programmes to work at family doctor points and family polyclinics (hereinafter, OSHP and OP).",
+  "why": "wrong: Graduates are referred to work, not 'admitted'; sentence is broken."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Ushbu Nizom bakalavriatning al",
+  "old": "Graduates will be divided into OSHPs and OPs from the time they graduate in the 2017/2018 academic year and then work on a mandatory basis at a permanent residence.",
+  "new": "Starting with the 2017/2018 graduates, graduates are assigned to OSHPs and OPs for mandatory service at their place of permanent residence.",
+  "why": "wrong: 'Divided into OSHPs' distorts the meaning."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Tibbiyot oliy taʻlim muassasal",
+  "old": "Выпускники медицинских вузов «Лечебное дело», «Педиатрический труд» и «Профессиональное образование (врачебное дело)» в параметрах целевого приема на основе государственного гранта вне зависимости от места проживания. Делится на “ОШП” и “ОП” для обязательной эксплуатации в указанном районе (городе).",
+  "new": "Выпускники медицинских вузов по направлениям «Лечебное дело», «Педиатрическое дело» и «Профессиональное образование (лечебное дело)» независимо от места регистрации по месту жительства распределяются в ОШП и ОП для обязательной отработки в районе (городе), указанном в параметрах целевого приёма на основе государственного гранта.",
+  "why": "wrong: Garbled ('Педиатрический труд', 'для обязательной эксплуатации'); no main verb."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Tibbiyot oliy taʻlim muassasal",
+  "old": "Graduates of medical higher education institutions in the areas of \"Medical work,\" \"Pediatric work,\" and \"Vocational education (medical work)\" in the parameters of targeted admission on the basis of a state grant, regardless of the place of residence. It is divided into “OShP” and “OP” for mandatory operation in the specified district (city).",
+  "new": "Graduates of medical higher education institutions in \"General Medicine\", \"Pediatrics\" and \"Vocational Education (General Medicine)\", regardless of their registered place of residence, are assigned to OSHPs and OPs for mandatory service in the district (city) specified in the targeted state-grant admission parameters.",
+  "why": "wrong: Garbled ('It is divided into', 'mandatory operation'); programme names wrong."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "3. Oliy tibbiy taʻlim muassasa",
+  "old": "3. Министерство здравоохранения Республики Узбекистан определяет бакалаврские направления выпускников высших медицинских учебных заведений для обязательной работы по охране труда и охране труда.",
+  "new": "3. Направления бакалавриата высших медицинских учебных заведений, выпускники которых распределяются для обязательной отработки в ОШП и ОП, определяются Министерством здравоохранения Республики Узбекистан.",
+  "why": "wrong: 'по охране труда и охране труда' (labour protection) is nonsense for OShP/OP."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 6,
+  "lang": "ru",
+  "anchor": "4. Qoraqalpogʻiston Respublika",
+  "old": "4. В Республике Каракалпакстан, областях и районах (городах) города Ташкента срок обязательного трудоустройства выпускника составляет 3 года (36 месяцев). С 2020-2021 учебного года срок обязательного трудоустройства выпускников медицинских вузов по направлениям «Лечебная работа», «Педиатрическая работа» и «Профессиональное образование (врачебная работа)» не менее 5 лет (60 месяцев). в Республике Каракалпакстан, областях и районах (городах) города Ташкента, указанных в параметрах целевого приема на основании государственной стипендии, независимо от места получения.",
+  "new": "4. В районах (городах) Республики Каракалпакстан, областей и города Ташкента срок обязательной отработки выпускника составляет 3 года (36 месяцев). Начиная с 2020–2021 учебного года срок обязательной отработки выпускников медицинских вузов по направлениям «Лечебное дело», «Педиатрическое дело» и «Профессиональное образование (лечебное дело)» в районах (городах) Республики Каракалпакстан, областей и города Ташкента, указанных в параметрах целевого приёма на основе государственного гранта, независимо от места регистрации по месту жительства составляет не менее 5 лет (60 месяцев).",
+  "why": "wrong: 'Районах города Ташкента', 'государственной стипендии', 'места получения' are wrong."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 6,
+  "lang": "en",
+  "anchor": "4. Qoraqalpogʻiston Respublika",
+  "old": "4. In the Republic of Karakalpakstan, regions and districts (cities) of the city of Tashkent, the period of compulsory employment of the graduate is 3 years (36 months). From the 2020-2021 academic year, the period of compulsory employment of graduates of medical higher education institutions in the areas of \"Medical work,\" \"Pediatric work,\" and \"Vocational education (medical work)\" is at least 5 years (60 months) in the Republic of Karakalpakstan, regions and districts (cities) of the city of Tashkent, specified in the parameters of targeted admission on the basis of a state grant, regardless of the place of receipt.",
+  "new": "4. The mandatory service period of a graduate in the districts (cities) of the Republic of Karakalpakstan, the regions and Tashkent city is 3 years (36 months). Starting from the 2020–2021 academic year, the mandatory service period of graduates of medical higher education institutions in \"General Medicine\", \"Pediatrics\" and \"Vocational Education (General Medicine)\" is at least 5 years (60 months) in the districts (cities) of the Republic of Karakalpakstan, the regions and Tashkent city specified in the targeted state-grant admission parameters, regardless of their registered place of residence.",
+  "why": "wrong: 'Districts of the city of Tashkent' and 'place of receipt' are wrong."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 9,
+  "lang": "ru",
+  "anchor": "Bitiruvchilarni majburiy ishla",
+  "old": "состоящая из уполномоченных сотрудников",
+  "new": "состоящая из сотрудников министерства, руководителей территориальных органов управления здравоохранения, ответственных работников высших медицинских учебных заведений и медицинских организаций",
+  "why": "missing: Composition of the Commission is omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Bitiruvchilarni majburiy ishla",
+  "old": "the Ministry of Health of the Republic of Uzbekistan A Commission consisting of authorized staff (hereinafter referred to as the Commission) shall be established.",
+  "new": "a Commission (hereinafter, the Commission) consisting of ministry staff, heads of the territorial health authorities and responsible officers of higher medical education institutions and medical organisations shall be established under the Ministry of Health of the Republic of Uzbekistan.",
+  "why": "missing: Broken sentence; composition of the Commission omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 11,
+  "lang": "ru",
+  "anchor": "1. Bitiruvchilar majburiy ishl",
+  "old": "1. Информация о заявках на вакансии и имеющихся вакансиях, поступающих в Совет Министров Республики Каракалпакстан, областные, Ташкентские, районные (городские) хокимияты по обязательному трудоустройству выпускников, ежегодно распространяется Комиссией на основании данных.",
+  "new": "1. Выпускники ежегодно распределяются Комиссией для обязательной отработки на основании заявок о потребности во врачебных кадрах и сведений об имеющихся вакансиях, представленных Советом Министров Республики Каракалпакстан, хокимиятами областей, города Ташкента и районов (городов).",
+  "why": "wrong: Says the Commission 'distributes information'; it distributes graduates."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 11,
+  "lang": "en",
+  "anchor": "1. Bitiruvchilar majburiy ishl",
+  "old": "1. Information on applications for vacancies and available vacancies submitted by the Council of Ministers of the Republic of Karakalpakstan, regional and Tashkent city, district (city) khokimiyats for compulsory employment of graduates. distributed annually by the Commission on the basis of the data.",
+  "new": "1. Graduates are distributed annually by the Commission for mandatory service on the basis of requests for physicians and data on available vacancies submitted by the Council of Ministers of the Republic of Karakalpakstan and the khokimiyats of the regions, Tashkent city and districts (cities).",
+  "why": "wrong: Fragment without a subject; graduates, not information, are distributed."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Komissiya bitiruvchilarni OShP",
+  "old": "на обязательные вакансии в ОСП и ОП",
+  "new": "на имеющиеся вакансии в ОШП и ОП для обязательной отработки",
+  "why": "terminology: 'Обязательные вакансии' is wrong; abbreviation differs from the one defined (ОШП)."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 12,
+  "lang": "en",
+  "anchor": "Komissiya bitiruvchilarni OShP",
+  "old": "for mandatory vacancies in OSHP and OP",
+  "new": "to available vacancies in OSHPs and OPs for mandatory service",
+  "why": "minor: Vacancies are not 'mandatory'."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 13,
+  "lang": "ru",
+  "anchor": "2. Bitiruvchilarning majburiy ",
+  "old": "2. Конкретные сроки, место и условия обязательного приема на работу выпускников, а также их обязанности между Министерством здравоохранения Республики Узбекистан, высшим медицинским учебным заведением, Советом Министров Республики Каракалпакстан, областными и хокимиятами города Ташкента. и выпускников Указывается в контракте в 4-х экземплярах (далее - контракт).",
+  "new": "2. Конкретные сроки, место и условия обязательной отработки выпускников, а также их обязанности определяются договором (далее — договор), заключаемым в 4 экземплярах между Министерством здравоохранения Республики Узбекистан, высшим медицинским учебным заведением, Советом Министров Республики Каракалпакстан, хокимиятами областей и города Ташкента и выпускником.",
+  "why": "wrong: Sentence is broken in two and unreadable."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 13,
+  "lang": "en",
+  "anchor": "2. Bitiruvchilarning majburiy ",
+  "old": "2. Specific terms, place and conditions of compulsory employment of graduates, as well as their obligations between the Ministry of Health of the Republic of Uzbekistan, higher medical education institution, the Council of Ministers of the Republic of Karakalpakstan, regional and Tashkent city khokimiyats and graduates It is specified in the contract in 4 copies (hereinafter referred to as the contract).",
+  "new": "2. The specific terms, place and conditions of graduates' mandatory service, as well as their obligations, are set out in a contract (hereinafter, the contract) concluded in 4 copies between the Ministry of Health of the Republic of Uzbekistan, the higher medical education institution, the Council of Ministers of the Republic of Karakalpakstan, the khokimiyats of the regions and Tashkent city, and the graduate.",
+  "why": "wrong: Sentence is broken in two and unreadable."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Oliy tibbiy taʻlim muassasalar",
+  "old": "ОСП или ОП",
+  "new": "ОШП или ОП",
+  "why": "terminology: Abbreviation differs from the one defined on the page."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Oliy tibbiy taʻlim muassasalar",
+  "old": "независимо от формы обучения (на основе государственного гранта или платежного контракта), степень магистра для обязательного трудоустройства и распределенная после прохождение клинической ординатуры.",
+  "new": "независимо от формы обучения (на основе государственного гранта или на платно-контрактной основе) распределяются для обязательной отработки после окончания магистратуры и клинической ординатуры (резидентуры).",
+  "why": "wrong: Garbled ending, no verb."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Oliy tibbiy taʻlim muassasalar",
+  "old": "regardless of the form of education (on the basis of a state grant or payment contract), a master's degree for compulsory employment, and distributed after completion of clinical residency.",
+  "new": "regardless of the form of study (state grant or paid contract), are assigned for compulsory employment after completing the master's programme or clinical residency (residency).",
+  "why": "wrong: Garbled ending, no verb."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "5. Oliy tibbiy taʻlim muassasa",
+  "old": "5. Выпускники магистратуры и клинической ординатуры, обучающиеся на основе государственного гранта в области бакалавриата высших медицинских учебных заведений, назначаются Комиссией на этих специалистов высших медицинских учебных заведений, научно-исследовательских институтов, специализированных научно-практических медицинских центров. и другие медицинские учреждения распределяются по необходимости.",
+  "new": "5. Выпускники магистратуры и клинической ординатуры, обучавшиеся в бакалавриате высших медицинских учебных заведений на основе государственного гранта, распределяются Комиссией исходя из потребности высших медицинских учебных заведений, научно-исследовательских институтов, специализированных научно-практических медицинских центров и других учреждений здравоохранения в этих специалистах.",
+  "why": "wrong: Garbled ('назначаются Комиссией на этих специалистов')."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Bunda Komissiya birinchi navba",
+  "old": "многопрофильных клиниках",
+  "new": "многопрофильных поликлиниках",
+  "why": "minor: Polyclinics, not clinics."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 18,
+  "lang": "ru",
+  "anchor": "3. Savol: Oliy taʻlim muassasa",
+  "old": "Как принять на работу студентов, окончивших высшее учебное заведение на основании государственной гарантии?",
+  "new": "Как осуществляется приём на работу по направлению выпускников, окончивших высшее учебное заведение на основе государственного гранта?",
+  "why": "wrong: The Uzbek 'garant' is a typo for grant; 'государственная гарантия' is wrong; 'by referral' omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 18,
+  "lang": "en",
+  "anchor": "3. Savol: Oliy taʻlim muassasa",
+  "old": "How to hire students who have graduated from a higher education institution on the basis of a state guarantee?",
+  "new": "How are graduates who studied at a higher education institution on a state grant employed by referral?",
+  "why": "wrong: 'State guarantee' is wrong (state grant); 'by referral' omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 19,
+  "lang": "ru",
+  "anchor": "Javob: Oliy taʻlim muassasasin",
+  "old": "на основании государственной гарантии",
+  "new": "на основе государственного гранта, на работу по направлению",
+  "why": "wrong: State grant, not guarantee; 'by referral' omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 19,
+  "lang": "en",
+  "anchor": "Javob: Oliy taʻlim muassasasin",
+  "old": "on the basis of a state guarantee",
+  "new": "on a state grant, by referral,",
+  "why": "wrong: State grant, not guarantee; 'by referral' omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "на основании разрешения на работу",
+  "new": "на основании направления на работу",
+  "why": "wrong: Job referral, not work permit."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "en",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "on the basis of a work permit",
+  "new": "on the basis of the job referral",
+  "why": "wrong: Job referral, not work permit."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "а затем в десятидневный срок для его представления в Минздрав Республики Узбекистан и соответствующее высшее медицинское учебное заведение. Отправляет в территориальный орган. отдела.",
+  "new": "и в десятидневный срок направляет его в территориальный орган управления здравоохранения для последующего представления в Министерство здравоохранения Республики Узбекистан и соответствующее высшее медицинское учебное заведение.",
+  "why": "wrong: Sentence broken into fragments."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 20,
+  "lang": "en",
+  "anchor": "Bitiruvchilar oʻqishni tamomla",
+  "old": "and then within ten days for its submission to the Ministry of Health of the Republic of Uzbekistan and the relevant higher medical education institution. sends to the territorial body of the department.",
+  "new": "and within ten days sends it to the territorial health authority for subsequent submission to the Ministry of Health of the Republic of Uzbekistan and the relevant higher medical education institution.",
+  "why": "wrong: Sentence broken into fragments."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 24,
+  "lang": "ru",
+  "anchor": "Majburiy ishlab berish uchun t",
+  "old": "При наличии у выпускника, направленного на принудительные работы, серьезные причины для изменения места работы, вступления в брак, переезда на постоянное место жительства в другую местность, выпускник имеет право обратиться в Комиссию по изменению места принудительного труда. предоставляет подтверждающие документы.",
+  "new": "При возникновении у выпускника, распределённого для обязательной отработки, уважительных причин для изменения места отработки (вступление в брак, переезд на постоянное место жительства в другую местность) выпускник вправе обратиться в Комиссию с просьбой об изменении места обязательной отработки, представив подтверждающие документы.",
+  "why": "wrong: 'Принудительные работы / принудительный труд' (forced labour) is a grave mistranslation of mandatory service."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 24,
+  "lang": "en",
+  "anchor": "Majburiy ishlab berish uchun t",
+  "old": "If there are serious reasons for a graduate assigned to forced labor to change his place of work, get married, move to another area for permanent residence, the graduate has the right to apply to the Commission to change the place of forced employment. provides supporting documents.",
+  "new": "If a graduate assigned to compulsory employment has serious reasons to change the place of service, such as marriage or moving to another area for permanent residence, the graduate has the right to apply to the Commission to change the place of compulsory employment, submitting supporting documents.",
+  "why": "wrong: 'Forced labor' is a grave mistranslation; sentence broken."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 25,
+  "lang": "ru",
+  "anchor": "Javob: Yoʻq, haqli emas. Bitir",
+  "old": "Нет, не так.",
+  "new": "Нет, не имеет.",
+  "why": "wrong: Answer means 'No, he has no right'."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 25,
+  "lang": "en",
+  "anchor": "Javob: Yoʻq, haqli emas. Bitir",
+  "old": "No, not right.",
+  "new": "No, they do not.",
+  "why": "wrong: Answer means 'No, they have no such right'."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 26,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "четырехсоткратной базовой расчетной суммы, применяемой на практике при выдаче высшим медицинским учебным заведением приказа. на выпускной.",
+  "new": "четырёхсоткратной базовой расчётной величины, действовавшей на момент издания высшим медицинским учебным заведением приказа об окончании студентом обучения.",
+  "why": "wrong: Legal term is 'базовая расчётная величина'; ending garbled ('приказа. на выпускной')."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 26,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "в период обучения, он перечисляется в Государственный бюджет Республики Узбекистан, указанный в пункте 19 Закона. Регламент выплачивает компенсацию в уменьшенном размере в соответствии со сроком.",
+  "new": "в период отработки, он выплачивает в Государственный бюджет Республики Узбекистан компенсацию в размере, указанном в пункте 19 Положения, уменьшенном пропорционально отработанному сроку.",
+  "why": "wrong: Says the graduate is 'transferred to the budget' and cites a 'Law'; it is the service period and the Regulation."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 26,
+  "lang": "en",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "during the period of training, he shall be transferred to the State Budget of the Republic of Uzbekistan specified in paragraph 19 of the Regulation. pays compensation in a reduced amount in accordance with the term.",
+  "new": "during the period of service, he shall pay to the State Budget of the Republic of Uzbekistan compensation in the amount specified in paragraph 19 of the Regulation, reduced in proportion to the period already served.",
+  "why": "wrong: Says the graduate is 'transferred to the State Budget'; period is service, not training."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 27,
+  "lang": "ru",
+  "anchor": "Kompensatsiya miqdorini hisob-",
+  "old": "обязательной службы",
+  "new": "обязательной отработки",
+  "why": "minor: 'Служба' suggests military service."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "отказавшимся от работы в принудительном порядке",
+  "new": "отказавшимся от обязательной отработки",
+  "why": "wrong: 'Принудительный порядок' (forced) is wrong."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "Размер компенсации, выплаченной выпускником в Государственный бюджет Республики Узбекистан в связи с отказом от обязательного приема на работу в полном объеме на личный внебюджетный казначейский счет высшего медицинского учебного заведения, в котором он учился по государственному гранту. платит.",
+  "new": "Сумму компенсации, подлежащую уплате в Государственный бюджет Республики Узбекистан в связи с отказом от обязательной отработки, выпускник в полном объёме перечисляет на внебюджетный казначейский лицевой счёт высшего медицинского учебного заведения, в котором он обучался на основе государственного гранта.",
+  "why": "wrong: Garbled sentence ending in a stray 'платит.'"
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "en",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "The amount of compensation paid by the graduate to the State budget of the Republic of Uzbekistan in connection with the refusal of compulsory employment in full to the personal off-budget treasury account of the higher medical educational institution where he studied under the state grant pays.",
+  "new": "The graduate pays the full amount of compensation due to the State Budget of the Republic of Uzbekistan for refusing compulsory employment to the off-budget treasury personal account of the higher medical education institution where he studied on a state grant.",
+  "why": "wrong: Garbled sentence ending in a stray 'pays.'"
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "в доход республиканский бюджет Республики Узбекистан.",
+  "new": "в доход республиканского бюджета Республики Узбекистан в установленном законодательством порядке.",
+  "why": "minor: Case error; 'in the manner established by law' omitted."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "В случае невозможности работы выпускника в обязательном порядке по причине нетрудоспособности, распределяемой в соответствии с настоящим Положением,",
+  "new": "В случае, если выпускник, распределённый для обязательной отработки в соответствии с настоящим Положением, не может её осуществить по причине нетрудоспособности,",
+  "why": "minor: Participle attached to 'нетрудоспособности' instead of the graduate."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 28,
+  "lang": "en",
+  "anchor": "Bitiruvchi majburiy ishlab ber",
+  "old": "In case of inability of a graduate to work compulsorily due to incapacity for work, distributed in accordance with this Regulation,",
+  "new": "If a graduate assigned to compulsory employment under this Regulation is unable to serve due to incapacity for work,",
+  "why": "minor: 'Distributed' modifies the wrong noun."
+ },
+ {
+  "slug": "eng-kop-beriladigan-savollar",
+  "order": 29,
+  "lang": "ru",
+  "anchor": "Mehnat layoqatini qisman yoki ",
+  "old": "не могут работать принудительно",
+  "new": "не могут осуществлять обязательную отработку",
+  "why": "wrong: 'Принудительно' (forced) is wrong."
+ },
+ {
+  "slug": "online-royxatdan-otish-2025",
+  "order": 2,
+  "lang": "en",
+  "anchor": "2025-2026-oʻquv yilida oliy va",
+  "old": "in the 2024-2025 academic year",
+  "new": "in the 2025-2026 academic year",
+  "why": "wrong: Wrong academic year."
+ },
+ {
+  "slug": "online-royxatdan-otish-2025",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "2025-2026-oʻquv yilida oliy va",
+  "old": "(также в этот день)",
+  "new": "(включительно)",
+  "why": "minor: Means 'inclusive'."
+ },
+ {
+  "slug": "online-royxatdan-otish-2025",
+  "order": 2,
+  "lang": "en",
+  "anchor": "2025-2026-oʻquv yilida oliy va",
+  "old": "(also on this day)",
+  "new": "(inclusive)",
+  "why": "minor: Means 'inclusive'."
+ },
+ {
+  "slug": "online-royxatdan-otish-2025",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "2025-2026-oʻquv yilida oliy va",
+  "old": "Началась регистрация абитуриентов на 2025-2026 учебный год. Началась онлайн-регистрация",
+  "new": "Началась онлайн-регистрация",
+  "why": "minor: Added sentence repeating block #1."
+ },
+ {
+  "slug": "online-royxatdan-otish-2025",
+  "order": 2,
+  "lang": "en",
+  "anchor": "2025-2026-oʻquv yilida oliy va",
+  "old": "Registration of applicants for the 2025-2026 academic year has begun. Online registration",
+  "new": "Online registration",
+  "why": "minor: Added sentence repeating block #1."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 1,
+  "lang": "en",
+  "anchor": "2025-2026 - oʻquv yili uchun q",
+  "old": "Registration for the 2025-2026 academic year has been completed",
+  "new": "The draft admission quota for the 2025-2026 academic year has been announced",
+  "why": "wrong: Heading says registration has been completed; it announces the draft quota."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 8,
+  "lang": "en",
+  "anchor": "oliy taʻlim tashkilotlarining ",
+  "old": "in accordance with the paid contract",
+  "new": "in the amount of the paid-contract fee",
+  "why": "wrong: The amount, not 'in accordance with'."
+ },
+ {
+  "slug": "qabul-komissiyasi-yangiliklari",
+  "order": 16,
+  "lang": "en",
+  "anchor": "a) Oliy taʻlim, fan va innovat",
+  "old": "to form a paid contract with all higher and professional educational organizations",
+  "new": "to ensure that the paid-contract agreements of all higher and professional educational organizations are formed",
+  "why": "wrong: The Ministry does not sign contracts with institutions; their contracts are generated via the systems."
+ },
+ {
+  "slug": "texnikumlar-uchun-qabul-komissiyasi-markazi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Manzil: Fargʻona viloyati, Far",
+  "old": "st.Ozodlik 10a",
+  "new": "10a Ozodlik Street",
+  "why": "minor: Missing space / unnatural English address order."
+ },
+ {
+  "slug": "qabul-hujjatlar-toplami",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Abiturientlardan berilgan savo",
+  "old": "Какие именно документы",
+  "new": "Вопрос абитуриентов: какие именно документы",
+  "why": "missing: 'Question from applicants:' omitted."
+ },
+ {
+  "slug": "qabul-hujjatlar-toplami",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Abiturientlardan berilgan savo",
+  "old": "Which documents",
+  "new": "Question from applicants: which documents",
+  "why": "missing: 'Question from applicants:' omitted."
+ },
+ {
+  "slug": "qabul-hujjatlar-toplami",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Unutmang! Sizdan yuqoridagi hu",
+  "old": "От вас не требуется",
+  "new": "Не забывайте! От вас не требуется",
+  "why": "minor: 'Don't forget!' omitted."
+ },
+ {
+  "slug": "qabul-hujjatlar-toplami",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Unutmang! Sizdan yuqoridagi hu",
+  "old": "You are not required",
+  "new": "Remember: you are not required",
+  "why": "minor: 'Don't forget!' omitted."
+ },
+ {
+  "slug": "magistratura-imtihon-fanlari-royxati",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Magistraturaga kirish imtihonl",
+  "old": "Список экзаменационных предметов",
+  "new": "На вступительных экзаменах в магистратуру абитуриенты",
+  "why": "wrong: Russian ('List of exam subjects') does not translate the Uzbek."
+ },
+ {
+  "slug": "magistratura-imtihon-fanlari-royxati",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Magistraturaga kirish imtihonl",
+  "old": "These points are distributed in the following order:",
+  "new": "In the master's entrance examinations, applicants",
+  "why": "wrong: English is a copy of block #2."
+ },
+ {
+  "slug": "ordinatura-qabul-komissiyasi-yangiliklari-2025",
+  "order": 5,
+  "lang": "en",
+  "anchor": "[Qoraqalpogʻiston Respublikasi",
+  "old": "st. A. Dosnazarova, 108",
+  "new": "108 A. Dosnazarov Street",
+  "why": "minor: Russian genitive ending carried into English."
+ },
+ {
+  "slug": "ordinatura-qabul-komissiyasi-yangiliklari-2025",
+  "order": 8,
+  "lang": "en",
+  "anchor": "[Andijon shahri, Yu.Otabekov k",
+  "old": "st. Yu. Otabekova, 1",
+  "new": "1 Yu. Otabekov Street",
+  "why": "minor: Russian genitive ending carried into English."
+ },
+ {
+  "slug": "ordinatura-qabul-komissiyasi-yangiliklari-2025",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Ferghana Medical Institute of Public Health",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: Official English name uses 'Fergana'."
+ },
+ {
+  "slug": "ordinatura-qabul-komissiyasi-yangiliklari-2025",
+  "order": 11,
+  "lang": "ru",
+  "anchor": "[Fargʻona viloyati, Fargʻona s",
+  "old": "улица Азодлик",
+  "new": "улица Озодлик",
+  "why": "wrong: Street name misspelt (Озодлик elsewhere on the site)."
+ },
+ {
+  "slug": "ordinatura-qabul-komissiyasi-yangiliklari-2025",
+  "order": 11,
+  "lang": "en",
+  "anchor": "[Fargʻona viloyati, Fargʻona s",
+  "old": "Azodlik street",
+  "new": "Ozodlik Street",
+  "why": "wrong: Street name misspelt."
+ },
+ {
+  "slug": "xalqaro-qoshma-talim-2025",
+  "order": 7,
+  "lang": "ru",
+  "anchor": "Toʻlov kontrakt miqdori -:3000",
+  "old": "Сумма контракта ≈:3000USD.",
+  "new": "Сумма оплаты по контракту: 3000 USD.",
+  "why": "minor: '≈' (approximately) is not in the Uzbek."
+ },
+ {
+  "slug": "xalqaro-qoshma-talim-2025",
+  "order": 7,
+  "lang": "en",
+  "anchor": "Toʻlov kontrakt miqdori -:3000",
+  "old": "Contract amount ≈: 3000USD.",
+  "new": "Contract fee: 3000 USD.",
+  "why": "minor: '≈' (approximately) is not in the Uzbek."
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Ferghana Medical Institute of Public Health",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: Official English name uses 'Fergana'."
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Ферганская медико-санитарная медицина на 2025/2026 учебный год осуществляет прием граждан Республики Узбекистан на бакалавриат Ферганского медицинского института общественного здравоохранения и Курского государственного медицинского университета в двух странах (Республика Узбекистан, Российская Федерация) приема на образовательные курсы.",
+  "new": "Приём граждан Республики Узбекистан на 2025/2026 учебный год на совместные образовательные программы бакалавриата Ферганского медицинского института общественного здоровья и Курского государственного медицинского университета с обучением в двух государствах (Республика Узбекистан, Российская Федерация).",
+  "why": "wrong: 'Ферганская медико-санитарная медицина' and 'общественного здравоохранения' are wrong names; joint programmes lost."
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Ferghana Medical and Sanitary Medicine for the 2025/2026 academic year is accepting citizens of the Republic of Uzbekistan for undergraduate studies at the Fergana Medical Institute of Public Health and Kursk State Medical University in two countries (the Republic of Uzbekistan and the Russian Federation) for admission to educational courses.",
+  "new": "Admission of citizens of the Republic of Uzbekistan for the 2025/2026 academic year to the joint bachelor's programmes of the Fergana Medical Institute of Public Health and Kursk State Medical University, with study in two countries (the Republic of Uzbekistan and the Russian Federation).",
+  "why": "wrong: 'Ferghana Medical and Sanitary Medicine' is a wrong name; joint programmes lost."
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 6,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Необходимы следующие документы:",
+  "new": "Заявление на имя ректора Ферганского медицинского института общественного здоровья. В заявлении указываются полные сведения об абитуриенте (адрес проживания, адрес электронной почты, номера телефонов). Необходимы следующие документы:",
+  "why": "missing: Application to the rector and required contact details omitted."
+ },
+ {
+  "slug": "xalqaro-qabul-hujjatlar-toplami",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "The following documents are required:",
+  "new": "An application addressed to the Rector of the Fergana Medical Institute of Public Health, giving full details of the applicant (home address, email address, telephone numbers). The following documents are required:",
+  "why": "missing: Application to the rector and required contact details omitted."
+ },
+ {
+  "slug": "bakalavriat-2025",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Xorijiy fuqarolar uchun Fargʻo",
+  "old": "Ташкентского педиатрического медицинского института",
+  "new": "Ферганского медицинского института общественного здоровья",
+  "why": "wrong: Names another institute."
+ },
+ {
+  "slug": "bakalavriat-2025",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Xorijiy fuqarolar uchun Fargʻo",
+  "old": "Tashkent Pediatric Medical Institute",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "wrong: Names another institute."
+ },
+ {
+  "slug": "bakalavriat-2025",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Xorijiy fuqarolar uchun Fargʻo",
+  "old": "on the official website of the institute.",
+  "new": "on the [official website](/uz) of the institute.",
+  "why": "minor: Link to the website is missing."
+ },
+ {
+  "slug": "bakalavriat-2025",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Hujjatlarni topshirishning ohi",
+  "old": "July 31, 2025.",
+  "new": "July 31, 2025 (inclusive).",
+  "why": "minor: 'Inclusive' omitted."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Gistologiya kafedrasi",
+  "old": "Gistologiya kafedrasi",
+  "new": "Кафедра гистологии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Gistologiya kafedrasi",
+  "old": "Gistologiya kafedrasi",
+  "new": "Department of Histology",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 10,
+  "lang": "ru",
+  "anchor": "Biofizika va axborot texnologi",
+  "old": "Biofizika va axborot texnologiyalari kafedrasi",
+  "new": "Кафедра биофизики и информационных технологий",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Biofizika va axborot texnologi",
+  "old": "Biofizika va axborot texnologiyalari kafedrasi",
+  "new": "Department of Biophysics and Information Technologies",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "Epidemiologiya va yuqumli kasa",
+  "old": "Epidemiologiya va yuqumli kasalliklar kafedrasi",
+  "new": "Кафедра эпидемиологии и инфекционных болезней",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 16,
+  "lang": "en",
+  "anchor": "Epidemiologiya va yuqumli kasa",
+  "old": "Epidemiologiya va yuqumli kasalliklar kafedrasi",
+  "new": "Department of Epidemiology and Infectious Diseases",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 27,
+  "lang": "ru",
+  "anchor": "Kommunal va mehnat gigiyenasi ",
+  "old": "Kommunal va mehnat gigiyenasi kafedrasi",
+  "new": "Кафедра коммунальной гигиены и гигиены труда",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 27,
+  "lang": "en",
+  "anchor": "Kommunal va mehnat gigiyenasi ",
+  "old": "Kommunal va mehnat gigiyenasi kafedrasi",
+  "new": "Department of Communal and Occupational Hygiene",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 34,
+  "lang": "ru",
+  "anchor": "Ichki kasalliklar propedevtika",
+  "old": "Ichki kasalliklar propedevtikasi kafedrasi",
+  "new": "Кафедра пропедевтики внутренних болезней",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 34,
+  "lang": "en",
+  "anchor": "Ichki kasalliklar propedevtika",
+  "old": "Ichki kasalliklar propedevtikasi kafedrasi",
+  "new": "Department of Propaedeutics of Internal Diseases",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 36,
+  "lang": "ru",
+  "anchor": "Klinik anatomiya kafedrasi",
+  "old": "Klinik anatomiya kafedrasi",
+  "new": "Кафедра клинической анатомии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 36,
+  "lang": "en",
+  "anchor": "Klinik anatomiya kafedrasi",
+  "old": "Klinik anatomiya kafedrasi",
+  "new": "Department of Clinical Anatomy",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 40,
+  "lang": "ru",
+  "anchor": "Mikrobiologiya kafedrasi",
+  "old": "Mikrobiologiya kafedrasi",
+  "new": "Кафедра микробиологии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 40,
+  "lang": "en",
+  "anchor": "Mikrobiologiya kafedrasi",
+  "old": "Mikrobiologiya kafedrasi",
+  "new": "Department of Microbiology",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 46,
+  "lang": "ru",
+  "anchor": "Patologik anatomiya kafedrasi",
+  "old": "Patologik anatomiya kafedrasi",
+  "new": "Кафедра патологической анатомии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 46,
+  "lang": "en",
+  "anchor": "Patologik anatomiya kafedrasi",
+  "old": "Patologik anatomiya kafedrasi",
+  "new": "Department of Pathological Anatomy",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 48,
+  "lang": "ru",
+  "anchor": "Patologik fiziologiya kafedras",
+  "old": "Patologik fiziologiya kafedrasi",
+  "new": "Кафедра патологической физиологии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 48,
+  "lang": "en",
+  "anchor": "Patologik fiziologiya kafedras",
+  "old": "Patologik fiziologiya kafedrasi",
+  "new": "Department of Pathological Physiology",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 50,
+  "lang": "ru",
+  "anchor": "Gistologiya va tibbiy biologiy",
+  "old": "Gistologiya va tibbiy biologiya kafedrasi",
+  "new": "Кафедра гистологии и медицинской биологии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 50,
+  "lang": "en",
+  "anchor": "Gistologiya va tibbiy biologiy",
+  "old": "Gistologiya va tibbiy biologiya kafedrasi",
+  "new": "Department of Histology and Medical Biology",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 54,
+  "lang": "ru",
+  "anchor": "Tibbiy va Biologik kimyo kafed",
+  "old": "Tibbiy va Biologik kimyo kafedrasi",
+  "new": "Кафедра медицинской и биологической химии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 54,
+  "lang": "en",
+  "anchor": "Tibbiy va Biologik kimyo kafed",
+  "old": "Tibbiy va Biologik kimyo kafedrasi",
+  "new": "Department of Medical and Biological Chemistry",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 60,
+  "lang": "ru",
+  "anchor": "2 son Ichki kasalliklar kafedr",
+  "old": "2 son Ichki kasalliklar kafedrasi",
+  "new": "Кафедра внутренних болезней № 2",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 60,
+  "lang": "en",
+  "anchor": "2 son Ichki kasalliklar kafedr",
+  "old": "2 son Ichki kasalliklar kafedrasi",
+  "new": "Department of Internal Diseases No. 2",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 63,
+  "lang": "ru",
+  "anchor": "Farmakologiya kafedrasi",
+  "old": "Farmakologiya kafedrasi",
+  "new": "Кафедра фармакологии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 63,
+  "lang": "en",
+  "anchor": "Farmakologiya kafedrasi",
+  "old": "Farmakologiya kafedrasi",
+  "new": "Department of Pharmacology",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 65,
+  "lang": "ru",
+  "anchor": "Oʻzbek va xorijiy tillar kafed",
+  "old": "O'zbek va xorijiy tillar kafedrasi",
+  "new": "Кафедра узбекского и иностранных языков",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 65,
+  "lang": "en",
+  "anchor": "Oʻzbek va xorijiy tillar kafed",
+  "old": "O'zbek va xorijiy tillar kafedrasi",
+  "new": "Department of Uzbek and Foreign Languages",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 70,
+  "lang": "ru",
+  "anchor": "Umumiy xirurgiya kafedrasi",
+  "old": "Umumiy xirurgiya kafedrasi",
+  "new": "Кафедра общей хирургии",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 70,
+  "lang": "en",
+  "anchor": "Umumiy xirurgiya kafedrasi",
+  "old": "Umumiy xirurgiya kafedrasi",
+  "new": "Department of General Surgery",
+  "why": "language: Department name left in Uzbek."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "[Sxemotexnika fanidan testlar ",
+  "old": "to`plami",
+  "new": "toʻplami",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 12,
+  "lang": "en",
+  "anchor": "[Sxemotexnika fanidan testlar ",
+  "old": "to`plami",
+  "new": "toʻplami",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 13,
+  "lang": "ru",
+  "anchor": "[Elektrotexnika fanidan testla",
+  "old": "to`plami",
+  "new": "toʻplami",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 13,
+  "lang": "en",
+  "anchor": "[Elektrotexnika fanidan testla",
+  "old": "to`plami",
+  "new": "toʻplami",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 25,
+  "lang": "ru",
+  "anchor": "[Yuqumli kasalliklar va bolala",
+  "old": "ta`lim",
+  "new": "taʻlim",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 25,
+  "lang": "en",
+  "anchor": "[Yuqumli kasalliklar va bolala",
+  "old": "ta`lim",
+  "new": "taʻlim",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 35,
+  "lang": "ru",
+  "anchor": "[Ichki kasalliklar propedevtik",
+  "old": "yo`nalishi",
+  "new": "yoʻnalishi",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 35,
+  "lang": "en",
+  "anchor": "[Ichki kasalliklar propedevtik",
+  "old": "yo`nalishi",
+  "new": "yoʻnalishi",
+  "why": "minor: Uzbek document title uses a backtick instead of ʻ (U+02BB)."
+ },
+ {
+  "slug": "talaba-maqomi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Talabalik — sharafli maqom. Bi",
+  "old": "Студенчество — почётный статус. Студенчество является почётным статусом.",
+  "new": "Студенчество — почётный статус.",
+  "why": "minor: First sentence is duplicated."
+ },
+ {
+  "slug": "talaba-maqomi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Talabalik — sharafli maqom. Bi",
+  "old": "Students - honorary status. Being a student is an honorable status.",
+  "new": "Being a student is an honourable status.",
+  "why": "minor: First sentence is duplicated (and 'Students - honorary status' is ungrammatical)."
+ },
+ {
+  "slug": "yoriqnoma-klinik-ordinatura",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Tanlov sinovlarini oʻtkazish, ",
+  "old": "Responsible secretaries are proposed annually by the first ten days of May",
+  "new": "Responsible secretaries are nominated to the Ministry of Health annually by the first ten days of May",
+  "why": "missing: 'To the Ministry of Health' omitted."
+ },
+ {
+  "slug": "davlat-imtihonlari",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Oʻquv yili davomida klinik ord",
+  "old": "the Vice-Rector for Academic or Scientific Affairs",
+  "new": "the Vice-Rector for Scientific Affairs",
+  "why": "minor: 'Academic' is added."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Ferghana Medical Institute of Public Health",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: Official English name uses 'Fergana'."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Xorijiy abituriyentlar va tala",
+  "old": "Ferghana Medical Institute of Public Health",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: Official English name uses 'Fergana'."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "[FJSTI](/uz) — Oʻzbekiston Res",
+  "old": "[ФМИОЗ](/blog/6/study-in-uzbekistan)-является",
+  "new": "[ФМИОЗ](/uz) является",
+  "why": "minor: Link points back to this page instead of the home page; stray hyphen."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Davolash ishi (General Medicin",
+  "old": "Stomatology",
+  "new": "Dentistry",
+  "why": "minor: The Uzbek itself gives the English name 'Dentistry'."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Xavfsizlik tizimi, internet va",
+  "old": "Места кухни",
+  "new": "Столовая",
+  "why": "minor: 'Oshxona' here is a canteen; 'места кухни' is unidiomatic."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 12,
+  "lang": "en",
+  "anchor": "Xavfsizlik tizimi, internet va",
+  "old": "Kitchen and service areas",
+  "new": "Canteen and service areas",
+  "why": "minor: 'Oshxona' here is a canteen."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Toʻlov miqdorlari “Study in Uz",
+  "old": "Размер выплаты",
+  "new": "Размер оплаты",
+  "why": "minor: 'Выплата' means a payout to the student, not a fee."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Toʻlov miqdorlari “Study in Uz",
+  "old": "Суммы выплат",
+  "new": "Суммы оплаты",
+  "why": "minor: 'Выплата' means a payout to the student, not a fee."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 16,
+  "lang": "en",
+  "anchor": "5. Qabul jarayoni va hujjatlar",
+  "old": "Acceptance process",
+  "new": "Admission process",
+  "why": "minor: Standard term is 'admission'."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 18,
+  "lang": "ru",
+  "anchor": "Qabul shartlari",
+  "old": "Они могут получить подробную информацию о ходе беседы.",
+  "new": "Порядок проведения собеседования — по всем этим вопросам можно получить подробную информацию.",
+  "why": "wrong: 'Ход беседы' (course of a conversation) is wrong; it is the admission interview."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 18,
+  "lang": "en",
+  "anchor": "Qabul shartlari",
+  "old": "They can get detailed information about the course of the conversation.",
+  "new": "Interview procedure — detailed information on all of these is available.",
+  "why": "wrong: 'Course of the conversation' is wrong; it is the admission interview."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 21,
+  "lang": "ru",
+  "anchor": "FJSTIda taʻlim olish xorijiy t",
+  "old": "ИПФО",
+  "new": "ФМИОЗ",
+  "why": "wrong: Wrong abbreviation of the institute."
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 21,
+  "lang": "en",
+  "anchor": "FJSTIda taʻlim olish xorijiy t",
+  "old": "the IPFO",
+  "new": "FMIOPH",
+  "why": "wrong: Wrong abbreviation of the institute."
+ },
+ {
+  "slug": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Mamalakatimizni ijtimoiy-iqtis",
+  "old": "В целях социально-экономического развития нашей страны и получения полной и достоверной информации о населении был принят Закон Республики Узбекистан № 611 «О переписи населения» от 16 марта 2020 года. Согласно этому закону, процесс переписи населения основывается на следующих принципах: периодичность – перепись населения проводится не реже одного раза в десять лет; универсальность и одновременность – сбор персональных данных всех респондентов в одну установленную дату переписи населения осуществляется одновременно на всей территории Республики Узбекистан или в ее отдельных регионах; индивидуальность переписи – при сборе персональных данных регистрационная форма заполняется индивидуально для каждого респондента; конфиденциальность персональных данных – персональные данные, полученные в ходе переписи населения, являются конфиденциальными и не разглашаются и не распространяются без согласия респондента; централизация управления переписью населения – подготовка и проведение переписи населения в Республике Узбекистан, а также проведение переписи населения централизованным образом на основе создания единой системы управления. Кроме того, согласно статье 3 настоящего законВ целях социально-экономического развития нашей страны и получения полной и достоверной информации о населении был принят Закон Республики Узбекистан № 611 «О переписи населения» от 16 марта 2020 года. Согласно этому закону, процесс переписи населения основывается на следующих принципах: периодичность – перепись населения проводится не реже одного раза в десять лет; универсальность и одновременность – сбор персональных данных всех респондентов в одну установленную дату переписи населения осуществляется одновременно на всей территории Республики Узбекистан или в ее отдельных регионах; индивидуальность переписи – при сборе персональных данных регистрационная форма заполняется индивидуально для каждого респондента; конфиденциальность персональных данных – персональные данные, полученные в ходе переписи населения, являются конфиденциальными и не разглашаются и не распространяются без согласия респондента; централизация управления переписью населения – подготовка и проведение переписи населения в Республике Узбекистан, а также проведение переписи населения централизованным образом на основе создания единой системы управления. Кроме того, согласно статье 3 настоящего закона,",
+  "new": "В целях социально-экономического развития нашей страны и получения полной и достоверной информации о населении был принят Закон Республики Узбекистан № ЗРУ-611 «О переписи населения» от 16 марта 2020 года. Согласно этому закону, процесс переписи населения основывается на следующих принципах: периодичность – перепись населения проводится не реже одного раза в десять лет; универсальность и одновременность – сбор персональных данных всех респондентов в одну установленную дату переписи населения осуществляется одновременно на всей территории Республики Узбекистан или в ее отдельных регионах; индивидуальность переписи – при сборе персональных данных регистрационная форма заполняется индивидуально для каждого респондента; конфиденциальность персональных данных – персональные данные, полученные в ходе переписи населения, являются конфиденциальными и не разглашаются и не распространяются без согласия респондента; централизация управления переписью населения – подготовка и проведение переписи населения в Республике Узбекистан, а также проведение переписи населения централизованным образом на основе создания единой системы управления. Кроме того, согласно статье 3 настоящего закона,",
+  "why": "wrong: The whole Russian paragraph is pasted twice ('законВ целях'); law number is ЗРУ-611."
+ },
+ {
+  "slug": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Mamalakatimizni ijtimoiy-iqtis",
+  "old": "No. 611",
+  "new": "No. ZRU-611",
+  "why": "minor: Official number of the law is ZRU-611."
+ }
+]

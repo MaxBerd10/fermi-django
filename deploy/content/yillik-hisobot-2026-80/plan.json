@@ -1,0 +1,1343 @@
+[
+ {
+  "slug": "ishga-joylashish-uchun-hujjatlari",
+  "order": 2,
+  "lang": "en",
+  "anchor": "[Rahbar nomiga ariza](https://",
+  "old": "Workbook",
+  "new": "Employment record book",
+  "why": "terminology: \"Mehnat daftarchasi\" is the employment record book, not a workbook."
+ },
+ {
+  "slug": "ishga-joylashish-uchun-hujjatlari",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "[Rahbar nomiga ariza](https://",
+  "old": "Цветное фото 3×4, 6 шт.",
+  "new": "Цветное фото 3×4 см, 6 шт.",
+  "why": "minor: The unit (cm) is dropped."
+ },
+ {
+  "slug": "ishga-joylashish-uchun-hujjatlari",
+  "order": 2,
+  "lang": "en",
+  "anchor": "[Rahbar nomiga ariza](https://",
+  "old": "Colour photo 3×4, 6 pieces",
+  "new": "Colour photo 3×4 cm, 6 pieces",
+  "why": "minor: The unit (cm) is dropped."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Klinik ordinaturaga faqat oliy",
+  "old": "принимаются врачи",
+  "new": "принимаются только врачи",
+  "why": "missing: \"faqat\" (only) is omitted."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Klinik ordinaturaga faqat oliy",
+  "old": "is open to doctors",
+  "new": "is open only to doctors",
+  "why": "missing: \"faqat\" (only) is omitted."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Shuningdek, ilgari klinik ordi",
+  "old": "Также допускаются лица, которые ранее закончили клиническую ординатуру или магистратуру и хотят получить вторую специальность.",
+  "new": "Также могут поступать врачи, которые ранее окончили клиническую ординатуру или магистратуру и хотят получить вторую специальность помимо своей.",
+  "why": "minor: The Uzbek speaks of doctors (not any persons) and of a second specialty besides their own; \"закончили\" should be \"окончили\"."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Shuningdek, ilgari klinik ordi",
+  "old": "It is also available to those who have previously completed a clinical residency or a master’s program and wish to obtain a second specialty.",
+  "new": "Doctors who have previously completed a clinical residency or a master’s programme and wish to obtain a second specialty in addition to their own may also apply.",
+  "why": "minor: The Uzbek speaks of doctors (not anyone) and of a second specialty besides their own."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 8,
+  "lang": "ru",
+  "anchor": "Tanlov sinovlari yiliga bir ma",
+  "old": "один раз в год, как правило, в последние",
+  "new": "один раз в год, в последние",
+  "why": "minor: \"как правило\" is added; the Uzbek states the period firmly."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Tanlov sinovlari yiliga bir ma",
+  "old": "once a year, usually in the last",
+  "new": "once a year, in the last",
+  "why": "minor: \"usually\" is added; the Uzbek states the period firmly."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Chet elda tibbiyot oliy taʻlim",
+  "old": "after their diplomas have been notarized",
+  "new": "after the nostrification (official recognition) of their diplomas",
+  "why": "wrong: Nostrification is official recognition of a foreign diploma, not notarisation."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 21,
+  "lang": "ru",
+  "anchor": "Maqsadli oʻrinlar avvalo oʻsha",
+  "old": "Незаполненные места перераспределяются Министерством здравоохранения с учётом потребности регионов в кадрах.",
+  "new": "Целевые места в первую очередь распределяются среди претендентов из данной территории. Если места остаются незаполненными, они перераспределяются в другие регионы.",
+  "why": "wrong: The Ministry and \"staffing needs\" are invented; the first sentence is dropped."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 21,
+  "lang": "en",
+  "anchor": "Maqsadli oʻrinlar avvalo oʻsha",
+  "old": "If some places remain unfilled, they are redistributed by the Ministry of Health according to the demand for medical personnel in other regions.",
+  "new": "Targeted places are allocated first among applicants from the region concerned. If places remain unfilled, they are redistributed to other regions.",
+  "why": "wrong: The Ministry and \"demand for personnel\" are invented; the first sentence is dropped."
+ },
+ {
+  "slug": "klinik-ordinatura-qabul-nizomi",
+  "order": 28,
+  "lang": "ru",
+  "anchor": "Oʻqish tugagach, ular kamida 3",
+  "old": "в направлении, указанном в договоре",
+  "new": "в месте, определённом договором",
+  "why": "minor: \"belgilangan joy\" is a designated place of work, not a \"direction\"."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "1-sonli talabalar turar joyi —",
+  "old": "ул. С. Ахмада, 57,",
+  "new": "ул. С. Ахмада, 57.",
+  "why": "minor: The sentence ends with a comma instead of a full stop."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 3,
+  "lang": "en",
+  "anchor": "1-sonli talabalar turar joyi —",
+  "old": "57 S. Akhmad Street,",
+  "new": "57 S. Akhmad Street.",
+  "why": "minor: The sentence ends with a comma instead of a full stop."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 5,
+  "lang": "en",
+  "anchor": "2-sonli talabalar turar joyi —",
+  "old": "Student Hostel №. 2",
+  "new": "Student Hostel No. 2",
+  "why": "minor: \"№.\" is not a valid abbreviation."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 9,
+  "lang": "ru",
+  "anchor": "1 nafar — Amerika Qoʻshma Shta",
+  "old": "В институте действуют 2 студенческих общежития на 500 мест.",
+  "new": "1 — Соединённые Штаты Америки,",
+  "why": "wrong: Shifted text: the block repeats the dormitory count instead of the USA line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 11,
+  "lang": "en",
+  "anchor": "2 nafar — Rossiya Federatsiyas",
+  "old": "These dormitories accommodate both local and international students. Currently, residents include:",
+  "new": "2 — Russian Federation,",
+  "why": "wrong: Shifted text: the block holds an intro sentence instead of the Russian Federation line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 13,
+  "lang": "ru",
+  "anchor": "70 nafar — Pokiston Islom Resp",
+  "old": "1 студент из США,; 1 — из Нигерии,; 2 — из Российской Федерации,; 5 — из Республики Таджикистан,; 70 — из Исламской Республики Пакистан,; 26 — из Республики Индия,; 1 — из Афганистана,; 28 — из Кыргызской Республики.",
+  "new": "70 — Исламская Республика Пакистан,",
+  "why": "wrong: The block holds the whole country list instead of the Pakistan line (duplicates the other blocks)."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 13,
+  "lang": "en",
+  "anchor": "70 nafar — Pokiston Islom Resp",
+  "old": "1 student from the United States of America,; 1 from Nigeria,; 2 from the Russian Federation,; 5 from the Republic of Tajikistan,; 70 from the Islamic Republic of Pakistan,; 26 from the Republic of India,; 1 from Afghanistan, and; 28 from the Kyrgyz Republic.",
+  "new": "70 — Islamic Republic of Pakistan,",
+  "why": "wrong: The block holds the whole country list instead of the Pakistan line (duplicates the other blocks)."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 14,
+  "lang": "ru",
+  "anchor": "26 nafar — Hindiston Respublik",
+  "old": "Кроме того, все необходимые условия созданы для врачей, прибывающих из соседних областей для повышения квалификации. Все общежития приведены в соответствие с современными санитарно-бытовыми и техническими требованиями.",
+  "new": "26 — Республика Индия,",
+  "why": "wrong: Shifted text about doctors and sanitary standards instead of the India line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 14,
+  "lang": "en",
+  "anchor": "26 nafar — Hindiston Respublik",
+  "old": "All necessary living conditions have been created for these students, as well as for doctors from neighboring regions who come for advanced training. The dormitories fully meet modern housing and educational standards.",
+  "new": "26 — Republic of India,",
+  "why": "wrong: Shifted text about doctors and standards instead of the India line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "1 nafar — Afgʻoniston,",
+  "old": "В общежитиях организованы филиалы библиотеки института, фонд которых насчитывает более 1000 учебных и научных изданий. Все проживающие студенты являются членами этих библиотек.",
+  "new": "1 — Афганистан,",
+  "why": "wrong: Shifted library text instead of the Afghanistan line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 15,
+  "lang": "en",
+  "anchor": "1 nafar — Afgʻoniston,",
+  "old": "Each dormitory has a branch of the institute library, equipped with over 1,000 academic and reference books. All residents are registered members of these libraries.",
+  "new": "1 — Afghanistan,",
+  "why": "wrong: Shifted library text instead of the Afghanistan line."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Talabalar turar joylari zamona",
+  "old": "В общежитиях созданы комфортные условия для проживания и отдыха студентов.",
+  "new": "Студенческие общежития отремонтированы в соответствии с современными требованиями и оснащены всеми удобствами.",
+  "why": "wrong: The first sentence does not render the renovation/amenities statement."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 17,
+  "lang": "en",
+  "anchor": "Talabalar turar joylari zamona",
+  "old": "The “Spirituality and Enlightenment” rooms in the dormitories are well-furnished with soft and hard furniture, decorated with carpets, and designed to promote students’ intellectual and moral development.",
+  "new": "The student dormitories have been renovated to modern standards and are equipped with all amenities. The “Spirituality and Enlightenment” rooms are furnished with soft and hard furniture and carpets and equipped with modern technical equipment.",
+  "why": "wrong: The first sentence and the modern equipment are missing; the moral-development purpose is invented."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 18,
+  "lang": "ru",
+  "anchor": "Har bir turar joyda institut k",
+  "old": "Для культурного досуга студентов на каждом этаже установлены телевизоры, а комнаты полностью оборудованы новой мягкой мебелью.",
+  "new": "В каждом общежитии организованы филиалы библиотеки института, фонд которых насчитывает более 1000 единиц научной и учебной литературы. Все студенты, проживающие в общежитии, являются читателями этих библиотек.",
+  "why": "wrong: Shifted text: the block speaks of TVs and furniture instead of the libraries."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 18,
+  "lang": "en",
+  "anchor": "Har bir turar joyda institut k",
+  "old": "For cultural and recreational activities, televisions are installed on every floor, and all rooms are furnished with new, comfortable furniture.",
+  "new": "Each dormitory has branches of the institute library with more than 1,000 scientific and educational publications. All students living in the dormitory are members of these libraries.",
+  "why": "wrong: Shifted text: the block speaks of TVs and furniture instead of the libraries."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 19,
+  "lang": "ru",
+  "anchor": "Madaniy hordiq uchun har bir q",
+  "old": "На всех этажах имеются ванные комнаты, обеспеченные горячей водой.",
+  "new": "Для культурного досуга на каждом этаже установлены телевизоры, а все комнаты оборудованы новой мягкой мебелью.",
+  "why": "wrong: Shifted text: the block speaks of bathrooms instead of TVs and furniture."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 19,
+  "lang": "en",
+  "anchor": "Madaniy hordiq uchun har bir q",
+  "old": "Each floor has bathrooms with a hot water supply, and the buildings are equipped with modern heating systems to ensure consistent warmth.",
+  "new": "For cultural leisure, televisions are installed on every floor, and all rooms are furnished with new upholstered furniture.",
+  "why": "wrong: Shifted text: the block speaks of bathrooms and heating instead of TVs and furniture."
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Talabalar uchun barcha qavatla",
+  "old": "Для поддержания комфортного микроклимата функционируют современные системы отопления.",
+  "new": "На всех этажах для студентов имеются умывальные комнаты, обеспеченные горячей водой. В зданиях установлены современные системы отопления, которые позволяют поддерживать комфортную температуру круглый год.",
+  "why": "missing: The washrooms with hot water and \"all year round\" are missing."
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Magistraturaga qabul 1-iyuldan",
+  "old": "Начиная с 1-июля начался онлайн приём в магистратуру.",
+  "new": "Онлайн-приём в магистратуру начинается с 1 июля",
+  "why": "minor: \"с 1-июля\" is an Uzbek-style date, the tense is wrong (начался vs boshlanadi) and the heading ends with a stray full stop."
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Hujjatlar [my.edu.uz](https://",
+  "old": "Вступительные экзамены пройдёт",
+  "new": "Вступительные экзамены пройдут",
+  "why": "minor: Subject-verb agreement error."
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Magistraturaga kirishda abitur",
+  "old": "At the entrance to the master",
+  "new": "When applying to the master",
+  "why": "minor: \"At the entrance to\" is a literal mistranslation (means a doorway)."
+ },
+ {
+  "slug": "magistratura-qabul-hujjatlari-toplami",
+  "order": 5,
+  "lang": "en",
+  "anchor": "magistratura mutaxassisligi ko",
+  "old": "3.5 x 4.5 in size",
+  "new": "3.5 x 4.5 cm in size",
+  "why": "wrong: Without a unit an English reader understands inches; the photo size is in cm."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "в Ферганский медицинский институт общественного здоровья",
+  "new": "в Ферганском медицинском институте общественного здоровья",
+  "why": "minor: Wrong case (accusative instead of prepositional)."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Defending a master's thesis at the Ferghana Medical Institute of Public Health.",
+  "new": "Defence of master's theses at the Fergana Medical Institute of Public Health",
+  "why": "minor: \"Ferghana\" spelling differs from the institute name used site-wide; a heading needs no full stop."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Dastlabki himoyaga boshqa kafe",
+  "old": "are invited for preliminary protection",
+  "new": "may be invited to the preliminary defence",
+  "why": "terminology: \"himoya\" here means a thesis defence, not \"protection\"."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Ilmiy konsultantdan dastlab hi",
+  "old": "A scientific consultant is required to concluded a master's thesis.",
+  "new": "Before the preliminary defence, the scientific consultant's conclusion on the master's thesis is required.",
+  "why": "wrong: Ungrammatical, and the meaning is lost."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Magistratura talabalarida dast",
+  "old": "Before initial defense, master's students require two articles or theses on the topic of internal and external review, the opinion of a supervisor, and scientific work.",
+  "new": "Before the preliminary defence, master's students must have internal and external reviews, the supervisor's opinion, and two articles or theses on the topic of their research.",
+  "why": "wrong: The word order garbles the meaning (\"articles on the topic of internal review\")."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 7,
+  "lang": "ru",
+  "anchor": "Dastlabki himoyaning xulosasi ",
+  "old": "протоколом кафедр",
+  "new": "протоколом заседания кафедры",
+  "why": "minor: \"кафедр\" (genitive plural) is a grammar error."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 7,
+  "lang": "en",
+  "anchor": "Dastlabki himoyaning xulosasi ",
+  "old": "The conclusion of preliminary protection is drawn up by the protocol at the department.",
+  "new": "The conclusion of the preliminary defence is recorded in the minutes of the department meeting.",
+  "why": "terminology: \"preliminary protection\" and \"drawn up by the protocol\" are mistranslations."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Ichki va tashqi taqriz beruvch",
+  "old": "Internal and external reviewers are invited to the relevant departments of the magistracy of a higher educational institution, the list of which is approved by the deputy rector for scientific work.",
+  "new": "Internal and external reviewers are proposed by the departments of the higher education institution relevant to the master's specialty, and their list is approved by the vice-rector for scientific work.",
+  "why": "wrong: Says that reviewers are \"invited to the departments of the magistracy\", which is nonsense."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Taqrizchining majburiyatiga ki",
+  "old": "repeat offender",
+  "new": "reviewer",
+  "why": "wrong: \"Taqrizchi\" means reviewer; \"repeat offender\" is an absurd mistranslation."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 11,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishi himoyasi",
+  "old": "The date of protection of the master's scientific work is drawn up by a schedule",
+  "new": "The date of the defence of the master's thesis is set according to a schedule",
+  "why": "terminology: \"protection\" means defence here; \"drawn up by a schedule\" is a mistranslation."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Magistrlik ilmiy ishi rasmiy h",
+  "old": "представление заключения по актуальности, научной новизне и завершенности магистерской диссертации;",
+  "new": "Официальная защита магистерской научной работы проводится Государственной итоговой аттестационной комиссией высшего образовательного учреждения.",
+  "why": "wrong: Shifted text: a reviewer duty instead of who conducts the official defence."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 12,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishi rasmiy h",
+  "old": "Master's scientific work is carried out by the state final attestation commission of a higher educational institution.",
+  "new": "The official defence of the master's thesis is conducted by the State Final Attestation Commission of the higher education institution.",
+  "why": "wrong: Says that the thesis \"is carried out\" by the commission; \"official defence\" is missing."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 13,
+  "lang": "ru",
+  "anchor": "Magistratura talabalari magist",
+  "old": "представление рецензии не менее чем за 3 дня до предварительной защиты;",
+  "new": "Магистранты должны представить материалы защиты магистерской научной работы в виде презентации продолжительностью не более 20 минут.",
+  "why": "wrong: Shifted text: a reviewer duty instead of the 20-minute presentation rule."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 13,
+  "lang": "en",
+  "anchor": "Magistratura talabalari magist",
+  "old": "Master's students should demonstrate the protective materials of the master's scientific work at the presentation exhibition, and the time should not exceed 20 minutes.",
+  "new": "Master's students must present the materials of their thesis defence as a presentation lasting no more than 20 minutes.",
+  "why": "wrong: \"protective materials ... at the presentation exhibition\" is a mistranslation."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 14,
+  "lang": "ru",
+  "anchor": "Rasmiy himoyada komissiya aʻzo",
+  "old": "указание в рецензии, в случае выявления, о нарушениях правил профессиональной этики (плагиат, фальсификация данных, изложение ложных цитат и другие).",
+  "new": "На официальной защите члены комиссии оценивают магистрантов по следующим критериям:",
+  "why": "wrong: Shifted text: a reviewer duty instead of the lead-in to the assessment criteria."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 14,
+  "lang": "en",
+  "anchor": "Rasmiy himoyada komissiya aʻzo",
+  "old": "Members of the Official Protection Commission consider graduate students based on the following criteria:",
+  "new": "At the official defence, the members of the commission assess master's students according to the following criteria:",
+  "why": "wrong: \"Official Protection Commission consider graduate students\" is wrong."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 15,
+  "lang": "ru",
+  "anchor": "Magistrlik ilmiy ishining mavz",
+  "old": "Самостоятельная проверка магистрантами своей работы",
+  "new": "Самостоятельное проведение исследования магистрантами",
+  "why": "wrong: \"tekshirish\" here means research, as in the later items, not checking one's own work."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining mavz",
+  "old": "Self-examination of master's students",
+  "new": "Independent research by master's students",
+  "why": "wrong: \"tekshirish\" here means research."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining mavz",
+  "old": "verification methods",
+  "new": "research methods",
+  "why": "terminology: \"tekshirish usullari\" means research methods (ru: методы исследования)."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 15,
+  "lang": "en",
+  "anchor": "Magistrlik ilmiy ishining mavz",
+  "old": "prospects of inspections carried out",
+  "new": "prospects of the research carried out",
+  "why": "terminology: \"tekshirishlar\" means research, not inspections."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "Magistratura talabasi qonikars",
+  "old": "В случаях несоответствия магистерской диссертации установленным требованиям, выявления нарушения студентом магистратуры правил профессиональной этики (плагиат, фальсификация данных, а также изложение ложных цитат и другие), а также при невозможности исправления их в кратчайшие сроки рецензент дает заключение о нецелесообразности допущения магистерской диссертации к защите.",
+  "new": "Если магистрант получил неудовлетворительную оценку или его магистерская научная работа не была допущена к официальной защите, он имеет право повторно представить работу к защите в течение последующих 3 лет.",
+  "why": "wrong: Shifted text: the reviewer's refusal clause instead of the right to resubmit within 3 years."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 16,
+  "lang": "en",
+  "anchor": "Magistratura talabasi qonikars",
+  "old": "A master's student is eligible for protection for the last 3 years with an unsatisfactory evaluation or unofficial protection of a master's scientific work.",
+  "new": "If a master's student receives an unsatisfactory mark or the master's thesis is not admitted to the official defence, the student has the right to submit the thesis for defence again within the following 3 years.",
+  "why": "wrong: Gibberish (\"eligible for protection\", \"unofficial protection\")."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Magistrlik ilimiy ishlar rasmi",
+  "old": "Дата официальной защиты магистерской диссертации определяется на основе графика, утвержденного приказом ректора (директора) высшего образовательного учреждения.",
+  "new": "Результаты официальной защиты магистерских научных работ обсуждаются на Учёном совете высшего образовательного учреждения.",
+  "why": "wrong: Shifted text: the defence date instead of the discussion at the Academic Council."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 17,
+  "lang": "en",
+  "anchor": "Magistrlik ilimiy ishlar rasmi",
+  "old": "The results of the master's scientific work will be discussed at the academic council of a higher educational institution.",
+  "new": "The results of the official defence of master's theses are discussed at the Academic Council of the higher education institution.",
+  "why": "missing: \"official defence\" is missing (it is the results of the defence that are discussed)."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 18,
+  "lang": "ru",
+  "anchor": "Oliy taʻlim muassasasida himoy",
+  "old": "Официальная защита магистерской диссертации проводится Государственной итоговой аттестационной комиссией высшего образовательного учреждения (далее — Комиссия).",
+  "new": "Магистерские научные работы, защищённые в высшем образовательном учреждении, хранятся в течение 3 лет.",
+  "why": "wrong: Shifted text: who conducts the defence instead of the 3-year storage rule."
+ },
+ {
+  "slug": "magistrlik-dissertatsiyasi-himoyasi",
+  "order": 18,
+  "lang": "en",
+  "anchor": "Oliy taʻlim muassasasida himoy",
+  "old": "Master's scientific works stored in a higher educational institution are stored for 3 years",
+  "new": "Master's theses defended at the higher education institution are kept for 3 years.",
+  "why": "minor: \"works stored ... are stored\" is a garbled rendering of \"defended\"; the full stop is missing."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "2-Fargʻona tibbiyot kolleji Oʻ",
+  "old": "Ферганский медицинский училище по основание № 874 от 16 июля 1982 года Министерством здравоохранения Республики Узбекистана был открыт как филиал Маргиланского медицинского училище. В соответствии с Постановлением Кабинета Министра Республики Узбекистан от 9 сентября 1983 года № 552, № 692 от 29 мая 1983 года Министерством здравоохранения Республики Узбекистан была преобразована в Ферганский медицинский училище.Кабинет Министров Республики Узбекистан 2001 в соответствии с указом No 338 от 14 августа и Приказом Центра среднего специального или профессионального образования Республики Узбекистан от 30 ноября 2002 года No 327 присвоен статус 2-го Ферганского медицинского колледжа. В соответствии с Распоряжением Президента Республики Узбекистан от 6 сентября 2019 года No ПФ-5812 «О дополнительных мерах по совершенствованию системы профессионального образования» преобразован в колледж, осуществляющий подготовку квалификаций для получения среднего профессионального образования. Главный учебный корпус колледжа состоит из трехэтажного комплексного здания, которое соединено с двухэтажным зданием, проектной вместимостью 1 200 мест, при реальном количестве посадочных мест 1 350. Кроме того, есть двухэтажное административное здание и студенческое общежитие на 100 мест, кухня на 60 мест, актовый зал на 200 мест и тренажерный зал площадью 162 м.кв. а также спортивные сооружения на открытом воздухе. Колледж располагает 42 теоретическими, 31 практическим учебным кабинетом и оснащен современным медицинским оборудованием. Подписаны соглашения о сотрудничестве с 31 медицинским учреждением города Фарго и провинции в целях подготовки квалифицированных кадров и организации практических семинаров, а также налажена эффективная работа. Расположение: дом 65-А на улице С.Темура вгорода Фергани. Вместимость проекта составляет 1200 мест. В настоящее время во 2-й Ферганской области здравоохранения имени Абу Али ибн Сино обучается 676 студентов. В техникуме работают 4 направления: сестринское дело, фельдшерская работа, стоматология, медико-социальная работа.",
+  "new": "2-й Ферганский медицинский колледж был открыт как филиал Маргиланского медицинского училища на основании приказа Министерства здравоохранения Республики Узбекистан № 874 от 16 июля 1982 года. На основании постановления Совета Министров Республики Узбекистан № 552 от 9 сентября 1983 года и приказа Министерства здравоохранения Республики Узбекистан № 692 от 29 мая 1983 года он был преобразован в самостоятельное Ферганское городское медицинское училище. На основании постановления Кабинета Министров Республики Узбекистан № 338 от 14 августа 2001 года и приказа Центра среднего специального, профессионального образования Республики Узбекистан № 327 от 30 ноября 2002 года ему присвоен статус 2-го Ферганского медицинского колледжа. В соответствии с Указом Президента Республики Узбекистан от 6 сентября 2019 года № ПФ-5812 «О дополнительных мерах по дальнейшему совершенствованию системы профессионального образования» он преобразован в колледж, готовящий кадры на ступени среднего профессионального образования. Главный учебный корпус колледжа — трёхэтажное комплексное здание, соединённое с двухэтажным примыкающим зданием; проектная вместимость — 1200 мест, фактическое количество мест — 1350. Кроме того, имеются двухэтажное административное здание, общежитие для учащихся на 100 мест, столовая на 60 мест, актовый зал на 200 мест, спортивный зал площадью 162 м² и открытые спортивные сооружения. В колледже 42 теоретических и 31 практический учебный кабинет, оснащённые современным медицинским оборудованием. С 31 лечебно-профилактическим учреждением города Ферганы и области подписаны договоры о сотрудничестве по подготовке квалифицированных кадров и качественной организации практических занятий, налажена эффективная работа. Адрес: г. Фергана, ул. С. Темура, дом 65-А. Проектная вместимость — 1200 мест. В настоящее время во 2-м Ферганском техникуме общественного здоровья имени Абу Али ибн Сино обучаются 676 учащихся. Техникум ведёт подготовку по 4 направлениям: сестринское дело, фельдшерское дело, стоматология, медико-социальная работа.",
+  "why": "wrong: Machine translation full of errors: \"2-\" is missing from the name, \"Кабинета Министра\" (the uz says Ministrlar Soveti), \"Распоряжением\" for Farmon, \"город Фарго\", \"Фергани\", \"во 2-й Ферганской области здравоохранения\", \"кухня\" for canteen, \"тренажерный зал\" for sports hall, and gender agreement errors."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "2-Fargʻona tibbiyot kolleji Oʻ",
+  "old": "Fergana Medical College №874 of July 16, 1982, by the Ministry of Health of the Republic of Uzbekistan, was opened as a branch of the Margillan Medical Academy. In accordance with the Decree of the Cabinet of Ministers of the Republic of Uzbekistan dated September 9, 1983, No. 552, and No. 692 of May 29, 1983, by the Ministry of Health of the Republic of Uzbekistan, Independent Fergana was transformed into an independent medical school. Cabinet of Ministers of the Republic of Uzbekistan, 2001 In accordance with the Degree of August 14, 2002, №. 338, and the Order of the Center for Secondary Special and Professional Education of the Republic of Uzbekistan, dated November 30, 2002, No. 327, the status of Fergana Medical College No. 2 was granted. In accordance with the PD-5812 Order of the President of the Republic of Uzbekistan on September 6, 2019, on \"Additional measures to improve the professional education system,\" it has been transformed into a college that prepares qualifications for secondary professional education. The main educational building of the college consists of a three-story complex building, which is connected to a two-story building, with a project capacity of 1,200 seats, with a real number of seats of 1,350. Additionally, there is a two-story administrative building and a 100-seat student residence, a 60-seat kitchen, a 200-seat assembly hall, a gym with 162 m², and outdoor sports facilities. The college has 42 theoretical and 31 practical training rooms and is equipped with modern medical equipment. Cooperation agreements have been signed with 31 healthcare facilities in the City of Fergana and the province to prepare qualified personnel and to organize practical workshops, and effective work has been conducted. Location: 65-A House on S. Temur Street in Fergana. The capacity for the project is 1200 seats. Currently, there are 676 students enrolled in the 2nd Fergana public health technique named after Abu Ali ibn Sino. Texnikum operates in 4 directions: nursing, Feldsher Work Direction, dentistry, and medical social work.",
+  "new": "Fergana Medical College No. 2 was opened as a branch of the Margilan Medical School under Order No. 874 of the Ministry of Health of the Republic of Uzbekistan of 16 July 1982. Under Resolution No. 552 of the Council of Ministers of the Republic of Uzbekistan of 9 September 1983 and Order No. 692 of the Ministry of Health of the Republic of Uzbekistan of 29 May 1983, it was transformed into the independent Fergana City Medical School. Under Resolution No. 338 of the Cabinet of Ministers of the Republic of Uzbekistan of 14 August 2001 and Order No. 327 of the Centre for Secondary Specialised and Vocational Education of the Republic of Uzbekistan of 30 November 2002, it was granted the status of Fergana Medical College No. 2. Under Decree No. PF-5812 of the President of the Republic of Uzbekistan of 6 September 2019 “On additional measures to further improve the vocational education system”, it was transformed into a college training personnel at the level of secondary vocational education. The main academic building of the college is a three-storey complex connected to a two-storey adjoining building, with a design capacity of 1,200 places and an actual capacity of 1,350 places. There are also a two-storey administrative building, a 100-place student dormitory, a 60-seat canteen, a 200-seat assembly hall, a 162 m² sports hall and outdoor sports facilities. The college has 42 theory classrooms and 31 practical training rooms equipped with modern medical equipment. Cooperation agreements on training qualified personnel and organising high-quality practical classes have been signed with 31 treatment and prevention institutions in Fergana city and the region, and this work is running effectively. Address: 65-A S. Temur Street, Fergana city. Design capacity: 1,200 places. At present, 676 students study at the Fergana Abu Ali ibn Sino Public Health Technical College No. 2. The technical college trains students in 4 fields: Nursing, Feldsher (Paramedic) Practice, Dentistry and Medical Social Work.",
+  "why": "wrong: Machine translation with factual errors: \"Degree of August 14, 2002\" (should be 2001), \"Medical College №874\" (874 is the order number), \"Margillan Medical Academy\", \"Independent Fergana was transformed\", \"public health technique\", and \"Texnikum\" left untranslated."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "Квалификация кхарактеристики",
+  "new": "Квалификационная характеристика",
+  "why": "minor: Garbled words."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "Уровень образования в стране",
+  "new": "Государственный образовательный стандарт",
+  "why": "wrong: \"Davlat taʻlim standarti\" means the State educational standard."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "The country's standard of education",
+  "new": "State educational standard",
+  "why": "wrong: \"Davlat taʻlim standarti\" means the State educational standard."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "Примерная учебная программа",
+  "new": "Типовая учебная программа",
+  "why": "terminology: \"Namunaviy\" in curriculum terminology is \"типовая\"."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "Sample curriculum",
+  "new": "Model curriculum",
+  "why": "terminology: \"Namunaviy\" in curriculum terminology is \"model/standard\"."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "ключевая технология и проекционный метод",
+  "new": "кейс-технология и метод проектов",
+  "why": "wrong: \"keys\" means case (case method), and \"proekt usuli\" is the project method, not projection."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Kvalifikatsion xarakteristika;",
+  "old": "key technology, and projection method",
+  "new": "case technology and the project method",
+  "why": "wrong: \"keys\" means case (case method), and \"proekt usuli\" is the project method, not projection."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 7,
+  "lang": "ru",
+  "anchor": "Texnikumda barcha kompyuterlar",
+  "old": "В моей технике все компьютеры подключены к интернету, есть несколько Wi-fi зоанов. Есть видео, презентации, мультимедийные программы, лекции и практические мастер-классы, связанные с темой, набор учебных материалов по всем направлениям на основе Учебного плана.",
+  "new": "В техникуме все компьютеры подключены к интернету, имеется несколько зон Wi-Fi. Имеются тематические видеофильмы, презентации, мультимедийные программы, лекционные и практические занятия, а также комплекты учебных материалов по всем направлениям в соответствии с учебной программой.",
+  "why": "wrong: \"В моей технике\" (\"in my technique\") and \"зоанов\" are nonsense."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 7,
+  "lang": "en",
+  "anchor": "Texnikumda barcha kompyuterlar",
+  "old": "In my technique, all computers are connected to the Internet, and there are several Wi-Fi zones. There are videos, presentations, multimedia programs, lectures, and practical workshops related to the topic, a set of educational materials for all directions based on the curriculum.",
+  "new": "At the technical college, all computers are connected to the Internet, and there are several Wi-Fi zones. Topic-related video films, presentations, multimedia programs, lectures and practical classes are available, as well as sets of educational materials for all fields according to the curriculum.",
+  "why": "wrong: \"In my technique\" is nonsense (texnikum = technical college)."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 8,
+  "lang": "ru",
+  "anchor": "Texnikum kutubxonasi:",
+  "old": "Библиотек техникума:",
+  "new": "Библиотека техникума:",
+  "why": "minor: Spelling error (\"Библиотек\")."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Texnikum kutubxonasi:",
+  "old": "Technical Library:",
+  "new": "Library of the technical college:",
+  "why": "wrong: \"Technical Library\" changes the meaning (the uz says the technical college's library)."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 9,
+  "lang": "ru",
+  "anchor": "Kutubxonada ingliz, oʻzbek va ",
+  "old": "учебники, атласы, учебники, учебники и так далее",
+  "new": "учебники, атласы, учебные пособия, учебно-методические пособия и другие материалы",
+  "why": "wrong: \"учебники\" is repeated three times; the study guides and methodological manuals are lost."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 9,
+  "lang": "en",
+  "anchor": "Kutubxonada ingliz, oʻzbek va ",
+  "old": "textbooks, atlases, textbooks, and so on",
+  "new": "textbooks, atlases, study guides, teaching and methodological manuals and other materials",
+  "why": "wrong: \"textbooks\" is repeated; the study guides and methodological manuals are lost."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 11,
+  "lang": "ru",
+  "anchor": "Mamlakatimizda maʻnaviy-maʻrif",
+  "old": "Особый акцент делается на систематическую организацию духовно-просветительской деятельности в нашей стране, повышение эффективности принимаемых в этой связи мер, улучшение интеллектуального самочувствия, ментального мышления и обыденности населения, особенно молодежи, укрепление их идеологического иммунитета, воспитание совершенного поколения людей с чувством патриотизма, любви и верности народу. Планомерная работа ведется также во 2-й Ферганской общественного здравоохранения имени Абу Али ибн Сино. В учебном заведении состоялась дискуссия на тему «Узбекский язык – духовное достояние узбекского народа» в связи с 33-й годовщиной присвоения узбекскому языку государственного языка Проведены. На мероприятии инспектор по техническому внутреннему надзору Е.Муйдинов специально прервал историю узбекского языка: Язык является средством общения между людьми и является благословением, которое творец дал людям. Благородство и бесценное богатство любого народа являются его родным языком. Фотодоски с круглого стола на тему «Узбекский язык – духовное достояние узбекского народа»",
+  "new": "В нашей стране особое внимание уделяется системной организации духовно-просветительской работы, повышению эффективности принимаемых в этой сфере мер, повышению интеллектуального потенциала, сознания, мышления и мировоззрения населения, особенно молодёжи, укреплению их идейного иммунитета, воспитанию гармонично развитого поколения, живущего с чувством патриотизма, любви и преданности народу. В частности, системная работа в этом направлении ведётся и во 2-м Ферганском техникуме общественного здоровья имени Абу Али ибн Сино. В связи с 33-летием предоставления узбекскому языку статуса государственного языка в учебном заведении проведён круглый стол на тему «Узбекский язык — духовное достояние узбекского народа». На мероприятии инспектор внутреннего контроля техникума Э. Муйдинов особо остановился на истории узбекского языка: язык — средство общения людей и дар, данный людям Творцом. Гордость и бесценное богатство любого народа — его родной язык.",
+  "why": "wrong: Machine translation with absurd errors: \"прервал историю\" (interrupted history) for \"dwelt on\", \"инспектор по техническому надзору\", \"обыденности\", the institution name, the truncated \"государственного языка Проведены\", and an added photo caption."
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 11,
+  "lang": "en",
+  "anchor": "Mamlakatimizda maʻnaviy-maʻrif",
+  "old": "There is a special emphasis on systematically organizing spiritual and educational activities in our country, improving the efficiency of the measures taken in this regard, improving the intellectual well-being, thinking, and worldliness of the population, especially young people, strengthening their intellectual immunity, and raising a perfect generation of people with a sense of patriotism, love, and loyalty to the people. Systematic work is also being done in the 2nd Fergana public health technique, named after Abu Ali ibn Sino. A discussion on \"Uzbek is the spiritual property of the Uzbek people\" in connection with the 33rd anniversary of the granting of \"Official Language to the Uzbek Language\" at the educational institution was conducted. At the event, Technical Internal Oversight Inspector E. Mo'ydinov specifically interrupted the history of the Uzbek language:Language is a means of communication between people and is a blessing that the Creator has given to people. The nobleness and invaluable wealth of any nation are its native language. Photo boards from a roundtable on \"Uzbek is the spiritual property of the Uzbek people.\"",
+  "new": "In our country, special attention is paid to the systematic organisation of spiritual and educational work, to increasing the effectiveness of the measures taken in this area, to raising the intellectual potential, consciousness, thinking and worldview of the population, especially young people, to strengthening their ideological immunity, and to bringing up a harmoniously developed generation living with a sense of patriotism, love and devotion to the people. In particular, systematic work in this direction is also being carried out at the Fergana Abu Ali ibn Sino Public Health Technical College No. 2. On the occasion of the 33rd anniversary of granting the Uzbek language the status of the state language, a round table on the theme “The Uzbek language is the spiritual property of the Uzbek people” was held at the institution. At the event, the technical college’s internal control inspector E. Muydinov dwelt in particular on the history of the Uzbek language: language is a means of communication between people and a blessing given to people by the Creator. The pride and priceless wealth of any nation is its native language.",
+  "why": "wrong: Errors: \"specifically interrupted the history\", \"Technical Internal Oversight Inspector\", \"public health technique\", \"worldliness\", and an added photo caption."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Institutimizda talaba yoshlarn",
+  "old": "о “Дне карьеры”, проведенном 30 марта текущего года в Ферганском медицинском институте общественного здравоохранения под руководством областного хокимията, областного управления занятости, областного управления здравоохранения в целях трудоустройства студенческой молодежи",
+  "new": "В целях трудоустройства студенческой молодёжи 30 марта текущего года в нашем институте под руководством областного хокимията, областного управления по труду и занятости и областного управления здравоохранения прошёл «День карьеры».",
+  "why": "wrong: The text is a lowercase report title fragment (\"о «Дне карьеры»…\") with the wrong institute name (\"общественного здравоохранения\")."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Institutimizda talaba yoshlarn",
+  "old": "INFORMATION about the Career Day held on March 30 of this year under the leadership of the regional government, the regional labor and employment department, and the regional health department to employ students at the Fergana Public Health Medical Institute.",
+  "new": "On 30 March this year, a “Career Day” was held at our institute under the leadership of the regional khokimiyat, the regional department of labour and employment and the regional health department, with the aim of employing students.",
+  "why": "wrong: The text is a report title (\"INFORMATION about…\") with the wrong institute name (\"Fergana Public Health Medical Institute\")."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Mazkur yarmarkada viloya xokim",
+  "old": "В целях трудоустройства студенческой молодежи в нашем институте под руководством областного хокимията, областного управления занятости, областного управления здравоохранения 30 марта 2022 года состоялся “День карьеры”.",
+  "new": "В этой ярмарке участвовали ответственный сотрудник областного хокимията М. Мусажонов, ответственный сотрудник областного управления занятости Л. Мирзакаримова, начальник отдела кадров областного управления здравоохранения Ш. Толипов. В ярмарке вакансий приняли участие более 30 предприятий, организаций и медицинских учреждений с 250 вакансиями. В частности, Риштанское районное медицинское объединение приняло участие в ярмарке с 25 вакансиями, Ферганское районное медицинское объединение — с 52, Язъяванское районное медицинское объединение — с 37, предприятия и организации Ташлакского района — со 120 вакантными местами. На ярмарке прошли открытые диалоги работодателей непосредственно со студентами. В ходе общения состоялся обмен мнениями о правах работодателя и работников по трудовому законодательству и о порядке оформления документов, необходимых при трудоустройстве. После этого начальник отдела кадров Ферганского областного управления здравоохранения Ш. Толипов подробно проинформировал выпускников об имеющихся вакансиях в системе здравоохранения области. В свою очередь, студенты получили развёрнутые ответы на интересующие их вопросы. Работодатели также предоставили информацию о вакансиях, подробно ознакомив студентов с каждой возлагаемой обязанностью, условиями трудового договора и заработной платой.",
+  "why": "wrong: Shifted text: the block repeats block 1 (with an added year, 2022) instead of the fair details, which sit in block 3."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Mazkur yarmarkada viloya xokim",
+  "old": "\"Career Day\" was held on March 30 of this year under the leadership of the regional administration, the regional labor and employment department, and the regional health department to employ young students in our institute. Over 30 enterprises, organizations, and medical institutions with 250 vacancies participated in the Career Day. In particular, 25 Rishton District Medical Associations, 52 Fergana District Medical Associations, 37 Yozyovon District Medical Associations, and 120 vacancies of enterprises and organizations operating in Toshloq district participated. On this \"Career Day\" open dialogues were held directly with employers and students. Employers and employees in labor legislation during the dialogue rights, the procedure for issuing documents required for employment opinions were exchanged. After that, the head of the personnel department of the Fergana regional health department Sh. Tolipov gave detailed information to the graduates about the available vacancies in the regional healthcare system. In turn, the students received detailed answers to their questions. Also, the employers provided information about the vacant positions and fully familiarized the students with each assigned task, agreements in the employment contract, and monthly salaries.",
+  "new": "The fair was attended by M. Musajonov, responsible officer of the regional khokimiyat, L. Mirzakarimova, responsible officer of the regional employment department, and Sh. Tolipov, head of the personnel department of the regional health department. More than 30 enterprises, organisations and medical institutions took part in the job fair with 250 vacancies. In particular, the Rishton District Medical Association took part with 25 vacancies, the Fergana District Medical Association with 52, the Yozyovon District Medical Association with 37, and enterprises and organisations operating in Toshloq district with 120 vacancies. At the job fair, open dialogues were held directly between employers and students. During the dialogue, views were exchanged on the rights of employers and employees under labour legislation and on the procedure for preparing the documents required for employment. After that, Sh. Tolipov, head of the personnel department of the Fergana regional health department, gave the graduates detailed information about the vacancies available in the regional healthcare system. In turn, the students received comprehensive answers to their questions. The employers also provided information about the vacancies and fully familiarised the students with each assigned duty, the terms of the employment contract and the monthly salaries.",
+  "why": "wrong: The participants sentence is missing; \"25 Rishton District Medical Associations\" turns vacancy counts into numbers of associations; the labour-law sentence is garbled; block 1 is duplicated."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "“Talaba ishga joylashadi” shio",
+  "old": "На этой ярмарке участвовали ответственный сотрудник областного хокимията М.Мусаджонов, ответственный сотрудник областного управления занятости Л.Мирзакаримова, начальник отдела кадров областного управления здравоохранения Ш.Толипов. В трудовой ярмарке приняли участие более 30 предприятий, организаций и медицинских учреждений с 250 вакансиями. В частности, Риштанское районное медицинское объединение приняло участие в ярмарке труда с 25, Ферганское районное медицинское объединение-с 52, Язяванское районное медицинское объединение-с 37, Ташлакское районное предприятие и организации-с 120 вакантными местами. На этой трудовой ярмарке проводились открытые диалоги непосредственно с работодателями и студентами. В ходе общения состоялся обмен мнениями о правах работодателя и работников в трудовом законодательстве, порядке оформления документов, необходимых в процессе трудоустройства. После этого начальник отдела кадров Ферганского областного управления здравоохранения Ш.Толипов подробно проинформировал выпускников о имеющихся вакансиях в системе здравоохранения области. В свою очередь, учащиеся получили развернутые ответы на интересующие их вопросы. Работодатели также предоставили информацию о вакансиях, полностью ознакомив студентов с каждой возложенной на них задачей, соглашениями в трудовом договоре, заработной платой. Прилагаются кадры с ярмарки труда, проводимой под девизом «Студент устраивается на работу».",
+  "new": "Кадры с ярмарки вакансий, проведённой под девизом «Студент трудоустраивается».",
+  "why": "wrong: Shifted text: the whole fair report is here instead of the photo caption."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Oliygohimizda \"Talaba ishga jo",
+  "old": "state and private institutions operating in the regional health system, hospitals, clinics, families the heads of medical polyclinics participated with their vacancies.",
+  "new": "and the heads of state and private institutions, hospitals, clinics and family polyclinics of the regional health system took part with their vacancies.",
+  "why": "wrong: \"families the heads of medical polyclinics\" is garbled (oilaviy poliklinika = family polyclinic)."
+ },
+ {
+  "slug": "karyera-kuni",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Oliygohimizda \"Talaba ishga jo",
+  "old": "Fergana Public Health Medical Institute",
+  "new": "Fergana Medical Institute of Public Health",
+  "why": "terminology: The official English name of the institute is not used."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "«Комплаенс-контроль",
+  "new": "«Комплаенс-контроль»",
+  "why": "minor: The closing quotation mark is missing."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "Anti-CorruptionCompliance Control",
+  "new": "Anti-Corruption “Compliance Control”",
+  "why": "minor: A space and the quotation marks are missing."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "№ ПФ-5847 от 11 июля 2019 года",
+  "new": "№ [ПФ-5847](https://nrm.uz/contentf?doc=602297_o%E2%80%98zbekiston_respublikasi_prezidentining_08_10_2019_y_pf-5847-son_o%E2%80%98zbekiston_respublikasi_oliy_talim_tizimini_2030_yilgacha_rivojlantirish_koncepciyasini_tasdiqlash_to%E2%80%98g%E2%80%98risidagi_farmoni&products=1_) от 8 октября 2019 года",
+  "why": "wrong: 11 July 2019 is the date of PQ-4391; PF-5847 is dated 8 October 2019 (see its link); the uz link is lost."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "Постановлениях Президента № ПҚ-4391 от 11 июля 2019 года, № ПҚ-4699 от 28 апреля 2020 года, Постановлении Кабинета Министров № 824 от 31 декабря 2020 года",
+  "new": "постановлениях Президента № [ПП-4391](https://nrm.uz/contentf?doc=593963_o%E2%80%98zbekiston_respublikasi_prezidentining_11_07_2019_y_pq-4391-son_oliy_va_o%E2%80%98rta_mahsus_talim_tizimiga_boshqaruvning_yangi_tamoyillarini_joriy_etish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) от 11 июля 2019 года «О мерах по внедрению новых принципов управления в систему высшего и среднего специального образования», № [ПП-4699](https://nrm.uz/contentf?doc=621801_o%E2%80%98zbekiston_respublikasi_prezidentining_28_04_2020_y_pq-4699-son_raqamli_iqtisodiet_va_elektron_hukumatni_keng_joriy_etish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) от 28 апреля 2020 года «О мерах по широкому внедрению цифровой экономики и электронного правительства», постановлении Кабинета Министров № [824](https://nrm.uz/contentf?doc=646981_o%E2%80%98zbekiston_respublikasi_vazirlar_mahkamasining_31_12_2020_y_824-son_oliy_talim_muassasalarida_talim_jaraenini_tashkil_etish_bilan_bog%E2%80%98liq_tizimni_takomillashtirish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) от 31 декабря 2020 года «О мерах по совершенствованию системы, связанной с организацией учебного процесса в высших образовательных учреждениях»",
+  "why": "missing: The titles and links of the three acts are dropped, and \"ПҚ\" uses an Uzbek letter (the Russian abbreviation is ПП)."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "Ферганского института общественного здоровья",
+  "new": "Ферганского медицинского института общественного здоровья",
+  "why": "wrong: The institute name is missing \"медицинского\"."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "Presidential Decree No. PF-5847 (July 11, 2019), Presidential Resolutions No. PQ-4391, PQ-4699, Cabinet of Ministers Resolution No. 824 (December 31, 2020)",
+  "new": "Presidential Decree No. [PF-5847](https://nrm.uz/contentf?doc=602297_o%E2%80%98zbekiston_respublikasi_prezidentining_08_10_2019_y_pf-5847-son_o%E2%80%98zbekiston_respublikasi_oliy_talim_tizimini_2030_yilgacha_rivojlantirish_koncepciyasini_tasdiqlash_to%E2%80%98g%E2%80%98risidagi_farmoni&products=1_) of October 8, 2019 “On approval of the Concept for the development of the higher education system of the Republic of Uzbekistan until 2030”, Presidential Resolution No. [PQ-4391](https://nrm.uz/contentf?doc=593963_o%E2%80%98zbekiston_respublikasi_prezidentining_11_07_2019_y_pq-4391-son_oliy_va_o%E2%80%98rta_mahsus_talim_tizimiga_boshqaruvning_yangi_tamoyillarini_joriy_etish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) of July 11, 2019 “On measures to introduce new management principles into the system of higher and secondary specialised education”, Presidential Resolution No. [PQ-4699](https://nrm.uz/contentf?doc=621801_o%E2%80%98zbekiston_respublikasi_prezidentining_28_04_2020_y_pq-4699-son_raqamli_iqtisodiet_va_elektron_hukumatni_keng_joriy_etish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) of April 28, 2020 “On measures for the wide introduction of the digital economy and e-government”, Cabinet of Ministers Resolution No. [824](https://nrm.uz/contentf?doc=646981_o%E2%80%98zbekiston_respublikasi_vazirlar_mahkamasining_31_12_2020_y_824-son_oliy_talim_muassasalarida_talim_jaraenini_tashkil_etish_bilan_bog%E2%80%98liq_tizimni_takomillashtirish_chora-tadbirlari_to%E2%80%98g%E2%80%98risidagi_qarori&products=1_) of December 31, 2020 “On measures to improve the system related to the organisation of the educational process in higher education institutions”",
+  "why": "wrong: The date of PF-5847 is wrong (July 11 belongs to PQ-4391); the dates of PQ-4391/4699, all titles and all links are dropped."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Korrupsiyaga qarshi kurashish ",
+  "old": "Order No. 281 of the Ministry of Higher and Secondary Specialized Education dated June 28, 2021.",
+  "new": "Order No. 281 of the Ministry of Higher and Secondary Specialized Education dated June 28, 2021, which approved the Model Regulation on the Anti-Corruption “Compliance Control” System Management Department of a Higher Education Institution.",
+  "why": "missing: The Model Regulation approved by order 281 is omitted."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Karrupsiyaga qarshi kurashish ",
+  "old": "Задачи и функции отдела",
+  "new": "Задачи и функции отдела по управлению системой противодействия коррупции «Комплаенс-контроль»",
+  "why": "missing: The name of the department is omitted from the heading."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Boʻlim Fargʻona jamoat salomat",
+  "old": "it reports directly to the rector of the Fergana Medical Institute of Public Health and to the Compliance Control",
+  "new": "it is directly subordinate to the rector of the Fergana Medical Institute of Public Health and reports to the Compliance Control",
+  "why": "minor: The uz separates subordination (to the rector) from reporting (to the Ministry department)."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Boʻlim oʻziga yuklatilgan vazi",
+  "old": "Функции отдела",
+  "new": "Для выполнения возложенных на него задач и функций отдел имеет следующие права:",
+  "why": "wrong: The heading introduces the department's rights, not \"functions\"."
+ },
+ {
+  "slug": "korrupsiyaga-qarshi-kurashish-komplayens-nazorat-tizimini-boshqarish-bolimi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Boʻlim oʻziga yuklatilgan vazi",
+  "old": "Tasks and Functions",
+  "new": "To perform the tasks and functions assigned to it, the Department has the following rights:",
+  "why": "wrong: The heading introduces the department's rights, not \"tasks and functions\"."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "экочемпион «Новое",
+  "new": "экочемпионат «Новое",
+  "why": "wrong: \"экочемпион\" means a champion (person), not a championship."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "In the Ferghana Medical Institute of Public Health, within the framework of the national project \"Green Space,\" an eco-champion \"New Tree - New Breath\" was organized",
+  "new": "At the Fergana Medical Institute of Public Health, the “New Tree — New Breath” eco-championship was organised within the framework of the nationwide “Green Space” project",
+  "why": "wrong: \"eco-champion\" means a person, not a championship; \"Ferghana\" is not the official spelling of the institute name; umummilliy = nationwide."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "экоклемпион",
+  "new": "экочемпионат",
+  "why": "wrong: A garbled word."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "the Ferghana Medical Institute of Public Health launched a comprehensive ecoclampion",
+  "new": "the Fergana Medical Institute of Public Health launched a large-scale eco-championship",
+  "why": "wrong: A garbled word (\"ecoclampion\"), and the institute name is misspelled."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Institutning barcha fakultetla",
+  "old": "departments, and departments",
+  "new": "departments and divisions",
+  "why": "minor: \"departments\" is repeated."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 10,
+  "lang": "ru",
+  "anchor": "Mazkur ekochempionat nafaqat i",
+  "old": "Данный экочемпион",
+  "new": "Данный экочемпионат",
+  "why": "wrong: \"экочемпион\" means a person, not a championship."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Mazkur ekochempionat nafaqat i",
+  "old": "This eco-champion",
+  "new": "This eco-championship",
+  "why": "wrong: \"eco-champion\" means a person, not a championship."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 17,
+  "lang": "ru",
+  "anchor": "Yashil Universitet atamasi, as",
+  "old": "экологическую стабильность",
+  "new": "экологическую устойчивость",
+  "why": "terminology: \"barqarorlik\" here is sustainability (устойчивость), as in \"устойчивое развитие\"."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 17,
+  "lang": "en",
+  "anchor": "Yashil Universitet atamasi, as",
+  "old": "environmental stability",
+  "new": "environmental sustainability",
+  "why": "terminology: \"barqarorlik\" here is sustainability."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 19,
+  "lang": "ru",
+  "anchor": "Ekologiya va Atrof-Muhit Fanla",
+  "old": "социальной стабильности",
+  "new": "социальной устойчивости",
+  "why": "terminology: Sustainability, not stability; inconsistent with the item title and block 21."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 19,
+  "lang": "en",
+  "anchor": "Ekologiya va Atrof-Muhit Fanla",
+  "old": "social stability",
+  "new": "social sustainability",
+  "why": "terminology: Sustainability, not stability; inconsistent with the item title and block 21."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 23,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "факультета медицинской профилактики и общественного здоровья",
+  "new": "факультета медико-профилактического дела и общественного здоровья",
+  "why": "terminology: The same faculty is named differently in block 14."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 23,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "Faculty of Medical Prevention and Public Health",
+  "new": "Faculty of Preventive Medicine and Public Health",
+  "why": "terminology: The same faculty is named differently in block 14."
+ },
+ {
+  "slug": "ekofaol-xodim",
+  "order": 23,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "The Ferghana Medical Institute",
+  "new": "The Fergana Medical Institute",
+  "why": "minor: The institute name is misspelled."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Rahbar: Bobur Primqulov",
+  "old": "Телефон: +998 (73) 244-37-22",
+  "new": "Телефон: +998 (73) 244-37-22, +998 (73) 244-96-16",
+  "why": "missing: The second phone number is missing."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Rahbar: Bobur Primqulov",
+  "old": "Phone: +998 (73) 244-37-22",
+  "new": "Phone: +998 (73) 244-37-22, +998 (73) 244-96-16",
+  "why": "missing: The second phone number is missing."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Rahbar: Alimov Anvar Valiyevic",
+  "old": "Яшнабадский район,ул. Таракиёт",
+  "new": "Яшнабадский район, ул. Тараккиёт",
+  "why": "minor: A misspelled street name (block 32 has Тараккиёт) and a missing space."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 8,
+  "lang": "ru",
+  "anchor": "Rahbar: Arziqulov Turaqul Sadi",
+  "old": "Телефон: +998 (71) 250-40-56",
+  "new": "Телефон: +998 (71) 250-40-56, +998 (90) 958-79-32",
+  "why": "missing: The second (mobile) number is missing."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Rahbar: Arziqulov Turaqul Sadi",
+  "old": "Phone: +998 (71) 250-40-56",
+  "new": "Phone: +998 (71) 250-40-56, +998 (90) 958-79-32",
+  "why": "missing: The second (mobile) number is missing."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 14,
+  "lang": "en",
+  "anchor": "Rahbar: Saidov Gʻafur Normurod",
+  "old": "+998 (65) 221-21-1616",
+  "new": "+998 (65) 221-21-16",
+  "why": "wrong: The phone number has extra digits."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "Jizzax viloyati sogʻliqni saql",
+  "old": "Джизакское областое",
+  "new": "Джизакское областное",
+  "why": "minor: A typo."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 19,
+  "lang": "ru",
+  "anchor": "Navoiy viloyati sogʻliqni saql",
+  "old": "Навоийское областое",
+  "new": "Навоийское областное",
+  "why": "minor: A typo."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 20,
+  "lang": "ru",
+  "anchor": "Rahbar: Rasulov Zafar Ilhomovi",
+  "old": "Навоий шаҳар, Толстого кўчаси 18",
+  "new": "г. Навои, ул. Толстого, 18",
+  "why": "language: The address is left in Uzbek Cyrillic."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 26,
+  "lang": "ru",
+  "anchor": "Rahbar: Jumaniyazov Davronbek ",
+  "old": "ул. Куксарой майдони, дом № 1, корп 1",
+  "new": "ул. Куксарой, дом № 1",
+  "why": "language: \"майдони\" is Uzbek, and \"корп 1\" is not in the source."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 34,
+  "lang": "en",
+  "anchor": "Xorazm viloyati sogʻliqni saql",
+  "old": "Khorazem",
+  "new": "Khorezm",
+  "why": "minor: A misspelled region name."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 38,
+  "lang": "ru",
+  "anchor": "Rahbar: Tulakov Ravshan Panjiy",
+  "old": "Турсунов Дониёр Шодиевич",
+  "new": "Тулаков Равшан Панжиевич",
+  "why": "wrong: A different person is named as head."
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 38,
+  "lang": "en",
+  "anchor": "Rahbar: Tulakov Ravshan Panjiy",
+  "old": "Tursunov Doniyor Shodievich",
+  "new": "Tulakov Ravshan Panjiyevich",
+  "why": "wrong: A different person is named as head."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Rektor: Sidikov Akmal Abdikaxo",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Rektor: Sidikov Akmal Abdikaxo",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Rektor: Rizaev Kamol Saidakbar",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Rektor: Rizaev Kamol Saidakbar",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 6,
+  "lang": "ru",
+  "anchor": "Rektor: Daminov Botir Turgʻunp",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 6,
+  "lang": "en",
+  "anchor": "Rektor: Daminov Botir Turgʻunp",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 8,
+  "lang": "ru",
+  "anchor": "Rektor: Xaydarov Nodir Qodirov",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 8,
+  "lang": "en",
+  "anchor": "Rektor: Xaydarov Nodir Qodirov",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 10,
+  "lang": "ru",
+  "anchor": "Rektor: Shadmanov Alisher Qayu",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Rektor: Shadmanov Alisher Qayu",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Rektor: Ataniyazova Oral Amino",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 12,
+  "lang": "en",
+  "anchor": "Rektor: Ataniyazova Oral Amino",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 14,
+  "lang": "ru",
+  "anchor": "Rektor: Teshaev Shuxrat Jumaev",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 14,
+  "lang": "en",
+  "anchor": "Rektor: Teshaev Shuxrat Jumaev",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 16,
+  "lang": "ru",
+  "anchor": "Rektor: Madazimov Madamin Moʻm",
+  "old": "Руководитель:",
+  "new": "Ректор:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 16,
+  "lang": "en",
+  "anchor": "Rektor: Madazimov Madamin Moʻm",
+  "old": "Head:",
+  "new": "Rector:",
+  "why": "terminology: The uz says \"Rektor\"."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 18,
+  "lang": "ru",
+  "anchor": "Direktor: Berdiev Ergash Abdul",
+  "old": "Руководитель:",
+  "new": "Директор:",
+  "why": "terminology: The uz says \"Direktor\" (head of a branch)."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 18,
+  "lang": "en",
+  "anchor": "Direktor: Berdiev Ergash Abdul",
+  "old": "Head:",
+  "new": "Director:",
+  "why": "terminology: The uz says \"Direktor\" (head of a branch)."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 20,
+  "lang": "en",
+  "anchor": "Direktor: Roʻziboev Rashid Yus",
+  "old": "Head:",
+  "new": "Director:",
+  "why": "terminology: The uz says \"Direktor\" (ru already has Директор)."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Rektor: Sidikov Akmal Abdikaxo",
+  "old": "Сыдиков",
+  "new": "Сидиков",
+  "why": "wrong: The rector's surname is misspelled (Сидиков elsewhere on the site)."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Rektor: Sidikov Akmal Abdikaxo",
+  "old": "Sydikov Akmal Abdikhaxarovich",
+  "new": "Sidikov Akmal Abdikakhorovich",
+  "why": "wrong: The rector's name is misspelled."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 7,
+  "lang": "ru",
+  "anchor": "Toshkent davlat stomatologiya ",
+  "old": "Тошкентский",
+  "new": "Ташкентский",
+  "why": "language: Uzbek spelling of Tashkent."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 10,
+  "lang": "en",
+  "anchor": "Rektor: Shadmanov Alisher Qayu",
+  "old": "Website: www.tma.uz.",
+  "new": "Website: [www.tma.uz](http://www.tma.uz/)",
+  "why": "minor: The link is lost and a stray full stop is added."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 12,
+  "lang": "ru",
+  "anchor": "Rektor: Ataniyazova Oral Amino",
+  "old": "Қорақалпоғистон Республикаси Нукус шаҳар, А. Досназаров кўчаси 104-уй",
+  "new": "Республика Каракалпакстан, город Нукус, улица А. Досназарова, дом 104",
+  "why": "language: The address is left in Uzbek Cyrillic."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 12,
+  "lang": "en",
+  "anchor": "Rektor: Ataniyazova Oral Amino",
+  "old": "Dusnazarov street №104,Nukus region",
+  "new": "A. Dosnazarov street №104, Nukus city",
+  "why": "wrong: Nukus is a city, not a region; the initial and a space are missing."
+ },
+ {
+  "slug": "bilim-yurtlari",
+  "order": 20,
+  "lang": "en",
+  "anchor": "Direktor: Roʻziboev Rashid Yus",
+  "old": "Al-Khorazmi street №828",
+  "new": "Al-Khorazmi street №28",
+  "why": "wrong: The house number is wrong (28)."
+ }
+]
