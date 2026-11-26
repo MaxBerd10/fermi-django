@@ -497,6 +497,11 @@ a.leader-pill:hover {
   font-size: 1rem;
 }
 
+.leader-pill__text {
+  flex: 1;
+  min-width: 0; /* the label sits above the value; both share the width left of the icon */
+}
+
 .leader-pill__label {
   display: block;
   font-size: 0.625rem;
@@ -512,7 +517,7 @@ a.leader-pill:hover {
   font-size: 0.8125rem;
   line-height: 1.45;
   color: #334155;
-  word-break: break-word;
+  overflow-wrap: anywhere; /* a phone number or a working-hours line wraps at its spaces; only a long e-mail is cut */
 }
 
 .leader-prorector__toggle {
@@ -1170,7 +1175,11 @@ a.leader-card__meta-item:hover {
 }
 
 .leadership-layout .leader-prorector__contacts {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.leadership-layout .leader-prorector__contacts > .leader-pill:last-child:nth-child(odd) {
+  grid-column: 1 / -1; /* an odd pill out takes the whole row instead of squeezing its text */
 }
 
 .leadership-layout .leader-pill {

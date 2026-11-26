@@ -23,10 +23,10 @@ function ContactPill({
   href?: string;
 }) {
   const inner = (
-    <>
+    <span className="leader-pill__text">
       <span className="leader-pill__label">{label}</span>
       <span className="leader-pill__value">{value}</span>
-    </>
+    </span>
   );
 
   if (href) {
