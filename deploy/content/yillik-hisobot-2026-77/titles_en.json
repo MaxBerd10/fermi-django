@@ -1,0 +1,944 @@
+[
+{
+"slug": "jcpm-2023",
+"order": 1,
+"ru": "Неблагоприятное влияние атмосферных и водных загрязнений на здоровье населения",
+"en": "Adverse effects of air and water pollution on public health"
+},
+{
+"slug": "jcpm-2023",
+"order": 2,
+"ru": "Комплексная аллергенспецифическая иммунотерапия полиоксидонием у больных детей, бронхиальной астмой, сочетанная с аллергическими риносинуситами",
+"en": "Complex allergen-specific immunotherapy with polyoxidonium in children with bronchial asthma combined with allergic rhinosinusitis"
+},
+{
+"slug": "jcpm-2023",
+"order": 3,
+"ru": "Влияние анемии на течение сердечно-сосудистых заболеваний",
+"en": "The effect of anemia on the course of cardiovascular diseases"
+},
+{
+"slug": "jcpm-2023",
+"order": 6,
+"ru": "Принципы дифференцированной терапии зооантропонозной трихофитии",
+"en": "Principles of differentiated therapy of zooanthroponotic trichophytosis"
+},
+{
+"slug": "jcpm-2023",
+"order": 7,
+"ru": "Логико-математические модели количественной оценки интегрального уровня индивидуального физического здоровья на основе адаптационного потенциала организма",
+"en": "Logical and mathematical models for the quantitative assessment of the integral level of individual physical health based on the body's adaptive potential"
+},
+{
+"slug": "jcpm-2023",
+"order": 9,
+"ru": "Применения модифицированный гало аппарат для внешней коррекции и фиксации шейного отдела позвоночника при переломах зубовидного отростка С2 позвонка",
+"en": "Use of a modified halo device for external correction and fixation of the cervical spine in fractures of the odontoid process of the C2 vertebra"
+},
+{
+"slug": "jcpm-2023",
+"order": 10,
+"ru": "Определение и оценка состояния здоровья и подростков в городах коканд и маргилан",
+"en": "Determination and assessment of the health status of adolescents in the cities of Kokand and Margilan"
+},
+{
+"slug": "jcpm-2023",
+"order": 11,
+"ru": "Иммуногистохимическая характеристика биоптатов кожи с различными формами актинического кератоза",
+"en": "Immunohistochemical characteristics of skin biopsies with various forms of actinic keratosis"
+},
+{
+"slug": "jcpm-2023",
+"order": 12,
+"ru": "Иммуномодулирующие свойства растительного препарата имбира на первичный иммунный ответ и гемопоэз с фенотипом ацетилирования",
+"en": "Immunomodulating properties of the herbal ginger preparation on the primary immune response and hematopoiesis with the acetylation phenotype"
+},
+{
+"slug": "jcpm-2023",
+"order": 13,
+"ru": "Ацетиляторный статус : применение лекарственных растений с иммуно-модулирующими свойствами при иммунодефицитных состоянях",
+"en": "Acetylator status: the use of medicinal plants with immunomodulating properties in immunodeficiency states"
+},
+{
+"slug": "jcpm-2023",
+"order": 14,
+"ru": "Методы лечения контактного дерматита в эксперименте",
+"en": "Methods of treating contact dermatitis in an experiment"
+},
+{
+"slug": "jcpm-2023",
+"order": 15,
+"ru": "Изучение иммуногенеза и гемопоэза у животных с типом ацетилирования и пути их коррекции с очищенным комплексом детоксиомы",
+"en": "A study of immunogenesis and hematopoiesis in animals with the acetylation type and ways of correcting them with the purified detoxioma complex"
+},
+{
+"slug": "jcpm-2023",
+"order": 16,
+"ru": "Эндотоксикоз и дисфункция печени при остром калькулёзном холецистите",
+"en": "Endotoxicosis and liver dysfunction in acute calculous cholecystitis"
+},
+{
+"slug": "jcpm-2023",
+"order": 17,
+"ru": "Вопросы оценки и прогнозирование билиарных осложнений после резекции печени",
+"en": "Issues of assessing and predicting biliary complications after liver resection"
+},
+{
+"slug": "jcpm-2023",
+"order": 18,
+"ru": "Дифференцированная активно-индивидуализированная хирургическая тактика при остром калькулезном холецистите коморбидностью с ишемической болезни сердца",
+"en": "Differentiated active individualized surgical tactics in acute calculous cholecystitis comorbid with ischemic heart disease"
+},
+{
+"slug": "jcpm-2023",
+"order": 21,
+"ru": "Заболеваемость мочекаменной болезнью в Ферганской долине с 1991 по 2022",
+"en": "The incidence of urolithiasis in the Fergana Valley from 1991 to 2022"
+},
+{
+"slug": "jcpm-2023",
+"order": 22,
+"ru": "Междисциплинарная интеграция в учебном процессе медицинского вуза",
+"en": "Interdisciplinary integration in the educational process of a medical university"
+},
+{
+"slug": "jcpm-2023",
+"order": 24,
+"ru": "Комбинированное лечение местнораспространенного рака шейки матки",
+"en": "Combined treatment of locally advanced cervical cancer"
+},
+{
+"slug": "jcpm-2023",
+"order": 25,
+"ru": "Гигиеническая оценка микроклимата на рабочих местах в цехах по производству инъекционных препаратов фармацевтического предприятия",
+"en": "Hygienic assessment of the microclimate in the workplaces of the injectable-drug production shops of a pharmaceutical enterprise"
+},
+{
+"slug": "jcpm-2023",
+"order": 26,
+"ru": "Профилактика и ранняя диагностика рака предстательной железы",
+"en": "Prevention and early diagnosis of prostate cancer"
+},
+{
+"slug": "jcpm-2023",
+"order": 27,
+"ru": "Определение класса условий труда по ведущему фактору на предприятиях по производству полиэтиленовой пленки",
+"en": "Determination of the working-conditions class by the leading factor at polyethylene film production enterprises"
+},
+{
+"slug": "jcpm-2023",
+"order": 28,
+"ru": "Применение метрических параметров ушной раковины в определении соматического пола человека",
+"en": "Use of the metric parameters of the auricle in determining a person's somatic sex"
+},
+{
+"slug": "jcpm-2023",
+"order": 29,
+"ru": "Течение внекишечных проявлений у больных неспецифическим язвенным колитом",
+"en": "The course of extraintestinal manifestations in patients with ulcerative colitis"
+},
+{
+"slug": "jcpm-2023",
+"order": 30,
+"ru": "Методика изучения врожденных аномалий у детей",
+"en": "A method for studying congenital anomalies in children"
+},
+{
+"slug": "jcpm-2023",
+"order": 32,
+"ru": "Использование современных методов контрацепции, применяемые в 174-179 республике Узбекистан",
+"en": "The use of modern methods of contraception in the Republic of Uzbekistan"
+},
+{
+"slug": "jcpm-2023",
+"order": 33,
+"ru": "COTsIALHIY poptpet, UCLOBIYa I obpaz жизни BPAChEY IHFEKTsIOHICTOB",
+"en": "Social portrait, living conditions and lifestyle of infectious disease physicians"
+},
+{
+"slug": "jcpm-2023",
+"order": 34,
+"ru": "Некоторые аспекты сердечно-сосудистой патологии у лиц пожилого и старческого возраста",
+"en": "Some aspects of cardiovascular pathology in elderly and senile persons"
+},
+{
+"slug": "jcpm-2023",
+"order": 35,
+"ru": "Клинико–эхографические и морфологические особенности злокачественных новообразований яичников",
+"en": "Clinical, sonographic and morphological features of malignant ovarian neoplasms"
+},
+{
+"slug": "jcpm-2023",
+"order": 36,
+"ru": "Возможности применения лапароскопических оперативных вмешательств при желчнокаменной болезни и патологии органов малого таза в ургентной хирургии",
+"en": "Possibilities of using laparoscopic surgery in cholelithiasis and pelvic organ pathology in emergency surgery"
+},
+{
+"slug": "jcpm-2023",
+"order": 37,
+"ru": "Изучение аспектов синергизма пищевого статуса и гирудотерапии при гипертонической болезни",
+"en": "A study of the synergy aspects of nutritional status and hirudotherapy in essential hypertension"
+},
+{
+"slug": "jcpm-2023",
+"order": 38,
+"ru": "Взаимосвязь пищевого статуса и гирудотерапии",
+"en": "The relationship between nutritional status and hirudotherapy"
+},
+{
+"slug": "jcpm-2023",
+"order": 39,
+"ru": "Аспекты синергизма пищевого статуса и гирудотерапии при гипертонической болезни",
+"en": "Aspects of the synergy of nutritional status and hirudotherapy in essential hypertension"
+},
+{
+"slug": "jcpm-2023",
+"order": 41,
+"ru": "Изменения гемореологии в патогенезе микроциркуляторных расстройств при течение гипоксической гипоксии",
+"en": "Changes in hemorheology in the pathogenesis of microcirculatory disorders in hypoxic hypoxia"
+},
+{
+"slug": "jcpm-2023",
+"order": 42,
+"ru": "Особенности психофармакотерапевтического вмешательства для коррекции невротических расстройств у больных с различными формами псориаза",
+"en": "Features of psychopharmacotherapeutic intervention for the correction of neurotic disorders in patients with various forms of psoriasis"
+},
+{
+"slug": "jcpm-2023",
+"order": 43,
+"ru": "Дисгормональные процессы при развитии миомы матки",
+"en": "Dyshormonal processes in the development of uterine fibroids"
+},
+{
+"slug": "jcpm-2023",
+"order": 44,
+"ru": "Показатели морфологии микрокристаллов дегидратированой слюны как критерий оценки вегетативного статуса и донозологического уровня здоровья",
+"en": "Morphological indicators of dehydrated saliva microcrystals as a criterion for assessing vegetative status and the pre-nosological level of health"
+},
+{
+"slug": "jcpm-2023",
+"order": 45,
+"ru": "Судебно-медицинская оценка медицинской помощи, оказанной врачами акушерами-гинекологами",
+"en": "Forensic medical assessment of medical care provided by obstetrician-gynecologists"
+},
+{
+"slug": "jcpm-2023",
+"order": 46,
+"ru": "Патоморфологические изменения, развивающиеся в интерстиции почки под влиянием COVID-19",
+"en": "Pathomorphological changes developing in the renal interstitium under the influence of COVID-19"
+},
+{
+"slug": "jcpm-2023",
+"order": 47,
+"ru": "Показатели биохимического состава крови при токсическом поражении печени",
+"en": "Biochemical blood composition indicators in toxic liver injury"
+},
+{
+"slug": "jcpm-2023",
+"order": 48,
+"ru": "Патоморфологические особенности миомы матки у женщин в зависимости от возраста и количества беременностей",
+"en": "Pathomorphological features of uterine fibroids in women depending on age and number of pregnancies"
+},
+{
+"slug": "jcpm-2023",
+"order": 49,
+"ru": "Роль санационная бронхоскопия в диагностике и лечение стационарной пневмоний у больных с тяжелой черепно-мозговой травмой",
+"en": "The role of sanitation bronchoscopy in the diagnosis and treatment of hospital pneumonia in patients with severe traumatic brain injury"
+},
+{
+"slug": "jcpm-2023",
+"order": 50,
+"ru": "Гистотопография стенки межжелудочковой перегородки сердца",
+"en": "Histotopography of the wall of the interventricular septum of the heart"
+},
+{
+"slug": "jcpm-2023",
+"order": 51,
+"ru": "Лечение диабетической нейроостеоартропатии природными средствами",
+"en": "Treatment of diabetic neuro-osteoarthropathy with natural remedies"
+},
+{
+"slug": "jcpm-2023",
+"order": 52,
+"ru": "Клинико-морфологическая корреляция в диагностике различных форм актинического кератоза",
+"en": "Clinical and morphological correlation in the diagnosis of various forms of actinic keratosis"
+},
+{
+"slug": "jcpm-2023",
+"order": 53,
+"ru": "Влияние загрязнения окружающей среды на здоровье населения",
+"en": "The impact of environmental pollution on public health"
+},
+{
+"slug": "jcpm-2023",
+"order": 54,
+"ru": "Результаты сравнительного анализа морфологических изменений печени на 90-Й день эксперимента на крысах",
+"en": "Results of a comparative analysis of morphological changes in the liver on day 90 of an experiment on rats"
+},
+{
+"slug": "jcpm-2023",
+"order": 55,
+"ru": "Новое в лечении переломов пястных костей кисти и их последствий",
+"en": "New developments in the treatment of metacarpal fractures of the hand and their consequences"
+},
+{
+"slug": "jcpm-2023",
+"order": 56,
+"ru": "Патоморфологические изменения извитых канальцев почек при заболевании COVID-19",
+"en": "Pathomorphological changes in the convoluted tubules of the kidneys in COVID-19"
+},
+{
+"slug": "jcpm-2023",
+"order": 57,
+"ru": "Гигиеническая характеристика условий труда с соответствием фосалон и батонес пестицидам садоводов",
+"en": "Hygienic characterization of working conditions in relation to the pesticides Phosalone and Batones among gardeners"
+},
+{
+"slug": "jcpm-2023",
+"order": 58,
+"ru": "Гепатопротекторное свойство биологически активных веществ и его морфологические особенности на 60-е сутки у крыс",
+"en": "Hepatoprotective properties of biologically active substances and their morphological features on day 60 in rats"
+},
+{
+"slug": "jcpm-2023",
+"order": 59,
+"ru": "Перинатальные показатели у женщин с эндемическим зобом",
+"en": "Perinatal indicators in women with endemic goiter"
+},
+{
+"slug": "jcpm-2023",
+"order": 60,
+"ru": "Экстрокорпоральная терапия: место в мировой медицине,развитие и рекомендации по применению и современные подходы к инструкциям",
+"en": "Extracorporeal therapy: its place in world medicine, development, recommendations for use and modern approaches to guidelines"
+},
+{
+"slug": "jcpm-2023",
+"order": 61,
+"ru": "Изучение обеспеченности начальных классов общеобразовательных школ основной ученической мебелью и её гигиеническая оценка",
+"en": "A study of the provision of primary-school classes in general education schools with basic student furniture and its hygienic assessment"
+},
+{
+"slug": "jcpm-2023",
+"order": 62,
+"ru": "Связь между женской репродуктивной и эндокринной системами",
+"en": "The relationship between the female reproductive and endocrine systems"
+},
+{
+"slug": "jcpm-2023",
+"order": 63,
+"ru": "Развитие процессов интернационализации в Ферганском медицинском институте общественного здоровья",
+"en": "The development of internationalization processes at the Fergana Medical Institute of Public Health"
+},
+{
+"slug": "jcpm-2023",
+"order": 66,
+"ru": "Состояние вопроса о гиперпролактинемическом бесплодии и исходах беременностей у матерей, получавших агонисты дофаминовых рецепторов",
+"en": "The state of the issue of hyperprolactinemic infertility and pregnancy outcomes in mothers who received dopamine receptor agonists"
+},
+{
+"slug": "jcpm-2023",
+"order": 67,
+"ru": "Острый жировой гепатоз беременных determination of the degree of satisfaction with the working conditions of primary school teachers of secondary schools",
+"en": "Acute fatty liver of pregnancy. Determination of the degree of satisfaction with the working conditions of primary school teachers of secondary schools"
+},
+{
+"slug": "jcpm-2023",
+"order": 68,
+"ru": "Резервы для снижения кесарева сечения в республике Узбекистан",
+"en": "Reserves for reducing cesarean sections in the Republic of Uzbekistan"
+},
+{
+"slug": "jcpm-2023",
+"order": 70,
+"ru": "Пути повышении качества оказания медицинской помощи детям в стационарах первого уровня",
+"en": "Ways to improve the quality of medical care for children in first-level hospitals"
+},
+{
+"slug": "jcpm-2023",
+"order": 71,
+"ru": "Анализ исследованный лекарственных эфемеров в Узбекистане и дальнего зарубежья",
+"en": "Analysis of the studied medicinal ephemerals in Uzbekistan and distant foreign countries"
+},
+{
+"slug": "jcpm-2023",
+"order": 72,
+"ru": "Методика исследования и реабилитация детского аутизма у детей в Ферганском региональном филиале республиканского центра социальной адаптации детей",
+"en": "Methods of studying and rehabilitating childhood autism in children at the Fergana regional branch of the republican center for the social adaptation of children"
+},
+{
+"slug": "jcpm-2023",
+"order": 73,
+"ru": "Клиническая характеристика больных сезонным аллергическим ринитом на примере Ферганской области",
+"en": "Clinical characteristics of patients with seasonal allergic rhinitis using the example of the Fergana region"
+},
+{
+"slug": "jcpm-2023",
+"order": 74,
+"ru": "Особенности донозологического уровня физического здоровья и некоторых морфофункциональных показателей взрослого контингента коренных жителей низко и среднегорья Ферганской области",
+"en": "Features of the pre-nosological level of physical health and some morphofunctional indicators of the adult indigenous population of the low and middle mountains of the Fergana region"
+},
+{
+"slug": "jcpm-2024",
+"order": 1,
+"ru": "Изучение влияния инфекции COVID-19 на уровень компенсации у пациентов с сахарным диабетом 1 типа",
+"en": "A study of the effect of COVID-19 infection on the level of compensation in patients with type 1 diabetes mellitus"
+},
+{
+"slug": "jcpm-2024",
+"order": 2,
+"ru": "Анализ распространенности сахарного диабета в Ферганской области за последние 5 лет",
+"en": "Analysis of the prevalence of diabetes mellitus in the Fergana region over the last 5 years"
+},
+{
+"slug": "jcpm-2024",
+"order": 3,
+"ru": "О роли Helicobacter pylori в патогенезе атрофического гастрита и рака желудка",
+"en": "On the role of Helicobacter pylori in the pathogenesis of atrophic gastritis and gastric cancer"
+},
+{
+"slug": "jcpm-2024",
+"order": 4,
+"ru": "Патоморфологические изменения при протрузии и грыже межпозвонкового диска поясничного отдела позвоночника",
+"en": "Pathomorphological changes in protrusion and herniation of the lumbar intervertebral disc"
+},
+{
+"slug": "jcpm-2024",
+"order": 5,
+"ru": "Патоморфологические изменения частей диска в динамике при заболевании позвоночника спондилёзом",
+"en": "Pathomorphological changes in the parts of the disc over time in spondylosis of the spine"
+},
+{
+"slug": "jcpm-2024",
+"order": 6,
+"ru": "Изучение острых и хронических осложнений COVID-19 у пациентов с сахарным диабетом 1 типа",
+"en": "A study of acute and chronic complications of COVID-19 in patients with type 1 diabetes mellitus"
+},
+{
+"slug": "jcpm-2024",
+"order": 7,
+"ru": "Влияние модификации поверхности раневого покрытия \"фолидерм\" производными хитина на пролиферацию фибробластов",
+"en": "The effect of modifying the surface of the \"Foliderm\" wound dressing with chitin derivatives on fibroblast proliferation"
+},
+{
+"slug": "jcpm-2024",
+"order": 8,
+"ru": "Структура патологии щитовидной железы у женщин с нарушением фертильности",
+"en": "Structure of thyroid pathology in women with impaired fertility"
+},
+{
+"slug": "jcpm-2024",
+"order": 9,
+"ru": "Оценка и коррекция эндогенной интоксикации и липопероксидации при риносинуситах с коморбидностью хронической обструктивной болезнью легких",
+"en": "Assessment and correction of endogenous intoxication and lipid peroxidation in rhinosinusitis comorbid with chronic obstructive pulmonary disease"
+},
+{
+"slug": "jcpm-2024",
+"order": 11,
+"ru": "Гигиенические особенности условий машиностроительного труда и их влияние на з доровье работающих",
+"en": "Hygienic features of working conditions in mechanical engineering and their effect on workers' health"
+},
+{
+"slug": "jcpm-2024",
+"order": 12,
+"ru": "Классификация пищеводных кровотечений",
+"en": "Classification of esophageal bleeding"
+},
+{
+"slug": "jcpm-2024",
+"order": 15,
+"ru": "Гигиеническая оценка транспортного шума города Ферганы",
+"en": "Hygienic assessment of transport noise in the city of Fergana"
+},
+{
+"slug": "jcpm-2024",
+"order": 16,
+"ru": "Хроническая болезнь почек у детей",
+"en": "Chronic kidney disease in children"
+},
+{
+"slug": "jcpm-2024",
+"order": 18,
+"ru": "Влияние стресса на физиологию и морфофункциональное состояние пищеварительной системы у крыс",
+"en": "The effect of stress on the physiology and morphofunctional state of the digestive system in rats"
+},
+{
+"slug": "jcpm-2024",
+"order": 19,
+"ru": "Молекулярно-генетические аспекты нефробластомы у детей: синдромальная и молекулярная диагностика",
+"en": "Molecular genetic aspects of nephroblastoma in children: syndromic and molecular diagnosis"
+},
+{
+"slug": "jcpm-2024",
+"order": 20,
+"ru": "Клинико-морфологические особенности и результаты лечения нефробластомы у детей",
+"en": "Clinical and morphological features and treatment results of nephroblastoma in children"
+},
+{
+"slug": "jcpm-2024",
+"order": 22,
+"ru": "Медицинская культура - фундамент материнского здоровья",
+"en": "Medical culture as the foundation of maternal health"
+},
+{
+"slug": "jcpm-2024",
+"order": 23,
+"ru": "Эпидемиологические особенности и факторы риска первичного рака печени",
+"en": "Epidemiological features and risk factors of primary liver cancer"
+},
+{
+"slug": "jcpm-2024",
+"order": 24,
+"ru": "Изменения процесса гипоксии организма при гемической анемии",
+"en": "Changes in the hypoxia process of the body in hemic anemia"
+},
+{
+"slug": "jcpm-2024",
+"order": 26,
+"ru": "Факторы, приводящие к мочекаменной болезни и их влияние на морфофункциональное состояние мочевыводящих путей",
+"en": "Factors leading to urolithiasis and their effect on the morphofunctional state of the urinary tract"
+},
+{
+"slug": "jcpm-2024",
+"order": 31,
+"ru": "Течении анемии при сердечно-сосудистых и желудочно-кишечных заболеваниях",
+"en": "The course of anemia in cardiovascular and gastrointestinal diseases"
+},
+{
+"slug": "jcpm-2024",
+"order": 32,
+"ru": "Гигиеническая оценка производственного микроклимата на предприятии машиностроительной отрасли промышленности",
+"en": "Hygienic assessment of the industrial microclimate at an enterprise of the mechanical engineering industry"
+},
+{
+"slug": "jcpm-2024",
+"order": 34,
+"ru": "Исследование функционального состояния щитовидной железы у женщин с сахарным диабетом 1 типа, проживающих в зоне йододефицита",
+"en": "A study of the functional state of the thyroid gland in women with type 1 diabetes mellitus living in an iodine-deficient area"
+},
+{
+"slug": "jcpm-2024",
+"order": 36,
+"ru": "Патоморфология острого периода неспецифического язвенного колита",
+"en": "Pathomorphology of the acute period of ulcerative colitis"
+},
+{
+"slug": "jcpm-2024",
+"order": 37,
+"ru": "Лапароскопическая пиелопластика — оценка эффективности трансперитонеального доступа, опыт клиники \"MED ART GROUP\"",
+"en": "Laparoscopic pyeloplasty: assessing the effectiveness of the transperitoneal approach, the experience of the \"MED ART GROUP\" clinic"
+},
+{
+"slug": "jcpm-2024",
+"order": 39,
+"ru": "Проявления и влияние общесоматической патологии на слизистую оболочку полости рта",
+"en": "Manifestations and effects of general somatic pathology on the oral mucosa"
+},
+{
+"slug": "jcpm-2024",
+"order": 43,
+"ru": "Передняя перкутанная одновинтовая фиксация переломов зубовидного отростка аксиса",
+"en": "Anterior percutaneous single-screw fixation of odontoid process fractures of the axis"
+},
+{
+"slug": "jcpm-2024",
+"order": 45,
+"ru": "Д-димер и коагулограмма у беременных в разных триместрах",
+"en": "D-dimer and coagulogram in pregnant women in different trimesters"
+},
+{
+"slug": "jcpm-2024",
+"order": 48,
+"ru": "Выбор антибактериальной терапии внебольничной пневмонии у больных сахарным диабетом 2 типа",
+"en": "Choice of antibacterial therapy for community-acquired pneumonia in patients with type 2 diabetes mellitus"
+},
+{
+"slug": "jcpm-2024",
+"order": 49,
+"ru": "Профилактика гипертонической болезни у врачей и выбор антигипертензивной терапия.(на примере Наманганской области)",
+"en": "Prevention of hypertension in physicians and choice of antihypertensive therapy (on the example of the Namangan region)"
+},
+{
+"slug": "jcpm-2024",
+"order": 51,
+"ru": "Изучение противовоспалительного действия масла хвои и ромашки лекарственной",
+"en": "A study of the anti-inflammatory effect of pine-needle oil and chamomile"
+},
+{
+"slug": "jcpm-2024",
+"order": 52,
+"ru": "Морфологические и морфометрические изменения щитовидной железы при внезапной сердечной смерти",
+"en": "Morphological and morphometric changes of the thyroid gland in sudden cardiac death"
+},
+{
+"slug": "jcpm-2024",
+"order": 54,
+"ru": "Эпидемиология пищевой непереносимости у детей дошкольного возраста в городской и сельской местности",
+"en": "Epidemiology of food intolerance in preschool children in urban and rural areas"
+},
+{
+"slug": "jcpm-2024",
+"order": 55,
+"ru": "Диффузная форма рака молочной железы: эпидемиология, клиника и методы диагностики",
+"en": "Diffuse form of breast cancer: epidemiology, clinical picture and diagnostic methods"
+},
+{
+"slug": "jcpm-2024",
+"order": 57,
+"ru": "Роль компьютерной томографии в анализе пациентов, зараженных инфекцией COVID-19, значение микроэлемента цинка в организме человека для профилактики и лечения болезни",
+"en": "The role of computed tomography in the analysis of patients infected with COVID-19 and the importance of the trace element zinc in the human body for the prevention and treatment of the disease"
+},
+{
+"slug": "jcpm-2024",
+"order": 58,
+"ru": "Диагностическая значимость MAR- теста в профилактике и лечении мужского иммунологического бесплодия",
+"en": "Diagnostic significance of the MAR test in the prevention and treatment of male immunological infertility"
+},
+{
+"slug": "jcpm-2024",
+"order": 59,
+"ru": "Клинико-гемодинамические особенности у пациентов пожилого возраста с артериальной гипертензией и COVID-19",
+"en": "Clinical and hemodynamic features in elderly patients with arterial hypertension and COVID-19"
+},
+{
+"slug": "jcpm-2024",
+"order": 60,
+"ru": "Результаты ведения девочек препубертатного и пубертатного возрастов с образованиями яичников",
+"en": "Results of the management of prepubertal and pubertal girls with ovarian masses"
+},
+{
+"slug": "jcpm-2024",
+"order": 61,
+"ru": "Оценка эффективности варикоцелэктомии у мужчин с первичным и вторичным бесплодием",
+"en": "Evaluation of the effectiveness of varicocelectomy in men with primary and secondary infertility"
+},
+{
+"slug": "jcpm-2024",
+"order": 62,
+"ru": "Одномоментное удаление пули из поясничных мышц и камня почки (симультанная операция)",
+"en": "Simultaneous removal of a bullet from the lumbar muscles and a kidney stone (simultaneous operation)"
+},
+{
+"slug": "jcpm-2024",
+"order": 63,
+"ru": "Лапароскопическое лечение больных мочекаменной болезнью",
+"en": "Laparoscopic treatment of patients with urolithiasis"
+},
+{
+"slug": "jcpm-2024",
+"order": 64,
+"ru": "Отдаленные результаты резекции мочевого пузыря с опухолью при мышечно-инвазивном и осложненных формах рака",
+"en": "Long-term results of bladder resection with a tumor in muscle-invasive and complicated forms of cancer"
+},
+{
+"slug": "jcpm-2024",
+"order": 65,
+"ru": "Влияние легирования цинком на структурные свойства магниевых сплавов, предназначенных для изготовления стентов в урологии",
+"en": "The effect of zinc alloying on the structural properties of magnesium alloys intended for the manufacture of urological stents"
+},
+{
+"slug": "jcpm-2024",
+"order": 66,
+"ru": "Мочекаменная болезнь",
+"en": "Urolithiasis"
+},
+{
+"slug": "jcpm-2024",
+"order": 67,
+"ru": "Рискогенные факторы возникновения инкрустирующего цистита и принципы к таргетной терапии",
+"en": "Risk factors for the occurrence of encrusting cystitis and principles of targeted therapy"
+},
+{
+"slug": "jcpm-2024",
+"order": 68,
+"ru": "Сравнительная оценка трансабдоминальной и трансректальной ультрасогорафии при определении объема простаты",
+"en": "Comparative assessment of transabdominal and transrectal ultrasonography in determining prostate volume"
+},
+{
+"slug": "jcpm-2024",
+"order": 70,
+"ru": "Динамики реактивной и личностной тревожности у медицинских работников в период первой и второй волны эпидемии COVID-19 в Кыргызстане",
+"en": "Dynamics of reactive and personal anxiety in healthcare workers during the first and second waves of the COVID-19 epidemic in Kyrgyzstan"
+},
+{
+"slug": "jcpm-2024",
+"order": 73,
+"ru": "Эффективность экстренного вмешательства при переломе полового члена",
+"en": "Effectiveness of emergency intervention for penile fracture"
+},
+{
+"slug": "jcpm-2024",
+"order": 74,
+"ru": "Генетические особенности Q гетерохроматиновых областей у людей, адаптирующихся к экстремальным климатическим условиям",
+"en": "Genetic features of the Q heterochromatin regions in people adapting to extreme climatic conditions"
+},
+{
+"slug": "jcpm-2024",
+"order": 75,
+"ru": "Современные взгляды на раннюю диагностику рака предстательной железы",
+"en": "Modern views on the early diagnosis of prostate cancer"
+},
+{
+"slug": "jcpm-2024",
+"order": 77,
+"ru": "Показатели общего анализа крови как предикторы развития синдрома системного воспалительного ответа после пер",
+"en": "Complete blood count parameters as predictors of the development of systemic inflammatory response syndrome after per…"
+},
+{
+"slug": "jcpm-2025",
+"order": 1,
+"ru": "Нутритивная поддержка детей с врожденными пороками сердца при внебольничной пневмонии",
+"en": "Nutritional support for children with congenital heart defects in community-acquired pneumonia"
+},
+{
+"slug": "jcpm-2025",
+"order": 2,
+"ru": "Наш опыт применения ингибиторов CDK4/6 в терапии метастатического рака молочной железы",
+"en": "Our experience of using CDK4/6 inhibitors in the treatment of metastatic breast cancer"
+},
+{
+"slug": "jcpm-2025",
+"order": 3,
+"ru": "Тромбоэмболия легочной артерии: клиника и прогностические факторы",
+"en": "Pulmonary embolism: clinical picture and prognostic factors"
+},
+{
+"slug": "jcpm-2025",
+"order": 4,
+"ru": "Особенности изменения цитокинов и протеаз в составе ekccudatob ожоговых ран 2 и 3 степени в эксперименте у крыс",
+"en": "Features of changes in cytokines and proteases in the exudates of grade 2 and 3 burn wounds in an experiment in rats"
+},
+{
+"slug": "jcpm-2025",
+"order": 5,
+"ru": "Антитела к NR2 пептиду как биомаркер ишемического инсульта",
+"en": "Antibodies to the NR2 peptide as a biomarker of ischemic stroke"
+},
+{
+"slug": "jcpm-2025",
+"order": 6,
+"ru": "Патоморфология ткани селезонки при остром вторичном перитоните",
+"en": "Pathomorphology of splenic tissue in acute secondary peritonitis"
+},
+{
+"slug": "jcpm-2025",
+"order": 8,
+"ru": "К вопросу изучения обзора литератур по эпидимиологии антифосфолипидного синдрома",
+"en": "On the study of the literature review on the epidemiology of antiphospholipid syndrome"
+},
+{
+"slug": "jcpm-2025",
+"order": 9,
+"ru": "Биосинтезированные наночастицы оксида цинка для лечения дерматитов:патогенез, морфология, микробиология и перспективы применения",
+"en": "Biosynthesized zinc oxide nanoparticles for the treatment of dermatitis: pathogenesis, morphology, microbiology and prospects of application"
+},
+{
+"slug": "jcpm-2025",
+"order": 10,
+"ru": "PATOGEHETIChECKIE, ELEKTPOHHO-MIKPOCKOPIChECKIE,MIKPOBIOLOGIChECKIE I PATOMOPFOPLOGIChECKIE acpekti HAHOChACTITsI okcida TsIHKA для LEChEHIYa depmatitob",
+"en": "Pathogenetic, electron-microscopic, microbiological and pathomorphological aspects of zinc oxide nanoparticles for the treatment of dermatitis"
+},
+{
+"slug": "jcpm-2025",
+"order": 12,
+"ru": "Эффективность существующих методов лечения иммунологического бесплодия",
+"en": "Effectiveness of existing methods of treating immunological infertility"
+},
+{
+"slug": "jcpm-2025",
+"order": 13,
+"ru": "Мрт-характеристика структурных изменений головного мозга у пациентов с мигренозным инсультом",
+"en": "MRI characteristics of structural changes in the brain in patients with migrainous stroke"
+},
+{
+"slug": "jcpm-2025",
+"order": 14,
+"ru": "Профилактика остеопороза у женщин в менопаузе с ревматическими заболеваниями",
+"en": "Prevention of osteoporosis in menopausal women with rheumatic diseases"
+},
+{
+"slug": "jcpm-2025",
+"order": 15,
+"ru": "Иммуногистохимические особенности приобретённых дермальных макулярных гиперпигментаций",
+"en": "Immunohistochemical features of acquired dermal macular hyperpigmentation"
+},
+{
+"slug": "jcpm-2025",
+"order": 16,
+"ru": "Изучение технологического процесса и выявление вредных факторов цеха по производству эмали",
+"en": "A study of the technological process and identification of harmful factors in an enamel production shop"
+},
+{
+"slug": "jcpm-2025",
+"order": 17,
+"ru": "Вспомогательные репродуктивные технологии в Ферганской области и влияние их на перинатальные исходы",
+"en": "Assisted reproductive technologies in the Fergana region and their effect on perinatal outcomes"
+},
+{
+"slug": "jcpm-2025",
+"order": 18,
+"ru": "Комплексная модель прогнозирования исхода инсульта: интеграция клинико-неврологических, биохимических и нейровизуализационных параметров",
+"en": "A comprehensive model for predicting stroke outcome: integration of clinical-neurological, biochemical and neuroimaging parameters"
+},
+{
+"slug": "jcpm-2025",
+"order": 19,
+"ru": "Динамика показателей диффузионно-взвешенной МРТ при различных подтипах ишемического инсульта",
+"en": "Dynamics of diffusion-weighted MRI parameters in various subtypes of ischemic stroke"
+},
+{
+"slug": "jcpm-2025",
+"order": 20,
+"ru": "Ультразвуковые особенности церебральной гемодинамики при мигренозном инсульте и мигрени с аурой",
+"en": "Ultrasound features of cerebral hemodynamics in migrainous stroke and migraine with aura"
+},
+{
+"slug": "jcpm-2025",
+"order": 21,
+"ru": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами",
+"en": "Biochemical changes in glutamate dehydrogenase activity and blood glucose level under pesticide exposure"
+},
+{
+"slug": "jcpm-2025",
+"order": 22,
+"ru": "Вопросы организации хирургической помощи на передовых этапах медицинской эвакуации при неогнестрельных ранениях мягких тканей у военнослужащих",
+"en": "Issues of organizing surgical care at the forward stages of medical evacuation in non-gunshot soft-tissue wounds in military personnel"
+},
+{
+"slug": "jcpm-2025",
+"order": 24,
+"ru": "Современные методы диагностики и лечения хеликобактерной инфекции",
+"en": "Modern methods of diagnosis and treatment of Helicobacter infection"
+},
+{
+"slug": "jcpm-2025",
+"order": 25,
+"ru": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы",
+"en": "Acetylation type and a study of the effect of herbal preparations on the cells of the immune system"
+},
+{
+"slug": "jcpm-2025",
+"order": 26,
+"ru": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии",
+"en": "A study of the effect of herbal preparations on immunogenesis in animals with the acetylation type in experimental hemolytic anemia"
+},
+{
+"slug": "jcpm-2025",
+"order": 27,
+"ru": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях",
+"en": "Hygienic assessment of the development and morbidity of children in preschool educational institutions"
+},
+{
+"slug": "jcpm-2025",
+"order": 30,
+"ru": "Особенности хирургической коррекции рецидивных блефароптозов",
+"en": "Features of surgical correction of recurrent blepharoptosis"
+},
+{
+"slug": "jcpm-2025",
+"order": 36,
+"ru": "Оксидативный стресс в патогенезе язвенной болезни желудка",
+"en": "Oxidative stress in the pathogenesis of gastric ulcer"
+},
+{
+"slug": "jcpm-2025",
+"order": 37,
+"ru": "Целесообразность операции варикоцеле у детей: факты и рекомендации врача",
+"en": "Advisability of varicocele surgery in children: facts and a physician's recommendation"
+},
+{
+"slug": "jcpm-2025",
+"order": 39,
+"ru": "Изучение факторов риска развития заболеваний щитовидной железы у женщин с метаболическим синдромом",
+"en": "A study of risk factors for the development of thyroid diseases in women with metabolic syndrome"
+},
+{
+"slug": "jcpm-2025",
+"order": 40,
+"ru": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики",
+"en": "An integrative approach to teaching pediatrics with an emphasis on clinical cases: ways to improve the methodology"
+},
+{
+"slug": "jcpm-2025",
+"order": 42,
+"ru": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций",
+"en": "Modern methods of preventing purulent complications in children after abdominal operations"
+},
+{
+"slug": "jcpm-2025",
+"order": 46,
+"ru": "Современные методы диагностики и лечения хеликобактерной инфекции",
+"en": "Modern methods of diagnosis and treatment of Helicobacter infection"
+},
+{
+"slug": "jcpm-2025",
+"order": 47,
+"ru": "Тип ацетилирования и изучение влияния растительных препаратов на клетки иммунной системы",
+"en": "Acetylation type and a study of the effect of herbal preparations on the cells of the immune system"
+},
+{
+"slug": "jcpm-2025",
+"order": 48,
+"ru": "Изучение влияния препаратов растительного происхождения на иммуногенез у животных с типом ацетилирования при экспериментальной гемолитической анемии",
+"en": "A study of the effect of herbal preparations on immunogenesis in animals with the acetylation type in experimental hemolytic anemia"
+},
+{
+"slug": "jcpm-2025",
+"order": 49,
+"ru": "Гигиеническая оценка развития и заболеваемости детей в дошкольных образовательных учреждениях",
+"en": "Hygienic assessment of the development and morbidity of children in preschool educational institutions"
+},
+{
+"slug": "jcpm-2025",
+"order": 50,
+"ru": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности",
+"en": "The state of perinatal deaths in the Fergana region during 2024 and their features"
+},
+{
+"slug": "jcpm-2025",
+"order": 51,
+"ru": "Особенности хирургической коррекции рецидивных блефароптозов",
+"en": "Features of surgical correction of recurrent blepharoptosis"
+},
+{
+"slug": "jcpm-2025",
+"order": 54,
+"ru": "Современные тенденции совершенствования организации хирургической помощи при минно-взрывных ранениях в системе медицинского обеспечения войск",
+"en": "Modern trends in improving the organization of surgical care for mine-blast injuries in the system of medical support of troops"
+},
+{
+"slug": "jcpm-2025",
+"order": 57,
+"ru": "Интегративный подход в преподавании педиатрии с акцентом на клинические случаи: пути совершенствования методики",
+"en": "An integrative approach to teaching pediatrics with an emphasis on clinical cases: ways to improve the methodology"
+},
+{
+"slug": "jcpm-2025",
+"order": 58,
+"ru": "Определение морфологических и морфометрических изменений в миокарде и проводящих путях при остром коронарном синдроме",
+"en": "Determination of morphological and morphometric changes in the myocardium and conduction pathways in acute coronary syndrome"
+},
+{
+"slug": "jcpm-2025",
+"order": 59,
+"ru": "Основы профилактики инвалидности у детей раннего возраста и развитие службы раннего вмешательства в амбулаторных условиях",
+"en": "Basics of preventing disability in children of early age and development of the early intervention service in outpatient settings"
+},
+{
+"slug": "jcpm-2025",
+"order": 60,
+"ru": "Биохимические изменения активности глутаматдегидрогеназы и уровня глюкозы в крови РПИ кэспозици и е пстицидами",
+"en": "Biochemical changes in glutamate dehydrogenase activity and blood glucose level under pesticide exposure"
+},
+{
+"slug": "jcpm-2025",
+"order": 62,
+"ru": "Повышение точности прогнозирования преэклампсии у беременных с ожирением и избыточной массой тела на основе адипокин-зависимых биомаркеров",
+"en": "Improving the accuracy of predicting preeclampsia in pregnant women with obesity and overweight based on adipokine-dependent biomarkers"
+},
+{
+"slug": "jcpm-2025",
+"order": 63,
+"ru": "Ожирение как фактор риска преэклампсии у беременных женщин",
+"en": "Obesity as a risk factor for preeclampsia in pregnant women"
+}
+]
