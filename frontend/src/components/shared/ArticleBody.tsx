@@ -38,7 +38,7 @@ function PictureRow({ pictures }: { pictures: Picture[] }) {
   if (pictures.length === 1) return <figure className={pictures[0].tall ? "article-single article-tall" : "article-single"}><PictureImg picture={pictures[0]} width={1200} /></figure>;
   return (
     <div className="article-gallery">
-      {pictures.map((picture, index) => <Figure key={picture.src} picture={picture} width={index === 0 && pictures.length % 2 === 1 ? 1200 : 900} />)}
+      {pictures.map((picture, index) => <Figure key={`${index}-${picture.src}`} picture={picture} width={index === 0 && pictures.length % 2 === 1 ? 1200 : 900} />)}
     </div>
   );
 }
@@ -138,7 +138,7 @@ function SectionView({ section }: { section: Section }) {
             <section className={section.lead ? "article-split article-split--lead" : "article-split"}>
               <div>{drawBlocks(beside)}</div>
               <div className="article-aside">
-                {section.pictures.map((picture) => <Figure key={picture.src} picture={picture} />)}
+                {section.pictures.map((picture, index) => <Figure key={`${index}-${picture.src}`} picture={picture} />)}
               </div>
             </section>
             {drawBlocks(below)}

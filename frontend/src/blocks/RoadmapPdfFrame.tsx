@@ -10,13 +10,31 @@ const VIEWER_SETTLE_MS = 1500;
 // if the frame's load event never comes (blocked, offline), show whatever is there rather than a blank box
 const GIVE_UP_MS = 10000;
 
+// Phones and tablets cannot show a PDF inside a frame (iOS shows the first page only, Android Chrome a blank box with
+// a download prompt), so there the card with its two buttons (open, download) is all the visitor gets.
+const NO_INLINE_PDF = "(max-width: 767px), (pointer: coarse)";
+
+function useCannotShowPdfInline(): boolean {
+  const [cannot, setCannot] = useState(() => typeof window !== "undefined" && window.matchMedia(NO_INLINE_PDF).matches);
+  useEffect(() => {
+    const query = window.matchMedia(NO_INLINE_PDF);
+    const update = () => setCannot(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+  return cannot;
+}
+
 export function PdfViewer({ src, title }: { src: string; title: string }) {
   const { t } = useTranslation();
+  const cannotShowInline = useCannotShowPdfInline();
   const [ready, setReady] = useState(false);
   const [available, setAvailable] = useState<boolean | null>(null);
   const timers = useRef<number[]>([]);
 
   useEffect(() => {
+    if (cannotShowInline) return;
     const url = new URL(src, window.location.href);
     if (url.origin !== window.location.origin) {
       setAvailable(true);
@@ -33,7 +51,7 @@ export function PdfViewer({ src, title }: { src: string; title: string }) {
         if (!controller.signal.aborted) setAvailable(false);
       });
     return () => controller.abort();
-  }, [src]);
+  }, [src, cannotShowInline]);
 
   useEffect(() => {
     if (!available) return;
@@ -43,7 +61,7 @@ export function PdfViewer({ src, title }: { src: string; title: string }) {
     return () => pending.forEach((timer) => window.clearTimeout(timer));
   }, [available]);
 
-  if (available !== true) return null;
+  if (cannotShowInline || available !== true) return null;
 
   return (
     <div className="cms-roadmap-pdf__frame">
