@@ -1,0 +1,581 @@
+{
+ "ishga-joylashish-uchun-hujjatlari|blocks": [
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Tashkilot va oliy taʻlim muassasasiga ishga kirish uchun topshiriladigan hujjatlar roʻyxati",
+     "level": 2
+    },
+    "ru": {
+     "text": "Перечень документов, необходимых для приёма на работу в организации и высшие образовательные учреждения",
+     "level": 2
+    },
+    "en": {
+     "text": "List of documents required for employment in companies and higher education institutions",
+     "level": 2
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "[Rahbar nomiga ariza](https://fermi.uz/media/migrated/img/yangilikar/Karyera%20markazi/ariza.pdf)",
+      "Pasport (shaxsan koʻrsatiladi) — 3 ta nusxa",
+      "[Soʻrovnoma](https://www.sammi.uz/frontend/web/upload/content-files/61933c673b071.pdf)",
+      "[Tarjimai hol (avtobiografiya)](https://www.sammi.uz/frontend/web/upload/content-files/61933ca358d69.pdf)",
+      "Mehnat daftarchasi",
+      "Diplomlar (bakalavr, magistratura) shaxsan koʻrsatiladi va 1 tadan nusxa",
+      "Guvohnomalar (internatura, klinik ordinatura, ilmiy daraja va unvon, malaka oshirish — oxirgi 5 yilda, malakaviy toifa sertifikati, litsenziyalar nusxalari va shu kabi hujjatlar)",
+      "[Rangli foto 3x4 sm, 6 dona](https://www.sammi.uz/frontend/web/upload/content-files/6193398121ba1.pdf) (oxirgi 3 oyda olingan: erkaklar kostyum va galstukda, ayollar — sochlari yigʻilgan, ortiqcha taqinchoqlarsiz, ish uslubida)",
+      "[Harbiy guvohnoma](https://www.sammi.uz/frontend/web/upload/content-files/61933cfe5271c.jpg)",
+      "Pensiya daftarchasi nusxasi",
+      "STIR (9 raqamli)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "[Заявление на имя руководителя](https://fermi.uz/media/migrated/img/yangilikar/Karyera%20markazi/ariza.pdf)",
+      "Паспорт (предъявляется лично) — 3 экз.",
+      "[Анкета](https://www.sammi.uz/frontend/web/upload/content-files/61933c673b071.pdf)",
+      "[Биография (автобиография)](https://www.sammi.uz/frontend/web/upload/content-files/61933ca358d69.pdf)",
+      "Трудовая книжка",
+      "Дипломы (бакалавр, магистр) предъявляются лично и по 1 копии",
+      "Свидетельства (интернатура, клиническая ординатура, учёная степень и звание, повышение квалификации — за последние 5 лет, сертификат квалификационной категории, копии лицензий и т. п.)",
+      "[Цветное фото 3×4, 6 шт.](https://www.sammi.uz/frontend/web/upload/content-files/6193398121ba1.pdf) (снято за последние 3 месяца: мужчины — в костюме и галстуке, женщины — с собранными волосами, без лишних украшений, в деловом стиле)",
+      "[Военный билет](https://www.sammi.uz/frontend/web/upload/content-files/61933cfe5271c.jpg)",
+      "Копия пенсионной книжки",
+      "ИНН (9 цифр)"
+     ]
+    },
+    "en": {
+     "items": [
+      "[Application addressed to the head](https://fermi.uz/media/migrated/img/yangilikar/Karyera%20markazi/ariza.pdf)",
+      "Passport (presented in person) — 3 copies",
+      "[Questionnaire](https://www.sammi.uz/frontend/web/upload/content-files/61933c673b071.pdf)",
+      "[CV (autobiography)](https://www.sammi.uz/frontend/web/upload/content-files/61933ca358d69.pdf)",
+      "Workbook",
+      "Diplomas (bachelor’s, master’s) are presented in person, with 1 copy of each",
+      "Certificates (internship, clinical residency, academic degree and title, advanced training — for the last 5 years, certificate of qualification category, copies of licences, etc.)",
+      "[Colour photo 3×4, 6 pieces](https://www.sammi.uz/frontend/web/upload/content-files/6193398121ba1.pdf) (taken in the last 3 months: men in a suit and tie, women with their hair tied back, without extra jewellery — business style)",
+      "[Military certificate](https://www.sammi.uz/frontend/web/upload/content-files/61933cfe5271c.jpg)",
+      "A copy of the pension book",
+      "Taxpayer ID — INN (9 digits)"
+     ]
+    }
+   }
+  }
+ ],
+ "texnikum-bituruvchilari|blocks": [
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Texnikum bitiruvchilarini oliy taʻlim muassasalariga qabul qilish"
+    },
+    "ru": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Приём выпускников техникумов в высшие учебные заведения"
+    },
+    "en": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Admission of technical college graduates to higher education institutions"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Texnikum bitiruvchilarini suhbat asosida oliy taʻlim muassasalari bakalavriatiga 2-kursdan oʻqishga qabul qilish boʻyicha roʻyxatdan oʻtkazish 2025-yil 5-iyuldan [my.edu.uz](http://my.edu.uz/) portali orqali amalga oshirilmoqda."
+    },
+    "ru": {
+     "text": "Регистрация выпускников техникумов на 2-й курс бакалавриата высших учебных заведений на основе собеседования осуществляется с 5 июля 2025 года через портал [my.edu.uz](http://my.edu.uz/)."
+    },
+    "en": {
+     "text": "Registration of technical college graduates for the 2nd year of bachelor’s programmes of higher education institutions on the basis of an interview is carried out from July 5, 2025 through the [my.edu.uz](http://my.edu.uz/) portal."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Qabul 2025-yilning 25-iyuliga qadar davom etadi."
+    },
+    "ru": {
+     "text": "Приём продлится до 25 июля 2025 года."
+    },
+    "en": {
+     "text": "Admission lasts until July 25, 2025."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Roʻyxatdan oʻtishda abituriyent toʻgʻrisidagi maʻlumotlar platformada avtomatik shakllanadi."
+    },
+    "ru": {
+     "text": "При регистрации сведения об абитуриенте формируются на платформе автоматически."
+    },
+    "en": {
+     "text": "During registration, information about the applicant is generated automatically on the platform."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Eslatma: ushbu tartib oliy harbiy, oliy harbiylashtirilgan taʻlim muassasalariga, Toshkent davlat yuridik universitetiga, Oʻzbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy taʻlim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi."
+    },
+    "ru": {
+     "text": "Обратите внимание: данный порядок не распространяется на высшие военные, высшие военизированные учебные заведения, Ташкентский государственный юридический университет, иностранные и негосударственные организации высшего образования, действующие на территории Узбекистана, и их филиалы."
+    },
+    "en": {
+     "text": "Note: this procedure does not apply to higher military and higher paramilitary educational institutions, Tashkent State University of Law, foreign and non-state higher education organisations operating in Uzbekistan and their branches."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Fargʻona jamoat salomatligi tibbiyot instituti tibbiyot texnikumlari",
+     "level": 3
+    },
+    "ru": {
+     "text": "Медицинские техникумы Ферганского медицинского института общественного здоровья",
+     "level": 3
+    },
+    "en": {
+     "text": "Medical colleges of the Fergana Medical Institute of Public Health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "[Fargʻona shahar tibbiyot texnikumi](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1-Margʻilon tibbiyot texnikumi](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2-Margʻilon tibbiyot texnikumi](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Qoʻqon tibbiyot texnikumi](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Quva tibbiyot texnikumi](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Buvayda tibbiyot texnikumi](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Fargʻona tuman tibbiyot texnikumi](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Rishton tibbiyot texnikumi](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Beshariq tibbiyot texnikumi](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "[Ферганский городской медицинский техникум](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1-й Маргиланский медицинский техникум](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2-й Маргиланский медицинский техникум](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Кокандский медицинский техникум](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Кувинский медицинский техникум](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Бувайдинский медицинский техникум](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Ферганский районный медицинский техникум](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Риштанский медицинский техникум](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Бешарыкский медицинский техникум](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    },
+    "en": {
+     "items": [
+      "[Fergana city medical college](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1st Margilan medical college](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2nd Margilan medical college](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Kokand medical college](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Quva medical college](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Buvayda medical college](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Fergana district medical college](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Rishton medical college](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Beshariq medical college](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Vazirlar Mahkamasining qarori",
+     "level": 3
+    },
+    "ru": {
+     "text": "Постановление Кабинета Министров Республики Узбекистан",
+     "level": 3
+    },
+    "en": {
+     "text": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni suhbat asosida oliy taʻlim muassasalarining bakalavriat taʻlim yoʻnalishlarida oʻqishga qabul qilish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida"
+    },
+    "ru": {
+     "text": "Об утверждении Положения о порядке приёма успешно окончивших техникумы выпускников на обучение по направлениям образования бакалавриата высших образовательных учреждений на основе собеседования"
+    },
+    "en": {
+     "text": "On approval of the Regulation on the procedure for admitting successful technical college graduates to bachelor’s degree programmes of higher education institutions on the basis of an interview"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Hujjatning matni [oʻzbek tilida](https://lex.uz/docs/5818575) keltirilgan."
+    },
+    "ru": {
+     "text": "Текст акта приводится на [узбекском языке](https://lex.uz/docs/5818575)."
+    },
+    "en": {
+     "text": "The text of the act is given in [Uzbek](https://lex.uz/docs/5818575)."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Asl matn havolasini bosib, tizim menyusidagi «Onlayn tarjima» xizmati (norasmiy tarjima) orqali hujjat bilan rus va boshqa tillarda tanishishingiz mumkin."
+    },
+    "ru": {
+     "text": "Нажав на ссылку оригинального текста, вы можете ознакомиться с документом на русском и других языках, воспользовавшись услугой «Онлайн-перевод» (неофициальный перевод) в системном меню."
+    },
+    "en": {
+     "text": "By clicking the link of the original text, you can read the document in Russian and other languages using the “Online translation” service (unofficial translation) in the system menu."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Oʻzbekiston Respublikasi Bosh vaziri A. ARIPOV"
+    },
+    "ru": {
+     "text": "Премьер-министр Республики Узбекистан А. АРИПОВ"
+    },
+    "en": {
+     "text": "Prime Minister of the Republic of Uzbekistan A. ARIPOV"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Toshkent shahri, 2022-yil 11-yanvar, 17-son"
+    },
+    "ru": {
+     "text": "г. Ташкент, 11 января 2022 г., № 17"
+    },
+    "en": {
+     "text": "Tashkent, January 11, 2022, No. 17"
+    }
+   }
+  }
+ ],
+ "tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|blocks": [
+  {
+   "block_type": "image",
+   "data": {
+    "uz": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Texnikum bitiruvchilarini oliy taʻlim muassasalariga qabul qilish"
+    },
+    "ru": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Приём выпускников техникумов в высшие учебные заведения"
+    },
+    "en": {
+     "media": "migrated/img/fotogallery/QABUL-2024/Texnikum-2024.jpg",
+     "alt": "Admission of technical college graduates to higher education institutions"
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Texnikum bitiruvchilari OTMlarga 2-kursdan qabul qilish uchun roʻyxatdan oʻtkazilmoqda",
+     "level": 3
+    },
+    "ru": {
+     "text": "Выпускники техникумов регистрируются для поступления в вузы со 2-го курса",
+     "level": 3
+    },
+    "en": {
+     "text": "Technical college graduates are being registered for admission to higher education institutions from the 2nd year",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Texnikum bitiruvchilarini suhbat asosida oliy taʻlim muassasalari bakalavriatiga 2-kursdan oʻqishga qabul qilish boʻyicha roʻyxatdan oʻtkazish 5-iyuldan [my.edu.uz](http://my.edu.uz/) portali orqali amalga oshirilmoqda."
+    },
+    "ru": {
+     "text": "Регистрация выпускников техникумов на 2-й курс бакалавриата высших учебных заведений на основе собеседования осуществляется с 5 июля через портал [my.edu.uz](http://my.edu.uz/)."
+    },
+    "en": {
+     "text": "Registration of technical college graduates for the 2nd year of bachelor’s programmes of higher education institutions on the basis of an interview is carried out from July 5 through the [my.edu.uz](http://my.edu.uz/) portal."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Qabul 25-iyulga qadar davom etadi."
+    },
+    "ru": {
+     "text": "Приём продлится до 25 июля."
+    },
+    "en": {
+     "text": "Admission lasts until July 25."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Roʻyxatdan oʻtishda abituriyent toʻgʻrisidagi maʻlumotlar platformada avtomatik shakllanadi."
+    },
+    "ru": {
+     "text": "При регистрации сведения об абитуриенте формируются на платформе автоматически."
+    },
+    "en": {
+     "text": "During registration, information about the applicant is generated automatically on the platform."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Eslatma: ushbu tartib oliy harbiy, oliy harbiylashtirilgan taʻlim muassasalariga, Toshkent davlat yuridik universitetiga, Oʻzbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy taʻlim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi."
+    },
+    "ru": {
+     "text": "Обратите внимание: данный порядок не распространяется на высшие военные, высшие военизированные учебные заведения, Ташкентский государственный юридический университет, иностранные и негосударственные организации высшего образования, действующие на территории Узбекистана, и их филиалы."
+    },
+    "en": {
+     "text": "Note: this procedure does not apply to higher military and higher paramilitary educational institutions, Tashkent State University of Law, foreign and non-state higher education organisations operating in Uzbekistan and their branches."
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Fargʻona jamoat salomatligi tibbiyot instituti tibbiyot texnikumlari",
+     "level": 3
+    },
+    "ru": {
+     "text": "Медицинские техникумы Ферганского медицинского института общественного здоровья",
+     "level": 3
+    },
+    "en": {
+     "text": "Medical colleges of the Fergana Medical Institute of Public Health",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "list",
+   "data": {
+    "uz": {
+     "items": [
+      "[Fargʻona shahar tibbiyot texnikumi](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1-Margʻilon tibbiyot texnikumi](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2-Margʻilon tibbiyot texnikumi](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Qoʻqon tibbiyot texnikumi](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Quva tibbiyot texnikumi](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Buvayda tibbiyot texnikumi](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Fargʻona tuman tibbiyot texnikumi](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Rishton tibbiyot texnikumi](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Beshariq tibbiyot texnikumi](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    },
+    "ru": {
+     "items": [
+      "[Ферганский городской медицинский техникум](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1-й Маргиланский медицинский техникум](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2-й Маргиланский медицинский техникум](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Кокандский медицинский техникум](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Кувинский медицинский техникум](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Бувайдинский медицинский техникум](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Ферганский районный медицинский техникум](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Риштанский медицинский техникум](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Бешарыкский медицинский техникум](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    },
+    "en": {
+     "items": [
+      "[Fergana city medical college](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[1st Margilan medical college](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[2nd Margilan medical college](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Kokand medical college](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Quva medical college](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Buvayda medical college](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Fergana district medical college](/blog/337/fargona-tumani-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Rishton medical college](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)",
+      "[Beshariq medical college](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)"
+     ]
+    }
+   }
+  },
+  {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "Vazirlar Mahkamasining qarori",
+     "level": 3
+    },
+    "ru": {
+     "text": "Постановление Кабинета Министров Республики Узбекистан",
+     "level": 3
+    },
+    "en": {
+     "text": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan",
+     "level": 3
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Texnikumlarni muvaffaqiyatli tamomlagan bitiruvchilarni suhbat asosida oliy taʻlim muassasalarining bakalavriat taʻlim yoʻnalishlarida oʻqishga qabul qilish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida"
+    },
+    "ru": {
+     "text": "Об утверждении Положения о порядке приёма успешно окончивших техникумы выпускников на обучение по направлениям образования бакалавриата высших образовательных учреждений на основе собеседования"
+    },
+    "en": {
+     "text": "On approval of the Regulation on the procedure for admitting successful technical college graduates to bachelor’s degree programmes of higher education institutions on the basis of an interview"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Hujjatning matni [oʻzbek tilida](https://lex.uz/docs/5818575) keltirilgan."
+    },
+    "ru": {
+     "text": "Текст акта приводится на [узбекском языке](https://lex.uz/docs/5818575)."
+    },
+    "en": {
+     "text": "The text of the act is given in [Uzbek](https://lex.uz/docs/5818575)."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Asl matn havolasini bosib, tizim menyusidagi «Onlayn tarjima» xizmati (norasmiy tarjima) orqali hujjat bilan rus va boshqa tillarda tanishishingiz mumkin."
+    },
+    "ru": {
+     "text": "Нажав на ссылку оригинального текста, вы можете ознакомиться с документом на русском и других языках, воспользовавшись услугой «Онлайн-перевод» (неофициальный перевод) в системном меню."
+    },
+    "en": {
+     "text": "By clicking the link of the original text, you can read the document in Russian and other languages using the “Online translation” service (unofficial translation) in the system menu."
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Oʻzbekiston Respublikasi Bosh vaziri A. ARIPOV"
+    },
+    "ru": {
+     "text": "Премьер-министр Республики Узбекистан А. АРИПОВ"
+    },
+    "en": {
+     "text": "Prime Minister of the Republic of Uzbekistan A. ARIPOV"
+    }
+   }
+  },
+  {
+   "block_type": "paragraph",
+   "data": {
+    "uz": {
+     "text": "Toshkent shahri, 2022-yil 11-yanvar, 17-son"
+    },
+    "ru": {
+     "text": "г. Ташкент, 11 января 2022 г., № 17"
+    },
+    "en": {
+     "text": "Tashkent, January 11, 2022, No. 17"
+    }
+   }
+  }
+ ],
+ "klinik-ordinatura-qabul-nizomi|18|uz": "Umumiy oʻrinlar — shartnoma tuzmasdan, tanlov asosida.",
+ "klinik-ordinatura-qabul-nizomi|19|uz": "Maqsadli oʻrinlar asosan shu hududdan kelgan nomzodlar orasida taqsimlanadi.",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|7|en": "These dormitories are home not only to students from Uzbekistan but also to foreign students of the institute. At present, citizens of the following countries study and live here:",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|8|en": "1 — United States of America,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|9|ru": "1 — Нигерия,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|9|en": "1 — Nigeria,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|10|ru": "2 — Российская Федерация,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|11|ru": "5 — Республика Таджикистан,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|11|en": "5 — Republic of Tajikistan,",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|15|ru": "28 — Кыргызская Республика",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|15|en": "28 — Kyrgyz Republic",
+ "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|19|en": "There are washrooms on all floors for students, supplied with hot water. Modern heating systems are installed in the buildings, which makes it possible to maintain a comfortable temperature all year round.",
+ "magistratura-qabul-hujjatlari-toplami|5|uz": "Hujjatlar 1-iyuldan 31-iyulgacha qabul qilinadi.",
+ "magistratura-qabul-hujjatlari-toplami|5|ru": "Документы принимаются с 1 по 31 июля.",
+ "magistratura-qabul-hujjatlari-toplami|6|uz": "Hujjatlarni topshirish jarayonida abituriyentlar pasport va harbiy xizmat hujjatlarini shaxsan koʻrsatadilar.",
+ "magistratura-qabul-hujjatlari-toplami|6|ru": "При подаче документов абитуриенты лично предъявляют паспорт и документы воинского учёта.",
+ "magistratura-qabul-hujjatlari-toplami|7|uz": "Imtihon fanlari roʻyxati",
+ "magistratura-qabul-hujjatlari-toplami|7|ru": "Список экзаменационных предметов",
+ "magistratura-qabul-hujjatlari-toplami|8|uz": "Diplom boʻyicha ball — 100 ball;",
+ "magistratura-qabul-hujjatlari-toplami|8|ru": "Балл по диплому — 100 баллов;",
+ "magistratura-qabul-hujjatlari-toplami|10|uz": "Chet tili testi boʻyicha ball — 100 ball.",
+ "magistratura-qabul-hujjatlari-toplami|10|ru": "Балл по тесту по иностранному языку — 100 баллов.",
+ "magistratura-qabul-hujjatlari-toplami|11|uz": "Chop etilgan maqolalar uchun kirish imtihonlarida ball berilmaydi;",
+ "magistratura-qabul-hujjatlari-toplami|11|ru": "За опубликованные статьи на вступительных экзаменах баллы не начисляются;",
+ "magistrlik-dissertatsiyasi-himoyasi|9|ru": [
+  "Представление актуальности, научной новизны и завершённости магистерской научной работы;",
+  "Представление рецензии за 3 дня до предварительной защиты;",
+  "Нарушения правил профессиональной этики (плагиат, фальсификация данных, изложение ложных положений и т. п.) указываются в рецензии;",
+  "Если магистерская научная работа не отвечает установленным требованиям, магистрантом нарушены правила профессиональной этики (плагиат, фальсификация данных, изложение ложных положений и т. п.), а также рецензент считает невозможным исправление в короткий срок, даётся заключение «магистерская научная работа не допускается к защите»."
+ ],
+ "magistrlik-dissertatsiyasi-himoyasi|10|ru": "Дата защиты магистерской научной работы оформляется по графику и утверждается приказом ректора высшего образовательного учреждения.",
+ "magistrlik-dissertatsiyasi-himoyasi|14|ru": [
+  "Знание актуальности темы магистерской научной работы и её связь с практикой;",
+  "Самостоятельная проверка магистрантами своей работы и подход к решению задачи;",
+  "Глубокий анализ и обобщение статистических данных, нормативно-правовых документов, научных трудов, использованной научной литературы, а также литературы на иностранных языках;",
+  "Обоснованное применение методов исследования на практике;",
+  "Практическая значимость рекомендаций, их разработка на основе полученных результатов;",
+  "Магистранты должны уметь оценивать перспективы проведённых в рамках защиты магистерской научной работы исследований и полученные данные;",
+  "Прослеживание логической связи данных теоретической и практической частей магистерской научной работы."
+ ],
+ "fuqarolar-murojaatlari-statistikasi|0|uz": "Bu rasmiy hujjat boʻlib, asl tilida (oʻzbek tilida) eʻlon qilingan. Rasmiy inglizcha tarjimasi mavjud emas.",
+ "fuqarolar-murojaatlari-statistikasi|0|ru": "Это официальный документ, опубликованный на языке оригинала (узбекском). Официального перевода на русский язык нет.",
+ "fuqarolar-murojaatlari-statistikasi|3|ru": "В Ферганском медицинском институте общественного здоровья одной из основных задач считается безусловное и своевременное исполнение требований Закона Республики Узбекистан «Об обращениях физических и юридических лиц».",
+ "fuqarolar-murojaatlari-statistikasi|4|ru": "Работа по обеспечению безусловного исполнения обращений физических и юридических лиц, поступающих в институт через Виртуальную приёмную и Народную приёмную Президента Республики Узбекистан, веб-сайт, электронную почту, письменно и устно, по телефону доверия, а также по своевременному устранению допущенных недостатков организована на должном уровне. Разрабатываются меры, направленные на систематическое освещение результатов рассмотрения обращений, поступивших через официальный сайт института, социальные сети и другими способами, предусмотренными законодательством. В течение года изучается мнение студентов (анонимные опросы), родителей и общественности о состоянии работы с обращениями в системе медицинского образования, а сведения о его результатах регулярно обсуждаются на заседаниях Учёного совета института и ректората.",
+ "fuqarolar-murojaatlari-statistikasi|5|ru": "Расширение открытости и прозрачности в работе с обращениями физических и юридических лиц находится под личным контролем ректора А. Сидикова. Приём обратившихся организован согласно графику приёма, утверждённому ректором института А. Сидиковым. Приём ответственными лицами по обращениям физических и юридических лиц ведётся по утверждённому графику. В соответствии с Законом Республики Узбекистан «Об обращениях физических и юридических лиц» обращения анализируются, а исполнение обращений критически обсуждается на еженедельных заседаниях ректората института. Обращения, поступившие через официальный веб-сайт Ферганского медицинского института общественного здоровья (fermi.uz), электронный адрес fmioz@mail.ru и телефон доверия (73-243-06-62), систематически рассматриваются ответственными лицами, и авторам в установленные законом сроки направляются полные, обоснованные и подписанные руководителями ответы по каждой проблеме, изложенной в обращении.",
+ "fuqarolar-murojaatlari-statistikasi|6|ru": "Обращения физических и юридических лиц ежеквартально обобщаются, анализируются и в установленном порядке на основе форм отчётности в установленные сроки представляются в Министерство высшего образования, науки и инноваций и Министерство здравоохранения начальником отдела института по работе с обращениями физических и юридических лиц, контролю и мониторингу А. Хусанбоевым (916796110).",
+ "fuqarolar-murojaatlari-statistikasi|8|ru": "В институте установлены регулярное изучение ответственными руководителями состояния приёма граждан и соблюдения исполнительской дисциплины, обсуждение его результатов и постоянный контроль за устранением недостатков."
+}

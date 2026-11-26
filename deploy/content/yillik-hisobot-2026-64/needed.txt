@@ -1,0 +1,241 @@
+### ishga-joylashish-uchun-hujjatlari|1|uz  [heading, from ru]
+1. [Заявление на имя директора](https://fermi.uz/media/migrated/img/yangilikar/Karyera%20markazi/ariza.pdf)
+
+### ishga-joylashish-uchun-hujjatlari|2|uz  [paragraph, from ru]
+2. Паспорт (предъявляется лично) - 3 экз.
+
+### ishga-joylashish-uchun-hujjatlari|3|uz  [heading, from en]
+3. Questionnaire
+
+### ishga-joylashish-uchun-hujjatlari|3|ru  [heading, from en]
+3. Questionnaire
+
+### ishga-joylashish-uchun-hujjatlari|5|uz  [heading, from en]
+5. Workbook
+
+### ishga-joylashish-uchun-hujjatlari|5|ru  [heading, from en]
+5. Workbook
+
+### ishga-joylashish-uchun-hujjatlari|6|uz  [heading, from ru]
+4. [Биография (автобиография)](https://www.sammi.uz/frontend/web/upload/content-files/61933ca358d69.pdf)
+
+### ishga-joylashish-uchun-hujjatlari|7|uz  [paragraph, from en]
+7. Certificate (internship, clinical residency, academic degree and title, advanced training - for the last 5 years, a certificate of qualification category, copies of licenses and e.t.c)
+
+### ishga-joylashish-uchun-hujjatlari|7|ru  [paragraph, from en]
+7. Certificate (internship, clinical residency, academic degree and title, advanced training - for the last 5 years, a certificate of qualification category, copies of licenses and e.t.c)
+
+### ishga-joylashish-uchun-hujjatlari|8|uz  [heading, from en]
+8. Colored photo 3x4 6x (taken in the last 3 months: men in a suit and tie, women - with curly hair, without extra jewelry – working style)
+
+### ishga-joylashish-uchun-hujjatlari|8|ru  [heading, from en]
+8. Colored photo 3x4 6x (taken in the last 3 months: men in a suit and tie, women - with curly hair, without extra jewelry – working style)
+
+### ishga-joylashish-uchun-hujjatlari|9|uz  [heading, from ru]
+5. Трудовая книжка
+
+### ishga-joylashish-uchun-hujjatlari|10|uz  [heading, from en]
+10. A copy of the pension book
+
+### ishga-joylashish-uchun-hujjatlari|10|ru  [heading, from en]
+10. A copy of the pension book
+
+### ishga-joylashish-uchun-hujjatlari|11|uz  [heading, from en]
+11. INT (9 digits)
+
+### ishga-joylashish-uchun-hujjatlari|11|ru  [heading, from en]
+11. INT (9 digits)
+
+### ishga-joylashish-uchun-hujjatlari|12|en  [list, from uz]
+Raxbar nomiga ariza
+Pasport (shaxsan koʻrsatiladi) – 3 ta nusxa
+Soʻrovnoma
+Tarjimai hol (avtobiografiya)
+Mehnat daftarchasi
+Diplomlar (bakalavr, magistratura) shaxsan koʻrsatiladi va 1 tadan nusxa
+Guvohnoma (internatura, klinik ordinatura, ilmiy daraja va unvon, malaka oshirish – oxirgi 5 yilda, malakaviy toifa sertifikati, litsenziyalar va shu kabi hujjatlar nusxalari)
+Rangli foto 3x4 sm 6 tadan (oxirgi 3 oyda olingan: erkaklar kostyum va galstukda, ayollar – sochlari yigʻilgan, ortiqcha taqinchoqlarsiz ish uslubida)
+Harbiy guvohnoma
+Pensiya daftarchasi nusxasi
+STIR (9 raqamli)
+
+### ishga-joylashish-uchun-hujjatlari|13|uz  [heading, from ru]
+9. [Военной билет](https://www.sammi.uz/frontend/web/upload/content-files/61933cfe5271c.jpg)
+
+### ishga-joylashish-uchun-hujjatlari|13|en  [heading, from ru]
+9. [Военной билет](https://www.sammi.uz/frontend/web/upload/content-files/61933cfe5271c.jpg)
+
+### klinik-ordinatura-qabul-nizomi|18|uz  [paragraph, from ru]
+Общие места — на конкурсной основе, без заключения договора.
+
+### klinik-ordinatura-qabul-nizomi|19|uz  [paragraph, from ru]
+Целевые места распределяются преимущественно среди кандидатов из данной территории.
+
+### texnikum-bituruvchilari|3|en  [paragraph, from uz]
+Roʻyxatdan oʻtishda abituriyent toʻgʻrisidagi maʻlumotlar platformada avtomatik shakllanadi.
+
+### texnikum-bituruvchilari|4|en  [paragraph, from uz]
+Eslatma, ushbu tartib oliy harbiy, oliy harbiylashtirilgan taʻlim muassasalariga, Toshkent davlat yuridik universitetiga, Oʻzbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy taʻlim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi.
+
+### texnikum-bituruvchilari|5|en  [heading, from uz]
+Fargona jamoat salomatligi tibbiyot instituti tibbiyot texnikumlari
+
+### texnikum-bituruvchilari|6|en  [heading, from uz]
+[Fargʻona shahar tibbiyot texnikumi](/blog/1967/fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|7|en  [heading, from uz]
+[1-Margʻilon tibbiyot texnikumi](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|8|en  [heading, from uz]
+[2-Margʻilon tibbiyot texnikumi](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|10|en  [heading, from uz]
+[Quva tibbiyot texnikumi](/blog/337/quva-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|11|en  [heading, from uz]
+[Buvayda tibbiyot texnikumi](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|13|en  [heading, from uz]
+[Rishton tibbiyot texnikumi](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### texnikum-bituruvchilari|14|en  [heading, from uz]
+[Beshariq tibbiyot texnikumi](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|4|en  [paragraph, from uz]
+Roʻyxatdan oʻtishda abituriyent toʻgʻrisidagi maʻlumotlar platformada avtomatik shakllanadi.
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|5|en  [paragraph, from uz]
+Eslatma, ushbu tartib oliy harbiy, oliy harbiylashtirilgan taʻlim muassasalariga, Toshkent davlat yuridik universitetiga, Oʻzbekistonda faoliyat olib borayotgan xorijiy va nodavlat oliy taʻlim tashkilotlari hamda ularning filiallariga nisbatan tatbiq etilmaydi.
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|6|en  [heading, from uz]
+Fargʻona jamoat salomatligi tibbiyot instituti tibbiyot texnikumlari
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|7|en  [paragraph, from uz]
+[2-Fargʻona Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/2-fargona-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|8|ru  [paragraph, from uz]
+[1-Margʻilon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|8|en  [paragraph, from uz]
+[1-Margʻilon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|9|en  [paragraph, from uz]
+[2-Margʻilon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/2-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|10|en  [paragraph, from uz]
+[Qoʻqon Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/qoqon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|12|en  [paragraph, from uz]
+[Buvayda Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/buvayda-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|14|en  [paragraph, from uz]
+[Rishton Abu Ali ibn Sino nomidagi jamoat salomatligi texnikumi](/blog/337/rishton-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### tibbiyot-texnikumlari-bitiruvchilari-uchun-qabul-komissiyasi-yangiliklari|15|en  [paragraph, from uz]
+[Beshariq Abu Ali ibn Sino nomidagi Jamoat salomatligi texnikumi](/blog/337/beshariq-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi)
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|7|en  [paragraph, from uz]
+Mazkur turar joylarda institutda tahsil olayotgan nafaqat Oʻzbekiston talabalari, balki xorijlik talabalar ham istiqomat qilishmoqda. Hozirda bu yerda ush fuqarolar tahsil olib, yashab kelmoqdalar:
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|8|en  [paragraph, from uz]
+1 nafar — Amerika Qoʻshma Shtatlari,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|9|ru  [paragraph, from uz]
+1 nafar — Nigeriya,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|9|en  [paragraph, from uz]
+1 nafar — Nigeriya,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|10|ru  [paragraph, from uz]
+2 nafar — Rossiya Federatsiyasi,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|11|ru  [paragraph, from uz]
+5 nafar — Tojikiston Respublikasi,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|11|en  [paragraph, from uz]
+5 nafar — Tojikiston Respublikasi,
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|15|ru  [paragraph, from uz]
+28 nafar — Qirgʻiziston Respublikasi
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|15|en  [paragraph, from uz]
+28 nafar — Qirgʻiziston Respublikasi
+
+### chet-el-talabalari-turar-joyi-togrisidagi-malumotlar|19|en  [paragraph, from uz]
+Talabalar uchun barcha qavatlarda yuvinish xonalari mavjud boʻlib, ular issiq suv bilan taʻminlangan. Binolarda zamonaviy isitish tizimlari oʻrnatilgan, bu esa yil davomida qulay haroratni saqlash imkonini beradi.
+
+### magistratura-qabul-hujjatlari-toplami|5|uz  [paragraph, from en]
+Documents are accepted from 1 July to 31 July.
+
+### magistratura-qabul-hujjatlari-toplami|5|ru  [paragraph, from en]
+Documents are accepted from 1 July to 31 July.
+
+### magistratura-qabul-hujjatlari-toplami|6|uz  [paragraph, from en]
+In the process of submission of documents, applicants personally indicate their passport and military service documents.
+
+### magistratura-qabul-hujjatlari-toplami|6|ru  [paragraph, from en]
+In the process of submission of documents, applicants personally indicate their passport and military service documents.
+
+### magistratura-qabul-hujjatlari-toplami|7|uz  [paragraph, from en]
+List of examination subjects
+
+### magistratura-qabul-hujjatlari-toplami|7|ru  [paragraph, from en]
+List of examination subjects
+
+### magistratura-qabul-hujjatlari-toplami|8|uz  [paragraph, from en]
+-Diploma point-100 points;
+
+### magistratura-qabul-hujjatlari-toplami|8|ru  [paragraph, from en]
+-Diploma point-100 points;
+
+### magistratura-qabul-hujjatlari-toplami|10|uz  [paragraph, from en]
+-Foreign Language test point-100 points.
+
+### magistratura-qabul-hujjatlari-toplami|10|ru  [paragraph, from en]
+-Foreign Language test point-100 points.
+
+### magistratura-qabul-hujjatlari-toplami|11|uz  [paragraph, from en]
+-For published articles, points are not given in entrance exams;
+
+### magistratura-qabul-hujjatlari-toplami|11|ru  [paragraph, from en]
+-For published articles, points are not given in entrance exams;
+
+### magistrlik-dissertatsiyasi-himoyasi|9|ru  [list, from uz]
+Magistrlik ilmiy ishining aktualligi, ilmiy yangiligi va tugatilishini taqdim qilish;
+Dastlabki himoyadan 3-kun oldin taqrizni taqdim qilish;
+Agar kasbga oid etika qoidalari buzilsa, taqrizda kursatiladi (kuchirmachilik, maʻlumotlarni soxtalashtirish, yolgon tekis parchalarini bayon qilish va boshkalar);
+Magistrlik ilmiy ishi belgilangan talablarga javob bermasa, magistratura talabasi tomonidan kasbga oid etika qoidalari buzilsa (kuchirmachilik, maʻlumotlarni soxtalashtirish, yolgon tekis parchalarini bayon qilish va boshkalar), shuningdek takrizchi tomonidan qiska muddat ichida tugrilashning imkoni bulmasa, magistrlik ilmiy ishi himoyaga quyilmasin deb xulosa beriladi.
+
+### magistrlik-dissertatsiyasi-himoyasi|10|ru  [paragraph, from uz]
+Magistrlik ilmiy ishi himoyasi sanasi grafik asosida rasmiylashtiriladi va oliy taʻlim muassasasi rektori buyrugʻi bilan tasdiqlanadi.
+
+### magistrlik-dissertatsiyasi-himoyasi|14|ru  [list, from uz]
+Magistrlik ilmiy ishining mavzusini aktualligini bilish va uning amaliyot bilan bogʻlash.;
+Magistratura talabalarining mustaqil uzi tekshirish va topshirikni echishiga yondoshish;
+Statistik maʻlumotlarni, normativ -xuquqiy hujjatlarni, ilmiy asarlarni, foydalanilgan ilmiy adabiyotlarni, shuningdek chet tilidagi adabiyotlarini chukur analiz qilish va umumlashtirish;
+Amaliyotda tekshirish usullarini asosli qullash;
+Tavsiyalarning amaliy axamiyatga ega bulishi, olingan natijalarga asoslanib ishlab chiqilgan bulishi;
+Magistratura talabalari magistrlik ilmiy ishi himoyasi doirasida oʻtkazilgan tekshirishlar istiqboli va olingan maʻlumotlarni baxolash qobilyatiga ega bulishi lozim;
+Magistrlik ilmiy ishining nazariy va amaliy qismidagi maʻlumotlarini bir biriga mantiqiy boglikligini kuzatib borish.
+
+### fuqarolar-murojaatlari-statistikasi|0|uz  [paragraph, from en]
+This is an official document published in its original language (Uzbek). No official English translation is available.
+
+### fuqarolar-murojaatlari-statistikasi|0|ru  [paragraph, from en]
+This is an official document published in its original language (Uzbek). No official English translation is available.
+
+### fuqarolar-murojaatlari-statistikasi|3|ru  [paragraph, from uz]
+Fargʻona jamoat salomatligi tibbiyot institutida “Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuni talablarini soʻzsiz va oʻz vaqtida bajarish asosiy vazifalaridan biri deb hisoblanadi.
+
+### fuqarolar-murojaatlari-statistikasi|4|ru  [paragraph, from uz]
+Oʻzbekiston Respublikasi Prezidentining Virtual qabulxonasi, Prezident Xalq qabulxonasi, veb-sayt, elektron pochta, yozma va ogʻzaki, ishonch telefoni orqali institutga jismoniy va yuridik shaxslar tomonidan kelib tushayotgan murojaatlarning ijrosi soʻzsiz bajarilishini taʻminlash va yoʻl qoʻyilgan kamchiliklarni oʻz vaqtida bartaraf etish yuzasidan amalga oshirilgan ishlari yetarli darajada tashkil etilmoqda. Institutning rasmiy sayti, ijtimoiy tarmoqlar orqali hamda qonunchilikda belgilangan boshqa yoʻllar bilan yuborilgan murojaatlar koʻrib chiqilishi natijalarini tizimli yoritishni taʻminlashga qaratilgan chora-tadbirlar ishlab chiqilmoqda. Yil davomida tibbiyot taʻlim tizimida murojaatlar bilan ishlashning xolati toʻgʻrisida talabalar (anonim soʻrovnomalar) va ota-onalar, jamoatchilik fikrini oʻrganib borish va ularning natijalari haqida maʻlumotlar institut jamoasini ilmiy kengashi va rektorat yigʻilishlarida muntazam muhokama qilib boriladi.
+
+### fuqarolar-murojaatlari-statistikasi|5|ru  [paragraph, from uz]
+Institutda jismoniy va yuridik shaxslar murojaatlari bilan ishlashda ochiqlik va shaffoflikni yanada kengroq taʻminlash ishlari shaxsan rektor A.Sidikov tomonidan nazorat etiladi. Institut rektori A.Sidikovning murojaatchilarni qabulini tashkil etish jadvaliga asosan qabullar tashkil qilingan. Jismoniy va yuridik shaxslarning murojaatlari boʻyicha maʻsullarning qabullari tasdiqlangan jadval asosida olib borilmoqda. Oʻzbekistan Respublikasi “Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida”gi Qonuniga muvofiq jismoniy va yuridik shaxslarning murojaatlarini tahlil qilinadi va institutning haftalik rektorat yigʻilishlarida murojaatlar ijrosini tanqidiy muhokama etib boriladi. Fargʻona jamoat salomatligi tibbiyot institutining rasmiy veb sayti (fermi.uz), elektron manzil fmioz@mail.ru, ishonch telefoni (73-243-06-62) orqali kelib tushgan murojaatlar tizimli ravishda maʻsullar tomonidan mualliflarga murojaatda keltirilgan har bir muammo yuzasidan toʻliq va asoslantirilgan hamda rahbarlar tomonidan imzolangan javob xatlari berilishini taʻminlash qonunda koʻrsatilgan muddatlarda amalga oshirilmoqda.
+
+### fuqarolar-murojaatlari-statistikasi|6|ru  [paragraph, from uz]
+Jismoniy va yuridik shaxslarning murojaatlarini har chorakda umumlashtirilib, tahlil qilinib, hisobot shakllari asosida oʻrnatilgan tartibda Oliy taʻlim, fan va innovatsiyalar vazirligi va Sogʻliqni saqlash vazirligiga institut Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash, nazorat va monitoring boʻlimi boshligʻi A.Xusanboyev (916796110) tomonidan oʻz muddatlarida taqdim etilishi yoʻlga qoʻyilgan.
+
+### fuqarolar-murojaatlari-statistikasi|8|ru  [paragraph, from uz]
+Institutda mutasaddi rahbarlar tomonidan fuqarolarni qabul qilish hamda ijro intizomiga rioya etish holatini muntazam ravishda oʻrganish, ularni natijalarini muhokama etish, kamchiliklarni bartaraf etish yuzasidan doimiy nazorat olib borish oʻrnatildi.
+
