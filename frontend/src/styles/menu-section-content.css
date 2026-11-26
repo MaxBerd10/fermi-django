@@ -1,13 +1,5 @@
 /* ── Umumiy menyu bo'limlari (navbar ostidagi sahifalar) ── */
 
-.menu-section__intro {
-  margin-bottom: 1.5rem;
-  padding: 0 0.25rem;
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: #475569;
-}
-
 .menu-sidebar__search-wrap {
   padding: 0.625rem 0.875rem;
   border-bottom: 1px solid rgba(10, 17, 88, 0.06);
@@ -192,51 +184,6 @@
 
 .cms-article--menu-section a:hover {
   color: #6366f1;
-}
-
-.faculty-page__leaders-title {
-  margin: 0 0 1rem;
-  font-family: var(--font-heading, Manrope, system-ui, sans-serif);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0a1158;
-}
-
-.faculty-leader-card {
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 0.75rem;
-  background: #f8fafc;
-  border: 1px solid rgba(10, 17, 88, 0.06);
-}
-
-.faculty-leader-card + .faculty-leader-card {
-  margin-top: 0.625rem;
-}
-
-.faculty-leader-card__photo {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 0.625rem;
-  object-fit: cover;
-  object-position: top;
-  flex-shrink: 0;
-}
-
-.faculty-leader-card__name {
-  margin: 0;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #0a1158;
-  line-height: 1.35;
-}
-
-.faculty-leader-card__role {
-  margin: 0.25rem 0 0;
-  font-size: 0.75rem;
-  line-height: 1.45;
-  color: #64748b;
 }
 
 .documents-list {

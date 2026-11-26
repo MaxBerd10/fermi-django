@@ -9,11 +9,7 @@ import { normalizeMenuHref, normalizeYearLabels } from "@/lib/siteConstants";
 // only renders styled by accident, whenever some other co-loaded chunk
 // happens to pull cms-content.css in first.
 import "@/styles/cms-content.css";
-import "@/styles/buildings-content.css";
-import "@/styles/conference-content.css";
-import "@/styles/newspaper-content.css";
 import "@/styles/regulatory-content.css";
-import "@/styles/science-activity-content.css";
 import "@/styles/news-content.css";
 import "@/styles/leader-content.css";
 import "@/styles/faculty-content.css";

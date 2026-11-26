@@ -14,11 +14,7 @@ import { normalizeYearLabels } from "@/lib/siteConstants";
 // without RichContent mounted alongside it (e.g. the Xorijiy-talabalar news
 // fallback).
 import "@/styles/cms-content.css";
-import "@/styles/buildings-content.css";
-import "@/styles/conference-content.css";
-import "@/styles/newspaper-content.css";
 import "@/styles/regulatory-content.css";
-import "@/styles/science-activity-content.css";
 import "@/styles/news-content.css";
 import "@/styles/leader-content.css";
 import "@/styles/faculty-content.css";

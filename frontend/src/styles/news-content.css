@@ -297,10 +297,6 @@
   }
 }
 
-.news-grid--single-col {
-  grid-template-columns: 1fr;
-}
-
 .news-grid--institute .news-card {
   min-width: 0;
   border-color: #dce3ef;

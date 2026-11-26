@@ -345,23 +345,6 @@
 }
 
 /* video lesson lists: one compact row per lesson, the play mark on the link says what it opens */
-.cms-article--rich .cms-feature-list.cms-video-list {
-  gap: 0.4rem;
-}
-
-.cms-article--rich .cms-feature-list.cms-video-list > li {
-  padding: 0.55rem 1rem 0.55rem 1rem;
-  line-height: 1.5;
-}
-
-.cms-article--rich .cms-feature-list.cms-video-list > li::before {
-  display: none;
-}
-
-.cms-article--rich .cms-feature-list.cms-video-list > li.cms-video-pending {
-  color: #64748b;
-  border-left-color: #cbd5e1;
-}
 
 .cms-article a.cms-video-link::before {
   content: "";
@@ -416,38 +399,7 @@
   text-align: left !important;
 }
 
-/* The legacy subject-test page used a wide cropped cover instead of the
-   default portrait-style article image. */
-.cms-student__cover {
-  margin: 1.25rem 0;
-  width: 100%;
-  height: 17.5rem;
-  overflow: hidden;
-  border-radius: 0.75rem;
-}
-
-.prose-content .cms-student__cover img {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center;
-}
-
 /* A monograph's portrait cover, at book size and centred above its PDF card. */
-.cms-book-cover {
-  margin: 0.25rem auto 1.5rem;
-  width: min(100%, 17.5rem);
-}
-
-.prose-content .cms-book-cover img {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
-  margin: 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px rgba(10, 17, 88, 0.18);
-}
 
 .cms-cert-page {
   --cms-accent: #0a1158;
@@ -703,14 +655,6 @@
   border-radius: 0 0.75rem 0.75rem 0;
 }
 
-.cms-article--council .cms-council-subhead {
-  font-family: var(--font-heading, inherit);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #0a1158;
-  margin: 1.5rem 0 1rem;
-}
-
 .cms-article--council .cms-council-tasks {
   list-style: none;
   padding: 0;
@@ -743,13 +687,6 @@
   box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.35);
 }
 
-.cms-article--council .cms-council-text {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: #475569;
-  margin-bottom: 1rem;
-}
-
 /* Kengash qarorlari */
 .cms-article--council-decisions :is(.cms-council-decision, ol > li, ul > li) {
   padding: .875rem 1rem;
@@ -761,57 +698,6 @@
 }
 
 /* Avtoreferatlar */
-.cms-article--autoreferat .cms-autoreferat-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .cms-article--autoreferat .cms-autoreferat-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.cms-article--autoreferat .cms-autoreferat-card {
-  padding: 1.125rem 1.25rem;
-  min-width: 0;
-  overflow-wrap: anywhere;
-  background: #f6f8fc;
-  border: 1px solid #dce3ef;
-  border-radius: 0.875rem;
-  transition: border-color .2s ease;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card:hover,
-.cms-article--autoreferat .cms-autoreferat-card:focus-within {
-  border-color: #aebcde;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card__council {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #64748b;
-  line-height: 1.45;
-  margin-bottom: 0.625rem;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card__author {
-  font-family: var(--font-heading, inherit);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0a1158;
-  margin: 0 0 0.5rem;
-  line-height: 1.35;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card__topic {
-  font-size: .9375rem;
-  line-height: 1.6;
-  color: #475569;
-  margin: 0;
-}
 
 @keyframes cms-council-pdf-spin {
   to {
@@ -854,181 +740,6 @@
   .cms-roadmap-pdf__frame, .cms-roadmap-pdf__iframe { min-height: 420px; height: 60vh; }
 }
 
-.cms-article--council-pdf {
-  padding: 0 !important;
-}
-
-@media (max-width: 640px) {
-
-  .cms-article--autoreferat .cms-autoreferat-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.cms-article--journal-pdf {
-  padding: 0 !important;
-}
-
-/* Tahrir hay'ati */
-.cms-article--journal-editorial .cms-journal-editorial__title {
-  font-family: var(--font-heading, inherit);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0a1158;
-  margin: 0 0 1.25rem;
-  text-align: center;
-}
-
-.cms-journal-editorial__grid {
-  display: grid;
-  gap: 0.75rem;
-}
-
-@media (min-width: 640px) {
-  .cms-journal-editorial__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.cms-journal-editorial__card {
-  padding: 1rem 1.125rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border: 1px solid rgba(10, 17, 88, 0.08);
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 16px -8px rgba(10, 17, 88, 0.1);
-}
-
-.cms-journal-editorial__role {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #64748b;
-  margin: 0 0 0.375rem;
-}
-
-.cms-journal-editorial__name {
-  font-family: var(--font-heading, inherit);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.45;
-  color: #0a1158;
-  margin: 0;
-}
-
-/* JCPM arxiv */
-.cms-article--journal-archive .cms-journal-archive__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(10, 17, 88, 0.08);
-}
-
-.cms-journal-archive__year {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.875rem;
-  border-radius: 9999px;
-  background: #0a1158;
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-
-.cms-journal-archive__count {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #64748b;
-}
-
-.cms-journal-archive__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.5rem;
-  max-height: 70vh;
-  overflow-y: auto;
-  padding-right: 0.25rem;
-}
-
-.cms-journal-archive__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding: 0.75rem 0.875rem;
-  background: #ffffff;
-  border: 1px solid rgba(10, 17, 88, 0.06);
-  border-radius: 0.625rem;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.cms-journal-archive__item:hover {
-  border-color: rgba(10, 17, 88, 0.15);
-  background: #f8fafc;
-}
-
-.cms-journal-archive__num {
-  flex-shrink: 0;
-  min-width: 1.75rem;
-  height: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.375rem;
-  background: rgba(255, 214, 0, 0.25);
-  color: #0a1158;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.cms-journal-archive__title {
-  font-size: 0.8125rem;
-  line-height: 1.55;
-  color: #334155;
-}
-
-@media (min-width: 768px) {
-  .cms-journal-archive__title {
-    font-size: 0.875rem;
-  }
-}
-
-/* a title that opens the article PDF */
-a.cms-journal-archive__title--link {
-  color: #0a1158;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-a.cms-journal-archive__title--link:hover,
-a.cms-journal-archive__title--link:focus-visible {
-  color: #1d4ed8;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.cms-journal-archive__item:has(a.cms-journal-archive__title--link) {
-  cursor: pointer;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card__topic a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: rgba(10, 17, 88, 0.3);
-  text-underline-offset: 3px;
-}
-
-.cms-article--autoreferat .cms-autoreferat-card__topic a:hover,
-.cms-article--autoreferat .cms-autoreferat-card__topic a:focus-visible {
-  color: #1d4ed8;
-  text-decoration-color: currentColor;
-}
-
 /* A file link inside running text (not a card): always say what it is. */
 .prose-content a[href$=".pdf" i]:not(.cms-download-btn)::after,
 .prose-content a[href$=".doc" i]:not(.cms-download-btn)::after,
@@ -1069,18 +780,6 @@ a.cms-journal-archive__title--link:focus-visible {
 .cms-article a[href$=".xls" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".xlsx" i]:not(.cms-download-btn)::after {
   content: "XLS";
-}
-
-.cms-video-embed {
-  margin: 0 0 1.5rem;
-}
-.cms-video-embed iframe {
-  display: block;
-  width: 100%;
-  max-width: 640px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border: 0;
 }
 
 /* Links to the national legal portals carry the portal's name, like file links carry their type. */
