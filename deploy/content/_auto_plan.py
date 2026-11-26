@@ -205,6 +205,8 @@ class Walker:
             if name in ("div", "section", "article", "blockquote", "center", "span", "font") and has_block:
                 self.walk(child)
                 continue
+            for frame in child.find_all("iframe"):
+                self.out.append({"t": "video", "src": frame.get("src", "")})
             # a paragraph-like node: images first (they stand where they stand), then the text lines
             for part in self.split_images(child):
                 if isinstance(part, Tag) and part.name == "img":

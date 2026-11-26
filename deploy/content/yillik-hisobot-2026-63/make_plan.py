@@ -43,7 +43,7 @@ SLUGS = [
 ]
 path = os.path.join(HERE, "translations.json")
 translations = json.load(open(path, encoding="utf8")) if os.path.exists(path) else {}
-translations = {k: ([x.replace("ʼ", "ʻ") for x in v] if isinstance(v, list) else v.replace("ʼ", "ʻ")) if k.endswith("|uz") else v for k, v in translations.items()}  # one apostrophe in Uzbek
+translations = {k: ([x.replace("ʼ", "ʻ") for x in v] if isinstance(v, list) else v.replace("ʼ", "ʻ")) if k.endswith("|uz") and not isinstance(v, dict) else v for k, v in translations.items()}  # one apostrophe in Uzbek
 plan, needed, problems = build(SLUGS, translations)
 if needed or problems:
     with open(os.path.join(HERE, "needed.txt"), "w", encoding="utf8") as handle:

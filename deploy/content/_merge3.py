@@ -65,7 +65,17 @@ def kind_of(row):
         return kinds.pop()
     if kinds <= TEXT_KINDS:
         return (row["uz"] or row["ru"] or row["en"])["t"]
+    if kinds <= TEXT_KINDS | {"list"}:
+        return "paragraph"  # a list in one language and a paragraph in another: one paragraph (the items one after another)
     return None
+
+
+def flat(spec):
+    """A list spec as a paragraph spec."""
+    if spec and spec["t"] == "list":
+        items = [i.strip() for i in spec["items"]]
+        return {"t": "paragraph", "text": " ".join(i if i.endswith((".", ";", ":", "!", "?")) else i + ";" for i in items).rstrip(";") + ("." if not items[-1].endswith((".", "!", "?")) else "")}
+    return spec
 
 
 def source_text(row):
@@ -81,6 +91,8 @@ def assemble(slug, rows, translations):
     blocks, missing, problems = [], [], []
     for k, row in enumerate(rows):
         kind = kind_of(row)
+        if kind == "paragraph":
+            row = {lang: flat(spec) for lang, spec in row.items()}
         if kind is None:
             problems.append("row %d: incompatible blocks %s" % (k, {l: s["t"] for l, s in row.items() if s}))
             continue

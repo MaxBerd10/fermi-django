@@ -22,9 +22,12 @@ def build(slugs, translations):
             problems[slug] = ["not one HTML block at order 1"]
             continue
         raw = raws[0]
-        specs = {lang: specs_of(raw["data"][lang]["html"], lang)[0] for lang in LANGS}
-        rows = rows_of(specs)
-        merged, missing, issues = assemble(slug, rows, translations)
+        if slug + "|blocks" in translations:  # a page written block by block by hand (the three old languages were too different to align)
+            merged, missing, issues = [dict(b) for b in translations[slug + "|blocks"]], [], []
+        else:
+            specs = {lang: specs_of(raw["data"][lang]["html"], lang)[0] for lang in LANGS}
+            rows = rows_of(specs)
+            merged, missing, issues = assemble(slug, rows, translations)
         if issues:
             problems[slug] = issues
         if missing:
