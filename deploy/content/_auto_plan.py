@@ -157,13 +157,29 @@ class Walker:
             cells = [fix(self.inline(td).replace("\n", " "), self.lang) for td in tr.find_all(["td", "th"], recursive=False)]
             if any(cells):
                 rows.append(cells)
-        if node.find(attrs={"colspan": True}) or node.find(attrs={"rowspan": True}):
-            self.notes.append("table with merged cells")
+        if node.find(attrs={"rowspan": True}):
+            self.notes.append("table with merged rows")
+        # a first row with one filled cell is the title of the table
+        while len(rows) >= 3 and sum(1 for c in rows[0] if c) == 1 and max(len(r) for r in rows[1:]) > len(rows[0]):
+            title = [c for c in rows[0] if c][0]
+            self.out.append({"t": "heading", "text": sentence_case(title, self.lang) if is_caps(title) else title, "level": 3})
+            rows = rows[1:]
         width = max((len(r) for r in rows), default=0)
+        counts = {}
+        for r in rows:
+            counts[len(r)] = counts.get(len(r), 0) + 1
+        if len(counts) > 1:  # rows of different lengths: the most common length is the table, the others are padded
+            width = max(counts, key=counts.get)
+            rows = [r[:width] if len(r) > width else r for r in rows]
         if len(rows) < 2 or width == 0:
             self.notes.append("table too small")
             return
         rows = [r + [""] * (width - len(r)) for r in rows]
+        previous = [x for x in self.out if x["t"] == "table"]
+        if previous and re.fullmatch(r"\d+", rows[0][0] or "") and len(previous[-1]["headers"]) == width:
+            # a table without its own header row (its first row is a numbered line): it continues the table before it
+            self.out.append({"t": "table", "headers": list(previous[-1]["headers"]), "rows": [[c for c in r] for r in rows]})
+            return
         self.out.append({"t": "table", "headers": [h or "—" for h in rows[0]], "rows": [[c for c in r] for r in rows[1:]]})
 
     def walk(self, node):
