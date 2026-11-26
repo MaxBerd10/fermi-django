@@ -3,513 +3,285 @@
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 4,
   "why": "1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi kurashis",
-  "fp": {
-   "uz": "dacc7f942a51ac252999379f5aa28c95724d7caccacdbdeadc145840c3d5d47d",
-   "ru": "ebab07181c34b5dc0b57ed2f09536ae02b0ff649cf0144af32580d20e4cf0b00",
-   "en": "55bc5346b3cfa1209fe1a251ba986638e2aaa8f73c9320910b95418e7e40e231"
+  "old": {
+   "uz": "1-ilova",
+   "ru": "Приложение 1",
+   "en": "Annex 1"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 1: Anti-corruption policy of the Ministry of Health",
-    "document_id": 3187
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 1: Политика Министерства здравоохранения по противодействию коррупции",
-    "document_id": 3187
-   },
-   "uz": {
-    "style": "card",
-    "caption": "1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi kurashish boʻyicha siyosati",
-    "document_id": 3187
-   }
+  "new": {
+   "uz": "1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi kurashish boʻyicha siyosati",
+   "ru": "Приложение 1: Политика Министерства здравоохранения по противодействию коррупции",
+   "en": "Annex 1: Anti-corruption policy of the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 5,
   "why": "2-ilova: Sogʻliqni saqlash vazirligi faoliyatida korrupsiyaviy xavf-x",
-  "fp": {
-   "uz": "f4ad9e2672e45747ce350daf82e35c4e96da30d11f4e0ec9adccabf9e859a941",
-   "ru": "cc50cdd4c56c727a059cdb86ec3eefe98492e1f3965dfe2bb7c72ed1514f6101",
-   "en": "5c9bae43f5e22739c90ef8ff69f3e36acd215be0ce7306e6f9e47e62b31f88aa"
+  "old": {
+   "uz": "2-ilova",
+   "ru": "Приложение 2",
+   "en": "Annex 2"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 2: Methodology for identifying and assessing corruption risks in the activities of the Ministry of Health",
-    "document_id": 3188
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 2: Методика выявления и оценки коррупционных рисков в деятельности Министерства здравоохранения",
-    "document_id": 3188
-   },
-   "uz": {
-    "style": "card",
-    "caption": "2-ilova: Sogʻliqni saqlash vazirligi faoliyatida korrupsiyaviy xavf-xatarlarni aniqlash va baholash uslubiyoti",
-    "document_id": 3188
-   }
+  "new": {
+   "uz": "2-ilova: Sogʻliqni saqlash vazirligi faoliyatida korrupsiyaviy xavf-xatarlarni aniqlash va baholash uslubiyoti",
+   "ru": "Приложение 2: Методика выявления и оценки коррупционных рисков в деятельности Министерства здравоохранения",
+   "en": "Annex 2: Methodology for identifying and assessing corruption risks in the activities of the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 6,
   "why": "3-ilova: Sogʻliqni saqlash vazirligida manfaatlar toʻqnashuvini boshq",
-  "fp": {
-   "uz": "e38318209fec2458b80b47351f8572d09d377c98424ac60817975d0658cb24fb",
-   "ru": "ad5e79408c40e4d8483eafa30c367db5a9246baf35249c62c74c3b1e47bdbffd",
-   "en": "84484d660e92b951e414602aa69f824c47de2c95d652e7d1968d7944e0c1327c"
+  "old": {
+   "uz": "3-ilova",
+   "ru": "Приложение 3",
+   "en": "Annex 3"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 3: Regulation on the management of conflicts of interest in the Ministry of Health",
-    "document_id": 3189
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 3: Положение об управлении конфликтом интересов в Министерстве здравоохранения",
-    "document_id": 3189
-   },
-   "uz": {
-    "style": "card",
-    "caption": "3-ilova: Sogʻliqni saqlash vazirligida manfaatlar toʻqnashuvini boshqarish toʻgʻrisidagi nizom",
-    "document_id": 3189
-   }
+  "new": {
+   "uz": "3-ilova: Sogʻliqni saqlash vazirligida manfaatlar toʻqnashuvini boshqarish toʻgʻrisidagi nizom",
+   "ru": "Приложение 3: Положение об управлении конфликтом интересов в Министерстве здравоохранения",
+   "en": "Annex 3: Regulation on the management of conflicts of interest in the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 7,
   "why": "4-ilova: Sogʻliqni saqlash vazirligi aloqa kanallari orqali korrupsiy",
-  "fp": {
-   "uz": "711d9e51f621d535e6af427a472ed615b6e12006616219739bf1ae925e1c387d",
-   "ru": "1f182f52d5b99b5cf405ef9d2a7744fba3a58c4596968a4baa5b71d55e143f66",
-   "en": "543f15cf05ce9cfe692c29865581895fe6607c93d43d7af79d67b100150e5626"
+  "old": {
+   "uz": "4-ilova",
+   "ru": "Приложение 4",
+   "en": "Annex 4"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 4: Rules for receiving and reviewing reports of corrupt acts received through the communication channels of the Ministry of Health",
-    "document_id": 3190
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 4: Регламент приёма и рассмотрения сообщений о коррупционных проявлениях, поступивших по каналам связи Министерства здравоохранения",
-    "document_id": 3190
-   },
-   "uz": {
-    "style": "card",
-    "caption": "4-ilova: Sogʻliqni saqlash vazirligi aloqa kanallari orqali korrupsiyaviy xatti-harakatlar toʻgʻrisida kelib tushgan xabarlarni qabul qilish va koʻrib chiqish reglamenti",
-    "document_id": 3190
-   }
+  "new": {
+   "uz": "4-ilova: Sogʻliqni saqlash vazirligi aloqa kanallari orqali korrupsiyaviy xatti-harakatlar toʻgʻrisida kelib tushgan xabarlarni qabul qilish va koʻrib chiqish reglamenti",
+   "ru": "Приложение 4: Регламент приёма и рассмотрения сообщений о коррупционных проявлениях, поступивших по каналам связи Министерства здравоохранения",
+   "en": "Annex 4: Rules for receiving and reviewing reports of corrupt acts received through the communication channels of the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 8,
   "why": "5-ilova: Sogʻliqni saqlash vazirligi xodimlarini «Korrupsiyaga qarshi",
-  "fp": {
-   "uz": "4877e8604ecfdb3111bd2a9df2815c512636f09502fa325ac40367c0947d5bc7",
-   "ru": "fb31f8480fb5e394962e5d43b5efa208d3333926ccb9cabb2845b14e7dd880fb",
-   "en": "0ecf1c260df83b34d0815ef52c506a58e6ca5ba6a6bb3e2ae9d02aa533d356e3"
+  "old": {
+   "uz": "5-ilova",
+   "ru": "Приложение 5",
+   "en": "Annex 5"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 5: Regulation on organising the training of the staff of the Ministry of Health on the electronic platform “Virtual Anti-Corruption Academy”",
-    "document_id": 3191
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 5: Положение о порядке организации обучения сотрудников Министерства здравоохранения на электронной платформе «Виртуальная академия противодействия коррупции»",
-    "document_id": 3191
-   },
-   "uz": {
-    "style": "card",
-    "caption": "5-ilova: Sogʻliqni saqlash vazirligi xodimlarini «Korrupsiyaga qarshi kurashish virtual akademiyasi» elektron platformasida oʻqitishni tashkil etish tartibi toʻgʻrisidagi nizom",
-    "document_id": 3191
-   }
+  "new": {
+   "uz": "5-ilova: Sogʻliqni saqlash vazirligi xodimlarini «Korrupsiyaga qarshi kurashish virtual akademiyasi» elektron platformasida oʻqitishni tashkil etish tartibi toʻgʻrisidagi nizom",
+   "ru": "Приложение 5: Положение о порядке организации обучения сотрудников Министерства здравоохранения на электронной платформе «Виртуальная академия противодействия коррупции»",
+   "en": "Annex 5: Regulation on organising the training of the staff of the Ministry of Health on the electronic platform “Virtual Anti-Corruption Academy”"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 9,
   "why": "6-ilova: Sogʻliqni saqlash vazirligida kontragentlarni tekshirishga o",
-  "fp": {
-   "uz": "e4e123978398e1690f75a4c758e84a6074d75ba8a8d67b3eeb68bd07c1fb4625",
-   "ru": "6cac14f8a4aa6aaa219e8f9e4ce5ac2de2f499264a1699f17832f860652a89fa",
-   "en": "452536faa306ebfd70e8c4fecf3ac82c41c77e26182fbcadd39b7f3b985d1813"
+  "old": {
+   "uz": "6-ilova",
+   "ru": "Приложение 6",
+   "en": "Annex 6"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 6: Instruction on checking counterparties in the Ministry of Health",
-    "document_id": 3192
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 6: Инструкция по проверке контрагентов в Министерстве здравоохранения",
-    "document_id": 3192
-   },
-   "uz": {
-    "style": "card",
-    "caption": "6-ilova: Sogʻliqni saqlash vazirligida kontragentlarni tekshirishga oid yoʻriqnoma",
-    "document_id": 3192
-   }
+  "new": {
+   "uz": "6-ilova: Sogʻliqni saqlash vazirligida kontragentlarni tekshirishga oid yoʻriqnoma",
+   "ru": "Приложение 6: Инструкция по проверке контрагентов в Министерстве здравоохранения",
+   "en": "Annex 6: Instruction on checking counterparties in the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 10,
   "why": "7-ilova: Sogʻliqni saqlash vazirligiga ishga qabul qilinayotgan nomzo",
-  "fp": {
-   "uz": "e000e5bba43dcc7efce87935e042331f64547874c21d9b62cb99d7da9c59606e",
-   "ru": "be6bb7fee1f180357c1d91b604d796d5e84a6bed5249f4898e8a5375f84b0795",
-   "en": "8ceef0575686a02d54504d95fa0b69fdd46c51752af2f5b01fa230b7f3955f97"
+  "old": {
+   "uz": "7-ilova",
+   "ru": "Приложение 7",
+   "en": "Annex 7"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 7: Instruction on checking candidates being hired by the Ministry of Health",
-    "document_id": 3193
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 7: Инструкция по проверке кандидатов, принимаемых на работу в Министерство здравоохранения",
-    "document_id": 3193
-   },
-   "uz": {
-    "style": "card",
-    "caption": "7-ilova: Sogʻliqni saqlash vazirligiga ishga qabul qilinayotgan nomzodlarni tekshirish boʻyicha yoʻriqnoma",
-    "document_id": 3193
-   }
+  "new": {
+   "uz": "7-ilova: Sogʻliqni saqlash vazirligiga ishga qabul qilinayotgan nomzodlarni tekshirish boʻyicha yoʻriqnoma",
+   "ru": "Приложение 7: Инструкция по проверке кандидатов, принимаемых на работу в Министерство здравоохранения",
+   "en": "Annex 7: Instruction on checking candidates being hired by the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 11,
   "why": "8-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi tartib-tao",
-  "fp": {
-   "uz": "231122d9b5356e82da1d6759f252089c8cb4d6f0573269b7571dd99b5fd94ab1",
-   "ru": "e48c4c5c3c08c2e8e63e49b730079cefa043f29aa7a3dbddaa40e6f210e54c32",
-   "en": "e6b0b435e3e51581307b86bb427458295281b7d84eb6f022b580afba34c600d0"
+  "old": {
+   "uz": "8-ilova",
+   "ru": "Приложение 8",
+   "en": "Annex 8"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 8: Methodology for monitoring and controlling the effectiveness of anti-corruption procedures in the Ministry of Health",
-    "document_id": 3194
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 8: Методика мониторинга и контроля эффективности антикоррупционных процедур в Министерстве здравоохранения",
-    "document_id": 3194
-   },
-   "uz": {
-    "style": "card",
-    "caption": "8-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi tartib-taomillarning samaradorligini monitoring va nazorat qilish uslubiyoti",
-    "document_id": 3194
-   }
+  "new": {
+   "uz": "8-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi tartib-taomillarning samaradorligini monitoring va nazorat qilish uslubiyoti",
+   "ru": "Приложение 8: Методика мониторинга и контроля эффективности антикоррупционных процедур в Министерстве здравоохранения",
+   "en": "Annex 8: Methodology for monitoring and controlling the effectiveness of anti-corruption procedures in the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 12,
   "why": "8.1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi tamoyill",
-  "fp": {
-   "uz": "57518fca8017f9195ddd81cab599a49aa4ea00a9fb58774bbd1b56259a08a41f",
-   "ru": "c9a505f87866fa5878e9239b460a5a6a313ff7ed065a09f9b90e6ca1e475d48a",
-   "en": "ab13eb1cb8b673cd79c1016147523577862cfa48e156bb62dd11a95ce3c08f84"
+  "old": {
+   "uz": "8.1-ilova",
+   "ru": "Приложение 8.1",
+   "en": "Annex 8.1"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 8.1: System for checking the awareness of the Ministry of Health of the anti-corruption principles and requirements",
-    "document_id": 3195
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 8.1: Система проверки осведомлённости Министерства здравоохранения о принципах и требованиях противодействия коррупции",
-    "document_id": 3195
-   },
-   "uz": {
-    "style": "card",
-    "caption": "8.1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi tamoyillar va talablardan xabardorligini tekshirish tizimi",
-    "document_id": 3195
-   }
+  "new": {
+   "uz": "8.1-ilova: Sogʻliqni saqlash vazirligining korrupsiyaga qarshi tamoyillar va talablardan xabardorligini tekshirish tizimi",
+   "ru": "Приложение 8.1: Система проверки осведомлённости Министерства здравоохранения о принципах и требованиях противодействия коррупции",
+   "en": "Annex 8.1: System for checking the awareness of the Ministry of Health of the anti-corruption principles and requirements"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 13,
   "why": "9-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi kurash tiz",
-  "fp": {
-   "uz": "62a0b5d714f79a304a1be8e22068dff6cb2cf2237ec6c8b008684b6e5d850d4b",
-   "ru": "2ca095a1231056fa40f1ee2445d934bcc0afae171ba02711e0add1a905478049",
-   "en": "dd2fe11d9f94dc561d1d984af64624e0c13292e71f8dadabde8b37d43a97199d"
+  "old": {
+   "uz": "9-ilova",
+   "ru": "Приложение 9",
+   "en": "Annex 9"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 9: Rules for preparing and submitting the report on the state of the anti-corruption system in the Ministry of Health",
-    "document_id": 3196
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 9: Регламент формирования и представления отчёта о состоянии системы противодействия коррупции в Министерстве здравоохранения",
-    "document_id": 3196
-   },
-   "uz": {
-    "style": "card",
-    "caption": "9-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi kurash tizimining holati toʻgʻrisidagi hisobotni shakllantirish va taqdim etish boʻyicha reglament",
-    "document_id": 3196
-   }
+  "new": {
+   "uz": "9-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga qarshi kurash tizimining holati toʻgʻrisidagi hisobotni shakllantirish va taqdim etish boʻyicha reglament",
+   "ru": "Приложение 9: Регламент формирования и представления отчёта о состоянии системы противодействия коррупции в Министерстве здравоохранения",
+   "en": "Annex 9: Rules for preparing and submitting the report on the state of the anti-corruption system in the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 14,
   "why": "10-ilova: Sogʻliqni saqlash vazirligi xodimlarining korrupsiyaviy xatt",
-  "fp": {
-   "uz": "5d75dec6365ad59fee0f242242dd1fe78d0f4940748ada8d1154d73b205a8263",
-   "ru": "cca5c337188c3e82923d1545b9ec927168a6f4d5427e1e42f3987647a77d101a",
-   "en": "4d219ccf1dd6742aeb573c8ed4c4d49b4130c8d99f75e454b002b6cedb5dbd13"
+  "old": {
+   "uz": "10-ilova",
+   "ru": "Приложение 10",
+   "en": "Annex 10"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 10: Rules for conducting official investigations into corrupt acts and breaches of ethics by the staff of the Ministry of Health",
-    "document_id": 3197
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 10: Регламент проведения служебных проверок по фактам коррупционных проявлений и нарушений норм этики со стороны сотрудников Министерства здравоохранения",
-    "document_id": 3197
-   },
-   "uz": {
-    "style": "card",
-    "caption": "10-ilova: Sogʻliqni saqlash vazirligi xodimlarining korrupsiyaviy xatti-harakatlari va odob-axloq qoidalarini buzish holatlari ustidan xizmat tekshiruvlari oʻtkazish boʻyicha reglament",
-    "document_id": 3197
-   }
+  "new": {
+   "uz": "10-ilova: Sogʻliqni saqlash vazirligi xodimlarining korrupsiyaviy xatti-harakatlari va odob-axloq qoidalarini buzish holatlari ustidan xizmat tekshiruvlari oʻtkazish boʻyicha reglament",
+   "ru": "Приложение 10: Регламент проведения служебных проверок по фактам коррупционных проявлений и нарушений норм этики со стороны сотрудников Министерства здравоохранения",
+   "en": "Annex 10: Rules for conducting official investigations into corrupt acts and breaches of ethics by the staff of the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 15,
   "why": "11-ilova: Sogʻliqni saqlash vazirligida davlat xaridlari ustidan nazor",
-  "fp": {
-   "uz": "c262fc377ac55f805e057c2f98ce7a233ac3de25c173a87ec340f8b38a8101be",
-   "ru": "c038c2030cd187817cd1cb2582db0f7877d12c27f88ef6cd55f91558ba6b9c07",
-   "en": "244fa04268f75643710ebed1d648d501c15e8636ec9f8d6b731983a04cefa411"
+  "old": {
+   "uz": "11-ilova",
+   "ru": "Приложение 11",
+   "en": "Annex 11"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 11: Methodological guide on organising the control of public procurement in the Ministry of Health",
-    "document_id": 3198
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 11: Методическое пособие по организации контроля за государственными закупками в Министерстве здравоохранения",
-    "document_id": 3198
-   },
-   "uz": {
-    "style": "card",
-    "caption": "11-ilova: Sogʻliqni saqlash vazirligida davlat xaridlari ustidan nazoratni tashkil etish boʻyicha uslubiy qoʻllanma",
-    "document_id": 3198
-   }
+  "new": {
+   "uz": "11-ilova: Sogʻliqni saqlash vazirligida davlat xaridlari ustidan nazoratni tashkil etish boʻyicha uslubiy qoʻllanma",
+   "ru": "Приложение 11: Методическое пособие по организации контроля за государственными закупками в Министерстве здравоохранения",
+   "en": "Annex 11: Methodological guide on organising the control of public procurement in the Ministry of Health"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 16,
   "why": "11.1-ilova: Davlat xaridlarini nazorat qilishning asosiy yoʻnalishlari v",
-  "fp": {
-   "uz": "cbe5777bb1841a43f8ff843a50e36caefabdee52a94ccbee442c0a7ff96a49c5",
-   "ru": "2512b31fa54101876e656af885b5a29b0d8498a5d11b9d959a11d16bc310f71c",
-   "en": "4e30c1c10e10724951dc2ffc4cbbca28f1f0fc003567dd0e2643d735b13d1e50"
+  "old": {
+   "uz": "11.1-ilova",
+   "ru": "Приложение 11.1",
+   "en": "Annex 11.1"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 11.1: Main areas and issues of the control of public procurement",
-    "document_id": 3199
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 11.1: Основные направления и вопросы контроля государственных закупок",
-    "document_id": 3199
-   },
-   "uz": {
-    "style": "card",
-    "caption": "11.1-ilova: Davlat xaridlarini nazorat qilishning asosiy yoʻnalishlari va masalalari",
-    "document_id": 3199
-   }
+  "new": {
+   "uz": "11.1-ilova: Davlat xaridlarini nazorat qilishning asosiy yoʻnalishlari va masalalari",
+   "ru": "Приложение 11.1: Основные направления и вопросы контроля государственных закупок",
+   "en": "Annex 11.1: Main areas and issues of the control of public procurement"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 17,
   "why": "11.2-ilova: Davlat xaridlariga tanlov eʼlon qilish bosqichida korrupsiya",
-  "fp": {
-   "uz": "ae714f346986085377594aa80f20d685f9a7fb71346511d1e956a9d5fa6d0809",
-   "ru": "8381a06ce06701a1ea04b2ab95cae460fa01203db8b4adc28243fbd25227a468",
-   "en": "fd20e424d485ae485e0392613f9d90f041e47f99c2a53c562b09716f4dc1adaa"
+  "old": {
+   "uz": "11.2-ilova",
+   "ru": "Приложение 11.2",
+   "en": "Annex 11.2"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 11.2: Examples of the main forms of corruption offences and risks at the stage of announcing a public procurement tender (checklist)",
-    "document_id": 3200
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 11.2: Примеры основных способов коррупционных правонарушений и рисков на этапе объявления конкурса по государственным закупкам (чек-лист)",
-    "document_id": 3200
-   },
-   "uz": {
-    "style": "card",
-    "caption": "11.2-ilova: Davlat xaridlariga tanlov eʼlon qilish bosqichida korrupsiyaga oid huquqbuzarliklar va xatarlarning asosiy usullariga misollar (chek-list)",
-    "document_id": 3200
-   }
+  "new": {
+   "uz": "11.2-ilova: Davlat xaridlariga tanlov eʼlon qilish bosqichida korrupsiyaga oid huquqbuzarliklar va xatarlarning asosiy usullariga misollar (chek-list)",
+   "ru": "Приложение 11.2: Примеры основных способов коррупционных правонарушений и рисков на этапе объявления конкурса по государственным закупкам (чек-лист)",
+   "en": "Annex 11.2: Examples of the main forms of corruption offences and risks at the stage of announcing a public procurement tender (checklist)"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 18,
   "why": "11.3-ilova: Tanlov takliflarini baholash yakunlanish bosqichida korrupsi",
-  "fp": {
-   "uz": "a28f92d14eb6fd62a4614e0d5dddebf87f391c703cc9a12ac3fe1fbf2108db22",
-   "ru": "f27f77d67a06953537ba91b0cdf4839702a4944b76bafb723cdd5622270c20bf",
-   "en": "8cb016353236a7fbb286f958b52e97bced5f8c2ccd454fc27acc74e1992db3a0"
+  "old": {
+   "uz": "11.3-ilova",
+   "ru": "Приложение 11.3",
+   "en": "Annex 11.3"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 11.3: Examples of the main forms of corruption offences and risks at the final stage of evaluating tender bids (checklist)",
-    "document_id": 3201
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 11.3: Примеры основных способов коррупционных правонарушений и рисков на завершающем этапе оценки конкурсных предложений (чек-лист)",
-    "document_id": 3201
-   },
-   "uz": {
-    "style": "card",
-    "caption": "11.3-ilova: Tanlov takliflarini baholash yakunlanish bosqichida korrupsiyaviy huquqbuzarliklar va xavf-xatarlarning asosiy usullariga misollar (chek-list)",
-    "document_id": 3201
-   }
+  "new": {
+   "uz": "11.3-ilova: Tanlov takliflarini baholash yakunlanish bosqichida korrupsiyaviy huquqbuzarliklar va xavf-xatarlarning asosiy usullariga misollar (chek-list)",
+   "ru": "Приложение 11.3: Примеры основных способов коррупционных правонарушений и рисков на завершающем этапе оценки конкурсных предложений (чек-лист)",
+   "en": "Annex 11.3: Examples of the main forms of corruption offences and risks at the final stage of evaluating tender bids (checklist)"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 19,
   "why": "11.4-ilova: Kontraktlarni tuzish va bajarish bosqichidagi korrupsiyaga o",
-  "fp": {
-   "uz": "1569998068b266b61376cb1fcf6335e1a1fe43af835af8b86e13eeb6c781833f",
-   "ru": "187709ed493100ce18819c95f2c92dda18991eb921a350b7e6b12e34cce9e04b",
-   "en": "459d5f2e3f2766589508523bb61097c30458221acf8788f4298e11935fef8595"
+  "old": {
+   "uz": "11.4-ilova",
+   "ru": "Приложение 11.4",
+   "en": "Annex 11.4"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 11.4: Examples of the main forms of corruption offences and risks at the stage of concluding and performing contracts (checklist)",
-    "document_id": 3202
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 11.4: Примеры основных способов коррупционных правонарушений и рисков на этапе заключения и исполнения контрактов (чек-лист)",
-    "document_id": 3202
-   },
-   "uz": {
-    "style": "card",
-    "caption": "11.4-ilova: Kontraktlarni tuzish va bajarish bosqichidagi korrupsiyaga oid huquqbuzarliklar va xatarlarning asosiy usullariga misollar (chek-list)",
-    "document_id": 3202
-   }
+  "new": {
+   "uz": "11.4-ilova: Kontraktlarni tuzish va bajarish bosqichidagi korrupsiyaga oid huquqbuzarliklar va xatarlarning asosiy usullariga misollar (chek-list)",
+   "ru": "Приложение 11.4: Примеры основных способов коррупционных правонарушений и рисков на этапе заключения и исполнения контрактов (чек-лист)",
+   "en": "Annex 11.4: Examples of the main forms of corruption offences and risks at the stage of concluding and performing contracts (checklist)"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 20,
   "why": "12-ilova: Sogʻliqni saqlash vazirligi xodimlari tomonidan xizmat safar",
-  "fp": {
-   "uz": "f7ae704d64759fa57d7bf626ddc73cb1c6dde89dfa9028ae869c193e789c1dc6",
-   "ru": "3a31c6d77f337ee1e37cd1af8c351105de1835b6aaa952bf33f3bb2476011547",
-   "en": "c5d551f9028127fd38dd84103697251fc82e0207795d961b8b9d7c98661bf78b"
+  "old": {
+   "uz": "12-ilova",
+   "ru": "Приложение 12",
+   "en": "Annex 12"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 12: Regulation on the value of gifts that staff of the Ministry of Health may receive in connection with business trips, international and other official events, and on the procedure for handling them",
-    "document_id": 3203
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 12: Положение о стоимости подарков, которые могут быть получены сотрудниками Министерства здравоохранения в связи со служебными командировками, международными и иными официальными мероприятиями, а также о порядке распоряжения ими",
-    "document_id": 3203
-   },
-   "uz": {
-    "style": "card",
-    "caption": "12-ilova: Sogʻliqni saqlash vazirligi xodimlari tomonidan xizmat safarlari, xalqaro va boshqa rasmiy tadbirlar munosabati bilan olinishi mumkin boʻlgan sovgʻa qiymati, shuningdek uni tasarruf etish tartibi toʻgʻrisidagi nizom",
-    "document_id": 3203
-   }
+  "new": {
+   "uz": "12-ilova: Sogʻliqni saqlash vazirligi xodimlari tomonidan xizmat safarlari, xalqaro va boshqa rasmiy tadbirlar munosabati bilan olinishi mumkin boʻlgan sovgʻa qiymati, shuningdek uni tasarruf etish tartibi toʻgʻrisidagi nizom",
+   "ru": "Приложение 12: Положение о стоимости подарков, которые могут быть получены сотрудниками Министерства здравоохранения в связи со служебными командировками, международными и иными официальными мероприятиями, а также о порядке распоряжения ими",
+   "en": "Annex 12: Regulation on the value of gifts that staff of the Ministry of Health may receive in connection with business trips, international and other official events, and on the procedure for handling them"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 21,
   "why": "13-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga oid huquqbuzarlik",
-  "fp": {
-   "uz": "03cececed9185f4ee0e6f526cd85e0d4c0be32496998fffc32806004ce8ad566",
-   "ru": "1b1c437fada8fe6eb12376fcbdd94a22e23cc9c6fd2363ffa16517d2fb285a08",
-   "en": "6ab1b32c77f108f7658ed5340645ba6248ec6e247f5bcf2b9df92f55183a90aa"
+  "old": {
+   "uz": "13-ilova",
+   "ru": "Приложение 13",
+   "en": "Annex 13"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 13: Regulation on rewarding the staff of the Ministry of Health who reported a corruption offence or otherwise helped to combat corruption",
-    "document_id": 3204
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 13: Положение о порядке поощрения сотрудников Министерства здравоохранения, сообщивших о коррупционном правонарушении или иным образом содействовавших противодействию коррупции",
-    "document_id": 3204
-   },
-   "uz": {
-    "style": "card",
-    "caption": "13-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga oid huquqbuzarlik haqida xabar bergan yoki korrupsiyaga qarshi kurashishga boshqa tarzda koʻmaklashgan xodimlarni ragʻbatlantirish tartibi toʻgʻrisidagi nizom",
-    "document_id": 3204
-   }
+  "new": {
+   "uz": "13-ilova: Sogʻliqni saqlash vazirligida korrupsiyaga oid huquqbuzarlik haqida xabar bergan yoki korrupsiyaga qarshi kurashishga boshqa tarzda koʻmaklashgan xodimlarni ragʻbatlantirish tartibi toʻgʻrisidagi nizom",
+   "ru": "Приложение 13: Положение о порядке поощрения сотрудников Министерства здравоохранения, сообщивших о коррупционном правонарушении или иным образом содействовавших противодействию коррупции",
+   "en": "Annex 13: Regulation on rewarding the staff of the Ministry of Health who reported a corruption offence or otherwise helped to combat corruption"
   }
  },
  {
   "slug": "ssv-korrupsiyaga-qarshi-kurashish-siyosati",
   "order": 22,
   "why": "14-ilova: Sogʻliqni saqlash vazirligida monopoliyaga qarshi komplaens ",
-  "fp": {
-   "uz": "976e3e22694395413b146de2168d94176223641d37308dc8640ba15107e3df17",
-   "ru": "e44f396a3470c0faa113dcac392848ae0d095f27cfb0fd03277303eb41aa76f1",
-   "en": "8c03ba12be53c4c812ad9bebe66fd00116606ef594b3407ef3e969ce7004ae30"
+  "old": {
+   "uz": "14-ilova",
+   "ru": "Приложение 14",
+   "en": "Annex 14"
   },
-  "data": {
-   "en": {
-    "style": "card",
-    "caption": "Annex 14: Regulation on introducing the anti-monopoly compliance system in the Ministry of Health and the procedure for its operation",
-    "document_id": 3205
-   },
-   "ru": {
-    "style": "card",
-    "caption": "Приложение 14: Положение о внедрении антимонопольной комплаенс-системы в Министерстве здравоохранения и порядке её функционирования",
-    "document_id": 3205
-   },
-   "uz": {
-    "style": "card",
-    "caption": "14-ilova: Sogʻliqni saqlash vazirligida monopoliyaga qarshi komplaens tizimini joriy etish va uning ishlash tartibi toʻgʻrisida nizom",
-    "document_id": 3205
-   }
+  "new": {
+   "uz": "14-ilova: Sogʻliqni saqlash vazirligida monopoliyaga qarshi komplaens tizimini joriy etish va uning ishlash tartibi toʻgʻrisida nizom",
+   "ru": "Приложение 14: Положение о внедрении антимонопольной комплаенс-системы в Министерстве здравоохранения и порядке её функционирования",
+   "en": "Annex 14: Regulation on introducing the anti-monopoly compliance system in the Ministry of Health and the procedure for its operation"
   }
  }
 ]
