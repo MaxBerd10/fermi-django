@@ -1,0 +1,281 @@
+[
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 18,
+  "lang": "en",
+  "anchor": "texnikumni bitirganlik toʻgʻri",
+  "old": "a document on graduation from the technical college and a copy of its appendix.",
+  "new": "a copy of the document on graduation from the technical college and of its appendix.",
+  "why": "the Uzbek (and the Russian) ask for a copy of both"
+ },
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 49,
+  "lang": "en",
+  "anchor": "Suhbat komissiyasi tomonidan t",
+  "old": "institution one day after the interview process",
+  "new": "institution within one day after the interview process",
+  "why": "'bir kun muddatda' is a deadline"
+ },
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 47,
+  "lang": "ru",
+  "anchor": "Suhbat natijalariga koʻra tala",
+  "old": "в подчинённое министерство или ведомство",
+  "new": "в министерство или ведомство, которому подчинено высшее образовательное учреждение",
+  "why": "the ministry the institution is subordinate to"
+ },
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 23,
+  "lang": "en",
+  "anchor": "Suhbat komissiyasi 9 nafardan ",
+  "old": "a highly qualified teacher of the technical college",
+  "new": "a qualified teacher of the technical college",
+  "why": "'malakali' = qualified"
+ },
+ {
+  "slug": "tibbiyot-texnikumi-biturvchilarini-qabul-qilish-nizomi",
+  "order": 50,
+  "lang": "uz",
+  "anchor": "Kontrakt shartlari, tomonlarni",
+  "old": "tomonlarning hududlari va majburiyatlari",
+  "new": "tomonlarning huquqlari va majburiyatlari",
+  "why": "typo of the Uzbek source (hududlari = territories); ru and en already say rights"
+ },
+ {
+  "slug": "bakalavriat-uchun-yoriqnoma",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Oliy taʻlim muassasalari bakal",
+  "old": "Порядок приёма на программы бакалавриата",
+  "new": "Приём на программы бакалавриата",
+  "why": "a procedure is not 'carried out'"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "Preparing young specialists at the student level for participation in domestic and foreign policy;",
+  "new": "Training young specialists of the required standard for the country’s domestic and foreign policy;",
+  "why": "'talab darajasidagi' = of the required level"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "Совершенствование систематической духовно-нравственной работы.",
+  "new": "Совершенствование адресной духовно-нравственной работы.",
+  "why": "'manzillashgan' = targeted"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "Improving systematic moral and spiritual work.",
+  "new": "Improving targeted moral and spiritual work.",
+  "why": "'manzillashgan' = targeted"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "injustice, showmanship, corruption, nepotism, and localism;",
+  "new": "injustice, window-dressing, bribery, nepotism, and localism;",
+  "why": "koʻzboʻyamachilik = window-dressing, poraxoʻrlik = bribery"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "несправедливость, показушничество, коррупция, кумовство, локализм;",
+  "new": "несправедливость, очковтирательство, взяточничество, кумовство, местничество;",
+  "why": "'локализм' is not a Russian term; exact equivalents"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "Воспитание у студентов отношения к национальным, семейным, соседским, общинным и общественно-гражданским обязанностям;",
+  "new": "Воспитание у студентов осознания своего долга перед нацией, семьёй, родителями, соседями, махаллёй и народом;",
+  "why": "the duty to parents (ota-ona) was missing"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Talabalarni milliy va umuminso",
+  "old": "D-eveloping the student’s personal and individual qualities;",
+  "new": "Developing and improving the student’s personal and individual qualities;",
+  "why": "typo; 'takomillashtirish' was dropped"
+ },
+ {
+  "slug": "yoshlar-bilan-ishlash-manaviyat-va-marifat-bolimi",
+  "order": 3,
+  "lang": "ru",
+  "anchor": "Yoshlar bilan ishlash, maʻnavi",
+  "old": "Задачи- отдела по работе с молодежью, духовного и просветительского воспитания:",
+  "new": "Задачи отдела по работе с молодёжью, духовности и просвещения:",
+  "why": "stray hyphen; the department name"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 7,
+  "lang": "en",
+  "anchor": "QR kodli diplom shakllantirish",
+  "old": "creating clearance (obkhodnoy) sheets for graduating students;",
+  "new": "creating clearance sheets for graduating students;",
+  "why": "a Russian transliteration was left in the English"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 11,
+  "lang": "ru",
+  "anchor": "talabalarga oʻqish joyidan ing",
+  "old": "регистрация иностранных студентов и прикрепление к учебным дисциплинам;",
+  "new": "регистрация в электронной системе иностранных студентов, зачисленных на обучение, и прикрепление их к учебным дисциплинам;",
+  "why": "'elektron tizimda' and 'qabul qilingan' were missing"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "decisions and orders of the Ministry of Higher Education, Science and Innovation and the Ministry of Health",
+  "new": "decisions of the Boards and orders of the Ministry of Higher Education, Science and Innovation and the Ministry of Health",
+  "why": "the Boards (Hayʻat) were missing; the Russian keeps them"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 2,
+  "lang": "uz",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "[https://hemis.fsjti.uz/](https://hemis.samdu.uz/)",
+  "new": "[https://hemis.fjsti.uz/](https://hemis.fjsti.uz/)",
+  "why": "the link led to another university's HEMIS; the text had a typo"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 2,
+  "lang": "uz",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "unversitetning",
+  "new": "universitetning",
+  "why": "typo of the Uzbek source"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "https://hemis.fsjti.uz/",
+  "new": "https://hemis.fjsti.uz/",
+  "why": "typo: this address does not exist"
+ },
+ {
+  "slug": "registrator-ofisi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Fargʻona jamoat salomatligi ti",
+  "old": "https://hemis.fsjti.uz/",
+  "new": "https://hemis.fjsti.uz/",
+  "why": "typo: this address does not exist"
+ },
+ {
+  "slug": "buxgalteriya-bolimi",
+  "order": 1,
+  "lang": "ru",
+  "anchor": "Institut buxgalteriya boʻlimi ",
+  "old": "бухгалтерия Института также может вести бухгалтерский учёт в журнально-ордерной форме.",
+  "new": "бухгалтерия Института ведёт бухгалтерский учёт в журнально-ордерной форме.",
+  "why": "the Uzbek states a fact; 'может' had been added"
+ },
+ {
+  "slug": "buxgalteriya-bolimi",
+  "order": 1,
+  "lang": "en",
+  "anchor": "Institut buxgalteriya boʻlimi ",
+  "old": "accounting may also be conducted in the journal-order form.",
+  "new": "the Institute’s accounting department keeps its accounts in the journal-order form.",
+  "why": "the Uzbek states a fact; 'may' had been added"
+ },
+ {
+  "slug": "buxgalteriya-bolimi",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "Buxgalteriya boʻlimi buxgalter",
+  "old": "Контроль правильного использования фонда оплаты труда в соответствии с утверждённым штатным расписанием;",
+  "new": "Обеспечение правильного использования фонда оплаты труда на основании утверждённых штатных расписаний и штатных формуляров;",
+  "why": "'shtat formulyarlari' was missing"
+ },
+ {
+  "slug": "buxgalteriya-bolimi",
+  "order": 5,
+  "lang": "en",
+  "anchor": "Buxgalteriya boʻlimi buxgalter",
+  "old": "Ensuring proper use of the payroll fund in accordance with approved staffing schedules;",
+  "new": "Ensuring proper use of the payroll fund on the basis of the approved staffing schedules and staffing forms;",
+  "why": "'shtat formulyarlari' was missing"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 53,
+  "lang": "ru",
+  "anchor": "Abiturient tomonidan pasport (",
+  "old": "и документ о военной службе предъявляются",
+  "new": "и документ об отношении к воинской обязанности предъявляются",
+  "why": "the document on the relation to military service (military registration)"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 53,
+  "lang": "en",
+  "anchor": "Abiturient tomonidan pasport (",
+  "old": "and the document on military service in person",
+  "new": "and the military registration document in person",
+  "why": "the document on the relation to military service"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 21,
+  "lang": "en",
+  "anchor": "Agar umumiy oʻrta taʻlim (11-s",
+  "old": "foreign languages other than English, German or French were taught without English, German or French,",
+  "new": "other foreign languages were taught instead of English, German or French,",
+  "why": "a garbled duplication"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 86,
+  "lang": "ru",
+  "anchor": "toʻplagan ballari tasdiqlangan",
+  "old": "не добравших до утверждённой границы квот приёма по платно-контрактной основе до одного балла",
+  "new": "которым до утверждённой границы квот приёма на платно-контрактной основе не хватает до одного балла",
+  "why": "grammar ('на … основе') and wording"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 29,
+  "lang": "uz",
+  "anchor": "Oliy taʻlim muassasalarida kas",
+  "old": "3-ilovadabelgilangan",
+  "new": "3-ilovada belgilangan",
+  "why": "a missing space in the Uzbek source"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 91,
+  "lang": "uz",
+  "anchor": "Manbaa: [lex.uz](https://lex.u",
+  "old": "Manbaa:",
+  "new": "Manba:",
+  "why": "typo of the Uzbek source"
+ }
+]
