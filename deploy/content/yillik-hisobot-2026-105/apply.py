@@ -1,4 +1,4 @@
-# yashil-universitet-yashil-makon (news): the first picture of the article was a different picture per language: the Uzbek text showed the poster "2025 YIL: Atrof-muhitni asrash va
+# NEWS POST yashil-universitet-yashil-makon (found by the post's slug): the first picture of the article was a different picture per language: the Uzbek text showed the poster "2025 YIL: Atrof-muhitni asrash va
 # yashil iqtisodiyot yili" (Uzbek words and QR codes on it), the Russian and the English text a photo of the institute building in its park. A reader of one language saw another
 # picture than a reader of another, and the poster's Uzbek words meant nothing to the Russian and English readers. As the user decided ("bitta rasm qolsin"), ALL THREE languages show the
 # photo (the language-neutral one); the poster stays in the picture library (nothing is deleted). RUN AFTER scripts 39-104.
@@ -30,7 +30,8 @@ def tail(image_id):
 
 
 def build(apply):
-    block = ContentBlock.objects.filter(page__slug=SLUG, order=1).first()
+    # the article's text is the Page of the news post (its own slug is "news-<number>"); the post's slug is the address of the article
+    block = ContentBlock.objects.filter(page__news_post__slug=SLUG, order=1).first()
     problem = None
     if block is None or block.block_type != "image":
         problem = "block 1 is not a picture"
