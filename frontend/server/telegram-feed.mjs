@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cachedMediaUrlFor } from "./telegram-media-cache.mjs";
+import { googleRequest } from "./google-translate.mjs";
 
 const DEFAULT_CHANNEL = "ferghana_medical_institute";
 const CACHE_TTL_MS = 60_000;
@@ -410,24 +411,15 @@ async function translateWithMyMemory(text, lang) {
 async function translateWithGoogle(text, lang) {
   const source = String(text || "").trim();
   if (!source || Date.now() < translatorPause.google) return "";
-  const url = new URL("https://translate.googleapis.com/translate_a/single");
-  url.searchParams.set("client", "gtx");
-  url.searchParams.set("sl", "uz");
-  url.searchParams.set("tl", lang);
-  url.searchParams.set("dt", "t");
-  url.searchParams.set("q", source.slice(0, 4500));
+  const { status, body } = await googleRequest(source, lang);
+  if (status === 429) {
+    translatorPause.google = Date.now() + GOOGLE_PAUSE_MS;
+    console.error("Google translate answered 429: not asking it again for 30 minutes");
+    return "";
+  }
+  if (status !== 200) return "";
   try {
-    const response = await fetch(url, {
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; FerMI-web/1.0)" },
-      signal: AbortSignal.timeout(4000),
-    });
-    if (response.status === 429) {
-      translatorPause.google = Date.now() + GOOGLE_PAUSE_MS;
-      console.error("Google translate answered 429: not asking it again for 30 minutes");
-      return "";
-    }
-    if (!response.ok) return "";
-    const payload = await response.json();
+    const payload = JSON.parse(body);
     return decodeEntities((payload?.[0] || []).map((row) => row?.[0] || "").join("").trim());
   } catch {
     return "";
