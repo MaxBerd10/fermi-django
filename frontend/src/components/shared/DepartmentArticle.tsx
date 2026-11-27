@@ -53,13 +53,18 @@ function looksLikeFullName(name: string): boolean {
   return PATRONYMIC_END.test(name.trim());
 }
 
+/** The words of a section title ("The Department's Research Work", "International Cooperation", "Department History", "Кафедра ..."): never a person's name, even in Title Case with a portrait-shaped picture below it. */
+const SECTION_WORD = /(?:^|\s)(?:the|department|department['ʼ’‘]s|kafedra\w*|кафедр\w*|work|activity|activities|cooperation|history|events|lessons|defenses|areas|examples|library|fund|veterans|research|conferences?|achievements|international)(?=\s|$)/iu;
+
 function profileName(block: ContentBlock) {
   if (block.block_type !== "heading" && !(block.block_type === "paragraph" && block.data.bold)) return;
   const text = block.data.text.trim();
-  const all = text.split(/\s+/);
+  if (SECTION_WORD.test(text)) return;
+  // an academic title before the name ("Dr. Muhammad Amir Khan") is not a word of the name
+  const all = text.replace(/^(?:Dr|Prof|Doc)\.?\s+/u, "").split(/\s+/);
   const words = all.length > 2 && PATRONYMIC_PARTICLE.test(all[all.length - 1]) ? all.slice(0, -1) : all;
   if (words.length >= 2 && words.length <= 5 &&
-      words.every((word) => /^[\p{L}ʻʼ’'-]+$/u.test(word)) &&
+      words.every((word) => /^[\p{L}ʻʼ’‘'`´-]+$/u.test(word)) &&
       /^\p{Lu}/u.test(words[0]) && /^\p{Lu}/u.test(words[words.length - 1]) &&
       words.filter((word) => /^\p{Lu}/u.test(word)).length >= words.length - 1) {
     return text;
