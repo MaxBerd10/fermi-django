@@ -1,0 +1,134 @@
+[
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "9",
+  "lang": "ru",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "“Oʻzbekiston – 2030” strategiyasini “Atrof-muhitni asrash va “yashil iqtisodiyot” yilida amalga oshirishga oid davlat da",
+  "current": "Осуществляются такие меры, как регулярное орошение, уход за зелеными зонами и развитие устойчивой экологической инфраструктуры.",
+  "fix": "О государственной программе по реализации стратегии «Узбекистан – 2030» в Год охраны окружающей среды и «зелёной экономики»",
+  "why": "ru holds a sentence from block 12 (measures/irrigation) instead of the title of the state programme"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "14",
+  "lang": "ru",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "Tadbir yakunida eng faol ishtirokchilar, talaba-guruhlar va kafedralar faxriy yorliqlar hamda “Yashil universitet elchis",
+  "current": "«Новое дерево - новое дыхание» - это не просто посадка саженцев, это верный шаг к созданию здоровой, чистой и зеленой среды для будущих поколений.",
+  "fix": "По итогам мероприятия самые активные участники, студенческие группы и кафедры будут награждены почётными грамотами и сертификатами «Посол Зелёного университета».",
+  "why": "ru holds the 'New tree - new breath' sentence of block 15; the awards sentence is missing"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "14",
+  "lang": "en",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "Tadbir yakunida eng faol ishtirokchilar, talaba-guruhlar va kafedralar faxriy yorliqlar hamda “Yashil universitet elchis",
+  "current": "Measures such as regular irrigation, maintenance of green areas, and the development of sustainable environmental infrastructure are being implemented.",
+  "fix": "At the end of the event, the most active participants, student groups and departments will be awarded certificates of honour and “Green University Ambassador” certificates.",
+  "why": "en holds a measures/irrigation sentence (block 12 content); the awards sentence is missing"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "15",
+  "lang": "en",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "“Yangi daraxt — yangi nafas” — bu shunchaki koʻchat ekish emas, balki kelajak avlod uchun sogʻlom, toza va yashil muhit ",
+  "current": "As a result of the event, the most active participants, student groups, and departments will be awarded diplomas and certificates, \"Ambassador of the Green Univ",
+  "fix": "“New Tree — New Breath” is not just planting seedlings, but a sure step towards creating a healthy, clean and green environment for future generations.",
+  "why": "en holds the awards sentence of block 14"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "16",
+  "lang": "en",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "2025 yil Atrof-muhitni asrash va „yashil“ iqtisodiyot yili",
+  "current": "Eco-Active Students and Green University Events",
+  "fix": "2025 — the Year of Environmental Protection and the \"green\" economy",
+  "why": "en is an unrelated heading; uz is '2025 — Year of Environmental Protection and Green Economy'"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "2",
+  "lang": "ru",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot instituti tomonidan “Yashil makon” umummilliy tashabbusi doirasida “Yangi daraxt — ",
+  "current": "В рамках общенациональной инициативы «Зеленое пространство» Ферганским медицинским институтом общественного здоровья был запущен комплексный экоклемпион «Новое ",
+  "fix": "В рамках общенациональной инициативы «Зеленое пространство» Ферганским медицинским институтом общественного здоровья был запущен комплексный экочемпионат «Новое дерево - новое дыхание». Данное мероприятие полностью соответствует принципам программы «Зеленый университет» и направлено на улучшение экологической среды, продвижение идей устойчивого развития и повышение ответственности молодежи за окружающую среду.",
+  "why": "'экоклемпион' is a garbled word; the term is 'экочемпионат' (eco-championship)"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "13",
+  "lang": "ru",
+  "item": 0,
+  "severity": "wrong",
+  "uz": "Mazkur ekochempionat nafaqat institut hududini obodonlashtirishga, balki sogʻlom ekologik muhit yaratish, tabiatni asras",
+  "current": "Данный экочемпион служит не только благоустройству территории института, но и созданию здоровой экологической среды, внедрению в сознание молодежи природоохранн",
+  "fix": "Данный экочемпионат служит не только благоустройству территории института, но и созданию здоровой экологической среды, внедрению в сознание молодежи природоохранной культуры и продвижению на международном уровне принципов экологической устойчивости.",
+  "why": "'экочемпион' means an eco-champion (a person); the term is 'экочемпионат'"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "1",
+  "lang": "ru",
+  "item": 0,
+  "severity": "missing",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot institutida “Yashil makon” umummilliy loyihasi doirasida “Yangi daraxt — yangi nafa",
+  "current": "В Ферганском институте общественного здоровья в рамках общенационального проекта «Зелёное пространство» организован экочемпионат «Новое дерево — новое дыхание»",
+  "fix": "В Ферганском медицинском институте общественного здоровья в рамках общенационального проекта «Зелёное пространство» организован экочемпионат «Новое дерево — новое дыхание»",
+  "why": "institute name lacks 'медицинском' (uz 'tibbiyot instituti')"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "1",
+  "lang": "en",
+  "item": 0,
+  "severity": "missing",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot institutida “Yashil makon” umummilliy loyihasi doirasida “Yangi daraxt — yangi nafa",
+  "current": "An eco-championship \"New Tree — New Breath\" was organized at the Fergana Institute of Public Health within the framework of the national project \"Green Space\"",
+  "fix": "An eco-championship \"New Tree — New Breath\" was organized at the Fergana Medical Institute of Public Health within the framework of the national project \"Green Space\"",
+  "why": "institute name lacks 'Medical' (uz 'tibbiyot instituti')"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon-2",
+  "block": "2",
+  "lang": "en",
+  "item": 0,
+  "severity": "missing",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot instituti tomonidan “Yashil makon” umummilliy tashabbusi doirasida “Yangi daraxt — ",
+  "current": "A large-scale eco-championship called \"New Tree — New Breath\" was launched by the Fergana Institute of Public Health as part of the national \"Green Space\" initi",
+  "fix": "A large-scale eco-championship called \"New Tree — New Breath\" was launched by the Fergana Medical Institute of Public Health as part of the national \"Green Space\" initiative. This event fully corresponds to the principles of the \"Green University\" program and is aimed at improving the ecological environment, promoting the ideas of sustainable development, and increasing young people's responsibility toward the environment.",
+  "why": "institute name lacks 'Medical' (uz 'tibbiyot instituti')"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon",
+  "block": "5",
+  "lang": "ru",
+  "item": 0,
+  "severity": "missing",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot instituti \"Yashil makon\" loyihasi doirasida \"Yashil institut\" aksiyasini tashkil et",
+  "current": "Ферганский институт общественного здоровья в рамках проекта «Зелёное пространство» организовал акцию «Зелёный институт». В ходе мероприятия саженцы, посаженные ",
+  "fix": "Ферганский медицинский институт общественного здоровья в рамках проекта «Зелёное пространство» организовал акцию «Зелёный институт». В ходе мероприятия саженцы, посаженные представителями факультета медицинской профилактики и общественного здоровья, ещё больше оживили территорию института и заложили прочный фундамент на пути к устойчивому будущему.",
+  "why": "institute name lacks 'медицинский' (uz 'tibbiyot instituti')"
+ },
+ {
+  "page": "yashil-universitet-yashil-makon",
+  "block": "5",
+  "lang": "en",
+  "item": 0,
+  "severity": "missing",
+  "uz": "Fargʻona jamoat salomatligi tibbiyot instituti \"Yashil makon\" loyihasi doirasida \"Yashil institut\" aksiyasini tashkil et",
+  "current": "The Fergana Institute of Public Health organized the \"Green Institute\" campaign within the framework of the \"Green Space\" project. During the event, seedlings p",
+  "fix": "The Fergana Medical Institute of Public Health organized the \"Green Institute\" campaign within the framework of the \"Green Space\" project. During the event, seedlings planted by representatives of the Faculty of Medical Prevention and Public Health further enlivened the institute's territory and laid a solid foundation on the path to a sustainable future.",
+  "why": "institute name lacks 'Medical' (uz 'tibbiyot instituti')"
+ }
+]
