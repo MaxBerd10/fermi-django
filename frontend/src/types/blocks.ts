@@ -102,6 +102,12 @@ export interface RawHtmlBlockData {
   html: string;
   slug?: string;
 }
+/** A video of another site, kept as its id (the page builds the address itself, there is no markup to sanitize). */
+export interface EmbedBlockData {
+  provider: "youtube";
+  video_id: string;
+  title?: string;
+}
 
 export type BlockType =
   | "heading"
@@ -113,7 +119,8 @@ export type BlockType =
   | "document"
   | "gallery"
   | "table"
-  | "raw_html";
+  | "raw_html"
+  | "embed";
 
 interface ContentBlockBase<T extends BlockType, D> {
   id: number;
@@ -132,7 +139,8 @@ export type ContentBlock =
   | ContentBlockBase<"document", DocumentBlockData>
   | ContentBlockBase<"gallery", GalleryBlockData>
   | ContentBlockBase<"table", TableBlockData>
-  | ContentBlockBase<"raw_html", RawHtmlBlockData>;
+  | ContentBlockBase<"raw_html", RawHtmlBlockData>
+  | ContentBlockBase<"embed", EmbedBlockData>;
 
 export interface ContentPage {
   id: number;

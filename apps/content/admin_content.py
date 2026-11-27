@@ -70,7 +70,7 @@ from apps.content.models import ContentBlock, Page
 from apps.media_lib.models import Document, Image
 
 # Block types the rich-text editor has no HTML for.
-PRESERVED_TYPES = frozenset({"table", "document", "gallery", "video", "staff_card", "raw_html"})
+PRESERVED_TYPES = frozenset({"table", "document", "gallery", "video", "staff_card", "raw_html", "embed"})
 
 # Per type: the payload fields a human can see and edit in the editor. Anything
 # else in a block's payload (bold, level, style, ...) is a hidden attribute.

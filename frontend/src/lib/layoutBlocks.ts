@@ -56,7 +56,7 @@ export function picturesOf(block: ContentBlock): Picture[] {
 
 /** A block the engine draws on its own (a document card, old HTML, a video, a styled picture group...). */
 function isStandalone(block: ContentBlock): boolean {
-  if (block.block_type === "raw_html") return true;
+  if (block.block_type === "raw_html" || block.block_type === "embed") return true;
   if (block.block_type === "image") return block.data.style === "diagram";
   if (block.block_type === "gallery") return Boolean(block.data.style);
   return block.block_type === "document" || block.block_type === "video" || block.block_type === "staff_card";

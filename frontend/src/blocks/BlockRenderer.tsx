@@ -210,6 +210,22 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
         />
       );
 
+    case "embed": {
+      const { video_id: videoId, title } = block.data;
+      return (
+        <figure className="cms-embed">
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title={title || "YouTube"}
+            loading="lazy"
+            allow="encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </figure>
+      );
+    }
+
     case "gallery": {
       const { items, style } = block.data;
       const visible = items.filter((item) => item.image);

@@ -220,6 +220,7 @@ class ContentBlock(models.Model):
         GALLERY = "gallery", "Gallery"
         TABLE = "table", "Table"
         RAW_HTML = "raw_html", "Legacy HTML"
+        EMBED = "embed", "Embedded video"
 
     page = models.ForeignKey(Page, related_name="blocks", on_delete=models.CASCADE)
     order = models.PositiveIntegerField()

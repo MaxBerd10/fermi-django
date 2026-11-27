@@ -154,6 +154,25 @@ def _validate_raw_html(payload: dict, lang: str) -> None:
         raise ValidationError(f"[{lang}] 'html' must be a non-empty string")
 
 
+EMBED_PROVIDERS = ("youtube",)
+YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+
+
+def _validate_embed(payload: dict, lang: str) -> None:
+    """A video of another site, kept as an id (never as markup): the page builds the address itself."""
+    provider = payload.get("provider")
+    if provider not in EMBED_PROVIDERS:
+        raise ValidationError(f"[{lang}] 'provider' must be one of {list(EMBED_PROVIDERS)}")
+    video_id = payload.get("video_id")
+    if not isinstance(video_id, str) or not YOUTUBE_ID_RE.match(video_id):
+        raise ValidationError(f"[{lang}] 'video_id' must be the 11-character id of the video, not an address")
+    if "title" in payload:
+        if not isinstance(payload["title"], str):
+            raise ValidationError(f"[{lang}] 'title' must be a string")
+        if HTML_TAG_RE.search(payload["title"]):
+            raise ValidationError(f"[{lang}] 'title' is plain text only — remove any markup")
+
+
 BLOCK_VALIDATORS = {
     "heading": _validate_heading,
     "paragraph": _validate_paragraph,
@@ -165,6 +184,7 @@ BLOCK_VALIDATORS = {
     "gallery": _validate_gallery,
     "table": _validate_table,
     "raw_html": _validate_raw_html,
+    "embed": _validate_embed,
 }
 
 
