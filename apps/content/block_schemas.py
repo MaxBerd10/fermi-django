@@ -146,6 +146,27 @@ def _validate_table(payload: dict, lang: str) -> None:
             if HTML_TAG_RE.search(cell):
                 raise ValidationError(f"[{lang}] cells are plain text only — remove any markup")
 
+    if "header_groups" in payload:
+        _validate_header_groups(payload["header_groups"], len(headers), lang)
+
+
+def _validate_header_groups(groups, column_count: int, lang: str) -> None:
+    """An optional row of group headings above the column headings: [{"label": str (may be empty), "span": int >= 1}], together spanning every column."""
+    if not isinstance(groups, list) or not groups:
+        raise ValidationError(f"[{lang}] 'header_groups' must be a non-empty list (leave it out for a table without group headings)")
+    total = 0
+    for group in groups:
+        if not isinstance(group, dict) or not isinstance(group.get("label"), str):
+            raise ValidationError(f"[{lang}] every header group needs a 'label' (it may be empty)")
+        if HTML_TAG_RE.search(group["label"]):
+            raise ValidationError(f"[{lang}] header group labels are plain text only — remove any markup")
+        span = group.get("span")
+        if isinstance(span, bool) or not isinstance(span, int) or span < 1:
+            raise ValidationError(f"[{lang}] every header group needs a 'span' of at least 1 column")
+        total += span
+    if total != column_count:
+        raise ValidationError(f"[{lang}] the header groups span {total} columns but the table has {column_count}")
+
 
 def _validate_raw_html(payload: dict, lang: str) -> None:
     """Legacy HTML is only rendered through the client's sanitizer."""

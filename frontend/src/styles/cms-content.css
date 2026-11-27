@@ -166,6 +166,27 @@
   font-weight: 600;
 }
 
+/* a table's group headings (BlockRenderer, `header_groups`): centred over the columns they span; an empty label leaves a plain header-coloured cell */
+.cms-article .cms-table__groups th,
+.prose-content .cms-table__groups th {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+/* a table with group headings is a table of numbers under a name: the name column keeps a readable width, the numbers take what is left */
+.cms-article .cms-table--grouped td:nth-child(2),
+.prose-content .cms-table--grouped td:nth-child(2) {
+  min-width: 11rem;
+}
+
+.cms-article .cms-table--grouped td,
+.cms-article .cms-table--grouped th,
+.prose-content .cms-table--grouped td,
+.prose-content .cms-table--grouped th {
+  padding-inline: 0.625rem;
+}
+
 .prose-content tbody tr:nth-child(even),
 .cms-article tbody tr:nth-child(even) {
   background: #f8fafc;

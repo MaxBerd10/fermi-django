@@ -170,7 +170,7 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
     }
 
     case "table": {
-      const { headers, rows } = block.data;
+      const { headers, rows, header_groups: groups } = block.data;
       return (
         // max-w-full is load-bearing, not decorative: without an explicit
         // width ceiling, this wrapper's own box grows to fit a wide table
@@ -179,8 +179,15 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
         // (confirmed: document.body.scrollWidth exceeded the viewport)
         // rather than staying contained in this div's own scrollbar.
         <div className="overflow-x-auto max-w-full">
-          <table>
+          <table className={groups && groups.length > 0 ? "cms-table--grouped" : undefined}>
             <thead>
+              {groups && groups.length > 0 && (
+                <tr className="cms-table__groups">
+                  {groups.map((group, i) => (
+                    <th key={i} colSpan={group.span} scope="colgroup">{group.label}</th>
+                  ))}
+                </tr>
+              )}
               <tr>
                 {headers.map((header, i) => (
                   <th key={i}>{header}</th>

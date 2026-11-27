@@ -99,6 +99,8 @@ export interface GalleryBlockData {
 export interface TableBlockData {
   headers: string[];
   rows: string[][];
+  /** An optional row of group headings above the column headings (a label may be empty); the spans add up to the number of columns. */
+  header_groups?: { label: string; span: number }[];
 }
 export interface RawHtmlBlockData {
   html: string;
