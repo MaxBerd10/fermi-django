@@ -26,7 +26,7 @@ import { Reveal } from "@/components/Animation";
 
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 
-import { getNewsCategoryConfig } from "@/lib/newsCategorySection";
+import { getNewsCategoryConfig, newsSectionMenuId } from "@/lib/newsCategorySection";
 import { normalizeNewsCategorySlug } from "@/lib/newsImages";
 
 
@@ -76,13 +76,8 @@ export default function NewsCategoryPage() {
     "tadbirlar",
   ].includes(categorySlug);
 
-  // A news category reached from another menu section (Faoliyat > Madaniy-ma'rifiy fa'oliyat > Madaniy-ma'rifiy
-  // tadbirlar, /news/2019/...) lists THAT section's pages beside it. Only the two news roots -- "Institut
-  // yangiliklari" (1844) and the "Institut" nav entry (1826) -- keep the all-news category list.
-  const NEWS_ROOT_MENU_IDS = [NEWS_DEFAULT_MENU_ID, 1826];
-  const sectionNavId =
-    categoryConfig?.menuSectionId ??
-    (resolvedMenuId > 0 && !NEWS_ROOT_MENU_IDS.includes(resolvedMenuId) ? resolvedMenuId : undefined);
+  // A news category reached from another menu section lists THAT section's pages beside it (see newsSectionMenuId).
+  const sectionNavId = newsSectionMenuId(slug, resolvedMenuId);
 
 
 

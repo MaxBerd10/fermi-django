@@ -24,6 +24,7 @@ import AiSummaryBlock from "@/components/ai/AiSummaryBlock";
 // AI xulosa vaqtincha o'chiq — OpenAI kaliti hali yo'q. Kalit qo'shilgach `true` qiling.
 const AI_SUMMARY_ENABLED = false;
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
+import { newsSectionMenuId } from "@/lib/newsCategorySection";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { localizeTelegramArticle } from "@/lib/uzTranslate";
 import { isTelegramNewsSlug } from "@/lib/telegramNews";
@@ -36,7 +37,7 @@ export default function DetailPage() {
   const menuId = menuIdParam ? Number(menuIdParam) : NEWS_DEFAULT_MENU_ID;
   // An article reached through a link inside a page of some menu section keeps THAT section's list beside it, the
   // same way a /blog page does (see pages/blog/page.tsx) -- the list does not jump to the news list.
-  const originSection = (useLocation().state as { menuSection?: number } | null)?.menuSection;
+  const stateSection = (useLocation().state as { menuSection?: number } | null)?.menuSection;
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -78,6 +79,9 @@ export default function DetailPage() {
   if (error || !article) return <ErrorState message={error ?? undefined} />;
 
   const categorySlug = article.category?.slug;
+  // ... and an article opened from a news list of a menu section (Xorijiy-talabalar > Tadbirlar, Tanlovlar) keeps that
+  // section's list too, so a click on a card does not throw the reader into the all-news list.
+  const originSection = stateSection ?? newsSectionMenuId(categorySlug, menuId);
   const heroImage = getNewsArticleImage(article);
   const showHero = heroImage && (article.isVideo || (
     !isPlaceholderLogo(heroImage) && !article.coverInBody && !hasNewsImageInBody(article, heroImage)

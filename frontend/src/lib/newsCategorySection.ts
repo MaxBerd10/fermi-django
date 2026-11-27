@@ -1,3 +1,4 @@
+import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 // Our own Django DB's id for the "Xorijiy-talabalar" top-level menu section
 // -- not the old Yii2 site's id (6). See lib/menuSection.ts's
 // NAV_ROOT_THEMES comment.
@@ -91,4 +92,14 @@ export function isNewsMenuLanding(slug?: string, menuId?: number): boolean {
 
 }
 
+// The two news roots -- "Institut yangiliklari" (1844) and the "Institut" nav entry (1826) -- keep the all-news
+// category list beside them. A news list or article reached from ANY other menu section lists THAT section's pages.
+const NEWS_ROOT_MENU_IDS = [NEWS_DEFAULT_MENU_ID, 1826];
 
+/** The menu section whose page list belongs beside a news category list / article, or undefined for the all-news list. */
+export function newsSectionMenuId(categorySlug: string | undefined, menuId: number): number | undefined {
+  return (
+    getNewsCategoryConfig(categorySlug)?.menuSectionId ??
+    (menuId > 0 && !NEWS_ROOT_MENU_IDS.includes(menuId) ? menuId : undefined)
+  );
+}
