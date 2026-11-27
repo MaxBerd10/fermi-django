@@ -5,8 +5,11 @@ import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import { uploadMedia } from "@/api/admin";
+import { apiClient } from "@/api/client";
 import MediaLibraryModal from "./MediaLibraryModal";
 import { PreservedBlock } from "./PreservedBlock";
+import BlockEditorModal, { type EditableBlockType } from "./blocks/BlockEditorModal";
+import { chipLabel, decodeStaged, documentFormData, emptyEmbed, emptyTable, encodeStaged, type DocumentData } from "@/admin/lib/blockForms";
 
 interface RichTextEditorProps {
   label: string;
@@ -20,6 +23,26 @@ interface RichTextEditorProps {
    * mark would be dropped on save.
    */
   rawHtml?: boolean;
+  /**
+   * Offers the forms of the blocks the text cannot express: a table, a YouTube video, a map, and (by selecting a chip) editing one the page already has.
+   * Only the Uzbek editor takes them (the structure of a page is the Uzbek tab's), but the form itself holds all three languages.
+   */
+  allowBlocks?: boolean;
+  /** The page being edited: a chip of a saved block asks the server for its data by this id (a page that is not saved yet has none). */
+  pageId?: number;
+}
+
+const EDITABLE_TYPES = new Set<string>(["table", "embed", "document"]);
+
+interface BlockFormState {
+  mode: "new" | "edit";
+  blockType: EditableBlockType;
+  initial: unknown;
+  documentInfo?: { title: string; filename: string } | null;
+  /** The position of the chip being edited (edit) in the editor's document. */
+  pos?: number;
+  /** An edited chip that is itself a new block keeps its data in `newBlock`, a saved one in `blockJson`. */
+  isNew?: boolean;
 }
 
 const DOCUMENT_ACCEPT = ".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx";
@@ -76,7 +99,9 @@ function ToolbarButton({ active, disabled, onClick, title, icon }: ToolbarButton
  * A "Kod" (HTML source) toggle is kept for anyone who wants to hand-edit
  * markup the visual toolbar doesn't expose.
  */
-export default function RichTextEditor({ label, value, onChange, allowFiles = false, rawHtml = false }: RichTextEditorProps) {
+export default function RichTextEditor({ label, value, onChange, allowFiles = false, rawHtml = false, allowBlocks = false, pageId }: RichTextEditorProps) {
+  const [blockForm, setBlockForm] = useState<BlockFormState | null>(null);
+  const openChipRef = useRef<(pos: number) => void>(() => {});
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -122,6 +147,12 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
       onChange(html);
     },
     editorProps: {
+      // Double-clicking the chip of a table / embed / document card opens its form (the toolbar button does the same for a selected chip).
+      handleDoubleClickOn: (_view, _pos, node, nodePos) => {
+        if (node.type.name !== "preservedBlock" || !EDITABLE_TYPES.has(String(node.attrs.blockType))) return false;
+        openChipRef.current(nodePos);
+        return true;
+      },
       attributes: {
         // .preserved-block: a table/PDF/gallery the editor can't edit as text (see PreservedBlock.ts).
         class:
@@ -139,11 +170,12 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
   const cursor = useEditorState({
     editor,
     selector: ({ editor: current }) => {
-      if (!current) return { linkHref: null as string | null, cardLabel: null as string | null };
+      if (!current) return { linkHref: null as string | null, cardLabel: null as string | null, editableChip: null as number | null };
       const href = (current.getAttributes("link").href as string | undefined) ?? null;
       const selected = (current.state.selection as { node?: { type: { name: string }; attrs: Record<string, unknown> } }).node;
       const isCard = selected?.type.name === "preservedBlock" && selected.attrs.blockType === "document";
-      return { linkHref: href, cardLabel: isCard ? String(selected?.attrs.label ?? "") : null };
+      const editable = selected?.type.name === "preservedBlock" && EDITABLE_TYPES.has(String(selected.attrs.blockType)) && (selected.attrs.blockId || selected.attrs.newBlock);
+      return { linkHref: href, cardLabel: isCard ? String(selected?.attrs.label ?? "") : null, editableChip: editable ? (current.state.selection as { from: number }).from : null };
     },
   });
   const canReplaceLinkedFile = Boolean(rawHtml && cursor?.linkHref && FILE_LINK_RE.test(cursor.linkHref));
@@ -159,6 +191,52 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
       lastEmittedHtml.current = value;
     }
   }, [value, editor]);
+
+  async function openChip(pos: number) {
+    const node = editor?.state.doc.nodeAt(pos);
+    if (!editor || !node || node.type.name !== "preservedBlock") return;
+    const blockType = String(node.attrs.blockType) as EditableBlockType;
+    setUploadError("");
+    try {
+      const staged = (node.attrs.newBlock ? decodeStaged<{ block_type: string; data: unknown }>(String(node.attrs.newBlock))?.data : null)
+        ?? (node.attrs.blockJson ? decodeStaged<unknown>(String(node.attrs.blockJson)) : null);
+      if (staged) {
+        setBlockForm({ mode: "edit", blockType, initial: blockType === "document" ? documentFormData(staged as never) : staged, pos, isNew: Boolean(node.attrs.newBlock), documentInfo: null });
+        return;
+      }
+      if (!pageId) throw new Error("Sahifani avval saqlang, keyin blokni tahrirlang.");
+      const { data } = await apiClient.get<{ block_type: string; data: unknown; document?: { title: string; filename: string } | null }>(`admin/pages/${pageId}/blocks/${node.attrs.blockId}`, undefined, true);
+      setBlockForm({ mode: "edit", blockType, initial: blockType === "document" ? documentFormData(data.data as never) : data.data, documentInfo: data.document ?? null, pos });
+    } catch (err) {
+      setUploadError(err instanceof Error ? err.message : "Blok ma'lumotini yuklab bo'lmadi.");
+    }
+  }
+  openChipRef.current = (pos) => { void openChip(pos); };
+
+  function applyBlockForm(data: unknown) {
+    if (!editor || !blockForm) return;
+    const typed = data as Record<"uz" | "ru" | "en", never>;
+    const label = chipLabel(blockForm.blockType, typed);
+    if (blockForm.mode === "new") {
+      // After the selection, never over it: with a chip selected, plain insertContent would REPLACE that chip (and delete its block when the page is saved).
+      editor.chain().focus().insertContentAt(editor.state.selection.to, {
+        type: "preservedBlock",
+        attrs: { newBlock: encodeStaged({ block_type: blockForm.blockType, data }), blockType: blockForm.blockType, label },
+      }).run();
+    } else if (blockForm.pos !== undefined) {
+      const position = blockForm.pos;
+      editor.chain().focus().command(({ tr }) => {
+        const node = tr.doc.nodeAt(position);
+        if (!node) return false;
+        const attrs = blockForm.isNew
+          ? { ...node.attrs, label, newBlock: encodeStaged({ block_type: blockForm.blockType, data }) }
+          : { ...node.attrs, label, blockJson: encodeStaged(data) };
+        tr.setNodeMarkup(position, undefined, attrs);
+        return true;
+      }).run();
+    }
+    setBlockForm(null);
+  }
 
   function insertImage(url: string) {
     editor?.chain().focus().setImage({ src: url }).run();
@@ -314,6 +392,24 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
                   onClick={() => documentInputRef.current?.click()}
                 />
               )}
+              {allowBlocks && (
+                <>
+                  <span className="w-px h-5 bg-background-300 mx-1" />
+                  <ToolbarButton title="Jadval qo'shish" icon="ri-table-line" onClick={() => setBlockForm({ mode: "new", blockType: "table", initial: emptyTable() })} />
+                  <ToolbarButton title="YouTube video qo'shish" icon="ri-youtube-line" onClick={() => setBlockForm({ mode: "new", blockType: "embed", initial: emptyEmbed("youtube") })} />
+                  <ToolbarButton title="Xarita qo'shish" icon="ri-map-pin-line" onClick={() => setBlockForm({ mode: "new", blockType: "embed", initial: emptyEmbed("map") })} />
+                  {cursor?.editableChip !== null && cursor?.editableChip !== undefined && (
+                    <button
+                      type="button"
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => { void openChip(cursor.editableChip as number); }}
+                      className="ml-1 h-8 px-3 rounded-md bg-primary-500 text-background-50 text-xs font-semibold cursor-pointer hover:bg-primary-600 flex items-center gap-1.5"
+                    >
+                      <i className="ri-edit-2-line" /> Blokni tahrirlash
+                    </button>
+                  )}
+                </>
+              )}
               {(canReplaceLinkedFile || canReplaceCard) && (
                 <button
                   type="button"
@@ -354,6 +450,7 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
       <p className="mt-1.5 text-xs text-foreground-500">
         Havolani (https://...) matn ichiga shunchaki yozing, sayt uni avtomatik bosiladigan qiladi.
         {allowFiles && " PDF/Word/Excel faylni yuqoridagi fayl belgisi bilan qo'shing: sahifada tayyor karta bo'lib chiqadi."}
+        {allowBlocks && " Jadval, YouTube video va xarita tugmalari yangi blok qo'shadi; ko'k ramkali blokni ikki marta bosing (yoki belgilab «Blokni tahrirlash») va uni tahrirlang."}
         {rawHtml && !allowFiles && " Fayl belgisi faylni shu tilning matniga havola qilib qo'shadi (sahifada tayyor karta bo'lib chiqadi)."}
         {rawHtml && " Matndagi PDF havolasini almashtirish uchun: havola ustiga bosing, «Faylni almashtirish» tugmasi chiqadi."}
       </p>
@@ -362,6 +459,16 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
       <input ref={fileInputRef} type="file" className="hidden" accept=".jpg,.jpeg,.png,.gif,.webp" onChange={onUploadFile} />
       <input ref={documentInputRef} type="file" className="hidden" accept={DOCUMENT_ACCEPT} onChange={onUploadDocument} />
       <input ref={replaceInputRef} type="file" className="hidden" accept={DOCUMENT_ACCEPT} onChange={onReplaceFile} />
+      {blockForm && (
+        <BlockEditorModal
+          blockType={blockForm.blockType}
+          mode={blockForm.mode}
+          initial={blockForm.initial}
+          documentInfo={blockForm.documentInfo}
+          onApply={applyBlockForm}
+          onClose={() => setBlockForm(null)}
+        />
+      )}
       {libraryOpen && (
         <MediaLibraryModal
           onSelect={(_path, url) => {

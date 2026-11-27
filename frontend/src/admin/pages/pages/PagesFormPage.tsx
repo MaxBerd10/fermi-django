@@ -210,6 +210,8 @@ export default function PagesFormPage() {
             value={(form[contentKey] as string) ?? ""}
             onChange={(v) => set(contentKey, v as never)}
             allowFiles={lang === "uz"}
+            allowBlocks={lang === "uz" && !form.raw_editing}
+            pageId={form.id ? Number(form.id) : undefined}
             rawHtml={Boolean(form.raw_editing)}
           />
           {fieldErrors[`content_${lang}`] && <p className="mt-1 text-xs text-red-600">{fieldErrors[`content_${lang}`][0]}</p>}

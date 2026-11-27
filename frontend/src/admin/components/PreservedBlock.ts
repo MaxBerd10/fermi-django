@@ -45,6 +45,18 @@ export const PreservedBlock = Node.create({
         parseHTML: (element) => element.getAttribute("data-new-document"),
         renderHTML: (attributes) => (attributes.newDocument ? { "data-new-document": attributes.newDocument } : {}),
       },
+      // The new payload of an edited block (every language), base64 of JSON: the server applies it when the page is saved (see _apply_block_edits in admin_content.py).
+      blockJson: {
+        default: null,
+        parseHTML: (element) => element.getAttribute("data-block-json"),
+        renderHTML: (attributes) => (attributes.blockJson ? { "data-block-json": attributes.blockJson } : {}),
+      },
+      // A table / embed just added in the editor: no block exists yet, so the whole block ({block_type, data}) travels in the marker and the server creates it on save.
+      newBlock: {
+        default: null,
+        parseHTML: (element) => element.getAttribute("data-new-block"),
+        renderHTML: (attributes) => (attributes.newBlock ? { "data-new-block": attributes.newBlock } : {}),
+      },
       docTitle: {
         default: "",
         parseHTML: (element) => element.getAttribute("data-title") ?? "",
@@ -54,7 +66,7 @@ export const PreservedBlock = Node.create({
   },
 
   parseHTML() {
-    return [{ tag: "div[data-preserved-block]" }, { tag: "div[data-new-document]" }];
+    return [{ tag: "div[data-preserved-block]" }, { tag: "div[data-new-document]" }, { tag: "div[data-new-block]" }];
   },
 
   renderHTML({ node, HTMLAttributes }) {
