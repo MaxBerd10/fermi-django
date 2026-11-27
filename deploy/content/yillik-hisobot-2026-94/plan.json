@@ -1,0 +1,178 @@
+{
+ "slug": "kongress-2022-2024",
+ "old": [
+  {
+   "order": 1,
+   "type": "heading",
+   "fp": {
+    "uz": "86620b78ff384f6422150f0bd11f18de6b886021658d42fb1cf14c46c7cf2a62",
+    "ru": "9719b7391bb2606aff3a3b3685641e60abb5a27da7cea1296c23e047b990d3d9",
+    "en": "0b4ef89d1669004d4b4e57a1c284f3fe2bfe84854d0c32f7694d7a2806b3c236"
+   }
+  },
+  {
+   "order": 2,
+   "type": "image",
+   "file_tail": "BANNER DERMO-1 zal.jpg"
+  },
+  {
+   "order": 3,
+   "type": "image",
+   "file_tail": "dermatology...jpg"
+  },
+  {
+   "order": 4,
+   "type": "image",
+   "file_tail": "Dermayology.jpg"
+  },
+  {
+   "order": 5,
+   "type": "embed",
+   "fp": {
+    "uz": "813698fc15f802566c7f1be86f74e8d940f266b3be04c48383a89e724c172f07",
+    "ru": "813698fc15f802566c7f1be86f74e8d940f266b3be04c48383a89e724c172f07",
+    "en": "813698fc15f802566c7f1be86f74e8d940f266b3be04c48383a89e724c172f07"
+   }
+  },
+  {
+   "order": 6,
+   "type": "document",
+   "caption": {
+    "uz": "Konferensiya materiallari toʻplami, 2024-yil may",
+    "ru": "Сборник материалов конференции, Фергана, май 2024",
+    "en": "Conference proceedings, Fergana, May 2024"
+   }
+  },
+  {
+   "order": 7,
+   "type": "heading",
+   "fp": {
+    "uz": "abcfd51768252df21311ccbf87ab9f978091483dde5a090f4055558d54fbac42",
+    "ru": "3213414dbdd62f99ab0b1134cc6ad1f9e555c8d7668d63ed13c6c70e8d46f9c1",
+    "en": "c33ae1c01272e7c629c6a1da3170986f69243386190d3d33dc8600b16f372703"
+   }
+  },
+  {
+   "order": 8,
+   "type": "image",
+   "file_tail": "TAKLIFNOMA-1.jpg"
+  },
+  {
+   "order": 9,
+   "type": "image",
+   "file_tail": "Dermatovenerology.jpg"
+  },
+  {
+   "order": 10,
+   "type": "image",
+   "file_tail": "СПИКЕРС...jpg"
+  },
+  {
+   "order": 11,
+   "type": "image",
+   "file_tail": "PARTICIPANTS-100.jpg"
+  },
+  {
+   "order": 12,
+   "type": "heading",
+   "fp": {
+    "uz": "e79a78c0a71de7a72c11f08c749268ab84e14f9fddfa76002bd8fcb21782bcf1",
+    "ru": "e455c39cf88b6e9065f5ffee139877187b6a8d91a446018b63dc020f3f842e70",
+    "en": "f0f4287fd24b28d107508d5c41342edf0d1a6a731145d224b8967729e5d37799"
+   }
+  },
+  {
+   "order": 13,
+   "type": "image",
+   "file_tail": "zoom.jpg"
+  },
+  {
+   "order": 14,
+   "type": "image",
+   "file_tail": "sumka.jpg"
+  },
+  {
+   "order": 15,
+   "type": "image",
+   "file_tail": "Заславский Денис.jpg"
+  },
+  {
+   "order": 16,
+   "type": "embed",
+   "fp": {
+    "uz": "1279ddd552c32a7b5ffe9b58caca4c268f8bbc95179adef6b6e7240a8adad378",
+    "ru": "1279ddd552c32a7b5ffe9b58caca4c268f8bbc95179adef6b6e7240a8adad378",
+    "en": "1279ddd552c32a7b5ffe9b58caca4c268f8bbc95179adef6b6e7240a8adad378"
+   }
+  },
+  {
+   "order": 17,
+   "type": "document",
+   "caption": {
+    "uz": "Konferensiya axborot xati, 2022-yil 6-may (rus tilida)",
+    "ru": "Информационное письмо конференции, 6 мая 2022 года",
+    "en": "Conference information letter, 6 May 2022"
+   }
+  },
+  {
+   "order": 18,
+   "type": "document",
+   "caption": {
+    "uz": "Konferensiya dasturi, 2022-yil 6-may (kirill alifbosida)",
+    "ru": "Программа конференции (на узбекском языке, кириллицей)",
+    "en": "Conference programme (in Uzbek, Cyrillic script)"
+   }
+  }
+ ],
+ "photos": {
+  "block_type": "heading",
+  "data": {
+   "uz": {
+    "text": "Plakatlar va fotosuratlar",
+    "level": 3
+   },
+   "ru": {
+    "text": "Плакаты и фотографии",
+    "level": 3
+   },
+   "en": {
+    "text": "Posters and photos",
+    "level": 3
+   }
+  }
+ },
+ "video": {
+  "block_type": "heading",
+  "data": {
+   "uz": {
+    "text": "Video",
+    "level": 3
+   },
+   "ru": {
+    "text": "Видео",
+    "level": 3
+   },
+   "en": {
+    "text": "Video",
+    "level": 3
+   }
+  }
+ },
+ "documents": {
+  "block_type": "heading",
+  "data": {
+   "uz": {
+    "text": "Hujjatlar",
+    "level": 3
+   },
+   "ru": {
+    "text": "Документы",
+    "level": 3
+   },
+   "en": {
+    "text": "Documents",
+    "level": 3
+   }
+  }
+ }
+}
