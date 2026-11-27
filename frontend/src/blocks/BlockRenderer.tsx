@@ -211,12 +211,19 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
       );
 
     case "embed": {
-      const { video_id: videoId, title } = block.data;
+      const data = block.data;
+      if (data.provider === "map") {
+        return (
+          <figure className="cms-embed cms-embed--map" style={{ height: data.height ?? 450 }}>
+            <iframe src={data.src} title={data.title || "Map"} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" />
+          </figure>
+        );
+      }
       return (
         <figure className="cms-embed">
           <iframe
-            src={`https://www.youtube.com/embed/${videoId}`}
-            title={title || "YouTube"}
+            src={`https://www.youtube.com/embed/${data.video_id}`}
+            title={data.title || "YouTube"}
             loading="lazy"
             allow="encrypted-media; picture-in-picture; fullscreen"
             referrerPolicy="strict-origin-when-cross-origin"

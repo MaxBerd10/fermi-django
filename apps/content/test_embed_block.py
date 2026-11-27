@@ -53,3 +53,42 @@ def test_the_public_api_serves_the_block(db):
 
     assert body["blocks"][0]["block_type"] == "embed"
     assert body["blocks"][0]["data"]["uz"]["video_id"] == "Mg6MBqg4f5o"
+
+
+MAP = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!5e0!3m2!1sru!2s!4v1754904273804"
+
+
+def test_a_google_map_is_a_valid_block(db):
+    page = Page.objects.create(slug="xarita-sahifa")
+    embed = ContentBlock(page=page, order=1, block_type="embed", data=block(provider="map", src=MAP, height=450, title="Xarita"))
+
+    embed.full_clean()
+
+
+@pytest.mark.parametrize(
+    "src",
+    [
+        "https://evil.example/maps/embed?pb=!1m18",
+        "http://www.google.com/maps/embed?pb=!1m18",
+        "https://www.google.com/maps/embed?pb=!1m18 width=600 height=450",
+        "https://www.google.com/maps/embed?pb=!1m18\" onload=\"x",
+        "javascript:alert(1)",
+        "",
+        None,
+    ],
+)
+def test_a_map_address_that_is_not_a_plain_google_embed_address_is_refused(db, src):
+    page = Page.objects.create(slug="xarita-sahifa")
+    embed = ContentBlock(page=page, order=1, block_type="embed", data=block(provider="map", src=src))
+
+    with pytest.raises(ValidationError):
+        embed.full_clean()
+
+
+@pytest.mark.parametrize("height", [0, 100, 5000, "450", True])
+def test_a_map_height_is_a_sensible_whole_number(db, height):
+    page = Page.objects.create(slug="xarita-sahifa")
+    embed = ContentBlock(page=page, order=1, block_type="embed", data=block(provider="map", src=MAP, height=height))
+
+    with pytest.raises(ValidationError):
+        embed.full_clean()

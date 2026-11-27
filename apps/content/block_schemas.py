@@ -154,18 +154,30 @@ def _validate_raw_html(payload: dict, lang: str) -> None:
         raise ValidationError(f"[{lang}] 'html' must be a non-empty string")
 
 
-EMBED_PROVIDERS = ("youtube",)
+EMBED_PROVIDERS = ("youtube", "map")
 YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+# a map is kept as the plain embed address of Google Maps (the "pb=..." code and nothing else), never as markup
+MAP_SRC_RE = re.compile(r"^https://www\.google\.com/maps/embed\?pb=[A-Za-z0-9!%._-]{10,1500}$")
+MAP_HEIGHT_RANGE = range(200, 1001)
 
 
 def _validate_embed(payload: dict, lang: str) -> None:
-    """A video of another site, kept as an id (never as markup): the page builds the address itself."""
+    """A video or a map of another site, kept as an id / a plain address (never as markup): the page builds the frame itself."""
     provider = payload.get("provider")
     if provider not in EMBED_PROVIDERS:
         raise ValidationError(f"[{lang}] 'provider' must be one of {list(EMBED_PROVIDERS)}")
-    video_id = payload.get("video_id")
-    if not isinstance(video_id, str) or not YOUTUBE_ID_RE.match(video_id):
-        raise ValidationError(f"[{lang}] 'video_id' must be the 11-character id of the video, not an address")
+    if provider == "youtube":
+        video_id = payload.get("video_id")
+        if not isinstance(video_id, str) or not YOUTUBE_ID_RE.match(video_id):
+            raise ValidationError(f"[{lang}] 'video_id' must be the 11-character id of the video, not an address")
+    else:
+        src = payload.get("src")
+        if not isinstance(src, str) or not MAP_SRC_RE.match(src):
+            raise ValidationError(f"[{lang}] 'src' must be a Google Maps embed address (https://www.google.com/maps/embed?pb=...) with nothing after the code")
+        if "height" in payload:
+            height = payload["height"]
+            if isinstance(height, bool) or not isinstance(height, int) or height not in MAP_HEIGHT_RANGE:
+                raise ValidationError(f"[{lang}] 'height' must be a whole number of pixels from 200 to 1000")
     if "title" in payload:
         if not isinstance(payload["title"], str):
             raise ValidationError(f"[{lang}] 'title' must be a string")

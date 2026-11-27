@@ -104,12 +104,10 @@ export interface RawHtmlBlockData {
   html: string;
   slug?: string;
 }
-/** A video of another site, kept as its id (the page builds the address itself, there is no markup to sanitize). */
-export interface EmbedBlockData {
-  provider: "youtube";
-  video_id: string;
-  title?: string;
-}
+/** A video or a map of another site, kept as an id / a plain address (the page builds the frame itself, there is no markup to sanitize). */
+export type EmbedBlockData =
+  | { provider: "youtube"; video_id: string; title?: string }
+  | { provider: "map"; src: string; height?: number; title?: string };
 
 export type BlockType =
   | "heading"

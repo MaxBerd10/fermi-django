@@ -829,3 +829,9 @@
   height: 100%;
   border: 0;
 }
+
+/* a map (`embed`, provider map): as tall as its own height says, the width of the text */
+.cms-embed--map {
+  aspect-ratio: auto;
+  background: #e9eef6;
+}
