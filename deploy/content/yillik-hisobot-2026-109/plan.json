@@ -1,0 +1,240 @@
+[
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "heading_ru",
+  "old": "Test natijalari 2026/2027",
+  "new": "Результаты тестирования 2026/2027"
+ },
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "heading_en",
+  "old": "Test natijalari 2026/2027",
+  "new": "Test results 2026/2027"
+ },
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "intro_ru",
+  "old": "Tasdiqlangan elektron qaydnomalarni yo'nalish va ta'lim tili bo'yicha oching.",
+  "new": "Откройте утверждённые электронные протоколы по направлению и языку обучения."
+ },
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "intro_en",
+  "old": "Tasdiqlangan elektron qaydnomalarni yo'nalish va ta'lim tili bo'yicha oching.",
+  "new": "Open the approved electronic protocols by programme and language of instruction."
+ },
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "announcement_ru",
+  "old": "XURMATLI TALABGORLAR! 2026/2027-o'quv yili uchun o'tkazilgan test sinovlarining tasdiqlangan natijalari e'lon qilinadi. 100 va undan yuqori ball to'plagan talabgorlar talabalikka tavsiya etiladi.",
+  "new": "УВАЖАЕМЫЕ АБИТУРИЕНТЫ! Публикуются утверждённые результаты тестовых испытаний, проведённых для 2026/2027 учебного года. Абитуриенты, набравшие 100 и более баллов, рекомендуются к зачислению."
+ },
+ {
+  "model": "admission_results.ResultsPage",
+  "pk": 1,
+  "field": "announcement_en",
+  "old": "XURMATLI TALABGORLAR! 2026/2027-o'quv yili uchun o'tkazilgan test sinovlarining tasdiqlangan natijalari e'lon qilinadi. 100 va undan yuqori ball to'plagan talabgorlar talabalikka tavsiya etiladi.",
+  "new": "DEAR APPLICANTS! The approved results of the tests held for the 2026/2027 academic year are published. Applicants who scored 100 points or more are recommended for enrolment."
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 3,
+  "field": "title_en",
+  "old": "Farmatsiya",
+  "new": "Pharmacy"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 4,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 5,
+  "field": "title_en",
+  "old": "Rus tili",
+  "new": "Russian language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 6,
+  "field": "title_en",
+  "old": "Qo'shimcha qaydnoma",
+  "new": "Additional protocol"
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 4,
+  "field": "title_en",
+  "old": "Stomatologiya",
+  "new": "Dentistry"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 7,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 8,
+  "field": "title_en",
+  "old": "Rus tili",
+  "new": "Russian language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 9,
+  "field": "title_en",
+  "old": "Qo'shimcha qaydnoma",
+  "new": "Additional protocol"
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 5,
+  "field": "title_en",
+  "old": "Pediatriya",
+  "new": "Pediatrics"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 10,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 11,
+  "field": "title_en",
+  "old": "Rus tili",
+  "new": "Russian language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 12,
+  "field": "title_en",
+  "old": "Pediatriya ishi",
+  "new": "Pediatric work"
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 6,
+  "field": "title_en",
+  "old": "Davolash ishi",
+  "new": "General medicine"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 13,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 14,
+  "field": "title_en",
+  "old": "Rus tili",
+  "new": "Russian language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 15,
+  "field": "title_en",
+  "old": "Qo'shimcha qaydnoma",
+  "new": "Additional protocol"
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 7,
+  "field": "title_en",
+  "old": "Davolash",
+  "new": "Treatment"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 16,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 17,
+  "field": "title_en",
+  "old": "Rus tili",
+  "new": "Russian language"
+ },
+ {
+  "model": "admission_results.ResultCategory",
+  "pk": 8,
+  "field": "title_en",
+  "old": "Tibbiy profilaktika ishi",
+  "new": "Medical prevention"
+ },
+ {
+  "model": "admission_results.ResultFile",
+  "pk": 18,
+  "field": "title_en",
+  "old": "O'zbek tili",
+  "new": "Uzbek language"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 1878,
+  "field": "label_en",
+  "old": "Institut gazetasi-2025",
+  "new": "Institute newspaper-2025"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 2062,
+  "field": "label_ru",
+  "old": "Directions of education for applicants and the history of the institute",
+  "new": "Направления обучения для абитуриентов и история института"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 2172,
+  "field": "label_ru",
+  "old": "Green university 2021-2026",
+  "new": "Зелёный университет 2021-2026"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 2172,
+  "field": "label_en",
+  "old": "Green university 2021-2026",
+  "new": "Green University 2021-2026"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 2173,
+  "field": "label_ru",
+  "old": "Green university-2026",
+  "new": "Зелёный университет-2026"
+ },
+ {
+  "model": "menu.MenuItem",
+  "pk": 2174,
+  "field": "label_ru",
+  "old": "17 goals of UN Policies",
+  "new": "17 целей политики ООН"
+ },
+ {
+  "model": "geo.ConnectLeader",
+  "pk": 1,
+  "field": "name",
+  "old": "(Rektor) Sidikov Аkmal Аbdikaxarovich",
+  "new": "(Rektor) Sidikov Akmal Abdikaxarovich"
+ }
+]

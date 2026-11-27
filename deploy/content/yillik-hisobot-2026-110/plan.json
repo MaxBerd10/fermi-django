@@ -1,0 +1,1522 @@
+[
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 3,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Gistologiya, sitologiya va embriologiya test (uzb)",
+  "new": "Гистология, цитология и эмбриология, тест (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 3,
+  "lang": "en",
+  "field": "caption",
+  "old": "Gistologiya, sitologiya va embriologiya test (uzb)",
+  "new": "Histology, cytology and embryology test (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 4,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya, Umumiy genetika (uzb)",
+  "new": "Медицинская биология, общая генетика (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 4,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya, Umumiy genetika (uzb)",
+  "new": "Medical biology, general genetics (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 5,
+  "lang": "uz",
+  "field": "caption",
+  "old": "ТЕСТЫ ПО ПРЕДМЕТУ БИЛОГИЯ (rus)",
+  "new": "Biologiya fanidan testlar (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 5,
+  "lang": "en",
+  "field": "caption",
+  "old": "ТЕСТЫ ПО ПРЕДМЕТУ БИЛОГИЯ (rus)",
+  "new": "Tests in Biology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 6,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Тесты по предмету ботаника (rus)",
+  "new": "Botanika fanidan testlar (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 6,
+  "lang": "en",
+  "field": "caption",
+  "old": "Тесты по предмету ботаника (rus)",
+  "new": "Tests in Botany (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 7,
+  "lang": "uz",
+  "field": "caption",
+  "old": "ТЕСТЫ_ПО_ПРЕДМЕТУ_БИЛОГИЯ_ОСНОВЫ_ЭКОЛОГИИ (rus)",
+  "new": "Biologiya, ekologiya asoslari fanidan testlar (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 7,
+  "lang": "en",
+  "field": "caption",
+  "old": "ТЕСТЫ_ПО_ПРЕДМЕТУ_БИЛОГИЯ_ОСНОВЫ_ЭКОЛОГИИ (rus)",
+  "new": "Tests in Biology and the Fundamentals of Ecology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 8,
+  "lang": "uz",
+  "field": "caption",
+  "old": "ТЕСТЫ_ПО_ПРЕДМЕТУ_МЕДИЦИНСКАЯ_БИОЛОГИЯ_ОБЩАЯ_ГЕНЕТИКА (rus)",
+  "new": "Tibbiy biologiya, umumiy genetika fanidan testlar (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 8,
+  "lang": "en",
+  "field": "caption",
+  "old": "ТЕСТЫ_ПО_ПРЕДМЕТУ_МЕДИЦИНСКАЯ_БИОЛОГИЯ_ОБЩАЯ_ГЕНЕТИКА (rus)",
+  "new": "Tests in Medical Biology and General Genetics (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 9,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Медицинская биология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 9,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Medical biology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 11,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Axborot texnologiyalari (uzb)",
+  "new": "Информационные технологии (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 11,
+  "lang": "en",
+  "field": "caption",
+  "old": "Axborot texnologiyalari (uzb)",
+  "new": "Information technologies (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 12,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Sxemotexnika fanidan testlar toʻplami (uzb)",
+  "new": "Сборник тестов по предмету «Схемотехника» (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 12,
+  "lang": "en",
+  "field": "caption",
+  "old": "Sxemotexnika fanidan testlar toʻplami (uzb)",
+  "new": "Collection of tests in Circuit Engineering (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 13,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Elektrotexnika fanidan testlar toʻplami (uzb)",
+  "new": "Сборник тестов по предмету «Электротехника» (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 13,
+  "lang": "en",
+  "field": "caption",
+  "old": "Elektrotexnika fanidan testlar toʻplami (uzb)",
+  "new": "Collection of tests in Electrical Engineering (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 14,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Sxemotexnika fani bo’yicha testlar to’plami (uzb)",
+  "new": "Сборник тестов по предмету «Схемотехника» (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 14,
+  "lang": "en",
+  "field": "caption",
+  "old": "Sxemotexnika fani bo’yicha testlar to’plami (uzb)",
+  "new": "Collection of tests in Circuit Engineering (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 15,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Elektrotexnikaning umumiy va nazariy asoslari fani bo’yicha testlar to’plami (uzb)",
+  "new": "Сборник тестов по предмету «Общие и теоретические основы электротехники» (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 15,
+  "lang": "en",
+  "field": "caption",
+  "old": "Elektrotexnikaning umumiy va nazariy asoslari fani bo’yicha testlar to’plami (uzb)",
+  "new": "Collection of tests in General and Theoretical Foundations of Electrical Engineering (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 17,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Karantin kasalliklari",
+  "new": "Карантинные болезни"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 17,
+  "lang": "en",
+  "field": "caption",
+  "old": "Karantin kasalliklari",
+  "new": "Quarantine diseases"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 18,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Harbiy epidemiologiya (uzb)",
+  "new": "Военная эпидемиология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 18,
+  "lang": "en",
+  "field": "caption",
+  "old": "Harbiy epidemiologiya (uzb)",
+  "new": "Military epidemiology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 19,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Harbiy epidemiologiya (rus)",
+  "new": "Военная эпидемиология (рус.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 19,
+  "lang": "en",
+  "field": "caption",
+  "old": "Harbiy epidemiologiya (rus)",
+  "new": "Military epidemiology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 20,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy profilaktika ishi (uzb)",
+  "new": "Медико-профилактическое дело (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 20,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy profilaktika ishi (uzb)",
+  "new": "Preventive medicine (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 21,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Эпид ситуации и иммунопрофилактика ОМХ (rus)",
+  "new": "Epidemiologik vaziyatlar va immunoprofilaktika OMX (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 21,
+  "lang": "en",
+  "field": "caption",
+  "old": "Эпид ситуации и иммунопрофилактика ОМХ (rus)",
+  "new": "Epidemiological situations and immunoprophylaxis, OMX (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 22,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Эпид ситуации и иммунопрофилактика TPI (rus)",
+  "new": "Epidemiologik vaziyatlar va immunoprofilaktika TPI (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 22,
+  "lang": "en",
+  "field": "caption",
+  "old": "Эпид ситуации и иммунопрофилактика TPI (rus)",
+  "new": "Epidemiological situations and immunoprophylaxis, TPI (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 23,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Epidemiologik vaziyatlar va immunoprofilaktika OMX (uzb)",
+  "new": "Эпидемиологические ситуации и иммунопрофилактика, OMX (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 23,
+  "lang": "en",
+  "field": "caption",
+  "old": "Epidemiologik vaziyatlar va immunoprofilaktika OMX (uzb)",
+  "new": "Epidemiological situations and immunoprophylaxis, OMX (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 24,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Epidemiologik vaziyatlar va immunoprofilaktika TPI (uzb)",
+  "new": "Эпидемиологические ситуации и иммунопрофилактика, TPI (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 24,
+  "lang": "en",
+  "field": "caption",
+  "old": "Epidemiologik vaziyatlar va immunoprofilaktika TPI (uzb)",
+  "new": "Epidemiological situations and immunoprophylaxis, TPI (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 25,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Yuqumli kasalliklar va bolalar yuqumli kasalliklari kasbiy taʻlim (uzb)",
+  "new": "Инфекционные болезни и детские инфекционные болезни, профессиональное образование (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 25,
+  "lang": "en",
+  "field": "caption",
+  "old": "Yuqumli kasalliklar va bolalar yuqumli kasalliklari kasbiy taʻlim (uzb)",
+  "new": "Infectious diseases and childhood infectious diseases, professional education (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 26,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Yuqumli kasalliklar Tibbiy profilaktika ishi (uzb)",
+  "new": "Инфекционные болезни, медико-профилактическое дело (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 26,
+  "lang": "en",
+  "field": "caption",
+  "old": "Yuqumli kasalliklar Tibbiy profilaktika ishi (uzb)",
+  "new": "Infectious diseases, preventive medicine (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 28,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya (uzb)",
+  "new": "Гигиена. Медицинская экология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 28,
+  "lang": "en",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya (uzb)",
+  "new": "Hygiene. Medical ecology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 29,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Гигиена. Медицинская экология (rus)",
+  "new": "Gigiyena. Tibbiy ekologiya (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 29,
+  "lang": "en",
+  "field": "caption",
+  "old": "Гигиена. Медицинская экология (rus)",
+  "new": "Hygiene. Medical ecology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 30,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya TPI 2 kurs (uzb)",
+  "new": "Гигиена. Медицинская экология, TPI, 2 курс (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 30,
+  "lang": "en",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya TPI 2 kurs (uzb)",
+  "new": "Hygiene. Medical ecology, TPI, year 2 (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 31,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya (uzb)",
+  "new": "Гигиена. Медицинская экология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 31,
+  "lang": "en",
+  "field": "caption",
+  "old": "Gigiyena. Tibbiy ekologiya (uzb)",
+  "new": "Hygiene. Medical ecology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 32,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Гигиена Медицинская экология Лечебное дело (rus)",
+  "new": "Gigiyena. Tibbiy ekologiya, Davolash ishi (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 32,
+  "lang": "en",
+  "field": "caption",
+  "old": "Гигиена Медицинская экология Лечебное дело (rus)",
+  "new": "Hygiene. Medical ecology, General Medicine (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 33,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Гигиена_Медицинская_экология (rus)",
+  "new": "Gigiyena. Tibbiy ekologiya (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 33,
+  "lang": "en",
+  "field": "caption",
+  "old": "Гигиена_Медицинская_экология (rus)",
+  "new": "Hygiene. Medical ecology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 35,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Ichki kasalliklar propedevtikasi Davolash ishi yoʻnalishi (uzb)",
+  "new": "Пропедевтика внутренних болезней, направление «Лечебное дело» (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 35,
+  "lang": "en",
+  "field": "caption",
+  "old": "Ichki kasalliklar propedevtikasi Davolash ishi yoʻnalishi (uzb)",
+  "new": "Propedeutics of internal diseases, General Medicine programme (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 37,
+  "lang": "ru",
+  "field": "caption",
+  "old": "OXTA Davolash ishi amaliyot (xamshira yordamchisi) (uzb)",
+  "new": "OXTA. Лечебное дело, практика (помощник медсестры) (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 37,
+  "lang": "en",
+  "field": "caption",
+  "old": "OXTA Davolash ishi amaliyot (xamshira yordamchisi) (uzb)",
+  "new": "OXTA. General Medicine, practice (nurse assistant) (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 38,
+  "lang": "ru",
+  "field": "caption",
+  "old": "OXTA Stomotalogiya - Klinik anatomiya (rus)",
+  "new": "OXTA. Стоматология — клиническая анатомия (рус.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 38,
+  "lang": "en",
+  "field": "caption",
+  "old": "OXTA Stomotalogiya - Klinik anatomiya (rus)",
+  "new": "OXTA. Dentistry — clinical anatomy (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 39,
+  "lang": "ru",
+  "field": "caption",
+  "old": "OXTA Xalq tabobati Klinik anatomiya (uzb)",
+  "new": "OXTA. Народная медицина, клиническая анатомия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 39,
+  "lang": "en",
+  "field": "caption",
+  "old": "OXTA Xalq tabobati Klinik anatomiya (uzb)",
+  "new": "OXTA. Traditional medicine, clinical anatomy (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 41,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Mikrobiologiya (rus)",
+  "new": "Микробиология (рус.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 41,
+  "lang": "en",
+  "field": "caption",
+  "old": "Mikrobiologiya (rus)",
+  "new": "Microbiology (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 42,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Mikrobiologiya (uzb)",
+  "new": "Микробиология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 42,
+  "lang": "en",
+  "field": "caption",
+  "old": "Mikrobiologiya (uzb)",
+  "new": "Microbiology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 43,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Mikrobiologiya Oliy Xamshiralik ishi (uzb)",
+  "new": "Микробиология, высшее сестринское дело (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 43,
+  "lang": "en",
+  "field": "caption",
+  "old": "Mikrobiologiya Oliy Xamshiralik ishi (uzb)",
+  "new": "Microbiology, higher nursing (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 44,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Иммунология тест Лечебное дело, Педиатрия 3-курс (rus)",
+  "new": "Immunologiya testi, Davolash ishi, Pediatriya, 3-kurs (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 44,
+  "lang": "en",
+  "field": "caption",
+  "old": "Иммунология тест Лечебное дело, Педиатрия 3-курс (rus)",
+  "new": "Immunology test, General Medicine, Pediatrics, year 3 (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 45,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Микробиология Высщее сестринское дело (rus)",
+  "new": "Mikrobiologiya, Oliy hamshiralik ishi (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 45,
+  "lang": "en",
+  "field": "caption",
+  "old": "Микробиология Высщее сестринское дело (rus)",
+  "new": "Microbiology, higher nursing (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 47,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Patalogik anatomiya (uzb)",
+  "new": "Патологическая анатомия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 47,
+  "lang": "en",
+  "field": "caption",
+  "old": "Patalogik anatomiya (uzb)",
+  "new": "Pathological anatomy (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 49,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Patologik fiziologiya (uzb)",
+  "new": "Патологическая физиология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 49,
+  "lang": "en",
+  "field": "caption",
+  "old": "Patologik fiziologiya (uzb)",
+  "new": "Pathological physiology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 51,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Медицинская биология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 51,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Medical biology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 52,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Медицинская биология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 52,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Medical biology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 53,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Медицинская биология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 53,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya (uzb)",
+  "new": "Medical biology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 55,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Biokimyo (uzb)",
+  "new": "Биохимия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 55,
+  "lang": "en",
+  "field": "caption",
+  "old": "Biokimyo (uzb)",
+  "new": "Biochemistry (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 56,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Noorganik kimyo (uzb)",
+  "new": "Неорганическая химия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 56,
+  "lang": "en",
+  "field": "caption",
+  "old": "Noorganik kimyo (uzb)",
+  "new": "Inorganic chemistry (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 57,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy kimyo (uzb)",
+  "new": "Медицинская химия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 57,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy kimyo (uzb)",
+  "new": "Medical chemistry (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 58,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy biologiya Umumiy genetika (uzb)",
+  "new": "Медицинская биология, общая генетика (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 58,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy biologiya Umumiy genetika (uzb)",
+  "new": "Medical biology, general genetics (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 59,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Тесты по Химии (КГМУ) (rus)",
+  "new": "Kimyo fanidan testlar (KGMU) (rus)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 59,
+  "lang": "en",
+  "field": "caption",
+  "old": "Тесты по Химии (КГМУ) (rus)",
+  "new": "Chemistry tests (KGMU) (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 61,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiy psixologiya (uzb)",
+  "new": "Медицинская психология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 61,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiy psixologiya (uzb)",
+  "new": "Medical psychology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 62,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Ftizatriya (uzb)",
+  "new": "Фтизиатрия (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 62,
+  "lang": "en",
+  "field": "caption",
+  "old": "Ftizatriya (uzb)",
+  "new": "Phthisiology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 64,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Farmakologiya (uzb)",
+  "new": "Фармакология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 64,
+  "lang": "en",
+  "field": "caption",
+  "old": "Farmakologiya (uzb)",
+  "new": "Pharmacology (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 66,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Tibbiyotda xorijiy til. (uzb)",
+  "new": "Иностранный язык в медицине (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 66,
+  "lang": "en",
+  "field": "caption",
+  "old": "Tibbiyotda xorijiy til. (uzb)",
+  "new": "Foreign language in medicine (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 67,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Akusherlik (uzb)",
+  "new": "Акушерство (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 67,
+  "lang": "en",
+  "field": "caption",
+  "old": "Akusherlik (uzb)",
+  "new": "Obstetrics (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 68,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Fiziologiya test savollari (uzb)",
+  "new": "Физиология, тестовые вопросы (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 68,
+  "lang": "en",
+  "field": "caption",
+  "old": "Fiziologiya test savollari (uzb)",
+  "new": "Physiology test questions (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 69,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Testoviy voprosi Fiziologiya (uzb)",
+  "new": "Тестовые вопросы. Физиология (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 69,
+  "lang": "en",
+  "field": "caption",
+  "old": "Testoviy voprosi Fiziologiya (uzb)",
+  "new": "Physiology test questions (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 71,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan TPI 4 kurs uchun (uzb)",
+  "new": "Общая хирургия, для 4 курса TPI (узб.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 71,
+  "lang": "en",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan TPI 4 kurs uchun (uzb)",
+  "new": "General surgery, for year 4 of TPI (Uzbek)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 72,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan TPI 4 kurs uchun (rus)",
+  "new": "Общая хирургия, для 4 курса TPI (рус.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 72,
+  "lang": "en",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan TPI 4 kurs uchun (rus)",
+  "new": "General surgery, for year 4 of TPI (Russian)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 73,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan Davolash ishi yo`nalishi uchun (rus)",
+  "new": "Общая хирургия, для направления «Лечебное дело» (рус.)"
+ },
+ {
+  "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+  "order": 73,
+  "lang": "en",
+  "field": "caption",
+  "old": "Umumiy xirurgiya fanidan Davolash ishi yo`nalishi uchun (rus)",
+  "new": "General surgery, for the General Medicine programme (Russian)"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 1,
+  "lang": "ru",
+  "field": "caption",
+  "old": "PULMONOLOGIYANING DOLZARB MUAMMOLARI",
+  "new": "АКТУАЛЬНЫЕ ПРОБЛЕМЫ ПУЛЬМОНОЛОГИИ"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 1,
+  "lang": "en",
+  "field": "caption",
+  "old": "PULMONOLOGIYANING DOLZARB MUAMMOLARI",
+  "new": "TOPICAL PROBLEMS OF PULMONOLOGY"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 2,
+  "lang": "ru",
+  "field": "caption",
+  "old": "EPIDEMIOLOGIYA ASOSIDAGI PROFILAKTIK TIBBIYOT-2024",
+  "new": "ПРОФИЛАКТИЧЕСКАЯ МЕДИЦИНА НА ОСНОВЕ ЭПИДЕМИОЛОГИИ-2024"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 2,
+  "lang": "en",
+  "field": "caption",
+  "old": "EPIDEMIOLOGIYA ASOSIDAGI PROFILAKTIK TIBBIYOT-2024",
+  "new": "EPIDEMIOLOGY-BASED PREVENTIVE MEDICINE-2024"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 3,
+  "lang": "uz",
+  "field": "caption",
+  "old": "ПСИХИАТРИЯ И ПСИХОСОМАТИКА В XXI ВЕКЕ",
+  "new": "XXI ASRDA PSIXIATRIYA VA PSIXOSOMATIKA"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 3,
+  "lang": "en",
+  "field": "caption",
+  "old": "ПСИХИАТРИЯ И ПСИХОСОМАТИКА В XXI ВЕКЕ",
+  "new": "PSYCHIATRY AND PSYCHOSOMATICS IN THE 21ST CENTURY"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 4,
+  "lang": "ru",
+  "field": "caption",
+  "old": "ANATOMIYA VA JARROHLIKDA FANLARARO YONDASHUVLAR: FUNDAMENTAL TADQIQOTLARDAN KLINIK AMALIYOTGACHA",
+  "new": "МЕЖДИСЦИПЛИНАРНЫЕ ПОДХОДЫ В АНАТОМИИ И ХИРУРГИИ: ОТ ФУНДАМЕНТАЛЬНЫХ ИССЛЕДОВАНИЙ ДО КЛИНИЧЕСКОЙ ПРАКТИКИ"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 4,
+  "lang": "en",
+  "field": "caption",
+  "old": "ANATOMIYA VA JARROHLIKDA FANLARARO YONDASHUVLAR: FUNDAMENTAL TADQIQOTLARDAN KLINIK AMALIYOTGACHA",
+  "new": "INTERDISCIPLINARY APPROACHES IN ANATOMY AND SURGERY: FROM FUNDAMENTAL RESEARCH TO CLINICAL PRACTICE"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 5,
+  "lang": "ru",
+  "field": "caption",
+  "old": "YUQORI TEXNOLOGIYALI JARROHLIK AMALIYOTINING AHAMIYATI",
+  "new": "ЗНАЧЕНИЕ ВЫСОКОТЕХНОЛОГИЧНОЙ ХИРУРГИЧЕСКОЙ ПРАКТИКИ"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 5,
+  "lang": "en",
+  "field": "caption",
+  "old": "YUQORI TEXNOLOGIYALI JARROHLIK AMALIYOTINING AHAMIYATI",
+  "new": "THE IMPORTANCE OF HIGH-TECH SURGICAL PRACTICE"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 6,
+  "lang": "ru",
+  "field": "caption",
+  "old": "JAMOAT SALOMATLIGINI MUXOFAZA QILISHDA ATROF-MUHIT VA SOG‘LOM OVQATLANISHNING AHAMIYATI",
+  "new": "ЗНАЧЕНИЕ ОКРУЖАЮЩЕЙ СРЕДЫ И ЗДОРОВОГО ПИТАНИЯ В ОХРАНЕ ОБЩЕСТВЕННОГО ЗДОРОВЬЯ"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 6,
+  "lang": "en",
+  "field": "caption",
+  "old": "JAMOAT SALOMATLIGINI MUXOFAZA QILISHDA ATROF-MUHIT VA SOG‘LOM OVQATLANISHNING AHAMIYATI",
+  "new": "THE IMPORTANCE OF THE ENVIRONMENT AND HEALTHY NUTRITION IN PROTECTING PUBLIC HEALTH"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 7,
+  "lang": "uz",
+  "field": "text",
+  "old": "ЗДОРОВЬЕ ЧЕЛОВЕКА 21 ВЕКА: АКТУАЛЬНЫЕ ВОПРОСЫ, ПРОБЛЕМЫ И ИННОВАЦИИ",
+  "new": "XXI ASR INSON SALOMATLIGI: DOLZARB MASALALAR, MUAMMOLAR VA INNOVATSIYALAR"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 7,
+  "lang": "en",
+  "field": "text",
+  "old": "ЗДОРОВЬЕ ЧЕЛОВЕКА 21 ВЕКА: АКТУАЛЬНЫЕ ВОПРОСЫ, ПРОБЛЕМЫ И ИННОВАЦИИ",
+  "new": "HUMAN HEALTH OF THE 21ST CENTURY: TOPICAL ISSUES, PROBLEMS AND INNOVATIONS"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 8,
+  "lang": "uz",
+  "field": "caption",
+  "old": "МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В НЕВРОЛОГИИ И ПСИХИАТРИИ: НАУКА И ПРАКТИКА",
+  "new": "NEVROLOGIYA VA PSIXIATRIYADA MULTIDISSIPLINAR YONDASHUV: FAN VA AMALIYOT"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 8,
+  "lang": "en",
+  "field": "caption",
+  "old": "МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В НЕВРОЛОГИИ И ПСИХИАТРИИ: НАУКА И ПРАКТИКА",
+  "new": "A MULTIDISCIPLINARY APPROACH IN NEUROLOGY AND PSYCHIATRY: SCIENCE AND PRACTICE"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 9,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Программа конференции",
+  "new": "Konferensiya dasturi"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 9,
+  "lang": "en",
+  "field": "caption",
+  "old": "Программа конференции",
+  "new": "Conference programme"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 10,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Программа конференции",
+  "new": "Konferensiya dasturi"
+ },
+ {
+  "slug": "respublika-ilmiy-konferensiyalari",
+  "order": 10,
+  "lang": "en",
+  "field": "caption",
+  "old": "Программа конференции",
+  "new": "Conference programme"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 23,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Русский — Информационное письмо: международная научно-практическая конференция «Роль здорового питания в здоровье населения», 17 октября 2026 года (PDF)",
+  "new": "Ruscha — Axborot xati: «Sogʻlom ovqatlanishning aholi salomatligidagi oʻrni» xalqaro ilmiy-amaliy konferensiyasi, 2026-yil 17-oktabr (PDF)"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 23,
+  "lang": "en",
+  "field": "caption",
+  "old": "Русский — Информационное письмо: международная научно-практическая конференция «Роль здорового питания в здоровье населения», 17 октября 2026 года (PDF)",
+  "new": "Russian — Information letter: international scientific and practical conference “The Role of Healthy Nutrition in Population Health”, 17 October 2026 (PDF)"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 24,
+  "lang": "uz",
+  "field": "caption",
+  "old": "English — Information letter: international scientific and practical conference “The Role of Healthy Nutrition in Population Health”, 17 October 2026 (PDF)",
+  "new": "Inglizcha — Axborot xati: «Sogʻlom ovqatlanishning aholi salomatligidagi oʻrni» xalqaro ilmiy-amaliy konferensiyasi, 2026-yil 17-oktabr (PDF)"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 24,
+  "lang": "ru",
+  "field": "caption",
+  "old": "English — Information letter: international scientific and practical conference “The Role of Healthy Nutrition in Population Health”, 17 October 2026 (PDF)",
+  "new": "Английский — Информационное письмо: международная научно-практическая конференция «Роль здорового питания в здоровье населения», 17 октября 2026 года (PDF)"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 25,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Oʻzbekcha — Axborot xati: «Sogʻlom ovqatlanishning aholi salomatligidagi oʻrni» xalqaro ilmiy-amaliy konferensiyasi, 2026-yil 17-oktabr (PDF)",
+  "new": "Узбекский — Информационное письмо: международная научно-практическая конференция «Роль здорового питания в здоровье населения», 17 октября 2026 года (PDF)"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 25,
+  "lang": "en",
+  "field": "caption",
+  "old": "Oʻzbekcha — Axborot xati: «Sogʻlom ovqatlanishning aholi salomatligidagi oʻrni» xalqaro ilmiy-amaliy konferensiyasi, 2026-yil 17-oktabr (PDF)",
+  "new": "Uzbek — Information letter: international scientific and practical conference “The Role of Healthy Nutrition in Population Health”, 17 October 2026 (PDF)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 2,
+  "lang": "ru",
+  "field": "text",
+  "old": "Shakirov Sardor Abdusaminovich",
+  "new": "Шакиров Сардор Абдусаминович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 3,
+  "lang": "ru",
+  "field": "text",
+  "old": "COVID-19 infeksiyasida buyrakning patologik anatomiyasi",
+  "new": "Патологическая анатомия почек при COVID-19-инфекции"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 3,
+  "lang": "en",
+  "field": "text",
+  "old": "COVID-19 infeksiyasida buyrakning patologik anatomiyasi",
+  "new": "Pathological anatomy of the kidney in COVID-19 infection"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 6,
+  "lang": "ru",
+  "field": "text",
+  "old": "Muydinov Javlonbek Ibroximovich",
+  "new": "Муйдинов Жавлонбек Иброхимович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 7,
+  "lang": "ru",
+  "field": "text",
+  "old": "Yurak qorinchalar oraligʻi devor membranoz qismi tugʻma nuqsonining gistotopografiyasi",
+  "new": "Гистотопография врождённого дефекта мембранозной части межжелудочковой перегородки сердца"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 7,
+  "lang": "en",
+  "field": "text",
+  "old": "Yurak qorinchalar oraligʻi devor membranoz qismi tugʻma nuqsonining gistotopografiyasi",
+  "new": "Histotopography of a congenital defect of the membranous part of the interventricular septum of the heart"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 10,
+  "lang": "ru",
+  "field": "text",
+  "old": "Abduvaliyeva Feruzaxon Tulqindjanovna",
+  "new": "Абдувалиева Ферузахон Тулкинжановна"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 11,
+  "lang": "ru",
+  "field": "text",
+  "old": "Aholini suv bilan taʻminlashni optimallashtirishning ekologo-gigiyenik jihatlari (Fargʻona shahri misolida)",
+  "new": "Эколого-гигиенические аспекты оптимизации водоснабжения населения (на примере города Ферганы)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 11,
+  "lang": "en",
+  "field": "text",
+  "old": "Aholini suv bilan taʻminlashni optimallashtirishning ekologo-gigiyenik jihatlari (Fargʻona shahri misolida)",
+  "new": "Ecological and hygienic aspects of optimizing the water supply of the population (using the city of Fergana as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 14,
+  "lang": "ru",
+  "field": "text",
+  "old": "Arabboyev Xurshidbek Xusniddinovich",
+  "new": "Арабоев Хуршидбек Хусниддинович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 15,
+  "lang": "ru",
+  "field": "text",
+  "old": "Tibbiy taʻlim talabalarini krossfit metodlari orqali ommaviy sogʻlomlashtirish jarayoniga tayyorlash texnologiyasi (jismoniy tarbiya va sport fanini oʻqitish misolida)",
+  "new": "Технология подготовки студентов медицинского образования к массовому оздоровлению методами кроссфита (на примере преподавания физической культуры и спорта)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 15,
+  "lang": "en",
+  "field": "text",
+  "old": "Tibbiy taʻlim talabalarini krossfit metodlari orqali ommaviy sogʻlomlashtirish jarayoniga tayyorlash texnologiyasi (jismoniy tarbiya va sport fanini oʻqitish misolida)",
+  "new": "Technology of preparing medical students for mass health improvement through CrossFit methods (using the teaching of physical education and sports as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 18,
+  "lang": "ru",
+  "field": "text",
+  "old": "Xamdamova Shaxnoza Yusupaliyevna",
+  "new": "Хамдамова Шахноза Юсупалиевна"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 19,
+  "lang": "ru",
+  "field": "text",
+  "old": "Integratsion yondashuv asosida talabalarni kasbiy layoqatlarini rivojlantirish texnologiyasi (tibbiy taʻlimda ingliz va lotin tilini qiyoslash misolida)",
+  "new": "Технология развития профессиональных компетенций студентов на основе интеграционного подхода (на примере сопоставления английского и латинского языков в медицинском образовании)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 19,
+  "lang": "en",
+  "field": "text",
+  "old": "Integratsion yondashuv asosida talabalarni kasbiy layoqatlarini rivojlantirish texnologiyasi (tibbiy taʻlimda ingliz va lotin tilini qiyoslash misolida)",
+  "new": "Technology for developing students' professional competence on the basis of an integrative approach (using the comparison of English and Latin in medical education as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 22,
+  "lang": "ru",
+  "field": "text",
+  "old": "Yunusova Raʻno Gʻaybullayevna",
+  "new": "Юнусова Рано Гайбуллаевна"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 23,
+  "lang": "ru",
+  "field": "text",
+  "old": "“Tibbiy taʻlimda biofizika fanini loyihalash asosida oʻqitish metodikasini takomillashtirish”",
+  "new": "«Совершенствование методики преподавания биофизики на основе проектирования в медицинском образовании»"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 23,
+  "lang": "en",
+  "field": "text",
+  "old": "“Tibbiy taʻlimda biofizika fanini loyihalash asosida oʻqitish metodikasini takomillashtirish”",
+  "new": "“Improving the methodology of teaching biophysics on the basis of design in medical education”"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 26,
+  "lang": "ru",
+  "field": "text",
+  "old": "Qaxorova Tursinoy Ulugʻbek qizi",
+  "new": "Кахорова Турсиной Улугбек кизи"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 27,
+  "lang": "ru",
+  "field": "text",
+  "old": "Tibbiy taʻlim jarayonida 3D interaktiv didaktik materiallardan foydalanish metodikasini takomillashtirish texnologiyalari (ingliz tili oʻqitish misolida)",
+  "new": "Технологии совершенствования методики использования 3D-интерактивных дидактических материалов в процессе медицинского образования (на примере преподавания английского языка)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 27,
+  "lang": "en",
+  "field": "text",
+  "old": "Tibbiy taʻlim jarayonida 3D interaktiv didaktik materiallardan foydalanish metodikasini takomillashtirish texnologiyalari (ingliz tili oʻqitish misolida)",
+  "new": "Technologies for improving the methodology of using 3D interactive didactic materials in the medical education process (using English language teaching as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 30,
+  "lang": "ru",
+  "field": "text",
+  "old": "Yoʻldoshev Sobitali Zoxidjon oʻgʻli",
+  "new": "Юлдошев Собитали Зохиджон угли"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 31,
+  "lang": "ru",
+  "field": "text",
+  "old": "Boʻlajak shifokorlar valeologik kompetentligini jismoniy tarbiyaning adaptiv texnologiyalari orqali rivojlantirish metodikasi (jismoniy tarbiya va sport fanini oʻqitish misolida)",
+  "new": "Методика развития валеологической компетентности будущих врачей посредством адаптивных технологий физического воспитания (на примере преподавания физической культуры и спорта)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 31,
+  "lang": "en",
+  "field": "text",
+  "old": "Boʻlajak shifokorlar valeologik kompetentligini jismoniy tarbiyaning adaptiv texnologiyalari orqali rivojlantirish metodikasi (jismoniy tarbiya va sport fanini oʻqitish misolida)",
+  "new": "Methodology for developing the valeological competence of future doctors through adaptive technologies of physical education (using the teaching of physical education and sports as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 34,
+  "lang": "ru",
+  "field": "text",
+  "old": "Turdiyev Shavkat Maʻmirovich",
+  "new": "Турдиев Шавкат Маъмирович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 35,
+  "lang": "ru",
+  "field": "text",
+  "old": "Tibbiy taʻlimda talabalar profilaktik kompetentligini rivojlantirishning intensiv texnologiyalari (gigiyena fanini oʻqitish misolida)",
+  "new": "Интенсивные технологии развития профилактической компетентности студентов в медицинском образовании (на примере преподавания гигиены)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 35,
+  "lang": "en",
+  "field": "text",
+  "old": "Tibbiy taʻlimda talabalar profilaktik kompetentligini rivojlantirishning intensiv texnologiyalari (gigiyena fanini oʻqitish misolida)",
+  "new": "Intensive technologies for developing students' preventive competence in medical education (using the teaching of hygiene as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 38,
+  "lang": "ru",
+  "field": "text",
+  "old": "Shalankov Konstantin Konstantinovich",
+  "new": "Шаланков Константин Константинович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 39,
+  "lang": "ru",
+  "field": "text",
+  "old": "Musiqa terapiyasi darslarida tibbiyot talabalarining mustaqil faoliyatini tashkil etishning pedagogik shartlari",
+  "new": "Педагогические условия организации самостоятельной деятельности студентов-медиков на занятиях по музыкальной терапии"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 39,
+  "lang": "en",
+  "field": "text",
+  "old": "Musiqa terapiyasi darslarida tibbiyot talabalarining mustaqil faoliyatini tashkil etishning pedagogik shartlari",
+  "new": "Pedagogical conditions for organizing the independent activity of medical students in music therapy classes"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 42,
+  "lang": "ru",
+  "field": "text",
+  "old": "Oʻlmasov Zikrillo Obidovich",
+  "new": "Улмасов Зикрилло Обидович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 43,
+  "lang": "ru",
+  "field": "text",
+  "old": "Umurtqalararo disk churrasini davolash va profilaktikasida dochim hamda girudoterapiya kombinatsiyasining samaradorligini baholash",
+  "new": "Оценка эффективности сочетания «дочим» и гирудотерапии в лечении и профилактике грыжи межпозвонкового диска"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 43,
+  "lang": "en",
+  "field": "text",
+  "old": "Umurtqalararo disk churrasini davolash va profilaktikasida dochim hamda girudoterapiya kombinatsiyasining samaradorligini baholash",
+  "new": "Evaluating the effectiveness of combining dochim and hirudotherapy in the treatment and prevention of intervertebral disc herniation"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 46,
+  "lang": "ru",
+  "field": "text",
+  "old": "Yadgarova Shaxodat Solixovna",
+  "new": "Ядгарова Шаходат Солиховна"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 47,
+  "lang": "ru",
+  "field": "text",
+  "old": "Aholi va sanoat korxonalaridan hosil boʻluvchi oqava suvlarning gigiyenik tavsifi (Buxoro shahri misolida)",
+  "new": "Гигиеническая характеристика сточных вод, образующихся от населения и промышленных предприятий (на примере города Бухары)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 47,
+  "lang": "en",
+  "field": "text",
+  "old": "Aholi va sanoat korxonalaridan hosil boʻluvchi oqava suvlarning gigiyenik tavsifi (Buxoro shahri misolida)",
+  "new": "Hygienic characterization of wastewater generated by the population and industrial enterprises (using the city of Bukhara as an example)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 50,
+  "lang": "ru",
+  "field": "text",
+  "old": "Matxoshimov Nodirjon Soyibjonovich",
+  "new": "Матхошимов Нодиржон Соибжонович"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 51,
+  "lang": "ru",
+  "field": "text",
+  "old": "Mehnatga layoqatli yoshdagi aholi nogironligi profilaktikasi (Fargʻona viloyati misolida)",
+  "new": "Профилактика инвалидности населения трудоспособного возраста (на примере Ферганской области)"
+ },
+ {
+  "slug": "avtoreferatlar",
+  "order": 51,
+  "lang": "en",
+  "field": "text",
+  "old": "Mehnatga layoqatli yoshdagi aholi nogironligi profilaktikasi (Fargʻona viloyati misolida)",
+  "new": "Prevention of disability among the working-age population (using the Fergana region as an example)"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 10,
+  "lang": "en",
+  "field": "text",
+  "old": "Получение поливалентной сыворотки кишечного иерсиниоза от экспериментальных животных и изучение её свойств",
+  "new": "Obtaining polyvalent serum against intestinal yersiniosis from experimental animals and studying its properties"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 47,
+  "lang": "en",
+  "field": "text",
+  "old": "Изучение связи патологий щитовидной железы с заболеваниями репродуктивной системы у женщин детородного возраста",
+  "new": "Studying the relationship between thyroid pathologies and diseases of the reproductive system in women of childbearing age"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 28,
+  "lang": "en",
+  "field": "text",
+  "old": "Исследование антиоксидантных свойств лекарственных растений южной Ферганы",
+  "new": "Study of the antioxidant properties of medicinal plants of southern Fergana"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 29,
+  "lang": "en",
+  "field": "text",
+  "old": "Состояние перинатальных смертей по Ферганской области в течение 2024 года и их особенности",
+  "new": "The state of perinatal deaths in the Fergana region during 2024 and their characteristics"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 41,
+  "lang": "en",
+  "field": "text",
+  "old": "Современные методы профилактики гнойных осложнений у детей после абдоминальных операций",
+  "new": "Modern methods of preventing purulent complications in children after abdominal surgery"
+ },
+ {
+  "slug": "institut-yol-xaritasi-2025",
+  "order": 1,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Institut yo‘l xaritasi – 2026",
+  "new": "Дорожная карта института – 2026"
+ },
+ {
+  "slug": "institut-yol-xaritasi-2025",
+  "order": 1,
+  "lang": "en",
+  "field": "caption",
+  "old": "Institut yo‘l xaritasi – 2026",
+  "new": "Institute roadmap – 2026"
+ },
+ {
+  "slug": "abituriyentlar-uchun-talim-yonalishlari-va-institut-tarixi",
+  "order": 3,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Directions of education for applicants and the history of the institute",
+  "new": "Направления обучения для абитуриентов и история института"
+ },
+ {
+  "slug": "institut-gazetasi-2025",
+  "order": 2,
+  "lang": "en",
+  "field": "caption",
+  "old": "Institut gazetasi-2025",
+  "new": "Institute newspaper-2025"
+ },
+ {
+  "slug": "news-472",
+  "order": 1,
+  "lang": "ru",
+  "field": "text",
+  "old": "Representatives of the Gulf Medical Uni versity of the UAE visited our university. As you know, in cooperation with the Gulf Medical University, a 4-year joint master's education program on the specialty \"Doctor of medicine\" (therapy) was established. In accordance with it, it is planned to introduce advanced pedagogical technologies, educational programs and educational materials based on international educational standards into the educational process, to hold master classes between professors and students, and to actively involve highly qualified teachers and scientists from the university in training courses. Today, Professor Hossam Hamdy and Vinod Abraham, representatives of Gulf Medical University, visited Fergana Medical Institute of Public Health. They were welcomed by the Rector of our university, Professor Akmal Sidikov.",
+  "new": "Представители Gulf Medical University (ОАЭ) посетили наш вуз. Как вам известно, совместно с Gulf Medical University была организована 4-летняя совместная магистерская образовательная программа по специальности «Doctor of medicine» (терапия). В соответствии с ней предусматривается широкое внедрение в учебный процесс передовых педагогических технологий, учебных программ и учебно-методических материалов, основанных на международных образовательных стандартах, проведение мастер-классов для профессорско-преподавательского состава и студентов, а также активное привлечение высококвалифицированных преподавателей и учёных университета к курсам повышения квалификации. Сегодня в Ферганский медицинский институт общественного здоровья прибыли представители Gulf Medical University профессор Hossam Hamdy и Vinod Abraham. Их встретил ректор нашего вуза профессор Акмал Сидиков."
+ },
+ {
+  "slug": "news-666",
+  "order": 88,
+  "lang": "en",
+  "field": "text",
+  "old": "It is important to note that in this process, our entrepreneurs, acting as a decisive force, are at the forefront and demonstrate exceptional dedication by сreating industrial and service facilities and providing new permanent jobs, training the population, especially youth and women in professions and helping them gain employment and stable income directly within the mahallas. Therefore, continuing the policy of supporting entrepreneurship, in 2026 we will maintain the main tax rates unchanged, allocate over 10 trillion soums to projects for the development of entrepreneurial infrastructure, provide 140 trillion soums in resources for the development of small and medium-sized businesses. Of this amount, 43 trillion soums will be directed to support women’s and youth entrepreneurship.",
+  "new": "It is important to note that in this process, our entrepreneurs, acting as a decisive force, are at the forefront and demonstrate exceptional dedication by creating industrial and service facilities and providing new permanent jobs, training the population, especially youth and women in professions and helping them gain employment and stable income directly within the mahallas. Therefore, continuing the policy of supporting entrepreneurship, in 2026 we will maintain the main tax rates unchanged, allocate over 10 trillion soums to projects for the development of entrepreneurial infrastructure, provide 140 trillion soums in resources for the development of small and medium-sized businesses. Of this amount, 43 trillion soums will be directed to support women’s and youth entrepreneurship."
+ }
+]
