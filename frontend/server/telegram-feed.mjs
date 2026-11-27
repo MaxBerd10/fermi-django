@@ -379,9 +379,15 @@ function shouldSkipTranslation(text) {
   return false;
 }
 
+// A free translator that answers "too many requests" (Google, HTTP 429) or "daily limit used" (MyMemory) must be left alone for a while: asking again on every
+// page view keeps the limit exceeded for as long as the page is visited, and the translations never come back.
+const translatorPause = { google: 0, myMemory: 0 };
+const GOOGLE_PAUSE_MS = 30 * 60 * 1000;
+const MYMEMORY_PAUSE_MS = 6 * 60 * 60 * 1000;
+
 async function translateWithMyMemory(text, lang) {
   const source = String(text || "").trim();
-  if (!source) return "";
+  if (!source || Date.now() < translatorPause.myMemory) return "";
   const url = new URL("https://api.mymemory.translated.net/get");
   url.searchParams.set("q", source.slice(0, 450));
   url.searchParams.set("langpair", `uz|${lang}`);
@@ -392,13 +398,18 @@ async function translateWithMyMemory(text, lang) {
   if (!response.ok) return "";
   const payload = await response.json();
   const translated = String(payload?.responseData?.translatedText || "").trim();
-  if (!translated || /MYMEMORY WARNING/i.test(translated)) return "";
+  if (/MYMEMORY WARNING/i.test(translated)) {
+    translatorPause.myMemory = Date.now() + MYMEMORY_PAUSE_MS;
+    console.error("MyMemory daily limit used: not asking it again for 6 hours");
+    return "";
+  }
+  if (!translated) return "";
   return decodeEntities(translated);
 }
 
 async function translateWithGoogle(text, lang) {
   const source = String(text || "").trim();
-  if (!source) return "";
+  if (!source || Date.now() < translatorPause.google) return "";
   const url = new URL("https://translate.googleapis.com/translate_a/single");
   url.searchParams.set("client", "gtx");
   url.searchParams.set("sl", "uz");
@@ -410,6 +421,11 @@ async function translateWithGoogle(text, lang) {
       headers: { "User-Agent": "Mozilla/5.0 (compatible; FerMI-web/1.0)" },
       signal: AbortSignal.timeout(4000),
     });
+    if (response.status === 429) {
+      translatorPause.google = Date.now() + GOOGLE_PAUSE_MS;
+      console.error("Google translate answered 429: not asking it again for 30 minutes");
+      return "";
+    }
     if (!response.ok) return "";
     const payload = await response.json();
     return decodeEntities((payload?.[0] || []).map((row) => row?.[0] || "").join("").trim());
