@@ -9,15 +9,7 @@ export type NewsCategoryFallback = "menu-list";
 
 
 
-export type NewsCategoryHeroConfig = {
-
-  eyebrowKey: string;
-
-  introKey: string;
-
-  accent: string;
-
-  icon: string;
+export type NewsCategoryConfig = {
 
   theme: string;
 
@@ -33,17 +25,9 @@ export type NewsCategoryHeroConfig = {
 
 
 
-const CATEGORY_CONFIG: Record<string, NewsCategoryHeroConfig> = {
+const CATEGORY_CONFIG: Record<string, NewsCategoryConfig> = {
 
   tadbirlar: {
-
-    eyebrowKey: "news.category.tadbirlar.eyebrow",
-
-    introKey: "news.category.tadbirlar.intro",
-
-    accent: "news-cat-events",
-
-    icon: "ri-calendar-event-line",
 
     theme: "events",
 
@@ -51,49 +35,17 @@ const CATEGORY_CONFIG: Record<string, NewsCategoryHeroConfig> = {
 
   tanlovlar: {
 
-    eyebrowKey: "news.category.tanlovlar.eyebrow",
-
-    introKey: "news.category.tanlovlar.intro",
-
-    accent: "news-cat-contest",
-
-    // NOT ri-trophy-line: the site ships a subsetted Remix Icon font
-    // (public/vendor/remixicon/remixicon-used.{css,ttf}, trimmed to only
-    // the glyphs actually referenced in the codebase at some past build --
-    // there's no build step regenerating it) -- trophy was never used
-    // elsewhere, so its glyph doesn't exist in that subset and rendered as
-    // a blank box. award-line already is (BlockRenderer's cert-gallery
-    // badge), confirmed present in remixicon-used.css.
-
-    icon: "ri-award-line",
-
     theme: "contest",
 
   },
 
   "tanlovlar-arxivi": {
 
-    eyebrowKey: "news.category.tanlovlarArxivi.eyebrow",
-
-    introKey: "news.category.tanlovlarArxivi.intro",
-
-    accent: "news-cat-contest",
-
-    icon: "ri-award-line",
-
     theme: "contest",
 
   },
 
   "kimlarga-piyoz-yeyish-mumkin-emas": {
-
-    eyebrowKey: "news.category.xorijiy.eyebrow",
-
-    introKey: "news.category.xorijiy.intro",
-
-    accent: "news-cat-xorijiy",
-
-    icon: "ri-global-line",
 
     theme: "xorijiy",
 
@@ -109,7 +61,7 @@ const CATEGORY_CONFIG: Record<string, NewsCategoryHeroConfig> = {
 
 
 
-export function getNewsCategoryConfig(slug?: string): NewsCategoryHeroConfig | null {
+export function getNewsCategoryConfig(slug?: string): NewsCategoryConfig | null {
 
   if (!slug) return null;
 

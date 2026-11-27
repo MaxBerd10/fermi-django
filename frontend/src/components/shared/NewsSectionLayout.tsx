@@ -10,7 +10,6 @@ export default function NewsSectionLayout({
   currentSlug,
   showAllNews = true,
   theme,
-  hero,
   menuSectionId,
 }: {
   children: ReactNode;
@@ -18,7 +17,6 @@ export default function NewsSectionLayout({
   currentSlug?: string;
   showAllNews?: boolean;
   theme?: string;
-  hero?: ReactNode;
   menuSectionId?: number;
 }) {
   return (
@@ -30,8 +28,7 @@ export default function NewsSectionLayout({
         <NewsSectionNav currentSlug={currentSlug} showAllNews={showAllNews} />
       )}
     >
-      {hero && <Reveal>{hero}</Reveal>}
-      {intro && !hero && (
+      {intro && (
         <Reveal>
           <p className="news-section__intro">{intro}</p>
         </Reveal>

@@ -29,7 +29,6 @@ import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 import { getNewsCategoryConfig } from "@/lib/newsCategorySection";
 import { normalizeNewsCategorySlug } from "@/lib/newsImages";
 
-import NewsCategoryHero from "@/components/shared/NewsCategoryHero";
 
 
 
@@ -190,16 +189,6 @@ export default function NewsCategoryPage() {
         menuSectionId={sectionNavId}
 
         showAllNews={!sectionNavId}
-
-        hero={
-
-          !useInstituteGrid && categoryConfig && category ? (
-
-            <NewsCategoryHero title={category.title} config={categoryConfig} count={total} />
-
-          ) : undefined
-
-        }
 
       >
 
