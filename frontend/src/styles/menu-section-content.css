@@ -138,14 +138,14 @@
 .cms-article--menu-section h3,
 .cms-article--menu-section h4 {
   font-family: var(--font-heading, Manrope, system-ui, sans-serif);
-  color: #0a1158;
+  color: var(--content-ink);
   line-height: 1.35;
   margin: 1.5rem 0 0.75rem;
 }
 
-.cms-article--menu-section h2 { font-size: 1.375rem; font-weight: 700; }
-.cms-article--menu-section h3 { font-size: 1.125rem; font-weight: 700; }
-.cms-article--menu-section h4 { font-size: 1rem; font-weight: 700; }
+.cms-article--menu-section h2 { font-size: var(--content-h2); font-weight: var(--content-h2-weight); }
+.cms-article--menu-section h3 { font-size: var(--content-h3); font-weight: var(--content-h3-weight); }
+.cms-article--menu-section h4 { font-size: var(--content-h4); font-weight: var(--content-h3-weight); }
 
 .cms-article--menu-section ul,
 .cms-article--menu-section ol {

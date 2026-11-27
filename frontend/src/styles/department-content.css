@@ -225,8 +225,8 @@
 
 .department-article__year {
   min-width: 6rem;
-  color: #0a1158;
-  font-weight: 750;
+  color: var(--content-ink);
+  font-weight: var(--content-h3-weight);
 }
 
 .department-article__topic summary,

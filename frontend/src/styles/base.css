@@ -1,4 +1,15 @@
 :root {
+  /* Content typography: ONE scale for every page body (menu pages, news, departments, faculties, leaders, regulations ...). The rules of the *-content.css files
+     take their headings, ink and rhythm from here, so a heading of one level is the same size, weight and colour on every page. */
+  --content-ink: #0a1158;
+  --content-text: #273552;
+  --content-muted: #475569;
+  --content-h2: clamp(1.2rem, 2vw, 1.6rem);
+  --content-h3: 1.125rem;
+  --content-h4: 1rem;
+  --content-h2-weight: 750;
+  --content-h3-weight: 700;
+  --content-leading: 1.75;
   --section-py: clamp(1rem, 2vw, 1.5rem);
   --section-px: clamp(0.85rem, 3.2vw, 3.5rem);
   --content-max: 100%;

@@ -7,9 +7,9 @@
 .leader-section__intro {
   margin-bottom: 1.5rem;
   padding: 0 0.25rem;
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: #475569;
+  font-size: 1rem;
+  line-height: var(--content-leading);
+  color: var(--content-muted);
 }
 
 /* Featured rector profile */
