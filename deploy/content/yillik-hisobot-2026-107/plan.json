@@ -1,0 +1,39 @@
+[
+ {
+  "slug": "faculty-4",
+  "order": 2,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pharmacy educational program is to train pharmacists capable of providing qualified pharmaceutical care to the population, improving the quality of pharmaceutical services, and enhancing public health through the integration of the latest achievements in education, science, and the pharmaceutical sector."
+     },
+     "ru": {
+      "text": "Миссией педиатрического факультета является обучение студентов – медиков с учетом лучших достижений отечественной и мировой науки, здравоохранения, формирование высококвалифицированного специалиста, способного решать актуальные проблемы здравоохранения в современных условиях конкурентоспособного и востребованного на рынке труда."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetining vazifasi tibbiyot talabalarini Rossiya va xalqaro fan va sogʻliqni saqlash sohasidagi eng yaxshi yutuqlardan foydalangan holda oʻqitish va bugungi raqobatbardosh va talab yuqori boʻlgan mehnat bozorida dolzarb sogʻliqni saqlash muammolarini hal qilishga qodir yuqori malakali mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pediatrics faculty is to train medical students taking into account the best achievements of national and world science and healthcare, and to form highly qualified specialists who are able to solve current healthcare problems in modern conditions and who are competitive and in demand in the labour market."
+     },
+     "ru": {
+      "text": "Миссией педиатрического факультета является обучение студентов – медиков с учетом лучших достижений отечественной и мировой науки, здравоохранения, формирование высококвалифицированного специалиста, способного решать актуальные проблемы здравоохранения в современных условиях конкурентоспособного и востребованного на рынке труда."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetining vazifasi tibbiyot talabalarini Rossiya va xalqaro fan va sogʻliqni saqlash sohasidagi eng yaxshi yutuqlardan foydalangan holda oʻqitish va bugungi raqobatbardosh va talab yuqori boʻlgan mehnat bozorida dolzarb sogʻliqni saqlash muammolarini hal qilishga qodir yuqori malakali mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   }
+  ]
+ }
+]
