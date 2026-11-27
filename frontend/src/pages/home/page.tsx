@@ -2,6 +2,7 @@ import { lazy } from "react";
 import Hero from "@/pages/home/components/Hero";
 import NewsAnnouncements from "@/pages/home/components/NewsAnnouncements";
 import DeferredSection from "@/components/shared/DeferredSection";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 // Everything below the first screens loads when the visitor scrolls toward it (see DeferredSection).
 // The placeholder heights are the sections' measured heights on a phone and on a wide screen.
@@ -19,6 +20,7 @@ const OurProjects = lazy(() => import("@/pages/home/components/OurProjects"));
 const ContactMap = lazy(() => import("@/pages/home/components/ContactMap"));
 
 export default function Home() {
+  usePageMeta(); // the site title and description in the reader's language
   return (
     <div className="text-foreground-950 bg-transparent">
       <main>
