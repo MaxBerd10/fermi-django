@@ -52,8 +52,10 @@ an untouched page changes none of its blocks.
 """
 from __future__ import annotations
 
+import base64
 import difflib
 import html as html_lib
+import json
 import re
 from types import SimpleNamespace
 from urllib.parse import unquote
@@ -157,10 +159,12 @@ def _attr(text) -> str:
 def _placeholder_label(block: ContentBlock, payload: dict) -> str:
     kind = block.block_type
     if kind == "table":
-        return f"Jadval ({len(payload.get('rows') or [])} qator) — tahrirlanmaydi"
+        return f"Jadval ({len(payload.get('rows') or [])} qator) — tahrirlash uchun bosing"
     if kind == "document":
         title = payload.get("caption") or ""
-        return f"Hujjat (PDF/fayl) {title} — tahrirlanmaydi".replace("  ", " ")
+        return f"Hujjat (PDF/fayl) {title} — tahrirlash uchun bosing".replace("  ", " ")
+    if kind == "embed":
+        return ("Xarita" if payload.get("provider") == "map" else "YouTube video") + f" {payload.get('title') or ''} — tahrirlash uchun bosing".replace("  ", " ")
     if kind == "gallery":
         return f"Rasmlar galereyasi ({len(payload.get('items') or [])} ta) — tahrirlanmaydi"
     if kind == "video":
@@ -341,6 +345,83 @@ def _carry_hidden_attributes(block_type: str, old_data: dict, new_data: dict) ->
     return merged
 
 
+# --- editing the blocks the rich-text editor shows as chips ---------------------------------------------------------------------------------------------------------
+# The editor stages the new payload of every language of an edited chip in a `data-block-json` attribute (base64 of JSON) and puts a `data-new-block` marker where a new
+# table / embed was added; the server applies both when the page is saved, validated like any block. Only the three types below have a form, only blocks of THIS page are touched.
+EDITABLE_TYPES = frozenset({"table", "embed", "document"})
+CREATABLE_TYPES = frozenset({"table", "embed"})
+DOCUMENT_STYLES = ("card", "button", "roadmap", "attachment")
+_EDITABLE_KEYS = {
+    "table": ("headers", "rows", "header_groups"),
+    "embed": ("provider", "video_id", "src", "height", "title"),
+    "document": ("style", "caption"),
+}
+_BLOCK_JSON_RE = re.compile(r"""\bdata-block-json\s*=\s*["']([^"']*)["']""", re.I)
+_NEW_BLOCK_RE = re.compile(r"""<div\b[^>]*\bdata-new-block\s*=\s*["']([^"']+)["'][^>]*>.*?</div>""", re.I | re.S)
+
+
+def _decode_staged(raw: str):
+    try:
+        return json.loads(base64.b64decode(html_lib.unescape(raw), validate=True).decode("utf8"))
+    except (ValueError, UnicodeDecodeError):
+        raise DjangoValidationError("Blok ma'lumoti o'qilmadi. Sahifani qayta yuklab, qaytadan urinib ko'ring.")
+
+
+def _clean_staged_payload(block_type: str, data, old: dict | None = None) -> dict:
+    """The payload (uz/ru/en) the editor sent, reduced to the fields of the form; a document keeps the file it has (the request cannot change it)."""
+    if not isinstance(data, dict) or not all(isinstance(data.get(lang), dict) for lang in LANGS):
+        raise DjangoValidationError("Blok uchta tilda ham to'liq bo'lishi kerak (uz, ru, en).")
+    cleaned = {}
+    for lang in LANGS:
+        payload = {key: data[lang][key] for key in _EDITABLE_KEYS[block_type] if key in data[lang]}
+        if block_type == "document":
+            before = (old or {}).get(lang) or {}
+            if payload.setdefault("style", before.get("style", "card")) not in DOCUMENT_STYLES:
+                raise DjangoValidationError("Hujjat uslubi noto'g'ri.")
+            payload = {**before, **payload, "document_id": before.get("document_id")}
+        cleaned[lang] = payload
+    return cleaned
+
+
+def _apply_block_edits(page: Page, uz_html: str) -> None:
+    """Applies the staged payloads of the edited chips of the Uzbek HTML to their blocks (blocks of this page only)."""
+    done: set[int] = set()
+    for match in _PRESERVED_RE.finditer(uz_html):
+        staged = _BLOCK_JSON_RE.search(match.group(0))
+        found = _PRESERVED_ID_RE.search(match.group(0))
+        if not staged or not found or int(found.group(1)) in done:
+            continue
+        block = ContentBlock.objects.filter(page=page, pk=int(found.group(1))).first()
+        if block is None:
+            continue
+        if block.block_type not in EDITABLE_TYPES:
+            raise DjangoValidationError("Bu blok turini tahrirlab bo'lmaydi.")
+        done.add(block.pk)
+        block.data = _clean_staged_payload(block.block_type, _decode_staged(staged.group(1)), block.data)
+        block.full_clean()
+        block.save(update_fields=["data"])
+
+
+def _materialize_new_blocks(page: Page, uz_html: str) -> str:
+    """Turns each new-block marker (a table or an embed added in the editor) into a real block at the end of the page and swaps the marker for the ordinary
+    placeholder of that block, so the regular placeholder machinery positions it where the chip was put."""
+    def convert(match):
+        staged = _decode_staged(match.group(1))
+        block_type = staged.get("block_type") if isinstance(staged, dict) else None
+        if block_type not in CREATABLE_TYPES:
+            raise DjangoValidationError("Bu blok turini qo'shib bo'lmaydi.")
+        last = ContentBlock.objects.filter(page=page).order_by("-order").values_list("order", flat=True).first() or 0
+        block = ContentBlock(page=page, order=last + 1, block_type=block_type, data=_clean_staged_payload(block_type, staged.get("data")))
+        block.full_clean()
+        block.save()
+        return (
+            f'<div data-preserved-block="{block.id}" data-block-type="{block_type}" class="preserved-block">'
+            f"{_esc(_placeholder_label(block, block.data['uz']))}</div>"
+        )
+
+    return _NEW_BLOCK_RE.sub(convert, uz_html)
+
+
 @transaction.atomic
 def write_blocks_from_html(page: Page, html_by_lang: dict[str, str], open_raw: bool = False) -> None:
     """Replaces `page`'s blocks with ones extracted from html_by_lang (one
@@ -353,14 +434,17 @@ def write_blocks_from_html(page: Page, html_by_lang: dict[str, str], open_raw: b
     changed them -- see the module docstring: preserved-block placeholders
     keep their block (and move with the chip), and unchanged or in-place
     edited text blocks keep their row and hidden attributes."""
+    _apply_block_edits(page, html_by_lang.get("uz") or "")
     if open_raw and raw_editing.is_raw_capable(page):
+        if "data-new-block" in (html_by_lang.get("uz") or ""):
+            raise DjangoValidationError("Bu sahifaga yangi jadval yoki video qo'shib bo'lmaydi (eski turdagi sahifa).")
         raw_editing.write_page_from_html(page, html_by_lang)
         return
     if any('data-preserved-block="raw:' in (html_by_lang.get(lang) or "") for lang in LANGS):
         # The form was opened with the legacy-HTML pieces as chips, but the page no longer has that shape (someone
         # else edited it meanwhile): saving would delete the page's text, so refuse and let the editor reload.
         raise DjangoValidationError("Sahifa boshqa joyda o'zgartirilgan. Sahifani qayta yuklab, qaytadan urinib ko'ring.")
-    uz_html = _materialize_new_documents(page, html_by_lang.get("uz") or "")
+    uz_html = _materialize_new_blocks(page, _materialize_new_documents(page, html_by_lang.get("uz") or ""))
     html_by_lang = {**html_by_lang, "ru": _NEW_DOC_RE.sub("", html_by_lang.get("ru") or ""), "en": _NEW_DOC_RE.sub("", html_by_lang.get("en") or "")}
     uz_segments, placeholder_ids = _split_preserved(uz_html)
 

@@ -132,7 +132,7 @@ def test_deleting_a_placeholder_deletes_its_block(page, image, document):
     html = _html(page)
     html = {lang: text.replace(
         f'<div data-preserved-block="{table.id}" data-block-type="table" class="preserved-block">'
-        f"Jadval (2 qator) — tahrirlanmaydi</div>", "") for lang, text in html.items()}
+        f"Jadval (2 qator) — tahrirlash uchun bosing</div>", "") for lang, text in html.items()}
     assert str(table.id) not in html["uz"]
 
     write_blocks_from_html(page, html)

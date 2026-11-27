@@ -6,13 +6,17 @@ post, but here as its own standalone CRUD resource (an admin-created page
 has no MenuItem of its own, hence Page.title_* -- see that field's own
 comment in models.py)."""
 from django.core.exceptions import ValidationError as DjangoValidationError
+from django.http import Http404
 from django.utils.text import slugify
 from rest_framework import serializers, viewsets
+from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
-from apps.content.admin_content import blocks_to_html, write_blocks_from_html
-from apps.content.models import Page
+from apps.content.admin_content import EDITABLE_TYPES, blocks_to_html, write_blocks_from_html
+from apps.content.models import ContentBlock, Page
 from apps.content.raw_editing import is_raw_capable
+from apps.media_lib.models import Document
 from apps.menu.models import MenuItem
 
 from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
@@ -112,11 +116,14 @@ class AdminPageSerializer(serializers.ModelSerializer):
             slug = (data.get("slug") or "").strip() or slugify(instance.title_uz or f"sahifa-{Page.objects.count() + 1}", allow_unicode=False)
             instance.slug = slug
         instance.save()
-        write_blocks_from_html(instance, {
-            "uz": data.get("content_uz") or "",
-            "ru": data.get("content_ru") or "",
-            "en": data.get("content_en") or "",
-        }, open_raw=True)
+        try:
+            write_blocks_from_html(instance, {
+                "uz": data.get("content_uz") or "",
+                "ru": data.get("content_ru") or "",
+                "en": data.get("content_en") or "",
+            }, open_raw=True)
+        except DjangoValidationError as error:  # a refused block (a table with a short row, an unknown embed address ...) is a 400 with its reason, not a 500
+            raise serializers.ValidationError({"content_uz": error.messages})
         return instance
 
 
@@ -147,3 +154,16 @@ class AdminPageViewSet(AdminSearchMixin, viewsets.ModelViewSet):
                 )
                 queryset = (queryset | matched).distinct().order_by("-updated_at")
         return queryset
+
+    @action(detail=True, methods=["get"], url_path=r"blocks/(?P<block_id>[0-9]+)")
+    def block(self, request, pk=None, block_id=None):
+        """The payload of one block of this page that the page editor has a form for (table, embed, document): what the form opens with."""
+        page = self.get_object()
+        found = ContentBlock.objects.filter(page=page, pk=block_id, block_type__in=EDITABLE_TYPES).first()
+        if found is None:
+            raise Http404
+        body = {"id": found.pk, "block_type": found.block_type, "data": found.data}
+        if found.block_type == "document":  # the form shows which file the card is for (it cannot be changed here)
+            document = Document.objects.filter(pk=(found.data.get("uz") or {}).get("document_id")).first()
+            body["document"] = {"title": document.title, "filename": document.file.name.rsplit("/", 1)[-1]} if document else None
+        return Response(body)
