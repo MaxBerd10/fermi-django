@@ -1,0 +1,569 @@
+[
+ {
+  "block": 6,
+  "old": "rivoj lantirish",
+  "new": "rivojlantirish",
+  "confidence": "high",
+  "note": "split word"
+ },
+ {
+  "block": 6,
+  "old": "doktorantlami",
+  "new": "doktorantlarni",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 7,
+  "old": "nomaqbul hatti-harakat",
+  "new": "nomaqbul xatti-harakat",
+  "confidence": "medium",
+  "note": "h for x; text elsewhere uses xatti-harakat"
+ },
+ {
+  "block": 8,
+  "old": "ulami",
+  "new": "ularni",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 8,
+  "old": "talaba ya",
+  "new": "talaba va",
+  "confidence": "high",
+  "note": "ya for va"
+ },
+ {
+  "block": 8,
+  "old": "obroʻ -eʻtiborini",
+  "new": "obroʻ-eʻtiborini",
+  "confidence": "high",
+  "note": "stray space"
+ },
+ {
+  "block": 8,
+  "old": "o shirish",
+  "new": "oshirish",
+  "confidence": "high",
+  "note": "split word"
+ },
+ {
+  "block": 12,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 12,
+  "old": "xulqatvorining",
+  "new": "xulq-atvorining",
+  "confidence": "high",
+  "note": "missing hyphen"
+ },
+ {
+  "block": 13,
+  "old": "erkinliklari ya",
+  "new": "erkinliklari va",
+  "confidence": "high",
+  "note": "ya for va"
+ },
+ {
+  "block": 14,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 16,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 17,
+  "old": "erkinliklariva",
+  "new": "erkinliklari va",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 18,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 19,
+  "old": "qadriyatlar,Yatanga",
+  "new": "qadriyatlar, Vatanga",
+  "confidence": "high",
+  "note": "Y for V, missing space"
+ },
+ {
+  "block": 19,
+  "old": "Xodim,talaba",
+  "new": "Xodim, talaba",
+  "confidence": "high",
+  "note": "missing space after comma"
+ },
+ {
+  "block": 19,
+  "old": "xayrixohlTk",
+  "new": "xayrixohlik",
+  "confidence": "high",
+  "note": "T for i"
+ },
+ {
+  "block": 21,
+  "old": "tal,aba",
+  "new": "talaba",
+  "confidence": "high",
+  "note": "stray comma in word"
+ },
+ {
+  "block": 24,
+  "old": "3-bob.Korrupsiyaga",
+  "new": "3-bob. Korrupsiyaga",
+  "confidence": "high",
+  "note": "missing space"
+ },
+ {
+  "block": 26,
+  "old": "komrpsiyaning",
+  "new": "korrupsiyaning",
+  "confidence": "high",
+  "note": "OCR"
+ },
+ {
+  "block": 26,
+  "old": "choralami",
+  "new": "choralarni",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 26,
+  "old": "komrpsiyaga",
+  "new": "korrupsiyaga",
+  "confidence": "high",
+  "note": "OCR"
+ },
+ {
+  "block": 26,
+  "old": "qatʻty",
+  "new": "qatʻiy",
+  "confidence": "high",
+  "note": "t for i"
+ },
+ {
+  "block": 29,
+  "old": "sharl.",
+  "new": "shart.",
+  "confidence": "high",
+  "note": "l for t"
+ },
+ {
+  "block": 30,
+  "old": "pokrza",
+  "new": "pokiza",
+  "confidence": "high",
+  "note": "r for i"
+ },
+ {
+  "block": 31,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 32,
+  "old": "chiquvchilarganisbatan",
+  "new": "chiquvchilarga nisbatan",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 34,
+  "old": "kattalarrri",
+  "new": "kattalarni",
+  "confidence": "high",
+  "note": "rri for ni"
+ },
+ {
+  "block": 34,
+  "old": "oʻtkazrb",
+  "new": "oʻtkazib",
+  "confidence": "high",
+  "note": "r for i"
+ },
+ {
+  "block": 37,
+  "old": "oʻzharakatlarini",
+  "new": "oʻz harakatlarini",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 37,
+  "old": "tarqatmasIik",
+  "new": "tarqatmaslik",
+  "confidence": "high",
+  "note": "I for l"
+ },
+ {
+  "block": 37,
+  "old": "shunindek",
+  "new": "shuningdek",
+  "confidence": "high",
+  "note": "dropped g"
+ },
+ {
+  "block": 38,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 40,
+  "old": "xattiharakatlarni",
+  "new": "xatti-harakatlarni",
+  "confidence": "high",
+  "note": "missing hyphen"
+ },
+ {
+  "block": 41,
+  "old": "ulaming",
+  "new": "ularning",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 41,
+  "old": "fundamentahzm",
+  "new": "fundamentalizm",
+  "confidence": "high",
+  "note": "h for li"
+ },
+ {
+  "block": 42,
+  "old": "hokimiyativa",
+  "new": "hokimiyati va",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 42,
+  "old": "qadr qimmati",
+  "new": "qadr-qimmati",
+  "confidence": "medium",
+  "note": "missing hyphen; text elsewhere uses qadr-qimmat"
+ },
+ {
+  "block": 42,
+  "old": "fik,",
+  "new": "fikr,",
+  "confidence": "high",
+  "note": "dropped r"
+ },
+ {
+  "block": 42,
+  "old": "Intemet",
+  "new": "Internet",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 44,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 45,
+  "old": "taʻIim",
+  "new": "taʻlim",
+  "confidence": "high",
+  "note": "I for l"
+ },
+ {
+  "block": 45,
+  "old": "xodimlaming",
+  "new": "xodimlarning",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 45,
+  "old": "intemet",
+  "new": "internet",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 51,
+  "old": "ulami",
+  "new": "ularni",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 51,
+  "old": "tanishbilishchilik",
+  "new": "tanish-bilishchilik",
+  "confidence": "medium",
+  "note": "missing hyphen"
+ },
+ {
+  "block": 52,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 53,
+  "old": "ulaming",
+  "new": "ularning",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 53,
+  "old": "Yazirlar",
+  "new": "Vazirlar",
+  "confidence": "high",
+  "note": "Y for V"
+ },
+ {
+  "block": 53,
+  "old": "turdagitazyiqva",
+  "new": "turdagi tazyiq va",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 54,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 56,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 57,
+  "old": "talabauzr",
+  "new": "talaba uzr",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 59,
+  "old": "zarurali",
+  "new": "zarurati",
+  "confidence": "high",
+  "note": "l for t"
+ },
+ {
+  "block": 63,
+  "old": "doktorantlaming",
+  "new": "doktorantlarning",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 68,
+  "old": "dogʻtushiradigan",
+  "new": "dogʻ tushiradigan",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 73,
+  "old": "qatʻy nazar",
+  "new": "qatʻiy nazar",
+  "confidence": "high",
+  "note": "dropped i"
+ },
+ {
+  "block": 75,
+  "old": "yetkazmasIikka",
+  "new": "yetkazmaslikka",
+  "confidence": "high",
+  "note": "I for l"
+ },
+ {
+  "block": 77,
+  "old": "oʻzvakolatlari",
+  "new": "oʻz vakolatlari",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 80,
+  "old": "atrofdagilaming",
+  "new": "atrofdagilarning",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 84,
+  "old": "qaytatopshirishga",
+  "new": "qayta topshirishga",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 88,
+  "old": "xavf- xatar",
+  "new": "xavf-xatar",
+  "confidence": "high",
+  "note": "stray space"
+ },
+ {
+  "block": 92,
+  "old": "quwatlash",
+  "new": "quvvatlash",
+  "confidence": "high",
+  "note": "w for vv"
+ },
+ {
+  "block": 94,
+  "old": "nazorutiga",
+  "new": "nazoratiga",
+  "confidence": "high",
+  "note": "u for a"
+ },
+ {
+  "block": 96,
+  "old": "mashgʻulotlami",
+  "new": "mashgʻulotlarni",
+  "confidence": "high",
+  "note": "m for rn"
+ },
+ {
+  "block": 99,
+  "old": "bi lan nizoli v aziy at yuzaga kel ganda",
+  "new": "bilan nizoli vaziyat yuzaga kelganda",
+  "confidence": "high",
+  "note": "split words"
+ },
+ {
+  "block": 99,
+  "old": "qiIishga",
+  "new": "qilishga",
+  "confidence": "high",
+  "note": "I for l"
+ },
+ {
+  "block": 111,
+  "old": "fiumladan",
+  "new": "(jumladan",
+  "confidence": "medium",
+  "note": "opening parenthesis read as f; the closing ')' follows 'mumkin'"
+ },
+ {
+  "block": 111,
+  "old": "lozim,taqdim",
+  "new": "lozim, taqdim",
+  "confidence": "high",
+  "note": "missing space after comma"
+ },
+ {
+  "block": 111,
+  "old": "yo shlarni vatanparvarl ik",
+  "new": "yoshlarni vatanparvarlik",
+  "confidence": "high",
+  "note": "split words"
+ },
+ {
+  "block": 114,
+  "old": "vazifalarrni",
+  "new": "vazifalarini",
+  "confidence": "high",
+  "note": "rr for ri"
+ },
+ {
+  "block": 114,
+  "old": "kasbiy ya",
+  "new": "kasbiy va",
+  "confidence": "high",
+  "note": "ya for va"
+ },
+ {
+  "block": 120,
+  "old": "modda . Kodeksga rioya",
+  "new": "modda. Kodeksga rioya qilishning attestatsiya va boshqa jarayonlar uchun ahamiyati",
+  "confidence": "medium",
+  "note": "space before period (certain) + rest of heading OCR'd scrambled into block 121; move it back"
+ },
+ {
+  "block": 121,
+  "old": "Jarayonlar uchun ahamiyati qilishning attestatsiya va boshqa Xodimlar",
+  "new": "Xodimlar",
+  "confidence": "medium",
+  "note": "scrambled heading fragment belongs to block 120 title (apply together with block 120 finding)"
+ },
+ {
+  "block": 121,
+  "old": "kodeksga ioya",
+  "new": "kodeksga rioya",
+  "confidence": "high",
+  "note": "dropped r"
+ },
+ {
+  "block": 124,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 124,
+  "old": "qoidalarnin g",
+  "new": "qoidalarning",
+  "confidence": "high",
+  "note": "split word"
+ },
+ {
+  "block": 128,
+  "old": "talabava",
+  "new": "talaba va",
+  "confidence": "high",
+  "note": "glued words"
+ },
+ {
+  "block": 134,
+  "old": "modda .",
+  "new": "modda.",
+  "confidence": "high",
+  "note": "space before period"
+ },
+ {
+  "block": 137,
+  "old": "talaba ya",
+  "new": "talaba va",
+  "confidence": "high",
+  "note": "ya for va"
+ },
+ {
+  "block": 141,
+  "old": "qoʻsh imchalar",
+  "new": "qoʻshimchalar",
+  "confidence": "high",
+  "note": "split word"
+ }
+]
