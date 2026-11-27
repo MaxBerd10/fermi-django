@@ -219,7 +219,6 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
             title={title || "YouTube"}
             loading="lazy"
             allow="encrypted-media; picture-in-picture; fullscreen"
-            allowFullScreen
             referrerPolicy="strict-origin-when-cross-origin"
           />
         </figure>
