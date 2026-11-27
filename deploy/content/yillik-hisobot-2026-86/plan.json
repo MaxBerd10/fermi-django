@@ -1,0 +1,50 @@
+[
+ {
+  "slug": "prezident-farmon-va-qarorlari",
+  "order": 4,
+  "lang": "uz",
+  "anchor": "Oʻzbekiston Respublikasi aholi",
+  "old": "Oʻzbekiston Respublikasi aholisiga 2017 — 2021 yillarda ixtisoslashtirilgan tibbiy yordam koʻrsatishni yanada rivojlantirish chora-tadbirlari toʻgʻrisida",
+  "new": "[Oʻzbekiston Respublikasi aholisiga 2017 — 2021 yillarda ixtisoslashtirilgan tibbiy yordam koʻrsatishni yanada rivojlantirish chora-tadbirlari toʻgʻrisida](https://lex.uz/docs/-3238680)"
+ },
+ {
+  "slug": "prezident-farmon-va-qarorlari",
+  "order": 4,
+  "lang": "ru",
+  "anchor": "Oʻzbekiston Respublikasi aholi",
+  "old": "О мерах по дальнейшему развитию специализированной медицинской помощи населению Республики Узбекистан в 2017–2021 годах",
+  "new": "[О мерах по дальнейшему развитию специализированной медицинской помощи населению Республики Узбекистан в 2017–2021 годах](https://lex.uz/docs/-3238680)"
+ },
+ {
+  "slug": "prezident-farmon-va-qarorlari",
+  "order": 4,
+  "lang": "en",
+  "anchor": "Oʻzbekiston Respublikasi aholi",
+  "old": "On measures to further develop specialized medical care for the population of the Republic of Uzbekistan in 2017–2021",
+  "new": "[On measures to further develop specialized medical care for the population of the Republic of Uzbekistan in 2017–2021](https://lex.uz/docs/-3238680)"
+ },
+ {
+  "slug": "institut-tuzilmasi",
+  "order": 2,
+  "lang": "uz",
+  "anchor": "Institut tuzilmasi",
+  "style_old": "button",
+  "style_new": "attachment"
+ },
+ {
+  "slug": "institut-tuzilmasi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Institut tuzilmasi",
+  "style_old": "button",
+  "style_new": "attachment"
+ },
+ {
+  "slug": "institut-tuzilmasi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Institut tuzilmasi",
+  "style_old": "button",
+  "style_new": "attachment"
+ }
+]
