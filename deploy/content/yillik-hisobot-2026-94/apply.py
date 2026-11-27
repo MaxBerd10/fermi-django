@@ -1,8 +1,8 @@
 # The Kongress page after script 92 has a heading per conference, but inside each conference the pictures, the video and the documents follow one another without any label and
-# not in the same shape (2024: pictures, video, document; 2023: pictures only; 2022: pictures, video, two documents). Every conference now has the same labelled parts, in the
-# same order, each shown only if the conference has it: "Plakatlar va fotosuratlar" (the pictures), "Video", "Hujjatlar" (the documents). The pictures of a part become ONE gallery
-# block of the style "plain" (it stays under its heading: the article layout would otherwise gather loose pictures into one row after the text of the whole section). Seven
-# level-3 headings are added, ten picture blocks become three gallery blocks: 18 blocks stay 18. The pictures, videos and cards are the very same files and ids.
+# not in the same shape (2024: pictures, video, document; 2023: pictures only; 2022: pictures, video, two documents). Now every conference has the same labelled parts, in the
+# same order, each shown only if the conference has it: "Plakatlar va fotosuratlar" (the pictures) and "Video"; the three documents (the captions carry their year) are gathered
+# under one "Hujjatlar" heading at the end of the page. The pictures of a part become ONE gallery block of the style "plain" (it stays under its heading: the article layout would
+# otherwise gather loose pictures into one row after the text of the whole section). 18 blocks become 17. The pictures, videos and cards are the very same files and ids.
 # RUN AFTER scripts 39-93; needs the 'plain' gallery style of the frontend deployed first.
 #
 # SAFE BY DESIGN: dry (default) writes nothing; the page is changed only if its 18 blocks are still those of script 92 (see plan.json), otherwise nothing is written; apply is one
@@ -54,7 +54,7 @@ def build(apply):
         if apply:
             raise SystemExit("STOP: the page is not what the plan was made from, nothing was written.")
         return {}
-    print("%s: 18 blocks -> 18 (the parts 'Plakatlar va fotosuratlar', 'Video', 'Hujjatlar' of each conference labelled; the pictures of a part are one gallery)" % PLAN["slug"])
+    print("%s: 18 blocks -> 17 (per conference 'Plakatlar va fotosuratlar' and 'Video'; the three documents under one 'Hujjatlar' at the end)" % PLAN["slug"])
     print("\n1 change(s), 0 skipped.")
     if not apply:
         return {}
@@ -67,11 +67,12 @@ def build(apply):
         return {"block_type": "gallery", "data": data}
 
     new_blocks = (
-        [keep(1), P, gallery(2, 3, 4), V, keep(5), D, keep(6)]                       # 2024
-        + [keep(7), P, gallery(8, 9, 10, 11)]                                         # 2023: pictures only
-        + [keep(12), P, gallery(13, 14, 15), V, keep(16), D, keep(17), keep(18)]      # 2022
+        [keep(1), P, gallery(2, 3, 4), V, keep(5)]                 # 2024: pictures, video
+        + [keep(7), P, gallery(8, 9, 10, 11)]                      # 2023: pictures only
+        + [keep(12), P, gallery(13, 14, 15), V, keep(16)]          # 2022: pictures, video
+        + [D, keep(6), keep(17), keep(18)]                         # the documents: 2024 proceedings, 2022 information letter, 2022 programme
     )
-    assert len(new_blocks) == 18
+    assert len(new_blocks) == 17
     old_blocks = [keep(o) for o in range(1, 19)]
     pks = replace_blocks(page, 1, 18, new_blocks)
     return {"slug": PLAN["slug"], "old_blocks": old_blocks, "new_pks": pks, "new_fps": [sha(ContentBlock.objects.get(pk=pk).data) for pk in pks]}

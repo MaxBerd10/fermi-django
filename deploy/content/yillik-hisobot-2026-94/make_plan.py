@@ -32,7 +32,7 @@ plan = {
     "old": old,
     "photos": sub("Plakatlar va fotosuratlar", "Плакаты и фотографии", "Posters and photos"),
     "video": sub("Video", "Видео", "Video"),
-    "documents": sub("Hujjatlar", "Документы", "Documents"),
+    "documents": {"block_type": "heading", "data": {"uz": {"text": "Hujjatlar", "level": 2}, "ru": {"text": "Документы", "level": 2}, "en": {"text": "Documents", "level": 2}}},
 }
 Path("deploy/content/yillik-hisobot-2026-94/plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf8")
 print("plan written;", len(old), "old blocks")
