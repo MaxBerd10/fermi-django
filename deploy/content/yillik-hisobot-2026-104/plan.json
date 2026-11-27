@@ -1,0 +1,250 @@
+[
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 2,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Дос a тижения современной медицины в изучении Эпидемиологии инфекционных болезней",
+  "new": "Достижения современной медицины в изучении Эпидемиологии инфекционных болезней"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 2,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Дос a тижения современной медицины в изучении Эпидемиологии инфекционных болезней",
+  "new": "Zamonaviy tibbiyotning yuqumli kasalliklar epidemiologiyasini oʻrganishdagi yutuqlari"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 2,
+  "lang": "en",
+  "field": "caption",
+  "old": "Current issues in the diagnosis and treatment of coronavirus infection",
+  "new": "Advances of modern medicine in the study of the epidemiology of infectious diseases"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 3,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Актувльные проблемы диангостики и лечения коронавирусной инфекции",
+  "new": "Актуальные проблемы диагностики и лечения коронавирусной инфекции"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 3,
+  "lang": "en",
+  "field": "caption",
+  "old": "Koronavirus infeksiyasini tashxislash va davolashning dolzarb muammolari",
+  "new": "Current issues in the diagnosis and treatment of coronavirus infection"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 4,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Dermatoveneralogiya va dermato-onkologiyada diagnostika va davolashda yangi texnologiyalarni rivojlantirish istiqbollari",
+  "new": "Dermatovenerologiya va dermato-onkologiyada diagnostika va davolashda yangi texnologiyalarni rivojlantirish istiqbollari"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 4,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Перспективы развития новых технологии в диагностике и лечении в дерматовенерологии и дерматоонкопатологии",
+  "new": "Перспективы развития новых технологий в диагностике и лечении в дерматовенерологии и дерматоонкопатологии"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 4,
+  "lang": "en",
+  "field": "caption",
+  "old": "Prospects for the development of new technologies in diagnostics and treatment in dermatoveneralogy and dermato-oncopathology",
+  "new": "Prospects for the development of new technologies in diagnostics and treatment in dermatovenerology and dermato-oncopathology"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 5,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Fiziologiyada va patologiyada yangi tadqiqot ufqlari: zamonaviy yondashuvlar va istiqbollar",
+  "new": "Новые горизонты исследований в физиологии и патологии: современные подходы и перспективы"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 5,
+  "lang": "en",
+  "field": "caption",
+  "old": "Fiziologiyada va patologiyada yangi tadqiqot ufqlari: zamonaviy yondashuvlar va istiqbollar",
+  "new": "New horizons of research in physiology and pathology: modern approaches and prospects"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 7,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Инновационный подходы и актуальные проблемы......",
+  "new": "Инновационные подходы и актуальные проблемы......"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 11,
+  "lang": "en",
+  "field": "caption",
+  "old": "Current issues in the diagnossis and treatment of internal diseases",
+  "new": "Current issues in the diagnosis and treatment of internal diseases"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 13,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Dermatoveneralogiya va dermato-onkopatologiyadagi diagnostika va davbolashda yangi texnologiyalarni rivojlantirish istiqbollari III xalqaro ilmiy-amaliy konferensiyasi",
+  "new": "Dermatovenerologiya va dermato-onkopatologiyadagi diagnostika va davolashda yangi texnologiyalarni rivojlantirish istiqbollari III xalqaro ilmiy-amaliy konferensiyasi"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 13,
+  "lang": "ru",
+  "field": "caption",
+  "old": "III-я Международная научно-практическая конференция «Пепспективы развития новых технологий в диагностике и лечении в дерматовенерологии и дермато-онкопатологии»",
+  "new": "III-я Международная научно-практическая конференция «Перспективы развития новых технологий в диагностике и лечении в дерматовенерологии и дермато-онкопатологии»"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 13,
+  "lang": "en",
+  "field": "caption",
+  "old": "III International scientific and practical conference Prospects for the development of new technologies in diagnostics and treatment in dermatoveneralogy and dermato-oncopathology",
+  "new": "III International scientific and practical conference Prospects for the development of new technologies in diagnostics and treatment in dermatovenerology and dermato-oncopathology"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 14,
+  "lang": "en",
+  "field": "caption",
+  "old": "Current issies in pulmonology",
+  "new": "Current issues in pulmonology"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 15,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Актуальные вопросы лечения вторичных иммунодефитцитов с помощью лекарственных растений",
+  "new": "Актуальные вопросы лечения вторичных иммунодефицитов с помощью лекарственных растений"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 16,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Dermatoveneralogiya va dermato-onkopatologiyadagi diagnostika va davolashda yangi texnologiyalarning rivojlanishi",
+  "new": "Dermatovenerologiya va dermato-onkopatologiyadagi diagnostika va davolashda yangi texnologiyalarning rivojlanishi"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 16,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Разработка новых технологий в диагностике и лечении в дерматоверенологии и дерматоонкопатологии",
+  "new": "Разработка новых технологий в диагностике и лечении в дерматовенерологии и дерматоонкопатологии"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 17,
+  "lang": "uz",
+  "field": "caption",
+  "old": "Ichki kasallikalr diagnostikasi va davolashning dolzarb muammolari - 2024",
+  "new": "Ichki kasalliklar diagnostikasi va davolashning dolzarb muammolari - 2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 17,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Актуальные проблемы диагностики и лечения внутренных болезней - 2024",
+  "new": "Актуальные проблемы диагностики и лечения внутренних болезней - 2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 17,
+  "lang": "en",
+  "field": "caption",
+  "old": "Current problems of diagnostics and treatment on internal diseses - 2024",
+  "new": "Current problems of diagnostics and treatment on internal diseases - 2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 18,
+  "lang": "uz",
+  "field": "caption",
+  "old": "XXI-ars inson salomatligi: dolzarb masalalar, muammolar va innovatsiyalar - II xalqaro talabalar ilniy konferensiyasi - 2024",
+  "new": "XXI-ars inson salomatligi: dolzarb masalalar, muammolar va innovatsiyalar - II xalqaro talabalar ilmiy konferensiyasi - 2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 18,
+  "lang": "ru",
+  "field": "caption",
+  "old": "II-Международной студентической научнойной конференции Здоровье человека 21 века: Актуальной вопрочы, проплемы и инновации -2024",
+  "new": "II-Международной студенческой научной конференции Здоровье человека 21 века: Актуальные вопросы, проблемы и инновации -2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 18,
+  "lang": "en",
+  "field": "caption",
+  "old": "II-nd International student scientific Conference Human health of the 21st Century: Current issies, problems anf innovation - 2024",
+  "new": "II International student scientific Conference Human health of the 21st Century: Current issues, problems and innovation - 2024"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 19,
+  "lang": "uz",
+  "field": "caption",
+  "old": "III Xalqaro ilmiy-amaliy konfrensiyasi “ayollar reproduktiv salomatligi: muammolari, yechimlari va profilaktikasi”",
+  "new": "III Xalqaro ilmiy-amaliy konferensiyasi “ayollar reproduktiv salomatligi: muammolari, yechimlari va profilaktikasi”"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 19,
+  "lang": "ru",
+  "field": "caption",
+  "old": "III Международная научно- практическаяконференция «репродуктивное здоровье женщин: проблемы, пути решения и профилактика»",
+  "new": "III Международная научно-практическая конференция «репродуктивное здоровье женщин: проблемы, пути решения и профилактика»"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 20,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Klinik-morfologik va fiziologik tadqiqotlar: Xirurgiyada innovatsion yechimlar",
+  "new": "Клинико-морфологические и физиологические исследования: инновационные решения в хирургии"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 20,
+  "lang": "en",
+  "field": "caption",
+  "old": "Klinik-morfologik va fiziologik tadqiqotlar: Xirurgiyada innovatsion yechimlar",
+  "new": "Clinical-morphological and physiological research: innovative solutions in surgery"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 6,
+  "lang": "en",
+  "field": "text",
+  "old": "The role innovation in improving the quality of medicine education",
+  "new": "The role of innovation in improving the quality of medicine and education"
+ },
+ {
+  "slug": "kop-berilayotgan-savollar",
+  "order": 11,
+  "lang": "uz",
+  "field": "text",
+  "old": "Test sinovlari va kasbiy (ijodiy) imtihonlar natijalari [Bilim va malakalarni baholash agentligi](https://uzbmb.uz/) hamda Fargʻona jamoat salomatligi tibbiyot institutining rasmiy [fermi.uz](/blog/241/kop-berilayotgan-savollar) veb-saytlarida eʻlon qilinadi.",
+  "new": "Test sinovlari va kasbiy (ijodiy) imtihonlar natijalari [Bilim va malakalarni baholash agentligi](https://uzbmb.uz/) hamda Fargʻona jamoat salomatligi tibbiyot institutining rasmiy [fermi.uz](https://fermi.uz) veb-saytlarida eʻlon qilinadi."
+ }
+]
