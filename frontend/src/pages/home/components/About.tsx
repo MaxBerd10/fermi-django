@@ -6,12 +6,8 @@ import type { Page } from "@/types/content";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import { FOUNDED_YEAR } from "@/lib/siteConstants";
 
-// The institute's own founding decree, real content migrated from the old
-// site's /about/<slug> endpoint (Page has no title field, so the decree's
-// own title -- always its 3rd heading here, after the two short preamble
-// headings "O'ZBEKISTON RESPUBLIKASI PREZIDENTINING" / "QARORI" -- and its
-// first paragraph are read positionally rather than duplicated as a
-// separate i18n string).
+// The institute's founding decree: its page (the picture, and the "Batafsil" link) is an ordinary page of the admin ("Sahifalar"). The title and the intro sentence
+// are Sayt matnlari ("about.title", "about.intro": Biz haqimizda), so a person can edit them without touching the order of that page's blocks.
 const SLUG = "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida";
 
 export default function About() {
@@ -22,17 +18,9 @@ export default function About() {
     getPage(SLUG).then(setPage).catch(() => {});
   }, []);
 
-  if (!page) return null;
-
-  const blocks = page.blocks.slice().sort((a, b) => a.order - b.order);
-  const image = blocks.find((b) => b.block_type === "image");
-  const headings = blocks.filter((b) => b.block_type === "heading");
-  const heading = headings[2] ?? headings[0];
-
-  const title = heading?.data.text ?? "";
-  // The decree's first paragraph only: its headings are the title above (and the two preamble lines), so joining them printed the title twice in capitals
-  // in front of the legal text; the paragraph is cut after a few lines (the full text is one click away).
-  const introText = blocks.find((b) => b.block_type === "paragraph")?.data.text ?? "";
+  const image = page?.blocks.slice().sort((x, y) => x.order - y.order).find((block) => block.block_type === "image");
+  const title = t("about.title");
+  const introText = t("about.intro");
   const imageFile = image?.data.image?.file;
 
   return (
