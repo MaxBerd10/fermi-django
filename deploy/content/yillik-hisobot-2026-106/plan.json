@@ -1,0 +1,1475 @@
+[
+ {
+  "slug": "faculty-1",
+  "order": 1,
+  "count": 5,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"General Medicine\" track consists of training competitive specialists with higher medical education in the specialty \"General Medicine\", highly qualified scientists with an active life position on the basis of the principles of continuous professional education, solving healthcare problems, raising the population's standard of living on a republican and global scale, and preserving and enhancing the achievements of the national medical school."
+     },
+     "ru": {
+      "text": "Задача направления «Общая медицина» заключается в подготовке конкурентоспособных специалистов с высшим медицинским образованием по специальности «Общая медицина», высококвалифицированных учёных с активной жизненной позицией на основе принципов непрерывного профессионального образования, решении проблем здравоохранения, повышении уровня жизни населения в республиканском и мировом масштабе, сохранении и приумножении достижений национальной медицинской школы."
+     },
+     "uz": {
+      "text": "“Umumiy tibbiyot” ning vazifasi “Umumiy tibbiyot” mutaxassisligi boʻyicha oliy tibbiy maʻlumotga ega raqobatbardosh mutaxassislarni, uzluksiz kasbiy taʻlim tamoyillari asosida faol hayotiy pozitsiyaga ega yuqori malakali olimlarni tayyorlash, sogʻliqni saqlash muammolarini hal qilishdan iborat. respublika va jahon miqyosida aholi turmush darajasini oshirish, milliy tibbiyot bilim yurti yutuqlarini asrab-avaylash va oshirish."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In accordance with the structure approved by the Ministry of Health of the Republic of Uzbekistan, on the basis of Protocol No. 13 of the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan, dated February 28, 2020, in connection with the transfer of students to study from neighboring states, the increase in admission quotas in the 2020-2021 academic year, the sharp increase in the number of students and the corresponding increase in academic hours, and in order to raise the effectiveness of the reforms being carried out in the healthcare system, the Faculty of \"General Medicine\" was established at the branch on the basis of Order No. 282, dated August 18, 2020."
+     },
+     "ru": {
+      "text": "В соответствии со структурой, утверждённой Министерством здравоохранения Республики Узбекистан, на основании протокола №13 Государственной комиссии по приёму в учебные заведения Республики Узбекистан от 28 февраля 2020 года, в связи с переводом студентов на учёбу из соседних государств, увеличением квот приёма в 2020-2021 учебном году, резким увеличением числа студентов и соответствующим увеличением учебных часов, а также в целях повышения эффективности реформ, проводимых в системе здравоохранения, в филиале на основании приказа №282 от 18 августа 2020 года был создан факультет «Лечебное дело»."
+     },
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi sogʻliqni saqlash vazirligi tomonidan tasdiqlangan strukturaga asosan Oʻzbekiston Respublikasi taʻlim muassasalariga qabul qilish boʻyicha Davlat komissiyasining 2020-yil 28 fevraldagi 13 sonli bayoni asosida talabalarning qoʻshni davlatlardan oʻqishni koʻchirilganligi, 2020-2021 oʻquv yilidagi qabul kvotalari ortganligi xisobiga talabalar sonining keskin ortganligi natijasida oʻquv soatlarining koʻpayganligi munosabatibilan hamda sogʻliqni saqlash tizimida olib borilayotgan isloxotlar samaradorligini oshirish maqsadida filialda 2020-yil 18-avgustdagi 282-sonli buyruq asosida “Davolash ishi” fakulteti tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The Faculty of Medicine prepares undergraduate specialists in the field of medical work."
+     },
+     "ru": {
+      "text": "Медицинский факультет готовит бакалаврских специалистов в области лечебной работы."
+     },
+     "uz": {
+      "text": "Davolash ishi fakultetida Davolash ishi yoʻnalishi boʻyicha bakalavriat mutaxasislari tayyorlanadi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "50010100 — General Medicine (since 2019) Today, 1,324 students study at the faculty in the \"General Medicine\" track. Of these: at the faculty, students master practical skills alongside theoretical knowledge. Theoretical knowledge is mainly taught in the institute's main building, and practical sessions are held at the following clinical bases:"
+     },
+     "ru": {
+      "text": "50010100 — Лечебное дело (с 2019 года) На сегодняшний день на факультете по направлению «Лечебное дело» обучается 1324 студента. Из них: на факультете студенты наряду с теоретическими знаниями осваивают практические навыки. Теоретические знания в основном преподаются в главном корпусе института, а практические занятия — на следующих клинических базах:"
+     },
+     "uz": {
+      "text": "50010100-Davolash ishi (2019-yildan buyon) Fakultetda bugungi kunda “Davolash ishi” yunalishida 1324 nafar talabalar takxsil oladi. Bulardan: Fakultetda talabalar nazariy bilimlar bilan birga amaliy koʻnikmalar oʻzlashtirishadi. Nazariy bilimlarni asosan institut asosiy binosida, amaliy mashgʻulotlarni quyidagi klinik bazalarda:"
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "Fergana branch of the Republican Scientific Center of Emergency Medical Care",
+       "Regional Multidisciplinary Medical Center",
+       "Regional Multidisciplinary Medical Center",
+       "Regional Dental Hospital",
+       "Regional Perinatal Center",
+       "Regional Mother and Child Screening Center",
+       "Fergana City Medical Association",
+       "Fergana Regional Dermatovenerological Dispensary",
+       "Fergana Regional Tuberculosis Dispensary",
+       "Fergana Regional Blood Transfusion Center",
+       "Fergana Regional AIDS Control Center",
+       "Fergana Regional Infectious Diseases Hospital",
+       "Regional Urology Center",
+       "Regional Endocrinology Dispensary",
+       "Regional Branch of the Republican Specialized Scientific-Practical Medical Center of Cardiology",
+       "Regional Dermatovenerological Dispensary",
+       "Fergana Regional Branch of the Republican Specialized Scientific-Practical Medical Center of Oncology and Radiology",
+       "Fergana Regional Bureau of Forensic Medical Examination",
+       "Fergana Regional Bureau of Pathological Anatomy",
+       "Fergana Region Directorate of the Sanitary-Epidemiological Welfare and Public Health Service",
+       "Fergana Regional Children's Dental Polyclinic",
+       "Republican Plague Quarantine and Especially Dangerous Infectious Diseases Center, Fergana Region",
+       "Fergana City Medical Association",
+       "Sanitary-Epidemiological Welfare and Public Health Service, Fergana City Division",
+       "Sanitary-Epidemiological Welfare and Public Health Service, Margilan City Division",
+       "City Hospital No. 1",
+       "City Hospital No. 2",
+       "City United Children's Hospital",
+       "Regional Narcology Dispensary",
+       "Regional Mental Illness Dispensary",
+       "Regional Ophthalmology Hospital",
+       "Regional Adolescent Polyclinic",
+       "Regional Disinfection Station",
+       "Fergana City Family Polyclinic No. 1",
+       "Fergana City Family Polyclinic No. 2",
+       "Fergana City Family Polyclinic No. 3",
+       "Fergana City Family Polyclinic No. 4."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Ферганский филиал Республиканского научного центра экстренной медицинской помощи",
+       "Областной многопрофильный медицинский центр",
+       "Областной многопрофильный медицинский центр",
+       "Областная стоматологическая больница",
+       "Областной перинатальный центр",
+       "Областной центр скрининга матери и ребёнка",
+       "Ферганское городское медицинское объединение",
+       "Ферганский областной кожно-венерологический диспансер",
+       "Ферганский областной противотуберкулёзный диспансер",
+       "Ферганский областной центр переливания крови",
+       "Ферганский областной центр по борьбе со СПИДом",
+       "Ферганская областная инфекционная больница",
+       "Областной центр урологии",
+       "Областной эндокринологический диспансер",
+       "Областной региональный филиал Республиканского специализированного научно-практического медицинского центра кардиологии",
+       "Областной кожно-венерологический диспансер",
+       "Ферганский областной филиал Республиканского специализированного научно-практического медицинского центра онкологии и радиологии",
+       "Ферганское областное бюро судебно-медицинской экспертизы",
+       "Ферганское областное патологоанатомическое бюро",
+       "Управление службы санитарно-эпидемиологического благополучия и общественного здоровья Ферганской области",
+       "Ферганская областная детская стоматологическая поликлиника",
+       "Республиканский центр карантина чумы и особо опасных инфекционных заболеваний Ферганской области",
+       "Ферганское городское медицинское объединение",
+       "Служба санитарно-эпидемиологического благополучия и общественного здоровья города Ферганы",
+       "Служба санитарно-эпидемиологического благополучия и общественного здоровья города Маргилана",
+       "Городская больница №1",
+       "Городская больница №2",
+       "Городская объединённая детская больница",
+       "Областной наркологический диспансер",
+       "Областной диспансер психических заболеваний",
+       "Областная офтальмологическая больница",
+       "Областная подростковая поликлиника",
+       "Областная дезинфекционная станция",
+       "Ферганская городская семейная поликлиника №1",
+       "Ферганская городская семейная поликлиника №2",
+       "Ферганская городская семейная поликлиника №3",
+       "Ферганская городская семейная поликлиника №4."
+      ]
+     },
+     "uz": {
+      "items": [
+       "Respublika shoshilinch tibbiy yordam ilmiy markazining Fargʻona filiali",
+       "Viloyat koʻp tarmoqli tibbiyot markazi",
+       "Viloyat koʻp tarmoqli tibbiyot markazi",
+       "Viloyat stomatologiya shifoxonasi",
+       "Viloyat perinatal markazi",
+       "Viloyat ona va bola skrining markazi",
+       "Fargʻona shahar tibbiyot birlashmasi",
+       "Fargʻona viloyat teri tanosil kasalliklari dispanseri",
+       "Fargʻona viloyat silga qarshi kurashish dispanseri",
+       "Fargʻona viloyat qon quyish markazi",
+       "Fargʻona viloyat “OITS” ga karshi kurash markazi",
+       "Fargʻona viloyat yuqumli kasalliklar shifoxonasi",
+       "Viloyat urologiya markazi",
+       "Viloyat endokrinologiya dispanseri",
+       "Respublika ixtisoslashgan kardiologiya ilmiy-amaliy tibbiyot markazi viloyat mintaqaviy filiali",
+       "Viloyat teri-tanosil kasalliklari dispanseri",
+       "Respublika ixtisoslashtirilgan onkologiya va radiologiya ilmiy-amaliy tibbiyot markazi Fargʻona viloyati filiali",
+       "Fargʻona Viloyat sud-tibbiyot ekspertiza byurosi",
+       "Fargʻona Viloyat patalogonatomiya byurosi",
+       "Fargʻona viloyat Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati boshqarmasi",
+       "Fargʻona Viloyat bolalar stomatologiya poliklinikasi",
+       "Respublika Oʻlat karantin va oʻta xavfli yuqumli kasalliklarni muxofaza qilish markazi Fargʻona viloyati",
+       "Fargʻona shahar tibbiyot birlashmasi",
+       "Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati Fargʻona shaxar boʻlimi",
+       "Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati Margʻilon shaxar boʻlimi",
+       "Shahar 1-sonli shifoxonasi",
+       "Shahar 2-sonli shifoxonasi",
+       "Shahar birlashgan bolalar shifoxonasi",
+       "Viloyat narkologiya dispanseri",
+       "Viloyat ruhiy kasalliklar dispanseri",
+       "Viloyat oftalmologiya shifoxonasi",
+       "Viloyat oʻsmirlar poliklinikasi",
+       "Viloyat dezinfektsiya stantsiyasi",
+       "Fargʻona shahar 1-oilaviy poliklinika",
+       "Fargʻona shahar 2-oilaviy poliklinika",
+       "Fargʻona shahar 3-oilaviy poliklinika",
+       "Fargʻona shahar 4-oilaviy poliklinika larda taxsil olishadi."
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"General Medicine\" track consists of training competitive specialists with higher medical education in the specialty \"General Medicine\", highly qualified scientists with an active life position on the basis of the principles of continuous professional education, solving healthcare problems, raising the population's standard of living on a republican and global scale, and preserving and enhancing the achievements of the national medical school."
+     },
+     "ru": {
+      "text": "Задача направления «Общая медицина» заключается в подготовке конкурентоспособных специалистов с высшим медицинским образованием по специальности «Общая медицина», высококвалифицированных учёных с активной жизненной позицией на основе принципов непрерывного профессионального образования, решении проблем здравоохранения, повышении уровня жизни населения в республиканском и мировом масштабе, сохранении и приумножении достижений национальной медицинской школы."
+     },
+     "uz": {
+      "text": "“Umumiy tibbiyot” ning vazifasi “Umumiy tibbiyot” mutaxassisligi boʻyicha oliy tibbiy maʻlumotga ega raqobatbardosh mutaxassislarni, uzluksiz kasbiy taʻlim tamoyillari asosida faol hayotiy pozitsiyaga ega yuqori malakali olimlarni tayyorlash, sogʻliqni saqlash muammolarini hal qilishdan iborat. respublika va jahon miqyosida aholi turmush darajasini oshirish, milliy tibbiyot bilim yurti yutuqlarini asrab-avaylash va oshirish."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In accordance with the structure approved by the Ministry of Health of the Republic of Uzbekistan, on the basis of Protocol No. 13 of the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan, dated February 28, 2020, in connection with the transfer of students to study from neighboring states, the increase in admission quotas in the 2020-2021 academic year, the sharp increase in the number of students and the corresponding increase in academic hours, and in order to raise the effectiveness of the reforms being carried out in the healthcare system, the Faculty of \"General Medicine\" was established at the branch on the basis of Order No. 282, dated August 18, 2020."
+     },
+     "ru": {
+      "text": "В соответствии со структурой, утверждённой Министерством здравоохранения Республики Узбекистан, на основании протокола №13 Государственной комиссии по приёму в учебные заведения Республики Узбекистан от 28 февраля 2020 года, в связи с переводом студентов на учёбу из соседних государств, увеличением квот приёма в 2020-2021 учебном году, резким увеличением числа студентов и соответствующим увеличением учебных часов, а также в целях повышения эффективности реформ, проводимых в системе здравоохранения, в филиале на основании приказа №282 от 18 августа 2020 года был создан факультет «Лечебное дело»."
+     },
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi sogʻliqni saqlash vazirligi tomonidan tasdiqlangan strukturaga asosan Oʻzbekiston Respublikasi taʻlim muassasalariga qabul qilish boʻyicha Davlat komissiyasining 2020-yil 28 fevraldagi 13 sonli bayoni asosida talabalarning qoʻshni davlatlardan oʻqishni koʻchirilganligi, 2020-2021 oʻquv yilidagi qabul kvotalari ortganligi xisobiga talabalar sonining keskin ortganligi natijasida oʻquv soatlarining koʻpayganligi munosabatibilan hamda sogʻliqni saqlash tizimida olib borilayotgan isloxotlar samaradorligini oshirish maqsadida filialda 2020-yil 18-avgustdagi 282-sonli buyruq asosida “Davolash ishi” fakulteti tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The Faculty of Medicine prepares undergraduate specialists in the field of medical work."
+     },
+     "ru": {
+      "text": "Медицинский факультет готовит бакалаврских специалистов в области лечебной работы."
+     },
+     "uz": {
+      "text": "Davolash ishi fakultetida Davolash ishi yoʻnalishi boʻyicha bakalavriat mutaxasislari tayyorlanadi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "50010100 — General Medicine (since 2019) Today, 1,324 students study at the faculty in the \"General Medicine\" track. Of these: at the faculty, students master practical skills alongside theoretical knowledge. Theoretical knowledge is mainly taught in the institute's main building, and practical sessions are held at the following clinical bases:"
+     },
+     "ru": {
+      "text": "50010100 — Лечебное дело (с 2019 года) На сегодняшний день на факультете по направлению «Лечебное дело» обучается 1324 студента. Из них: на факультете студенты наряду с теоретическими знаниями осваивают практические навыки. Теоретические знания в основном преподаются в главном корпусе института, а практические занятия — на следующих клинических базах:"
+     },
+     "uz": {
+      "text": "50010100-Davolash ishi (2019-yildan buyon) Fakultetda bugungi kunda “Davolash ishi” yunalishida 1324 nafar talabalar takxsil oladi. Bulardan: Fakultetda talabalar nazariy bilimlar bilan birga amaliy koʻnikmalar oʻzlashtirishadi. Nazariy bilimlarni asosan institut asosiy binosida, amaliy mashgʻulotlarni quyidagi klinik bazalarda:"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Klinik amaliyot bazalari",
+      "level": 3
+     },
+     "ru": {
+      "text": "Базы клинической практики",
+      "level": 3
+     },
+     "en": {
+      "text": "Clinical training sites",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "Fergana branch of the Republican Scientific Center of Emergency Medical Care",
+       "Regional Multidisciplinary Medical Center",
+       "Regional Multidisciplinary Medical Center",
+       "Regional Dental Hospital",
+       "Regional Perinatal Center",
+       "Regional Mother and Child Screening Center",
+       "Fergana City Medical Association",
+       "Fergana Regional Dermatovenerological Dispensary",
+       "Fergana Regional Tuberculosis Dispensary",
+       "Fergana Regional Blood Transfusion Center",
+       "Fergana Regional AIDS Control Center",
+       "Fergana Regional Infectious Diseases Hospital",
+       "Regional Urology Center",
+       "Regional Endocrinology Dispensary",
+       "Regional Branch of the Republican Specialized Scientific-Practical Medical Center of Cardiology",
+       "Regional Dermatovenerological Dispensary",
+       "Fergana Regional Branch of the Republican Specialized Scientific-Practical Medical Center of Oncology and Radiology",
+       "Fergana Regional Bureau of Forensic Medical Examination",
+       "Fergana Regional Bureau of Pathological Anatomy",
+       "Fergana Region Directorate of the Sanitary-Epidemiological Welfare and Public Health Service",
+       "Fergana Regional Children's Dental Polyclinic",
+       "Republican Plague Quarantine and Especially Dangerous Infectious Diseases Center, Fergana Region",
+       "Fergana City Medical Association",
+       "Sanitary-Epidemiological Welfare and Public Health Service, Fergana City Division",
+       "Sanitary-Epidemiological Welfare and Public Health Service, Margilan City Division",
+       "City Hospital No. 1",
+       "City Hospital No. 2",
+       "City United Children's Hospital",
+       "Regional Narcology Dispensary",
+       "Regional Mental Illness Dispensary",
+       "Regional Ophthalmology Hospital",
+       "Regional Adolescent Polyclinic",
+       "Regional Disinfection Station",
+       "Fergana City Family Polyclinic No. 1",
+       "Fergana City Family Polyclinic No. 2",
+       "Fergana City Family Polyclinic No. 3",
+       "Fergana City Family Polyclinic No. 4."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Ферганский филиал Республиканского научного центра экстренной медицинской помощи",
+       "Областной многопрофильный медицинский центр",
+       "Областной многопрофильный медицинский центр",
+       "Областная стоматологическая больница",
+       "Областной перинатальный центр",
+       "Областной центр скрининга матери и ребёнка",
+       "Ферганское городское медицинское объединение",
+       "Ферганский областной кожно-венерологический диспансер",
+       "Ферганский областной противотуберкулёзный диспансер",
+       "Ферганский областной центр переливания крови",
+       "Ферганский областной центр по борьбе со СПИДом",
+       "Ферганская областная инфекционная больница",
+       "Областной центр урологии",
+       "Областной эндокринологический диспансер",
+       "Областной региональный филиал Республиканского специализированного научно-практического медицинского центра кардиологии",
+       "Областной кожно-венерологический диспансер",
+       "Ферганский областной филиал Республиканского специализированного научно-практического медицинского центра онкологии и радиологии",
+       "Ферганское областное бюро судебно-медицинской экспертизы",
+       "Ферганское областное патологоанатомическое бюро",
+       "Управление службы санитарно-эпидемиологического благополучия и общественного здоровья Ферганской области",
+       "Ферганская областная детская стоматологическая поликлиника",
+       "Республиканский центр карантина чумы и особо опасных инфекционных заболеваний Ферганской области",
+       "Ферганское городское медицинское объединение",
+       "Служба санитарно-эпидемиологического благополучия и общественного здоровья города Ферганы",
+       "Служба санитарно-эпидемиологического благополучия и общественного здоровья города Маргилана",
+       "Городская больница №1",
+       "Городская больница №2",
+       "Городская объединённая детская больница",
+       "Областной наркологический диспансер",
+       "Областной диспансер психических заболеваний",
+       "Областная офтальмологическая больница",
+       "Областная подростковая поликлиника",
+       "Областная дезинфекционная станция",
+       "Ферганская городская семейная поликлиника №1",
+       "Ферганская городская семейная поликлиника №2",
+       "Ферганская городская семейная поликлиника №3",
+       "Ферганская городская семейная поликлиника №4."
+      ]
+     },
+     "uz": {
+      "items": [
+       "Respublika shoshilinch tibbiy yordam ilmiy markazining Fargʻona filiali",
+       "Viloyat koʻp tarmoqli tibbiyot markazi",
+       "Viloyat koʻp tarmoqli tibbiyot markazi",
+       "Viloyat stomatologiya shifoxonasi",
+       "Viloyat perinatal markazi",
+       "Viloyat ona va bola skrining markazi",
+       "Fargʻona shahar tibbiyot birlashmasi",
+       "Fargʻona viloyat teri tanosil kasalliklari dispanseri",
+       "Fargʻona viloyat silga qarshi kurashish dispanseri",
+       "Fargʻona viloyat qon quyish markazi",
+       "Fargʻona viloyat “OITS” ga karshi kurash markazi",
+       "Fargʻona viloyat yuqumli kasalliklar shifoxonasi",
+       "Viloyat urologiya markazi",
+       "Viloyat endokrinologiya dispanseri",
+       "Respublika ixtisoslashgan kardiologiya ilmiy-amaliy tibbiyot markazi viloyat mintaqaviy filiali",
+       "Viloyat teri-tanosil kasalliklari dispanseri",
+       "Respublika ixtisoslashtirilgan onkologiya va radiologiya ilmiy-amaliy tibbiyot markazi Fargʻona viloyati filiali",
+       "Fargʻona Viloyat sud-tibbiyot ekspertiza byurosi",
+       "Fargʻona Viloyat patalogonatomiya byurosi",
+       "Fargʻona viloyat Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati boshqarmasi",
+       "Fargʻona Viloyat bolalar stomatologiya poliklinikasi",
+       "Respublika Oʻlat karantin va oʻta xavfli yuqumli kasalliklarni muxofaza qilish markazi Fargʻona viloyati",
+       "Fargʻona shahar tibbiyot birlashmasi",
+       "Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati Fargʻona shaxar boʻlimi",
+       "Sanitariya epidemiologik osoyishtalik va jamoat salomatligi xizmati Margʻilon shaxar boʻlimi",
+       "Shahar 1-sonli shifoxonasi",
+       "Shahar 2-sonli shifoxonasi",
+       "Shahar birlashgan bolalar shifoxonasi",
+       "Viloyat narkologiya dispanseri",
+       "Viloyat ruhiy kasalliklar dispanseri",
+       "Viloyat oftalmologiya shifoxonasi",
+       "Viloyat oʻsmirlar poliklinikasi",
+       "Viloyat dezinfektsiya stantsiyasi",
+       "Fargʻona shahar 1-oilaviy poliklinika",
+       "Fargʻona shahar 2-oilaviy poliklinika",
+       "Fargʻona shahar 3-oilaviy poliklinika",
+       "Fargʻona shahar 4-oilaviy poliklinika larda taxsil olishadi."
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "faculty-2",
+  "order": 1,
+  "count": 12,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty has a total of 5 tracks: 380 students in the \"Medical Preventive Work\" track, 76 students in the \"Professional Education: Medical Pedagogical Work\" track, 27 students in the \"Folk Medicine\" track, 64 students in the \"Biomedical Engineering\" track, and 160 students in the \"Higher Nursing Care\" track, for a total of 707 students."
+     },
+     "ru": {
+      "text": "Миссия «ФМИОЗ»: формирование интеллектуального, культурного и нравственного потенциала, передача знаний, опыта профессионалами в области медицинской науки, здравоохранения и фармации выпускникам института через фундаментальные, прикладные научные исследования и разработки для сохранения здоровья нации, устойчивого развития Узбекистана."
+     },
+     "uz": {
+      "text": "Fakultetda jami 5 ta yoʻnalish boʻlib, \"Tibbiy profilaktika ishi\" yoʻnalishida 380 nafar, \"Kasb taʻlimi: tibbiy pedagogik ish\" yoʻnalishida 76 nafar, \"Xalq tabobati\" yoʻnalishida 27 nafar, \"Biotibbiyot muhandisligi\" yoʻnalishida 64 nafar, \"Oliy hamshiralik ishi\" yoʻnalishida 160 nafar, jami 707 nafar talaba tahsil oladi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "To the faculty attached are the following departments:"
+     },
+     "ru": {
+      "text": "К факультету присоединены следующие кафедры:"
+     },
+     "uz": {
+      "text": "Fakultetga quyidagi kafedralar biriktirilgan:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "1. Department of Communal and Occupational Hygiene"
+     },
+     "ru": {
+      "text": "1. Кафедра коммунальной и трудовой гигиены"
+     },
+     "uz": {
+      "text": "1. Kommunal va mehnat gigiyenasi kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "2. Department of Nutrition, Children's and Adolescents' Hygiene"
+     },
+     "ru": {
+      "text": "2. Кафедра гигиены питания, детей и подростков"
+     },
+     "uz": {
+      "text": "2.Ovqatlanish, bolalar va oʻsmirlar gigienasi kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "3. Department of Fundamentals of Preventive Medicine, Public Health, Physical Culture and Sport"
+     },
+     "ru": {
+      "text": "3. Кафедра основ превентивной медицины, общественного здоровья, физической культуры и спорта"
+     },
+     "uz": {
+      "text": "3.Preventiv tibbiyot asoslari, jamoat salomatligi, jismoniy tarbiya va sport kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "4. Department of Microbiology, Virology and Immunology"
+     },
+     "ru": {
+      "text": "4. Кафедра микробиологии, вирусологии и иммунологии"
+     },
+     "uz": {
+      "text": "4. Mikrobiologiya, virusologiya va immunologiya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "5. Department of Epidemiology and Infectious Diseases, Nursing"
+     },
+     "ru": {
+      "text": "5. Кафедра эпидемиологии и инфекционных болезней, сестринского дела"
+     },
+     "uz": {
+      "text": "5.Epidemiologiya va yuqumli kasalliklar, hamshiralik ishi kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "6. Department of Folk Medicine and Pharmacology"
+     },
+     "ru": {
+      "text": "6. Кафедра народной медицины и фармакологии"
+     },
+     "uz": {
+      "text": "6. Xalq tabobati va farmakologiya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "7. Department of Biomedical Engineering, Biophysics and Information Technologies"
+     },
+     "ru": {
+      "text": "7. Кафедра биомедицинской инженерии, биофизики и информационных технологий"
+     },
+     "uz": {
+      "text": "7.Biotibbiyot muhandisligi, biofizika va axborot texnologiyalari kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty was opened in 1992 at the Fergana State University by the order of the Ministry of Higher and Secondary Special Education and the Ministry of Health of the Republic of Uzbekistan."
+     },
+     "ru": {
+      "text": "Факультет был открыт в 1992 году на основании совместных приказов Министерства высшего и среднего специального образования и Министерства здравоохранения Республики Узбекистан при Ферганском государственном университете."
+     },
+     "uz": {
+      "text": "Fakultet 1992 yili Oʻzbekiston Respublikasi Oliy va oʻrta maxsus taʻlim hamda Sogʻliqni saqlash vazirliklarining qoʻshma buyruqlari asosida Fargʻona Davlat universiteti qoshida ochilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In order for students studying at the faculty to master practical skills alongside gaining theoretical knowledge and become mature specialists, classes are organized at the sanitary-epidemiological welfare and public health centers of Kuvasoy and Fergana cities of Fergana region, at medical-preventive institutions, and at clinical bases."
+     },
+     "ru": {
+      "text": "Для того чтобы студенты, обучающиеся на факультете, наряду с получением теоретических знаний осваивали практические навыки и становились зрелыми специалистами, учебные занятия организованы в центрах санитарно-эпидемиологического благополучия и общественного здоровья городов Кувасай и Фергана Ферганской области, в лечебно-профилактических учреждениях и на клинических базах."
+     },
+     "uz": {
+      "text": "Fakultetda tahsil olayotgan talabalar nazariy bilim olish bilan birga amaliy koʻnikmalarni egallab, yetuk mutaxassis boʻlishlari uchun Fargʻona viloyatining Quvasoy hamda Fargʻona shaharlari sanitariya-epidemiologik osoyishtalik va jamoat salomatligi markazlarida, davolash-profilaktika muassasalarida hamda klinik bazalarda oʻquv mashgʻulotlari tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty has established international ties with leading advanced institutes and universities of the world. In particular, cooperation agreements have been signed with the Belarusian Medical Academy of Postgraduate Education, Kursk State Medical University of Russia, and Osh State University."
+     },
+     "ru": {
+      "text": "Факультет установил международные связи с ведущими передовыми институтами и университетами мира. В частности, подписаны договоры о сотрудничестве с Белорусской медицинской академией последипломного образования, Курским государственным медицинским университетом России и Ошским государственным университетом."
+     },
+     "uz": {
+      "text": "Fakultet dunyoning yetakchi, ilgʻor institut va universitetlari bilan xalqaro aloqalarni oʻrnatgan. Jumladan, Belorussiya tibbiy taʻlim akademiyasi, Rossiyaning Kursk davlat tibbiyot universiteti, Oʻsh davlat tibbiyot universiteti bilan hamkorlik shartnomalari imzolangan."
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty has a total of 5 tracks: 380 students in the \"Medical Preventive Work\" track, 76 students in the \"Professional Education: Medical Pedagogical Work\" track, 27 students in the \"Folk Medicine\" track, 64 students in the \"Biomedical Engineering\" track, and 160 students in the \"Higher Nursing Care\" track, for a total of 707 students."
+     },
+     "ru": {
+      "text": "Миссия «ФМИОЗ»: формирование интеллектуального, культурного и нравственного потенциала, передача знаний, опыта профессионалами в области медицинской науки, здравоохранения и фармации выпускникам института через фундаментальные, прикладные научные исследования и разработки для сохранения здоровья нации, устойчивого развития Узбекистана."
+     },
+     "uz": {
+      "text": "Fakultetda jami 5 ta yoʻnalish boʻlib, \"Tibbiy profilaktika ishi\" yoʻnalishida 380 nafar, \"Kasb taʻlimi: tibbiy pedagogik ish\" yoʻnalishida 76 nafar, \"Xalq tabobati\" yoʻnalishida 27 nafar, \"Biotibbiyot muhandisligi\" yoʻnalishida 64 nafar, \"Oliy hamshiralik ishi\" yoʻnalishida 160 nafar, jami 707 nafar talaba tahsil oladi."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fakultetga quyidagi kafedralar biriktirilgan",
+      "level": 3
+     },
+     "ru": {
+      "text": "К факультету присоединены следующие кафедры",
+      "level": 3
+     },
+     "en": {
+      "text": "To the faculty attached are the following departments",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Kommunal va mehnat gigiyenasi kafedrasi",
+       "Ovqatlanish, bolalar va oʻsmirlar gigienasi kafedrasi",
+       "Preventiv tibbiyot asoslari, jamoat salomatligi, jismoniy tarbiya va sport kafedrasi",
+       "Mikrobiologiya, virusologiya va immunologiya kafedrasi",
+       "Epidemiologiya va yuqumli kasalliklar, hamshiralik ishi kafedrasi",
+       "Xalq tabobati va farmakologiya kafedrasi",
+       "Biotibbiyot muhandisligi, biofizika va axborot texnologiyalari kafedrasi"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Кафедра коммунальной и трудовой гигиены",
+       "Кафедра гигиены питания, детей и подростков",
+       "Кафедра основ превентивной медицины, общественного здоровья, физической культуры и спорта",
+       "Кафедра микробиологии, вирусологии и иммунологии",
+       "Кафедра эпидемиологии и инфекционных болезней, сестринского дела",
+       "Кафедра народной медицины и фармакологии",
+       "Кафедра биомедицинской инженерии, биофизики и информационных технологий"
+      ]
+     },
+     "en": {
+      "items": [
+       "Department of Communal and Occupational Hygiene",
+       "Department of Nutrition, Children's and Adolescents' Hygiene",
+       "Department of Fundamentals of Preventive Medicine, Public Health, Physical Culture and Sport",
+       "Department of Microbiology, Virology and Immunology",
+       "Department of Epidemiology and Infectious Diseases, Nursing",
+       "Department of Folk Medicine and Pharmacology",
+       "Department of Biomedical Engineering, Biophysics and Information Technologies"
+      ]
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty was opened in 1992 at the Fergana State University by the order of the Ministry of Higher and Secondary Special Education and the Ministry of Health of the Republic of Uzbekistan."
+     },
+     "ru": {
+      "text": "Факультет был открыт в 1992 году на основании совместных приказов Министерства высшего и среднего специального образования и Министерства здравоохранения Республики Узбекистан при Ферганском государственном университете."
+     },
+     "uz": {
+      "text": "Fakultet 1992 yili Oʻzbekiston Respublikasi Oliy va oʻrta maxsus taʻlim hamda Sogʻliqni saqlash vazirliklarining qoʻshma buyruqlari asosida Fargʻona Davlat universiteti qoshida ochilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In order for students studying at the faculty to master practical skills alongside gaining theoretical knowledge and become mature specialists, classes are organized at the sanitary-epidemiological welfare and public health centers of Kuvasoy and Fergana cities of Fergana region, at medical-preventive institutions, and at clinical bases."
+     },
+     "ru": {
+      "text": "Для того чтобы студенты, обучающиеся на факультете, наряду с получением теоретических знаний осваивали практические навыки и становились зрелыми специалистами, учебные занятия организованы в центрах санитарно-эпидемиологического благополучия и общественного здоровья городов Кувасай и Фергана Ферганской области, в лечебно-профилактических учреждениях и на клинических базах."
+     },
+     "uz": {
+      "text": "Fakultetda tahsil olayotgan talabalar nazariy bilim olish bilan birga amaliy koʻnikmalarni egallab, yetuk mutaxassis boʻlishlari uchun Fargʻona viloyatining Quvasoy hamda Fargʻona shaharlari sanitariya-epidemiologik osoyishtalik va jamoat salomatligi markazlarida, davolash-profilaktika muassasalarida hamda klinik bazalarda oʻquv mashgʻulotlari tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The faculty has established international ties with leading advanced institutes and universities of the world. In particular, cooperation agreements have been signed with the Belarusian Medical Academy of Postgraduate Education, Kursk State Medical University of Russia, and Osh State University."
+     },
+     "ru": {
+      "text": "Факультет установил международные связи с ведущими передовыми институтами и университетами мира. В частности, подписаны договоры о сотрудничестве с Белорусской медицинской академией последипломного образования, Курским государственным медицинским университетом России и Ошским государственным университетом."
+     },
+     "uz": {
+      "text": "Fakultet dunyoning yetakchi, ilgʻor institut va universitetlari bilan xalqaro aloqalarni oʻrnatgan. Jumladan, Belorussiya tibbiy taʻlim akademiyasi, Rossiyaning Kursk davlat tibbiyot universiteti, Oʻsh davlat tibbiyot universiteti bilan hamkorlik shartnomalari imzolangan."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "faculty-3",
+  "order": 1,
+  "count": 11,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Faculty of International Education is to train high-level international specialists with modern system knowledge, skills, and qualifications necessary for effective participation in solving medical, scientific, and socio-economic problems for the Republic of Uzbekistan and other countries."
+     },
+     "ru": {
+      "text": "Задача факультета международного образования заключается в подготовке высококлассных международных специалистов, обладающих современными системными знаниями, навыками и квалификацией, необходимыми для эффективного участия в решении медицинских, научных и социально-экономических проблем Республики Узбекистан и других государств."
+     },
+     "uz": {
+      "text": "Xalqaro taʻlim fakultetining vazifasi Oʻzbekiston Respublikasi va boshqa davlatlar uchun tibbiy, ilmiy, ijtimoiy-iqtisodiy muammolarni hal etishda samarali ishtirok etish uchun zarur boʻlgan zamonaviy tizim bilimlari, koʻnikmalari va malakalariga ega yuqori saviyali xalqaro mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the international faculty is to train highly qualified international specialists possessing modern systematic knowledge, practical skills, and professional qualifications necessary for effective participation in solving the medical, scientific, and socio-economic issues of the Republic of Uzbekistan and other states. The International Faculty of the Fergana Institute of Public Health was created on the basis of Rector's Order No. 40-k, dated February 1, 2020. Since the 2019-2020 academic year, foreign students have studied at the faculty in the \"General Medicine\", \"Dentistry\", \"Pediatrics\", and \"Pharmacy\" tracks. At present, 1,504 students study at the International Faculty, and all educational programs are conducted in English. Students are citizens of India, Pakistan, Saudi Arabia, Afghanistan, Nigeria, Mauritania, Canada, the United Arab Emirates, and other states. The International Faculty carries out and coordinates the following types of activity: participation in state and international programs for developing and improving the higher education system; implementing academic exchange programs for professors and lecturers, students, and staff;"
+     },
+     "ru": {
+      "text": "Задача международного факультета заключается в подготовке высококвалифицированных международных специалистов, обладающих современными системными знаниями, практическими навыками и профессиональной квалификацией, необходимыми для эффективного участия в решении медицинских, научных и социально-экономических вопросов Республики Узбекистан и других государств. Международный факультет Ферганского института общественного здоровья создан на основании приказа ректора №40-к от 1 февраля 2020 года. С 2019-2020 учебного года на факультете по направлениям «Лечебное дело», «Стоматология», «Педиатрия» и «Фармация» обучаются иностранные студенты. В настоящее время на Международном факультете обучается 1504 студента, все образовательные программы ведутся на английском языке. Обучающиеся являются гражданами Индии, Пакистана, Саудовской Аравии, Афганистана, Нигерии, Мавритании, Канады, Объединённых Арабских Эмиратов и других государств. Международный факультет осуществляет и координирует следующие виды деятельности: участие в государственных и международных программах по развитию и совершенствованию системы высшего образования; реализация программ академического обмена профессорско-преподавательского состава, студентов и сотрудников;"
+     },
+     "uz": {
+      "text": "Xalqaro fakultetning vazifasi Oʻzbekiston Respublikasi va boshqa davlatlarning tibbiy, ilmiy va ijtimoiy-iqtisodiy masalalarini hal etishda samarali ishtirok etish uchun zarur boʻlgan zamonaviy tizimli bilimlar, amaliy koʻnikmalar va kasbiy malakaga ega yuqori malakali xalqaro mutaxassislarni tayyorlashdan iborat. Fargʻona jamoat salomatligi tibbiyot instituti Xalqaro fakulteti rektorning 2020-yil 1-fevraldagi 40-k-sonli buyrugʻi asosida tashkil etilgan. 2019-2020 oʻquv yilidan boshlab fakultetda \"Davolash ishi\", \"Stomatologiya\", \"Pediatriya\" va \"Farmatsiya\" yoʻnalishlari boʻyicha xorijiy talabalar taʻlim olmoqda. Hozirgi kunda Xalqaro fakultetda 1504 nafar talaba tahsil olayotgan boʻlib, barcha taʻlim dasturlari ingliz tilida olib borilmoqda. Taʻlim oluvchilar Hindiston, Pokiston, Saudiya Arabistoni, Afgʻoniston, Nigeriya, Mavritaniya, Kanada, Birlashgan Arab Amirliklari va boshqa davlatlar fuqarolaridan iborat. Xalqaro fakultet quyidagi faoliyat turlarini amalga oshiradi va muvofiqlashtiradi: oliy taʻlim tizimini rivojlantirish va takomillashtirish boʻyicha davlat va xalqaro dasturlarda ishtirok etish; professor-oʻqituvchilar tarkibi, talabalar va xodimlarning akademik almashinuv dasturlarini amalga oshirish;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "The International Faculty implements and coordinates the following activities:"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Международный факультет выполняет и курирует следующие работы:"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Xalqaro fakultet quyidagi ishlarni amalga oshiradi va nazorat qiladi:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "— takes part in programs for improving higher education;"
+     },
+     "ru": {
+      "text": "- Участвует в программах по совершенствованию высшего образования;"
+     },
+     "uz": {
+      "text": "-oliy taʻlimni takomillashtirish boʻyicha dasturlarda ishtirok etadi;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "-participation in state and international programs for the development and enhancement of the higher education system;"
+     },
+     "ru": {
+      "text": "— принимает участие в программах академического обмена профессоров-преподавателей, студентов и сотрудников;"
+     },
+     "uz": {
+      "text": "-professor-oʻqituvchilar, talabalar va hodimlarning akademik almashinuv dasturlarida ishtirok etadi;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "provides communication with embassies of foreign countries in the Republic of Uzbekistan;"
+     },
+     "ru": {
+      "text": "-участие в программах академического обмена профессоров, преподавателей, студентов и сотрудников;"
+     },
+     "uz": {
+      "text": "-Oʻzbekiston Respublikasidagi xorijiy davlatlar elchixonalari bilan aloqani taʻminlaydi;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "ensuring communication with the embassies of Uzbekistan in foreign countries;"
+     },
+     "ru": {
+      "text": "- Обеспечивает связь с посольствами зарубежных стран в Республике Узбекистан;"
+     },
+     "uz": {
+      "text": "-Oʻzbekistonning xorijiy davlatlardagi elchixonalari bilan aloqani taʻminlash;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "organization and implementation of admission of foreign students;"
+     },
+     "ru": {
+      "text": "- Обеспечение связи с посольствами Узбекистана в зарубежных странах;"
+     },
+     "uz": {
+      "text": "-xorijiy talabalar qabulini tashkil qilish va amalga oshirish;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "work with the education and adaptation of foreign students to the environment;"
+     },
+     "ru": {
+      "text": "- работа с обучением и адаптацией иностранных студентов к окружающей среде;"
+     },
+     "uz": {
+      "text": "-xorijiy talabalarning tarbiyasi va muhitga koʻnikishi bilan ishlash;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "exchange of information and cooperation with partner foreign universities;"
+     },
+     "ru": {
+      "text": "- обмен информацией и сотрудничество с зарубежными университетами-партнерами;"
+     },
+     "uz": {
+      "text": "-hamkor xorijiy OTMlari bilan axbarot almashish va hamkorlikda ishlash;"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "preparation of visa applications for foreign citizens."
+     },
+     "ru": {
+      "text": "-подготовка заявлений на визу для иностранных граждан."
+     },
+     "uz": {
+      "text": "-xorijiy fuqarolar uchun viza talabnomalarni tayyorlash."
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Faculty of International Education is to train high-level international specialists with modern system knowledge, skills, and qualifications necessary for effective participation in solving medical, scientific, and socio-economic problems for the Republic of Uzbekistan and other countries."
+     },
+     "ru": {
+      "text": "Задача факультета международного образования заключается в подготовке высококлассных международных специалистов, обладающих современными системными знаниями, навыками и квалификацией, необходимыми для эффективного участия в решении медицинских, научных и социально-экономических проблем Республики Узбекистан и других государств."
+     },
+     "uz": {
+      "text": "Xalqaro taʻlim fakultetining vazifasi Oʻzbekiston Respublikasi va boshqa davlatlar uchun tibbiy, ilmiy, ijtimoiy-iqtisodiy muammolarni hal etishda samarali ishtirok etish uchun zarur boʻlgan zamonaviy tizim bilimlari, koʻnikmalari va malakalariga ega yuqori saviyali xalqaro mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the international faculty is to train highly qualified international specialists possessing modern systematic knowledge, practical skills, and professional qualifications necessary for effective participation in solving the medical, scientific, and socio-economic issues of the Republic of Uzbekistan and other states. The International Faculty of the Fergana Institute of Public Health was created on the basis of Rector's Order No. 40-k, dated February 1, 2020. Since the 2019-2020 academic year, foreign students have studied at the faculty in the \"General Medicine\", \"Dentistry\", \"Pediatrics\", and \"Pharmacy\" tracks. At present, 1,504 students study at the International Faculty, and all educational programs are conducted in English. Students are citizens of India, Pakistan, Saudi Arabia, Afghanistan, Nigeria, Mauritania, Canada, the United Arab Emirates, and other states. The International Faculty carries out and coordinates the following types of activity: participation in state and international programs for developing and improving the higher education system; implementing academic exchange programs for professors and lecturers, students, and staff;"
+     },
+     "ru": {
+      "text": "Задача международного факультета заключается в подготовке высококвалифицированных международных специалистов, обладающих современными системными знаниями, практическими навыками и профессиональной квалификацией, необходимыми для эффективного участия в решении медицинских, научных и социально-экономических вопросов Республики Узбекистан и других государств. Международный факультет Ферганского института общественного здоровья создан на основании приказа ректора №40-к от 1 февраля 2020 года. С 2019-2020 учебного года на факультете по направлениям «Лечебное дело», «Стоматология», «Педиатрия» и «Фармация» обучаются иностранные студенты. В настоящее время на Международном факультете обучается 1504 студента, все образовательные программы ведутся на английском языке. Обучающиеся являются гражданами Индии, Пакистана, Саудовской Аравии, Афганистана, Нигерии, Мавритании, Канады, Объединённых Арабских Эмиратов и других государств. Международный факультет осуществляет и координирует следующие виды деятельности: участие в государственных и международных программах по развитию и совершенствованию системы высшего образования; реализация программ академического обмена профессорско-преподавательского состава, студентов и сотрудников;"
+     },
+     "uz": {
+      "text": "Xalqaro fakultetning vazifasi Oʻzbekiston Respublikasi va boshqa davlatlarning tibbiy, ilmiy va ijtimoiy-iqtisodiy masalalarini hal etishda samarali ishtirok etish uchun zarur boʻlgan zamonaviy tizimli bilimlar, amaliy koʻnikmalar va kasbiy malakaga ega yuqori malakali xalqaro mutaxassislarni tayyorlashdan iborat. Fargʻona jamoat salomatligi tibbiyot instituti Xalqaro fakulteti rektorning 2020-yil 1-fevraldagi 40-k-sonli buyrugʻi asosida tashkil etilgan. 2019-2020 oʻquv yilidan boshlab fakultetda \"Davolash ishi\", \"Stomatologiya\", \"Pediatriya\" va \"Farmatsiya\" yoʻnalishlari boʻyicha xorijiy talabalar taʻlim olmoqda. Hozirgi kunda Xalqaro fakultetda 1504 nafar talaba tahsil olayotgan boʻlib, barcha taʻlim dasturlari ingliz tilida olib borilmoqda. Taʻlim oluvchilar Hindiston, Pokiston, Saudiya Arabistoni, Afgʻoniston, Nigeriya, Mavritaniya, Kanada, Birlashgan Arab Amirliklari va boshqa davlatlar fuqarolaridan iborat. Xalqaro fakultet quyidagi faoliyat turlarini amalga oshiradi va muvofiqlashtiradi: oliy taʻlim tizimini rivojlantirish va takomillashtirish boʻyicha davlat va xalqaro dasturlarda ishtirok etish; professor-oʻqituvchilar tarkibi, talabalar va xodimlarning akademik almashinuv dasturlarini amalga oshirish;"
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Xalqaro fakultet quyidagi ishlarni amalga oshiradi va nazorat qiladi",
+      "level": 3
+     },
+     "ru": {
+      "text": "Международный факультет выполняет и курирует следующие работы",
+      "level": 3
+     },
+     "en": {
+      "text": "The International Faculty implements and coordinates the following activities",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "oliy taʻlimni takomillashtirish boʻyicha dasturlarda ishtirok etadi;",
+       "professor-oʻqituvchilar, talabalar va hodimlarning akademik almashinuv dasturlarida ishtirok etadi;",
+       "Oʻzbekiston Respublikasidagi xorijiy davlatlar elchixonalari bilan aloqani taʻminlaydi;",
+       "Oʻzbekistonning xorijiy davlatlardagi elchixonalari bilan aloqani taʻminlash;",
+       "xorijiy talabalar qabulini tashkil qilish va amalga oshirish;",
+       "xorijiy talabalarning tarbiyasi va muhitga koʻnikishi bilan ishlash;",
+       "hamkor xorijiy OTMlari bilan axbarot almashish va hamkorlikda ishlash;",
+       "xorijiy fuqarolar uchun viza talabnomalarni tayyorlash."
+      ]
+     },
+     "ru": {
+      "items": [
+       "Участвует в программах по совершенствованию высшего образования;",
+       "принимает участие в программах академического обмена профессоров-преподавателей, студентов и сотрудников;",
+       "участие в программах академического обмена профессоров, преподавателей, студентов и сотрудников;",
+       "Обеспечивает связь с посольствами зарубежных стран в Республике Узбекистан;",
+       "Обеспечение связи с посольствами Узбекистана в зарубежных странах;",
+       "работа с обучением и адаптацией иностранных студентов к окружающей среде;",
+       "обмен информацией и сотрудничество с зарубежными университетами-партнерами;",
+       "подготовка заявлений на визу для иностранных граждан."
+      ]
+     },
+     "en": {
+      "items": [
+       "takes part in programs for improving higher education;",
+       "participation in state and international programs for the development and enhancement of the higher education system;",
+       "provides communication with embassies of foreign countries in the Republic of Uzbekistan;",
+       "ensuring communication with the embassies of Uzbekistan in foreign countries;",
+       "organization and implementation of admission of foreign students;",
+       "work with the education and adaptation of foreign students to the environment;",
+       "exchange of information and cooperation with partner foreign universities;",
+       "preparation of visa applications for foreign citizens."
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "faculty-4",
+  "order": 1,
+  "count": 20,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "Mission of the Faculty of Pediatrics"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Миссия педиатрического факультета"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Pediatriya fakultetining vazifasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pharmacy educational program is to train pharmacists capable of providing qualified pharmaceutical care to the population, improving the quality of pharmaceutical services, and enhancing public health through the integration of the latest achievements in education, science, and the pharmaceutical sector."
+     },
+     "ru": {
+      "text": "Миссией педиатрического факультета является обучение студентов – медиков с учетом лучших достижений отечественной и мировой науки, здравоохранения, формирование высококвалифицированного специалиста, способного решать актуальные проблемы здравоохранения в современных условиях конкурентоспособного и востребованного на рынке труда."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetining vazifasi tibbiyot talabalarini Rossiya va xalqaro fan va sogʻliqni saqlash sohasidagi eng yaxshi yutuqlardan foydalangan holda oʻqitish va bugungi raqobatbardosh va talab yuqori boʻlgan mehnat bozorida dolzarb sogʻliqni saqlash muammolarini hal qilishga qodir yuqori malakali mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "The Task of the Pharmacy Educational Program (60910700 (60910800))"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Миссия образовательной программы Фармация (60910700 (60910800))"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Farmatsevtika taʻlim dasturining vazifasi (60910700 (60910800))"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the pharmacy program is to train pharmacists to provide qualified pharmaceutical assistance to the population, combining the latest achievements in education, science, and pharmacy to raise the quality of pharmaceutical assistance and improve the population's health."
+     },
+     "ru": {
+      "text": "Миссией ОП по направлению «Фармация» является подготовка фармацевтов, для оказания квалифицированной фармацевтической помощи населению, которая объединяет последние достижения в области образования, науки и фармацевтики для повышения качества фармацевтической помощи и улучшения здоровья населению в целом."
+     },
+     "uz": {
+      "text": "Farmatsevtika dasturining vazifasi farmatsevtlarni aholiga malakali farmatsevtika yordamini koʻrsatishga tayyorlash, farmatsevtika yordami sifatini oshirish va aholi salomatligini yaxshilash uchun taʻlim, fan va farmatsevtika sohasidagi eng soʻnggi yutuqlarni birlashtirgan holda tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "The Task of the Pediatrics Educational Program (60910300)"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Задача образовательной программы «Педиатрия» (60910300)"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Pediatriya taʻlim dasturining vazifasi (60910300)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pediatrics educational program is to train pediatricians capable of delivering qualified medical care to the pediatric population, improving the quality of healthcare services, and enhancing public health by integrating modern achievements in education, science, and medicine."
+     },
+     "ru": {
+      "text": "Задача образовательной программы «Педиатрия» заключается в подготовке педиатров, способных оказывать квалифицированную медицинскую помощь детскому населению, объединяя новейшие достижения в области образования, науки и медицины для повышения качества медицинской помощи и улучшения здоровья населения."
+     },
+     "uz": {
+      "text": "Pediatriya taʻlim dasturining vazifasi pediatrlarni bolalar aholisiga malakali tibbiy yordam koʻrsatishga tayyorlash, tibbiy yordam sifatini oshirish va aholi salomatligini yaxshilash uchun taʻlim, fan va tibbiyot sohasidagi eng soʻnggi yutuqlarni birlashtirgan holda tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "The Task of the Dentistry Educational Program (60910100)"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Задача образовательной программы «Стоматология» (60910100)"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Stomatologiya taʻlim dasturining vazifasi (60910100)"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"Dentistry\" educational program (EP) is to train dentists to provide qualified medical care to the population, combining the latest achievements in education, science, and medicine to raise the quality of medical care and strengthen healthcare."
+     },
+     "ru": {
+      "text": "Задача образовательной программы (ОП) «Стоматология» заключается в подготовке стоматологов для оказания квалифицированной медицинской помощи населению, объединении новейших достижений в области образования, науки и медицины для повышения качества медицинской помощи и укрепления здравоохранения."
+     },
+     "uz": {
+      "text": "Stomatologiya taʻlim dasturining (EP) vazifasi stomatologlarni aholiga malakali tibbiy yordam koʻrsatish uchun tayyorlash, tibbiy yordam sifatini va sogʻliqni saqlashni yaxshilash uchun taʻlim, fan va tibbiyotdagi eng soʻnggi yutuqlarni birlashtirishdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"Pediatrics\" faculty is to train competitive specialists with higher medical education in the specialty \"Pediatrics\", highly qualified scientists with an active life position on the basis of the principles of continuous professional education, solving healthcare problems. Raising the population's standard of living on a republican and global scale, preserving and enhancing the achievements of the national medical school."
+     },
+     "ru": {
+      "text": "Задача факультета «Педиатрия» заключается в подготовке конкурентоспособных специалистов с высшим медицинским образованием по специальности «Педиатрия», высококвалифицированных учёных с активной жизненной позицией на основе принципов непрерывного профессионального образования, решении проблем здравоохранения. Повышение уровня жизни населения в республиканском и мировом масштабе, сохранение и приумножение достижений национальной медицинской школы."
+     },
+     "uz": {
+      "text": "“Pediatriya” fakultetining vazifasi “Pediatriya” mutaxassisligi boʻyicha oliy tibbiy maʻlumotga ega raqobatbardosh mutaxassislarni, uzluksiz kasbiy taʻlim tamoyillari asosida faol hayotiy pozitsiyaga ega yuqori malakali olimlarni tayyorlash, sogʻliqni saqlash muammolarini hal qilishdan iborat. Respublika va jahon miqyosida aholi turmush darajasini oshirish, milliy tibbiyot bilim yurti yutuqlarini asrab-avaylash va oshirish."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In accordance with the structure approved by the Ministry of Health of the Republic of Uzbekistan, on the basis of Protocol No. 13 of the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan, dated February 28, 2020, in connection with the transfer of students to study from neighboring states, the increase in admission quotas in the 2020-2021 academic year, the sharp increase in the number of students and the corresponding increase in academic hours, and in order to raise the effectiveness of the reforms being carried out in the healthcare system, the Faculty of \"Pediatrics\" was established at the branch on the basis of Order No. 01-I-196, dated November 1, 2023."
+     },
+     "ru": {
+      "text": "В соответствии со структурой, утверждённой Министерством здравоохранения Республики Узбекистан, на основании протокола №13 Государственной комиссии по приёму в учебные заведения Республики Узбекистан от 28 февраля 2020 года, в связи с переводом студентов на учёбу из соседних государств, увеличением квот приёма в 2020-2021 учебном году, резким увеличением числа студентов и соответствующим увеличением учебных часов, а также в целях повышения эффективности реформ, проводимых в системе здравоохранения, в филиале на основании приказа №01-I-196 от 1 ноября 2023 года был создан факультет «Педиатрия»."
+     },
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi sogʻliqni saqlash vazirligi tomonidan tasdiqlangan strukturaga asosan Oʻzbekiston Respublikasi taʻlim muassasalariga qabul qilish boʻyicha Davlat komissiyasining 2020-yil 28-fevraldagi 13-sonli bayoni asosida talabalarning qoʻshni davlatlardan oʻqishni koʻchirilganligi, 2020-2021 oʻquv yilidagi qabul kvotalari ortganligi hisobiga talabalar sonining keskin ortganligi natijasida oʻquv soatlarining koʻpayganligi munosabati bilan hamda sogʻliqni saqlash tizimida olib borilayotgan islohotlar samaradorligini oshirish maqsadida filialda 2023-yil 1-noyabrdagi 01-I-196-sonli buyruq asosida “Pediatriya” fakulteti tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "At the pediatrics faculty, bachelor's specialists are trained in 3 tracks: pediatrics, dentistry, and pharmacy."
+     },
+     "ru": {
+      "text": "На факультете педиатрии по 3 направлениям — педиатрия, стоматология, фармация — готовятся специалисты бакалавриата."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetida 3 ta yoʻnalish boʻlib Pediatriya , Stomatologiya, Farmatsiya yoʻnalishi boʻyicha bakalavriat mutaxasislari tayyorlanadi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In the track 60910300 — Pediatrics (since 2022), 274 students study; in the track 60910100 — Dentistry (since 2019), 269 students; in the track 60910700 — Pharmacy (since 2020), 150 students, for a total of 693 students."
+     },
+     "ru": {
+      "text": "По направлению 60910300 — Педиатрия (с 2022 года) обучается 274 студента, по направлению 60910100 — Стоматология (с 2019 года) — 269 студентов, по направлению 60910700 — Фармация (с 2020 года) — 150 студентов, всего 693 студента."
+     },
+     "uz": {
+      "text": "60910300-Pediatriya (2022-yildan buyon) yoʻnalishida 274 nafar, 60910100-Stomatologiya (2019-yildan buyon) yoʻnalishida 269 nafar, 60910700-Farmatsiya (2020-yildan buyon) yoʻnalishida 150 nafar, jami 693 nafar talabalar tahsil oladi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "The following departments are attached to the faculty:"
+     },
+     "ru": {
+      "bold": true,
+      "text": "К факультету прикреплены следующие кафедры:"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Fakultetga quyidagi kafedralar biriktirilgan:"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "1. Department of Urology and Oncology"
+     },
+     "ru": {
+      "text": "1. Кафедра урологии и онкологии"
+     },
+     "uz": {
+      "text": "1.Urologiya va onkologiya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "2. Neurology and Psychiatry"
+     },
+     "ru": {
+      "text": "2. Неврология и психиатрия"
+     },
+     "uz": {
+      "text": "2.Nevrologiya va psixiatriya"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "3. Department of Pediatrics"
+     },
+     "ru": {
+      "text": "3. Кафедра педиатрии"
+     },
+     "uz": {
+      "text": "3.Pediatriya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "4. Department of Pediatrics 2"
+     },
+     "ru": {
+      "text": "4. Кафедра педиатрии 2"
+     },
+     "uz": {
+      "text": "4.Pediatriya 2 kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "5. Department of Dentistry and Otolaryngology"
+     },
+     "ru": {
+      "text": "5. Кафедра стоматологии и отоларингологии"
+     },
+     "uz": {
+      "text": "5.Stomatologiya va otoloringologiya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "6. Department of Dermatovenerology and Allergology"
+     },
+     "ru": {
+      "text": "6. Кафедра дерматовенерологии и аллергологии"
+     },
+     "uz": {
+      "text": "6.Dermatovenerologiya va allergologiya kafedrasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "7. Department of Endocrinology, Hematology and Phthisiology"
+     },
+     "ru": {
+      "text": "7. Кафедра эндокринологии, гематологии и фтизиатрии"
+     },
+     "uz": {
+      "text": "7.Endokrinologiya, gemotologiya va ftiziatriya kafedrasi"
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "bold": true,
+      "text": "Mission of the Faculty of Pediatrics"
+     },
+     "ru": {
+      "bold": true,
+      "text": "Миссия педиатрического факультета"
+     },
+     "uz": {
+      "bold": true,
+      "text": "Pediatriya fakultetining vazifasi"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pharmacy educational program is to train pharmacists capable of providing qualified pharmaceutical care to the population, improving the quality of pharmaceutical services, and enhancing public health through the integration of the latest achievements in education, science, and the pharmaceutical sector."
+     },
+     "ru": {
+      "text": "Миссией педиатрического факультета является обучение студентов – медиков с учетом лучших достижений отечественной и мировой науки, здравоохранения, формирование высококвалифицированного специалиста, способного решать актуальные проблемы здравоохранения в современных условиях конкурентоспособного и востребованного на рынке труда."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetining vazifasi tibbiyot talabalarini Rossiya va xalqaro fan va sogʻliqni saqlash sohasidagi eng yaxshi yutuqlardan foydalangan holda oʻqitish va bugungi raqobatbardosh va talab yuqori boʻlgan mehnat bozorida dolzarb sogʻliqni saqlash muammolarini hal qilishga qodir yuqori malakali mutaxassislarni tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Pediatriya taʻlim dasturining vazifasi (60910300)",
+      "level": 3
+     },
+     "ru": {
+      "text": "Задача образовательной программы «Педиатрия» (60910300)",
+      "level": 3
+     },
+     "en": {
+      "text": "The Task of the Pediatrics Educational Program (60910300)",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The mission of the Pediatrics educational program is to train pediatricians capable of delivering qualified medical care to the pediatric population, improving the quality of healthcare services, and enhancing public health by integrating modern achievements in education, science, and medicine."
+     },
+     "ru": {
+      "text": "Задача образовательной программы «Педиатрия» заключается в подготовке педиатров, способных оказывать квалифицированную медицинскую помощь детскому населению, объединяя новейшие достижения в области образования, науки и медицины для повышения качества медицинской помощи и улучшения здоровья населения."
+     },
+     "uz": {
+      "text": "Pediatriya taʻlim dasturining vazifasi pediatrlarni bolalar aholisiga malakali tibbiy yordam koʻrsatishga tayyorlash, tibbiy yordam sifatini oshirish va aholi salomatligini yaxshilash uchun taʻlim, fan va tibbiyot sohasidagi eng soʻnggi yutuqlarni birlashtirgan holda tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Stomatologiya taʻlim dasturining vazifasi (60910100)",
+      "level": 3
+     },
+     "ru": {
+      "text": "Задача образовательной программы «Стоматология» (60910100)",
+      "level": 3
+     },
+     "en": {
+      "text": "The Task of the Dentistry Educational Program (60910100)",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"Dentistry\" educational program (EP) is to train dentists to provide qualified medical care to the population, combining the latest achievements in education, science, and medicine to raise the quality of medical care and strengthen healthcare."
+     },
+     "ru": {
+      "text": "Задача образовательной программы (ОП) «Стоматология» заключается в подготовке стоматологов для оказания квалифицированной медицинской помощи населению, объединении новейших достижений в области образования, науки и медицины для повышения качества медицинской помощи и укрепления здравоохранения."
+     },
+     "uz": {
+      "text": "Stomatologiya taʻlim dasturining (EP) vazifasi stomatologlarni aholiga malakali tibbiy yordam koʻrsatish uchun tayyorlash, tibbiy yordam sifatini va sogʻliqni saqlashni yaxshilash uchun taʻlim, fan va tibbiyotdagi eng soʻnggi yutuqlarni birlashtirishdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Farmatsevtika taʻlim dasturining vazifasi (60910700 (60910800))",
+      "level": 3
+     },
+     "ru": {
+      "text": "Миссия образовательной программы Фармация (60910700 (60910800))",
+      "level": 3
+     },
+     "en": {
+      "text": "The Task of the Pharmacy Educational Program (60910700 (60910800))",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the pharmacy program is to train pharmacists to provide qualified pharmaceutical assistance to the population, combining the latest achievements in education, science, and pharmacy to raise the quality of pharmaceutical assistance and improve the population's health."
+     },
+     "ru": {
+      "text": "Миссией ОП по направлению «Фармация» является подготовка фармацевтов, для оказания квалифицированной фармацевтической помощи населению, которая объединяет последние достижения в области образования, науки и фармацевтики для повышения качества фармацевтической помощи и улучшения здоровья населению в целом."
+     },
+     "uz": {
+      "text": "Farmatsevtika dasturining vazifasi farmatsevtlarni aholiga malakali farmatsevtika yordamini koʻrsatishga tayyorlash, farmatsevtika yordami sifatini oshirish va aholi salomatligini yaxshilash uchun taʻlim, fan va farmatsevtika sohasidagi eng soʻnggi yutuqlarni birlashtirgan holda tayyorlashdan iborat."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "The task of the \"Pediatrics\" faculty is to train competitive specialists with higher medical education in the specialty \"Pediatrics\", highly qualified scientists with an active life position on the basis of the principles of continuous professional education, solving healthcare problems. Raising the population's standard of living on a republican and global scale, preserving and enhancing the achievements of the national medical school."
+     },
+     "ru": {
+      "text": "Задача факультета «Педиатрия» заключается в подготовке конкурентоспособных специалистов с высшим медицинским образованием по специальности «Педиатрия», высококвалифицированных учёных с активной жизненной позицией на основе принципов непрерывного профессионального образования, решении проблем здравоохранения. Повышение уровня жизни населения в республиканском и мировом масштабе, сохранение и приумножение достижений национальной медицинской школы."
+     },
+     "uz": {
+      "text": "“Pediatriya” fakultetining vazifasi “Pediatriya” mutaxassisligi boʻyicha oliy tibbiy maʻlumotga ega raqobatbardosh mutaxassislarni, uzluksiz kasbiy taʻlim tamoyillari asosida faol hayotiy pozitsiyaga ega yuqori malakali olimlarni tayyorlash, sogʻliqni saqlash muammolarini hal qilishdan iborat. Respublika va jahon miqyosida aholi turmush darajasini oshirish, milliy tibbiyot bilim yurti yutuqlarini asrab-avaylash va oshirish."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In accordance with the structure approved by the Ministry of Health of the Republic of Uzbekistan, on the basis of Protocol No. 13 of the State Commission for Admission to Educational Institutions of the Republic of Uzbekistan, dated February 28, 2020, in connection with the transfer of students to study from neighboring states, the increase in admission quotas in the 2020-2021 academic year, the sharp increase in the number of students and the corresponding increase in academic hours, and in order to raise the effectiveness of the reforms being carried out in the healthcare system, the Faculty of \"Pediatrics\" was established at the branch on the basis of Order No. 01-I-196, dated November 1, 2023."
+     },
+     "ru": {
+      "text": "В соответствии со структурой, утверждённой Министерством здравоохранения Республики Узбекистан, на основании протокола №13 Государственной комиссии по приёму в учебные заведения Республики Узбекистан от 28 февраля 2020 года, в связи с переводом студентов на учёбу из соседних государств, увеличением квот приёма в 2020-2021 учебном году, резким увеличением числа студентов и соответствующим увеличением учебных часов, а также в целях повышения эффективности реформ, проводимых в системе здравоохранения, в филиале на основании приказа №01-I-196 от 1 ноября 2023 года был создан факультет «Педиатрия»."
+     },
+     "uz": {
+      "text": "Oʻzbekiston Respublikasi sogʻliqni saqlash vazirligi tomonidan tasdiqlangan strukturaga asosan Oʻzbekiston Respublikasi taʻlim muassasalariga qabul qilish boʻyicha Davlat komissiyasining 2020-yil 28-fevraldagi 13-sonli bayoni asosida talabalarning qoʻshni davlatlardan oʻqishni koʻchirilganligi, 2020-2021 oʻquv yilidagi qabul kvotalari ortganligi hisobiga talabalar sonining keskin ortganligi natijasida oʻquv soatlarining koʻpayganligi munosabati bilan hamda sogʻliqni saqlash tizimida olib borilayotgan islohotlar samaradorligini oshirish maqsadida filialda 2023-yil 1-noyabrdagi 01-I-196-sonli buyruq asosida “Pediatriya” fakulteti tashkil etilgan."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "At the pediatrics faculty, bachelor's specialists are trained in 3 tracks: pediatrics, dentistry, and pharmacy."
+     },
+     "ru": {
+      "text": "На факультете педиатрии по 3 направлениям — педиатрия, стоматология, фармация — готовятся специалисты бакалавриата."
+     },
+     "uz": {
+      "text": "Pediatriya fakultetida 3 ta yoʻnalish boʻlib Pediatriya , Stomatologiya, Farmatsiya yoʻnalishi boʻyicha bakalavriat mutaxasislari tayyorlanadi."
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "In the track 60910300 — Pediatrics (since 2022), 274 students study; in the track 60910100 — Dentistry (since 2019), 269 students; in the track 60910700 — Pharmacy (since 2020), 150 students, for a total of 693 students."
+     },
+     "ru": {
+      "text": "По направлению 60910300 — Педиатрия (с 2022 года) обучается 274 студента, по направлению 60910100 — Стоматология (с 2019 года) — 269 студентов, по направлению 60910700 — Фармация (с 2020 года) — 150 студентов, всего 693 студента."
+     },
+     "uz": {
+      "text": "60910300-Pediatriya (2022-yildan buyon) yoʻnalishida 274 nafar, 60910100-Stomatologiya (2019-yildan buyon) yoʻnalishida 269 nafar, 60910700-Farmatsiya (2020-yildan buyon) yoʻnalishida 150 nafar, jami 693 nafar talabalar tahsil oladi."
+     }
+    }
+   },
+   {
+    "block_type": "heading",
+    "data": {
+     "uz": {
+      "text": "Fakultetga quyidagi kafedralar biriktirilgan",
+      "level": 3
+     },
+     "ru": {
+      "text": "К факультету прикреплены следующие кафедры",
+      "level": 3
+     },
+     "en": {
+      "text": "The following departments are attached to the faculty",
+      "level": 3
+     }
+    }
+   },
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "Urologiya va onkologiya kafedrasi",
+       "Nevrologiya va psixiatriya",
+       "Pediatriya kafedrasi",
+       "Pediatriya 2 kafedrasi",
+       "Stomatologiya va otoloringologiya kafedrasi",
+       "Dermatovenerologiya va allergologiya kafedrasi",
+       "Endokrinologiya, gemotologiya va ftiziatriya kafedrasi"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Кафедра урологии и онкологии",
+       "Неврология и психиатрия",
+       "Кафедра педиатрии",
+       "Кафедра педиатрии 2",
+       "Кафедра стоматологии и отоларингологии",
+       "Кафедра дерматовенерологии и аллергологии",
+       "Кафедра эндокринологии, гематологии и фтизиатрии"
+      ]
+     },
+     "en": {
+      "items": [
+       "Department of Urology and Oncology",
+       "Neurology and Psychiatry",
+       "Department of Pediatrics",
+       "Department of Pediatrics 2",
+       "Department of Dentistry and Otolaryngology",
+       "Department of Dermatovenerology and Allergology",
+       "Department of Endocrinology, Hematology and Phthisiology"
+      ]
+     }
+    }
+   }
+  ]
+ }
+]

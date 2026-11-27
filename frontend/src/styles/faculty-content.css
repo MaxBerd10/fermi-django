@@ -174,50 +174,6 @@
   font-weight: var(--content-h3-weight);
 }
 
-.faculty-overview__programs {
-  display: grid;
-  gap: .625rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-}
-
-.faculty-overview__programs li {
-  padding: .875rem 1rem;
-  background: #f7f8fc;
-  border: 1px solid #e1e6ef;
-  border-radius: .75rem;
-}
-
-.faculty-overview__links li {
-  display: flex;
-  align-items: flex-start;
-  gap: .625rem;
-}
-
-.faculty-overview__links i,
-.faculty-overview__programs h4 {
-  color: #0a1158;
-}
-
-.faculty-overview__programs h4 {
-  margin: .5rem 0;
-  font-weight: 750;
-}
-
-.faculty-overview__programs p {
-  font-size: .875rem;
-  line-height: 1.6;
-}
-
-.faculty-overview__code {
-  display: inline-block;
-  padding: .2rem .5rem;
-  background: #fff5c6;
-  border-radius: .375rem;
-  color: #0a1158;
-  font-size: .75rem;
-  font-weight: 700;
-}
-
 .faculty-overview__details {
   background: #f5f7fc;
   border: 1px solid #dce3ef;
