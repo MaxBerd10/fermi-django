@@ -1,0 +1,705 @@
+[
+ {
+  "slug": "1-margilon-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 15,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "f95fd85123771c503e9816098190e410d5743dd17fc5a5da586c61ca3a672bb7",
+    "ru": "f95fd85123771c503e9816098190e410d5743dd17fc5a5da586c61ca3a672bb7",
+    "en": "f95fd85123771c503e9816098190e410d5743dd17fc5a5da586c61ca3a672bb7"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.246184929051!2d71.72539017511222!3d40.46981835240798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb77ad74c8c83d%3A0xfa60407d42731b6!2sMarg%E2%80%98ilon%20Tibbiyot%20texnikumi!5e0!3m2!1sru!2s!4v1755157128172!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 4,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "324f3bdcafce599cc6a5b043d2c1594a22c2a7eee18a17d8085a4aaf83e6e2ae",
+    "ru": "324f3bdcafce599cc6a5b043d2c1594a22c2a7eee18a17d8085a4aaf83e6e2ae",
+    "en": "324f3bdcafce599cc6a5b043d2c1594a22c2a7eee18a17d8085a4aaf83e6e2ae"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287.9200374704453!2d71.80840190394915!3d40.3800192054776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85e501ef8793%3A0x475aca733b447601!2z0J7QsdGJ0LXQttC40YLQuNC1INC00LvRjyDQuNC90L7RgdGC0YDQsNC90L3Ri9GFINGB0YLRg9C00LXQvdGC0L7QsiAo0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQnNC10LTQuNGG0LjQvdGB0LrQsNGPINCQ0LrQsNC00LXQvNC40Y8sINCk0LXRgNCz0LDQvdCwKS4gSG9zdGVsIGZvciBJbnRlcm5hdGlvbmFsIHN0dWRlbnRzIChUYXNoa2VudCBNZWRpY2FsIEFjYWRlbXksIEZlcmdhbmEuKQ!5e0!3m2!1sru!2s!4v1759859848015!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287.9200374704453!2d71.80840190394915!3d40.3800192054776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85e501ef8793%3A0x475aca733b447601!2z0J7QsdGJ0LXQttC40YLQuNC1INC00LvRjyDQuNC90L7RgdGC0YDQsNC90L3Ri9GFINGB0YLRg9C00LXQvdGC0L7QsiAo0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQnNC10LTQuNGG0LjQvdGB0LrQsNGPINCQ0LrQsNC00LXQvNC40Y8sINCk0LXRgNCz0LDQvdCwKS4gSG9zdGVsIGZvciBJbnRlcm5hdGlvbmFsIHN0dWRlbnRzIChUYXNoa2VudCBNZWRpY2FsIEFjYWRlbXksIEZlcmdhbmEuKQ!5e0!3m2!1sru!2s!4v1759859848015!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287.9200374704453!2d71.80840190394915!3d40.3800192054776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85e501ef8793%3A0x475aca733b447601!2z0J7QsdGJ0LXQttC40YLQuNC1INC00LvRjyDQuNC90L7RgdGC0YDQsNC90L3Ri9GFINGB0YLRg9C00LXQvdGC0L7QsiAo0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQnNC10LTQuNGG0LjQvdGB0LrQsNGPINCQ0LrQsNC00LXQvNC40Y8sINCk0LXRgNCz0LDQvdCwKS4gSG9zdGVsIGZvciBJbnRlcm5hdGlvbmFsIHN0dWRlbnRzIChUYXNoa2VudCBNZWRpY2FsIEFjYWRlbXksIEZlcmdhbmEuKQ!5e0!3m2!1sru!2s!4v1759859848015!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 6,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "110d1f6aa7969b3c4d2d3c99bcb09611a5209777021873d5b7b69b19ead87579",
+    "ru": "110d1f6aa7969b3c4d2d3c99bcb09611a5209777021873d5b7b69b19ead87579",
+    "en": "110d1f6aa7969b3c4d2d3c99bcb09611a5209777021873d5b7b69b19ead87579"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1745.9671517083234!2d71.8364796903307!3d40.3666330440672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85ac0628490d%3A0x34fb9c2267ecbb33!2sFERGANA%20MEDICAL%20INSTITUTE%20OF%20PUBLIC%20HEALTH!5e0!3m2!1sru!2s!4v1759859599717!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1745.9671517083234!2d71.8364796903307!3d40.3666330440672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85ac0628490d%3A0x34fb9c2267ecbb33!2sFERGANA%20MEDICAL%20INSTITUTE%20OF%20PUBLIC%20HEALTH!5e0!3m2!1sru!2s!4v1759859599717!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1745.9671517083234!2d71.8364796903307!3d40.3666330440672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85ac0628490d%3A0x34fb9c2267ecbb33!2sFERGANA%20MEDICAL%20INSTITUTE%20OF%20PUBLIC%20HEALTH!5e0!3m2!1sru!2s!4v1759859599717!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "chet-el-talabalari-turar-joyi-togrisidagi-malumotlar",
+  "order": 7,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "5fb66699643639d695a2552d9b7ddebba762a0ada177ce36480b4ef712746192",
+    "ru": "5fb66699643639d695a2552d9b7ddebba762a0ada177ce36480b4ef712746192",
+    "en": "5fb66699643639d695a2552d9b7ddebba762a0ada177ce36480b4ef712746192"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501.3971083769062!2d71.83027186453789!3d40.366677092288064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85265af8fdbd%3A0xa31d4ebd89411a89!2s11%20baza!5e0!3m2!1sru!2s!4v1759859696222!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501.3971083769062!2d71.83027186453789!3d40.366677092288064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85265af8fdbd%3A0xa31d4ebd89411a89!2s11%20baza!5e0!3m2!1sru!2s!4v1759859696222!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501.3971083769062!2d71.83027186453789!3d40.366677092288064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb85265af8fdbd%3A0xa31d4ebd89411a89!2s11%20baza!5e0!3m2!1sru!2s!4v1759859696222!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "fargona-shahar-abu-ali-ibn-sino-nomidagi-jamoat-salomatligi-texnikumi",
+  "order": 14,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "a8607dfd4faf79c92aa536087c87194aec8ffc5addbbedb22fdb882c4446b0cd",
+    "ru": "a8607dfd4faf79c92aa536087c87194aec8ffc5addbbedb22fdb882c4446b0cd",
+    "en": "a8607dfd4faf79c92aa536087c87194aec8ffc5addbbedb22fdb882c4446b0cd"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6078.412961501383!2d71.75620726322462!3d40.38211333467129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb850018f47d4b%3A0x94b7ae5d26204c96!2sFarg%CA%BBona%20shahar!5e0!3m2!1sru!2s!4v1755155079418!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6078.412961501383!2d71.75620726322462!3d40.38211333467129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb850018f47d4b%3A0x94b7ae5d26204c96!2sFarg%CA%BBona%20shahar!5e0!3m2!1sru!2s!4v1755155079418!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6078.412961501383!2d71.75620726322462!3d40.38211333467129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb850018f47d4b%3A0x94b7ae5d26204c96!2sFarg%CA%BBona%20shahar!5e0!3m2!1sru!2s!4v1755155079418!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 3,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "fa3a9d94f5b9c7afb54c9340908fadb02d0d9f2fcd59dbd854537b0ab2f1680f",
+    "ru": "fa3a9d94f5b9c7afb54c9340908fadb02d0d9f2fcd59dbd854537b0ab2f1680f",
+    "en": "fa3a9d94f5b9c7afb54c9340908fadb02d0d9f2fcd59dbd854537b0ab2f1680f"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.21213111731!2d71.78136044546065!3d40.37997596679665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb859af52474c5%3A0xa6090ae1b4fd00bb!2z0KHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754904273804!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 6,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "cc69d38fbdb47d85d64a4a9ddfc982ded09dc0cb2aefbcf87b8e1c07e2472524",
+    "ru": "cc69d38fbdb47d85d64a4a9ddfc982ded09dc0cb2aefbcf87b8e1c07e2472524",
+    "en": "cc69d38fbdb47d85d64a4a9ddfc982ded09dc0cb2aefbcf87b8e1c07e2472524"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.08434584453!2d69.1674730433594!3d41.370632600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef33ffefee7ed%3A0x3d9e8e3a496ee0e5!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QsNGPINC80LXQtNC40YbQuNC90YHQutCw0Y8g0LrQvtC80LjRgdGB0LjRjw!5e0!3m2!1sru!2s!4v1754901990601!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 9,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "ff1d74e7b1a39d49e7dbf77e2f97e5d3f51bfbe135a263c17d5925c1a1e97908",
+    "ru": "ff1d74e7b1a39d49e7dbf77e2f97e5d3f51bfbe135a263c17d5925c1a1e97908",
+    "en": "ff1d74e7b1a39d49e7dbf77e2f97e5d3f51bfbe135a263c17d5925c1a1e97908"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4787.3679963320255!2d69.639403424639!3d40.89704068921562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.896454899999995!2d69.64110649999999!4m0!5e0!3m2!1sru!2s!4v1754903086733!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 12,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "6a18d7879fb2a69280eb7f214531ff7d951bdcc490df4f69d6eecdb8894686ca",
+    "ru": "6a18d7879fb2a69280eb7f214531ff7d951bdcc490df4f69d6eecdb8894686ca",
+    "en": "6a18d7879fb2a69280eb7f214531ff7d951bdcc490df4f69d6eecdb8894686ca"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9210190192325!2d72.35623697512925!3d40.76376183444671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedbdbb2b2e91%3A0xedf1f8ffcff01d8f!2z0JDQvdC00LjQttC-0L0g0LLQuNC70L7Rj9GCINGB0L7Qs9C70LjQutC90Lgg0YHQsNC60LvQsNGIINCx0L7RiNC60LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754903439051!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 15,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "76bffdb2ca34003f7b3ed452f66c5ccd565ddfdcbb1c2154d5356d80f5ac067e",
+    "ru": "76bffdb2ca34003f7b3ed452f66c5ccd565ddfdcbb1c2154d5356d80f5ac067e",
+    "en": "76bffdb2ca34003f7b3ed452f66c5ccd565ddfdcbb1c2154d5356d80f5ac067e"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.053688920474!2d64.42632857507311!3d39.783350493946884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009ef2f0eaf2d%3A0x503a224213c9b494!2z0JHRg9GF0LDRgNGB0LrQvtC1INC-0LHQu9Cw0YHRgtC90L7QtSDRg9C_0YDQsNCy0LvQtdC90LjQtSDQt9C00YDQsNCy0L7QvtGF0YDQsNC90LXQvdC40Y8!5e0!3m2!1sru!2s!4v1754903508839!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 18,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "71422b0d0eee0f60f13a7128d4eba4518c0f2158b1605fc52969bc7faa22ba7e",
+    "ru": "71422b0d0eee0f60f13a7128d4eba4518c0f2158b1605fc52969bc7faa22ba7e",
+    "en": "71422b0d0eee0f60f13a7128d4eba4518c0f2158b1605fc52969bc7faa22ba7e"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24406.128039265936!2d67.80946254730215!3d40.1252178697832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754903611431!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 21,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "445136e593eedec12eb120edc41bf936494e9c15fc5d4edd40e9cbd7c23cb508",
+    "ru": "445136e593eedec12eb120edc41bf936494e9c15fc5d4edd40e9cbd7c23cb508",
+    "en": "445136e593eedec12eb120edc41bf936494e9c15fc5d4edd40e9cbd7c23cb508"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532845.594158731!2d62.27806091308596!3d41.3775814273407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5771000f863b85%3A0x344031b4c5e0bd92!2sRespublikaniski%20ankaligiya%20shifohonasi!5e0!3m2!1sru!2s!4v1754904373412!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 24,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "257ac47b84013d7e9d1b60f6b6ba7c1da48cda1c847f3b2d6427d07696efaa63",
+    "ru": "257ac47b84013d7e9d1b60f6b6ba7c1da48cda1c847f3b2d6427d07696efaa63",
+    "en": "257ac47b84013d7e9d1b60f6b6ba7c1da48cda1c847f3b2d6427d07696efaa63"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24086.608521850332!2d71.59957945346834!3d41.00718005925212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4bb91ce384c1%3A0x887b862f9c3ec794!2z0J3QsNC80LDQvdCz0LDQvSDQstC40LvQvtGP0YIg0YHQvtKT0LvQuNKb0L3QuCDRgdCw0pvQu9Cw0Ygg0LHQvtGI0pvQsNGA0LzQsNGB0Lg!5e0!3m2!1sru!2s!4v1754903741545!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 27,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "1c2b9718538d4557b91d6bceb5f8e24b7178b71b2efda61679cb63d8d0788536",
+    "ru": "1c2b9718538d4557b91d6bceb5f8e24b7178b71b2efda61679cb63d8d0788536",
+    "en": "1c2b9718538d4557b91d6bceb5f8e24b7178b71b2efda61679cb63d8d0788536"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.451599017711!2d66.93384457506616!3d39.66205490122707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192fcaf15d67%3A0x82c0052afca0ed3e!2sSamarqand%20viloyati%20Sog%E2%80%99liqli%20saqlash%20boshqarmasi!5e0!3m2!1sru!2s!4v1754903781941!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 30,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "8e42d0766b30db2b9d4e47654e9d24c9607c62ddfffdcc98a7b1149adae831b0",
+    "ru": "8e42d0766b30db2b9d4e47654e9d24c9607c62ddfffdcc98a7b1149adae831b0",
+    "en": "8e42d0766b30db2b9d4e47654e9d24c9607c62ddfffdcc98a7b1149adae831b0"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d758.4781604419541!2d68.77821408776!3d40.49931476401184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1754904653848!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 33,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "8500536263320a30dcb7403a47cdeb655afdad1f8e110b6e82a754eab30690ee",
+    "ru": "8500536263320a30dcb7403a47cdeb655afdad1f8e110b6e82a754eab30690ee",
+    "en": "8500536263320a30dcb7403a47cdeb655afdad1f8e110b6e82a754eab30690ee"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.466304762072!2d67.26501389947667!3d37.23030916719212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352fffede47d19%3A0x4132e14fbb7beca!2z0KHRg9GA0YXQvtC90LTQsNGA0ZEg0LLQuNC70L7Rj9GCINGB0L7Sk9C70LjSm9C90Lgg0YHQsNKb0LvQsNGIINCx0L7RiNKb0LDRgNC80LDRgdC4!5e0!3m2!1sru!2s!4v1754904731329!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 36,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "4ceb6c7c351cf43338abb77d775e7f9f30e2aac200e9aab1142d1e309e035461",
+    "ru": "4ceb6c7c351cf43338abb77d775e7f9f30e2aac200e9aab1142d1e309e035461",
+    "en": "4ceb6c7c351cf43338abb77d775e7f9f30e2aac200e9aab1142d1e309e035461"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186.62183632934503!2d60.636834560295846!3d41.54869322567637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc93353342b9b%3A0xf317dec8e43bbaed!2z0KXQvtGA0LXQt9C80YHQutC-0LUg0L7QsdC70LDRgdGC0L3QvtC1INGD0L_RgNCw0LLQu9C10L3QuNC1INC30LTRgNCw0LLQvtC-0YXRgNCw0L3QtdC90LjRjw!5e0!3m2!1sru!2s!4v1754904794375!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 39,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "47cbc3c82150280ed83d0d4b1d0c893c476bc88bc3dfbd3676cb658f0e42ea06",
+    "ru": "47cbc3c82150280ed83d0d4b1d0c893c476bc88bc3dfbd3676cb658f0e42ea06",
+    "en": "47cbc3c82150280ed83d0d4b1d0c893c476bc88bc3dfbd3676cb658f0e42ea06"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99419.80287580441!2d65.70939571531348!3d38.85835923076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea63944a8e4c1%3A0x694369ac2037509d!2z0JrQsNGA0YjQuCwg0JrQsNGI0LrQsNC00LDRgNGM0Y8sINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1754905026739!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "hududiy-boshqarmalar",
+  "order": 42,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "bd3d5a7655ce7d9c5ef05c35dce9fe9e3c029ff9d33c71fcfb961b0059db3a6f",
+    "ru": "bd3d5a7655ce7d9c5ef05c35dce9fe9e3c029ff9d33c71fcfb961b0059db3a6f",
+    "en": "bd3d5a7655ce7d9c5ef05c35dce9fe9e3c029ff9d33c71fcfb961b0059db3a6f"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s",
+      "height": 450,
+      "title": "Xarita"
+     },
+     "ru": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s",
+      "height": 450,
+      "title": "Карта"
+     },
+     "en": {
+      "provider": "map",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5985424.283528351!2d49.6568556947697!3d42.90300877810488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41e9b68886e89265%3A0xc7f1caf0e51ae55a!2z0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JrQsNGA0LDQutCw0LvQv9Cw0LrRgdGC0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1754904018685!5m2!1sru!2s",
+      "height": 450,
+      "title": "Map"
+     }
+    }
+   }
+  ]
+ }
+]
