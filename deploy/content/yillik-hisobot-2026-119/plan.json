@@ -1,0 +1,38 @@
+{
+ "slug": "prezident-farmon-va-qarorlari",
+ "moves": [
+  {
+   "old": 11,
+   "new": 6,
+   "sig": "[Aholini sogʻlom ovqatlanishini taʻminlash toʻgʻrisida]"
+  },
+  {
+   "old": 6,
+   "new": 7,
+   "sig": "[Tibbiyot muassasalarini farmatsevtika mahsulotlari"
+  },
+  {
+   "old": 7,
+   "new": 8,
+   "sig": "[Sogʻliqni saqlash sohasida ixtisoslashtirilgan tibbiy yordam"
+  },
+  {
+   "old": 8,
+   "new": 9,
+   "sig": "[Sogʻliqni saqlash sohasini kompleks rivojlantirishga"
+  },
+  {
+   "old": 9,
+   "new": 10,
+   "sig": "[Tibbiy profilaktika ishlari samaradorligini"
+  },
+  {
+   "old": 10,
+   "new": 11,
+   "sig": "[Sogʻlom turmush tarzini keng tatbiq etish"
+  }
+ ],
+ "unmoved_check": {
+  "12": "document"
+ }
+}
