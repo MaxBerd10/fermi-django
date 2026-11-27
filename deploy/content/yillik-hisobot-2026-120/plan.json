@@ -1,0 +1,144 @@
+{
+ "slug": "davlat-dasturlari",
+ "moves": [
+  {
+   "old": 31,
+   "new": 5,
+   "sig": "type:document"
+  },
+  {
+   "old": 5,
+   "new": 6,
+   "sig": "[2022- yil Inson qadrini ulugʻlash va fa"
+  },
+  {
+   "old": 6,
+   "new": 7,
+   "sig": "[2021- yil - Yoshlarni qoʻllab-quvvatlas"
+  },
+  {
+   "old": 7,
+   "new": 8,
+   "sig": "[2020-yil-\"Ilm-maʻrifat va raqamli iqtis"
+  },
+  {
+   "old": 8,
+   "new": 9,
+   "sig": "[2019-yil - “Faol investitsiyalar va ijt"
+  },
+  {
+   "old": 9,
+   "new": 10,
+   "sig": "[2018 yil - Faol tadbirkorlik, innovatsi"
+  },
+  {
+   "old": 10,
+   "new": 11,
+   "sig": "[2017 yil – Xalq bilan muloqot va inson "
+  },
+  {
+   "old": 11,
+   "new": 12,
+   "sig": "[2016 yil- Sogʻlom ona va bola yili](htt"
+  },
+  {
+   "old": 12,
+   "new": 13,
+   "sig": "[2015 yil-Keksalarni eʻzozlash yili](htt"
+  },
+  {
+   "old": 13,
+   "new": 14,
+   "sig": "[2014 yil- Sogʻlom bola yili](http://dd."
+  },
+  {
+   "old": 14,
+   "new": 15,
+   "sig": "[2013 yil - Obod turmush yili](http://dd"
+  },
+  {
+   "old": 15,
+   "new": 16,
+   "sig": "[2012 yil - Mustahkam oila yili](http://"
+  },
+  {
+   "old": 16,
+   "new": 17,
+   "sig": "[2011 yil - Kichik biznes va xususiy tad"
+  },
+  {
+   "old": 17,
+   "new": 18,
+   "sig": "[2010 yil - Barkamol avlod yili](https:/"
+  },
+  {
+   "old": 18,
+   "new": 19,
+   "sig": "[2009 yil - Qishloq taraqqiyoti va farav"
+  },
+  {
+   "old": 19,
+   "new": 20,
+   "sig": "[2008 yil - Yoshlar yili](http://dd.gov."
+  },
+  {
+   "old": 20,
+   "new": 21,
+   "sig": "[2007 yil - Ijtimoiy himoya yili](https:"
+  },
+  {
+   "old": 21,
+   "new": 22,
+   "sig": "[2006 yil - Homiylar va shifokorlar yili"
+  },
+  {
+   "old": 22,
+   "new": 23,
+   "sig": "[2005 yil - Sihat-salomatlik yili](http:"
+  },
+  {
+   "old": 23,
+   "new": 24,
+   "sig": "[2004 yil - Mehr-muruvvat yili](https://"
+  },
+  {
+   "old": 24,
+   "new": 25,
+   "sig": "[2003 yil - Obod mahalla yili](https://l"
+  },
+  {
+   "old": 25,
+   "new": 26,
+   "sig": "[2002 yil - Qariyalarni qadrlash yili](h"
+  },
+  {
+   "old": 26,
+   "new": 27,
+   "sig": "[2001 yil - Ona va bola yili](http://dd."
+  },
+  {
+   "old": 27,
+   "new": 28,
+   "sig": "[2000 yil - Sogʻlom avlod yili](http://d"
+  },
+  {
+   "old": 28,
+   "new": 29,
+   "sig": "[1999 yil - Ayollar yili](http://dd.gov."
+  },
+  {
+   "old": 29,
+   "new": 30,
+   "sig": "[1998 yil - Oila yili](http://dd.gov.uz/"
+  },
+  {
+   "old": 30,
+   "new": 31,
+   "sig": "[1996 yil - Amir Temur yili](https://lex"
+  }
+ ],
+ "unmoved_check": {
+  "1": "paragraph",
+  "4": "paragraph"
+ }
+}
