@@ -1145,6 +1145,32 @@
   line-height: 1.5;
 }
 
+/* the head of an order: the capitals are its title (centred, bold), the bracketed lines are notes under it (small, muted) */
+.inner-page-body .regulatory-document__preamble {
+  gap: .5rem;
+  padding: 1rem 1.25rem;
+}
+
+.inner-page-body .regulatory-document__title {
+  color: var(--content-ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .01em;
+}
+
+.inner-page-body .regulatory-document__note {
+  color: #475569;
+  font-size: .9375rem;
+  line-height: 1.5;
+}
+
+/* inside an order a link to lex.uz is a link in a sentence, not a card: no badge in the middle of the line */
+.inner-page-body .regulatory-document a::after {
+  content: none !important; /* beats the badge rules of cms-content.css, which are more specific */
+  display: none !important;
+}
+
 .inner-page-body :is(.structure-directory-card, .structure-credit-table) {
   min-width: 0;
   border: 1px solid #e0e6f0;

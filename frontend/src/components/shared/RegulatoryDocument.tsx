@@ -1,4 +1,4 @@
-import ArticleBody from "./ArticleBody";
+import LinkifiedText from "@/blocks/LinkifiedText";
 import StructureArticle from "./StructureArticle";
 import type { ContentBlock } from "@/types/blocks";
 
@@ -36,7 +36,13 @@ export default function RegulatoryDocument({ blocks, inlinePdfBlockId, title }: 
       {openingTitle && <h2>{openingTitle}</h2>}
       {preambleEnd > 0 && (
         <div className="regulatory-document__preamble">
-          <ArticleBody blocks={content.slice(0, preambleEnd)} />
+          {content.slice(0, preambleEnd).map((block) => {
+            const text = block.data.text.trim();
+            if (block.block_type === "heading") return block.data.level === 3 ? <h3 key={block.id}>{text}</h3> : <h2 key={block.id}>{text}</h2>;
+            // the capitals of an order's head ("MINISTER ... ORDER", its subject) are its title; "[registered ...]" and "(O'z DSt ...)" are notes under it
+            const note = /^[[(]/.test(text);
+            return <p key={block.id} className={note ? "regulatory-document__note" : "regulatory-document__title"}><LinkifiedText text={text} /></p>;
+          })}
         </div>
       )}
       <StructureArticle blocks={body} inlinePdfBlockId={inlinePdfBlockId} title={title} regulatory />

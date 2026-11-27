@@ -106,10 +106,10 @@ export default function StructureArticle({ blocks, inlinePdfBlockId, title, layo
       flush(index);
       sections.push(<p key={blocks[index].id}><LinkifiedText text={text} /></p>);
       start = index + 1;
-    } else if (/^(?:o[ʻʼ‘’']zbekiston respublikasining bosh vaziri|премьер-министр республики узбекистан|prime minister of (?:the republic of )?uzbekistan)\b/iu.test(text)
+    } else if (/^(?:o[ʻʼ‘’']zbekiston respublikasining bosh vaziri|премьер-министр республики узбекистан|prime minister of (?:the republic of )?uzbekistan|vazir\b|министр\b|minister\b)/iu.test(text)
       && /^(?:toshkent|ташкент|tashkent)\b/iu.test(blockText(blocks[index + 1]))
       && /\b(?:19|20)\d{2}\b/u.test(blockText(blocks[index + 2]))
-      && /^(?:№\s*)?\d+(?:[-–—]son)?$/iu.test(blockText(blocks[index + 3]))) {
+      && /^(?:№\s*)?\d+(?:[-–—]\d+)?(?:[-–—]son)?$/iu.test(blockText(blocks[index + 3]))) {
       flush(index);
       sections.push(
         <div className="structure-document-signature" key={blocks[index].id}>
