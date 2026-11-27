@@ -1145,7 +1145,7 @@
   line-height: 1.5;
 }
 
-/* the head of an order: the capitals are its title (centred, bold), the bracketed lines are notes under it (small, muted) */
+/* the head of an order: the capitals are its title (the ink colour, no bold: nothing else on the site is bold like that), the bracketed lines are notes under it (small, muted) */
 .inner-page-body .regulatory-document__preamble {
   gap: .5rem;
   padding: 1rem 1.25rem;
@@ -1154,9 +1154,7 @@
 .inner-page-body .regulatory-document__title {
   color: var(--content-ink);
   font-size: 1rem;
-  font-weight: 700;
   line-height: 1.5;
-  letter-spacing: .01em;
 }
 
 .inner-page-body .regulatory-document__note {
