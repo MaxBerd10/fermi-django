@@ -1,0 +1,34 @@
+[
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 1,
+  "lang": "ru",
+  "field": "title",
+  "old": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya",
+  "new": "IV международная научно-практическая конференция «Диагностика в дерматовенерологии и дермато-онкопатологии»"
+ },
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 1,
+  "lang": "en",
+  "field": "title",
+  "old": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya",
+  "new": "IV International scientific and practical conference “Diagnostics in dermatovenerology and dermato-oncopathology”"
+ },
+ {
+  "slug": "kongress-2022-2024",
+  "order": 5,
+  "lang": "ru",
+  "field": "title",
+  "old": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya",
+  "new": "IV международная научно-практическая конференция «Диагностика в дерматовенерологии и дермато-онкопатологии»"
+ },
+ {
+  "slug": "kongress-2022-2024",
+  "order": 5,
+  "lang": "en",
+  "field": "title",
+  "old": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya",
+  "new": "IV International scientific and practical conference “Diagnostics in dermatovenerology and dermato-oncopathology”"
+ }
+]

@@ -1,0 +1,9 @@
+[
+ {
+  "model": "menu.MenuItem",
+  "pk": 2022,
+  "field": "label_en",
+  "old": "Kam ta'minlangan talabalar uchun yaratilgan imkoniyatlar  ",
+  "new": "Opportunities created for low-income students"
+ }
+]
