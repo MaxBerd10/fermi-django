@@ -1055,15 +1055,6 @@
   .hero-radar__word {
     font-size: 0.75rem;
   }
-
-  .hero-mobile-links {
-    gap: 0.4rem;
-  }
-
-  .hero-mobile-links__item {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.55rem;
-  }
 }
 
 /* Landscape phones — keep hero compact */
@@ -1077,84 +1068,6 @@
   .hero-v2 .section-container {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-}
-
-/* Mobile / tablet utility strip under radar */
-.hero-mobile-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-  width: 100%;
-}
-
-.hero-mobile-links__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: var(--touch-min);
-  padding: 0.55rem 0.7rem;
-  border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(10, 17, 88, 0.1);
-  box-shadow: 0 6px 18px rgba(10, 17, 88, 0.06);
-  text-decoration: none;
-  color: #0a0a0a;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.2;
-  transition: border-color 0.2s, transform 0.2s, background 0.2s;
-}
-
-.hero-mobile-links__item i {
-  flex-shrink: 0;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(10, 17, 88, 0.08);
-  color: #0a1158;
-  font-size: 0.95rem;
-}
-
-.hero-mobile-links__item span {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.hero-mobile-links__item.is-accent {
-  background: #0a1158;
-  border-color: transparent;
-  color: #fff;
-}
-
-.hero-mobile-links__item.is-accent i {
-  background: rgba(255, 214, 0, 0.18);
-  color: #ffd600;
-}
-
-.hero-mobile-links__item:active {
-  transform: scale(0.98);
-}
-
-@media (min-width: 480px) and (max-width: 1023px) {
-  .hero-mobile-links {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .hero-mobile-links__item:last-child:nth-child(5) {
-    grid-column: span 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-mobile-links {
-    display: none;
   }
 }
 

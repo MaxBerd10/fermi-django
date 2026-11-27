@@ -177,17 +177,19 @@ export default function NewsAnnouncements() {
                   const featuredDisplayImg = featuredImg?.startsWith("/images/logo.png")
                     ? "/images/logo.webp"
                     : featuredImg;
-                  // The seal only exists as a small image: show it at its own size in the middle of a white tile
-                  // instead of stretching it to fill the whole card (that is what made it blurry).
+                  // The seal only exists as a small image: show it whole, at most 11rem, in the middle of a pale tile
+                  // (the tile is absolutely positioned so that a percentage height means something: with
+                  // its 256 px natural height the seal was cropped by the 16:9 frame on a phone). The sizes are
+                  // Tailwind classes on purpose: the home page does not load the news stylesheet.
                   if (isPlaceholderLogo(featuredImg)) {
                     return (
-                      <div className="w-full h-full flex items-center justify-center bg-white">
+                      <div className="absolute inset-0 flex items-center justify-center bg-[#f5f7fc]">
                         <img
                           src={featuredImg}
                           alt={featured.title}
                           width={256}
                           height={256}
-                          className="news-logo-fallback group-hover:scale-[1.03] transition-transform duration-500"
+                          className="h-[68%] w-auto max-w-[68%] max-h-44 aspect-square object-contain opacity-90 group-hover:scale-[1.03] transition-transform duration-500"
                           loading="lazy"
                         />
                       </div>

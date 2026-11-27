@@ -44,12 +44,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .hero-mobile-links {
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

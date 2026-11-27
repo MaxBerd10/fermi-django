@@ -510,35 +510,6 @@ export default function Hero() {
                   );
                 })}
               </div>
-
-              {/* Mobile / tablet — useful links when corners hide */}
-              <div className="hero-mobile-links lg:hidden">
-                <Link to="/virtual-reception/17" className="hero-mobile-links__item is-accent">
-                  <i className="ri-chat-smile-3-line" aria-hidden />
-                  <span>{t("hero.tools.vq.title")}</span>
-                </Link>
-                <a href="tel:+998950622345" className="hero-mobile-links__item">
-                  <i className="ri-phone-line" aria-hidden />
-                  <span>{t("hero.corner.call.title")}</span>
-                </a>
-                <Link to="/qabul" className="hero-mobile-links__item">
-                  <i className="ri-file-user-line" aria-hidden />
-                  <span>{t("hero.tools.admit.title")}</span>
-                </Link>
-                <a href="#pathfinder" className="hero-mobile-links__item">
-                  <i className="ri-route-line" aria-hidden />
-                  <span>{t("hero.tools.path.title")}</span>
-                </a>
-                <a
-                  href="https://online-imtixon.uz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hero-mobile-links__item"
-                >
-                  <i className="ri-questionnaire-line" aria-hidden />
-                  <span>{t("hero.tools.test.title")}</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
