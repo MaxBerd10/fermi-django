@@ -1,0 +1,30 @@
+[
+ {
+  "model": "departments.StaffMember",
+  "pk": 476,
+  "field": "reception_days_ru",
+  "old": "Dushanba-Shanba: 09:00-17:00",
+  "new": "Понедельник-Суббота: 09:00-17:00"
+ },
+ {
+  "model": "departments.StaffMember",
+  "pk": 476,
+  "field": "reception_days_en",
+  "old": "Dushanba-Shanba: 09:00-17:00",
+  "new": "Monday-Saturday: 09:00-17:00"
+ },
+ {
+  "model": "departments.StaffMember",
+  "pk": 477,
+  "field": "reception_days_ru",
+  "old": "Dushanba-Shanba: 09:00-17:00",
+  "new": "Понедельник-Суббота: 09:00-17:00"
+ },
+ {
+  "model": "departments.StaffMember",
+  "pk": 477,
+  "field": "reception_days_en",
+  "old": "Dushanba-Shanba: 09:00-17:00",
+  "new": "Monday-Saturday: 09:00-17:00"
+ }
+]
