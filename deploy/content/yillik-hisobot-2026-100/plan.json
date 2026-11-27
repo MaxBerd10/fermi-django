@@ -1,0 +1,293 @@
+{
+ "slug": "mutaxassisliklar-boyicha-testlar-toplami",
+ "entries": [
+  {
+   "order": 1,
+   "kind": "picture",
+   "file_tail": "test.jpg",
+   "image_id": 7047
+  },
+  {
+   "order": 3,
+   "kind": "pdf",
+   "text": "[Gistologiya, sitologiya va embriologiya test](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Gistologiya%2C%20sitologiya%20va%20embriologiya%20test.%20%282%29.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Gistologiya, sitologiya va embriologiya test. (2).pdf",
+   "caption": "Gistologiya, sitologiya va embriologiya test (uzb)"
+  },
+  {
+   "order": 4,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya, Umumiy genetika](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%B5%D1%81%D1%82.%20%D0%A2%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9%20%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F.%D0%A3%D0%BC%D1%83%D0%BC%D0%B8%D0%B9%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D0%BA%D0%B0%20%281%29.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Тест. Тиббий биология.Умумий генетика (1).pdf",
+   "caption": "Tibbiy biologiya, Umumiy genetika (uzb)"
+  },
+  {
+   "order": 5,
+   "kind": "pdf",
+   "text": "[ТЕСТЫ ПО ПРЕДМЕТУ БИЛОГИЯ](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%95%D0%A1%D0%A2%D0%AB%20%D0%9F%D0%9E%20%D0%9F%D0%A0%D0%95%D0%94%D0%9C%D0%95%D0%A2%D0%A3%20%D0%91%D0%98%D0%9B%D0%9E%D0%93%D0%98%D0%AF.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/ТЕСТЫ ПО ПРЕДМЕТУ БИЛОГИЯ.pdf",
+   "caption": "ТЕСТЫ ПО ПРЕДМЕТУ БИЛОГИЯ (rus)"
+  },
+  {
+   "order": 6,
+   "kind": "pdf",
+   "text": "[Тесты по предмету ботаника](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%83%20%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%B8%D0%BA%D0%B0.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Тесты по предмету ботаника.pdf",
+   "caption": "Тесты по предмету ботаника (rus)"
+  },
+  {
+   "order": 7,
+   "kind": "pdf",
+   "text": "[ТЕСТЫ_ПО_ПРЕДМЕТУ_БИЛОГИЯ_ОСНОВЫ_ЭКОЛОГИИ](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%95%D0%A1%D0%A2%D0%AB_%D0%9F%D0%9E_%D0%9F%D0%A0%D0%95%D0%94%D0%9C%D0%95%D0%A2%D0%A3_%D0%91%D0%98%D0%9B%D0%9E%D0%93%D0%98%D0%AF_%D0%9E%D0%A1%D0%9D%D0%9E%D0%92%D0%AB_%D0%AD%D0%9A%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%98.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/ТЕСТЫ_ПО_ПРЕДМЕТУ_БИЛОГИЯ_ОСНОВЫ_ЭКОЛОГИИ.pdf",
+   "caption": "ТЕСТЫ_ПО_ПРЕДМЕТУ_БИЛОГИЯ_ОСНОВЫ_ЭКОЛОГИИ (rus)"
+  },
+  {
+   "order": 8,
+   "kind": "pdf",
+   "text": "[ТЕСТЫ_ПО_ПРЕДМЕТУ_МЕДИЦИНСКАЯ_БИОЛОГИЯ_ОБЩАЯ_ГЕНЕТИКА](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%95%D0%A1%D0%A2%D0%AB_%D0%9F%D0%9E_%D0%9F%D0%A0%D0%95%D0%94%D0%9C%D0%95%D0%A2%D0%A3_%D0%9C%D0%95%D0%94%D0%98%D0%A6%D0%98%D0%9D%D0%A1%D0%9A%D0%90%D0%AF_%D0%91%D0%98%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%AF_%D0%9E%D0%91%D0%A9%D0%90%D0%AF_%D0%93%D0%95%D0%9D%D0%95%D0%A2%D0%98%D0%9A%D0%90.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/ТЕСТЫ_ПО_ПРЕДМЕТУ_МЕДИЦИНСКАЯ_БИОЛОГИЯ_ОБЩАЯ_ГЕНЕТИКА.pdf",
+   "caption": "ТЕСТЫ_ПО_ПРЕДМЕТУ_МЕДИЦИНСКАЯ_БИОЛОГИЯ_ОБЩАЯ_ГЕНЕТИКА (rus)"
+  },
+  {
+   "order": 9,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/%D0%A2%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9%20%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D1%82%D0%B5%D1%81%D1%82%20DEKANAT.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Тиббий биология тест DEKANAT.pdf",
+   "caption": "Tibbiy biologiya (uzb)"
+  },
+  {
+   "order": 11,
+   "kind": "pdf",
+   "text": "[Axborot texnologiyalari](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Axborot%20texnologiyalari/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Axborot texnologiyalari/Информатика.pdf",
+   "caption": "Axborot texnologiyalari (uzb)"
+  },
+  {
+   "order": 12,
+   "kind": "pdf",
+   "text": "[Sxemotexnika fanidan testlar toʻplami](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Axborot%20texnologiyalari/Sxemotexnika.pdf)(uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Axborot texnologiyalari/Sxemotexnika.pdf",
+   "caption": "Sxemotexnika fanidan testlar toʻplami (uzb)"
+  },
+  {
+   "order": 13,
+   "kind": "pdf",
+   "text": "[Elektrotexnika fanidan testlar toʻplami](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Axborot%20texnologiyalari/Elektrotexnika.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Axborot texnologiyalari/Elektrotexnika.pdf",
+   "caption": "Elektrotexnika fanidan testlar toʻplami (uzb)"
+  },
+  {
+   "order": 18,
+   "kind": "pdf",
+   "text": "[Harbiy epidemiologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%82%D0%B5%D1%81%D1%82%20%D1%8F%D0%BA%D1%83%D0%BD%D0%B8%D0%B9%20%D1%85%D0%B0%D1%80%D0%B1%D0%B8%D0%B9%20%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F111111111111111111111.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/тест якуний харбий эпидемиология111111111111111111111.pdf",
+   "caption": "Harbiy epidemiologiya (uzb)"
+  },
+  {
+   "order": 19,
+   "kind": "pdf",
+   "text": "[Harbiy epidemiologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%82%D0%B5%D1%81%D1%82%D2%9B%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8%20111111111111111111111.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/тестқ по военной эпидемиологии 111111111111111111111.pdf",
+   "caption": "Harbiy epidemiologiya (rus)"
+  },
+  {
+   "order": 20,
+   "kind": "pdf",
+   "text": "[Tibbiy profilaktika ishi](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%82%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D0%B8%D1%88%D0%B8%20%205%20%D0%BA%D1%83%D1%80%D1%81%20%20%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D1%84%D0%B0%D0%BD%D0%B8%D0%B4%D0%B0%D0%BD%20%20%D1%82%D0%B5%D1%81%D1%82%D0%BB%D0%B0%D1%80%20%D1%82%D1%83%D0%BF%D0%BB%D0%B0%D0%BC%D0%B8.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/тиббий профилактика иши  5 курс  эпидемиология фанидан  тестлар туплами.pdf",
+   "caption": "Tibbiy profilaktika ishi (uzb)"
+  },
+  {
+   "order": 21,
+   "kind": "pdf",
+   "text": "[Эпид ситуации и иммунопрофилактика ОМХ](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%8D%D0%BF%D0%B8%D0%B4%20%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B8%D0%BC%D0%BC%D1%83%D0%BD%D0%BE%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%20%D0%BE%D0%BC%D1%85%203%20%D0%BA%D1%83%D1%80%D1%81.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/эпид ситуации и иммунопрофилактика  омх 3 курс.pdf",
+   "caption": "Эпид ситуации и иммунопрофилактика ОМХ (rus)"
+  },
+  {
+   "order": 22,
+   "kind": "pdf",
+   "text": "[Эпид ситуации и иммунопрофилактика TPI](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%8D%D0%BF%D0%B8%D0%B4%20%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B8%D0%BC%D0%BC%D1%83%D0%BD%D0%BE%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%20%D1%82%D0%BF%D0%B8%203%20%D0%BA%D1%83%D1%80%D1%81.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/эпид ситуации и иммунопрофилактика  тпи 3 курс.pdf",
+   "caption": "Эпид ситуации и иммунопрофилактика TPI (rus)"
+  },
+  {
+   "order": 23,
+   "kind": "pdf",
+   "text": "[Epidemiologik vaziyatlar va immunoprofilaktika OMX](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%20%D0%B2%D0%B0%D0%B7%D0%B8%D1%8F%D1%82%D0%BB%D0%B0%D1%80%20%D0%B2%D0%B0%20%D0%B8%D0%BC%D0%BC%D1%83%D0%BD%D0%BE%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BE%D0%BB%D0%B8%D0%B9%20%D1%85%D0%B0%D0%BC%D1%88%D0%B8%D1%80%D0%B0%D0%BB%D0%B8%D0%BA%20%D0%B8%D1%88%D0%B8%201.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/эпидемиологик вазиятлар ва иммунопрофилактика олий хамширалик иши 1.pdf",
+   "caption": "Epidemiologik vaziyatlar va immunoprofilaktika OMX (uzb)"
+  },
+  {
+   "order": 24,
+   "kind": "pdf",
+   "text": "[Epidemiologik vaziyatlar va immunoprofilaktika TPI](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%20%D0%B2%D0%B0%D0%B7%D0%B8%D1%8F%D1%82%D0%BB%D0%B0%D1%80%20%D0%B2%D0%B0%20%D0%B8%D0%BC%D0%BC%D1%83%D0%BD%D0%BE%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D0%A2%D0%9F%D0%98%20%203%20%D0%BA%D1%83%D1%80%D1%81.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/эпидемиологик вазиятлар ва иммунопрофилактика ТПИ  3 курс.pdf",
+   "caption": "Epidemiologik vaziyatlar va immunoprofilaktika TPI (uzb)"
+  },
+  {
+   "order": 25,
+   "kind": "pdf",
+   "text": "[Yuqumli kasalliklar va bolalar yuqumli kasalliklari kasbiy taʻlim](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D1%8E%D0%BA%D1%83%D0%BC%D0%BB%D0%B8%20%D0%BA%D0%B0%D1%81%D0%B0%D0%BB%D0%BB%D0%B8%D0%BA%D0%BB%D0%B0%D1%80%20%D0%B2%D0%B0%20%D0%B1%D0%BE%D0%BB%D0%B0%D0%BB%D0%B0%D1%80%20%D1%8E%D0%BA%D1%83%D0%BC%D0%BB%D0%B8%20%D0%BA%D0%B0%D1%81%D0%B0%D0%BB%D0%BB%D0%B8%D0%BA%D0%BB%D0%B0%D1%80%20%D0%BA%D0%B0%D1%81%D0%B1%D0%B8%D0%B9%20%D1%82%D0%B0%D1%8A%D0%BB%D0%B8%D0%BC%206%20%D0%BA%D1%83%D1%80%D1%81.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/юкумли касалликлар ва болалар юкумли касалликлар касбий таълим 6 курс.pdf",
+   "caption": "Yuqumli kasalliklar va bolalar yuqumli kasalliklari kasbiy taʻlim (uzb)"
+  },
+  {
+   "order": 26,
+   "kind": "pdf",
+   "text": "[Yuqumli kasalliklar Tibbiy profilaktika ishi](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Epid/%D0%AE%D0%BA%D1%83%D0%BC%D0%BB%D0%B8%20%D0%BA%D0%B0%D1%81%D0%B0%D0%BB%D0%BB%D0%B8%D0%BA%D0%BB%D0%B0%D1%80%20%D0%A2%D0%9F%D0%98%204%20%D0%BA%D1%83%D1%80%D1%81.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Epid/Юкумли касалликлар ТПИ 4 курс.pdf",
+   "caption": "Yuqumli kasalliklar Tibbiy profilaktika ishi (uzb)"
+  },
+  {
+   "order": 30,
+   "kind": "pdf",
+   "text": "[Gigiyena. Tibbiy ekologiya TPI 2 kurs](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Kommunal/Gigiyena.%20Tibbiy%20ekologiya%20TPI%202%20kurs.pdf)(uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Kommunal/Gigiyena. Tibbiy ekologiya TPI 2 kurs.pdf",
+   "caption": "Gigiyena. Tibbiy ekologiya TPI 2 kurs (uzb)"
+  },
+  {
+   "order": 35,
+   "kind": "pdf",
+   "text": "[Ichki kasalliklar propedevtikasi Davolash ishi yoʻnalishi](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/IKP/IKP%20tes%D1%82.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/IKP/IKP tesт.pdf",
+   "caption": "Ichki kasalliklar propedevtikasi Davolash ishi yoʻnalishi (uzb)"
+  },
+  {
+   "order": 37,
+   "kind": "pdf",
+   "text": "[OXTA Davolash ishi amaliyot (xamshira yordamchisi)](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/OXTA/%D0%BE%D1%85%D1%82%D0%B0%20%D0%94.%D0%98%20%D0%B0%D0%BC%D0%B0%D0%BB%D0%B8%D1%91%D1%82%20%28%D1%85%D0%B0%D0%BC%D1%88%D0%B8%D1%80%D0%B0%20%D1%91%D1%80%D0%B4%D0%B0%D0%BC%D1%87%D0%B8%D1%81%D0%B8%29.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/OXTA/охта Д.И амалиёт (хамшира ёрдамчиси).pdf",
+   "caption": "OXTA Davolash ishi amaliyot (xamshira yordamchisi) (uzb)"
+  },
+  {
+   "order": 47,
+   "kind": "pdf",
+   "text": "[Patalogik anatomiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Patalogik%20anatomiya/%D0%9F%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%BA_%D0%B0%D0%BD%D0%B0%D1%82%D0%BE%D0%BC%D0%B8%D1%8F_%D1%8F%D0%BD%D0%B3%D0%B8_%D1%82%D0%B5%D1%81%D1%82_%D1%84%D0%B0%D0%BD%D0%B8%D0%B4%D0%B0%D0%BD_%D1%82%D0%B5%D1%81%D1%82%D0%BB%D0%B0%D1%80.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Patalogik anatomiya/Патологик_анатомия_янги_тест_фанидан_тестлар.pdf",
+   "caption": "Patalogik anatomiya (uzb)"
+  },
+  {
+   "order": 49,
+   "kind": "pdf",
+   "text": "[Patologik fiziologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Pat%20fiz/Patologik%20fiziologiyadan%20test%20savollari.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Pat fiz/Patologik fiziologiyadan test savollari.pdf",
+   "caption": "Patologik fiziologiya (uzb)"
+  },
+  {
+   "order": 51,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Gis%20va%20tib%20bio/%D0%A2%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9%20%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D1%82%D0%B5%D1%81%D1%82%20DEKANAT.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Gis va tib bio/Тиббий биология тест DEKANAT.pdf",
+   "caption": "Tibbiy biologiya (uzb)"
+  },
+  {
+   "order": 52,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Gis%20va%20tib%20bio/%D0%A2%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9%20%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D1%82%D0%B5%D1%81%D1%82.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Gis va tib bio/Тиббий биология тест.pdf",
+   "caption": "Tibbiy biologiya (uzb)"
+  },
+  {
+   "order": 53,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Gis%20va%20tib%20bio/%D1%82%D0%B8%D0%B1%D0%B1%D0%B8%D0%B9-%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%82%D0%B5%D1%81%D1%82%20%28%D1%82%D0%B8%D1%82%D1%83%D0%BB%29.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Gis va tib bio/тиббий-биология-тест (титул).pdf",
+   "caption": "Tibbiy biologiya (uzb)"
+  },
+  {
+   "order": 55,
+   "kind": "pdf",
+   "text": "[Biokimyo](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Tibiy%20va%20biol%20kimyo/Biokimyo%20yakuniy%20test%20Davolash%202%20kurs.pdf)(uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Tibiy va biol kimyo/Biokimyo yakuniy test Davolash 2 kurs.pdf",
+   "caption": "Biokimyo (uzb)"
+  },
+  {
+   "order": 56,
+   "kind": "pdf",
+   "text": "[Noorganik kimyo](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Tibiy%20va%20biol%20kimyo/Noorganik%20kimyo%20test%20Farmatsiya.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Tibiy va biol kimyo/Noorganik kimyo test Farmatsiya.pdf",
+   "caption": "Noorganik kimyo (uzb)"
+  },
+  {
+   "order": 57,
+   "kind": "pdf",
+   "text": "[Tibbiy kimyo](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Tibiy%20va%20biol%20kimyo/Tibbiy%20kimyo%20tasdiqlatgani.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Tibiy va biol kimyo/Tibbiy kimyo tasdiqlatgani.pdf",
+   "caption": "Tibbiy kimyo (uzb)"
+  },
+  {
+   "order": 58,
+   "kind": "pdf",
+   "text": "[Tibbiy biologiya Umumiy genetika](https://fermi.uz/media/migrated/img/yangilikar/DAK%20savollari/Tibbiy%20biologiya%20Umumiy%20genetika.pdf) (uzb)",
+   "media_path": "migrated/img/yangilikar/DAK savollari/Tibbiy biologiya Umumiy genetika.pdf",
+   "caption": "Tibbiy biologiya Umumiy genetika (uzb)"
+  },
+  {
+   "order": 59,
+   "kind": "pdf",
+   "text": "[Тесты по Химии (КГМУ)](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Tibiy%20va%20biol%20kimyo/%D1%85%D0%B8%D0%BC%D0%B8%D1%8F%20%D1%82%D0%B5%D1%81%D1%82%D1%8B.pdf) (rus)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Tibiy va biol kimyo/химия тесты.pdf",
+   "caption": "Тесты по Химии (КГМУ) (rus)"
+  },
+  {
+   "order": 61,
+   "kind": "pdf",
+   "text": "[Tibbiy psixologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/2-son%20ichki%20kas/tIBBIY%20PSIXOLOGIYA%20%282%29.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/2-son ichki kas/tIBBIY PSIXOLOGIYA (2).pdf",
+   "caption": "Tibbiy psixologiya (uzb)"
+  },
+  {
+   "order": 62,
+   "kind": "pdf",
+   "text": "[Ftizatriya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/2-son%20ichki%20kas/%D0%A4%D1%82%D0%B8%D0%B7%D0%B8%D0%B0%D1%82%D1%80%D0%B8%D1%8F_1000_%D0%A2%D0%95%D0%A1%D0%A2_%D0%A3%D0%97%D0%91%2C_Rus_1_06_22%D0%B3_hammasi.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/2-son ichki kas/Фтизиатрия_1000_ТЕСТ_УЗБ,_Rus_1_06_22г_hammasi.pdf",
+   "caption": "Ftizatriya (uzb)"
+  },
+  {
+   "order": 64,
+   "kind": "pdf",
+   "text": "[Farmakologiya](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Farma/Farma%20test%20yakuniy.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Farma/Farma test yakuniy.pdf",
+   "caption": "Farmakologiya (uzb)"
+  },
+  {
+   "order": 65,
+   "kind": "heading",
+   "text": {
+    "uz": "Oʻzbek va xorijiy tillar kafedrasi",
+    "ru": "Кафедра узбекского и иностранных языков",
+    "en": "Department of Uzbek and Foreign Languages"
+   }
+  },
+  {
+   "order": 66,
+   "kind": "pdf",
+   "text": "[Tibbiyotda xorijiy til.](https://fermi.uz/media/migrated/img/Kafedralar%20test%20to%60plamlari/Xoirijiy%20tillar%20kafedrasi/%D0%94%D0%90%D0%9A%20%D0%A5%D0%BE%D1%80%D0%B8%D0%B6%D0%B8%D0%B9%20%D1%82%D0%B8%D0%BB.pdf) (uzb)",
+   "media_path": "migrated/img/Kafedralar test to`plamlari/Xoirijiy tillar kafedrasi/ДАК Хорижий тил.pdf",
+   "caption": "Tibbiyotda xorijiy til. (uzb)"
+  },
+  {
+   "order": 67,
+   "kind": "pdf",
+   "text": "[Akusherlik](https://fermi.uz/media/migrated/img/yangilikar/TEST%20markazi/%D0%90%D0%BA%D1%83%D1%88%D0%B5%D1%80%D0%BB%D0%B8%D0%BA%20%D1%82%D0%B5%D1%81%D1%82%201000%20%D1%82%D0%B0%D0%BB%D0%B8%D0%BA.pdf) (uzb)",
+   "media_path": "migrated/img/yangilikar/TEST markazi/Акушерлик тест 1000 талик.pdf",
+   "caption": "Akusherlik (uzb)"
+  },
+  {
+   "order": 68,
+   "kind": "pdf",
+   "text": "[Fiziologiya test savollari](https://fermi.uz/media/migrated/img/yangilikar/TEST%20markazi/Fiziologiya%20%20test%20savollari.pdf) (uzb)",
+   "media_path": "migrated/img/yangilikar/TEST markazi/Fiziologiya  test savollari.pdf",
+   "caption": "Fiziologiya test savollari (uzb)"
+  },
+  {
+   "order": 69,
+   "kind": "pdf",
+   "text": "[Testoviy voprosi Fiziologiya](https://fermi.uz/media/migrated/img/yangilikar/TEST%20markazi/Testoviy%20voprosi%20Fiziologiya.pdf) (uzb)",
+   "media_path": "migrated/img/yangilikar/TEST markazi/Testoviy voprosi Fiziologiya.pdf",
+   "caption": "Testoviy voprosi Fiziologiya (uzb)"
+  }
+ ]
+}
