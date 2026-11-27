@@ -163,6 +163,82 @@ export function documentFormData(raw: Record<Lang, { caption?: string; style?: s
   return { uz: make("uz"), ru: make("ru"), en: make("en") };
 }
 
+// ---------------------------------------------------------------------------------------------------------------- galleries
+
+export interface GalleryPicture {
+  /** A picture the site already has ... */
+  image_id?: number;
+  /** ... or a file just picked / uploaded (the server makes its row when the page is saved). */
+  path?: string;
+  /** Where to show it in the form. */
+  url: string;
+  alt: Record<Lang, string>;
+}
+export interface GalleryForm { style: "" | "certificate" | "plain"; pictures: GalleryPicture[] }
+type StagedGallery = Record<Lang, { style?: string; items: { image_id?: number; path?: string; alt?: string; url?: string }[] }>;
+
+export const GALLERY_STYLES: { value: GalleryForm["style"]; label: string; hint: string }[] = [
+  { value: "", label: "Oddiy", hint: "Rasmlar matn oxirida bitta qatorga yig'iladi" },
+  { value: "plain", label: "Joyida", hint: "Rasmlar galereyasi aynan shu joyda, o'z sarlavhasi ostida turadi" },
+  { value: "certificate", label: "Sertifikatlar", hint: "Raqamli, sarlavhali sertifikat kartalari" },
+];
+
+/** The gallery form from a saved block: the pictures are the Uzbek list (the server keeps the three languages' pictures the same), each with every language's alt text. */
+export function galleryFormFromServer(data: StagedGallery, images: Record<string, { file: string }>): GalleryForm {
+  const first = data.uz.items;
+  return {
+    style: (data.uz.style as GalleryForm["style"]) || "",
+    pictures: first.map((item, index) => ({
+      image_id: item.image_id,
+      url: images[String(item.image_id)]?.file ?? "",
+      alt: { uz: item.alt ?? "", ru: data.ru.items[index]?.alt ?? "", en: data.en.items[index]?.alt ?? "" },
+    })),
+  };
+}
+
+/** What the editor puts in the chip (and the server reads on save): every language gets the same pictures in the same order, its own alt text. */
+export function galleryStaged(form: GalleryForm): StagedGallery {
+  const make = (lang: Lang) => ({
+    ...(form.style ? { style: form.style } : {}),
+    items: form.pictures.map((picture) => ({
+      ...(picture.image_id !== undefined ? { image_id: picture.image_id } : { path: picture.path }),
+      alt: picture.alt[lang],
+      url: picture.url,
+    })),
+  });
+  return { uz: make("uz"), ru: make("ru"), en: make("en") };
+}
+
+export function galleryFormFromStaged(staged: StagedGallery): GalleryForm {
+  return {
+    style: (staged.uz.style as GalleryForm["style"]) || "",
+    pictures: staged.uz.items.map((item, index) => ({
+      ...(item.image_id !== undefined ? { image_id: item.image_id } : { path: item.path }),
+      url: item.url ?? "",
+      alt: { uz: item.alt ?? "", ru: staged.ru.items[index]?.alt ?? "", en: staged.en.items[index]?.alt ?? "" },
+    })),
+  };
+}
+
+export const addPictures = (form: GalleryForm, picked: { path: string; url: string }[]): GalleryForm => ({
+  ...form,
+  pictures: [...form.pictures, ...picked.map((file) => ({ path: file.path, url: file.url, alt: { uz: "", ru: "", en: "" } }))],
+});
+export const removePicture = (form: GalleryForm, index: number): GalleryForm => ({ ...form, pictures: form.pictures.filter((_, i) => i !== index) });
+export function movePicture(form: GalleryForm, index: number, delta: number): GalleryForm {
+  const target = index + delta;
+  if (target < 0 || target >= form.pictures.length) return form;
+  const pictures = [...form.pictures];
+  [pictures[index], pictures[target]] = [pictures[target], pictures[index]];
+  return { ...form, pictures };
+}
+export const setPictureAlt = (form: GalleryForm, lang: Lang, index: number, alt: string): GalleryForm => ({
+  ...form,
+  pictures: form.pictures.map((picture, i) => (i === index ? { ...picture, alt: { ...picture.alt, [lang]: alt } } : picture)),
+});
+export const setGalleryStyle = (form: GalleryForm, style: GalleryForm["style"]): GalleryForm => ({ ...form, style });
+export const galleryProblem = (form: GalleryForm): string | null => (form.pictures.length ? null : "Galereyada kamida bitta rasm bo'lishi kerak (butun galereyani olib tashlash uchun chipni o'chiring).");
+
 /** What the chip says about itself in the editor (the server writes the same words for a saved block). */
 export function chipLabel(blockType: string, data: Record<Lang, unknown>, staged = true): string {
   const tail = staged ? " (saqlaganingizda yangilanadi)" : " — tahrirlash uchun bosing";
@@ -171,6 +247,7 @@ export function chipLabel(blockType: string, data: Record<Lang, unknown>, staged
     const embed = data.uz as EmbedPayload;
     return `${embed.provider === "map" ? "Xarita" : "YouTube video"} ${embed.title || ""}${tail}`.replace("  ", " ");
   }
+  if (blockType === "gallery") return `Rasmlar galereyasi (${(data as unknown as StagedGallery).uz.items.length} ta)${tail}`;
   const document = data.uz as DocumentPayload;
   return `Hujjat (PDF/fayl) ${document.caption || ""}${tail}`.replace("  ", " ");
 }

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  addPictures, galleryFormFromServer, galleryFormFromStaged, galleryProblem, galleryStaged, movePicture, removePicture, setGalleryStyle, setPictureAlt,
   addColumn, addRow, chipLabel, decodeStaged, embedProblem, emptyEmbed, emptyTable, encodeStaged, mapSrcFrom, removeColumn, removeRow, setCell, setEmbedField,
   setGroupLabel, setGroupSpans, tableProblem, youtubeIdFrom,
 } from "./blockForms";
@@ -88,4 +89,44 @@ describe("chipLabel", () => {
     expect(chipLabel("embed", emptyEmbed("map"))).toBe("Xarita (saqlaganingizda yangilanadi)");
     expect(chipLabel("embed", setEmbedField(emptyEmbed("youtube"), "video_id", "x"), false)).toBe("YouTube video — tahrirlash uchun bosing");
   });
+});
+
+describe("galleries keep the same pictures in the three languages", () => {
+  const server = {
+    uz: { style: "plain", items: [{ image_id: 1, alt: "bir" }, { image_id: 2, alt: "ikki" }] },
+    ru: { style: "plain", items: [{ image_id: 1, alt: "один" }, { image_id: 2, alt: "" }] },
+    en: { style: "plain", items: [{ image_id: 1, alt: "" }, { image_id: 2, alt: "two" }] },
+  };
+  const images = { "1": { file: "http://x/a.png" }, "2": { file: "http://x/b.png" } };
+
+  it("opens from the saved block with every language's alt text", () => {
+    const form = galleryFormFromServer(server, images);
+    expect(form.style).toBe("plain");
+    expect(form.pictures.map((p) => [p.image_id, p.url, p.alt.ru, p.alt.en])).toEqual([[1, "http://x/a.png", "один", ""], [2, "http://x/b.png", "", "two"]]);
+  });
+  it("sends the same pictures in the same order to every language, each with its own alt", () => {
+    const form = movePicture(setPictureAlt(galleryFormFromServer(server, images), "ru", 1, "два"), 0, 1);
+    const staged = galleryStaged(form);
+    for (const lang of ["uz", "ru", "en"] as const) expect(staged[lang].items.map((i) => i.image_id)).toEqual([2, 1]);
+    expect(staged.ru.items[0].alt).toBe("два");
+    expect(staged.uz.items[0].alt).toBe("ikki");
+  });
+  it("adds a picked file by its path, removes by position and never moves past the ends", () => {
+    const form = addPictures(galleryFormFromServer(server, images), [{ path: "uploads/admin/c.png", url: "http://x/c.png" }]);
+    expect(galleryStaged(form).en.items[2]).toMatchObject({ path: "uploads/admin/c.png", url: "http://x/c.png", alt: "" });
+    expect(removePicture(form, 0).pictures).toHaveLength(2);
+    expect(movePicture(form, 0, -1)).toBe(form);
+    expect(movePicture(form, 2, 1)).toBe(form);
+  });
+  it("round-trips through the staged form (a chip edited twice before the page is saved)", () => {
+    const form = setGalleryStyle(addPictures(galleryFormFromServer(server, images), [{ path: "uploads/admin/c.png", url: "http://x/c.png" }]), "certificate");
+    expect(galleryFormFromStaged(galleryStaged(form))).toEqual(form);
+  });
+  it("leaves the style out for the plain default and asks for at least one picture", () => {
+    const form = setGalleryStyle(galleryFormFromServer(server, images), "");
+    expect(galleryStaged(form).uz.style).toBeUndefined();
+    expect(galleryProblem(removePicture(removePicture(form, 0), 0))).toMatch(/kamida/);
+    expect(galleryProblem(form)).toBeNull();
+  });
+  it("names itself like the server does", () => expect(chipLabel("gallery", galleryStaged(galleryFormFromServer(server, images)) as never, false)).toBe("Rasmlar galereyasi (2 ta) — tahrirlash uchun bosing"));
 });

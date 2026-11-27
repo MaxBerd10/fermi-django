@@ -16,7 +16,7 @@ from rest_framework.response import Response
 from apps.content.admin_content import EDITABLE_TYPES, blocks_to_html, write_blocks_from_html
 from apps.content.models import ContentBlock, Page
 from apps.content.raw_editing import is_raw_capable
-from apps.media_lib.models import Document
+from apps.media_lib.models import Document, Image
 from apps.menu.models import MenuItem
 
 from .common import AdminSearchMixin, AdminPagination, IsAdminStaff
@@ -166,4 +166,7 @@ class AdminPageViewSet(AdminSearchMixin, viewsets.ModelViewSet):
         if found.block_type == "document":  # the form shows which file the card is for (it cannot be changed here)
             document = Document.objects.filter(pk=(found.data.get("uz") or {}).get("document_id")).first()
             body["document"] = {"title": document.title, "filename": document.file.name.rsplit("/", 1)[-1]} if document else None
+        if found.block_type == "gallery":  # the form shows the pictures: id -> address and size
+            ids = {item.get("image_id") for lang in ("uz", "ru", "en") for item in (found.data.get(lang) or {}).get("items", [])}
+            body["images"] = {str(image.pk): {"file": request.build_absolute_uri(image.file.url), "width": image.width, "height": image.height} for image in Image.objects.filter(pk__in=ids)}
         return Response(body)

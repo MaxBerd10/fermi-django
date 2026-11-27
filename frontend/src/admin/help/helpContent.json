@@ -217,7 +217,7 @@
           "type": "tip",
           "title": "Koʻk chiziqli «chip» bloklar",
           "items": [
-            "Editorda nuqtali koʻk ramkali «Jadval…», «Hujjat…», «Xarita», «YouTube video» deb yozilgan qatorlar bor. Bular matn emas, tayyor bloklar: ularni sudrab boshqa joyga olib oʻtish mumkin. «Tahrirlash uchun bosing» deb yozilganlarini (jadval, video, xarita, hujjat kartasi) Oʻzbekcha tabda ikki marta bosib yoki belgilab «Blokni tahrirlash» tugmasi bilan oching: forma uch tilni birga ushlaydi, oʻzgarish sahifani «Saqlash» bilan saqlaganingizda kuchga kiradi. Yangi jadval, YouTube video va xarita tepadagi asboblar panelidagi tugmalar bilan qoʻshiladi. Galereya va xodim kartasi hozircha tahrirlanmaydi (surish va oʻchirish mumkin).",
+            "Editorda nuqtali koʻk ramkali «Jadval…», «Hujjat…», «Xarita», «YouTube video», «Rasmlar galereyasi» deb yozilgan qatorlar bor. Bular matn emas, tayyor bloklar: ularni sudrab boshqa joyga olib oʻtish mumkin. «Tahrirlash uchun bosing» deb yozilganlarini (jadval, video, xarita, hujjat kartasi, galereya) Oʻzbekcha tabda ikki marta bosib yoki belgilab «Blokni tahrirlash» tugmasi bilan oching: forma uch tilni birga ushlaydi, oʻzgarish sahifani «Saqlash» bilan saqlaganingizda kuchga kiradi. Yangi jadval, YouTube video va xarita tepadagi asboblar panelidagi tugmalar bilan qoʻshiladi. Xodim kartasi va yuklangan video bloki hozircha tahrirlanmaydi (surish va oʻchirish mumkin).",
             "Ularni oʻchirish uchun ustiga bosing va klaviaturada Delete (yoki Backspace) bosing. Tasodifan oʻchirib qoʻysangiz, saqlashdan oldin «Bekor qilish» ni bosing.",
             "Hech narsa oʻzgartirmay «Saqlash» bossangiz, ular joyida qoladi."
           ]

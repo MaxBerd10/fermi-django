@@ -9,7 +9,7 @@ import { apiClient } from "@/api/client";
 import MediaLibraryModal from "./MediaLibraryModal";
 import { PreservedBlock } from "./PreservedBlock";
 import BlockEditorModal, { type EditableBlockType } from "./blocks/BlockEditorModal";
-import { chipLabel, decodeStaged, documentFormData, emptyEmbed, emptyTable, encodeStaged, type DocumentData } from "@/admin/lib/blockForms";
+import { chipLabel, decodeStaged, documentFormData, emptyEmbed, emptyTable, encodeStaged, galleryFormFromServer, galleryFormFromStaged } from "@/admin/lib/blockForms";
 
 interface RichTextEditorProps {
   label: string;
@@ -30,9 +30,11 @@ interface RichTextEditorProps {
   allowBlocks?: boolean;
   /** The page being edited: a chip of a saved block asks the server for its data by this id (a page that is not saved yet has none). */
   pageId?: number;
+  /** The ru/en editors cannot open a block's form (the structure is the Uzbek tab's): this takes the person to the Uzbek tab. */
+  onGoUzbek?: () => void;
 }
 
-const EDITABLE_TYPES = new Set<string>(["table", "embed", "document"]);
+const EDITABLE_TYPES = new Set<string>(["table", "embed", "document", "gallery"]);
 
 interface BlockFormState {
   mode: "new" | "edit";
@@ -99,9 +101,10 @@ function ToolbarButton({ active, disabled, onClick, title, icon }: ToolbarButton
  * A "Kod" (HTML source) toggle is kept for anyone who wants to hand-edit
  * markup the visual toolbar doesn't expose.
  */
-export default function RichTextEditor({ label, value, onChange, allowFiles = false, rawHtml = false, allowBlocks = false, pageId }: RichTextEditorProps) {
+export default function RichTextEditor({ label, value, onChange, allowFiles = false, rawHtml = false, allowBlocks = false, pageId, onGoUzbek }: RichTextEditorProps) {
   const [blockForm, setBlockForm] = useState<BlockFormState | null>(null);
   const openChipRef = useRef<(pos: number) => void>(() => {});
+  const [uzbekHint, setUzbekHint] = useState(false);
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -197,16 +200,22 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
     if (!editor || !node || node.type.name !== "preservedBlock") return;
     const blockType = String(node.attrs.blockType) as EditableBlockType;
     setUploadError("");
+    if (!allowBlocks) {
+      if (onGoUzbek) setUzbekHint(true);
+      return;
+    }
     try {
       const staged = (node.attrs.newBlock ? decodeStaged<{ block_type: string; data: unknown }>(String(node.attrs.newBlock))?.data : null)
         ?? (node.attrs.blockJson ? decodeStaged<unknown>(String(node.attrs.blockJson)) : null);
       if (staged) {
-        setBlockForm({ mode: "edit", blockType, initial: blockType === "document" ? documentFormData(staged as never) : staged, pos, isNew: Boolean(node.attrs.newBlock), documentInfo: null });
+        const initial = blockType === "document" ? documentFormData(staged as never) : blockType === "gallery" ? galleryFormFromStaged(staged as never) : staged;
+        setBlockForm({ mode: "edit", blockType, initial, pos, isNew: Boolean(node.attrs.newBlock), documentInfo: null });
         return;
       }
       if (!pageId) throw new Error("Sahifani avval saqlang, keyin blokni tahrirlang.");
-      const { data } = await apiClient.get<{ block_type: string; data: unknown; document?: { title: string; filename: string } | null }>(`admin/pages/${pageId}/blocks/${node.attrs.blockId}`, undefined, true);
-      setBlockForm({ mode: "edit", blockType, initial: blockType === "document" ? documentFormData(data.data as never) : data.data, documentInfo: data.document ?? null, pos });
+      const { data } = await apiClient.get<{ block_type: string; data: unknown; document?: { title: string; filename: string } | null; images?: Record<string, { file: string }> }>(`admin/pages/${pageId}/blocks/${node.attrs.blockId}`, undefined, true);
+      const initial = blockType === "document" ? documentFormData(data.data as never) : blockType === "gallery" ? galleryFormFromServer(data.data as never, data.images ?? {}) : data.data;
+      setBlockForm({ mode: "edit", blockType, initial, documentInfo: data.document ?? null, pos });
     } catch (err) {
       setUploadError(err instanceof Error ? err.message : "Blok ma'lumotini yuklab bo'lmadi.");
     }
@@ -392,6 +401,16 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
                   onClick={() => documentInputRef.current?.click()}
                 />
               )}
+              {!allowBlocks && onGoUzbek && cursor?.editableChip !== null && cursor?.editableChip !== undefined && (
+                <button
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => setUzbekHint(true)}
+                  className="ml-1 h-8 px-3 rounded-md bg-primary-500 text-background-50 text-xs font-semibold cursor-pointer hover:bg-primary-600 flex items-center gap-1.5"
+                >
+                  <i className="ri-edit-2-line" /> Blokni tahrirlash
+                </button>
+              )}
               {allowBlocks && (
                 <>
                   <span className="w-px h-5 bg-background-300 mx-1" />
@@ -423,6 +442,13 @@ export default function RichTextEditor({ label, value, onChange, allowFiles = fa
               <span className="w-px h-5 bg-background-300 mx-1" />
               <ToolbarButton title="Bekor qilish" icon="ri-arrow-go-back-line" disabled={!editor.can().undo()} onClick={() => editor.chain().focus().undo().run()} />
               <ToolbarButton title="Qaytarish" icon="ri-arrow-go-forward-line" disabled={!editor.can().redo()} onClick={() => editor.chain().focus().redo().run()} />
+            </div>
+          )}
+          {uzbekHint && onGoUzbek && (
+            <div role="status" className="flex flex-wrap items-center gap-2 px-3 py-2 border-b border-background-200 bg-primary-50 text-sm">
+              <span>Bloklarni (jadval, video, xarita, hujjat, galereya) faqat <strong>O'zbekcha</strong> tabda tahrirlash mumkin: o'sha oynada uchala til birga turadi.</span>
+              <button type="button" onClick={() => { setUzbekHint(false); onGoUzbek(); }} className="h-8 px-3 rounded-md bg-primary-500 text-background-50 text-xs font-semibold cursor-pointer">O'zbekcha tabga o'tish</button>
+              <button type="button" onClick={() => setUzbekHint(false)} className="h-8 px-3 rounded-md border border-background-300 text-xs cursor-pointer">Yopish</button>
             </div>
           )}
           {linkOpen && (

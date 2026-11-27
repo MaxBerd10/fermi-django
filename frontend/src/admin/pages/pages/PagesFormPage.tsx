@@ -212,6 +212,7 @@ export default function PagesFormPage() {
             allowFiles={lang === "uz"}
             allowBlocks={lang === "uz" && !form.raw_editing}
             pageId={form.id ? Number(form.id) : undefined}
+            onGoUzbek={lang === "uz" ? undefined : () => setLang("uz")}
             rawHtml={Boolean(form.raw_editing)}
           />
           {fieldErrors[`content_${lang}`] && <p className="mt-1 text-xs text-red-600">{fieldErrors[`content_${lang}`][0]}</p>}

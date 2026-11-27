@@ -2,16 +2,18 @@
 payload of every language in a `data-block-json` attribute of the chip (or in a `data-new-block` marker for a new one), as base64 of JSON, and the server applies it when the page
 is saved -- validated like any block, and only for blocks of THIS page and of the three types that have a form."""
 import base64
+import io
 import json
 
 import pytest
+from PIL import Image as PILImage
 from django.core.exceptions import ValidationError
 from django.core.files.base import ContentFile
 from rest_framework.test import APIClient
 
 from apps.content.admin_content import blocks_to_html, write_blocks_from_html
 from apps.content.models import ContentBlock, Page
-from apps.media_lib.models import Document
+from apps.media_lib.models import Document, Image
 
 LANGS = ("uz", "ru", "en")
 
@@ -155,10 +157,10 @@ def test_all_three_languages_are_required(page):
 
 
 def test_a_block_type_without_a_form_cannot_be_rewritten_through_the_attribute(page):
-    gallery = add(page, 1, "gallery", same({"items": [{"image_id": 1, "alt": ""}]}))
+    card = add(page, 1, "staff_card", same({"full_name": "Ism Familiya"}))
 
     with pytest.raises(ValidationError):
-        save(page, chip(gallery, data_block_json=b64(same({"items": []}))))
+        save(page, chip(card, data_block_json=b64(same({"full_name": "Boshqa"}))))
 
 
 def test_the_attribute_cannot_reach_a_block_of_another_page(page):
@@ -215,7 +217,7 @@ def test_an_invalid_new_block_is_refused_and_the_page_is_unchanged(page):
     assert ContentBlock.objects.filter(page=page).count() == 1
 
 
-@pytest.mark.parametrize("block_type", ["gallery", "raw_html", "document", "staff_card", "video"])
+@pytest.mark.parametrize("block_type", ["gallery", "raw_html", "document", "staff_card", "video"])  # a gallery needs pictures: its form edits a block that exists
 def test_only_a_table_and_an_embed_can_be_created_this_way(page, block_type):
     with pytest.raises(ValidationError):
         save(page, new_marker(block_type, table_data()))
@@ -236,7 +238,7 @@ def test_the_chips_of_editable_blocks_say_they_can_be_edited(page, document):
     add(page, 1, "table", same({"headers": ["A"], "rows": [["1"]]}))
     add(page, 2, "embed", same({"provider": "youtube", "video_id": "Mg6MBqg4f5o", "title": "V"}))
     add(page, 3, "document", same({"document_id": document.id, "caption": "H", "style": "card"}))
-    add(page, 4, "gallery", same({"items": [{"image_id": 1, "alt": ""}]}))
+    add(page, 4, "staff_card", same({"full_name": "Ism Familiya"}))
 
     html = blocks_to_html(page, "uz")
 
@@ -265,10 +267,10 @@ def test_the_editor_reads_the_payload_of_a_block_it_is_about_to_edit(admin_clien
 def test_a_block_of_another_page_or_without_a_form_is_not_readable_this_way(admin_client, page):
     other = Page.objects.create(slug="boshqa-2")
     stranger = add(other, 1, "table", same({"headers": ["A"], "rows": [["1"]]}))
-    gallery = add(page, 1, "gallery", same({"items": [{"image_id": 1, "alt": ""}]}))
+    card = add(page, 1, "staff_card", same({"full_name": "Ism Familiya"}))
 
     assert admin_client.get(f"/api/v1/admin/pages/{page.pk}/blocks/{stranger.pk}").status_code == 404
-    assert admin_client.get(f"/api/v1/admin/pages/{page.pk}/blocks/{gallery.pk}").status_code == 404
+    assert admin_client.get(f"/api/v1/admin/pages/{page.pk}/blocks/{card.pk}").status_code == 404
 
 
 def test_the_block_reader_needs_an_admin(page):
@@ -285,3 +287,97 @@ def test_saving_an_invalid_block_through_the_page_form_is_a_400_not_a_500(admin_
     response = admin_client.put(f"/api/v1/admin/pages/{page.pk}", {"title_uz": "T", "slug": page.slug, "layout": "default", "content_uz": uz, "content_ru": uz, "content_en": uz}, format="json")
 
     assert response.status_code == 400
+
+
+# ---------------------------------------------------------------- a gallery
+
+def make_image(name="g.png"):
+    buffer = io.BytesIO()
+    PILImage.new("RGB", (6, 4), (10, 90, 200)).save(buffer, "PNG")
+    image = Image(alt_text="")
+    image.file.save(name, ContentFile(buffer.getvalue()), save=True)
+    return image
+
+
+def gallery_data(items_by_lang, style=None):
+    return {lang: ({"style": style} if style else {}) | {"items": items_by_lang[lang]} for lang in LANGS}
+
+
+@pytest.fixture
+def pictures(db):
+    return [make_image(f"g{i}.png") for i in range(3)]
+
+
+def test_a_gallery_can_lose_a_picture_change_order_style_and_alt_texts(page, pictures):
+    first, second, third = pictures
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": p.id, "alt": ""} for p in pictures]}))
+    items = {lang: [{"image_id": third.id, "alt": f"{lang} uch"}, {"image_id": first.id, "alt": f"{lang} bir"}] for lang in LANGS}
+
+    save(page, chip(gallery, data_block_json=b64(gallery_data(items, "plain"))))
+
+    gallery.refresh_from_db()
+    assert gallery.data["ru"] == {"style": "plain", "items": [{"image_id": third.id, "alt": "ru uch"}, {"image_id": first.id, "alt": "ru bir"}]}
+    assert second.id not in [i["image_id"] for i in gallery.data["uz"]["items"]]
+
+
+def test_a_picture_picked_from_the_media_folder_becomes_an_image_row(page, pictures):
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": pictures[0].id, "alt": ""}]}))
+    new = make_image("kutubxona.png")
+    path = new.file.name
+    new.delete()  # the file stays on disk, but no Image row knows it: what the media library offers
+    items = {lang: [{"image_id": pictures[0].id, "alt": ""}, {"path": path, "alt": f"{lang} yangi"}] for lang in LANGS}
+
+    save(page, chip(gallery, data_block_json=b64(gallery_data(items))))
+
+    gallery.refresh_from_db()
+    row = Image.objects.get(file=path)
+    assert [i["image_id"] for i in gallery.data["uz"]["items"]] == [pictures[0].id, row.id]
+    assert gallery.data["en"]["items"][1]["alt"] == "en yangi"
+
+
+def test_the_pictures_must_be_the_same_in_the_three_languages(page, pictures):
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": pictures[0].id, "alt": ""}]}))
+    items = {"uz": [{"image_id": pictures[0].id, "alt": ""}], "ru": [{"image_id": pictures[1].id, "alt": ""}], "en": [{"image_id": pictures[0].id, "alt": ""}]}
+
+    with pytest.raises(ValidationError):
+        save(page, chip(gallery, data_block_json=b64(gallery_data(items))))
+
+
+@pytest.mark.parametrize("bad_items", [
+    [],                                              # a gallery without pictures is deleted with its chip, not emptied
+    [{"image_id": 987654, "alt": ""}],               # a picture that does not exist
+    [{"path": "../../etc/passwd.png", "alt": ""}],   # out of the media folder
+    [{"path": "uploads/admin/virus.exe", "alt": ""}],  # not a picture
+    [{"path": "uploads/yoq-fayl.png", "alt": ""}],   # a file that is not there
+    [{"image_id": "1", "alt": ""}],                  # an id is a number
+])
+def test_a_gallery_with_a_bad_picture_is_refused(page, pictures, bad_items):
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": pictures[0].id, "alt": ""}]}))
+
+    with pytest.raises(ValidationError):
+        save(page, chip(gallery, data_block_json=b64(gallery_data({lang: bad_items for lang in LANGS}))))
+
+
+def test_an_unknown_gallery_style_and_markup_in_an_alt_text_are_refused(page, pictures):
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": pictures[0].id, "alt": ""}]}))
+    ok = {lang: [{"image_id": pictures[0].id, "alt": "x"}] for lang in LANGS}
+
+    with pytest.raises(ValidationError):
+        save(page, chip(gallery, data_block_json=b64(gallery_data(ok, "evil"))))
+    with pytest.raises(ValidationError):
+        save(page, chip(gallery, data_block_json=b64(gallery_data({lang: [{"image_id": pictures[0].id, "alt": "<b>x</b>"}] for lang in LANGS}))))
+
+
+def test_the_gallery_form_gets_the_addresses_of_its_pictures(admin_client, page, pictures):
+    gallery = add(page, 1, "gallery", same({"items": [{"image_id": p.id, "alt": "a"} for p in pictures[:2]]}))
+
+    body = admin_client.get(f"/api/v1/admin/pages/{page.pk}/blocks/{gallery.pk}").json()
+
+    assert set(body["images"]) == {str(p.id) for p in pictures[:2]}
+    assert body["images"][str(pictures[0].id)]["file"].endswith(pictures[0].file.name.rsplit("/", 1)[-1])
+
+
+def test_a_gallery_chip_says_it_can_be_edited(page, pictures):
+    add(page, 1, "gallery", same({"items": [{"image_id": pictures[0].id, "alt": ""}]}))
+
+    assert "Rasmlar galereyasi (1 ta) — tahrirlash uchun bosing" in blocks_to_html(page, "uz")

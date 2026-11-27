@@ -61,6 +61,7 @@ from types import SimpleNamespace
 from urllib.parse import unquote
 
 from django.conf import settings
+from django.core.files.storage import default_storage
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db import transaction
 
@@ -166,7 +167,7 @@ def _placeholder_label(block: ContentBlock, payload: dict) -> str:
     if kind == "embed":
         return ("Xarita" if payload.get("provider") == "map" else "YouTube video") + f" {payload.get('title') or ''} — tahrirlash uchun bosing".replace("  ", " ")
     if kind == "gallery":
-        return f"Rasmlar galereyasi ({len(payload.get('items') or [])} ta) — tahrirlanmaydi"
+        return f"Rasmlar galereyasi ({len(payload.get('items') or [])} ta) — tahrirlash uchun bosing"
     if kind == "video":
         return "Video — tahrirlanmaydi"
     if kind in ("heading", "paragraph", "list"):
@@ -348,14 +349,17 @@ def _carry_hidden_attributes(block_type: str, old_data: dict, new_data: dict) ->
 # --- editing the blocks the rich-text editor shows as chips ---------------------------------------------------------------------------------------------------------
 # The editor stages the new payload of every language of an edited chip in a `data-block-json` attribute (base64 of JSON) and puts a `data-new-block` marker where a new
 # table / embed was added; the server applies both when the page is saved, validated like any block. Only the three types below have a form, only blocks of THIS page are touched.
-EDITABLE_TYPES = frozenset({"table", "embed", "document"})
+EDITABLE_TYPES = frozenset({"table", "embed", "document", "gallery"})
 CREATABLE_TYPES = frozenset({"table", "embed"})
 DOCUMENT_STYLES = ("card", "button", "roadmap", "attachment")
 _EDITABLE_KEYS = {
     "table": ("headers", "rows", "header_groups"),
     "embed": ("provider", "video_id", "src", "height", "title"),
     "document": ("style", "caption"),
+    "gallery": ("style", "items"),
 }
+GALLERY_STYLES = ("certificate", "plain")
+_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp")
 _BLOCK_JSON_RE = re.compile(r"""\bdata-block-json\s*=\s*["']([^"']*)["']""", re.I)
 _NEW_BLOCK_RE = re.compile(r"""<div\b[^>]*\bdata-new-block\s*=\s*["']([^"']+)["'][^>]*>.*?</div>""", re.I | re.S)
 
@@ -367,10 +371,56 @@ def _decode_staged(raw: str):
         raise DjangoValidationError("Blok ma'lumoti o'qilmadi. Sahifani qayta yuklab, qaytadan urinib ko'ring.")
 
 
+def _image_for_staged_item(item, cache: dict) -> int:
+    """The Image row a staged gallery picture means: an existing row by id, or a file picked from the media folder (a row is made for it when none knows it yet)."""
+    if not isinstance(item, dict):
+        raise DjangoValidationError("Galereya rasmi noto'g'ri.")
+    if "image_id" in item:
+        image_id = item["image_id"]
+        if isinstance(image_id, bool) or not isinstance(image_id, int) or not Image.objects.filter(pk=image_id).exists():
+            raise DjangoValidationError("Galereyadagi rasm topilmadi.")
+        return image_id
+    path = unquote(html_lib.unescape(str(item.get("path") or ""))).lstrip("/")
+    media_prefix = settings.MEDIA_URL.strip("/") + "/"
+    if path.startswith(media_prefix):
+        path = path[len(media_prefix):]
+    if not path or ".." in path.split("/") or not path.lower().endswith(_IMAGE_EXTENSIONS):
+        raise DjangoValidationError("Galereya uchun faqat media papkadagi rasm fayli tanlanadi.")
+    if path not in cache:
+        image = Image.objects.filter(file=path).first()
+        if image is None:
+            if not default_storage.exists(path):
+                raise DjangoValidationError("Tanlangan rasm fayli topilmadi.")
+            image = Image(file=path, alt_text="")
+            image.save()
+        cache[path] = image.id
+    return cache[path]
+
+
+def _clean_gallery(data) -> dict:
+    cleaned, cache = {}, {}
+    for lang in LANGS:
+        payload = data[lang]
+        items = payload.get("items")
+        if not isinstance(items, list) or not items:
+            raise DjangoValidationError("Galereyada kamida bitta rasm bo'lishi kerak (butun galereyani chipni o'chirib olib tashlang).")
+        cleaned[lang] = {"items": [{"image_id": _image_for_staged_item(item, cache), "alt": str(item.get("alt") or "")} for item in items]}
+        style = payload.get("style")
+        if style:
+            if style not in GALLERY_STYLES:
+                raise DjangoValidationError("Galereya uslubi noto'g'ri.")
+            cleaned[lang]["style"] = style
+    if len({tuple(item["image_id"] for item in cleaned[lang]["items"]) for lang in LANGS}) != 1:
+        raise DjangoValidationError("Galereya rasmlari uchala tilda bir xil bo'lishi kerak.")
+    return cleaned
+
+
 def _clean_staged_payload(block_type: str, data, old: dict | None = None) -> dict:
     """The payload (uz/ru/en) the editor sent, reduced to the fields of the form; a document keeps the file it has (the request cannot change it)."""
     if not isinstance(data, dict) or not all(isinstance(data.get(lang), dict) for lang in LANGS):
         raise DjangoValidationError("Blok uchta tilda ham to'liq bo'lishi kerak (uz, ru, en).")
+    if block_type == "gallery":
+        return _clean_gallery(data)
     cleaned = {}
     for lang in LANGS:
         payload = {key: data[lang][key] for key in _EDITABLE_KEYS[block_type] if key in data[lang]}
