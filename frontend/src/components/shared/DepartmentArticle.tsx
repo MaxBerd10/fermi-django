@@ -43,6 +43,16 @@ function datedEntry(block: ContentBlock) {
 /** The lower-case closing word of an Uzbek patronymic ("Saidova Sohibahon Abrorjon qizi", "Рахматшоев Муслимбек Нозимжон угли"): part of the name, not a lower-case word that ends a title. */
 const PATRONYMIC_PARTICLE = /^(?:qizi|kizi|ogli|ugli|o[ʻʼ‘’']g[ʻʼ‘’']li|кизи|қизи|угли|ўғли)$/iu;
 
+/**
+ * A name with no portrait beside it is taken for a member of staff only when it ends like a full name (a patronymic: -ovich, -evna, qizi, oʻgʻli, -ович, -овна, кизи, угли ...).
+ * Every English title in Title Case ("International Cooperation", "The Department's Research Work") looks like a name otherwise.
+ */
+const PATRONYMIC_END = /(?:(?:o|e|ye|yo)?v(?:ich|na)|qizi|kizi|ogli|ugli|o[ʻʼ‘’']g[ʻʼ‘’']li|(?:ов|ев|ёв)(?:ич|на)|ична|кизи|қизи|угли|ўғли)$/iu;
+
+function looksLikeFullName(name: string): boolean {
+  return PATRONYMIC_END.test(name.trim());
+}
+
 function profileName(block: ContentBlock) {
   if (block.block_type !== "heading" && !(block.block_type === "paragraph" && block.data.bold)) return;
   const text = block.data.text.trim();
@@ -167,7 +177,7 @@ export default function DepartmentArticle({ blocks }: { blocks: ContentBlock[] }
       continue;
     }
 
-    if (name && blocks[index + 1]?.block_type === "paragraph") {
+    if (name && looksLikeFullName(name) && blocks[index + 1]?.block_type === "paragraph") {
       // a person's name with no portrait: the same profile card, without a photo (role = a short first line, biography = the paragraphs under it)
       const biography: ContentBlock[] = [];
       let next = blocks[index + 1];
