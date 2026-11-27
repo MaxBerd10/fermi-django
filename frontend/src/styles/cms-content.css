@@ -20,7 +20,7 @@
   font-style: italic;
   line-height: 1.75;
   padding-left: 1.25rem;
-  border-left: 3px solid #ffd600;
+  border-left: 3px solid var(--callout-edge);
 }
 
 .prose-content h1,
@@ -673,9 +673,9 @@
   color: var(--content-text);
   margin-bottom: 1.5rem;
   padding: 1.125rem 1.25rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
-  border-left: 4px solid #0a1158;
-  border-radius: 0 0.75rem 0.75rem 0;
+  background: var(--callout-bg);
+  border-left: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
 }
 
 .cms-article--council .cms-council-tasks {

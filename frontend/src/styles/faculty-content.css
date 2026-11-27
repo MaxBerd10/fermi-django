@@ -153,8 +153,9 @@
 }
 
 .faculty-overview__mission {
-  border-inline-start: 3px solid #ebc100;
-  background: #fff;
+  border-inline-start: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
+  background: var(--callout-bg);
   color: var(--content-text);
   line-height: var(--content-leading);
 }

@@ -610,20 +610,20 @@
 /* the document cards' buttons (cms-download-btn) keep their own colours: this rule used to turn the white text of
    "Brauzerda ochish" navy on its navy button, so the label vanished on every news post with a PDF card */
 .cms-article--news a:not(.cms-download-btn) {
-  color: #0a1158;
-  font-weight: 600;
+  color: var(--content-ink);
+  font-weight: var(--link-weight);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: var(--link-offset);
 }
 
 .cms-article--news blockquote {
   margin: 1.25em 0;
   padding: 0.875rem 1.125rem;
-  border-left: 4px solid #ffd600;
-  background: #f8fafc;
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: 3px solid var(--callout-edge);
+  background: var(--callout-bg);
+  border-radius: var(--callout-radius);
   font-style: italic;
-  color: #475569;
+  color: var(--content-muted);
 }
 
 .news-article__download {

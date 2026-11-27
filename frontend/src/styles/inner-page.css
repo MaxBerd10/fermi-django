@@ -219,9 +219,9 @@
 
 .academic-intro__note {
   padding: .875rem 1rem;
-  background: #f5f7fc;
-  border-inline-start: 3px solid #ebc100;
-  border-radius: 0 .625rem .625rem 0;
+  background: var(--callout-bg);
+  border-inline-start: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
   color: var(--content-text);
   line-height: var(--content-leading);
 }
@@ -705,14 +705,15 @@
 
 .inner-page-body .reference-intro > p:first-child:not(:has(img, video, iframe)) {
   padding: .875rem 1rem;
-  border-inline-start: 3px solid #ebc100;
-  border-radius: 0 .625rem .625rem 0;
-  background: #f5f7fc;
+  border-inline-start: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
+  background: var(--callout-bg);
 }
 
 .inner-page-body .council-overview .cms-council-intro {
-  background: #edf1fa;
-  border-inline-start: 4px solid #101c4e;
+  background: var(--callout-bg);
+  border-inline-start: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
 }
 
 .inner-page-body .council-overview .cms-council-intro > p {
@@ -1234,9 +1235,9 @@
 
 .inner-page-body .structure-document-signature {
   padding: .875rem 1rem;
-  border-inline-start: 3px solid #ebc100;
-  border-radius: 0 .625rem .625rem 0;
-  background: #f5f7fc;
+  border-inline-start: 3px solid var(--callout-edge);
+  border-radius: var(--callout-radius);
+  background: var(--callout-bg);
 }
 
 .inner-page-body .structure-document-signature > p {

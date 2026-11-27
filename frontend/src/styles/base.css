@@ -10,6 +10,12 @@
   --content-h2-weight: 750;
   --content-h3-weight: 700;
   --content-leading: 1.75;
+  /* The ONE call-out (a lead sentence, a note, a quotation, a signature block): pale panel, yellow edge on the start side, rounded on the far side. */
+  --callout-bg: #f5f7fc;
+  --callout-edge: #ebc100;
+  --callout-radius: 0 .625rem .625rem 0;
+  --link-weight: 500;
+  --link-offset: 3px;
   --section-py: clamp(1rem, 2vw, 1.5rem);
   --section-px: clamp(0.85rem, 3.2vw, 3.5rem);
   --content-max: 100%;
