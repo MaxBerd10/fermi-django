@@ -54,6 +54,12 @@ export function picturesOf(block: ContentBlock): Picture[] {
   return [];
 }
 
+/** The pictures of a `plain` gallery block: a group that keeps its place in the page (see GalleryBlockData). */
+export function plainGalleryPictures(block: ContentBlock): Picture[] {
+  if (block.block_type !== "gallery" || block.data.style !== "plain") return [];
+  return block.data.items.flatMap((item) => (item.image ? [toPicture(item.image.file, item.alt ?? item.image.alt_text ?? "", item.image.width, item.image.height)] : []));
+}
+
 /** A block the engine draws on its own (a document card, old HTML, a video, a styled picture group...). */
 function isStandalone(block: ContentBlock): boolean {
   if (block.block_type === "raw_html" || block.block_type === "embed") return true;

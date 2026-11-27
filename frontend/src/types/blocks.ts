@@ -92,7 +92,9 @@ export interface GalleryBlockData {
   /** "certificate" renders the numbered/award-badge/captioned card grid the old
    * site's bespoke certificate-page template used (see .cms-cert-* in
    * cms-content.css); absent/anything else keeps the plain square-thumbnail grid. */
-  style?: "certificate";
+  /** `plain` is a group of pictures that stays exactly where it stands in the page, under its own heading (the article layout otherwise gathers all the
+   * loose pictures of a section into one row after its text), drawn as the article gallery. */
+  style?: "certificate" | "plain";
 }
 export interface TableBlockData {
   headers: string[];

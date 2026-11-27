@@ -2,7 +2,7 @@ import { Fragment, type ReactNode } from "react";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import LinkifiedText from "@/blocks/LinkifiedText";
 import { optimizedImageUrl } from "@/lib/imageProxy";
-import { layoutBlocks, type Picture, type Section } from "@/lib/layoutBlocks";
+import { layoutBlocks, plainGalleryPictures, type Picture, type Section } from "@/lib/layoutBlocks";
 import type { ContentBlock } from "@/types/blocks";
 
 /** Draws the sections of `layoutBlocks`. All the decisions (what goes beside what) are made there; this only draws. */
@@ -128,8 +128,10 @@ function SectionView({ section }: { section: Section }) {
           <div className="article-step__body">{drawBlocks(section.text)}</div>
         </article>
       );
-    case "block":
-      return <BlockRenderer block={section.block} />;
+    case "block": {
+      const group = plainGalleryPictures(section.block);
+      return group.length > 0 ? <PictureRow pictures={group} /> : <BlockRenderer block={section.block} />;
+    }
     case "section":
       if (section.pictures.length === 0) return <>{drawBlocks(section.blocks)}</>;
       if (section.side) {
