@@ -164,7 +164,7 @@ export default function BlogPage() {
   const documentBlocks = sortedBlocks.filter((block) =>
     block.block_type === "document" || block.block_type === "raw_html",
   );
-  // a page with exactly one document (a PDF) opens it inline, in every section; the buttons (open, download) stand above it
+  // a page with exactly one document: its card takes the page's title when the file has none, and the "Yuklab olish uchun bosing >>>" line in front of it goes
   const inlinePdfBlockId = documentBlocks.length === 1 ? documentBlocks[0].id : undefined;
   const breadcrumb = sidebarSection
     ? (isReferencePage || sidebarSection.breadcrumbKey === "nav.section.default" ? normalizeYearLabels(sidebarSection.title) : t(sidebarSection.breadcrumbKey))
@@ -228,7 +228,7 @@ export default function BlogPage() {
                     </div>
                   ) : (
                     <div key={block.id} className="regulatory-index__full">
-                      <BlockRenderer block={block} showPdf={block.id === inlinePdfBlockId} documentTitle={title} />
+                      <BlockRenderer block={block} documentTitle={title} />
                     </div>
                   ))}
                 </div>

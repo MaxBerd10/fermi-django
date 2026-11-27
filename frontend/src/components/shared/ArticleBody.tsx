@@ -170,7 +170,7 @@ export default function ArticleBody({ blocks, inlinePdfBlockId, documentTitle }:
       {layoutBlocks(blocks).map((section, index) => (
         <Fragment key={index}>
           {section.kind === "block" && section.block.id === inlinePdfBlockId
-            ? <BlockRenderer block={section.block} showPdf documentTitle={documentTitle} />
+            ? <BlockRenderer block={section.block} documentTitle={documentTitle} />
             : <SectionView section={section} />}
         </Fragment>
       ))}

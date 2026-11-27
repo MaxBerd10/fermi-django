@@ -69,10 +69,9 @@ function VideoBlock({ src, poster, caption }: { src: string; poster: string; cap
  * surrounding layout, and a malformed block can't reach this component at all
  * (the backend rejects invalid block data before it's ever saved).
  */
-export function BlockRenderer({ block, documentTitle, showPdf = false }: {
+export function BlockRenderer({ block, documentTitle }: {
   block: ContentBlock;
   documentTitle?: string;
-  showPdf?: boolean;
 }) {
   const { t } = useTranslation();
   switch (block.block_type) {
@@ -213,7 +212,6 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
         <RawHtmlBlock
           html={block.data.html}
           className="cms-article--rich"
-          pdfTitle={showPdf ? documentTitle : undefined}
         />
       );
 
@@ -315,8 +313,9 @@ export function BlockRenderer({ block, documentTitle, showPdf = false }: {
 
       const title = caption || document.title || documentTitle || humanizeFilename(document.filename);
 
-      const isPdf = /\.pdf$/i.test(document.filename.trim()) || /\.pdf(?:[?#]|$)/i.test(documentUrl);
-      if (style === "roadmap" || (showPdf && isPdf && style !== "attachment")) {
+      // A PDF is opened inline only where a staff member chose the style "roadmap" (a page that IS the document); every other document is a card
+      // with "open" and "download" buttons: a viewer frame per page loaded the whole PDF (and its viewer) for visitors who never wanted it.
+      if (style === "roadmap") {
         return (
           <RoadmapPdfFrame
             key={documentUrl}
