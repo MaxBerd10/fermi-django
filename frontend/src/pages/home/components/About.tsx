@@ -8,9 +8,9 @@ import { FOUNDED_YEAR } from "@/lib/siteConstants";
 
 // The institute's own founding decree, real content migrated from the old
 // site's /about/<slug> endpoint (Page has no title field, so the decree's
-// own title -- always its 3rd block here, after the two short preamble
+// own title -- always its 3rd heading here, after the two short preamble
 // headings "O'ZBEKISTON RESPUBLIKASI PREZIDENTINING" / "QARORI" -- and its
-// first real paragraph are read positionally rather than duplicated as a
+// first paragraph are read positionally rather than duplicated as a
 // separate i18n string).
 const SLUG = "fargona-jamoat-salomatligi-tibbiyot-institutini-tashkil-etish-togrisida";
 
@@ -30,11 +30,9 @@ export default function About() {
   const heading = headings[2] ?? headings[0];
 
   const title = heading?.data.text ?? "";
-  const introText = blocks
-    .filter((b) => b.block_type === "heading" || b.block_type === "paragraph")
-    .map((b) => b.data.text)
-    .filter(Boolean)
-    .join(" ");
+  // The decree's first paragraph only: its headings are the title above (and the two preamble lines), so joining them printed the title twice in capitals
+  // in front of the legal text; the paragraph is cut after a few lines (the full text is one click away).
+  const introText = blocks.find((b) => b.block_type === "paragraph")?.data.text ?? "";
   const imageFile = image?.data.image?.file;
 
   return (
@@ -48,7 +46,7 @@ export default function About() {
             </h2>
           )}
           {introText && (
-            <p className="mt-3 text-sm md:text-[0.9375rem] text-foreground-600 leading-relaxed line-clamp-[12]">
+            <p className="mt-3 text-sm md:text-[0.9375rem] text-foreground-600 leading-relaxed line-clamp-4">
               {introText}
             </p>
           )}
