@@ -1,0 +1,530 @@
+[
+ {
+  "slug": "jcpm-2023",
+  "order": 4,
+  "lang": "ru",
+  "field": "caption",
+  "old": "On the course of the postpartum period in women infected with HIV",
+  "new": "О течении послеродового периода у женщин, инфицированных ВИЧ"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 5,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Hygienic assessment of cases of food poisoning of the environment population of Fergana region",
+  "new": "Гигиеническая оценка случаев пищевых отравлений среди населения Ферганской области"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 8,
+  "lang": "ru",
+  "field": "caption",
+  "old": "The impact of alimentary-constitutional obesity on the course of pregnancy and childbirth",
+  "new": "Влияние алиментарно-конституционального ожирения на течение беременности и родов"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 19,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Forensic biological significance of the impact on the sweat production of dacto powders used by forensic experts of the internal affairs bodies",
+  "new": "Судебно-биологическое значение воздействия пудр дактопорошков, применяемых судебными экспертами органов внутренних дел, на потоотделение"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 20,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Problems on the way to maintaining womenʻs reproductive health-care alcoholism among women",
+  "new": "Проблемы на пути сохранения репродуктивного здоровья женщин: алкоголизм среди женщин"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 23,
+  "lang": "ru",
+  "field": "caption",
+  "old": "The SF-36 questionnaire in assessing the health of women with premary birth",
+  "new": "Опросник SF-36 в оценке здоровья первородящих женщин"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 31,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Statistical analysis of factors for the development of cervical cancer for the period 2017-2021 in Fergana region",
+  "new": "Статистический анализ факторов развития рака шейки матки за 2017–2021 годы в Ферганской области"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 40,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Quality problems of drinking water and the importance of its monitoring",
+  "new": "Проблемы качества питьевой воды и важность её мониторинга"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 64,
+  "lang": "ru",
+  "field": "caption",
+  "old": "The thyroid and COVID-19: worldwide prevalence",
+  "new": "Щитовидная железа и COVID-19: мировая распространённость"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 65,
+  "lang": "ru",
+  "field": "caption",
+  "old": "A contemporary view of reproductive function in women with insulin-dependent diabetes mellitus",
+  "new": "Современный взгляд на репродуктивную функцию у женщин с инсулинозависимым сахарным диабетом"
+ },
+ {
+  "slug": "jcpm-2023",
+  "order": 69,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Early detection of oncological diseases using artificial intelligence in medicine",
+  "new": "Раннее выявление онкологических заболеваний с помощью искусственного интеллекта в медицине"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 13,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Pathomorphological changes in the heart in sudden cardiac death",
+  "new": "Патоморфологические изменения сердца при внезапной сердечной смерти"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 14,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Study of the histomorphological condition of the respiratory tract in experimental animals (rabbits) under normal conditions",
+  "new": "Изучение гистоморфологического состояния дыхательных путей у экспериментальных животных (кроликов) в норме"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 17,
+  "lang": "ru",
+  "field": "caption",
+  "old": "The role of artificial intelligence and chatgpt in medical education",
+  "new": "Роль искусственного интеллекта и ChatGPT в медицинском образовании"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 21,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Morphometric basis of early diagnosis of gallstone diseases",
+  "new": "Морфометрическое обоснование ранней диагностики желчнокаменной болезни"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 25,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Diagnosis and treatment of post-traumatic pneumonia in patients with closed chest injuries",
+  "new": "Диагностика и лечение посттравматической пневмонии у больных с закрытой травмой грудной клетки"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 27,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Modern methods of treatment of burn wounds",
+  "new": "Современные методы лечения ожоговых ран"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 28,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Optimized methods of hirudotherapy for hypertensive crises",
+  "new": "Оптимизированные методы гирудотерапии при гипертонических кризах"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 29,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Prevention and metaphylaxis of urolithiasis",
+  "new": "Профилактика и метафилактика мочекаменной болезни"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 30,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Feeding children of breast-feeding age",
+  "new": "Кормление детей грудного возраста"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 33,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Pathomorphology of pathogenetic vasotonic and vasodilating periods of allergic rhinitis",
+  "new": "Патоморфология патогенетических вазотонического и вазодилатационного периодов аллергического ринита"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 35,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Pathogenesis, morphogenesis, and pathomorphological changes of the nose and its accessory caves,polyps in allergic form",
+  "new": "Патогенез, морфогенез и патоморфологические изменения носа и его придаточных пазух, полипы при аллергической форме"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 38,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Pathological alterations in the nasal mucosa due to pesticide exposure",
+  "new": "Патологические изменения слизистой оболочки носа при воздействии пестицидов"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 40,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Methods of early diagnosis of cervical diseases and evaluation of results",
+  "new": "Методы ранней диагностики заболеваний шейки матки и оценка результатов"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 41,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Premature rupture of members and methods of prolonging pregnancy",
+  "new": "Преждевременный разрыв плодных оболочек и методы пролонгирования беременности"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 42,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Healthcare system and current treatment of type 2 diabetes in Uzbekistan",
+  "new": "Система здравоохранения и современное лечение сахарного диабета 2 типа в Узбекистане"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 44,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Studying the effectiveness of magnesium in the treatment of algodysmenorrhea",
+  "new": "Изучение эффективности магния в лечении альгодисменореи"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 46,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Parastomal hernias and their prevention",
+  "new": "Парастомальные грыжи и их профилактика"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 50,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Determination of the prescription of rib fractures based on morphological signs in the practice of forensic medicine",
+  "new": "Определение давности переломов рёбер по морфологическим признакам в практике судебной медицины"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 53,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Morphological study to determine the mechanism, viability, and age of kidney injuries in blunt abdominal trauma",
+  "new": "Морфологическое исследование для определения механизма, прижизненности и давности повреждений почек при тупой травме живота"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 56,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Evaluation of the ecological state of the cityʻs air quality during globalization",
+  "new": "Оценка экологического состояния качества воздуха города в условиях глобализации"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 69,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Metaphylaxis of calcium-oxalate urolithiasis",
+  "new": "Метафилактика кальций-оксалатного уролитиаза"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 71,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Systematization of postoperative complications of holmium laser enucleation of the prostate: A standardized approach",
+  "new": "Систематизация послеоперационных осложнений гольмиевой лазерной энуклеации предстательной железы: стандартизированный подход"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 72,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Age-related clinical and laboratory features of acute epididymitis: A retrospective analysis of 260 cases",
+  "new": "Возрастные клинико-лабораторные особенности острого эпидидимита: ретроспективный анализ 260 случаев"
+ },
+ {
+  "slug": "jcpm-2024",
+  "order": 76,
+  "lang": "ru",
+  "field": "caption",
+  "old": "The study of the diuretic activity of various forms of the drug from medicinal plants of the flora of Uzbekistan",
+  "new": "Изучение диуретической активности различных форм препарата из лекарственных растений флоры Узбекистана"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 7,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Analysis of uterine adenomyosis in women during the premenopausal and postmenopausal stages (based on the example of the Fergana region)",
+  "new": "Анализ аденомиоза матки у женщин в пре- и постменопаузальном периодах (на примере Ферганской области)"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 11,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Information and educational technologies in improving the quality of training for medical university students",
+  "new": "Информационно-образовательные технологии в повышении качества подготовки студентов медицинских университетов"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 23,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Microscopic changes in the brain of children WHO died of cerebral palsy",
+  "new": "Микроскопические изменения головного мозга у детей, умерших от детского церебрального паралича"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 23,
+  "lang": "en",
+  "field": "caption",
+  "old": "Microscopic changes in the brain of children WHO died of cerebral palsy",
+  "new": "Microscopic changes in the brain of children who died of cerebral palsy"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 31,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases",
+  "new": "Интеграция рентгенологических методов и информационных технологий в ранней диагностике онкологических заболеваний"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 32,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Ultrastructural changes in different forms of infantile cerebral palsy",
+  "new": "Ультраструктурные изменения при различных формах детского церебрального паралича"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 33,
+  "lang": "ru",
+  "field": "text",
+  "old": "Features of the clinical course of periodic disease in children",
+  "new": "Особенности клинического течения периодической болезни у детей"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 34,
+  "lang": "ru",
+  "field": "text",
+  "old": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus",
+  "new": "Лечение урогенитальной формы диабетической автономной нейропатии у больных сахарным диабетом 2 типа"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 35,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Principles of rehabilitation and the role of dosed physical activity in children with bronchial asthma",
+  "new": "Принципы реабилитации и роль дозированной физической нагрузки у детей с бронхиальной астмой"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 38,
+  "lang": "ru",
+  "field": "text",
+  "old": "Digital health communication: dissemination and reliability of health information on social media",
+  "new": "Цифровая коммуникация в здравоохранении: распространение и достоверность медицинской информации в социальных сетях"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 43,
+  "lang": "ru",
+  "field": "caption",
+  "old": "A modern approach to the determination of molecular markers in local isolates of acute intestinal infections",
+  "new": "Современный подход к определению молекулярных маркеров в местных изолятах возбудителей острых кишечных инфекций"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 44,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Mechanisms of development of cachecia I N chronic heart failure",
+  "new": "Механизмы развития кахексии при хронической сердечной недостаточности"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 44,
+  "lang": "en",
+  "field": "caption",
+  "old": "Mechanisms of development of cachecia I N chronic heart failure",
+  "new": "Mechanisms of development of cachexia in chronic heart failure"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 45,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Microscopic changes in the brain of children WHO died of cerebral palsy",
+  "new": "Микроскопические изменения головного мозга у детей, умерших от детского церебрального паралича"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 45,
+  "lang": "en",
+  "field": "caption",
+  "old": "Microscopic changes in the brain of children WHO died of cerebral palsy",
+  "new": "Microscopic changes in the brain of children who died of cerebral palsy"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 52,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Integration of radiological methods and information technologies in the early diagnosis of oncological diseases",
+  "new": "Интеграция рентгенологических методов и информационных технологий в ранней диагностике онкологических заболеваний"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 53,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Ultrastructural changes in different forms of infantile cerebral palsy",
+  "new": "Ультраструктурные изменения при различных формах детского церебрального паралича"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 55,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Features of the clinical course of periodic disease in children.",
+  "new": "Особенности клинического течения периодической болезни у детей."
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 56,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Treatment of urogenital form of diabetic autonomic neuropathy in patients with type 2 diabetes mellitus",
+  "new": "Лечение урогенитальной формы диабетической автономной нейропатии у больных сахарным диабетом 2 типа"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 61,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Palliative care in pediatric subacute sclerosing panencephalitis (SSPE)",
+  "new": "Паллиативная помощь при подостром склерозирующем панэнцефалите (SSPE) у детей"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 64,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Clinical and laboratory features and etiology of bronchial asthma with allergic rhinosinusitis in children",
+  "new": "Клинико-лабораторные особенности и этиология бронхиальной астмы с аллергическим риносинуситом у детей"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 65,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Modern algorithms for the diagnosis and management of thromboembolism in intensive care",
+  "new": "Современные алгоритмы диагностики и ведения тромбоэмболии в интенсивной терапии"
+ },
+ {
+  "slug": "jcpm-2025",
+  "order": 66,
+  "lang": "ru",
+  "field": "caption",
+  "old": "Pulmonary artery thromboembolism: clinical case-based analysis of clinical and pathophysiological features",
+  "new": "Тромбоэмболия лёгочной артерии: анализ клинического случая, клинические и патофизиологические особенности"
+ },
+ {
+  "slug": "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "order": 8,
+  "lang": "ru",
+  "field": "text",
+  "old": "1. “Oliy taʻlimning Davlat taʻlim standarti. Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin.",
+  "new": "1. Утвердить прилагаемый государственный стандарт Республики Узбекистан «Государственный образовательный стандарт высшего образования. Классификатор направлений и специальностей высшего образования»."
+ },
+ {
+  "slug": "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "order": 8,
+  "lang": "en",
+  "field": "text",
+  "old": "1. “Oliy taʻlimning Davlat taʻlim standarti. Oliy taʻlim yoʻnalishlari va mutaxassisliklari klassifikatori” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin.",
+  "new": "1. To approve the attached state standard of the Republic of Uzbekistan “State educational standard of higher education. Classifier of the fields of study and specialities of higher education”."
+ },
+ {
+  "slug": "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "order": 9,
+  "lang": "ru",
+  "field": "text",
+  "old": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi.",
+  "new": "2. Настоящий приказ вступает в силу со дня его официального опубликования."
+ },
+ {
+  "slug": "oliy-talim-yonalishlari-va-mutaxassisliklari-klassifikatori",
+  "order": 9,
+  "lang": "en",
+  "field": "text",
+  "old": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi.",
+  "new": "2. This order enters into force on the day of its official publication."
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 7,
+  "lang": "ru",
+  "field": "text",
+  "old": "1. “Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin.",
+  "new": "1. Утвердить прилагаемый государственный стандарт Республики Узбекистан «Государственный образовательный стандарт высшего образования. Основные положения»."
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 7,
+  "lang": "en",
+  "field": "text",
+  "old": "1. “Oliy taʻlimning davlat taʻlim standarti. Asosiy qoidalar” Oʻzbekiston Respublikasining davlat standarti ilovaga muvofiq tasdiqlansin.",
+  "new": "1. To approve the attached state standard of the Republic of Uzbekistan “State educational standard of higher education. Basic rules”."
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 8,
+  "lang": "ru",
+  "field": "text",
+  "old": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi.",
+  "new": "2. Настоящий приказ вступает в силу со дня его официального опубликования."
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 8,
+  "lang": "en",
+  "field": "text",
+  "old": "2. Mazkur buyruq rasmiy eʻlon qilingan kundan eʻtiboran kuchga kiradi.",
+  "new": "2. This order enters into force on the day of its official publication."
+ }
+]

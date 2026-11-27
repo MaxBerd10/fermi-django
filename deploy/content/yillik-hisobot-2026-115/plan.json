@@ -1,0 +1,1486 @@
+[
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 3,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Renal Anatomy](https://youtu.be/0PwaKpEmZ0E)",
+       "[Renal physiology](https://youtu.be/2YzekTyze_8)",
+       "[Renal Physiology 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Nephron physiology](https://youtu.be/Jf4WVhm8g8c)",
+       "[Renal Endocrinology](https://youtu.be/HWcAc192sWE)",
+       "[Acid excretion](https://youtu.be/gSs3fc2tGN0)",
+       "[Acid Base Principles](https://youtu.be/AeJ8UUAwNrc)",
+       "[Respiratory Acid Base disorders](https://youtu.be/Dy18-7uyMIw)",
+       "[Metabolic Alkalosis](https://youtu.be/yiTGgPOy9K8)",
+       "[Metabolic Acidosis](https://youtu.be/4XmdiaxEvlI)",
+       "Renal Tubular Acidosis",
+       "[Acid Base Problems](https://youtu.be/7Ir98ycJF4w)",
+       "[Electrolytes](https://youtu.be/APgvsL7YSRI)",
+       "[Sodium and Water Balance](https://youtu.be/4tkhx3lOAyk)",
+       "[Sodium Disorders](https://youtu.be/A7SdN59XhhA)",
+       "[Glomerular Disease Principles](https://youtu.be/eUEq3F8kU7Q)",
+       "[Nephritic Syndrome](https://youtu.be/te2zQ1Id-Cg)",
+       "[Nephrotic Syndrome](https://youtu.be/qdxa64E3CKE)",
+       "[MPGN](https://youtu.be/onj3v7ObrPY)",
+       "[Tubulointerstitial Disorders](https://youtu.be/uf7B0gJbOCI)",
+       "[Renal Failure](https://youtu.be/k9i4McPMZpE)",
+       "[Urinary Infections](https://youtu.be/l__yytxOEXQ)",
+       "[Cystic Kidney Diseases](https://youtu.be/0oyilAPKPW8)",
+       "[Diuretics](https://youtu.be/Fx4b6WOS75I)",
+       "[Kidney Stones](https://youtu.be/Tyx8JRWO_ho)",
+       "[Renal and Bladder Malignancies](https://youtu.be/3sSQGuL73QM)",
+       "[Rhabdomyolysis](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Renal Anatomy](https://youtu.be/0PwaKpEmZ0E)",
+       "[Renal physiology](https://youtu.be/2YzekTyze_8)",
+       "[Renal Physiology 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Nephron physiology](https://youtu.be/Jf4WVhm8g8c)",
+       "[Renal Endocrinology](https://youtu.be/HWcAc192sWE)",
+       "[Acid excretion](https://youtu.be/gSs3fc2tGN0)",
+       "[Acid Base Principles](https://youtu.be/AeJ8UUAwNrc)",
+       "[Respiratory Acid Base disorders](https://youtu.be/Dy18-7uyMIw)",
+       "[Metabolic Alkalosis](https://youtu.be/yiTGgPOy9K8)",
+       "[Metabolic Acidosis](https://youtu.be/4XmdiaxEvlI)",
+       "Renal Tubular Acidosis",
+       "[Acid Base Problems](https://youtu.be/7Ir98ycJF4w)",
+       "[Electrolytes](https://youtu.be/APgvsL7YSRI)",
+       "[Sodium and Water Balance](https://youtu.be/4tkhx3lOAyk)",
+       "[Sodium Disorders](https://youtu.be/A7SdN59XhhA)",
+       "[Glomerular Disease Principles](https://youtu.be/eUEq3F8kU7Q)",
+       "[Nephritic Syndrome](https://youtu.be/te2zQ1Id-Cg)",
+       "[Nephrotic Syndrome](https://youtu.be/qdxa64E3CKE)",
+       "[MPGN](https://youtu.be/onj3v7ObrPY)",
+       "[Tubulointerstitial Disorders](https://youtu.be/uf7B0gJbOCI)",
+       "[Renal Failure](https://youtu.be/k9i4McPMZpE)",
+       "[Urinary Infections](https://youtu.be/l__yytxOEXQ)",
+       "[Cystic Kidney Diseases](https://youtu.be/0oyilAPKPW8)",
+       "[Diuretics](https://youtu.be/Fx4b6WOS75I)",
+       "[Kidney Stones](https://youtu.be/Tyx8JRWO_ho)",
+       "[Renal and Bladder Malignancies](https://youtu.be/3sSQGuL73QM)",
+       "[Rhabdomyolysis](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Renal Anatomy](https://youtu.be/0PwaKpEmZ0E)",
+       "[Renal physiology](https://youtu.be/2YzekTyze_8)",
+       "[Renal Physiology 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Nephron physiology](https://youtu.be/Jf4WVhm8g8c)",
+       "[Renal Endocrinology](https://youtu.be/HWcAc192sWE)",
+       "[Acid excretion](https://youtu.be/gSs3fc2tGN0)",
+       "[Acid Base Principles](https://youtu.be/AeJ8UUAwNrc)",
+       "[Respiratory Acid Base disorders](https://youtu.be/Dy18-7uyMIw)",
+       "[Metabolic Alkalosis](https://youtu.be/yiTGgPOy9K8)",
+       "[Metabolic Acidosis](https://youtu.be/4XmdiaxEvlI)",
+       "Renal Tubular Acidosis",
+       "[Acid Base Problems](https://youtu.be/7Ir98ycJF4w)",
+       "[Electrolytes](https://youtu.be/APgvsL7YSRI)",
+       "[Sodium and Water Balance](https://youtu.be/4tkhx3lOAyk)",
+       "[Sodium Disorders](https://youtu.be/A7SdN59XhhA)",
+       "[Glomerular Disease Principles](https://youtu.be/eUEq3F8kU7Q)",
+       "[Nephritic Syndrome](https://youtu.be/te2zQ1Id-Cg)",
+       "[Nephrotic Syndrome](https://youtu.be/qdxa64E3CKE)",
+       "[MPGN](https://youtu.be/onj3v7ObrPY)",
+       "[Tubulointerstitial Disorders](https://youtu.be/uf7B0gJbOCI)",
+       "[Renal Failure](https://youtu.be/k9i4McPMZpE)",
+       "[Urinary Infections](https://youtu.be/l__yytxOEXQ)",
+       "[Cystic Kidney Diseases](https://youtu.be/0oyilAPKPW8)",
+       "[Diuretics](https://youtu.be/Fx4b6WOS75I)",
+       "[Kidney Stones](https://youtu.be/Tyx8JRWO_ho)",
+       "[Renal and Bladder Malignancies](https://youtu.be/3sSQGuL73QM)",
+       "[Rhabdomyolysis](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Renal Anatomy](https://youtu.be/0PwaKpEmZ0E)",
+       "[Renal physiology](https://youtu.be/2YzekTyze_8)",
+       "[Renal Physiology 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Nephron physiology](https://youtu.be/Jf4WVhm8g8c)",
+       "[Renal Endocrinology](https://youtu.be/HWcAc192sWE)",
+       "[Acid excretion](https://youtu.be/gSs3fc2tGN0)",
+       "[Acid Base Principles](https://youtu.be/AeJ8UUAwNrc)",
+       "[Respiratory Acid Base disorders](https://youtu.be/Dy18-7uyMIw)",
+       "[Metabolic Alkalosis](https://youtu.be/yiTGgPOy9K8)",
+       "[Metabolic Acidosis](https://youtu.be/4XmdiaxEvlI)",
+       "Renal Tubular Acidosis",
+       "[Acid Base Problems](https://youtu.be/7Ir98ycJF4w)",
+       "[Electrolytes](https://youtu.be/APgvsL7YSRI)",
+       "[Sodium and Water Balance](https://youtu.be/4tkhx3lOAyk)",
+       "[Sodium Disorders](https://youtu.be/A7SdN59XhhA)",
+       "[Glomerular Disease Principles](https://youtu.be/eUEq3F8kU7Q)",
+       "[Nephritic Syndrome](https://youtu.be/te2zQ1Id-Cg)",
+       "[Nephrotic Syndrome](https://youtu.be/qdxa64E3CKE)",
+       "[MPGN](https://youtu.be/onj3v7ObrPY)",
+       "[Tubulointerstitial Disorders](https://youtu.be/uf7B0gJbOCI)",
+       "[Renal Failure](https://youtu.be/k9i4McPMZpE)",
+       "[Urinary Infections](https://youtu.be/l__yytxOEXQ)",
+       "[Cystic Kidney Diseases](https://youtu.be/0oyilAPKPW8)",
+       "[Diuretics](https://youtu.be/Fx4b6WOS75I)",
+       "[Kidney Stones](https://youtu.be/Tyx8JRWO_ho)",
+       "[Renal and Bladder Malignancies](https://youtu.be/3sSQGuL73QM)",
+       "[Rhabdomyolysis](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Анатомия почек](https://youtu.be/0PwaKpEmZ0E)",
+       "[Физиология почек](https://youtu.be/2YzekTyze_8)",
+       "[Физиология почек 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Физиология нефрона](https://youtu.be/Jf4WVhm8g8c)",
+       "[Эндокринология почек](https://youtu.be/HWcAc192sWE)",
+       "[Выведение кислот](https://youtu.be/gSs3fc2tGN0)",
+       "[Основы кислотно-щелочного баланса](https://youtu.be/AeJ8UUAwNrc)",
+       "[Респираторные нарушения кислотно-щелочного баланса](https://youtu.be/Dy18-7uyMIw)",
+       "[Метаболический алкалоз](https://youtu.be/yiTGgPOy9K8)",
+       "[Метаболический ацидоз](https://youtu.be/4XmdiaxEvlI)",
+       "Почечный канальцевый ацидоз",
+       "[Задачи по кислотно-щелочному балансу](https://youtu.be/7Ir98ycJF4w)",
+       "[Электролиты](https://youtu.be/APgvsL7YSRI)",
+       "[Баланс натрия и воды](https://youtu.be/4tkhx3lOAyk)",
+       "[Нарушения обмена натрия](https://youtu.be/A7SdN59XhhA)",
+       "[Основы болезней клубочков](https://youtu.be/eUEq3F8kU7Q)",
+       "[Нефритический синдром](https://youtu.be/te2zQ1Id-Cg)",
+       "[Нефротический синдром](https://youtu.be/qdxa64E3CKE)",
+       "[Мембранопролиферативный гломерулонефрит](https://youtu.be/onj3v7ObrPY)",
+       "[Тубулоинтерстициальные заболевания](https://youtu.be/uf7B0gJbOCI)",
+       "[Почечная недостаточность](https://youtu.be/k9i4McPMZpE)",
+       "[Инфекции мочевыводящих путей](https://youtu.be/l__yytxOEXQ)",
+       "[Кистозные болезни почек](https://youtu.be/0oyilAPKPW8)",
+       "[Диуретики](https://youtu.be/Fx4b6WOS75I)",
+       "[Камни в почках](https://youtu.be/Tyx8JRWO_ho)",
+       "[Злокачественные опухоли почек и мочевого пузыря](https://youtu.be/3sSQGuL73QM)",
+       "[Рабдомиолиз](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Renal Anatomy](https://youtu.be/0PwaKpEmZ0E)",
+       "[Renal physiology](https://youtu.be/2YzekTyze_8)",
+       "[Renal Physiology 2](https://youtu.be/RzPhfoSy3tk)",
+       "[Nephron physiology](https://youtu.be/Jf4WVhm8g8c)",
+       "[Renal Endocrinology](https://youtu.be/HWcAc192sWE)",
+       "[Acid excretion](https://youtu.be/gSs3fc2tGN0)",
+       "[Acid Base Principles](https://youtu.be/AeJ8UUAwNrc)",
+       "[Respiratory Acid Base disorders](https://youtu.be/Dy18-7uyMIw)",
+       "[Metabolic Alkalosis](https://youtu.be/yiTGgPOy9K8)",
+       "[Metabolic Acidosis](https://youtu.be/4XmdiaxEvlI)",
+       "Renal Tubular Acidosis",
+       "[Acid Base Problems](https://youtu.be/7Ir98ycJF4w)",
+       "[Electrolytes](https://youtu.be/APgvsL7YSRI)",
+       "[Sodium and Water Balance](https://youtu.be/4tkhx3lOAyk)",
+       "[Sodium Disorders](https://youtu.be/A7SdN59XhhA)",
+       "[Glomerular Disease Principles](https://youtu.be/eUEq3F8kU7Q)",
+       "[Nephritic Syndrome](https://youtu.be/te2zQ1Id-Cg)",
+       "[Nephrotic Syndrome](https://youtu.be/qdxa64E3CKE)",
+       "[MPGN](https://youtu.be/onj3v7ObrPY)",
+       "[Tubulointerstitial Disorders](https://youtu.be/uf7B0gJbOCI)",
+       "[Renal Failure](https://youtu.be/k9i4McPMZpE)",
+       "[Urinary Infections](https://youtu.be/l__yytxOEXQ)",
+       "[Cystic Kidney Diseases](https://youtu.be/0oyilAPKPW8)",
+       "[Diuretics](https://youtu.be/Fx4b6WOS75I)",
+       "[Kidney Stones](https://youtu.be/Tyx8JRWO_ho)",
+       "[Renal and Bladder Malignancies](https://youtu.be/3sSQGuL73QM)",
+       "[Rhabdomyolysis](https://youtu.be/ibwnYmP8T0s)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 5,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Genetic Principles](https://youtu.be/Lf_5JUGW98o)",
+       "[Genetic Mapping](https://youtu.be/gWLZPqjhMVY)",
+       "[Meiosis](https://youtu.be/G-O2Vq6obzw)",
+       "[Hardy-Weinberg Law](https://youtu.be/s_x5CKI6vS8)",
+       "[Pedigrees](https://youtu.be/PIhxmxAhH50)",
+       "[Imprinting](https://youtu.be/bW4hrleKfL4)",
+       "[Down Syndrome](https://youtu.be/1IHsMv6H95Q)",
+       "[Trisomy](https://youtu.be/_9xV_3gf6zY)",
+       "[Muscular Dystrophies](https://youtu.be/BdMqBd4cGuo)",
+       "[Trinucleotide Repeat Disorders](https://youtu.be/k-ng5PhVF_E)",
+       "[Deletion Syndromes](https://youtu.be/nHHlWJPf7Rc)",
+       "[Klinefelter and Turner Syndromes](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Genetic Principles](https://youtu.be/Lf_5JUGW98o)",
+       "[Genetic Mapping](https://youtu.be/gWLZPqjhMVY)",
+       "[Meiosis](https://youtu.be/G-O2Vq6obzw)",
+       "[Hardy-Weinberg Law](https://youtu.be/s_x5CKI6vS8)",
+       "[Pedigrees](https://youtu.be/PIhxmxAhH50)",
+       "[Imprinting](https://youtu.be/bW4hrleKfL4)",
+       "[Down Syndrome](https://youtu.be/1IHsMv6H95Q)",
+       "[Trisomy](https://youtu.be/_9xV_3gf6zY)",
+       "[Muscular Dystrophies](https://youtu.be/BdMqBd4cGuo)",
+       "[Trinucleotide Repeat Disorders](https://youtu.be/k-ng5PhVF_E)",
+       "[Deletion Syndromes](https://youtu.be/nHHlWJPf7Rc)",
+       "[Klinefelter and Turner Syndromes](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Genetic Principles](https://youtu.be/Lf_5JUGW98o)",
+       "[Genetic Mapping](https://youtu.be/gWLZPqjhMVY)",
+       "[Meiosis](https://youtu.be/G-O2Vq6obzw)",
+       "[Hardy-Weinberg Law](https://youtu.be/s_x5CKI6vS8)",
+       "[Pedigrees](https://youtu.be/PIhxmxAhH50)",
+       "[Imprinting](https://youtu.be/bW4hrleKfL4)",
+       "[Down Syndrome](https://youtu.be/1IHsMv6H95Q)",
+       "[Trisomy](https://youtu.be/_9xV_3gf6zY)",
+       "[Muscular Dystrophies](https://youtu.be/BdMqBd4cGuo)",
+       "[Trinucleotide Repeat Disorders](https://youtu.be/k-ng5PhVF_E)",
+       "[Deletion Syndromes](https://youtu.be/nHHlWJPf7Rc)",
+       "[Klinefelter and Turner Syndromes](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Genetic Principles](https://youtu.be/Lf_5JUGW98o)",
+       "[Genetic Mapping](https://youtu.be/gWLZPqjhMVY)",
+       "[Meiosis](https://youtu.be/G-O2Vq6obzw)",
+       "[Hardy-Weinberg Law](https://youtu.be/s_x5CKI6vS8)",
+       "[Pedigrees](https://youtu.be/PIhxmxAhH50)",
+       "[Imprinting](https://youtu.be/bW4hrleKfL4)",
+       "[Down Syndrome](https://youtu.be/1IHsMv6H95Q)",
+       "[Trisomy](https://youtu.be/_9xV_3gf6zY)",
+       "[Muscular Dystrophies](https://youtu.be/BdMqBd4cGuo)",
+       "[Trinucleotide Repeat Disorders](https://youtu.be/k-ng5PhVF_E)",
+       "[Deletion Syndromes](https://youtu.be/nHHlWJPf7Rc)",
+       "[Klinefelter and Turner Syndromes](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Основы генетики](https://youtu.be/Lf_5JUGW98o)",
+       "[Генетическое картирование](https://youtu.be/gWLZPqjhMVY)",
+       "[Мейоз](https://youtu.be/G-O2Vq6obzw)",
+       "[Закон Харди–Вайнберга](https://youtu.be/s_x5CKI6vS8)",
+       "[Родословные](https://youtu.be/PIhxmxAhH50)",
+       "[Импринтинг](https://youtu.be/bW4hrleKfL4)",
+       "[Синдром Дауна](https://youtu.be/1IHsMv6H95Q)",
+       "[Трисомия](https://youtu.be/_9xV_3gf6zY)",
+       "[Мышечные дистрофии](https://youtu.be/BdMqBd4cGuo)",
+       "[Болезни тринуклеотидных повторов](https://youtu.be/k-ng5PhVF_E)",
+       "[Делеционные синдромы](https://youtu.be/nHHlWJPf7Rc)",
+       "[Синдромы Клайнфельтера и Тёрнера](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Genetic Principles](https://youtu.be/Lf_5JUGW98o)",
+       "[Genetic Mapping](https://youtu.be/gWLZPqjhMVY)",
+       "[Meiosis](https://youtu.be/G-O2Vq6obzw)",
+       "[Hardy-Weinberg Law](https://youtu.be/s_x5CKI6vS8)",
+       "[Pedigrees](https://youtu.be/PIhxmxAhH50)",
+       "[Imprinting](https://youtu.be/bW4hrleKfL4)",
+       "[Down Syndrome](https://youtu.be/1IHsMv6H95Q)",
+       "[Trisomy](https://youtu.be/_9xV_3gf6zY)",
+       "[Muscular Dystrophies](https://youtu.be/BdMqBd4cGuo)",
+       "[Trinucleotide Repeat Disorders](https://youtu.be/k-ng5PhVF_E)",
+       "[Deletion Syndromes](https://youtu.be/nHHlWJPf7Rc)",
+       "[Klinefelter and Turner Syndromes](https://youtu.be/W9TJEOt6tNs)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 7,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Coagulation](https://youtu.be/2yx4foTyVGc)",
+       "[Platelet Activation](https://youtu.be/X6ERAU_1dC4)",
+       "[Hypercoagulable States](https://youtu.be/M879al6-XCE)",
+       "[Coagulopathies](https://youtu.be/VMziKlq1JuA)",
+       "[Platelet Disorders](https://youtu.be/pdUEHmMJFts)",
+       "[Antiplatelets](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Anticoagulant Drugs](https://youtu.be/3890LvQcrNg)",
+       "[Hemolysis Basics](https://youtu.be/6lBK_F-oRS8)",
+       "[Extrinsic Hemolysis](https://youtu.be/q1X0vut6YXw)",
+       "[Intrinsic Hemolysis](https://youtu.be/VArZXM1X71U)",
+       "[Microcytic Anemias](https://youtu.be/juXqWkUqx_0)",
+       "[Thalassemias](https://youtu.be/yU11JACUz1g)",
+       "[Sickle Cell Anemia](https://youtu.be/3890LvQcrNg)",
+       "[Other Anemias](https://youtu.be/vrJuDzQxX5k)",
+       "[Blood Groups](https://youtu.be/nR-KOpw2kyA)",
+       "[Acute Leukemias](https://youtu.be/Y_Lg4asVc_g)",
+       "[Chronic Leukemias](https://youtu.be/CpUJxhZgpYs)",
+       "[Hodgkin Lymphoma](https://youtu.be/Uf7cMD0wKHE)",
+       "[Non Hodgkin Lymphoma](https://youtu.be/y-GC2hhsokM)",
+       "[Plasma Cell Disorders](https://youtu.be/EBi1-EceHkE)",
+       "[Amyloidosis](https://youtu.be/5NaIWK29roM)",
+       "[Myeloproliferative Disorders](https://youtu.be/R_kXszr2_yo)",
+       "[Antimetabolites](https://youtu.be/Nq-UoHaPx_c)",
+       "[Alkylating Agents](https://youtu.be/r_-1JF-EnMg)",
+       "[Antitumor Antibiotics](https://youtu.be/EVCOxL7Z0N4)",
+       "[Microtubule Inhibitors](https://youtu.be/tWHCYvRzCjo)",
+       "[DNA Drugs](https://youtu.be/k3BUYbodctU)",
+       "[Other Cancer Drugs](https://youtu.be/L5N_YoscXrc)",
+       "[Porphyrias](https://youtu.be/qfvTKGtly54)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Coagulation](https://youtu.be/2yx4foTyVGc)",
+       "[Platelet Activation](https://youtu.be/X6ERAU_1dC4)",
+       "[Hypercoagulable States](https://youtu.be/M879al6-XCE)",
+       "[Coagulopathies](https://youtu.be/VMziKlq1JuA)",
+       "[Platelet Disorders](https://youtu.be/pdUEHmMJFts)",
+       "[Antiplatelets](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Anticoagulant Drugs](https://youtu.be/3890LvQcrNg)",
+       "[Hemolysis Basics](https://youtu.be/6lBK_F-oRS8)",
+       "[Extrinsic Hemolysis](https://youtu.be/q1X0vut6YXw)",
+       "[Intrinsic Hemolysis](https://youtu.be/VArZXM1X71U)",
+       "[Microcytic Anemias](https://youtu.be/juXqWkUqx_0)",
+       "[Thalassemias](https://youtu.be/yU11JACUz1g)",
+       "[Sickle Cell Anemia](https://youtu.be/3890LvQcrNg)",
+       "[Other Anemias](https://youtu.be/vrJuDzQxX5k)",
+       "[Blood Groups](https://youtu.be/nR-KOpw2kyA)",
+       "[Acute Leukemias](https://youtu.be/Y_Lg4asVc_g)",
+       "[Chronic Leukemias](https://youtu.be/CpUJxhZgpYs)",
+       "[Hodgkin Lymphoma](https://youtu.be/Uf7cMD0wKHE)",
+       "[Non Hodgkin Lymphoma](https://youtu.be/y-GC2hhsokM)",
+       "[Plasma Cell Disorders](https://youtu.be/EBi1-EceHkE)",
+       "[Amyloidosis](https://youtu.be/5NaIWK29roM)",
+       "[Myeloproliferative Disorders](https://youtu.be/R_kXszr2_yo)",
+       "[Antimetabolites](https://youtu.be/Nq-UoHaPx_c)",
+       "[Alkylating Agents](https://youtu.be/r_-1JF-EnMg)",
+       "[Antitumor Antibiotics](https://youtu.be/EVCOxL7Z0N4)",
+       "[Microtubule Inhibitors](https://youtu.be/tWHCYvRzCjo)",
+       "[DNA Drugs](https://youtu.be/k3BUYbodctU)",
+       "[Other Cancer Drugs](https://youtu.be/L5N_YoscXrc)",
+       "[Porphyrias](https://youtu.be/qfvTKGtly54)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Coagulation](https://youtu.be/2yx4foTyVGc)",
+       "[Platelet Activation](https://youtu.be/X6ERAU_1dC4)",
+       "[Hypercoagulable States](https://youtu.be/M879al6-XCE)",
+       "[Coagulopathies](https://youtu.be/VMziKlq1JuA)",
+       "[Platelet Disorders](https://youtu.be/pdUEHmMJFts)",
+       "[Antiplatelets](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Anticoagulant Drugs](https://youtu.be/3890LvQcrNg)",
+       "[Hemolysis Basics](https://youtu.be/6lBK_F-oRS8)",
+       "[Extrinsic Hemolysis](https://youtu.be/q1X0vut6YXw)",
+       "[Intrinsic Hemolysis](https://youtu.be/VArZXM1X71U)",
+       "[Microcytic Anemias](https://youtu.be/juXqWkUqx_0)",
+       "[Thalassemias](https://youtu.be/yU11JACUz1g)",
+       "[Sickle Cell Anemia](https://youtu.be/3890LvQcrNg)",
+       "[Other Anemias](https://youtu.be/vrJuDzQxX5k)",
+       "[Blood Groups](https://youtu.be/nR-KOpw2kyA)",
+       "[Acute Leukemias](https://youtu.be/Y_Lg4asVc_g)",
+       "[Chronic Leukemias](https://youtu.be/CpUJxhZgpYs)",
+       "[Hodgkin Lymphoma](https://youtu.be/Uf7cMD0wKHE)",
+       "[Non Hodgkin Lymphoma](https://youtu.be/y-GC2hhsokM)",
+       "[Plasma Cell Disorders](https://youtu.be/EBi1-EceHkE)",
+       "[Amyloidosis](https://youtu.be/5NaIWK29roM)",
+       "[Myeloproliferative Disorders](https://youtu.be/R_kXszr2_yo)",
+       "[Antimetabolites](https://youtu.be/Nq-UoHaPx_c)",
+       "[Alkylating Agents](https://youtu.be/r_-1JF-EnMg)",
+       "[Antitumor Antibiotics](https://youtu.be/EVCOxL7Z0N4)",
+       "[Microtubule Inhibitors](https://youtu.be/tWHCYvRzCjo)",
+       "[DNA Drugs](https://youtu.be/k3BUYbodctU)",
+       "[Other Cancer Drugs](https://youtu.be/L5N_YoscXrc)",
+       "[Porphyrias](https://youtu.be/qfvTKGtly54)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Coagulation](https://youtu.be/2yx4foTyVGc)",
+       "[Platelet Activation](https://youtu.be/X6ERAU_1dC4)",
+       "[Hypercoagulable States](https://youtu.be/M879al6-XCE)",
+       "[Coagulopathies](https://youtu.be/VMziKlq1JuA)",
+       "[Platelet Disorders](https://youtu.be/pdUEHmMJFts)",
+       "[Antiplatelets](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Anticoagulant Drugs](https://youtu.be/3890LvQcrNg)",
+       "[Hemolysis Basics](https://youtu.be/6lBK_F-oRS8)",
+       "[Extrinsic Hemolysis](https://youtu.be/q1X0vut6YXw)",
+       "[Intrinsic Hemolysis](https://youtu.be/VArZXM1X71U)",
+       "[Microcytic Anemias](https://youtu.be/juXqWkUqx_0)",
+       "[Thalassemias](https://youtu.be/yU11JACUz1g)",
+       "[Sickle Cell Anemia](https://youtu.be/3890LvQcrNg)",
+       "[Other Anemias](https://youtu.be/vrJuDzQxX5k)",
+       "[Blood Groups](https://youtu.be/nR-KOpw2kyA)",
+       "[Acute Leukemias](https://youtu.be/Y_Lg4asVc_g)",
+       "[Chronic Leukemias](https://youtu.be/CpUJxhZgpYs)",
+       "[Hodgkin Lymphoma](https://youtu.be/Uf7cMD0wKHE)",
+       "[Non Hodgkin Lymphoma](https://youtu.be/y-GC2hhsokM)",
+       "[Plasma Cell Disorders](https://youtu.be/EBi1-EceHkE)",
+       "[Amyloidosis](https://youtu.be/5NaIWK29roM)",
+       "[Myeloproliferative Disorders](https://youtu.be/R_kXszr2_yo)",
+       "[Antimetabolites](https://youtu.be/Nq-UoHaPx_c)",
+       "[Alkylating Agents](https://youtu.be/r_-1JF-EnMg)",
+       "[Antitumor Antibiotics](https://youtu.be/EVCOxL7Z0N4)",
+       "[Microtubule Inhibitors](https://youtu.be/tWHCYvRzCjo)",
+       "[DNA Drugs](https://youtu.be/k3BUYbodctU)",
+       "[Other Cancer Drugs](https://youtu.be/L5N_YoscXrc)",
+       "[Porphyrias](https://youtu.be/qfvTKGtly54)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Свёртывание крови](https://youtu.be/2yx4foTyVGc)",
+       "[Активация тромбоцитов](https://youtu.be/X6ERAU_1dC4)",
+       "[Гиперкоагуляционные состояния](https://youtu.be/M879al6-XCE)",
+       "[Коагулопатии](https://youtu.be/VMziKlq1JuA)",
+       "[Заболевания тромбоцитов](https://youtu.be/pdUEHmMJFts)",
+       "[Антиагреганты](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Антикоагулянты](https://youtu.be/3890LvQcrNg)",
+       "[Основы гемолиза](https://youtu.be/6lBK_F-oRS8)",
+       "[Экстракорпускулярный гемолиз](https://youtu.be/q1X0vut6YXw)",
+       "[Внутрикорпускулярный гемолиз](https://youtu.be/VArZXM1X71U)",
+       "[Микроцитарные анемии](https://youtu.be/juXqWkUqx_0)",
+       "[Талассемии](https://youtu.be/yU11JACUz1g)",
+       "[Серповидноклеточная анемия](https://youtu.be/3890LvQcrNg)",
+       "[Другие анемии](https://youtu.be/vrJuDzQxX5k)",
+       "[Группы крови](https://youtu.be/nR-KOpw2kyA)",
+       "[Острые лейкозы](https://youtu.be/Y_Lg4asVc_g)",
+       "[Хронические лейкозы](https://youtu.be/CpUJxhZgpYs)",
+       "[Лимфома Ходжкина](https://youtu.be/Uf7cMD0wKHE)",
+       "[Неходжкинские лимфомы](https://youtu.be/y-GC2hhsokM)",
+       "[Плазмоклеточные заболевания](https://youtu.be/EBi1-EceHkE)",
+       "[Амилоидоз](https://youtu.be/5NaIWK29roM)",
+       "[Миелопролиферативные заболевания](https://youtu.be/R_kXszr2_yo)",
+       "[Антиметаболиты](https://youtu.be/Nq-UoHaPx_c)",
+       "[Алкилирующие агенты](https://youtu.be/r_-1JF-EnMg)",
+       "[Противоопухолевые антибиотики](https://youtu.be/EVCOxL7Z0N4)",
+       "[Ингибиторы микротрубочек](https://youtu.be/tWHCYvRzCjo)",
+       "[Препараты, действующие на ДНК](https://youtu.be/k3BUYbodctU)",
+       "[Другие противоопухолевые препараты](https://youtu.be/L5N_YoscXrc)",
+       "[Порфирии](https://youtu.be/qfvTKGtly54)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Coagulation](https://youtu.be/2yx4foTyVGc)",
+       "[Platelet Activation](https://youtu.be/X6ERAU_1dC4)",
+       "[Hypercoagulable States](https://youtu.be/M879al6-XCE)",
+       "[Coagulopathies](https://youtu.be/VMziKlq1JuA)",
+       "[Platelet Disorders](https://youtu.be/pdUEHmMJFts)",
+       "[Antiplatelets](https://youtu.be/o9ZPY5Q88Uk)",
+       "[Anticoagulant Drugs](https://youtu.be/3890LvQcrNg)",
+       "[Hemolysis Basics](https://youtu.be/6lBK_F-oRS8)",
+       "[Extrinsic Hemolysis](https://youtu.be/q1X0vut6YXw)",
+       "[Intrinsic Hemolysis](https://youtu.be/VArZXM1X71U)",
+       "[Microcytic Anemias](https://youtu.be/juXqWkUqx_0)",
+       "[Thalassemias](https://youtu.be/yU11JACUz1g)",
+       "[Sickle Cell Anemia](https://youtu.be/3890LvQcrNg)",
+       "[Other Anemias](https://youtu.be/vrJuDzQxX5k)",
+       "[Blood Groups](https://youtu.be/nR-KOpw2kyA)",
+       "[Acute Leukemias](https://youtu.be/Y_Lg4asVc_g)",
+       "[Chronic Leukemias](https://youtu.be/CpUJxhZgpYs)",
+       "[Hodgkin Lymphoma](https://youtu.be/Uf7cMD0wKHE)",
+       "[Non Hodgkin Lymphoma](https://youtu.be/y-GC2hhsokM)",
+       "[Plasma Cell Disorders](https://youtu.be/EBi1-EceHkE)",
+       "[Amyloidosis](https://youtu.be/5NaIWK29roM)",
+       "[Myeloproliferative Disorders](https://youtu.be/R_kXszr2_yo)",
+       "[Antimetabolites](https://youtu.be/Nq-UoHaPx_c)",
+       "[Alkylating Agents](https://youtu.be/r_-1JF-EnMg)",
+       "[Antitumor Antibiotics](https://youtu.be/EVCOxL7Z0N4)",
+       "[Microtubule Inhibitors](https://youtu.be/tWHCYvRzCjo)",
+       "[DNA Drugs](https://youtu.be/k3BUYbodctU)",
+       "[Other Cancer Drugs](https://youtu.be/L5N_YoscXrc)",
+       "[Porphyrias](https://youtu.be/qfvTKGtly54)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 9,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[DNA Replication](https://youtu.be/YprJOqmbTVY)",
+       "[DNA Mutations](https://youtu.be/Jh17MhEMRkk)",
+       "[DNA Repair](https://youtu.be/Wikpk5ylgzY)",
+       "[Transcription](https://youtu.be/CZ-4lKqzBts)",
+       "[Translation](https://youtu.be/qjNFZAAzsYs)",
+       "[Polymerase Chain Reaction](https://youtu.be/6_a_fKqyqYk)",
+       "[Blotting](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Flow Cytometry](https://youtu.be/TM7sXNkQ9lg)",
+       "[ELISA](https://youtu.be/rPEEtcb3PTk)",
+       "[Microarrays and FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Cell Cycle](https://youtu.be/-9ag3m-f1OQ)",
+       "[Cell Structure](https://youtu.be/xPXd120FuuI)",
+       "[Cytoskeleton](https://youtu.be/yUf7wSIDRos)",
+       "[Connective Tissue](https://youtu.be/jS96AaZpcZY)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[DNA Replication](https://youtu.be/YprJOqmbTVY)",
+       "[DNA Mutations](https://youtu.be/Jh17MhEMRkk)",
+       "[DNA Repair](https://youtu.be/Wikpk5ylgzY)",
+       "[Transcription](https://youtu.be/CZ-4lKqzBts)",
+       "[Translation](https://youtu.be/qjNFZAAzsYs)",
+       "[Polymerase Chain Reaction](https://youtu.be/6_a_fKqyqYk)",
+       "[Blotting](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Flow Cytometry](https://youtu.be/TM7sXNkQ9lg)",
+       "[ELISA](https://youtu.be/rPEEtcb3PTk)",
+       "[Microarrays and FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Cell Cycle](https://youtu.be/-9ag3m-f1OQ)",
+       "[Cell Structure](https://youtu.be/xPXd120FuuI)",
+       "[Cytoskeleton](https://youtu.be/yUf7wSIDRos)",
+       "[Connective Tissue](https://youtu.be/jS96AaZpcZY)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[DNA Replication](https://youtu.be/YprJOqmbTVY)",
+       "[DNA Mutations](https://youtu.be/Jh17MhEMRkk)",
+       "[DNA Repair](https://youtu.be/Wikpk5ylgzY)",
+       "[Transcription](https://youtu.be/CZ-4lKqzBts)",
+       "[Translation](https://youtu.be/qjNFZAAzsYs)",
+       "[Polymerase Chain Reaction](https://youtu.be/6_a_fKqyqYk)",
+       "[Blotting](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Flow Cytometry](https://youtu.be/TM7sXNkQ9lg)",
+       "[ELISA](https://youtu.be/rPEEtcb3PTk)",
+       "[Microarrays and FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Cell Cycle](https://youtu.be/-9ag3m-f1OQ)",
+       "[Cell Structure](https://youtu.be/xPXd120FuuI)",
+       "[Cytoskeleton](https://youtu.be/yUf7wSIDRos)",
+       "[Connective Tissue](https://youtu.be/jS96AaZpcZY)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[DNA Replication](https://youtu.be/YprJOqmbTVY)",
+       "[DNA Mutations](https://youtu.be/Jh17MhEMRkk)",
+       "[DNA Repair](https://youtu.be/Wikpk5ylgzY)",
+       "[Transcription](https://youtu.be/CZ-4lKqzBts)",
+       "[Translation](https://youtu.be/qjNFZAAzsYs)",
+       "[Polymerase Chain Reaction](https://youtu.be/6_a_fKqyqYk)",
+       "[Blotting](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Flow Cytometry](https://youtu.be/TM7sXNkQ9lg)",
+       "[ELISA](https://youtu.be/rPEEtcb3PTk)",
+       "[Microarrays and FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Cell Cycle](https://youtu.be/-9ag3m-f1OQ)",
+       "[Cell Structure](https://youtu.be/xPXd120FuuI)",
+       "[Cytoskeleton](https://youtu.be/yUf7wSIDRos)",
+       "[Connective Tissue](https://youtu.be/jS96AaZpcZY)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Репликация ДНК](https://youtu.be/YprJOqmbTVY)",
+       "[Мутации ДНК](https://youtu.be/Jh17MhEMRkk)",
+       "[Репарация ДНК](https://youtu.be/Wikpk5ylgzY)",
+       "[Транскрипция](https://youtu.be/CZ-4lKqzBts)",
+       "[Трансляция](https://youtu.be/qjNFZAAzsYs)",
+       "[Полимеразная цепная реакция](https://youtu.be/6_a_fKqyqYk)",
+       "[Блоттинг](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Проточная цитометрия](https://youtu.be/TM7sXNkQ9lg)",
+       "[ИФА (ELISA)](https://youtu.be/rPEEtcb3PTk)",
+       "[Микрочипы и FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Клеточный цикл](https://youtu.be/-9ag3m-f1OQ)",
+       "[Строение клетки](https://youtu.be/xPXd120FuuI)",
+       "[Цитоскелет](https://youtu.be/yUf7wSIDRos)",
+       "[Соединительная ткань](https://youtu.be/jS96AaZpcZY)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[DNA Replication](https://youtu.be/YprJOqmbTVY)",
+       "[DNA Mutations](https://youtu.be/Jh17MhEMRkk)",
+       "[DNA Repair](https://youtu.be/Wikpk5ylgzY)",
+       "[Transcription](https://youtu.be/CZ-4lKqzBts)",
+       "[Translation](https://youtu.be/qjNFZAAzsYs)",
+       "[Polymerase Chain Reaction](https://youtu.be/6_a_fKqyqYk)",
+       "[Blotting](https://youtu.be/i6Sdd6n8Q-k)",
+       "[Flow Cytometry](https://youtu.be/TM7sXNkQ9lg)",
+       "[ELISA](https://youtu.be/rPEEtcb3PTk)",
+       "[Microarrays and FISH](https://youtu.be/kL7Sxlvi1ew)",
+       "[Cell Cycle](https://youtu.be/-9ag3m-f1OQ)",
+       "[Cell Structure](https://youtu.be/xPXd120FuuI)",
+       "[Cytoskeleton](https://youtu.be/yUf7wSIDRos)",
+       "[Connective Tissue](https://youtu.be/jS96AaZpcZY)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 11,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Bacteria](https://youtu.be/kifPAk7nrRU)",
+       "[Shapes and Stains](https://youtu.be/_xaxOkNHURw)",
+       "[Bacterial Culture](https://youtu.be/pCS8V-t0Oj4)",
+       "[Special Growth Requirements](https://youtu.be/-gJW70Y4Ols)",
+       "[Virulence](https://youtu.be/jvbs6oFsmKc)",
+       "[Growth and Genetics](https://youtu.be/SWrdn8zPxKU)",
+       "[Bacterial Identification](https://youtu.be/4WIKsXeONEk)",
+       "[Staphylococci](https://youtu.be/URXYtfOsBlk)",
+       "[Streptococci](https://youtu.be/ZAksYQALquA)",
+       "[Other Gram Positives](https://youtu.be/RoZutp7hPNw)",
+       "[Gram Negative Rods](https://youtu.be/u21HqZKO4ks)",
+       "[Other Gram Negatives](https://youtu.be/02gQUdoDTzM)",
+       "[Spirochetes](https://youtu.be/0_T5ZhTYDY4)",
+       "[Zoonotic Bacteria](https://youtu.be/-JNlk3Bz0yI)",
+       "[Mycobacteria](https://youtu.be/zjScFQ2aFWQ)",
+       "[Penicillins](https://youtu.be/xTResE3YILQ)",
+       "[β-Lactam Antibiotics](https://youtu.be/PIunp3hJRfE)",
+       "[Sulfonamides](https://youtu.be/UO6kmz-VjtM)",
+       "[Protein Synthesis Inhibitors](https://youtu.be/wj15ORWI7sc)",
+       "[Other Antibiotics](https://youtu.be/gmo9YcbEmog)",
+       "[Fungal Pneumonias](https://youtu.be/I7dabQmay50)",
+       "[Fungal Skin Infections](https://youtu.be/SrncA9r7YY8)",
+       "[Opportunistic Fungal Infections](https://youtu.be/8V6-EFJ75H8)",
+       "[Antifungal Drugs](https://youtu.be/kpe0ZLU4__I)",
+       "[Malaria](https://youtu.be/PhCt3ipD8CA)",
+       "[Protozoa](https://youtu.be/ZLes4RefSMI)",
+       "[Helminths](https://youtu.be/-E6SA46bT3Y)",
+       "[Virus Structures](https://youtu.be/2MKyeS8a8zE)",
+       "[DNA Viruses](https://youtu.be/1blm8giHQRw)",
+       "[Herpes Viruses](https://youtu.be/qwrDHMGbTUY)",
+       "[RNA Viruses](https://youtu.be/yaZBbN4Ujqo)",
+       "[Viral Hepatitis](https://youtu.be/Mw6wnDP0Q04)",
+       "[HIV](https://youtu.be/FPqgOjCZrRs)",
+       "[HIV Drugs](https://youtu.be/DEuH8fwl6pQ)",
+       "[Antivirals](https://youtu.be/8cuNDkurD1s)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Bacteria](https://youtu.be/kifPAk7nrRU)",
+       "[Shapes and Stains](https://youtu.be/_xaxOkNHURw)",
+       "[Bacterial Culture](https://youtu.be/pCS8V-t0Oj4)",
+       "[Special Growth Requirements](https://youtu.be/-gJW70Y4Ols)",
+       "[Virulence](https://youtu.be/jvbs6oFsmKc)",
+       "[Growth and Genetics](https://youtu.be/SWrdn8zPxKU)",
+       "[Bacterial Identification](https://youtu.be/4WIKsXeONEk)",
+       "[Staphylococci](https://youtu.be/URXYtfOsBlk)",
+       "[Streptococci](https://youtu.be/ZAksYQALquA)",
+       "[Other Gram Positives](https://youtu.be/RoZutp7hPNw)",
+       "[Gram Negative Rods](https://youtu.be/u21HqZKO4ks)",
+       "[Other Gram Negatives](https://youtu.be/02gQUdoDTzM)",
+       "[Spirochetes](https://youtu.be/0_T5ZhTYDY4)",
+       "[Zoonotic Bacteria](https://youtu.be/-JNlk3Bz0yI)",
+       "[Mycobacteria](https://youtu.be/zjScFQ2aFWQ)",
+       "[Penicillins](https://youtu.be/xTResE3YILQ)",
+       "[β-Lactam Antibiotics](https://youtu.be/PIunp3hJRfE)",
+       "[Sulfonamides](https://youtu.be/UO6kmz-VjtM)",
+       "[Protein Synthesis Inhibitors](https://youtu.be/wj15ORWI7sc)",
+       "[Other Antibiotics](https://youtu.be/gmo9YcbEmog)",
+       "[Fungal Pneumonias](https://youtu.be/I7dabQmay50)",
+       "[Fungal Skin Infections](https://youtu.be/SrncA9r7YY8)",
+       "[Opportunistic Fungal Infections](https://youtu.be/8V6-EFJ75H8)",
+       "[Antifungal Drugs](https://youtu.be/kpe0ZLU4__I)",
+       "[Malaria](https://youtu.be/PhCt3ipD8CA)",
+       "[Protozoa](https://youtu.be/ZLes4RefSMI)",
+       "[Helminths](https://youtu.be/-E6SA46bT3Y)",
+       "[Virus Structures](https://youtu.be/2MKyeS8a8zE)",
+       "[DNA Viruses](https://youtu.be/1blm8giHQRw)",
+       "[Herpes Viruses](https://youtu.be/qwrDHMGbTUY)",
+       "[RNA Viruses](https://youtu.be/yaZBbN4Ujqo)",
+       "[Viral Hepatitis](https://youtu.be/Mw6wnDP0Q04)",
+       "[HIV](https://youtu.be/FPqgOjCZrRs)",
+       "[HIV Drugs](https://youtu.be/DEuH8fwl6pQ)",
+       "[Antivirals](https://youtu.be/8cuNDkurD1s)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Bacteria](https://youtu.be/kifPAk7nrRU)",
+       "[Shapes and Stains](https://youtu.be/_xaxOkNHURw)",
+       "[Bacterial Culture](https://youtu.be/pCS8V-t0Oj4)",
+       "[Special Growth Requirements](https://youtu.be/-gJW70Y4Ols)",
+       "[Virulence](https://youtu.be/jvbs6oFsmKc)",
+       "[Growth and Genetics](https://youtu.be/SWrdn8zPxKU)",
+       "[Bacterial Identification](https://youtu.be/4WIKsXeONEk)",
+       "[Staphylococci](https://youtu.be/URXYtfOsBlk)",
+       "[Streptococci](https://youtu.be/ZAksYQALquA)",
+       "[Other Gram Positives](https://youtu.be/RoZutp7hPNw)",
+       "[Gram Negative Rods](https://youtu.be/u21HqZKO4ks)",
+       "[Other Gram Negatives](https://youtu.be/02gQUdoDTzM)",
+       "[Spirochetes](https://youtu.be/0_T5ZhTYDY4)",
+       "[Zoonotic Bacteria](https://youtu.be/-JNlk3Bz0yI)",
+       "[Mycobacteria](https://youtu.be/zjScFQ2aFWQ)",
+       "[Penicillins](https://youtu.be/xTResE3YILQ)",
+       "[β-Lactam Antibiotics](https://youtu.be/PIunp3hJRfE)",
+       "[Sulfonamides](https://youtu.be/UO6kmz-VjtM)",
+       "[Protein Synthesis Inhibitors](https://youtu.be/wj15ORWI7sc)",
+       "[Other Antibiotics](https://youtu.be/gmo9YcbEmog)",
+       "[Fungal Pneumonias](https://youtu.be/I7dabQmay50)",
+       "[Fungal Skin Infections](https://youtu.be/SrncA9r7YY8)",
+       "[Opportunistic Fungal Infections](https://youtu.be/8V6-EFJ75H8)",
+       "[Antifungal Drugs](https://youtu.be/kpe0ZLU4__I)",
+       "[Malaria](https://youtu.be/PhCt3ipD8CA)",
+       "[Protozoa](https://youtu.be/ZLes4RefSMI)",
+       "[Helminths](https://youtu.be/-E6SA46bT3Y)",
+       "[Virus Structures](https://youtu.be/2MKyeS8a8zE)",
+       "[DNA Viruses](https://youtu.be/1blm8giHQRw)",
+       "[Herpes Viruses](https://youtu.be/qwrDHMGbTUY)",
+       "[RNA Viruses](https://youtu.be/yaZBbN4Ujqo)",
+       "[Viral Hepatitis](https://youtu.be/Mw6wnDP0Q04)",
+       "[HIV](https://youtu.be/FPqgOjCZrRs)",
+       "[HIV Drugs](https://youtu.be/DEuH8fwl6pQ)",
+       "[Antivirals](https://youtu.be/8cuNDkurD1s)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Bacteria](https://youtu.be/kifPAk7nrRU)",
+       "[Shapes and Stains](https://youtu.be/_xaxOkNHURw)",
+       "[Bacterial Culture](https://youtu.be/pCS8V-t0Oj4)",
+       "[Special Growth Requirements](https://youtu.be/-gJW70Y4Ols)",
+       "[Virulence](https://youtu.be/jvbs6oFsmKc)",
+       "[Growth and Genetics](https://youtu.be/SWrdn8zPxKU)",
+       "[Bacterial Identification](https://youtu.be/4WIKsXeONEk)",
+       "[Staphylococci](https://youtu.be/URXYtfOsBlk)",
+       "[Streptococci](https://youtu.be/ZAksYQALquA)",
+       "[Other Gram Positives](https://youtu.be/RoZutp7hPNw)",
+       "[Gram Negative Rods](https://youtu.be/u21HqZKO4ks)",
+       "[Other Gram Negatives](https://youtu.be/02gQUdoDTzM)",
+       "[Spirochetes](https://youtu.be/0_T5ZhTYDY4)",
+       "[Zoonotic Bacteria](https://youtu.be/-JNlk3Bz0yI)",
+       "[Mycobacteria](https://youtu.be/zjScFQ2aFWQ)",
+       "[Penicillins](https://youtu.be/xTResE3YILQ)",
+       "[β-Lactam Antibiotics](https://youtu.be/PIunp3hJRfE)",
+       "[Sulfonamides](https://youtu.be/UO6kmz-VjtM)",
+       "[Protein Synthesis Inhibitors](https://youtu.be/wj15ORWI7sc)",
+       "[Other Antibiotics](https://youtu.be/gmo9YcbEmog)",
+       "[Fungal Pneumonias](https://youtu.be/I7dabQmay50)",
+       "[Fungal Skin Infections](https://youtu.be/SrncA9r7YY8)",
+       "[Opportunistic Fungal Infections](https://youtu.be/8V6-EFJ75H8)",
+       "[Antifungal Drugs](https://youtu.be/kpe0ZLU4__I)",
+       "[Malaria](https://youtu.be/PhCt3ipD8CA)",
+       "[Protozoa](https://youtu.be/ZLes4RefSMI)",
+       "[Helminths](https://youtu.be/-E6SA46bT3Y)",
+       "[Virus Structures](https://youtu.be/2MKyeS8a8zE)",
+       "[DNA Viruses](https://youtu.be/1blm8giHQRw)",
+       "[Herpes Viruses](https://youtu.be/qwrDHMGbTUY)",
+       "[RNA Viruses](https://youtu.be/yaZBbN4Ujqo)",
+       "[Viral Hepatitis](https://youtu.be/Mw6wnDP0Q04)",
+       "[HIV](https://youtu.be/FPqgOjCZrRs)",
+       "[HIV Drugs](https://youtu.be/DEuH8fwl6pQ)",
+       "[Antivirals](https://youtu.be/8cuNDkurD1s)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Бактерии](https://youtu.be/kifPAk7nrRU)",
+       "[Формы и окраска](https://youtu.be/_xaxOkNHURw)",
+       "[Культивирование бактерий](https://youtu.be/pCS8V-t0Oj4)",
+       "[Особые условия роста](https://youtu.be/-gJW70Y4Ols)",
+       "[Вирулентность](https://youtu.be/jvbs6oFsmKc)",
+       "[Рост и генетика](https://youtu.be/SWrdn8zPxKU)",
+       "[Идентификация бактерий](https://youtu.be/4WIKsXeONEk)",
+       "[Стафилококки](https://youtu.be/URXYtfOsBlk)",
+       "[Стрептококки](https://youtu.be/ZAksYQALquA)",
+       "[Другие грамположительные бактерии](https://youtu.be/RoZutp7hPNw)",
+       "[Грамотрицательные палочки](https://youtu.be/u21HqZKO4ks)",
+       "[Другие грамотрицательные бактерии](https://youtu.be/02gQUdoDTzM)",
+       "[Спирохеты](https://youtu.be/0_T5ZhTYDY4)",
+       "[Зоонозные бактерии](https://youtu.be/-JNlk3Bz0yI)",
+       "[Микобактерии](https://youtu.be/zjScFQ2aFWQ)",
+       "[Пенициллины](https://youtu.be/xTResE3YILQ)",
+       "[β-лактамные антибиотики](https://youtu.be/PIunp3hJRfE)",
+       "[Сульфаниламиды](https://youtu.be/UO6kmz-VjtM)",
+       "[Ингибиторы синтеза белка](https://youtu.be/wj15ORWI7sc)",
+       "[Другие антибиотики](https://youtu.be/gmo9YcbEmog)",
+       "[Грибковые пневмонии](https://youtu.be/I7dabQmay50)",
+       "[Грибковые инфекции кожи](https://youtu.be/SrncA9r7YY8)",
+       "[Оппортунистические грибковые инфекции](https://youtu.be/8V6-EFJ75H8)",
+       "[Противогрибковые препараты](https://youtu.be/kpe0ZLU4__I)",
+       "[Малярия](https://youtu.be/PhCt3ipD8CA)",
+       "[Простейшие](https://youtu.be/ZLes4RefSMI)",
+       "[Гельминты](https://youtu.be/-E6SA46bT3Y)",
+       "[Строение вирусов](https://youtu.be/2MKyeS8a8zE)",
+       "[ДНК-вирусы](https://youtu.be/1blm8giHQRw)",
+       "[Вирусы герпеса](https://youtu.be/qwrDHMGbTUY)",
+       "[РНК-вирусы](https://youtu.be/yaZBbN4Ujqo)",
+       "[Вирусные гепатиты](https://youtu.be/Mw6wnDP0Q04)",
+       "[ВИЧ](https://youtu.be/FPqgOjCZrRs)",
+       "[Препараты против ВИЧ](https://youtu.be/DEuH8fwl6pQ)",
+       "[Противовирусные препараты](https://youtu.be/8cuNDkurD1s)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Bacteria](https://youtu.be/kifPAk7nrRU)",
+       "[Shapes and Stains](https://youtu.be/_xaxOkNHURw)",
+       "[Bacterial Culture](https://youtu.be/pCS8V-t0Oj4)",
+       "[Special Growth Requirements](https://youtu.be/-gJW70Y4Ols)",
+       "[Virulence](https://youtu.be/jvbs6oFsmKc)",
+       "[Growth and Genetics](https://youtu.be/SWrdn8zPxKU)",
+       "[Bacterial Identification](https://youtu.be/4WIKsXeONEk)",
+       "[Staphylococci](https://youtu.be/URXYtfOsBlk)",
+       "[Streptococci](https://youtu.be/ZAksYQALquA)",
+       "[Other Gram Positives](https://youtu.be/RoZutp7hPNw)",
+       "[Gram Negative Rods](https://youtu.be/u21HqZKO4ks)",
+       "[Other Gram Negatives](https://youtu.be/02gQUdoDTzM)",
+       "[Spirochetes](https://youtu.be/0_T5ZhTYDY4)",
+       "[Zoonotic Bacteria](https://youtu.be/-JNlk3Bz0yI)",
+       "[Mycobacteria](https://youtu.be/zjScFQ2aFWQ)",
+       "[Penicillins](https://youtu.be/xTResE3YILQ)",
+       "[β-Lactam Antibiotics](https://youtu.be/PIunp3hJRfE)",
+       "[Sulfonamides](https://youtu.be/UO6kmz-VjtM)",
+       "[Protein Synthesis Inhibitors](https://youtu.be/wj15ORWI7sc)",
+       "[Other Antibiotics](https://youtu.be/gmo9YcbEmog)",
+       "[Fungal Pneumonias](https://youtu.be/I7dabQmay50)",
+       "[Fungal Skin Infections](https://youtu.be/SrncA9r7YY8)",
+       "[Opportunistic Fungal Infections](https://youtu.be/8V6-EFJ75H8)",
+       "[Antifungal Drugs](https://youtu.be/kpe0ZLU4__I)",
+       "[Malaria](https://youtu.be/PhCt3ipD8CA)",
+       "[Protozoa](https://youtu.be/ZLes4RefSMI)",
+       "[Helminths](https://youtu.be/-E6SA46bT3Y)",
+       "[Virus Structures](https://youtu.be/2MKyeS8a8zE)",
+       "[DNA Viruses](https://youtu.be/1blm8giHQRw)",
+       "[Herpes Viruses](https://youtu.be/qwrDHMGbTUY)",
+       "[RNA Viruses](https://youtu.be/yaZBbN4Ujqo)",
+       "[Viral Hepatitis](https://youtu.be/Mw6wnDP0Q04)",
+       "[HIV](https://youtu.be/FPqgOjCZrRs)",
+       "[HIV Drugs](https://youtu.be/DEuH8fwl6pQ)",
+       "[Antivirals](https://youtu.be/8cuNDkurD1s)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 13,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Purine Metabolism](https://youtu.be/ZmZnpSpuk_c)",
+       "[Pyrimidine Metabolism](https://youtu.be/ho8V0FBYWww)",
+       "[Glucose](https://youtu.be/3872lzyh4eI)",
+       "[Glycolysis](https://youtu.be/Jt4ktkodaZ8)",
+       "[Gluconeogenesis](https://youtu.be/z7znHjJZDkY)",
+       "[Glycogen](https://youtu.be/VelT3hg_14g)",
+       "[HMP Shunt](https://youtu.be/hBmp-XaigeE)",
+       "[Fructose and Galactose](https://youtu.be/4N_zoUH16XE)",
+       "[Pyruvate Dehydrogenase](https://youtu.be/xjTIB3d044k)",
+       "[TCA Cycle](https://youtu.be/9nga3szXNNo)",
+       "[Electron Transport Chain](https://youtu.be/Af4FQqILFOE)",
+       "[Fatty Acids](https://youtu.be/NztZF6DuwVE)",
+       "[Ketone Bodies](https://youtu.be/x_NPAk-CVF8)",
+       "[Ethanol Metabolism](https://youtu.be/qzPkZpl38tM)",
+       "[Exercise and Starvation](https://youtu.be/3ZXblzncNu0)",
+       "[Inborn Errors of Metabolism](https://youtu.be/tHKpQpwRoIc)",
+       "[Amino Acids](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Phenylalanine and Tyrosine](https://youtu.be/xFxi59iEpYo)",
+       "[Other Amino Acids](https://youtu.be/GFYrtWP6ByM)",
+       "[Ammonia](https://youtu.be/5IhFE7QS1CU)",
+       "[B Vitamins](https://youtu.be/6a96tgHigKw)",
+       "[Folate and Vitamin B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Other Vitamins](https://youtu.be/J3Nw8IgV_T8)",
+       "[Lipid Metabolism](https://youtu.be/CEvOCFJumAU)",
+       "[Hyperlipidemia](https://youtu.be/anFjp-duH70)",
+       "[Lipid Drugs](https://youtu.be/puv72X5AP1I)",
+       "[Lysosomal Storage Diseases](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Purine Metabolism](https://youtu.be/ZmZnpSpuk_c)",
+       "[Pyrimidine Metabolism](https://youtu.be/ho8V0FBYWww)",
+       "[Glucose](https://youtu.be/3872lzyh4eI)",
+       "[Glycolysis](https://youtu.be/Jt4ktkodaZ8)",
+       "[Gluconeogenesis](https://youtu.be/z7znHjJZDkY)",
+       "[Glycogen](https://youtu.be/VelT3hg_14g)",
+       "[HMP Shunt](https://youtu.be/hBmp-XaigeE)",
+       "[Fructose and Galactose](https://youtu.be/4N_zoUH16XE)",
+       "[Pyruvate Dehydrogenase](https://youtu.be/xjTIB3d044k)",
+       "[TCA Cycle](https://youtu.be/9nga3szXNNo)",
+       "[Electron Transport Chain](https://youtu.be/Af4FQqILFOE)",
+       "[Fatty Acids](https://youtu.be/NztZF6DuwVE)",
+       "[Ketone Bodies](https://youtu.be/x_NPAk-CVF8)",
+       "[Ethanol Metabolism](https://youtu.be/qzPkZpl38tM)",
+       "[Exercise and Starvation](https://youtu.be/3ZXblzncNu0)",
+       "[Inborn Errors of Metabolism](https://youtu.be/tHKpQpwRoIc)",
+       "[Amino Acids](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Phenylalanine and Tyrosine](https://youtu.be/xFxi59iEpYo)",
+       "[Other Amino Acids](https://youtu.be/GFYrtWP6ByM)",
+       "[Ammonia](https://youtu.be/5IhFE7QS1CU)",
+       "[B Vitamins](https://youtu.be/6a96tgHigKw)",
+       "[Folate and Vitamin B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Other Vitamins](https://youtu.be/J3Nw8IgV_T8)",
+       "[Lipid Metabolism](https://youtu.be/CEvOCFJumAU)",
+       "[Hyperlipidemia](https://youtu.be/anFjp-duH70)",
+       "[Lipid Drugs](https://youtu.be/puv72X5AP1I)",
+       "[Lysosomal Storage Diseases](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Purine Metabolism](https://youtu.be/ZmZnpSpuk_c)",
+       "[Pyrimidine Metabolism](https://youtu.be/ho8V0FBYWww)",
+       "[Glucose](https://youtu.be/3872lzyh4eI)",
+       "[Glycolysis](https://youtu.be/Jt4ktkodaZ8)",
+       "[Gluconeogenesis](https://youtu.be/z7znHjJZDkY)",
+       "[Glycogen](https://youtu.be/VelT3hg_14g)",
+       "[HMP Shunt](https://youtu.be/hBmp-XaigeE)",
+       "[Fructose and Galactose](https://youtu.be/4N_zoUH16XE)",
+       "[Pyruvate Dehydrogenase](https://youtu.be/xjTIB3d044k)",
+       "[TCA Cycle](https://youtu.be/9nga3szXNNo)",
+       "[Electron Transport Chain](https://youtu.be/Af4FQqILFOE)",
+       "[Fatty Acids](https://youtu.be/NztZF6DuwVE)",
+       "[Ketone Bodies](https://youtu.be/x_NPAk-CVF8)",
+       "[Ethanol Metabolism](https://youtu.be/qzPkZpl38tM)",
+       "[Exercise and Starvation](https://youtu.be/3ZXblzncNu0)",
+       "[Inborn Errors of Metabolism](https://youtu.be/tHKpQpwRoIc)",
+       "[Amino Acids](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Phenylalanine and Tyrosine](https://youtu.be/xFxi59iEpYo)",
+       "[Other Amino Acids](https://youtu.be/GFYrtWP6ByM)",
+       "[Ammonia](https://youtu.be/5IhFE7QS1CU)",
+       "[B Vitamins](https://youtu.be/6a96tgHigKw)",
+       "[Folate and Vitamin B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Other Vitamins](https://youtu.be/J3Nw8IgV_T8)",
+       "[Lipid Metabolism](https://youtu.be/CEvOCFJumAU)",
+       "[Hyperlipidemia](https://youtu.be/anFjp-duH70)",
+       "[Lipid Drugs](https://youtu.be/puv72X5AP1I)",
+       "[Lysosomal Storage Diseases](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Purine Metabolism](https://youtu.be/ZmZnpSpuk_c)",
+       "[Pyrimidine Metabolism](https://youtu.be/ho8V0FBYWww)",
+       "[Glucose](https://youtu.be/3872lzyh4eI)",
+       "[Glycolysis](https://youtu.be/Jt4ktkodaZ8)",
+       "[Gluconeogenesis](https://youtu.be/z7znHjJZDkY)",
+       "[Glycogen](https://youtu.be/VelT3hg_14g)",
+       "[HMP Shunt](https://youtu.be/hBmp-XaigeE)",
+       "[Fructose and Galactose](https://youtu.be/4N_zoUH16XE)",
+       "[Pyruvate Dehydrogenase](https://youtu.be/xjTIB3d044k)",
+       "[TCA Cycle](https://youtu.be/9nga3szXNNo)",
+       "[Electron Transport Chain](https://youtu.be/Af4FQqILFOE)",
+       "[Fatty Acids](https://youtu.be/NztZF6DuwVE)",
+       "[Ketone Bodies](https://youtu.be/x_NPAk-CVF8)",
+       "[Ethanol Metabolism](https://youtu.be/qzPkZpl38tM)",
+       "[Exercise and Starvation](https://youtu.be/3ZXblzncNu0)",
+       "[Inborn Errors of Metabolism](https://youtu.be/tHKpQpwRoIc)",
+       "[Amino Acids](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Phenylalanine and Tyrosine](https://youtu.be/xFxi59iEpYo)",
+       "[Other Amino Acids](https://youtu.be/GFYrtWP6ByM)",
+       "[Ammonia](https://youtu.be/5IhFE7QS1CU)",
+       "[B Vitamins](https://youtu.be/6a96tgHigKw)",
+       "[Folate and Vitamin B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Other Vitamins](https://youtu.be/J3Nw8IgV_T8)",
+       "[Lipid Metabolism](https://youtu.be/CEvOCFJumAU)",
+       "[Hyperlipidemia](https://youtu.be/anFjp-duH70)",
+       "[Lipid Drugs](https://youtu.be/puv72X5AP1I)",
+       "[Lysosomal Storage Diseases](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Метаболизм пуринов](https://youtu.be/ZmZnpSpuk_c)",
+       "[Метаболизм пиримидинов](https://youtu.be/ho8V0FBYWww)",
+       "[Глюкоза](https://youtu.be/3872lzyh4eI)",
+       "[Гликолиз](https://youtu.be/Jt4ktkodaZ8)",
+       "[Глюконеогенез](https://youtu.be/z7znHjJZDkY)",
+       "[Гликоген](https://youtu.be/VelT3hg_14g)",
+       "[Гексозомонофосфатный шунт](https://youtu.be/hBmp-XaigeE)",
+       "[Фруктоза и галактоза](https://youtu.be/4N_zoUH16XE)",
+       "[Пируватдегидрогеназа](https://youtu.be/xjTIB3d044k)",
+       "[Цикл трикарбоновых кислот](https://youtu.be/9nga3szXNNo)",
+       "[Электрон-транспортная цепь](https://youtu.be/Af4FQqILFOE)",
+       "[Жирные кислоты](https://youtu.be/NztZF6DuwVE)",
+       "[Кетоновые тела](https://youtu.be/x_NPAk-CVF8)",
+       "[Метаболизм этанола](https://youtu.be/qzPkZpl38tM)",
+       "[Физическая нагрузка и голодание](https://youtu.be/3ZXblzncNu0)",
+       "[Врождённые нарушения обмена веществ](https://youtu.be/tHKpQpwRoIc)",
+       "[Аминокислоты](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Фенилаланин и тирозин](https://youtu.be/xFxi59iEpYo)",
+       "[Другие аминокислоты](https://youtu.be/GFYrtWP6ByM)",
+       "[Аммиак](https://youtu.be/5IhFE7QS1CU)",
+       "[Витамины группы B](https://youtu.be/6a96tgHigKw)",
+       "[Фолат и витамин B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Другие витамины](https://youtu.be/J3Nw8IgV_T8)",
+       "[Метаболизм липидов](https://youtu.be/CEvOCFJumAU)",
+       "[Гиперлипидемия](https://youtu.be/anFjp-duH70)",
+       "[Липидснижающие препараты](https://youtu.be/puv72X5AP1I)",
+       "[Лизосомные болезни накопления](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Purine Metabolism](https://youtu.be/ZmZnpSpuk_c)",
+       "[Pyrimidine Metabolism](https://youtu.be/ho8V0FBYWww)",
+       "[Glucose](https://youtu.be/3872lzyh4eI)",
+       "[Glycolysis](https://youtu.be/Jt4ktkodaZ8)",
+       "[Gluconeogenesis](https://youtu.be/z7znHjJZDkY)",
+       "[Glycogen](https://youtu.be/VelT3hg_14g)",
+       "[HMP Shunt](https://youtu.be/hBmp-XaigeE)",
+       "[Fructose and Galactose](https://youtu.be/4N_zoUH16XE)",
+       "[Pyruvate Dehydrogenase](https://youtu.be/xjTIB3d044k)",
+       "[TCA Cycle](https://youtu.be/9nga3szXNNo)",
+       "[Electron Transport Chain](https://youtu.be/Af4FQqILFOE)",
+       "[Fatty Acids](https://youtu.be/NztZF6DuwVE)",
+       "[Ketone Bodies](https://youtu.be/x_NPAk-CVF8)",
+       "[Ethanol Metabolism](https://youtu.be/qzPkZpl38tM)",
+       "[Exercise and Starvation](https://youtu.be/3ZXblzncNu0)",
+       "[Inborn Errors of Metabolism](https://youtu.be/tHKpQpwRoIc)",
+       "[Amino Acids](https://youtu.be/1Mk_YZx0Dx8)",
+       "[Phenylalanine and Tyrosine](https://youtu.be/xFxi59iEpYo)",
+       "[Other Amino Acids](https://youtu.be/GFYrtWP6ByM)",
+       "[Ammonia](https://youtu.be/5IhFE7QS1CU)",
+       "[B Vitamins](https://youtu.be/6a96tgHigKw)",
+       "[Folate and Vitamin B12](https://youtu.be/OkuQ86rzBuA)",
+       "[Other Vitamins](https://youtu.be/J3Nw8IgV_T8)",
+       "[Lipid Metabolism](https://youtu.be/CEvOCFJumAU)",
+       "[Hyperlipidemia](https://youtu.be/anFjp-duH70)",
+       "[Lipid Drugs](https://youtu.be/puv72X5AP1I)",
+       "[Lysosomal Storage Diseases](https://youtu.be/VOPIP8eFaSY)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "klinik-fikrlashga-doir-video-darslar",
+  "order": 15,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Shoulder and Elbow](https://youtu.be/P8sKURGEuyQ)",
+       "[Brachial Plexus](https://youtu.be/ITSWJwt33n4)",
+       "[Wrist](https://youtu.be/DgZCCr6e09Y)",
+       "[Hand](https://youtu.be/pvGvT2nAfbI)",
+       "[Lumbosacral Plexus](https://youtu.be/-XOiP73SCwM)",
+       "[Lumbar Radiculopathy](https://youtu.be/qXyunckFqJU)",
+       "[Hip](https://youtu.be/C5D51i_6avU)",
+       "[Skeletal Muscle](https://youtu.be/5X_GdXtvuCI)",
+       "[Cardiac Muscle](https://youtu.be/ydN6JYsSTFs)",
+       "[Smooth Muscle](https://youtu.be/mwuMVaMx80s)",
+       "[Bone](https://youtu.be/fwtkyFuluV8)",
+       "[Bone Disorders](https://youtu.be/Y4f-biCqC60)",
+       "[Osteoporosis](https://youtu.be/LnSDeb9oHfo)",
+       "[Osteoporosis Drugs](https://youtu.be/pQj9wCgPZAI)",
+       "[Bone Tumors](https://youtu.be/-mEzoVkD6PM)",
+       "[Osteoarthritis](https://youtu.be/M9k_yE0q_XE)",
+       "[Gout](https://youtu.be/HQbaIn2OWMI)",
+       "[Gout Drugs](https://youtu.be/I5lV3Y-iS74)",
+       "[CPPD](https://youtu.be/Z3j7z37qm0E)",
+       "[Seronegative Spondyloarthritis](https://youtu.be/Hcixttb8lY0)",
+       "[Muscle Disorders](https://youtu.be/6LPmW9YrIFw)",
+       "[Neuromuscular Disorders](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Shoulder and Elbow](https://youtu.be/P8sKURGEuyQ)",
+       "[Brachial Plexus](https://youtu.be/ITSWJwt33n4)",
+       "[Wrist](https://youtu.be/DgZCCr6e09Y)",
+       "[Hand](https://youtu.be/pvGvT2nAfbI)",
+       "[Lumbosacral Plexus](https://youtu.be/-XOiP73SCwM)",
+       "[Lumbar Radiculopathy](https://youtu.be/qXyunckFqJU)",
+       "[Hip](https://youtu.be/C5D51i_6avU)",
+       "[Skeletal Muscle](https://youtu.be/5X_GdXtvuCI)",
+       "[Cardiac Muscle](https://youtu.be/ydN6JYsSTFs)",
+       "[Smooth Muscle](https://youtu.be/mwuMVaMx80s)",
+       "[Bone](https://youtu.be/fwtkyFuluV8)",
+       "[Bone Disorders](https://youtu.be/Y4f-biCqC60)",
+       "[Osteoporosis](https://youtu.be/LnSDeb9oHfo)",
+       "[Osteoporosis Drugs](https://youtu.be/pQj9wCgPZAI)",
+       "[Bone Tumors](https://youtu.be/-mEzoVkD6PM)",
+       "[Osteoarthritis](https://youtu.be/M9k_yE0q_XE)",
+       "[Gout](https://youtu.be/HQbaIn2OWMI)",
+       "[Gout Drugs](https://youtu.be/I5lV3Y-iS74)",
+       "[CPPD](https://youtu.be/Z3j7z37qm0E)",
+       "[Seronegative Spondyloarthritis](https://youtu.be/Hcixttb8lY0)",
+       "[Muscle Disorders](https://youtu.be/6LPmW9YrIFw)",
+       "[Neuromuscular Disorders](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Shoulder and Elbow](https://youtu.be/P8sKURGEuyQ)",
+       "[Brachial Plexus](https://youtu.be/ITSWJwt33n4)",
+       "[Wrist](https://youtu.be/DgZCCr6e09Y)",
+       "[Hand](https://youtu.be/pvGvT2nAfbI)",
+       "[Lumbosacral Plexus](https://youtu.be/-XOiP73SCwM)",
+       "[Lumbar Radiculopathy](https://youtu.be/qXyunckFqJU)",
+       "[Hip](https://youtu.be/C5D51i_6avU)",
+       "[Skeletal Muscle](https://youtu.be/5X_GdXtvuCI)",
+       "[Cardiac Muscle](https://youtu.be/ydN6JYsSTFs)",
+       "[Smooth Muscle](https://youtu.be/mwuMVaMx80s)",
+       "[Bone](https://youtu.be/fwtkyFuluV8)",
+       "[Bone Disorders](https://youtu.be/Y4f-biCqC60)",
+       "[Osteoporosis](https://youtu.be/LnSDeb9oHfo)",
+       "[Osteoporosis Drugs](https://youtu.be/pQj9wCgPZAI)",
+       "[Bone Tumors](https://youtu.be/-mEzoVkD6PM)",
+       "[Osteoarthritis](https://youtu.be/M9k_yE0q_XE)",
+       "[Gout](https://youtu.be/HQbaIn2OWMI)",
+       "[Gout Drugs](https://youtu.be/I5lV3Y-iS74)",
+       "[CPPD](https://youtu.be/Z3j7z37qm0E)",
+       "[Seronegative Spondyloarthritis](https://youtu.be/Hcixttb8lY0)",
+       "[Muscle Disorders](https://youtu.be/6LPmW9YrIFw)",
+       "[Neuromuscular Disorders](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "[Shoulder and Elbow](https://youtu.be/P8sKURGEuyQ)",
+       "[Brachial Plexus](https://youtu.be/ITSWJwt33n4)",
+       "[Wrist](https://youtu.be/DgZCCr6e09Y)",
+       "[Hand](https://youtu.be/pvGvT2nAfbI)",
+       "[Lumbosacral Plexus](https://youtu.be/-XOiP73SCwM)",
+       "[Lumbar Radiculopathy](https://youtu.be/qXyunckFqJU)",
+       "[Hip](https://youtu.be/C5D51i_6avU)",
+       "[Skeletal Muscle](https://youtu.be/5X_GdXtvuCI)",
+       "[Cardiac Muscle](https://youtu.be/ydN6JYsSTFs)",
+       "[Smooth Muscle](https://youtu.be/mwuMVaMx80s)",
+       "[Bone](https://youtu.be/fwtkyFuluV8)",
+       "[Bone Disorders](https://youtu.be/Y4f-biCqC60)",
+       "[Osteoporosis](https://youtu.be/LnSDeb9oHfo)",
+       "[Osteoporosis Drugs](https://youtu.be/pQj9wCgPZAI)",
+       "[Bone Tumors](https://youtu.be/-mEzoVkD6PM)",
+       "[Osteoarthritis](https://youtu.be/M9k_yE0q_XE)",
+       "[Gout](https://youtu.be/HQbaIn2OWMI)",
+       "[Gout Drugs](https://youtu.be/I5lV3Y-iS74)",
+       "[CPPD](https://youtu.be/Z3j7z37qm0E)",
+       "[Seronegative Spondyloarthritis](https://youtu.be/Hcixttb8lY0)",
+       "[Muscle Disorders](https://youtu.be/6LPmW9YrIFw)",
+       "[Neuromuscular Disorders](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     },
+     "ru": {
+      "items": [
+       "[Плечо и локоть](https://youtu.be/P8sKURGEuyQ)",
+       "[Плечевое сплетение](https://youtu.be/ITSWJwt33n4)",
+       "[Запястье](https://youtu.be/DgZCCr6e09Y)",
+       "[Кисть](https://youtu.be/pvGvT2nAfbI)",
+       "[Пояснично-крестцовое сплетение](https://youtu.be/-XOiP73SCwM)",
+       "[Поясничная радикулопатия](https://youtu.be/qXyunckFqJU)",
+       "[Тазобедренный сустав](https://youtu.be/C5D51i_6avU)",
+       "[Скелетные мышцы](https://youtu.be/5X_GdXtvuCI)",
+       "[Сердечная мышца](https://youtu.be/ydN6JYsSTFs)",
+       "[Гладкие мышцы](https://youtu.be/mwuMVaMx80s)",
+       "[Кость](https://youtu.be/fwtkyFuluV8)",
+       "[Заболевания костей](https://youtu.be/Y4f-biCqC60)",
+       "[Остеопороз](https://youtu.be/LnSDeb9oHfo)",
+       "[Препараты при остеопорозе](https://youtu.be/pQj9wCgPZAI)",
+       "[Опухоли костей](https://youtu.be/-mEzoVkD6PM)",
+       "[Остеоартрит](https://youtu.be/M9k_yE0q_XE)",
+       "[Подагра](https://youtu.be/HQbaIn2OWMI)",
+       "[Препараты при подагре](https://youtu.be/I5lV3Y-iS74)",
+       "[Болезнь депонирования пирофосфата кальция (CPPD)](https://youtu.be/Z3j7z37qm0E)",
+       "[Серонегативные спондилоартриты](https://youtu.be/Hcixttb8lY0)",
+       "[Заболевания мышц](https://youtu.be/6LPmW9YrIFw)",
+       "[Нервно-мышечные заболевания](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     },
+     "uz": {
+      "items": [
+       "[Shoulder and Elbow](https://youtu.be/P8sKURGEuyQ)",
+       "[Brachial Plexus](https://youtu.be/ITSWJwt33n4)",
+       "[Wrist](https://youtu.be/DgZCCr6e09Y)",
+       "[Hand](https://youtu.be/pvGvT2nAfbI)",
+       "[Lumbosacral Plexus](https://youtu.be/-XOiP73SCwM)",
+       "[Lumbar Radiculopathy](https://youtu.be/qXyunckFqJU)",
+       "[Hip](https://youtu.be/C5D51i_6avU)",
+       "[Skeletal Muscle](https://youtu.be/5X_GdXtvuCI)",
+       "[Cardiac Muscle](https://youtu.be/ydN6JYsSTFs)",
+       "[Smooth Muscle](https://youtu.be/mwuMVaMx80s)",
+       "[Bone](https://youtu.be/fwtkyFuluV8)",
+       "[Bone Disorders](https://youtu.be/Y4f-biCqC60)",
+       "[Osteoporosis](https://youtu.be/LnSDeb9oHfo)",
+       "[Osteoporosis Drugs](https://youtu.be/pQj9wCgPZAI)",
+       "[Bone Tumors](https://youtu.be/-mEzoVkD6PM)",
+       "[Osteoarthritis](https://youtu.be/M9k_yE0q_XE)",
+       "[Gout](https://youtu.be/HQbaIn2OWMI)",
+       "[Gout Drugs](https://youtu.be/I5lV3Y-iS74)",
+       "[CPPD](https://youtu.be/Z3j7z37qm0E)",
+       "[Seronegative Spondyloarthritis](https://youtu.be/Hcixttb8lY0)",
+       "[Muscle Disorders](https://youtu.be/6LPmW9YrIFw)",
+       "[Neuromuscular Disorders](https://youtu.be/XHDkVo1BZF4)"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "department-7",
+  "order": 49,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "Folate and Vitamin B12",
+       "Glucose",
+       "Fructose and Galactose",
+       "TCA Cycle",
+       "HMP Shunt",
+       "Amino Acids",
+       "Gluconeogenesis",
+       "B Vitamins",
+       "DNA Structure",
+       "Inborn Errors of Metabolism",
+       "Purine Metabolism",
+       "Ammonia",
+       "Pyruvate Dehydrogenase",
+       "Hyperlipidemia",
+       "Other Amino Acids",
+       "Phenylalanine and Tyrosine",
+       "Glycogen",
+       "Pyrimidine Metabolism",
+       "Electron Transport Chain",
+       "Other Vitamins",
+       "Fatty Acids",
+       "Lipid Drugs",
+       "Glycolysis",
+       "Lipid"
+      ]
+     },
+     "ru": {
+      "items": [
+       "olate and Vitamin B12",
+       "Glucose",
+       "Fructose and Galactose",
+       "TCA Cycle",
+       "HMP Shunt",
+       "Amino Acids",
+       "Gluconeogenesis",
+       "B Vitamins",
+       "DNA Structure",
+       "Inborn Errors of Metabolism",
+       "Purine Metabolism",
+       "Ammonia",
+       "Pyruvate Dehydrogenase",
+       "Hyperlipidemia",
+       "Other Amino Acids",
+       "Phenylalanine and Tyrosine",
+       "Glycogen",
+       "Pyrimidine Metabolism",
+       "Electron Transport Chain",
+       "Other Vitamins",
+       "Fatty Acids",
+       "Lipid Drugs",
+       "Glycolysis",
+       "Lipid"
+      ]
+     },
+     "uz": {
+      "items": [
+       "Folate and Vitamin B12",
+       "Glucose",
+       "Fructose and Galactose",
+       "TCA Cycle",
+       "HMP Shunt",
+       "Amino Acids",
+       "Gluconeogenesis",
+       "B Vitamins",
+       "DNA Structure",
+       "Inborn Errors of Metabolism",
+       "Purine Metabolism",
+       "Ammonia",
+       "Pyruvate Dehydrogenase",
+       "Hyperlipidemia",
+       "Other Amino Acids",
+       "Phenylalanine and Tyrosine",
+       "Glycogen",
+       "Pyrimidine Metabolism",
+       "Electron Transport Chain",
+       "Other Vitamins",
+       "Fatty Acids",
+       "Lipid Drugs",
+       "Glycolysis",
+       "Lipid"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "list",
+    "data": {
+     "en": {
+      "items": [
+       "Folate and Vitamin B12",
+       "Glucose",
+       "Fructose and Galactose",
+       "TCA Cycle",
+       "HMP Shunt",
+       "Amino Acids",
+       "Gluconeogenesis",
+       "B Vitamins",
+       "DNA Structure",
+       "Inborn Errors of Metabolism",
+       "Purine Metabolism",
+       "Ammonia",
+       "Pyruvate Dehydrogenase",
+       "Hyperlipidemia",
+       "Other Amino Acids",
+       "Phenylalanine and Tyrosine",
+       "Glycogen",
+       "Pyrimidine Metabolism",
+       "Electron Transport Chain",
+       "Other Vitamins",
+       "Fatty Acids",
+       "Lipid Drugs",
+       "Glycolysis",
+       "Lipid"
+      ]
+     },
+     "ru": {
+      "items": [
+       "Фолат и витамин B12",
+       "Глюкоза",
+       "Фруктоза и галактоза",
+       "Цикл трикарбоновых кислот",
+       "Гексозомонофосфатный шунт",
+       "Аминокислоты",
+       "Глюконеогенез",
+       "Витамины группы B",
+       "Структура ДНК",
+       "Врождённые нарушения обмена веществ",
+       "Метаболизм пуринов",
+       "Аммиак",
+       "Пируватдегидрогеназа",
+       "Гиперлипидемия",
+       "Другие аминокислоты",
+       "Фенилаланин и тирозин",
+       "Гликоген",
+       "Метаболизм пиримидинов",
+       "Электрон-транспортная цепь",
+       "Другие витамины",
+       "Жирные кислоты",
+       "Липидснижающие препараты",
+       "Гликолиз",
+       "Липиды"
+      ]
+     },
+     "uz": {
+      "items": [
+       "Folate and Vitamin B12",
+       "Glucose",
+       "Fructose and Galactose",
+       "TCA Cycle",
+       "HMP Shunt",
+       "Amino Acids",
+       "Gluconeogenesis",
+       "B Vitamins",
+       "DNA Structure",
+       "Inborn Errors of Metabolism",
+       "Purine Metabolism",
+       "Ammonia",
+       "Pyruvate Dehydrogenase",
+       "Hyperlipidemia",
+       "Other Amino Acids",
+       "Phenylalanine and Tyrosine",
+       "Glycogen",
+       "Pyrimidine Metabolism",
+       "Electron Transport Chain",
+       "Other Vitamins",
+       "Fatty Acids",
+       "Lipid Drugs",
+       "Glycolysis",
+       "Lipid"
+      ]
+     }
+    }
+   }
+  ]
+ }
+]
