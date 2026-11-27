@@ -835,6 +835,30 @@
   text-indent: 0;
 }
 
+/* A link to a video on YouTube carries the name, like a file link its type (a page of 160 video lessons is a list of such links, not 160 frames). */
+.prose-content a[href^="https://youtu.be/" i]:not(.cms-download-btn)::after,
+.prose-content a[href^="https://www.youtube.com/" i]:not(.cms-download-btn)::after,
+.prose-content a[href^="https://youtube.com/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://youtu.be/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://www.youtube.com/" i]:not(.cms-download-btn)::after,
+.cms-article a[href^="https://youtube.com/" i]:not(.cms-download-btn)::after {
+  content: "\25B6  YOUTUBE";
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.05em 0.45em;
+  border-radius: 0.3em;
+  background: #e8eaf5;
+  color: #0a1158;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  vertical-align: middle;
+  text-decoration: none;
+  text-indent: 0;
+  white-space: nowrap;
+}
+
 /* A typed video block (`embed`): a 16:9 frame the width of the text. */
 .cms-embed {
   margin: 1.25rem 0;
