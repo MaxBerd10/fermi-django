@@ -77,8 +77,10 @@ export interface DocumentBlockData {
   /** "button" renders a plain navy pill link ("Hujjatni yuklab olish" on the old
    * site) instead of the default bordered document card. */
   /** `roadmap` uses the legacy in-page PDF viewer used by the institute's
-   * annual road map, while `button` keeps the old plain download pill. */
-  style?: "button" | "roadmap" | "card";
+   * annual road map, while `button` keeps the old plain download pill.
+   * `attachment` is the document card with its open / download buttons only: the
+   * page never opens the PDF inside itself (a page with one PDF otherwise does). */
+  style?: "button" | "roadmap" | "card" | "attachment";
 }
 export interface GalleryItem {
   image_id: number;
