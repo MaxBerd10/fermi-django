@@ -10,6 +10,8 @@ import { ApiError } from "@/types/api";
 import NotFound from "@/pages/NotFound";
 import { isNotFound } from "@/lib/loadErrors";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
+import FileLinkCard from "@/blocks/FileLinkCard";
+import { loneFileLink } from "@/lib/loneFileLink";
 import LinkifiedText from "@/blocks/LinkifiedText";
 import InnerPageLayout from "@/components/shared/InnerPageLayout";
 import MenuSectionNav from "@/components/shared/MenuSectionNav";
@@ -223,9 +225,16 @@ export default function BlogPage() {
               ) : isRegulatoryIndex ? (
                 <div className="regulatory-index">
                   {sortedBlocks.map((block) => block.block_type === "heading" || block.block_type === "paragraph" ? (
-                    <div key={block.id} className="regulatory-index__entry">
-                      <LinkifiedText text={block.data.text} />
-                    </div>
+                    // an entry that is one file (or lex.uz) link is the site's file card, like on every other page; any other entry stays a tile
+                    loneFileLink(block.data.text) ? (
+                      <div key={block.id} className="regulatory-index__full regulatory-index__card">
+                        <FileLinkCard link={loneFileLink(block.data.text) as NonNullable<ReturnType<typeof loneFileLink>>} />
+                      </div>
+                    ) : (
+                      <div key={block.id} className="regulatory-index__entry">
+                        <LinkifiedText text={block.data.text} />
+                      </div>
+                    )
                   ) : (
                     <div key={block.id} className="regulatory-index__full">
                       <BlockRenderer block={block} documentTitle={title} />

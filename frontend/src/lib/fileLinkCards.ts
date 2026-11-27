@@ -15,7 +15,7 @@ import { officeViewerUrl } from "@/lib/officeViewer";
 const LEGAL_PORTAL_RE = /^https?:\/\/(?:www\.)?(lex\.uz|dd\.gov\.uz)\//i;
 const FILE_PATH_RE = /\.(pdf|docx?|xlsx?|pptx?|zip|rar)$/i;
 
-function fileExtension(href: string): string | null {
+export function fileExtension(href: string): string | null {
   if (isDeadHref(href)) return null; // a dead address is not offered as a card
   const path = href.split(/[?#]/)[0];
   const match = FILE_PATH_RE.exec(path);

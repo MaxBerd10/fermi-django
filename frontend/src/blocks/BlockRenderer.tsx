@@ -5,6 +5,8 @@ import { optimizedImageUrl } from "@/lib/imageProxy";
 import RawHtmlBlock from "./RawHtmlBlock";
 import DocumentCard, { humanizeFilename } from "./DocumentCard";
 import LinkifiedText from "./LinkifiedText";
+import FileLinkCard from "./FileLinkCard";
+import { loneFileLink } from "@/lib/loneFileLink";
 import { isChapterHeading } from "@/lib/layoutBlocks";
 import RoadmapPdfFrame from "./RoadmapPdfFrame";
 
@@ -78,7 +80,10 @@ export function BlockRenderer({ block, documentTitle }: {
     case "heading":
       return block.data.level === 3 ? <h3>{block.data.text}</h3> : <h2 data-chapter={isChapterHeading(block.data.text) || undefined}>{block.data.text}</h2>;
 
-    case "paragraph":
+    case "paragraph": {
+      // A paragraph that is nothing but one link to a file (or to lex.uz) is the site's file card, like a document block.
+      const fileLink = loneFileLink(block.data.text);
+      if (fileLink) return <FileLinkCard link={fileLink} />;
       // A paragraph whose text holds line breaks is a verse (poem stanza): keep its lines, see .cms-verse.
       if (block.data.text.includes("\n")) {
         return <p className="cms-verse"><LinkifiedText text={block.data.text} /></p>;
@@ -90,8 +95,18 @@ export function BlockRenderer({ block, documentTitle }: {
       ) : (
         <p><LinkifiedText text={block.data.text} /></p>
       );
+    }
 
-    case "list":
+    case "list": {
+      // A list whose every item is one link to a file: the items are file cards, not boxed bullets.
+      const fileLinks = block.data.items.map(loneFileLink);
+      if (fileLinks.length > 0 && fileLinks.every(Boolean)) {
+        return (
+          <div className="cms-file-cards">
+            {fileLinks.map((link, i) => <FileLinkCard key={i} link={link as NonNullable<typeof link>} />)}
+          </div>
+        );
+      }
       return (
         <ol>
           {block.data.items.map((item, i) => (
@@ -99,6 +114,7 @@ export function BlockRenderer({ block, documentTitle }: {
           ))}
         </ol>
       );
+    }
 
     case "staff_card": {
       const { full_name, title } = block.data;

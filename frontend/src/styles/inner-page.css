@@ -332,6 +332,11 @@
   content: none;
 }
 
+/* a file entry of the index is the site's file card (the grid's gap spaces the cards, not the card's own top margin) */
+.inner-page-body .regulatory-index__card > [data-file-card] {
+  margin-block-start: 0;
+}
+
 .inner-page-body .regulatory-archive:not(.regulatory-archive--index) > p {
   margin-block: .75rem 0;
 }
