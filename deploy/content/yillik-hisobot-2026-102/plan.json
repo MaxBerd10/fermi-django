@@ -1,0 +1,1261 @@
+[
+ {
+  "slug": "grant-taqsimoti",
+  "order": 2,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "table",
+    "data": {
+     "en": {
+      "rows": [
+       [
+        "1",
+        "Endocrinology",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Hygiene",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Cardiology",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Morphology",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Pediatrics",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "X-ray techniques and technology",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Healthcare management and public health",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Education of medical and biological devices, systems and complexes",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Educational direction name",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Total",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Uzbek",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Russian",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Total",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Uzbek",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Russian",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Total",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Uzbek",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Russian"
+      ]
+     },
+     "ru": {
+      "rows": [
+       [
+        "1",
+        "Эндокринология",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Гигиена",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Кардиология",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Морфология",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Педиатрия",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "Рентгеновские методы и технологии",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Управление здравоохранением и общественное здравоохранение",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Обучение работе с медицинскими и биологическими устройствами, системами и комплексами.",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Название образовательного направления",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — Итого",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — узбекский",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — русский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — Итого",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — узбекский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — русский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — Итого",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — узбекский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — русский"
+      ]
+     },
+     "uz": {
+      "rows": [
+       [
+        "1",
+        "Endokrinologiya",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Gigiyena",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Kardiologiya",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Morfologiya",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Pediatriya",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "Rentgen texnikasi va texnologiyasi",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Sogʻliqni saqlashni boshqarish va jamoat sogʻligʻini saqlash",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Tibbiy-biologik apparatlar, tizimlar va majmualar taʻlimi",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Taʻlim yoʻnalishi nomi",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — Jami",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — oʻzbek",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — rus",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — Jami",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — oʻzbek",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — rus",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — Jami",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — oʻzbek",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — rus"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "rows": [
+       [
+        "1",
+        "Endokrinologiya",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Gigiyena",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Kardiologiya",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Morfologiya",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Pediatriya",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "Rentgen texnikasi va texnologiyasi",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Sogʻliqni saqlashni boshqarish va jamoat sogʻligʻini saqlash",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Tibbiy-biologik apparatlar, tizimlar va majmualar taʻlimi",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Taʻlim yoʻnalishi nomi",
+       "Jami",
+       "Oʻzbek",
+       "Rus",
+       "Jami",
+       "Oʻzbek",
+       "Rus",
+       "Jami",
+       "Oʻzbek",
+       "Rus"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti*",
+        "span": 3
+       },
+       {
+        "label": "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti*",
+        "span": 3
+       },
+       {
+        "label": "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti**",
+        "span": 3
+       }
+      ]
+     },
+     "ru": {
+      "rows": [
+       [
+        "1",
+        "Эндокринология",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Гигиена",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Кардиология",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Морфология",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Педиатрия",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "Рентгеновские методы и технологии",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Управление здравоохранением и общественное здравоохранение",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Обучение работе с медицинскими и биологическими устройствами, системами и комплексами.",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Название образовательного направления",
+       "Итого",
+       "Узбекский",
+       "Русский",
+       "Итого",
+       "Узбекский",
+       "Русский",
+       "Итого",
+       "Узбекский",
+       "Русский"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант*",
+        "span": 3
+       },
+       {
+        "label": "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение*",
+        "span": 3
+       },
+       {
+        "label": "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование**",
+        "span": 3
+       }
+      ]
+     },
+     "en": {
+      "rows": [
+       [
+        "1",
+        "Endocrinology",
+        "3",
+        "3",
+        "0",
+        "1",
+        "1",
+        "0",
+        "4",
+        "4",
+        "0"
+       ],
+       [
+        "2",
+        "Hygiene",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Cardiology",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "4",
+        "Morphology",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "5",
+        "Pediatrics",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "6",
+        "X-ray techniques and technology",
+        "2",
+        "2",
+        "0",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "0"
+       ],
+       [
+        "7",
+        "Healthcare management and public health",
+        "8",
+        "8",
+        "0",
+        "4",
+        "4",
+        "0",
+        "8",
+        "4",
+        "0"
+       ],
+       [
+        "8",
+        "Education of medical and biological devices, systems and complexes",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Educational direction name",
+       "Total",
+       "Uzbek",
+       "Russian",
+       "Total",
+       "Uzbek",
+       "Russian",
+       "Total",
+       "Uzbek",
+       "Russian"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant*",
+        "span": 3
+       },
+       {
+        "label": "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant*",
+        "span": 3
+       },
+       {
+        "label": "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant**",
+        "span": 3
+       }
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "grant-taqsimoti",
+  "order": 4,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "table",
+    "data": {
+     "en": {
+      "rows": [
+       [
+        "1",
+        "Endocrinology",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Cardiology",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Pediatrics",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Educational direction name",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Total",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Uzbek",
+       "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant* — Russian",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Total",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Uzbek",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant* — Russian",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Total",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Uzbek",
+       "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant** — Russian"
+      ]
+     },
+     "ru": {
+      "rows": [
+       [
+        "1",
+        "Эндокринология",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Кардиология",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Педиатрия",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Название образовательного направления",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — Итого",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — узбекский",
+       "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант* — русский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — Итого",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — узбекский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение* — русский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — Итого",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — узбекский",
+       "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование** — русский"
+      ]
+     },
+     "uz": {
+      "rows": [
+       [
+        "1",
+        "Endokrinologiya",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Kardiologiya",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Pediatriya",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Taʻlim yoʻnalishi nomi",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — Jami",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — oʻzbek",
+       "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti* — rus",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — Jami",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — oʻzbek",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti* — rus",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — Jami",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — oʻzbek",
+       "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti** — rus"
+      ]
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "table",
+    "data": {
+     "uz": {
+      "rows": [
+       [
+        "1",
+        "Endokrinologiya",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Kardiologiya",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Pediatriya",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Taʻlim yoʻnalishi nomi",
+       "Jami",
+       "Oʻzbek",
+       "Rus",
+       "Jami",
+       "Oʻzbek",
+       "Rus",
+       "Jami",
+       "Oʻzbek",
+       "Rus"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "2025/2026 oʻquv yili uchun ajratiladigan taʻlim grantlari soni — Taʻlim granti*",
+        "span": 3
+       },
+       {
+        "label": "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq taʻlim granti*",
+        "span": 3
+       },
+       {
+        "label": "2026/2027 oʻquv yili uchun qayta taqsimotga koʻra ajratiladigan taʻlim grantlari soni — Toʻliq boʻlmagan taʻlim granti**",
+        "span": 3
+       }
+      ]
+     },
+     "ru": {
+      "rows": [
+       [
+        "1",
+        "Эндокринология",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Кардиология",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Педиатрия",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Название образовательного направления",
+       "Итого",
+       "Узбекский",
+       "Русский",
+       "Итого",
+       "Узбекский",
+       "Русский",
+       "Итого",
+       "Узбекский",
+       "Русский"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "Количество образовательных грантов, которые будут выделены на 2025/2026 учебный год. — Образовательный грант*",
+        "span": 3
+       },
+       {
+        "label": "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Полная субсидия на обучение*",
+        "span": 3
+       },
+       {
+        "label": "Количество образовательных грантов, подлежащих распределению в соответствии с перераспределением средств на 2026/2027 учебный год. — Грант на неполное образование**",
+        "span": 3
+       }
+      ]
+     },
+     "en": {
+      "rows": [
+       [
+        "1",
+        "Endocrinology",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "2",
+        "Cardiology",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+       ],
+       [
+        "3",
+        "Pediatrics",
+        "4",
+        "4",
+        "0",
+        "3",
+        "3",
+        "0",
+        "2",
+        "2",
+        "0"
+       ]
+      ],
+      "headers": [
+       "№",
+       "Educational direction name",
+       "Total",
+       "Uzbek",
+       "Russian",
+       "Total",
+       "Uzbek",
+       "Russian",
+       "Total",
+       "Uzbek",
+       "Russian"
+      ],
+      "header_groups": [
+       {
+        "label": "",
+        "span": 2
+       },
+       {
+        "label": "The number of educational grants that will be awarded for the 2025/2026 academic year. — Educational grant*",
+        "span": 3
+       },
+       {
+        "label": "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Full tuition grant*",
+        "span": 3
+       },
+       {
+        "label": "The number of educational grants to be distributed in accordance with the redistribution of funds for the 2026/2027 academic year. — Partial education grant**",
+        "span": 3
+       }
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "grant-taqsimoti",
+  "order": 6,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "* — an educational grant awarded for one academic year, under which tuition costs are fully covered by the State budget and a scholarship is provided in the general order ** — an educational grant awarded for one academic year, under which 50 percent of the tuition-contract amount is covered by the State budget and a scholarship is not provided in the general order"
+     },
+     "ru": {
+      "text": "* — образовательный грант, выделяемый на один учебный год, при котором расходы на обучение полностью покрываются из Государственного бюджета и предоставляется стипендия в общем порядке ** — образовательный грант, выделяемый на один учебный год, при котором 50 процентов суммы платы по контракту покрываются из Государственного бюджета и стипендия в общем порядке не предоставляется"
+     },
+     "uz": {
+      "text": "* - bir oʻquv yili uchun berilib, oʻqitish xarajatlari Davlat budjetidan toʻliq qoplab beriladigan va umumiy tartibdagi stipendiya bilan taʻminlanadigan taʻlim granti ** - bir oʻquv yili uchun berilib, toʻlov-kontrakt summasining 50 foizi Davlat budjetidan qoplab beriladigan va umumiy tartibdagi stipendiya bilan taʻminlanmaydigan taʻlim granti"
+     }
+    }
+   }
+  ],
+  "new": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "* - bir oʻquv yili uchun berilib, oʻqitish xarajatlari Davlat budjetidan toʻliq qoplab beriladigan va umumiy tartibdagi stipendiya bilan taʻminlanadigan taʻlim granti"
+     },
+     "ru": {
+      "text": "* — образовательный грант, выделяемый на один учебный год, при котором расходы на обучение полностью покрываются из Государственного бюджета и предоставляется стипендия в общем порядке"
+     },
+     "en": {
+      "text": "* — an educational grant awarded for one academic year, under which tuition costs are fully covered by the State budget and a scholarship is provided in the general order"
+     }
+    }
+   },
+   {
+    "block_type": "paragraph",
+    "data": {
+     "uz": {
+      "text": "** - bir oʻquv yili uchun berilib, toʻlov-kontrakt summasining 50 foizi Davlat budjetidan qoplab beriladigan va umumiy tartibdagi stipendiya bilan taʻminlanmaydigan taʻlim granti"
+     },
+     "ru": {
+      "text": "** — образовательный грант, выделяемый на один учебный год, при котором 50 процентов суммы платы по контракту покрываются из Государственного бюджета и стипендия в общем порядке не предоставляется"
+     },
+     "en": {
+      "text": "** — an educational grant awarded for one academic year, under which 50 percent of the tuition-contract amount is covered by the State budget and a scholarship is not provided in the general order"
+     }
+    }
+   }
+  ]
+ }
+]
