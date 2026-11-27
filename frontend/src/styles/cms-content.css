@@ -711,7 +711,7 @@
 }
 
 /* Kengash qarorlari */
-.cms-article--council-decisions :is(.cms-council-decision, ol > li, ul > li) {
+.cms-article--council-decisions :is(ol > li, ul > li) {
   padding: .875rem 1rem;
   background: #f6f8fc;
   border: 1px solid #dce3ef;
