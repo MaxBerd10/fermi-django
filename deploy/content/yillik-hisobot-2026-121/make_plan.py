@@ -1,0 +1,1 @@
+"""plan.json of script 121 (written by hand, checked on the live pages 2026-11-27): the signature of the two orders of the Ministry reads \"Vazir A. TOShKULOV\" in Uzbek (a lower-case h in a capital name; ru and en already read ТОШКУЛОВ / TOSHKULOV): now \"Vazir A. TOSHKULOV\". Scanned all menu pages: only these two blocks."""
