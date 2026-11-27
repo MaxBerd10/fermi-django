@@ -1,0 +1,220 @@
+{
+ "slug": "kongress-2022-2024",
+ "old": [
+  {
+   "order": 1,
+   "type": "image",
+   "file_tail": "BANNER DERMO-1 zal.jpg"
+  },
+  {
+   "order": 2,
+   "type": "image",
+   "file_tail": "dermatology...jpg"
+  },
+  {
+   "order": 3,
+   "type": "image",
+   "file_tail": "Dermayology.jpg"
+  },
+  {
+   "order": 4,
+   "type": "raw_html",
+   "fp": {
+    "uz": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e",
+    "ru": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e",
+    "en": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e"
+   }
+  },
+  {
+   "order": 5,
+   "type": "image",
+   "file_tail": "TAKLIFNOMA-1.jpg"
+  },
+  {
+   "order": 6,
+   "type": "image",
+   "file_tail": "Dermatovenerology.jpg"
+  },
+  {
+   "order": 7,
+   "type": "image",
+   "file_tail": "СПИКЕРС...jpg"
+  },
+  {
+   "order": 8,
+   "type": "image",
+   "file_tail": "PARTICIPANTS-100.jpg"
+  },
+  {
+   "order": 9,
+   "type": "image",
+   "file_tail": "zoom.jpg"
+  },
+  {
+   "order": 10,
+   "type": "image",
+   "file_tail": "sumka.jpg"
+  },
+  {
+   "order": 11,
+   "type": "image",
+   "file_tail": "Заславский Денис.jpg"
+  },
+  {
+   "order": 12,
+   "type": "paragraph",
+   "fp": {
+    "uz": "8a57227a280207e76ab5a09e396e121dd4e5cc88bc79381825ce24e11c603f59",
+    "ru": "ad7bf1cba6eb8dce2468b0f5965d101e4a21fea12f27dffa0dbe952270fc9cf7",
+    "en": "2ca595e9fa1137ed0538f91eff54e7ce558130c23ebb43ec0f00406f5f79786d"
+   }
+  },
+  {
+   "order": 13,
+   "type": "paragraph",
+   "fp": {
+    "uz": "a6a8dc77cee23022d583db810dd5952f23f7a2ac16a83687780886bcd24cfae5",
+    "ru": "91d692fecb3d109f571ab1039732735e23df3b14cf007c7d47c01220ddbab0f4",
+    "en": "aa009d2090a0134063b681afb44023becc288d001efea606bb73deece58ab4de"
+   }
+  },
+  {
+   "order": 14,
+   "type": "raw_html",
+   "fp": {
+    "uz": "58de6998d325d2a77190690a086ab2a026ec0a2266e0837859b3cef636925bca",
+    "ru": "58de6998d325d2a77190690a086ab2a026ec0a2266e0837859b3cef636925bca",
+    "en": "58de6998d325d2a77190690a086ab2a026ec0a2266e0837859b3cef636925bca"
+   }
+  },
+  {
+   "order": 15,
+   "type": "document",
+   "caption": {
+    "uz": "Kongress",
+    "ru": "Конгресс",
+    "en": "Congress"
+   }
+  }
+ ],
+ "heading": {
+  "2024": {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "IV Xalqaro ilmiy-amaliy konferensiya, 2024-yil 10–11 may",
+     "level": 2
+    },
+    "ru": {
+     "text": "IV Международная научно-практическая конференция, 10–11 мая 2024 года",
+     "level": 2
+    },
+    "en": {
+     "text": "IV International Scientific and Practical Conference, 10–11 May 2024",
+     "level": 2
+    }
+   }
+  },
+  "2023": {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "III Xalqaro ilmiy-amaliy konferensiya, 2023-yil 6-may",
+     "level": 2
+    },
+    "ru": {
+     "text": "III Международная научно-практическая конференция, 6 мая 2023 года",
+     "level": 2
+    },
+    "en": {
+     "text": "III International Scientific and Practical Conference, 6 May 2023",
+     "level": 2
+    }
+   }
+  },
+  "2022": {
+   "block_type": "heading",
+   "data": {
+    "uz": {
+     "text": "II Xalqaro ilmiy-amaliy konferensiya, 2022-yil 6-may",
+     "level": 2
+    },
+    "ru": {
+     "text": "II Международная научно-практическая конференция, 6 мая 2022 года",
+     "level": 2
+    },
+    "en": {
+     "text": "II International Scientific and Practical Conference, 6 May 2022",
+     "level": 2
+    }
+   }
+  }
+ },
+ "video_2024": {
+  "block_type": "embed",
+  "data": {
+   "uz": {
+    "provider": "youtube",
+    "video_id": "Mg6MBqg4f5o",
+    "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+   },
+   "ru": {
+    "provider": "youtube",
+    "video_id": "Mg6MBqg4f5o",
+    "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+   },
+   "en": {
+    "provider": "youtube",
+    "video_id": "Mg6MBqg4f5o",
+    "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+   }
+  }
+ },
+ "video_2022": {
+  "block_type": "embed",
+  "data": {
+   "uz": {
+    "provider": "youtube",
+    "video_id": "rGQRdpp6YfI",
+    "title": "Fargʻona jamoat salomatligi tibbiyot instituti 6 may 2022 yilda oʻtkaziladigan xalqaro konferensiya"
+   },
+   "ru": {
+    "provider": "youtube",
+    "video_id": "rGQRdpp6YfI",
+    "title": "Fargʻona jamoat salomatligi tibbiyot instituti 6 may 2022 yilda oʻtkaziladigan xalqaro konferensiya"
+   },
+   "en": {
+    "provider": "youtube",
+    "video_id": "rGQRdpp6YfI",
+    "title": "Fargʻona jamoat salomatligi tibbiyot instituti 6 may 2022 yilda oʻtkaziladigan xalqaro konferensiya"
+   }
+  }
+ },
+ "proceedings_caption": {
+  "uz": "Konferensiya materiallari toʻplami, 2024-yil may",
+  "ru": "Сборник материалов конференции, Фергана, май 2024",
+  "en": "Conference proceedings, Fergana, May 2024"
+ },
+ "documents": [
+  {
+   "media_path": "migrated/img/yangilikar/Kongress-2022/Инф_письмо_конференции_мая_2022г_Ташкент.pdf",
+   "captions": {
+    "uz": "Konferensiya axborot xati, 2022-yil 6-may (rus tilida)",
+    "ru": "Информационное письмо конференции, 6 мая 2022 года",
+    "en": "Conference information letter, 6 May 2022"
+   }
+  },
+  {
+   "media_path": "migrated/img/yangilikar/Kongress-2022/ПРОГРАММА1.pdf",
+   "captions": {
+    "uz": "Konferensiya dasturi, 2022-yil 6-may (kirill alifbosida)",
+    "ru": "Программа конференции (на узбекском языке, кириллицей)",
+    "en": "Conference programme (in Uzbek, Cyrillic script)"
+   }
+  }
+ ],
+ "menu": {
+  "old_label_uz": "Konrgress dasturi",
+  "new_label_uz": "Kongress dasturi"
+ }
+}

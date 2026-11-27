@@ -1,0 +1,104 @@
+[
+ {
+  "slug": "ilmiy-konferensiyalar",
+  "order": 1,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e",
+    "ru": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e",
+    "en": "ec4cb600ab97a6fa24a14cc7e9f39a647c65dff94c40f0f6c9ae6a08b2d0746e"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "youtube",
+      "video_id": "Mg6MBqg4f5o",
+      "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+     },
+     "ru": {
+      "provider": "youtube",
+      "video_id": "Mg6MBqg4f5o",
+      "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+     },
+     "en": {
+      "provider": "youtube",
+      "video_id": "Mg6MBqg4f5o",
+      "title": "Dermatovenerologiya va dermatoonkopatologiyada diagnostika IV xalqaro ilmiy-amaliy konferensiya"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "test-sinovlarini-otkazish-tartibi-2025",
+  "order": 1,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "85befd82212c0afb59cd36b47943ca94cbee39dff48b40e8a1698aada49eaee8",
+    "ru": "8088d23ca176acc2366d1ea686418f28b512852c646ac5b48a8fd66e5960b7eb",
+    "en": "8088d23ca176acc2366d1ea686418f28b512852c646ac5b48a8fd66e5960b7eb"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "youtube",
+      "video_id": "7F4qi9PEtKQ",
+      "title": "Test sinovlarini oʻtkazish tartibi (oʻzbek tilida)"
+     },
+     "ru": {
+      "provider": "youtube",
+      "video_id": "Kk2XS_td190",
+      "title": "Порядок проведения тестовых испытаний (на русском языке)"
+     },
+     "en": {
+      "provider": "youtube",
+      "video_id": "Kk2XS_td190",
+      "title": "Порядок проведения тестовых испытаний (на русском языке)"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "slug": "test-materiallaridan-foydalanish-2025",
+  "order": 1,
+  "count": 1,
+  "fp": [
+   {
+    "uz": "3d541b17082a13c2512ac20c7a815e60a7baaeef66c277939a2c507a47ad11b9",
+    "ru": "51afbc8d05ec163e981788c77a2d59393233cc4e9e4004fcfa187e9a09b87159",
+    "en": "51afbc8d05ec163e981788c77a2d59393233cc4e9e4004fcfa187e9a09b87159"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "embed",
+    "data": {
+     "uz": {
+      "provider": "youtube",
+      "video_id": "seD6Xs647rI",
+      "title": "Test materiallaridan foydalanish"
+     },
+     "ru": {
+      "provider": "youtube",
+      "video_id": "RFGX89bZsCY",
+      "title": "Работа с тестовыми материалами"
+     },
+     "en": {
+      "provider": "youtube",
+      "video_id": "RFGX89bZsCY",
+      "title": "Работа с тестовыми материалами"
+     }
+    }
+   }
+  ]
+ }
+]
