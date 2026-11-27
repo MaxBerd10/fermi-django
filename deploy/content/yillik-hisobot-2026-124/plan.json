@@ -1,0 +1,42 @@
+[
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "uz",
+  "field": "text",
+  "old": "Raqamli taʻlim texnologiyalari markazi (bundan buyon matnda - Markaz) institutning tarkibiy boʻlinmasi boʻlib, Oʻzbekiston Respublikasi Vazirlar Mahkamasining 23.05.2001-yildagi 230-sonli qarori, Oʻzbekiston respublikasi oliy taʻlim, fan va innovatsiyalar vazirligining 25.06.2001-yildagi 23-son buyrugʻi bilan tashkil etilgan. Markaz Fargʻona jamoat salomatligi tibbiyot institutining tarkibiy boʻlinmasi hisoblanib, taʻlim muassasasiga axborot-kommunikatsiya texnologiyalarni joriy etish bilan bogʻliq ishlarni amalga oshiradi.",
+  "new": "Raqamli taʻlim texnologiyalari markazi (bundan buyon matnda - Markaz) institutning tarkibiy boʻlinmasi boʻlib, Oʻzbekiston Respublikasi Vazirlar Mahkamasining 23.05.2001-yildagi 230-sonli qarori, Oʻzbekiston respublikasi oliy taʻlim, fan va innovatsiyalar vazirligining 25.06.2024-yildagi 23-son buyrugʻi bilan tashkil etilgan. Markaz Fargʻona jamoat salomatligi tibbiyot institutining tarkibiy boʻlinmasi hisoblanib, taʻlim muassasasiga axborot-kommunikatsiya texnologiyalarni joriy etish bilan bogʻliq ishlarni amalga oshiradi."
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "ru",
+  "field": "text",
+  "old": "Центр цифровых образовательных технологий (далее — Центр) является структурным подразделением Института и создан на основании Постановления Кабинета Министров Республики Узбекистан от 23.05.2001 года № 230 и приказа Министерства высшего образования, науки и инноваций Республики Узбекистан от 25.06.2001 года № 23.",
+  "new": "Центр цифровых образовательных технологий (далее — Центр) является структурным подразделением Института и создан на основании Постановления Кабинета Министров Республики Узбекистан от 23.05.2001 года № 230 и приказа Министерства высшего образования, науки и инноваций Республики Узбекистан от 25.06.2024 года № 23."
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "en",
+  "field": "text",
+  "old": "The Center for Digital Education Technologies (hereinafter referred to as the Center) is a structural unit of the Institute and was established in accordance with Resolution No. 230 of the Cabinet of Ministers of the Republic of Uzbekistan dated May 23, 2001, and Order No. 23 of the Ministry of Higher Education, Science and Innovation of the Republic of Uzbekistan dated June 25, 2001.",
+  "new": "The Center for Digital Education Technologies (hereinafter referred to as the Center) is a structural unit of the Institute and was established in accordance with Resolution No. 230 of the Cabinet of Ministers of the Republic of Uzbekistan dated May 23, 2001, and Order No. 23 of the Ministry of Higher Education, Science and Innovation of the Republic of Uzbekistan dated June 25, 2024."
+ },
+ {
+  "slug": "department-6",
+  "order": 30,
+  "lang": "uz",
+  "field": "text",
+  "old": "A tadjanova Dilfuza Sharobidinov na",
+  "new": "Atadjanova Dilfuza Sharobidinovna"
+ },
+ {
+  "slug": "department-6",
+  "order": 30,
+  "lang": "en",
+  "field": "text",
+  "old": "Saidova Sohibakhon Abrorjon kizi",
+  "new": "Atadjanova Dilfuza Sharobidinovna"
+ }
+]
