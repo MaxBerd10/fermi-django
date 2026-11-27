@@ -1,0 +1,24 @@
+[
+ {
+  "slug": "davlat-dasturlari",
+  "order": 30,
+  "count": 1,
+  "old": [
+   {
+    "block_type": "paragraph",
+    "data": {
+     "en": {
+      "text": "[1997 - The Year of human interest](http://lex.uz/)"
+     },
+     "ru": {
+      "text": "[1997 год - Год интересов человека](http://lex.uz/)"
+     },
+     "uz": {
+      "text": "[1997 yil - Inson manfaatlari yili](http://dd.gov.uz/uz/pages/1997)"
+     }
+    }
+   }
+  ],
+  "new": []
+ }
+]
