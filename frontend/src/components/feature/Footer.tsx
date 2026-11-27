@@ -100,7 +100,7 @@ export default function Footer() {
               const external = s.href.startsWith("http");
               const label = t(s.labelKey);
               const cls =
-                "group flex items-center justify-center gap-1.5 px-2 py-2.5 min-h-[40px] text-[11px] md:text-xs font-medium text-white/75 hover:text-[#0a1158] hover:bg-[#ffd600] transition-colors cursor-pointer text-center border-white/10 " +
+                "group flex items-center justify-center gap-1.5 px-2 py-2.5 min-h-[40px] text-xs font-medium text-white/75 hover:text-[#0a1158] hover:bg-[#ffd600] transition-colors cursor-pointer text-center border-white/10 " +
                 (i < FOOTER_SERVICES.length - 1 ? "lg:border-r " : "") +
                 "border-b lg:border-b-0 sm:border-r";
               const inner = (
@@ -144,15 +144,15 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-2.5 text-xs leading-relaxed text-white/65 line-clamp-3 max-w-xs">
+            <p className="mt-2.5 text-sm leading-relaxed text-white/65 line-clamp-3 max-w-xs">
               {t("footer.description")}
             </p>
 
             <div className="mt-2.5 flex flex-wrap gap-1.5">
-              <span className="inline-flex items-center gap-1 rounded-full border border-[#ffd600]/35 bg-[#ffd600]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#ffd600]">
+              <span className="inline-flex items-center gap-1 rounded-full border border-[#ffd600]/35 bg-[#ffd600]/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#ffd600]">
                 {FOUNDED_YEAR}
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/75">
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-white/75">
                 FerMI
               </span>
             </div>
@@ -178,7 +178,7 @@ export default function Footer() {
           {/* Link columns */}
           <div className="lg:col-span-5 grid grid-cols-3 gap-3 sm:gap-4">
             <div>
-              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-sm font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.institut")}
               </h3>
               <ul className="space-y-0.5">
@@ -193,7 +193,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-sm font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.qabul")}
               </h3>
               <ul className="space-y-0.5">
@@ -208,7 +208,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-heading text-xs font-bold tracking-wide mb-2 text-[#ffd600]">
+              <h3 className="font-heading text-sm font-bold tracking-wide mb-2 text-[#ffd600]">
                 {t("footer.xizmatlar")}
               </h3>
               <ul className="space-y-0.5">
@@ -243,11 +243,11 @@ export default function Footer() {
           {/* Contact — compact panel */}
           <div className="lg:col-span-4">
             <div className="rounded-xl border border-white/15 bg-white/[0.06] p-3.5 md:p-4">
-              <h3 className="font-heading text-xs font-bold tracking-wide mb-2.5 text-[#ffd600]">
+              <h3 className="font-heading text-sm font-bold tracking-wide mb-2.5 text-[#ffd600]">
                 {t("footer.contactUs")}
               </h3>
 
-              <ul className="space-y-2 text-xs text-white/80">
+              <ul className="space-y-2 text-sm text-white/80">
                 <li className="flex gap-2 items-start">
                   <i className="ri-map-pin-line text-[#ffd600] mt-0.5 flex-shrink-0" />
                   <span className="leading-snug">{address}</span>
@@ -296,7 +296,7 @@ export default function Footer() {
         >
           {usefulSites.length > 0 && (
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
                 {t("footer.usefulSites")}
               </span>
               {usefulSites.map((site) => (
@@ -305,7 +305,7 @@ export default function Footer() {
                   href={site.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-white/70 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs text-white/70 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors cursor-pointer"
                 >
                   {site.img && (
                     <img
@@ -325,7 +325,7 @@ export default function Footer() {
           )}
 
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#ffd600] mr-1">
               {t("footer.davlatPortallari")}
             </span>
             {PORTALS.map((p) => (
@@ -334,7 +334,7 @@ export default function Footer() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-white/70 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs text-white/70 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors cursor-pointer"
               >
                 {t(p.key)}
               </a>
@@ -345,11 +345,11 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2.5 pt-2.5 pb-14 sm:pb-0 sm:pr-44 border-t border-white/10">
             <div className="flex flex-wrap items-center gap-2.5 min-w-0">
               <WwwUzCounter />
-              <p className="text-[11px] text-white/45 leading-snug">
+              <p className="text-xs text-white/45 leading-snug">
                 {t("footer.copyright", { year: new Date().getFullYear() })}
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-white/50">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/50">
               <Link to="/sitemap" className="hover:text-[#ffd600] transition-colors cursor-pointer">
                 {t("footer.saytXaritasi")}
               </Link>

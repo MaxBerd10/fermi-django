@@ -28,7 +28,7 @@ export default function PageHeader({ title, breadcrumb, description, compact, as
         }`}
       >
         <nav
-          className="inline-flex flex-wrap items-center gap-2 text-[10px] font-semibold tracking-wide uppercase mb-2.5 px-2.5 py-1 rounded-full bg-white/95 border border-[#e5e5e5]/80 text-[#555555] shadow-sm max-w-full"
+          className="inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wide uppercase mb-2.5 px-2.5 py-1 rounded-full bg-white/95 border border-[#e5e5e5]/80 text-[#555555] shadow-sm max-w-full"
           aria-label="Breadcrumb"
         >
           <Link to="/" className="text-[#0a1158] hover:text-[#060a3d] transition-colors cursor-pointer">

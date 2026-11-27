@@ -324,7 +324,7 @@
 }
 
 .hero-tool__desc {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   line-height: 1.4;
   color: #555;
   display: -webkit-box;
@@ -470,7 +470,7 @@
   }
 
   .hero-tool__desc {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     -webkit-line-clamp: 2;
   }
 
