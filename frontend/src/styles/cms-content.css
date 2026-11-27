@@ -774,9 +774,9 @@
 .cms-article a[href$=".docx" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".xls" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".xlsx" i]:not(.cms-download-btn)::after {
-  display: inline-block;
+  display: inline; /* inline (not inline-block) so the word joiner below keeps the badge on the line of the link's last word */
   margin-left: 0.45em;
-  padding: 0.05em 0.45em;
+  padding: 0.2em 0.45em;
   border-radius: 0.3em;
   background: #e8eaf5;
   color: #0a1158;
@@ -790,19 +790,19 @@
 }
 .prose-content a[href$=".pdf" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".pdf" i]:not(.cms-download-btn)::after {
-  content: "PDF";
+  content: "\002060PDF";
 }
 .prose-content a[href$=".doc" i]:not(.cms-download-btn)::after,
 .prose-content a[href$=".docx" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".doc" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".docx" i]:not(.cms-download-btn)::after {
-  content: "DOC";
+  content: "\002060DOC";
 }
 .prose-content a[href$=".xls" i]:not(.cms-download-btn)::after,
 .prose-content a[href$=".xlsx" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".xls" i]:not(.cms-download-btn)::after,
 .cms-article a[href$=".xlsx" i]:not(.cms-download-btn)::after {
-  content: "XLS";
+  content: "\002060XLS";
 }
 
 /* Links to the national legal portals carry the portal's name, like file links carry their type. */
@@ -810,11 +810,11 @@
 .prose-content a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after {
-  content: "DD.GOV.UZ";
+  content: "\002060DD.GOV.UZ";
 }
 .prose-content a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after {
-  content: "LEX.UZ";
+  content: "\002060LEX.UZ";
 }
 .prose-content a[href^="http://dd.gov.uz/" i]:not(.cms-download-btn)::after,
 .prose-content a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
@@ -822,9 +822,9 @@
 .cms-article a[href^="https://dd.gov.uz/" i]:not(.cms-download-btn)::after,
 .prose-content a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://lex.uz/" i]:not(.cms-download-btn)::after {
-  display: inline-block;
+  display: inline; /* inline (not inline-block) so the word joiner below keeps the badge on the line of the link's last word */
   margin-left: 0.45em;
-  padding: 0.05em 0.45em;
+  padding: 0.2em 0.45em;
   border-radius: 0.3em;
   background: #e8eaf5;
   color: #0a1158;
@@ -844,10 +844,10 @@
 .cms-article a[href^="https://youtu.be/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://www.youtube.com/" i]:not(.cms-download-btn)::after,
 .cms-article a[href^="https://youtube.com/" i]:not(.cms-download-btn)::after {
-  content: "\25B6  YOUTUBE";
-  display: inline-block;
+  content: "\002060\25B6  YOUTUBE";
+  display: inline; /* inline (not inline-block) so the word joiner below keeps the badge on the line of the link's last word */
   margin-left: 0.45em;
-  padding: 0.05em 0.45em;
+  padding: 0.2em 0.45em;
   border-radius: 0.3em;
   background: #e8eaf5;
   color: #0a1158;

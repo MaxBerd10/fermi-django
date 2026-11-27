@@ -1,0 +1,44 @@
+[
+ {
+  "slug": "davlat-dasturlari",
+  "order": 3,
+  "lang": "ru",
+  "field": "text",
+  "old": "[2023 год -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)Год заботы о человеке и качественного образования",
+  "new": "[2023 год - Год заботы о человеке и качественного образования](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)"
+ },
+ {
+  "slug": "davlat-dasturlari",
+  "order": 3,
+  "lang": "en",
+  "field": "text",
+  "old": "[2023 -](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)The Year of caring for people and quality education",
+  "new": "[2023 - The Year of caring for people and quality education](https://fermi.uz/media/migrated/img/tuzilma/Davlat%20dasturi/%D0%A3%D0%9F-27-%D1%81%D0%BE%D0%BD%2028.02.2023.%C2%A0%D0%9E%20%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%BF%D0%BE%20%D1%80%D0%B5.pdf)"
+ },
+ {
+  "slug": "oliy-talimning-davlat-talim-standarti",
+  "order": 6,
+  "lang": "uz",
+  "field": "text",
+  "old": "Oʻzbekiston Respublikasining “Taʻlim toʻgʻrisida”gi [Qonuni](https://lex.uz/docs/-5013007), Oʻzbekiston Respublikasi Prezidentining 2020-yil 3-avgustdagi PQ-4796-son “Oʻzbekiston Respublikasining milliy statistika tizimini yanada takomillashtirish va rivojlantirish chora-tadbirlari toʻgʻrisida”gi [qaroriga](https://lex.uz/docs/-4926736)muvofiq buyuraman:",
+  "new": "Oʻzbekiston Respublikasining “Taʻlim toʻgʻrisida”gi [Qonuni](https://lex.uz/docs/-5013007), Oʻzbekiston Respublikasi Prezidentining 2020-yil 3-avgustdagi PQ-4796-son “Oʻzbekiston Respublikasining milliy statistika tizimini yanada takomillashtirish va rivojlantirish chora-tadbirlari toʻgʻrisida”gi [qaroriga](https://lex.uz/docs/-4926736) muvofiq buyuraman:"
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 32,
+  "lang": "uz",
+  "field": "items",
+  "index": 0,
+  "old": "Oliy taʻlim muassasalariga xorijiy fuqarolarni qabul qilish Oʻzbekiston Respublikasi Vazirlar Mahkamasining «Xorijiy fuqarolarni Oʻzbekiston Respublikasi taʻlim muassasalariga oʻqishga qabul qilish va oʻqitish tartibini takomillashtirish toʻgʻrisida» 2008 yil 4 avgustdagi 169-son [qarori](http://lex.uz/docs/1380636)hamda Oʻzbekiston Respublikasining xalqaro shartnomalari asosida amalga oshiriladi.",
+  "new": "Oliy taʻlim muassasalariga xorijiy fuqarolarni qabul qilish Oʻzbekiston Respublikasi Vazirlar Mahkamasining «Xorijiy fuqarolarni Oʻzbekiston Respublikasi taʻlim muassasalariga oʻqishga qabul qilish va oʻqitish tartibini takomillashtirish toʻgʻrisida» 2008 yil 4 avgustdagi 169-son [qarori](http://lex.uz/docs/1380636) hamda Oʻzbekiston Respublikasining xalqaro shartnomalari asosida amalga oshiriladi."
+ },
+ {
+  "slug": "qabul-nizomi",
+  "order": 71,
+  "lang": "uz",
+  "field": "items",
+  "index": 0,
+  "old": "Test sinovlariga tayyorgarlik koʻrish va ularni oʻtkazish tartibi Oʻzbekiston Respublikasi Vazirlar Mahkamasi tomonidan tasdiqlanadigan Oʻzbekiston Respublikasi oliy taʻlim muassasalarining bakalavriatiga oʻqishga qabul qilish uchun kirish test sinovlarini oʻtkazish tartibi toʻgʻrisidagi [nizom](http://lex.uz/docs/3646570#3678495)asosida amalga oshiriladi.",
+  "new": "Test sinovlariga tayyorgarlik koʻrish va ularni oʻtkazish tartibi Oʻzbekiston Respublikasi Vazirlar Mahkamasi tomonidan tasdiqlanadigan Oʻzbekiston Respublikasi oliy taʻlim muassasalarining bakalavriatiga oʻqishga qabul qilish uchun kirish test sinovlarini oʻtkazish tartibi toʻgʻrisidagi [nizom](http://lex.uz/docs/3646570#3678495) asosida amalga oshiriladi."
+ }
+]
