@@ -1,0 +1,84 @@
+[
+ {
+  "slug": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "order": 3,
+  "count": 7,
+  "fp": [
+   {
+    "uz": "0b31c51fd41d9986455d1e225dc5bdd3c1a4c0051f74a0b3bb57bd3554f24dea",
+    "ru": "bb87a8efca8db83e083ad0e1a5cd2047bfbb7324089b5151693fb26e360ca775",
+    "en": "f67f824e7ab2d838c66a19868f2da0fb81f7ce32a865b73d577711f37c83ef57"
+   },
+   {
+    "uz": "46d9a5ab79bd47e2ef4bf7f97bc8145b5f9b1cf9fdcf76cf6414104b86c9fd9e",
+    "ru": "174c335831dc3eec381c07cc89a35f505f5a3d95a52bc754369b32be67127a2a",
+    "en": "469194505b5599c42755ace7edc1dafa425af99e6e3e158cc6d37376622487bc"
+   },
+   {
+    "uz": "135a403ea9147c073a3a89e7361951ea5944d75e87471236ecc570ba6965bd42",
+    "ru": "7a25a3a04912a6ca84ddd450628af22edb098c3b0af276f80dbcf8f1bd4b6c23",
+    "en": "98ae8aede3f5b1d06c4baa1c380712dcf92d7a8fa7d16cebeb7455155316fc41"
+   },
+   {
+    "uz": "6888ffd0916e7c482bb9b2c06a481bc18ebf69960e1791ece528b77decf65f32",
+    "ru": "77304e4410d632e89f01bc6886aaf311d303392ebb18eb02bfa855f7a62e68ff",
+    "en": "d0e88f2e3b8067bda9ec061727b8c6f4ec4c74fed7c25cbf859c2211b428aeab"
+   },
+   {
+    "uz": "9ee09f231ac11cb29ced4aca8b1916e84db53a318cb827749e1ce4f24e90c919",
+    "ru": "8a16907247dcb63a9d9259368004ea00dc2a804ce5f4940b9736e5da44b62dad",
+    "en": "e7316743b8b740ebdecab2a2d1fd16e7c4a81d0ec4a0b38ccd6ee5016550875f"
+   },
+   {
+    "uz": "2006a64f509b5edf24bba22379c6d3b71f872ec6e97d4ba80b75a9b6e8a0c9e3",
+    "ru": "913f991e7d7b4adfb243d720ea7f7f9ab497fafc0e0204781ac7efe0e545de3c",
+    "en": "56cca7b607543a2756886f94bfe46db9102923dc2ae068d8c9d4a9298045b0b9"
+   },
+   {
+    "uz": "ce9cf5f04554bce2a29b3749f720eff6888c72a182fd4ddedaa5d045e5d35015",
+    "ru": "1564f1e30a14bcc21ae8f5fe0f1fad6c22d1e6c267fd20913015786b01ca77a2",
+    "en": "53f8745d735a4a3f51ba5e07853c9175f7ab203de47706fb71b3fb59109594c0"
+   }
+  ],
+  "blocks": [
+   {
+    "block_type": "list",
+    "data": {
+     "uz": {
+      "items": [
+       "aholini roʻyxatga olish - Oʻzbekiston Respublikasining butun hududida yoki uning muayyan hududlarida oʻtkaziladigan, belgilangan sanada aholining demografik va ijtimoiy-iqtisodiy tavsiflarini belgilovchi shaxsga doir maʻlumotlarni yigʻish hamda ularga ishlov berish davriy jarayoni,",
+       "aholini roʻyxatga olish sanasi - aholi toʻgʻrisidagi maʻlumotlarni yigʻish va hisobga olish amalga oshiriladigan aniq payt (yil, oy, kun va soat),",
+       "respondentlar - aholini roʻyxatga olish sanasida Oʻzbekiston Respublikasi hududida boʻlgan Oʻzbekiston Respublikasi fuqarolari, chet el fuqarolari va fuqaroligi boʻlmagan shaxslar, Oʻzbekiston Respublikasida doimiy yashovchi, lekin aholini roʻyxatga olish sanasida uning hududidan tashqarida boʻlgan Oʻzbekiston Respublikasi fuqarolari,",
+       "roʻyxatga olish varaqasi — belgilangan savollar boʻyicha shaxsiy maʻlumotlarni qayd etish uchun moʻljallangan belgilangan shakldagi blank;",
+       "roʻyxatga olish hujjatlari - aholini roʻyxatga olishga tayyorgarlik koʻrish va uni oʻtkazish jarayoniga taalluqli hujjatlar majmui,",
+       "roʻyxatga oluvchi xodimlar - Oʻzbekiston Respublikasining aholini roʻyxatga olishga tayyorgarlik koʻrishga va uni oʻtkazishga jalb etilgan, maxsus oʻquvdan oʻtgan voyaga yetgan fuqarolari,",
+       "uy xoʻjaligi - bitta turar joyda yoki uning bir qismida birgalikda yashaydigan, oʻzini yashash uchun barcha zarur narsalar bilan taʻminlaydigan, umumiy xoʻjalik yuritadigan, pul mablagʻlarini toʻliq yoki qisman birlashtiradigan va sarflaydigan shaxslar yigʻindisi. Bu shaxslar qarindoshlik munosabatlarida boʻlishi yoki boʻlmasligi mumkin. Uy xoʻjaligi bitta shaxsdan iborat boʻlishi mumkin kabi asosiy tushunchalardan iboratdir."
+      ]
+     },
+     "ru": {
+      "items": [
+       "перепись населения — периодический процесс сбора и обработки персональных данных, характеризующих демографические и социально-экономические признаки населения, проводимый в установленную дату на всей территории Республики Узбекистан или на отдельных её территориях;",
+       "дата переписи населения — конкретный момент (год, месяц, день и час), в который осуществляется сбор и учёт данных о населении;",
+       "респонденты — граждане Республики Узбекистан, иностранные граждане и лица без гражданства, находящиеся на территории Республики Узбекистан на дату переписи, а также граждане Республики Узбекистан, постоянно проживающие в Республике Узбекистан, но находящиеся за её пределами на дату переписи;",
+       "переписной лист — бланк установленной формы, предназначенный для записи персональных данных по установленным вопросам;",
+       "переписные документы — совокупность документов, относящихся к подготовке и проведению переписи населения;",
+       "переписной персонал — совершеннолетние граждане Республики Узбекистан, прошедшие специальное обучение и привлечённые к подготовке и проведению переписи населения;",
+       "домохозяйство — совокупность лиц, совместно проживающих в одном жилом помещении или его части, обеспечивающих себя всем необходимым для проживания, ведущих общее хозяйство, полностью или частично объединяющих и расходующих денежные средства. Эти лица могут состоять или не состоять в родственных отношениях. Домохозяйство может состоять из одного лица."
+      ]
+     },
+     "en": {
+      "items": [
+       "population census — a periodic process of collecting and processing personal data that determine the demographic and socio-economic characteristics of the population, conducted on a specified date throughout the territory of the Republic of Uzbekistan or in certain areas;",
+       "population census date — the specific point in time (year, month, day, and hour) at which the collection and accounting of population data are carried out;",
+       "respondents — citizens of the Republic of Uzbekistan, foreign citizens, and stateless persons present in the territory of the Republic of Uzbekistan on the census date, as well as citizens of the Republic of Uzbekistan permanently residing in the country but temporarily outside its territory on the census date;",
+       "census questionnaire — a standardized form used to record personal data based on specified questions;",
+       "census documentation — a set of documents related to the preparation and conduct of the population census;",
+       "census personnel — adult citizens of the Republic of Uzbekistan who have undergone special training and are involved in the preparation and conduct of the population census;",
+       "household — a group of persons living together in one dwelling or part thereof, providing themselves with all necessities for living, maintaining a common household, and fully or partially pooling and spending financial resources. These persons may or may not be related. A household may consist of a single individual."
+      ]
+     }
+    }
+   }
+  ]
+ }
+]
