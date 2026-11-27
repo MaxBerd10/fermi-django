@@ -194,7 +194,7 @@ export default function FacultiesNews() {
                 onChange={(e) => setAdvisorQ(e.target.value)}
                 rows={2}
                 placeholder={t("ai.facultyPlaceholder")}
-                className="w-full px-3 py-2 rounded-xl border border-[#e5e5e5] bg-white text-sm focus:outline-none focus:border-[#0a1158] resize-none"
+                className="w-full px-3 py-2 rounded-xl border border-[#e5e5e5] bg-white text-base sm:text-sm placeholder:text-[#6b7090] focus:outline-none focus:border-[#0a1158] resize-none"
               />
               <button
                 type="button"

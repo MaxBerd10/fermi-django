@@ -122,7 +122,7 @@ export default function CatalogBrowser({ subjects, countOf, countLabel, sortByCo
   const showSubjects = searching || programKey !== "";
 
   const inputClass =
-    "h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-[#0a1158] focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]";
+    "h-12 w-full rounded-xl border border-[#e4e7f0] bg-[#fafbfe] pl-11 pr-4 text-base sm:text-sm text-foreground-900 outline-none transition-colors placeholder:text-foreground-400 focus:border-[#0a1158] focus:bg-white focus:ring-2 focus:ring-[#dfe5ff]";
   const sortButton = (value: SortBy, label: string, icon: string) => (
     <button
       type="button"
