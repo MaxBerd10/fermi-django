@@ -1,0 +1,26 @@
+[
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "uz",
+  "anchor": "Raqamli taʻlim texnologiyalari",
+  "old": "25.0.2001-yildagi",
+  "new": "25.06.2001-yildagi"
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "ru",
+  "anchor": "Raqamli taʻlim texnologiyalari",
+  "old": "от 25.05.2001 года",
+  "new": "от 25.06.2001 года"
+ },
+ {
+  "slug": "raqamli-talim-texnologiyalari-markazi",
+  "order": 2,
+  "lang": "en",
+  "anchor": "Raqamli taʻlim texnologiyalari",
+  "old": "dated May 25, 2001",
+  "new": "dated June 25, 2001"
+ }
+]
