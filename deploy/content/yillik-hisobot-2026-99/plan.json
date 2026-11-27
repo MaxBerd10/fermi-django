@@ -1,0 +1,34 @@
+[
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 3,
+  "lang": "en",
+  "anchor": "Xorijiy abituriyentlar va tala",
+  "old": "[FMIOPH](/uz)",
+  "new": "[FMIOPH](/)"
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 5,
+  "lang": "uz",
+  "anchor": "[FJSTI](/uz) — Oʻzbekiston Res",
+  "old": "[FJSTI](/uz)",
+  "new": "[FJSTI](/)"
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 5,
+  "lang": "ru",
+  "anchor": "[FJSTI](/uz) — Oʻzbekiston Res",
+  "old": "[ФМИОЗ](/uz)",
+  "new": "[ФМИОЗ](/)"
+ },
+ {
+  "slug": "study-in-uzbekistan",
+  "order": 5,
+  "lang": "en",
+  "anchor": "[FJSTI](/uz) — Oʻzbekiston Res",
+  "old": "[FMIOPH](/uz)",
+  "new": "[FMIOPH](/)"
+ }
+]
