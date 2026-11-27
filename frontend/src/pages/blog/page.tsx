@@ -22,7 +22,7 @@ import { findMenuTitleBySlug, INSTITUTE_ABOUT_MENU_ID, isStructureMenuSection, r
 import { NEWS_SECTION_MENU_ID } from "@/lib/newsSection";
 import { MenuSectionOriginContext } from "@/lib/menuSectionOrigin";
 import { normalizeTechnicalCollegeHeading } from "@/lib/technicalCollegeHeading";
-import { normalizeMenuHref, normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
+import { normalizePageSlug, normalizeYearLabels } from "@/lib/siteConstants";
 
 /**
  * Generic renderer for every static/informational page pulled from the old

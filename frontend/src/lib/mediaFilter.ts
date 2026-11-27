@@ -42,19 +42,3 @@ export const CAMPUS_PHOTOS = [
   { id: -105, img: "/images/campus-4.jpg" },
 ] as const;
 
-/** Sharp hero back-banner only (not used for cards/aside). */
-export const HERO_BANNER_PHOTOS = [
-  "/images/hero/banner-bg-1.jpg",
-  "/images/hero/banner-bg-2.jpg",
-  "/images/hero/banner-bg-3.jpg",
-] as const;
-
-export function pickSafeImage(
-  src: string | null | undefined,
-  title = "",
-  fallback = CAMPUS_PHOTOS[0].img
-): string {
-  if (!src) return fallback;
-  if (!isHomeSafeImage(src, title)) return fallback;
-  return src;
-}

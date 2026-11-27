@@ -26,7 +26,7 @@ function useCannotShowPdfInline(): boolean {
   return cannot;
 }
 
-export function PdfViewer({ src, title }: { src: string; title: string }) {
+function PdfViewer({ src, title }: { src: string; title: string }) {
   const { t } = useTranslation();
   const cannotShowInline = useCannotShowPdfInline();
   const [ready, setReady] = useState(false);

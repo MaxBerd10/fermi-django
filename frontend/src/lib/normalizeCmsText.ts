@@ -53,28 +53,3 @@ export function normalizeCmsOrthography(text: string): string {
   );
 }
 
-/** HTML entity + teglardan tozalangan matn */
-export function decodeAndCleanCmsText(html: string): string {
-  if (!html) return "";
-  const withoutTags = html.replace(/<[^>]*>/g, " ");
-  if (typeof document !== "undefined") {
-    const textarea = document.createElement("textarea");
-    textarea.innerHTML = withoutTags;
-    return normalizeCmsOrthography(textarea.value.replace(/\s+/g, " ").trim());
-  }
-  return normalizeCmsOrthography(
-    withoutTags
-      .replace(/&laquo;|&#171;/g, "«")
-      .replace(/&raquo;|&#187;/g, "»")
-      .replace(/&lsquo;|&#8216;/g, "'")
-      .replace(/&rsquo;|&#8217;/g, "'")
-      .replace(/&ldquo;|&#8220;/g, '"')
-      .replace(/&rdquo;|&#8221;/g, '"')
-      .replace(/&mdash;|&#8212;/g, "—")
-      .replace(/&nbsp;/g, " ")
-      .replace(/&amp;/g, "&")
-      .replace(/&quot;/g, '"')
-      .replace(/\s+/g, " ")
-      .trim(),
-  );
-}

@@ -4,7 +4,6 @@ crash, no half-made post, no stored data that can hurt the site."""
 import io
 import itertools
 import json
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 

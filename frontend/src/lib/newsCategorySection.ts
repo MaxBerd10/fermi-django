@@ -76,22 +76,6 @@ export function getNewsCategoryConfig(slug?: string): NewsCategoryConfig | null 
 
 
 
-export function isNewsCategoryConfigured(slug?: string): boolean {
-
-  return getNewsCategoryConfig(slug) !== null;
-
-}
-
-
-
-export function isNewsMenuLanding(slug?: string, menuId?: number): boolean {
-
-  const config = getNewsCategoryConfig(slug);
-
-  return config?.fallback === "menu-list" && config.menuSectionId === menuId;
-
-}
-
 // The two news roots -- "Institut yangiliklari" (1844) and the "Institut" nav entry (1826) -- keep the all-news
 // category list beside them. A news list or article reached from ANY other menu section lists THAT section's pages.
 const NEWS_ROOT_MENU_IDS = [NEWS_DEFAULT_MENU_ID, 1826];

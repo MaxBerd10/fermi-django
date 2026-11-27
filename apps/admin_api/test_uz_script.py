@@ -5,7 +5,7 @@ from rest_framework.test import APIClient
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.admin_api.uz_script import latinize_payload, to_latin
-from apps.content.models import ContentBlock, Page
+from apps.content.models import ContentBlock
 from apps.news.models import NewsPost
 
 

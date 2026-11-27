@@ -20,11 +20,3 @@ export function getFacultyRoleKey(leader: Leader, facultyTitle: string, index: n
 
 export type FacultyRoleTone = "dean" | "education" | "youth" | "international" | "deputy";
 
-export function getFacultyRoleTone(leader: Leader, facultyTitle: string, index: number): FacultyRoleTone {
-  if (isFacultyDean(leader, facultyTitle, index)) return "dean";
-  const p = leader.position.toLowerCase();
-  if (/o[''`]?quv|oquv ishlar/.test(p)) return "education";
-  if (/yoshlar|ma.naviy|marifiy/.test(p)) return "youth";
-  if (/xalqaro/.test(p)) return "international";
-  return "deputy";
-}

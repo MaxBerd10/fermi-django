@@ -50,6 +50,3 @@ export async function verifyEmail(token: string) {
   return data.user;
 }
 
-export async function resendVerification(email: string) {
-  await apiClient.post("auth/resend-verification", { email });
-}

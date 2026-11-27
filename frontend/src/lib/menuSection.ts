@@ -280,15 +280,6 @@ export function isMenuSectionLinkActive(link: MenuSectionLink, pathname: string,
   return false;
 }
 
-export function getMenuSectionIntroKey(menuId?: number, slug?: string): string | null {
-  if (!menuId) return null;
-  const cfg = MENU_SECTION_THEMES[menuId];
-  if (cfg?.introKey) return cfg.introKey;
-  const root = NAV_ROOT_THEMES[menuId];
-  if (root) return `section.intro.${root.theme}`;
-  return null;
-}
-
 // The page's own title isn't part of the Page/ContentBlock API (see
 // apps/content/serializers.py::PageSerializer) — every one of these ~235
 // pages is reached from a real nav entry, and that entry's own label is

@@ -106,14 +106,6 @@ export interface Leader {
   photo: string;
 }
 
-export interface CoruselSlide {
-  id: number;
-  title: string;
-  content: string;
-  img: string;
-  href: string | null;
-}
-
 export interface GalleryImage {
   id: number;
   title: string;

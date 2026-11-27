@@ -2,7 +2,6 @@ import { imentorGet } from "./imentorClient";
 import type {
   ImentorStatsResponse,
   ImentorSampleResponse,
-  ImentorScenariosResponse,
   ImentorDocumentKind,
   ImentorDocumentListResponse,
   ImentorKeyDetail,
@@ -47,21 +46,6 @@ export async function getImentorSampleQuestions(params: {
     department_code: params.departmentCode,
     topic_code: params.topicCode,
     count: params.count,
-    language: params.language,
-  });
-}
-
-export async function getImentorCaseScenarios(params: {
-  subjectCode?: string;
-  departmentCode?: string;
-  count?: number;
-  language?: ImentorLanguage;
-}) {
-  return imentorGet<ImentorScenariosResponse>("v1/external/keys/scenarios/", {
-    subject_code: params.subjectCode,
-    department_code: params.departmentCode,
-    count: params.count,
-    shuffle: false,
     language: params.language,
   });
 }

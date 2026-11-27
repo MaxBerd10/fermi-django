@@ -1,6 +1,5 @@
 ﻿import { useContext, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import DOMPurify from "dompurify";
 import { enhanceCmsHtml } from "@/lib/enhanceCmsHtml";
 import { optimizedImageUrl } from "@/lib/imageProxy";
@@ -69,7 +68,6 @@ export default function RichContent({
   className?: string;
   enhanced?: boolean;
 }) {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const originSection = useContext(MenuSectionOriginContext);
   const { menu } = useMenu();

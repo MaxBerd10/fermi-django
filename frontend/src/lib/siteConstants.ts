@@ -1,6 +1,3 @@
-/** Institut manzili: Fargʻona sh., Yangi Turon koʻchasi, 2-a uy */
-export const INSTITUTE_ADDRESS = "Fargʻona sh., Yangi Turon koʻchasi, 2-a uy";
-
 /** Google Maps embed — aniq institut joylashuvi */
 export const MAP_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3053.8!2d71.8089087!3d40.3802946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb8546725ec125%3A0xcae07b9c0d192cc6!2sFarg%27ona%20jamoat%20salomatligi%20tibbiyot%20instituti!5e0!3m2!1suz!2suz!4v1720000000000!5m2!1suz!2suz";
@@ -45,16 +42,3 @@ export function normalizePageSlug(slug: string): string {
     .replace(/yol-xaritasi-2026/gi, "institut-yol-xaritasi-2025");
 }
 
-export function isSamePageSlug(a: string, b: string): boolean {
-  return normalizePageSlug(a) === normalizePageSlug(b);
-}
-
-export function buildSubMenuHref(
-  menuId: number,
-  item: { urlType: string; urlValue: string },
-): string {
-  if (item.urlType === "departments") {
-    return `/departments/${menuId}/${item.urlValue}`;
-  }
-  return normalizeMenuHref(`/blog/${menuId}/${item.urlValue}`);
-}

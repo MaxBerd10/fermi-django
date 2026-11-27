@@ -43,7 +43,7 @@ export default function Navbar() {
   const [pinnedChild, setPinnedChild] = useState<number | null>(null);
   const [hoveredChildRect, setHoveredChildRect] = useState<Rect | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [lang, setLang] = useState<"uz" | "ru" | "en">((i18n.language?.slice(0, 2) as "uz" | "ru" | "en") || "uz");
+  const [lang] = useState<"uz" | "ru" | "en">((i18n.language?.slice(0, 2) as "uz" | "ru" | "en") || "uz");
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");

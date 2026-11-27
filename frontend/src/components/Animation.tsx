@@ -1,12 +1,8 @@
 import {
-  Children,
-  cloneElement,
-  isValidElement,
   useEffect,
   useRef,
   useState,
   type CSSProperties,
-  type ReactElement,
   type ReactNode,
 } from "react";
 
@@ -95,41 +91,6 @@ export function Reveal({
   );
 }
 
-type StaggerProps = {
-  children: ReactNode;
-  className?: string;
-  itemClassName?: string;
-  step?: number;
-  baseDelay?: number;
-};
-
-/** Wraps each child in Reveal with staggered delays. */
-export function Stagger({
-  children,
-  className = "",
-  itemClassName = "",
-  step = 80,
-  baseDelay = 0,
-}: StaggerProps) {
-  return (
-    <div className={className}>
-      {Children.map(children, (child, i) => {
-        if (!isValidElement(child)) {
-          return (
-            <Reveal key={i} delay={baseDelay + i * step} className={itemClassName}>
-              {child}
-            </Reveal>
-          );
-        }
-        return (
-          <Reveal key={child.key ?? i} delay={baseDelay + i * step} className={itemClassName}>
-            {cloneElement(child as ReactElement)}
-          </Reveal>
-        );
-      })}
-    </div>
-  );
-}
 
 export function useCountUp(target: number, active: boolean, duration = 1600) {
   const reduced = usePrefersReducedMotion();

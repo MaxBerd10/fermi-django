@@ -501,12 +501,3 @@ function markLeadParagraph(root: ParentNode) {
   if (next?.tagName === "P") next.classList.add("cms-lead");
 }
 
-type HistoryDirectorMeta = {
-  match: RegExp;
-  period: string;
-  name: string;
-  degree: string;
-  role: string;
-  lifespan?: string;
-  current?: boolean;
-};
