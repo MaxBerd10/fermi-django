@@ -163,7 +163,7 @@ export default function FacultiesNews() {
                   <p className="font-heading text-lg font-bold text-[#0a1158] tabular-nums leading-none">
                     {facultyRows.length}+
                   </p>
-                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#555555]">
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-[#555555]">
                     {t("faculties.eyebrow")}
                   </p>
                 </div>
@@ -171,7 +171,7 @@ export default function FacultiesNews() {
                   <p className="font-heading text-lg font-bold text-[#0a1158] tabular-nums leading-none">
                     {departmentCount || "—"}
                   </p>
-                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#555555]">
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-[#555555]">
                     {t("faculties.departmentsLabel")}
                   </p>
                 </div>

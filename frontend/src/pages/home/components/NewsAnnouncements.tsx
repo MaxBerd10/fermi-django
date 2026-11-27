@@ -144,7 +144,7 @@ export default function NewsAnnouncements() {
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-4">
             <div>
-              <p className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0a1158]" aria-hidden />
                 {t("news.eyebrow")}
               </p>
@@ -215,7 +215,7 @@ export default function NewsAnnouncements() {
               </div>
               <div className="p-4 md:p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#e8eaf5] text-[#0a1158] text-[10px] font-bold uppercase tracking-wide">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#e8eaf5] text-[#0a1158] text-xs font-bold uppercase tracking-wide">
                     {t("news.new")}
                   </span>
                   <span className="text-xs font-semibold text-[#555555] uppercase tracking-wide">
@@ -277,11 +277,11 @@ export default function NewsAnnouncements() {
                   </div>
                   <div className="min-w-0 flex-1 flex flex-col justify-center py-0.5">
                     <div className="flex items-center gap-2 mb-1">
-                      <p className="text-[10px] font-bold uppercase tracking-wide text-[#0a1158]">
+                      <p className="text-xs font-bold uppercase tracking-wide text-[#0a1158]">
                         {formatShortDate(n.date, i18n.language)}
                       </p>
                       {n.seen > 0 && (
-                        <span className="inline-flex items-center gap-0.5 text-[10px] font-semibold text-[#555555]">
+                        <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-[#555555]">
                           <i className="ri-eye-line" aria-hidden />
                           {n.seen}
                         </span>

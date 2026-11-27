@@ -407,7 +407,7 @@ export default function Navbar() {
                   aria-label={`${t("nav.language")}: ${lang.toUpperCase()}`}
                 >
                   {lang}
-                  <i className="ri-arrow-down-s-line text-[10px] opacity-60" />
+                  <i className="ri-arrow-down-s-line text-xs opacity-60" />
                 </button>
                 {showLangMenu && (
                   <div className="absolute right-0 top-full mt-1.5 z-20 min-w-[148px] nav-dropdown-panel py-1.5 shadow-xl overflow-hidden">

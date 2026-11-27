@@ -81,7 +81,7 @@ export default function About() {
             )}
             <div className="absolute left-0 bottom-0 bg-primary-950 px-4 py-2.5 flex items-baseline gap-2">
               <span className="font-heading text-base font-semibold text-secondary-400">{FOUNDED_YEAR}</span>
-              <span className="text-[0.65rem] uppercase tracking-[0.14em] text-white/70">{t("about.foundedYear")}</span>
+              <span className="text-xs uppercase tracking-[0.14em] text-white/70">{t("about.foundedYear")}</span>
             </div>
           </div>
         </div>

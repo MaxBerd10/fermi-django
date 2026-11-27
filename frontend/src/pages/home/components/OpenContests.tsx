@@ -44,7 +44,7 @@ export default function OpenContests() {
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-4">
             <div>
-              <p className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#ffd600]" aria-hidden />
                 {t("contests.eyebrow")}
               </p>
@@ -88,7 +88,7 @@ export default function OpenContests() {
                     )}
                   </div>
                   <div className="min-w-0 flex flex-col">
-                    <span className="text-[11px] font-semibold text-[#555555] uppercase tracking-wide">
+                    <span className="text-xs font-semibold text-[#555555] uppercase tracking-wide">
                       {formatShortDate(post.date, i18n.language)}
                     </span>
                     <h3 className="mt-1 font-heading text-[15px] font-bold text-[#0a0a0a] leading-snug line-clamp-3 group-hover:text-[#0a1158] transition-colors">

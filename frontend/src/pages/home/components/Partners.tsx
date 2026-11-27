@@ -31,7 +31,7 @@ export default function Partners() {
       <div className="section-container">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
           <div className="max-w-xl">
-            <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
+            <p className="text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
               {t("partners.eyebrow")}
             </p>
             <h2 className="font-heading text-lg md:text-xl font-bold text-[#0a0a0a] tracking-tight">

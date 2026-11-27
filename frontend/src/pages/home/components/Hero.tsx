@@ -548,7 +548,7 @@ export default function Hero() {
         <div className="section-container">
           <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158]">
+              <p className="text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158]">
                 {t("hero.tools.eyebrow")}
               </p>
               <h2 className="font-heading text-base md:text-lg font-bold text-[#0a0a0a] tracking-tight">
@@ -635,7 +635,7 @@ export default function Hero() {
                     <CountUp target={s.value} active={active} />
                     {s.suffix}
                   </p>
-                  <p className="mt-1 text-[10px] md:text-[11px] font-semibold text-white/65 leading-snug">
+                  <p className="mt-1 text-xs font-semibold text-white/65 leading-snug">
                     {s.label}
                   </p>
                 </div>

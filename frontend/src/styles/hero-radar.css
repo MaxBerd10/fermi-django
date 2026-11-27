@@ -148,7 +148,7 @@
 
 .hero-radar__side strong {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 750;
   color: #0a0a0a;
   line-height: 1.2;
@@ -156,7 +156,7 @@
 
 .hero-radar__side em {
   font-style: normal;
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   color: #555;
   line-height: 1.25;
   display: -webkit-box;
@@ -417,7 +417,7 @@
 }
 
 .hero-radar__corner-kicker {
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 750;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -428,7 +428,7 @@
 .hero-radar__corner-title {
   margin-top: 0.1rem;
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 750;
   color: #0a0a0a;
   line-height: 1.25;
@@ -447,7 +447,7 @@
 
 .hero-radar__corner-note {
   margin-top: 0.25rem;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   line-height: 1.35;
   color: #555;
 }
@@ -710,7 +710,7 @@
 
 .hero-radar__word {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -731,14 +731,14 @@
 
 .hero-radar__label {
   margin-top: 0.35rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #0a1158;
 }
 
 .hero-radar__hint {
   margin-top: 0.4rem;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   line-height: 1.45;
   color: #555;
   display: block;
@@ -812,7 +812,7 @@
 
 .hero-radar__node-face strong {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   color: #0a0a0a;
   line-height: 1;
@@ -825,7 +825,7 @@
 
 .hero-radar__node-face em {
   font-style: normal;
-  font-size: 0.48rem;
+  font-size: 0.75rem;
   font-weight: 650;
   color: #555;
   max-width: 3.6rem;
@@ -927,7 +927,7 @@
 .hero-radar__pop-word {
   display: block;
   font-family: var(--font-heading);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -937,7 +937,7 @@
 
 .hero-radar__pop-hint {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   line-height: 1.4;
   color: #444;
 }
@@ -957,7 +957,7 @@
   }
 
   .hero-radar__hint {
-    font-size: 0.58rem;
+    font-size: 0.75rem;
     line-height: 1.4;
   }
 
@@ -973,7 +973,7 @@
 
   .hero-radar__pop {
     width: min(10.5rem, 46vw);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1019,7 +1019,7 @@
   }
 
   .hero-radar__node-face strong {
-    font-size: 0.62rem;
+    font-size: 0.75rem;
   }
 
   .hero-radar__node-face em {
@@ -1053,7 +1053,7 @@
   }
 
   .hero-radar__word {
-    font-size: 0.58rem;
+    font-size: 0.75rem;
   }
 
   .hero-mobile-links {
@@ -1061,7 +1061,7 @@
   }
 
   .hero-mobile-links__item {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     padding: 0.5rem 0.55rem;
   }
 }

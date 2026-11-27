@@ -211,7 +211,7 @@ export default function PathFinder() {
                             </li>
                           ))}
                         </ul>
-                        <p className="mt-3 text-[11px] font-semibold text-[#0a1158] uppercase tracking-wide">
+                        <p className="mt-3 text-xs font-semibold text-[#0a1158] uppercase tracking-wide">
                           {t(`pathFinder.interest.${item.id}.for`)}
                         </p>
                       </button>
@@ -249,7 +249,7 @@ export default function PathFinder() {
                           <span className="font-heading font-semibold text-[#0a0a0a] group-hover:text-[#0a1158] transition-colors">
                             {t(`pathFinder.level.${item.id}.title`)}
                           </span>
-                          <span className="text-[11px] font-semibold text-[#0a1158] uppercase tracking-wide">
+                          <span className="text-xs font-semibold text-[#0a1158] uppercase tracking-wide">
                             {t("pathFinder.years", { n: item.years })}
                           </span>
                         </span>
@@ -272,7 +272,7 @@ export default function PathFinder() {
 
               {step === 2 && (aiResult || result) && (
                 <div>
-                  <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-2">
+                  <p className="text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-2">
                     {t("pathFinder.resultBadge")}
                   </p>
                   <h3 className="font-heading text-xl md:text-2xl font-semibold text-[#0a0a0a] leading-snug">

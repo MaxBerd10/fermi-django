@@ -49,7 +49,7 @@ export default function WhyUs() {
                     <p className="font-heading text-base font-bold text-[#0a1158] tabular-nums leading-none">
                       {item.metric}
                     </p>
-                    <p className="mt-0.5 text-[10px] font-semibold text-[#333333] uppercase tracking-wide">
+                    <p className="mt-0.5 text-xs font-semibold text-[#333333] uppercase tracking-wide">
                       {item.metricLabel}
                     </p>
                   </span>

@@ -65,7 +65,7 @@ export default function ContactMap() {
         <Reveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-4">
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
+              <p className="text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
                 {t("contact.title")}
               </p>
               <h2 className="font-heading text-xl md:text-2xl font-bold text-[#0a0a0a] tracking-tight">
@@ -116,19 +116,19 @@ export default function ContactMap() {
             <form id="fjsti-contact" onSubmit={onSubmit}>
               <div className="grid sm:grid-cols-2 gap-2.5">
                 <div>
-                  <label htmlFor="fjsti-contact-name" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.name")}</label>
+                  <label htmlFor="fjsti-contact-name" className="text-xs uppercase tracking-wide text-[#333333] font-bold">{t("contact.name")}</label>
                   <input id="fjsti-contact-name" name="name" required type="text" placeholder={t("contact.namePlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="fjsti-contact-email" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.emailLabel")}</label>
+                  <label htmlFor="fjsti-contact-email" className="text-xs uppercase tracking-wide text-[#333333] font-bold">{t("contact.emailLabel")}</label>
                   <input id="fjsti-contact-email" name="email" required type="email" placeholder={t("contact.emailPlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="fjsti-contact-phone" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.phoneLabel")}</label>
+                  <label htmlFor="fjsti-contact-phone" className="text-xs uppercase tracking-wide text-[#333333] font-bold">{t("contact.phoneLabel")}</label>
                   <input id="fjsti-contact-phone" name="phone" required type="tel" placeholder={t("contact.phonePlaceholder")} className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="fjsti-contact-topic" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.subject")}</label>
+                  <label htmlFor="fjsti-contact-topic" className="text-xs uppercase tracking-wide text-[#333333] font-bold">{t("contact.subject")}</label>
                   <select id="fjsti-contact-topic" name="topic" required className={inputClass}>
                     <option value="Qabul haqida">{t("contact.topicAdmission")}</option>
                     <option value="Oʻquv jarayoni">{t("contact.topicStudy")}</option>
@@ -139,7 +139,7 @@ export default function ContactMap() {
                 </div>
               </div>
               <div className="mt-2.5">
-                <label htmlFor="fjsti-contact-message" className="text-[10px] uppercase tracking-wide text-[#333333] font-bold">{t("contact.messageLabel")}</label>
+                <label htmlFor="fjsti-contact-message" className="text-xs uppercase tracking-wide text-[#333333] font-bold">{t("contact.messageLabel")}</label>
                 <textarea
                   id="fjsti-contact-message"
                   name="message"

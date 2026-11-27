@@ -97,7 +97,7 @@ function ProjectCard({ p, liveLabel, soonLabel, soonHint }: {
           ) : null}
         </div>
         <p
-          className={`mt-1 text-[10px] font-bold uppercase tracking-wide ${
+          className={`mt-1 text-xs font-bold uppercase tracking-wide ${
             p.href ? "text-[#0a1158]" : "text-[#555555]"
           }`}
         >
@@ -160,7 +160,7 @@ export default function OurProjects() {
     <section className="pt-5 pb-6 md:pt-6 md:pb-8 bg-transparent border-t border-[#e5e5e5]/60">
       <div className="section-container">
         <div className="mb-4">
-          <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
+          <p className="text-xs font-semibold tracking-[0.1em] uppercase text-[#0a1158] mb-1">
             {t("projects.eyebrow")}
           </p>
           <h2 className="font-heading text-lg md:text-xl font-bold text-[#0a0a0a] tracking-tight">

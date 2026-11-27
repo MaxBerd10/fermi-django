@@ -60,7 +60,7 @@
   box-shadow: 0 6px 20px rgba(10, 17, 88, 0.06);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #333;
   letter-spacing: 0.02em;
@@ -82,7 +82,7 @@
 }
 
 .hero-v2__badge-full {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 650;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -203,7 +203,7 @@
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(10, 17, 88, 0.08);
   box-shadow: 0 4px 14px rgba(10, 17, 88, 0.04);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 650;
   color: #0a0a0a;
   animation: hero-v2-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -455,7 +455,7 @@
   }
 
   .hero-v2__pill {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     padding: 0.35rem 0.6rem;
   }
 

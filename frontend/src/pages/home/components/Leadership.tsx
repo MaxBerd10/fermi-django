@@ -133,7 +133,7 @@ export default function Leadership() {
               className="lg:col-span-7 p-5 md:p-6 lg:p-7 flex flex-col justify-start border-t lg:border-t-0 lg:border-l border-white/10"
             >
               <div className="hidden lg:block">
-                <p className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#ffd600] text-[#0a1158] text-[0.65rem] font-bold uppercase tracking-wider mb-2">
+                <p className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#ffd600] text-[#0a1158] text-xs font-bold uppercase tracking-wider mb-2">
                   {t("leadership.rectorLabel")}
                 </p>
                 <h3 className="font-heading text-xl md:text-2xl font-semibold text-white leading-tight">
@@ -191,7 +191,7 @@ export default function Leadership() {
                     <h4 className="font-heading font-semibold text-white text-xs md:text-sm leading-snug group-hover:text-[#ffd600] transition-colors line-clamp-2">
                       {p.name}
                     </h4>
-                    <p className="mt-0.5 text-[10px] md:text-[11px] text-white/50 line-clamp-2 leading-snug">{p.position}</p>
+                    <p className="mt-0.5 text-xs text-white/50 line-clamp-2 leading-snug">{p.position}</p>
                   </div>
                 </Link>
               </Reveal>

@@ -84,7 +84,7 @@ export default function StudentVoices() {
                         </span>
                         <div className="min-w-0">
                           <p className="text-sm font-semibold text-[#0a0a0a] truncate">{v.name}</p>
-                          <p className="text-[11px] font-semibold text-[#0a1158] uppercase tracking-wide truncate">{v.meta}</p>
+                          <p className="text-xs font-semibold text-[#0a1158] uppercase tracking-wide truncate">{v.meta}</p>
                         </div>
                       </div>
                     </div>
@@ -113,7 +113,7 @@ export default function StudentVoices() {
                 {facts.map((fact) => (
                   <div key={fact.id} className="rounded-xl border border-[#e5e5e5]/80 bg-white/95 px-3 py-2.5">
                     <p className="font-heading text-xl font-bold text-[#0a1158] tabular-nums leading-none">{fact.value}</p>
-                    <p className="mt-1 text-[11px] text-[#333333] leading-snug">{fact.label}</p>
+                    <p className="mt-1 text-xs text-[#333333] leading-snug">{fact.label}</p>
                   </div>
                 ))}
               </div>

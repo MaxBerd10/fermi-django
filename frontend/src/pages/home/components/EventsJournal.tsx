@@ -105,7 +105,7 @@ export default function EventsJournal() {
 
         <div className="mt-5 bg-primary-950 text-white p-4 md:p-5 grid lg:grid-cols-2 gap-5 overflow-hidden relative rounded-2xl">
           <div className="relative z-10">
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-secondary-300 mb-2">
+            <p className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary-300 mb-2">
               {t("journal.scopusIndexed")}
             </p>
             <h3 className="font-heading text-lg md:text-xl font-semibold leading-tight text-white">
@@ -122,7 +122,7 @@ export default function EventsJournal() {
             </div>
           </div>
           <div className="relative z-10 lg:border-l lg:border-white/15 lg:pl-6">
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-secondary-300 mb-2">
+            <p className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary-300 mb-2">
               {t("admission.countdownTitle")}
             </p>
             <h3 className="text-base font-semibold text-white">{t("admission.deadline")}</h3>
@@ -143,7 +143,7 @@ export default function EventsJournal() {
               ).map((item) => (
                 <div key={item.l} className="border border-white/15 py-2.5 text-center">
                   <div className="text-lg font-heading font-semibold tabular-nums text-white">{item.v}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-white/60 mt-0.5">{item.l}</div>
+                  <div className="text-xs uppercase tracking-wider text-white/60 mt-0.5">{item.l}</div>
                 </div>
               ))}
             </div>
