@@ -17,6 +17,7 @@ import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import {
   getLeaderPageIntroKey,
   isLeaderFeaturedPage,
+  getLeaderPageKind,
   isVacantLeader,
   LEGACY_LEADER_SECTION_MENU_ID,
   LEADER_SECTION_MENU_ID,
@@ -35,8 +36,9 @@ export default function LeaderPage() {
   const resolvedMenuId = menuId ? Number(menuId) : undefined;
   const isLeaderSection =
     resolvedMenuId === LEADER_SECTION_MENU_ID || resolvedMenuId === LEGACY_LEADER_SECTION_MENU_ID;
-  const isProrectorPage = slug === "prorektorlar";
-  const isDepartmentPage = slug === "kafedra-mudirlari";
+  const kind = getLeaderPageKind(slug);
+  const isProrectorPage = kind === "prorectors";
+  const isDepartmentPage = kind === "departmentHeads";
   const { contentRef, remembered } = useRememberedContentHeight(`leader:${slug}`, loading);
   // Cold-start default varies wildly by route: "kafedra-mudirlari" lists
   // every department head (~30 photo cards, several thousand px tall),
@@ -77,7 +79,7 @@ export default function LeaderPage() {
     );
   }, [leaders, query]);
 
-  const title = slug === "rektor" ? t("leadership.rectorLabel")
+  const title = kind === "rector" ? t("leadership.rectorLabel")
     : isProrectorPage ? t("leader.title.prorectors")
       : isDepartmentPage ? t("leader.title.departmentHeads")
         : data?.category.title;
@@ -135,7 +137,7 @@ export default function LeaderPage() {
           <LeaderProfileCard
             key={`${leader.id}:${leader.photo ?? ""}`}
             leader={leader}
-            roleLabel={slug === "rektor" ? t("leadership.rectorLabel") : isDepartmentPage
+            roleLabel={kind === "rector" ? t("leadership.rectorLabel") : isDepartmentPage
               ? t("leader.role.departmentHead") : isProrectorPage ? t("leader.role.prorector") : undefined}
             rector={featured}
             open={expandedId === leader.id}

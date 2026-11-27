@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BlockRenderer } from "@/blocks/BlockRenderer";
 import LinkifiedText from "@/blocks/LinkifiedText";
-import { getFacultyPageConfig } from "@/lib/facultySection";
+import { FACULTY_PAGE_CONFIG, getFacultyPageConfig } from "@/lib/facultySection";
 import type { ContentBlock } from "@/types/blocks";
 
 const pediatricPrograms = [
@@ -38,8 +38,9 @@ export default function FacultyOverview({ slug, blocks, logoUrl }: { slug: strin
   const ordered = [...blocks].sort((a, b) => a.order - b.order);
   const byId = new Map(ordered.map((block) => [block.id, block]));
   const used = new Set<number>();
-  const clinical = slug === "davolash-ishi";
-  const pediatric = slug === "pediatriya-fakulteti";
+  const knownTheme = FACULTY_PAGE_CONFIG[slug]?.theme;
+  const clinical = knownTheme === "clinical";
+  const pediatric = knownTheme === "pediatric";
   const section = facultySections[slug];
   const intro = section ? byId.get(section.intro) : undefined;
   const items = section?.items;

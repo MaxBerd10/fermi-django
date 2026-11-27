@@ -8,10 +8,21 @@ export const LEADER_SECTION_MENU_ID = 1905;
 // menu starts at a different id, but both address the same leadership section.
 export const LEGACY_LEADER_SECTION_MENU_ID = 35;
 
-export const LEADER_FEATURED_SLUGS = new Set(["rektor"]);
+/** The three leadership pages the site draws in their own way (their titles, role labels, toolbars and intro text differ); every other slug is "other". */
+export type LeaderPageKind = "rector" | "prorectors" | "departmentHeads" | "other";
+
+const LEADER_PAGE_KIND_BY_SLUG: Record<string, LeaderPageKind> = {
+  rektor: "rector",
+  prorektorlar: "prorectors",
+  "kafedra-mudirlari": "departmentHeads",
+};
+
+export function getLeaderPageKind(slug?: string): LeaderPageKind {
+  return (slug && LEADER_PAGE_KIND_BY_SLUG[slug]) || "other";
+}
 
 export function isLeaderFeaturedPage(slug?: string, count?: number): boolean {
-  return Boolean(slug && LEADER_FEATURED_SLUGS.has(slug) && count === 1);
+  return getLeaderPageKind(slug) === "rector" && count === 1;
 }
 
 export function findLeaderSectionMenu(menu: MenuNode[]): { title: string; items: MenuNode[] } | null {
@@ -35,12 +46,12 @@ export function isLeaderNavItemActive(item: MenuNode, pathname: string, slug?: s
 }
 
 export function getLeaderPageIntroKey(slug?: string): string | null {
-  switch (slug) {
-    case "rektor":
+  switch (getLeaderPageKind(slug)) {
+    case "rector":
       return "leader.intro.rector";
-    case "prorektorlar":
+    case "prorectors":
       return "leader.intro.prorektorlar";
-    case "kafedra-mudirlari":
+    case "departmentHeads":
       return "leader.intro.departmentHeads";
     default:
       return "leader.intro.default";
