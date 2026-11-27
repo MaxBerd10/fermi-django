@@ -162,7 +162,7 @@ export default function NewsCategoryPage() {
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
-  const breadcrumb = categoryConfig?.menuSectionId
+  const breadcrumb = categoryConfig?.fallback === "menu-list"
 
     ? t("nav.section.xorijiy")
 

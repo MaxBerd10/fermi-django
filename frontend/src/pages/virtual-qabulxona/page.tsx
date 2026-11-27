@@ -1,5 +1,5 @@
 import { FORM_FIELD, FORM_LABEL, FORM_TEXTAREA } from "@/lib/formFields";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { getRegions, getDistricts } from "@/api/lookups";
 import { listFaculty } from "@/api/faculty";
@@ -8,6 +8,10 @@ import { aiReception } from "@/api/ai";
 import type { District, FacultyListItem, Region } from "@/types/content";
 import { ApiError } from "@/types/api";
 import PageHeader from "@/components/shared/PageHeader";
+import { InnerPageContent } from "@/components/shared/InnerPageLayout";
+import MenuSectionNav from "@/components/shared/MenuSectionNav";
+import { useMenu } from "@/context/MenuContext";
+import { findSectionIdOfHref } from "@/lib/menuSection";
 import { Reveal } from "@/components/Animation";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import AiPanel from "@/components/ai/AiPanel";
@@ -19,6 +23,9 @@ import { HEMIS_URL } from "@/lib/externalLinks";
 export default function VirtualQabulxonaPage() {
   const { t, i18n } = useTranslation();
   usePageMeta(t("nav.virtualReception"), t("vq.pageDescription"));
+  // the page is one entry of the "Interaktiv xizmatlar" menu: it shows that menu at its side, as the sister pages do (and a way back to them)
+  const { menu } = useMenu();
+  const sectionId = useMemo(() => findSectionIdOfHref(menu, "/virtual-qabulxona"), [menu]);
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [formError, setFormError] = useState("");
   const [ticketId, setTicketId] = useState<number | null>(null);
@@ -101,10 +108,10 @@ export default function VirtualQabulxonaPage() {
         description={t("vq.heroDescription")}
       />
 
-      <main className="section-container section-pad">
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-5 lg:items-start">
-          <div className="lg:col-span-2">
-            <Reveal className="page-card p-4 md:p-5">
+      <InnerPageContent sidebar={sectionId ? <MenuSectionNav menuId={sectionId} /> : undefined}>
+        <div className="space-y-4">
+          <div>
+            <Reveal>
               <h2 className="font-heading text-lg font-semibold text-foreground-900 mb-1">{t("vq.formTitle")}</h2>
               <p className="text-sm text-foreground-600 mb-4">{t("vq.formSubtitle")}</p>
 
@@ -275,7 +282,7 @@ export default function VirtualQabulxonaPage() {
             </Reveal>
           </div>
 
-          <aside className="space-y-3 lg:sticky lg:top-24">
+          <aside className="grid gap-3 sm:grid-cols-2">
             <Reveal delay={80}>
               <div className="bg-accent-50 rounded-2xl border border-accent-200/80 p-4">
                 <h3 className="font-heading font-semibold text-accent-900 mb-2 flex items-center gap-2 text-sm">
@@ -302,7 +309,7 @@ export default function VirtualQabulxonaPage() {
             </Reveal>
           </aside>
         </div>
-      </main>
+      </InnerPageContent>
     </div>
   );
 }

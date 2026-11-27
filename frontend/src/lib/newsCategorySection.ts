@@ -2,6 +2,8 @@
 // -- not the old Yii2 site's id (6). See lib/menuSection.ts's
 // NAV_ROOT_THEMES comment.
 export const XORIJIY_NEWS_MENU_ID = 2157;
+// ... and for the "Tanlovlar" top-level menu entry (Ochiq tanlovlar, Tanlovlar arxivi).
+export const TANLOVLAR_MENU_ID = 2183;
 
 
 
@@ -36,12 +38,14 @@ const CATEGORY_CONFIG: Record<string, NewsCategoryConfig> = {
   tanlovlar: {
 
     theme: "contest",
+    menuSectionId: TANLOVLAR_MENU_ID,
 
   },
 
   "tanlovlar-arxivi": {
 
     theme: "contest",
+    menuSectionId: TANLOVLAR_MENU_ID,
 
   },
 

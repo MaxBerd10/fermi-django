@@ -160,7 +160,9 @@ function collectLinks(nodes: MenuNode[], sectionMenuId: number, depth = 0, maxDe
       });
     }
     if (n.children?.length && depth < maxDepth) {
-      out.push(...collectLinks(n.children, sectionMenuId, depth + 1, maxDepth));
+      // a heading without a page of its own ("Fuqarolar murojaatlari", "Vrachlar malakasini oshirish kursi") is not drawn in the list, so its pages
+      // stand at the level of the heading's neighbours: indenting them under a heading nobody sees only made the list look uneven
+      out.push(...collectLinks(n.children, sectionMenuId, href ? depth + 1 : depth, maxDepth));
     }
   }
   return out;
@@ -194,6 +196,19 @@ function findSectionForSlug(nodes: MenuNode[], slug: string): MenuNode | null {
     if (nested) return nested;
   }
   return null;
+}
+
+/** The id of the menu section that holds the entry whose address is `href` (the entry's parent), or undefined. */
+export function findSectionIdOfHref(menu: MenuNode[], href: string): number | undefined {
+  const walk = (nodes: MenuNode[], parent: MenuNode | null): number | undefined => {
+    for (const n of nodes) {
+      if (parent && normalizeMenuHref(n.href) === href) return parent.id;
+      const found = walk(n.children ?? [], n);
+      if (found !== undefined) return found;
+    }
+    return undefined;
+  };
+  return walk(menu, null);
 }
 
 function findParentNode(nodes: MenuNode[], id: number, parent: MenuNode | null = null): MenuNode | null {
