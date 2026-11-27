@@ -1,0 +1,258 @@
+[
+ {
+  "page": "quyosh-panellari",
+  "block": 1,
+  "lang": "en",
+  "old": "Resolutionpresident",
+  "new": "Resolution president",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 2,
+  "lang": "uz",
+  "old": "texnologiyalarnijoriy",
+  "new": "texnologiyalarni joriy",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 2,
+  "lang": "ru",
+  "old": "иэнергосберегающих",
+  "new": "и энергосберегающих",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "uz",
+  "old": "tiklanuvchienergiya",
+  "new": "tiklanuvchi energiya",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "uz",
+  "old": "energiyataqchilligi",
+  "new": "energiya taqchilligi",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "uz",
+  "old": "qulaysharoitlar",
+  "new": "qulay sharoitlar",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "ru",
+  "old": "СОЦИАЛЬНОЙСФЕРЕ",
+  "new": "СОЦИАЛЬНОЙ СФЕРЕ",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "ru",
+  "old": "ОБЕСПЕЧЕНИЯКОМПЕНСАЦИИ",
+  "new": "ОБЕСПЕЧЕНИЯ КОМПЕНСАЦИИ",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "ru",
+  "old": "ПОВЫШЕНИЯЭНЕРГОЭФФЕКТИВНОСТИ",
+  "new": "ПОВЫШЕНИЯ ЭНЕРГОЭФФЕКТИВНОСТИ",
+  "note": "glued words"
+ },
+ {
+  "page": "quyosh-panellari",
+  "block": 3,
+  "lang": "ru",
+  "old": "ТАКЖЕСОЗДАНИЯ",
+  "new": "ТАКЖЕ СОЗДАНИЯ",
+  "note": "glued words"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 1,
+  "lang": "uz",
+  "old": "Mamalakatimizni",
+  "new": "Mamlakatimizni",
+  "note": "wrong extra letter (mamlakat)"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 1,
+  "lang": "uz",
+  "old": "OʻRQ- 611",
+  "new": "OʻRQ-611",
+  "note": "stray space inside the law number"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 1,
+  "lang": "uz",
+  "old": "roʻyhatga olish varagʻi",
+  "new": "roʻyxatga olish varagʻi",
+  "note": "misspelling roʻyhat -> roʻyxat (used correctly elsewhere in the line)"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 1,
+  "lang": "uz",
+  "old": "roʻyhatga olishning shaxsga",
+  "new": "roʻyxatga olishning shaxsga",
+  "note": "misspelling roʻyhat -> roʻyxat"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 3,
+  "lang": "uz",
+  "old": "roʻyhatga",
+  "new": "roʻyxatga",
+  "note": "misspelling roʻyhat -> roʻyxat"
+ },
+ {
+  "page": "aholini-royxatga-olish-markazlashtirilgan-holda-amalga-oshiriladi",
+  "block": 8,
+  "lang": "uz",
+  "old": "roʻyhatga",
+  "new": "roʻyxatga",
+  "note": "misspelling roʻyhat -> roʻyxat"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi",
+  "block": 2,
+  "lang": "uz",
+  "old": "maqsasdida",
+  "new": "maqsadida",
+  "note": "extra letter"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi",
+  "block": 7,
+  "lang": "uz",
+  "old": "Toza kampus”",
+  "new": "“Toza kampus”",
+  "note": "missing opening quote"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi",
+  "block": 10,
+  "lang": "uz",
+  "old": "Ekologiya va salomatlik\"",
+  "new": "\"Ekologiya va salomatlik\"",
+  "note": "missing opening quote"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi",
+  "block": 14,
+  "lang": "ru",
+  "old": "».В ходе",
+  "new": "». В ходе",
+  "note": "missing space after full stop"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 2,
+  "lang": "uz",
+  "old": "maqsasdida",
+  "new": "maqsadida",
+  "note": "extra letter"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 5,
+  "lang": "uz",
+  "old": "27 aprel",
+  "new": "27-aprel",
+  "note": "missing hyphen in date (format used everywhere else)"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 12,
+  "lang": "uz",
+  "old": "qildilarTalabalar",
+  "new": "qildilar. Talabalar",
+  "note": "missing full stop and space between sentences"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 14,
+  "lang": "uz",
+  "old": "kompus",
+  "new": "kampus",
+  "note": "wrong letter (kampus, as in the ru/en and other headings)"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 15,
+  "lang": "uz",
+  "old": "profilaktka",
+  "new": "profilaktika",
+  "note": "missing letter"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 15,
+  "lang": "uz",
+  "old": "kompus",
+  "new": "kampus",
+  "note": "wrong letter"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 22,
+  "lang": "uz",
+  "old": "2026-yil13-may",
+  "new": "2026-yil 13-may",
+  "note": "missing space"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 22,
+  "lang": "ru",
+  "old": "организован seminar",
+  "new": "организован семинар",
+  "note": "Latin word in Russian text"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 28,
+  "lang": "uz",
+  "old": "Eko faol yoshlar”",
+  "new": "“Eko faol yoshlar”",
+  "note": "missing opening quote"
+ },
+ {
+  "page": "ekofaol-yoshlar-loyihasi-navbatdagi-bosqich",
+  "block": 29,
+  "lang": "uz",
+  "old": "Tadbirda,Davolash",
+  "new": "Tadbirda, Davolash",
+  "note": "missing space after comma"
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 8,
+  "lang": "uz",
+  "old": "Yashil universitet”",
+  "new": "“Yashil universitet”",
+  "note": "missing opening quote"
+ },
+ {
+  "page": "ekofaol-xodim",
+  "block": 14,
+  "lang": "uz",
+  "old": "qaratulgan",
+  "new": "qaratilgan",
+  "note": "wrong letter"
+ }
+]
