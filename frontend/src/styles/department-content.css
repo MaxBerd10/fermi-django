@@ -109,9 +109,10 @@
 }
 
 .department-article__profile {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: clamp(3.75rem, 10vw, 7rem) minmax(0, 1fr);
+  align-items: start;
+  gap: .75rem 1rem;
   padding: 1rem;
   background: #f7f8fc;
   border: 1px solid #e1e6ef;
@@ -119,8 +120,12 @@
   min-width: 0;
 }
 
+/* a member of staff with no photo: the name takes the whole card */
+.department-article__profile--plain {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .department-article__profile > .department-article__figure {
-  flex: 0 0 clamp(3.75rem, 10vw, 7rem);
   margin: 0;
 }
 
@@ -132,7 +137,6 @@
 }
 
 .department-article__profile-info {
-  flex: 1;
   min-width: 0;
 }
 
@@ -145,14 +149,27 @@
   margin: 0 0 .5rem;
 }
 
-.department-article__profile-info summary {
+/* the biography is a block of its own under the photo and the name: it opens over the whole width of the card (it used to open in the narrow column beside the photo, a tall strip of text) */
+.department-article__profile-bio {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding-top: .625rem;
+  border-top: 1px solid #e1e6ef;
+}
+
+.department-article__profile-bio summary {
   color: #0a1158;
   font-weight: 700;
   cursor: pointer;
 }
 
-.department-article__profile-info details[open] summary {
+.department-article__profile-bio[open] summary {
   margin-bottom: .625rem;
+}
+
+/* a card whose biography is open takes the whole row, so the text is not squeezed into half of it */
+.department-article__profile:has(.department-article__profile-bio[open]) {
+  grid-column: 1 / -1;
 }
 
 .department-article__media,
@@ -161,6 +178,46 @@
   display: grid;
   gap: .875rem;
   grid-template-columns: minmax(0, 1fr);
+}
+
+/* photos and videos: a grid of tiles (a photo with a text, a gallery and a video take a whole row) instead of one wide empty box for every photo */
+.department-article__media {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr));
+}
+
+.department-article__media > .department-article__media-wide,
+.department-article__media > .department-article__feature:has(p) {
+  grid-column: 1 / -1;
+}
+
+.department-page__article .department-article__media > .department-article__feature:not(:has(p)) {
+  padding: .5rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.department-page__article .department-article__media > .department-article__feature:not(:has(p)) > figure {
+  width: 100%;
+  inline-size: 100%;
+  max-inline-size: none;
+}
+
+.department-page__article .department-article__media > .department-article__feature:not(:has(p)) img {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* a photograph with a text beside it fills its frame too (no grey bars); a logo / emblem (a square picture) is shown whole */
+.department-page__article .department-article__media > .department-article__feature:has(p) img {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.department-page__article .department-article__media .department-article__feature .department-article__figure--square img {
+  object-fit: contain;
+  background: #fff;
 }
 
 .department-article__staff {

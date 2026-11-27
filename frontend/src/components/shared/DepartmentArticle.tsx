@@ -5,16 +5,22 @@ import LinkifiedText from "@/blocks/LinkifiedText";
 import { optimizedImageUrl } from "@/lib/imageProxy";
 import type { ContentBlock, LocalizedImage } from "@/types/blocks";
 
+// a (nearly) square picture is a logo or an emblem: shown whole, not cropped like a photograph (the size comes from the record, or from the picture itself once it is loaded)
+const isSquare = (width?: number | null, height?: number | null) => Boolean(width && height && Math.abs(width / height - 1) < 0.12);
+
 function DepartmentImage({ image, alt }: { image: LocalizedImage; alt: string }) {
   const original = image.file;
   const [source, setSource] = useState(() => optimizedImageUrl(original, 900));
+  const [loadedSquare, setLoadedSquare] = useState(false);
 
   if (!source) return null;
 
+  const square = isSquare(image.width, image.height) || loadedSquare;
   return (
-    <figure className="department-article__figure">
+    <figure className={`department-article__figure${square ? " department-article__figure--square" : ""}`}>
       <img src={source} alt={alt} loading="lazy" decoding="async"
         width={image.width ?? undefined} height={image.height ?? undefined}
+        onLoad={(event) => setLoadedSquare(isSquare(event.currentTarget.naturalWidth, event.currentTarget.naturalHeight))}
         onError={() => setSource(source === original ? "" : original)} />
     </figure>
   );
@@ -34,10 +40,14 @@ function datedEntry(block: ContentBlock) {
     : null;
 }
 
+/** The lower-case closing word of an Uzbek patronymic ("Saidova Sohibahon Abrorjon qizi", "Рахматшоев Муслимбек Нозимжон угли"): part of the name, not a lower-case word that ends a title. */
+const PATRONYMIC_PARTICLE = /^(?:qizi|kizi|ogli|ugli|o[ʻʼ‘’']g[ʻʼ‘’']li|кизи|қизи|угли|ўғли)$/iu;
+
 function profileName(block: ContentBlock) {
   if (block.block_type !== "heading" && !(block.block_type === "paragraph" && block.data.bold)) return;
   const text = block.data.text.trim();
-  const words = text.split(/\s+/);
+  const all = text.split(/\s+/);
+  const words = all.length > 2 && PATRONYMIC_PARTICLE.test(all[all.length - 1]) ? all.slice(0, -1) : all;
   if (words.length >= 2 && words.length <= 5 &&
       words.every((word) => /^[\p{L}ʻʼ’'-]+$/u.test(word)) &&
       /^\p{Lu}/u.test(words[0]) && /^\p{Lu}/u.test(words[words.length - 1]) &&
@@ -57,18 +67,18 @@ function DepartmentArticleProfile({
   const { t } = useTranslation();
 
   return (
-    <section className="department-article__profile">
+    <section className={`department-article__profile${image ? "" : " department-article__profile--plain"}`}>
       {image && <DepartmentImage image={image} alt={name} />}
       <div className="department-article__profile-info">
         <h3 className="leader-prorector__name">{name}</h3>
         {role && <p><LinkifiedText text={role} /></p>}
-        {biography && biography.length > 0 && (
-          <details>
-            <summary>{t("leader.biography")}</summary>
-            {biography.map((block) => <BlockRenderer key={block.id} block={block} />)}
-          </details>
-        )}
       </div>
+      {biography && biography.length > 0 && (
+        <details className="department-article__profile-bio">
+          <summary>{t("leader.biography")}</summary>
+          {biography.map((block) => <BlockRenderer key={block.id} block={block} />)}
+        </details>
+      )}
     </section>
   );
 }
@@ -155,6 +165,28 @@ export default function DepartmentArticle({ blocks }: { blocks: ContentBlock[] }
         index += 1;
       }
       continue;
+    }
+
+    if (name && blocks[index + 1]?.block_type === "paragraph") {
+      // a person's name with no portrait: the same profile card, without a photo (role = a short first line, biography = the paragraphs under it)
+      const biography: ContentBlock[] = [];
+      let next = blocks[index + 1];
+      let role: string | undefined;
+      if (next?.block_type === "paragraph" && !next.data.bold && !numberedText(next) &&
+          next.data.text.trim().length <= 120 && !/[:;]\s*$/.test(next.data.text) && blocks[index + 2]?.block_type === "paragraph") {
+        role = next.data.text;
+        index += 1;
+        next = blocks[index + 1];
+      }
+      while (next?.block_type === "paragraph" && !next.data.bold && !numberedText(next)) {
+        biography.push(next);
+        index += 1;
+        next = blocks[index + 1];
+      }
+      if (role || biography.length) {
+        staff.push(<DepartmentArticleProfile key={block.id} name={name} role={role} biography={biography} />);
+        continue;
+      }
     }
 
     if (block.block_type === "heading" ||
