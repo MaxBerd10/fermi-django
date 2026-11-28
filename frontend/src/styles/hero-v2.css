@@ -58,8 +58,7 @@
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(10, 17, 88, 0.1);
   box-shadow: 0 6px 20px rgba(10, 17, 88, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* no backdrop blur: the background is already 82-88 % white, the blur only cost GPU time */
   font-size: 0.75rem;
   font-weight: 600;
   color: #333;
@@ -161,7 +160,7 @@
   color: #0a0a0a;
   font-size: 0.875rem;
   font-weight: 650;
-  backdrop-filter: blur(10px);
+  /* no backdrop blur: the background is already 82-88 % white, the blur only cost GPU time */
   transition: border-color 0.25s, transform 0.25s, background 0.25s;
   cursor: pointer;
 }
@@ -248,8 +247,7 @@
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(10, 17, 88, 0.09);
   box-shadow: 0 8px 24px rgba(10, 17, 88, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* no backdrop blur: the background is already 82-88 % white, the blur only cost GPU time */
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;

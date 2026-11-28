@@ -33,8 +33,7 @@
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(10, 17, 88, 0.1);
   box-shadow: 0 12px 32px rgba(10, 17, 88, 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* no backdrop blur: the background is already 90 % white, the blur only cost GPU time while the rings turn underneath */
   pointer-events: none;
   text-decoration: none;
   color: inherit;
@@ -112,8 +111,7 @@
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(10, 17, 88, 0.1);
   box-shadow: 0 10px 28px rgba(10, 17, 88, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* no backdrop blur: the background is already 90 % white, the blur only cost GPU time while the rings turn underneath */
   text-decoration: none;
   color: inherit;
   opacity: 0;
@@ -274,36 +272,36 @@
 }
 
 @keyframes hero-fly-tl {
-  from { opacity: 0; filter: blur(7px); transform: translate3d(5rem, 4.5rem, 0) scale(0.35) rotate(-10deg); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  from { opacity: 0; transform: translate3d(5rem, 4.5rem, 0) scale(0.35) rotate(-10deg); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 @keyframes hero-fly-tr {
-  from { opacity: 0; filter: blur(7px); transform: translate3d(-5rem, 4.5rem, 0) scale(0.35) rotate(10deg); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  from { opacity: 0; transform: translate3d(-5rem, 4.5rem, 0) scale(0.35) rotate(10deg); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 @keyframes hero-fly-bl {
-  from { opacity: 0; filter: blur(7px); transform: translate3d(5rem, -4.5rem, 0) scale(0.35) rotate(8deg); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  from { opacity: 0; transform: translate3d(5rem, -4.5rem, 0) scale(0.35) rotate(8deg); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 @keyframes hero-fly-br {
-  from { opacity: 0; filter: blur(7px); transform: translate3d(-5rem, -4rem, 0) scale(0.35) rotate(-8deg); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  from { opacity: 0; transform: translate3d(-5rem, -4rem, 0) scale(0.35) rotate(-8deg); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 @keyframes hero-fly-ml {
-  from { opacity: 0; filter: blur(5px); transform: translate3d(4.5rem, 0, 0) scale(0.4); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1); }
+  from { opacity: 0; transform: translate3d(4.5rem, 0, 0) scale(0.4); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
 }
 @keyframes hero-fly-mr {
-  from { opacity: 0; filter: blur(5px); transform: translate3d(-4.5rem, 0, 0) scale(0.4); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1); }
+  from { opacity: 0; transform: translate3d(-4.5rem, 0, 0) scale(0.4); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
 }
 @keyframes hero-fly-tm {
-  from { opacity: 0; filter: blur(5px); transform: translate3d(-50%, 4.5rem, 0) scale(0.4); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(-50%, 0, 0) scale(1); }
+  from { opacity: 0; transform: translate3d(-50%, 4.5rem, 0) scale(0.4); }
+  to { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1); }
 }
 @keyframes hero-fly-bm {
-  from { opacity: 0; filter: blur(5px); transform: translate3d(-50%, -4.5rem, 0) scale(0.4); }
-  to { opacity: 1; filter: blur(0); transform: translate3d(-50%, 0, 0) scale(1); }
+  from { opacity: 0; transform: translate3d(-50%, -4.5rem, 0) scale(0.4); }
+  to { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1); }
 }
 @keyframes hero-fly-node {
   from {
@@ -785,8 +783,7 @@
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(10, 17, 88, 0.12);
   box-shadow: 0 10px 28px rgba(10, 17, 88, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* no backdrop blur: the background is already 90 % white, the blur only cost GPU time while the rings turn underneath */
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.25s, border-color 0.25s,
     box-shadow 0.35s;
 }
