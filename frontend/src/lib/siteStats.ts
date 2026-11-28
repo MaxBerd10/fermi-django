@@ -1,3 +1,5 @@
+import i18n from "@/i18n";
+
 // Self-hosted page-view tracking — see server/site-stats.mjs. No third-party service;
 // the admin panel's own "Statistika" page reads this back via fetchStatsSummary().
 
@@ -25,6 +27,19 @@ export interface SiteStatsSummary {
   hourlyActivity: { hour: string; count: number }[];
   devices: { key: "desktop" | "mobile" | "tablet" | "other"; count: number }[];
   trafficSources: { key: "direct" | "search" | "social" | "referral"; count: number }[];
+  // Added later: a server that has not been upgraded yet simply does not send them.
+  visitors?: {
+    today: number;
+    yesterday: number;
+    last7Days: number;
+    previous7Days: number;
+    dailySeries: { date: string; count: number }[];
+    since: string | null;
+  };
+  languages?: { key: "uz" | "ru" | "en"; count: number }[];
+  languagesSince?: string | null;
+  botHits?: number;
+  botsToday?: number;
 }
 
 // Captured once at module load (the initial full page load), not re-read per hit —
@@ -34,8 +49,34 @@ export interface SiteStatsSummary {
 // request itself would only ever say "fermi.uz", since that request is same-origin).
 const entryReferrer = typeof document !== "undefined" ? document.referrer : "";
 
+const TASHKENT_DAY = typeof Intl !== "undefined" ? new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tashkent" }) : null;
+const VISITOR_KEY = "fermi:visitor";
+
+// A random id this browser makes up once a day and sends with each page view, so the admin panel can count PEOPLE, not
+// only page views. It changes every day (nobody can be followed from one day to the next) and the server keeps only a
+// count per day, never the id.
+function dailyVisitorId(): string | undefined {
+  try {
+    const day = TASHKENT_DAY ? TASHKENT_DAY.format(new Date()) : new Date().toISOString().slice(0, 10);
+    const saved = JSON.parse(window.localStorage.getItem(VISITOR_KEY) || "null");
+    if (saved && saved.day === day && typeof saved.id === "string") return saved.id;
+    const bytes = new Uint8Array(16);
+    window.crypto.getRandomValues(bytes);
+    const id = Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
+    window.localStorage.setItem(VISITOR_KEY, JSON.stringify({ day, id }));
+    return id;
+  } catch {
+    return undefined; // storage blocked (private mode): the view still counts, the visitor just is not counted
+  }
+}
+
 export function recordPageView(path: string) {
-  const body = JSON.stringify({ path, referrer: entryReferrer });
+  const body = JSON.stringify({
+    path,
+    referrer: entryReferrer,
+    language: i18n.resolvedLanguage || i18n.language,
+    visitor: dailyVisitorId(),
+  });
   // sendBeacon survives the page unloading right after a navigation (common right after
   // clicking a link) — fetch with keepalive is the fallback for browsers without it.
   if (navigator.sendBeacon) {

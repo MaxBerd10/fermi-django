@@ -2,13 +2,18 @@
 // stay in FerMI's own admin panel instead of an external dashboard. Persisted as a
 // single JSON file (traffic here is modest; a real database would be overkill), loaded
 // once at startup and rewritten after each hit.
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const dataDir = resolve(rootDir, "data");
+// SITE_STATS_DIR only exists so the tests can work in a temporary folder; the site itself always uses ./data
+const dataDir = process.env.SITE_STATS_DIR ? resolve(process.env.SITE_STATS_DIR) : resolve(rootDir, "data");
 const statsFilePath = resolve(dataDir, "site-stats.json");
+const STATS_TMP_PATH = `${statsFilePath}.tmp`;
+const PRE_UPGRADE_COPY_PATH = resolve(dataDir, "site-stats.pre-visitors.json");
+const BACKUP_KEEP = 14;
+const BACKUP_FILE = /^site-stats\.backup-(\d{4}-\d{2}-\d{2})\.json$/;
 
 const MAX_PATH_LENGTH = 200;
 const MAX_TRACKED_PATHS = 500; // caps unbounded growth from bogus/scanner traffic
@@ -30,6 +35,11 @@ function emptyStats() {
     byHour: {},
     byDevice: {},
     bySource: {},
+    // added later, always optional: a file written before they existed simply has none of them
+    visitorsByDate: {}, // date -> distinct visitors that day
+    byLangDate: {}, // date -> { uz, ru, en } page views
+    botHits: 0, // robots / automated checkers: kept APART, never part of `total`
+    botsByDate: {},
   };
 }
 
@@ -42,31 +52,104 @@ function numericMap(value) {
   );
 }
 
-function loadStats() {
+function langMap(value) {
+  if (!value || typeof value !== "object") return {};
+  const out = {};
+  for (const [date, perLang] of Object.entries(value)) {
+    const counts = numericMap(perLang);
+    if (Object.keys(counts).length) out[date] = counts;
+  }
+  return out;
+}
+
+function shapeStats(parsed) {
+  return {
+    total: Number(parsed.total) || 0,
+    byDate: numericMap(parsed.byDate),
+    byPath: numericMap(parsed.byPath),
+    byHour: numericMap(parsed.byHour),
+    byDevice: numericMap(parsed.byDevice),
+    bySource: numericMap(parsed.bySource),
+    visitorsByDate: numericMap(parsed.visitorsByDate),
+    byLangDate: langMap(parsed.byLangDate),
+    botHits: Number(parsed.botHits) || 0,
+    botsByDate: numericMap(parsed.botsByDate),
+  };
+}
+
+function backupFiles() {
   try {
-    const raw = readFileSync(statsFilePath, "utf8");
-    const parsed = JSON.parse(raw);
-    return {
-      total: Number(parsed.total) || 0,
-      byDate: numericMap(parsed.byDate),
-      byPath: numericMap(parsed.byPath),
-      byHour: numericMap(parsed.byHour),
-      byDevice: numericMap(parsed.byDevice),
-      bySource: numericMap(parsed.bySource),
-    };
+    return readdirSync(dataDir).filter((name) => BACKUP_FILE.test(name)).sort().reverse(); // newest first
   } catch {
-    return emptyStats();
+    return [];
+  }
+}
+
+function readBackup() {
+  for (const name of backupFiles()) {
+    try {
+      return shapeStats(JSON.parse(readFileSync(resolve(dataDir, name), "utf8")));
+    } catch {
+      // that backup is damaged too: try the next older one
+    }
+  }
+  return null;
+}
+
+// A damaged file used to be replaced by an EMPTY history, and the next save wrote the empty one over it: every counted
+// visit lost. Now the damaged file is kept aside (never deleted), and the newest good daily backup takes its place.
+function loadStats() {
+  if (!existsSync(statsFilePath)) return readBackup() ?? emptyStats();
+  let raw;
+  try {
+    raw = readFileSync(statsFilePath, "utf8");
+    const parsed = JSON.parse(raw);
+    // one byte-for-byte copy of the file as the old code wrote it, made before the new code ever saves anything
+    if (!existsSync(PRE_UPGRADE_COPY_PATH) && !parsed.schema) {
+      try {
+        copyFileSync(statsFilePath, PRE_UPGRADE_COPY_PATH);
+      } catch (error) {
+        console.error("Could not copy site-stats.json before the upgrade", error);
+      }
+    }
+    return shapeStats(parsed);
+  } catch (error) {
+    console.error("site-stats.json is damaged; keeping it aside and restoring the newest backup", error);
+    try {
+      renameSync(statsFilePath, resolve(dataDir, `site-stats.corrupt-${Date.now()}.json`));
+    } catch (renameError) {
+      console.error("Could not move the damaged site-stats.json aside", renameError);
+    }
+    return readBackup() ?? emptyStats();
   }
 }
 
 let stats = loadStats();
 
+let lastBackupDay = "";
+
 function persist() {
   try {
     if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });
-    writeFileSync(statsFilePath, JSON.stringify(stats), "utf8");
+    // temp file + rename: a crash or power cut in the middle of the write can no longer leave half a file
+    writeFileSync(STATS_TMP_PATH, JSON.stringify({ schema: 2, ...stats }), "utf8");
+    renameSync(STATS_TMP_PATH, statsFilePath);
+    backupOncePerDay();
   } catch (error) {
     console.error("Failed to persist site-stats.json", error);
+  }
+}
+
+// one copy of the file per day, the newest BACKUP_KEEP kept
+function backupOncePerDay() {
+  const day = todayKey();
+  if (day === lastBackupDay) return;
+  try {
+    copyFileSync(statsFilePath, resolve(dataDir, `site-stats.backup-${day}.json`));
+    lastBackupDay = day;
+    for (const old of backupFiles().slice(BACKUP_KEEP)) unlinkSync(resolve(dataDir, old));
+  } catch (error) {
+    console.error("Could not write the daily site-stats backup", error);
   }
 }
 
@@ -142,13 +225,68 @@ function sourceFromReferer(referer) {
   return "referral";
 }
 
+// Robots and automated checkers (search crawlers, Lighthouse, headless browsers that run scripts, uptime monitors, link
+// previews) are not readers: counting them inflated the numbers and made the graph jump.
+const BOT_USER_AGENT = new RegExp(
+  [
+    // named robots (a plain "...bot" would also catch real phones such as CUBOT)
+    "googlebot", "bingbot", "yandex(?:bot|images|metrika|accessibilitybot)", "baiduspider", "duckduckbot", "applebot", "ahrefsbot",
+    "semrushbot", "mj12bot", "petalbot", "bytespider", "gptbot", "claudebot", "ccbot", "dotbot", "telegrambot", "twitterbot",
+    "slackbot", "discordbot", "linkedinbot", "whatsapp/", "\\bbot\\b",
+    // generic crawlers, automated checkers, headless browsers that run scripts, command-line clients
+    "crawl", "spider", "slurp", "headless", "lighthouse", "pagespeed", "gtmetrix", "pingdom", "uptime", "monitor", "curl/", "wget",
+    "python-requests", "aiohttp", "httpx", "go-http-client", "java/", "okhttp", "libwww", "scrapy", "facebookexternalhit", "preview",
+    "puppeteer", "playwright", "phantomjs", "selenium",
+  ].join("|"),
+  "i",
+);
+
+export function isBotUserAgent(userAgent) {
+  return BOT_USER_AGENT.test(String(userAgent || ""));
+}
+
+const LANGUAGES = ["uz", "ru", "en"];
+
+function normalizeLanguage(value) {
+  const code = String(value || "").slice(0, 2).toLowerCase();
+  return LANGUAGES.includes(code) ? code : null;
+}
+
+// A random id the browser makes up once a day (never sent to anyone else, never stored by the server: only a count per
+// day is kept), so two pages opened by one person are one visitor and a whole campus behind one Wi-Fi address is not.
+const VISITOR_ID = /^[A-Za-z0-9]{12,40}$/;
+const MAX_VISITORS_REMEMBERED = 200_000;
+let visitorsSeen = { date: "", ids: new Set() };
+
+function countVisitor(date, rawId) {
+  if (!VISITOR_ID.test(String(rawId || ""))) return;
+  if (visitorsSeen.date !== date) visitorsSeen = { date, ids: new Set() };
+  if (visitorsSeen.ids.has(rawId) || visitorsSeen.ids.size >= MAX_VISITORS_REMEMBERED) return;
+  visitorsSeen.ids.add(rawId);
+  stats.visitorsByDate[date] = (stats.visitorsByDate[date] || 0) + 1;
+}
+
 export function recordHit(rawPath, requestMeta = {}) {
   const path = normalizePath(rawPath);
   if (!path) return false;
 
-  stats.total += 1;
   const date = todayKey();
+  if (isBotUserAgent(requestMeta.userAgent)) {
+    stats.botHits += 1;
+    stats.botsByDate[date] = (stats.botsByDate[date] || 0) + 1;
+    schedulePersist();
+    return true;
+  }
+
+  stats.total += 1;
   stats.byDate[date] = (stats.byDate[date] || 0) + 1;
+
+  const language = normalizeLanguage(requestMeta.language);
+  if (language) {
+    stats.byLangDate[date] ||= {};
+    stats.byLangDate[date][language] = (stats.byLangDate[date][language] || 0) + 1;
+  }
+  countVisitor(date, requestMeta.visitor);
 
   const hourKey = `${date}-${tashkentHour()}`;
   stats.byHour[hourKey] = (stats.byHour[hourKey] || 0) + 1;
@@ -276,7 +414,33 @@ export function getStatsSummary() {
     hourlyActivity,
     devices: DEVICE_KEYS.map((key) => ({ key, count: stats.byDevice[key] || 0 })),
     trafficSources: SOURCE_KEYS.map((key) => ({ key, count: stats.bySource[key] || 0 })),
+    // --- added later; the fields above are exactly what they were ---
+    visitors: {
+      today: stats.visitorsByDate[todayKey()] || 0,
+      yesterday: stats.visitorsByDate[dayKeyOffset(1)] || 0,
+      // a sum of the daily counts: a person who came on three days counts three times
+      last7Days: sumDays(stats.visitorsByDate, 7, 0),
+      previous7Days: sumDays(stats.visitorsByDate, 7, 7),
+      dailySeries: dailySeries.map(({ date }) => ({ date, count: stats.visitorsByDate[date] || 0 })),
+      since: Object.keys(stats.visitorsByDate).sort()[0] ?? null,
+    },
+    languages: LANGUAGES.map((key) => ({ key, count: languageViews(key, DAILY_SERIES_LENGTH) })),
+    languagesSince: Object.keys(stats.byLangDate).sort()[0] ?? null,
+    botHits: stats.botHits,
+    botsToday: stats.botsByDate[todayKey()] || 0,
   };
+}
+
+function sumDays(map, n, offset) {
+  let sum = 0;
+  for (let i = 0; i < n; i++) sum += map[dayKeyOffset(offset + i)] || 0;
+  return sum;
+}
+
+function languageViews(key, days) {
+  let sum = 0;
+  for (let i = 0; i < days; i++) sum += stats.byLangDate[dayKeyOffset(i)]?.[key] || 0;
+  return sum;
 }
 
 function sendJson(response, statusCode, body) {
@@ -310,6 +474,8 @@ export async function handleSiteStatsRequest(request, response) {
         // HTTP Referer header on this request — that header is always fermi.uz itself,
         // since this POST is same-origin regardless of how the visitor actually arrived.
         referer: body.referrer,
+        language: body.language,
+        visitor: body.visitor,
       });
       if (ok) {
         response.statusCode = 204;

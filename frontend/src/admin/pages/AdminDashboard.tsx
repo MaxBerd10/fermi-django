@@ -64,7 +64,7 @@ export default function AdminDashboard() {
   }, []);
 
   const unreadTotal = summary ? INBOXES.reduce((sum, item) => sum + (summary.unread[item.badge ?? ""] ?? 0), 0) : 0;
-  const trend = stats && stats.previous7Days > 0 ? Math.round(((stats.last7Days - stats.previous7Days) / stats.previous7Days) * 100) : null;
+  const trend = stats && stats.previous7Days >= 50 ? Math.round(((stats.last7Days - stats.previous7Days) / stats.previous7Days) * 100) : null;
 
   return (
     <div className="mx-auto max-w-6xl">
@@ -176,10 +176,14 @@ export default function AdminDashboard() {
                   <div className="text-xs text-foreground-500">Bugun</div>
                   <div className="font-heading text-2xl font-bold tabular-nums text-foreground-950">{NUMBER.format(stats.today)}</div>
                   <div className="text-xs text-foreground-400">kecha: {NUMBER.format(stats.yesterday)}</div>
+                  {stats.visitors?.since && <div className="text-xs text-foreground-500">{NUMBER.format(stats.visitors.today)} tashrif buyuruvchi</div>}
                 </div>
                 <div className="bg-background-50 px-5 py-4">
                   <div className="text-xs text-foreground-500">So'nggi 7 kun</div>
                   <div className="font-heading text-2xl font-bold tabular-nums text-foreground-950">{NUMBER.format(stats.last7Days)}</div>
+                  {trend === null && stats.previous7Days > 0 && (
+                    <div className="text-xs text-foreground-400">oldingi hafta: {NUMBER.format(stats.previous7Days)}</div>
+                  )}
                   {trend !== null && (
                     <div className={`text-xs font-medium ${trend >= 0 ? "text-green-700" : "text-red-600"}`}>
                       {trend >= 0 ? "▲" : "▼"} {Math.abs(trend)}% oldingi haftaga nisbatan

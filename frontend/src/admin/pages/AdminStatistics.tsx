@@ -37,6 +37,12 @@ const DEVICE_META = {
   other: { label: "Boshqa", icon: "ri-device-line" },
 } as const;
 
+const LANGUAGE_META = {
+  uz: { label: "O'zbekcha (UZ)", color: "#192b72" },
+  ru: { label: "Ruscha (RU)", color: "#4f73c8" },
+  en: { label: "Inglizcha (EN)", color: "#d1a91f" },
+} as const;
+
 type Range = 7 | 30 | "month";
 
 function parseIsoDate(isoDate: string) {
@@ -71,6 +77,10 @@ function formatDelta(current: number, previous: number) {
   if (previous === 0) return current === 0 ? { text: "O'zgarishsiz", tone: "neutral" as const } : { text: "Yangi faollik", tone: "positive" as const };
   const percent = Math.round(((current - previous) / previous) * 100);
   if (percent === 0) return { text: "O'zgarishsiz", tone: "neutral" as const };
+  if (previous < 20) {
+    const difference = current - previous;
+    return { text: `${difference > 0 ? "+" : ""}${difference} ta`, tone: difference > 0 ? "positive" as const : "negative" as const };
+  }
   return { text: `${percent > 0 ? "+" : ""}${percent}%`, tone: percent > 0 ? "positive" as const : "negative" as const };
 }
 
@@ -214,6 +224,7 @@ export default function AdminStatistics() {
 
   const sourceTotal = data?.trafficSources.reduce((sum, source) => sum + source.count, 0) ?? 0;
   const deviceTotal = data?.devices.reduce((sum, device) => sum + device.count, 0) ?? 0;
+  const languageTotal = data?.languages?.reduce((sum, language) => sum + language.count, 0) ?? 0;
   const topPageTotal = data?.topPages.reduce((sum, page) => sum + page.count, 0) ?? 0;
 
   return (
@@ -261,8 +272,17 @@ export default function AdminStatistics() {
 
       {data && (
         <>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <MetricCard label="Bugungi tashriflar" value={data.today} hint="Kecha bilan solishtiriladi" icon="ri-calendar-check-line" delta={{ current: data.today, previous: data.yesterday }} />
+          <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${data.visitors ? "xl:grid-cols-4" : "xl:grid-cols-3"}`}>
+            {data.visitors && (
+              <MetricCard
+                label="Bugungi tashrif buyuruvchilar"
+                value={data.visitors.today}
+                hint={data.visitors.since ? "Bir kishi bir marta sanaladi" : "Hisob bugundan boshlab yig'iladi"}
+                icon="ri-group-line"
+                delta={data.visitors.yesterday > 0 ? { current: data.visitors.today, previous: data.visitors.yesterday } : undefined}
+              />
+            )}
+            <MetricCard label="Bugungi ko'rishlar" value={data.today} hint="Kecha bilan solishtiriladi" icon="ri-calendar-check-line" delta={{ current: data.today, previous: data.yesterday }} />
             <MetricCard label="Kunlik o'rtacha" value={data.avgPerDay} hint="Barcha kuzatilgan kunlar bo'yicha" icon="ri-pulse-line" />
             <MetricCard label="Jami ko'rishlar" value={data.total} hint={`${NUMBER.format(data.distinctPages)} ta sahifa kuzatilmoqda`} icon="ri-bar-chart-box-line" />
           </div>
@@ -333,6 +353,43 @@ export default function AdminStatistics() {
               {deviceTotal === 0 ? <EmptyBreakdown icon="ri-smartphone-line" text="Qurilma turi haqidagi umumiy statistika yangi tashriflar bilan shakllanadi." /> : <div className="space-y-4">{data.devices.filter((item) => item.count > 0).map((device) => { const percentage = Math.round((device.count / deviceTotal) * 100); return <div key={device.key} className="rounded-xl bg-background-100 p-3.5"><div className="flex items-center justify-between gap-3"><div className="flex items-center gap-2 text-sm font-semibold text-foreground-800"><i className={`${DEVICE_META[device.key].icon} text-lg text-primary-700`} />{DEVICE_META[device.key].label}</div><div className="text-sm font-bold tabular-nums text-foreground-950">{percentage}%</div></div><div className="mt-2 text-xs text-foreground-500">{NUMBER.format(device.count)} ta tashrif</div></div>; })}</div>}
             </SectionCard>
           </div>
+
+          {data.languages && (
+            <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+              <SectionCard title="Tillar bo'yicha" subtitle="So'nggi 30 kun, sahifa ko'rishlari">
+                {languageTotal === 0 ? (
+                  <EmptyBreakdown icon="ri-translate-2" text="Til bo'yicha ma'lumot keyingi tashriflardan boshlab yig'iladi." />
+                ) : (
+                  <div className="space-y-4">
+                    {data.languages.map((language) => {
+                      const percentage = Math.round((language.count / languageTotal) * 100);
+                      return (
+                        <div key={language.key}>
+                          <div className="mb-1.5 flex items-center justify-between text-sm">
+                            <span className="font-semibold text-foreground-800">{LANGUAGE_META[language.key].label}</span>
+                            <span className="tabular-nums text-foreground-600">{percentage}% · {NUMBER.format(language.count)}</span>
+                          </div>
+                          <div className="h-2.5 overflow-hidden rounded-full bg-background-100">
+                            <div className="h-full rounded-full" style={{ width: `${percentage}%`, backgroundColor: LANGUAGE_META[language.key].color }} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {data.languagesSince && <p className="pt-1 text-xs text-foreground-400">{data.languagesSince} dan beri yig'iladi.</p>}
+                  </div>
+                )}
+              </SectionCard>
+
+              <SectionCard title="Raqamlar qanday hisoblanadi" subtitle="Hisobotga qo'yishdan oldin o'qing">
+                <ul className="space-y-3 text-sm leading-relaxed text-foreground-600">
+                  <li><span className="font-semibold text-foreground-800">Ko'rish</span> — ochilgan har bir sahifa. <span className="font-semibold text-foreground-800">Tashrif buyuruvchi</span> — kuniga bir marta sanaladigan odam: bir kishi o'nta sahifa ochsa ham bitta.</li>
+                  <li>Qidiruv robotlari va avtomatik tekshiruvlar (Lighthouse, monitoring) hisobga olinmaydi{data.botHits ? `: hozirgacha ${NUMBER.format(data.botHits)} ta shunday so'rov chetga olindi` : ""}.</li>
+                  <li>Tashrif buyuruvchi va til hisobi yangi, {data.visitors?.since ?? "bugun"} dan boshlab yig'iladi. Undan oldingi kunlar uchun faqat ko'rishlar soni bor, ular o'zgarmagan va o'chirilmagan.</li>
+                  <li>Tashrif buyuruvchilarning haftalik yig'indisi kunlik sonlar yig'indisi: uch kun kirgan kishi uch marta sanaladi.</li>
+                </ul>
+              </SectionCard>
+            </div>
+          )}
 
           <div className="mt-5 flex flex-col gap-3 rounded-2xl border border-background-200 bg-background-50 px-5 py-4 text-sm text-foreground-600 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-3"><div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700"><i className="ri-shield-check-line text-lg" /></div><p className="leading-relaxed"><span className="font-semibold text-foreground-900">Maxfiylik saqlanadi.</span> Statistikada IP manzil, ism yoki boshqa shaxsiy ma'lumot saqlanmaydi. Faqat umumiy sahifa ko'rishlari, qurilma turi va kirish manbasi hisoblanadi.</p></div>
