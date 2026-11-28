@@ -391,7 +391,11 @@
   }
   .hero-radar__side--tm,
   .hero-radar__side--bm { transform: translateX(-50%) !important; }
-  .hero-radar__node {
+  /* The .is-packed rule above (pointer-events: none !important, specificity 0,3,0) beat the plain
+     .hero-radar__node one: on a phone the circles were drawn but dead until the centre was tapped and the
+     opening animation ended (5-7 s). The same specificity makes the phone rule win. */
+  .hero-radar__node,
+  .hero-radar.is-packed .hero-radar__node {
     opacity: 1 !important; filter: none !important; pointer-events: auto !important;
     animation: none !important;
     transform: rotate(var(--na)) translateX(var(--rr)) rotate(calc(var(--na) * -1)) !important;
