@@ -46,7 +46,8 @@ const autoImportGlobals = {
 }
 
 export default [
-  { ignores: ['dist', 'node_modules'] },
+  // out/ and .tmp/ are build / cache output (git-ignored); linting them reported ~6,400 false errors
+  { ignores: ['dist', 'out', '.tmp', 'node_modules'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -91,6 +92,11 @@ export default [
       'no-irregular-whitespace': 'off',
       'no-undef': 'off',
     },
+  },
+  // The Node servers (production server, Telegram feed, image proxy ...): Node globals (process, Buffer, URL ...), not the browser's
+  {
+    files: ['server/**/*.mjs'],
+    languageOptions: { ecmaVersion: 2023, sourceType: 'module', globals: { ...globals.node } },
   },
   // Only enforce this rule for the router config file to avoid false positives elsewhere.
   {
