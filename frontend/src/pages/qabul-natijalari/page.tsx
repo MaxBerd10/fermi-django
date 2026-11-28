@@ -5,6 +5,7 @@ import { getAdmissionResults, getAdmissionResultsPage } from "@/api/admissionRes
 import type { ResultCategory, ResultsPageInfo } from "@/types/content";
 import PageHeader from "@/components/shared/PageHeader";
 import { LoadingState } from "@/components/shared/LoadingState";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal } from "@/components/Animation";
 
@@ -29,11 +30,19 @@ function fileBadge(title: string): { label: string; bg: string; color: string } 
   return { label: "PDF", bg: "#fff7de", color: "#8a6200" };
 }
 
+// measured on the live site: the real content height of a first visit (desktop 1350 px / phone 390 px)
+const FIRST_DESKTOP = 880;
+const FIRST_PHONE = 1930;
+
 export default function AdmissionResultsPage() {
   const { t } = useTranslation();
   const [categories, setCategories] = useState<ResultCategory[]>([]);
   const [page, setPage] = useState<ResultsPageInfo | null>(null);
   const [loading, setLoading] = useState(true);
+  // The result lists are far taller than the spinner: without a placeholder of their own size the footer jumped
+  // ~600 px when they arrived (CLS 0.33 on a desktop). A repeat visit uses the height measured last time.
+  const { contentRef, remembered } = useRememberedContentHeight("admission-results", loading);
+  const firstVisitHeight = typeof window !== "undefined" && window.innerWidth >= 1024 ? FIRST_DESKTOP : FIRST_PHONE;
 
   useEffect(() => {
     Promise.all([getAdmissionResults(), getAdmissionResultsPage()])
@@ -58,9 +67,9 @@ export default function AdmissionResultsPage() {
       <PageHeader title={title} description={page?.intro} />
 
       <section className="section-pad bg-transparent pb-16 md:pb-20">
-        <div className="section-container">
+        <div className="section-container" ref={contentRef}>
           {loading ? (
-            <LoadingState />
+            <LoadingState minHeightPx={remembered ?? firstVisitHeight} />
           ) : (
             <>
               {page?.announcement && (

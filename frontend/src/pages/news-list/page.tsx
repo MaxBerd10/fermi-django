@@ -12,9 +12,14 @@ import NewsSectionLayout from "@/components/shared/NewsSectionLayout";
 import NewsCard from "@/components/shared/NewsCard";
 import NewsPagination from "@/components/shared/NewsPagination";
 import { ErrorState, LoadingState } from "@/components/shared/LoadingState";
+import { useRememberedContentHeight } from "@/hooks/useRememberedContentHeight";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal } from "@/components/Animation";
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
+
+// measured on the live site: the real content height of a first visit (desktop 1350 px / phone 390 px)
+const FIRST_DESKTOP = 5000;
+const FIRST_PHONE = 8800;
 
 export default function NewsPage() {
   const { t, i18n } = useTranslation();
@@ -25,6 +30,10 @@ export default function NewsPage() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
+  // The list is far taller than the spinner: without a placeholder of its own size the footer jumped when the cards
+  // arrived (CLS 0.17 on a desktop). A repeat visit uses the height measured last time.
+  const { contentRef, remembered } = useRememberedContentHeight(`news-list:${page}`, loading);
+  const firstVisitHeight = typeof window !== "undefined" && window.innerWidth >= 1024 ? FIRST_DESKTOP : FIRST_PHONE;
 
   useEffect(() => {
     let cancelled = false;
@@ -81,6 +90,7 @@ export default function NewsPage() {
       />
 
       <NewsSectionLayout>
+        <div ref={contentRef} style={loading ? { minHeight: `${remembered ?? firstVisitHeight}px` } : undefined}>
         {loading ? (
           <LoadingState />
         ) : failed ? (
@@ -102,6 +112,7 @@ export default function NewsPage() {
             </Reveal>
           </>
         )}
+        </div>
       </NewsSectionLayout>
     </div>
   );
