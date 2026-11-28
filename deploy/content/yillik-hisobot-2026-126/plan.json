@@ -1,0 +1,114 @@
+[
+ {
+  "slug": "department-29",
+  "order": 31,
+  "lang": "en",
+  "field": "text",
+  "old": "KHOLIKOVA OYISTAKHON YULDASHEVNA Department Head (PhD)",
+  "new": "Associate professor of the Department of Traditional Medicine and Pharmacology"
+ },
+ {
+  "slug": "department-29",
+  "order": 50,
+  "lang": "en",
+  "field": "text",
+  "old": "Research work of the Department of Traditional Medicine and Pharmacology",
+  "new": "The teaching system is carried out on the basis of the following approved documents:"
+ },
+ {
+  "slug": "department-20",
+  "order": 78,
+  "lang": "en",
+  "field": "text",
+  "old": "Zhurava Mastura Tozhihakimkizi",
+  "new": "Dissertation Defenses"
+ },
+ {
+  "slug": "department-19",
+  "order": 46,
+  "lang": "ru",
+  "field": "text",
+  "old": "В процессе обучения используется следующее техническое обеспечение:",
+  "new": "Система обучения ведётся на основе следующих утверждённых документов:"
+ },
+ {
+  "slug": "department-11",
+  "order": 40,
+  "lang": "uz",
+  "field": "text",
+  "old": "kafedra a ssistenti",
+  "new": "kafedra assistenti"
+ },
+ {
+  "slug": "department-11",
+  "order": 44,
+  "lang": "uz",
+  "field": "text",
+  "old": "kafedra a ssistenti",
+  "new": "kafedra assistenti"
+ },
+ {
+  "slug": "department-11",
+  "order": 48,
+  "lang": "uz",
+  "field": "text",
+  "old": "kafedra a ssistenti",
+  "new": "kafedra assistenti"
+ },
+ {
+  "slug": "department-3",
+  "order": 30,
+  "lang": "uz",
+  "field": "text",
+  "old": "KAFEDRA OC HIQ DARSLARI",
+  "new": "KAFEDRA OCHIQ DARSLARI"
+ },
+ {
+  "slug": "department-17",
+  "order": 41,
+  "lang": "uz",
+  "field": "text",
+  "old": "KAFEDRA OC HIQ DARSLARI",
+  "new": "KAFEDRA OCHIQ DARSLARI"
+ },
+ {
+  "slug": "department-20",
+  "order": 96,
+  "lang": "uz",
+  "field": "text",
+  "old": "KAFEDRA OC HIQ DARSLARI",
+  "new": "KAFEDRA OCHIQ DARSLARI"
+ },
+ {
+  "slug": "department-35",
+  "order": 54,
+  "lang": "uz",
+  "field": "text",
+  "old": "KAFEDRA OC HIQ DARSLARI",
+  "new": "KAFEDRA OCHIQ DARSLARI"
+ },
+ {
+  "slug": "department-26",
+  "order": 6,
+  "lang": "uz",
+  "field": "text",
+  "old": "SIDDIQOVObidjonSiddiqovich",
+  "new": "SIDDIQOV Obidjon Siddiqovich"
+ },
+ {
+  "slug": "department-4",
+  "order": 21,
+  "lang": "uz",
+  "field": "text",
+  "old": "Mamatqulova Max buba Tojalievna",
+  "new": "Mamatqulova Maxbuba Tojalievna"
+ },
+ {
+  "slug": "department-7",
+  "order": 12,
+  "lang": "uz",
+  "field": "text",
+  "old": "D exkanova Nigora Namanjanovna .",
+  "new": "Dexkanova Nigora Namanjanovna."
+ }
+]
