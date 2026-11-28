@@ -18,6 +18,7 @@ import { Reveal } from "@/components/Animation";
 import { NEWS_DEFAULT_MENU_ID } from "@/lib/newsSection";
 
 // measured on the live site: the real content height of a first visit (desktop 1350 px / phone 390 px)
+const TELEGRAM_WAIT_MS = 2000;
 const FIRST_DESKTOP = 5000;
 const FIRST_PHONE = 8800;
 
@@ -40,29 +41,39 @@ export default function NewsPage() {
     setLoading(true);
     setFailed(false);
     let retryTimer: number | undefined;
-    listNews(page)
-      .then((res) => {
+    // Telegram posts are merged into page 1 by date. Merged AFTER the first paint they slid in among the cards and
+    // pushed the whole grid down (CLS 0.26 on a desktop), so page 1 waits for them (and their translation) for up to
+    // TELEGRAM_WAIT_MS; only a slower feed is merged later, as before.
+    const telegramReady: Promise<NewsArticle[] | null> =
+      page === 1
+        ? listTelegramNews()
+            .then((posts) => localizeTelegramCards(posts, i18n.language).catch(() => posts))
+            .catch(() => null)
+        : Promise.resolve(null);
+    const early: Promise<NewsArticle[] | null> = Promise.race([
+      telegramReady,
+      new Promise<null>((resolve) => window.setTimeout(() => resolve(null), TELEGRAM_WAIT_MS)),
+    ]);
+    Promise.all([listNews(page), early])
+      .then(([res, telegramEarly]) => {
         if (cancelled) return;
-        setItems(res.data);
+        setItems(telegramEarly ? mergeNewsByDate(telegramEarly, res.data) : res.data);
         setTotal(res.meta?.total ?? res.data.length);
         setLoading(false);
         if (page !== 1) return;
-        const applyTelegram = (telegramNews: NewsArticle[]) => {
-          if (cancelled) return;
-          setItems(mergeNewsByDate(telegramNews, res.data));
+        const applyTelegram = (localized: NewsArticle[] | null) => {
+          if (cancelled || !localized) return;
+          setItems(mergeNewsByDate(localized, res.data));
           // the pager counts the server's pages only: Telegram posts are merged into page 1, not added to it
           setTotal(res.meta?.total ?? res.data.length);
-          localizeTelegramCards(telegramNews, i18n.language)
-            .then((localized) => {
-              if (cancelled) return;
-              setItems(mergeNewsByDate(localized, res.data));
-              setTotal(res.meta?.total ?? res.data.length);
-            })
-            .catch(() => {});
         };
-        listTelegramNews().then(applyTelegram).catch(() => {});
+        if (telegramEarly) return;
+        telegramReady.then(applyTelegram);
         retryTimer = window.setTimeout(() => {
-          listTelegramNews().then(applyTelegram).catch(() => {});
+          listTelegramNews()
+            .then((posts) => localizeTelegramCards(posts, i18n.language).catch(() => posts))
+            .then(applyTelegram)
+            .catch(() => {});
         }, 6000);
       })
       .catch(() => {
