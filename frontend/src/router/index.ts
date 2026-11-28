@@ -3,6 +3,7 @@ import { useLocation, useRoutes } from "react-router-dom";
 import { createElement, Suspense, useEffect } from "react";
 import routes from "./config";
 import { recordPageView } from "@/lib/siteStats";
+import { canonicalUrl } from "@/lib/canonicalUrl";
 
 let navigateResolver: (navigate: ReturnType<typeof useNavigate>) => void;
 
@@ -38,6 +39,13 @@ export function AppRoutes() {
   useEffect(() => {
     if (pathname.startsWith("/admin")) return;
     recordPageView(pathname);
+  }, [pathname]);
+
+  // The page's own address for search engines (index.html only holds the home page's one).
+  useEffect(() => {
+    const url = canonicalUrl(pathname);
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", url);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", url);
   }, [pathname]);
 
   useEffect(() => {
